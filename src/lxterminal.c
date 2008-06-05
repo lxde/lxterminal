@@ -65,9 +65,9 @@ static GtkItemFactoryEntry vte_menu_items[] =
 	{ N_("/_Close Tab"), CLOSE_TAB_ACCEL, NULL, 1, "<StockItem>", GTK_STOCK_CLOSE }
 };
 
-void terminal_settab(LXTerminal *terminal, int index)
+void terminal_switchtab(int index)
 {
-	gtk_notebook_set_current_page(terminal->notebook, index);
+	gtk_notebook_set_current_page(global_terminal->notebook, index);
 }
 
 void terminal_copy(gpointer data, guint action, GtkWidget *item)
@@ -315,6 +315,33 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 
 	gtk_accelerator_parse(CLOSE_TAB_ACCEL, &key, &mods);
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_closetab, terminal, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB1_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 0, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB2_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 1, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB3_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 2, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB4_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 3, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB5_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 4, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB6_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 5, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB7_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 6, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB8_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 7, NULL));
+
+	gtk_accelerator_parse(SWITCH_TAB9_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab, 8, NULL));
 
 	gtk_accel_group_lock(terminal->menubar->accel_group);
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);

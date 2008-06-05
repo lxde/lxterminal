@@ -11,6 +11,16 @@
 #define NEXT_TAB_ACCEL "<CTRL><SHIFT>N"
 #define PREVIOUS_TAB_ACCEL_GNOME "<CTRL><SHIFT>Page_Down"
 #define NEXT_TAB_ACCEL_GNOME "<CTRL><SHIFT>Page_Up"
+#define NEXT_TAB_ACCEL_GNOME "<CTRL><SHIFT>Page_Up"
+#define SWITCH_TAB1_ACCEL "<ALT>1"
+#define SWITCH_TAB2_ACCEL "<ALT>2"
+#define SWITCH_TAB3_ACCEL "<ALT>3"
+#define SWITCH_TAB4_ACCEL "<ALT>4"
+#define SWITCH_TAB5_ACCEL "<ALT>5"
+#define SWITCH_TAB6_ACCEL "<ALT>6"
+#define SWITCH_TAB7_ACCEL "<ALT>7"
+#define SWITCH_TAB8_ACCEL "<ALT>8"
+#define SWITCH_TAB9_ACCEL "<ALT>9"
 
 typedef struct _menu {
 	GtkWidget      *menu;
