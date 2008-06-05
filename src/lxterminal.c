@@ -23,31 +23,34 @@
 #include <vte/vte.h>
 
 #include "lxterminal.h"
+#include "setting.h"
 
 LXTerminal *global_terminal;
+Setting *global_setting;
 
 Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env);
 void terminal_newtab(gpointer data, guint action, GtkWidget *item);
-
+void terminal_closetab(gpointer data, guint action, GtkWidget *item);
+void terminal_nexttab(gpointer data, guint action, GtkWidget *item);
+void terminal_prevtab(gpointer data, guint action, GtkWidget *item);
+void terminal_copy(gpointer data, guint action, GtkWidget *item);
+void terminal_paste(gpointer data, guint action, GtkWidget *item);
 
 static GtkItemFactoryEntry menu_items[] =
 {
 	{ N_("/_File"), NULL, NULL, 0, "<Branch>" },
 	{ N_("/_File/_New Tab"), NEW_TAB_ACCEL, terminal_newtab, 1, "<StockItem>", GTK_STOCK_ADD },
-	{ N_("/_File/_Close Tab"), CLOSE_TAB_ACCEL, NULL, 1, "<StockItem>", GTK_STOCK_CLOSE },
+	{ N_("/_File/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE },
 	{ N_("/_File/sep1"), NULL, NULL, 0, "<Separator>" },
 	{ N_("/_File/_Quit"), QUIT_ACCEL, gtk_main_quit, 0, "<StockItem>", GTK_STOCK_QUIT },
 	{ N_("/_Edit"), NULL, NULL, 0, "<Branch>" },
-	{ N_("/_Edit/_Copy"), COPY_ACCEL, NULL, 0, "<StockItem>", GTK_STOCK_COPY },
-	{ N_("/_Edit/_Paste"), PASTE_ACCEL, NULL, 0, "<StockItem>", GTK_STOCK_PASTE },
+	{ N_("/_Edit/_Copy"), COPY_ACCEL, terminal_copy, 0, "<StockItem>", GTK_STOCK_COPY },
+	{ N_("/_Edit/_Paste"), PASTE_ACCEL, terminal_paste, 0, "<StockItem>", GTK_STOCK_PASTE },
 	{ N_("/_Edit/sep1"), NULL, NULL, 0, "<Separator>" },
 	{ N_("/_Edit/_Settings..."), NULL, NULL, 0, "<StockItem>", GTK_STOCK_EXECUTE },
 	{ N_("/_Tabs"), NULL, NULL, 0, "<Branch>" },
-	{ N_("/_Tabs/_Rename Tab"), RENAME_TAB_ACCEL, NULL, 1, "<Item>" },
-	{ N_("/_Tabs/_Previous Tab"), PREVIOUS_TAB_ACCEL, NULL, 1, "<Item>"},
-	{ N_("/_Tabs/_Next Tab"), NEXT_TAB_ACCEL, NULL, 1, "<Item>"},
-	{ N_("/_Help"), NULL, NULL, 0, "<Branch>" },
-	{ N_("/_Help/_About"), NULL, NULL, 0, "<StockItem>", GTK_STOCK_DIALOG_INFO }
+	{ N_("/_Tabs/_Previous Tab"), PREVIOUS_TAB_ACCEL, terminal_prevtab, 1, "<Item>"},
+	{ N_("/_Tabs/_Next Tab"), NEXT_TAB_ACCEL, terminal_nexttab, 1, "<Item>"},
 };  
 
 static GtkItemFactoryEntry vte_menu_items[] =
@@ -62,6 +65,93 @@ static GtkItemFactoryEntry vte_menu_items[] =
 	{ N_("/_Close Tab"), CLOSE_TAB_ACCEL, NULL, 1, "<StockItem>", GTK_STOCK_CLOSE }
 };
 
+void terminal_settab(LXTerminal *terminal, int index)
+{
+	gtk_notebook_set_current_page(terminal->notebook, index);
+}
+
+void terminal_copy(gpointer data, guint action, GtkWidget *item)
+{
+	LXTerminal *terminal;
+	Term *term;
+
+	if (!data)
+		terminal = global_terminal;
+	else
+		terminal = (LXTerminal *)data;
+
+	/* getting current vte */
+	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(terminal->notebook));
+
+	/* copy from vte */
+	vte_terminal_copy_clipboard(VTE_TERMINAL(term->vte));
+}
+
+void terminal_paste(gpointer data, guint action, GtkWidget *item)
+{
+	LXTerminal *terminal;
+	Term *term;
+
+	if (!data)
+		terminal = global_terminal;
+	else
+		terminal = (LXTerminal *)data;
+
+	/* getting current vte */
+	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(terminal->notebook));
+
+	/* copy from vte */
+	vte_terminal_paste_clipboard(VTE_TERMINAL(term->vte));
+}
+
+void terminal_nexttab(gpointer data, guint action, GtkWidget *item)
+{
+	LXTerminal *terminal;
+
+	if (!data)
+		terminal = global_terminal;
+	else
+		terminal = (LXTerminal *)data;
+
+	/* cycle */
+	if (gtk_notebook_get_current_page(terminal->notebook)==gtk_notebook_get_n_pages(terminal->notebook)-1)
+		gtk_notebook_set_current_page(terminal->notebook, 0);
+	else
+		gtk_notebook_next_page(terminal->notebook);
+}
+
+void terminal_prevtab(gpointer data, guint action, GtkWidget *item)
+{
+	LXTerminal *terminal;
+
+	if (!data)
+		terminal = global_terminal;
+	else
+		terminal = (LXTerminal *)data;
+
+	/* cycle */
+	if (gtk_notebook_get_current_page(terminal->notebook)==0)
+		gtk_notebook_set_current_page(terminal->notebook, -1);
+	else
+		gtk_notebook_prev_page(terminal->notebook);
+}
+
+void terminal_closetab(gpointer data, guint action, GtkWidget *item)
+{
+	LXTerminal *terminal;
+	Term *term;
+
+	if (!data)
+		terminal = global_terminal;
+	else
+		terminal = (LXTerminal *)data;
+
+	/* getting current vte */
+	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(terminal->notebook));
+
+	terminal_childexit(term->vte, term);
+}
+
 void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 {
 	LXTerminal *terminal;
@@ -71,7 +161,7 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 	else
 		terminal = (LXTerminal *)data;
 
-	Term *term = terminal_new(terminal, "Default", g_get_current_dir(), NULL);
+	Term *term = terminal_new(terminal, "LXTerminal", g_get_current_dir(), NULL);
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
@@ -135,6 +225,10 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 		/* remove page */
 		gtk_notebook_remove_page(term->parent->notebook, term->index);
 
+		/* if only one page, hide tab */
+		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(term->parent->notebook)) == 1)
+			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), FALSE);
+
 		/* decreasing index number after the page be removed */
 		for (i=term->index;i<term->parent->terms->len;i++) {
 			Term *t = g_ptr_array_index(term->parent->terms, i);
@@ -143,10 +237,6 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 
 		/* release */
 		g_free(term);
-
-		/* if only one page, hide tab */
-		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(term->parent->notebook)) == 1)
-			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), FALSE);
 	}
 }
 
@@ -165,8 +255,13 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	gtk_box_pack_start(GTK_BOX(term->box), term->scrollbar, FALSE, TRUE, 0);
 
 	/* setting terminal */
-	vte_terminal_set_font_from_string(term->vte, "monospace 11");
-	vte_terminal_set_color_background(term->vte, &black);
+	if (!global_setting) {
+		vte_terminal_set_font_from_string(term->vte, "monospace 10");
+		vte_terminal_set_color_background(term->vte, &black);
+	} else {
+		vte_terminal_set_font_from_string(term->vte, global_setting->fontname);
+		vte_terminal_set_color_background(term->vte, &black);
+	}
 
 	/* create label for tab */
 	term->label = gtk_label_new(label);
@@ -191,7 +286,7 @@ Term *terminal_init(LXTerminal *terminal)
 {
 	Term *term;
 
-	term = terminal_new(terminal, NULL, g_get_current_dir(), NULL);
+	term = terminal_new(terminal, "LXTerminal", g_get_current_dir(), NULL);
 
 	return term;
 }
@@ -217,6 +312,9 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 	terminal->menubar->accel_group = gtk_accel_group_new();
 
 	gtk_accelerator_parse(NEW_TAB_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newtab, terminal, NULL));
+
+	gtk_accelerator_parse(CLOSE_TAB_ACCEL, &key, &mods);
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newtab, terminal, NULL));
 
 	gtk_accel_group_lock(terminal->menubar->accel_group);
@@ -274,6 +372,9 @@ int main(gint argc, gchar** argv)
 	bind_textdomain_codeset ( GETTEXT_PACKAGE, "UTF-8" );
 	textdomain ( GETTEXT_PACKAGE );
 #endif
+
+	/* load config file */
+	global_setting = load_setting_from_file(PACKAGE_DATA_DIR "/lxterminal/lxterminal.conf");
 
 	/* initializing LXTerminal */
 	global_terminal = lxterminal_init(argc, argv);

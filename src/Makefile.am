@@ -10,6 +10,8 @@ INCLUDES = \
 	$(G_CAST_CHECKS)
 
 lxterminal_SOURCES = \
+	setting.h \
+	setting.c \
 	lxterminal.h \
 	lxterminal.c
 
