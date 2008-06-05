@@ -35,11 +35,11 @@ Setting *load_setting_from_file(const char *filename)
 	flags = G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS;
 
 	/* Load config */
-	if (!g_key_file_load_from_file (keyfile, filename, flags, &error)) {
-		g_error ("[conf-file] %s", error->message);
+	if (g_file_test(filename, G_FILE_TEST_EXISTS))
 		return NULL;
-	}
 
+	if (!g_key_file_load_from_file (keyfile, filename, flags, &error))
+		return NULL;
 
 	setting = (Setting *)malloc(sizeof(Setting));
 

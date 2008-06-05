@@ -149,7 +149,8 @@ void terminal_closetab(gpointer data, guint action, GtkWidget *item)
 	/* getting current vte */
 	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(terminal->notebook));
 
-	terminal_childexit(term->vte, term);
+	/* release child */
+	terminal_childexit(VTE_TERMINAL(term->vte), term);
 }
 
 void terminal_newtab(gpointer data, guint action, GtkWidget *item)
@@ -208,35 +209,33 @@ void terminal_title_changed(VteTerminal *vte, Term *term)
 void terminal_childexit(VteTerminal *vte, Term *term)
 {
 	int i;
+	LXTerminal *terminal = term->parent;
 
-	if(gtk_notebook_get_n_pages(term->parent->notebook)==1) {
-		/* destory */
-		gtk_widget_destroy(term->label);
-		gtk_widget_destroy(term->vte);
-		gtk_widget_destroy(term->scrollbar);
-		gtk_widget_destroy(term->box);
-
+	if(gtk_notebook_get_n_pages(terminal->notebook)==1) {
 		/* release */
-		g_ptr_array_free(term->parent->terms, TRUE);
+		g_ptr_array_free(terminal->terms, TRUE);
 
 		/* quit */
 		gtk_main_quit();
 	} else {
 		/* remove page */
-		gtk_notebook_remove_page(term->parent->notebook, term->index);
+		g_ptr_array_remove_index(terminal->terms, term->index);
 
-		/* if only one page, hide tab */
-		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(term->parent->notebook)) == 1)
-			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), FALSE);
 
 		/* decreasing index number after the page be removed */
-		for (i=term->index;i<term->parent->terms->len;i++) {
-			Term *t = g_ptr_array_index(term->parent->terms, i);
+		for (i=term->index;i<terminal->terms->len;i++) {
+			Term *t = g_ptr_array_index(terminal->terms, i);
 			t->index--;
 		}
 
 		/* release */
+		gtk_notebook_remove_page(terminal->notebook, term->index);
 		g_free(term);
+
+		/* if only one page, hide tab */
+		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
+			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
+
 	}
 }
 
@@ -315,7 +314,7 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newtab, terminal, NULL));
 
 	gtk_accelerator_parse(CLOSE_TAB_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newtab, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_closetab, terminal, NULL));
 
 	gtk_accel_group_lock(terminal->menubar->accel_group);
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
