@@ -24,6 +24,7 @@
 
 #include "lxterminal.h"
 #include "setting.h"
+#include "tab.h"
 
 LXTerminal *global_terminal;
 Setting *global_setting;
@@ -163,7 +164,8 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 		terminal = (LXTerminal *)data;
 
 	Term *term = terminal_new(terminal, "LXTerminal", g_get_current_dir(), NULL);
-    gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label);
+	
+    gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
 
@@ -198,9 +200,10 @@ void terminal_switch_tab(GtkNotebook *notebook, GtkNotebookPage *page, guint num
 void terminal_title_changed(VteTerminal *vte, Term *term)
 {
 	/* setting label */
-	gtk_notebook_set_tab_label_text(GTK_NOTEBOOK(term->parent->notebook),
-								gtk_notebook_get_nth_page(GTK_NOTEBOOK(term->parent->notebook), term->index),
-								vte_terminal_get_window_title(VTE_TERMINAL(vte)));
+	lxterminal_tab_label_set_text(term->label, vte_terminal_get_window_title(VTE_TERMINAL(vte)));
+	//gtk_notebook_set_tab_label_text(GTK_NOTEBOOK(term->parent->notebook),
+	//							gtk_notebook_get_nth_page(GTK_NOTEBOOK(term->parent->notebook), term->index),
+	//							vte_terminal_get_window_title(VTE_TERMINAL(vte)));
 
 	/* setting window title */
 	gtk_window_set_title(GTK_WINDOW(term->parent->mainw), vte_terminal_get_window_title(VTE_TERMINAL(vte)));
@@ -263,7 +266,8 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	}
 
 	/* create label for tab */
-	term->label = gtk_label_new(label);
+	term->label = lxterminal_tab_label_new(label);
+	lxterminal_tab_label_close_button_clicked(G_CALLBACK(terminal_childexit), term);
 
 	/* setting scrollbar */
 	gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), VTE_TERMINAL(term->vte)->adjustment);
@@ -377,7 +381,7 @@ LXTerminal *lxterminal_init(gint argc, gchar **argv)
 
 	/* create terminal */
 	term = terminal_init(terminal);
-    gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label);
+    gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
 

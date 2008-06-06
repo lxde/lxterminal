@@ -12,6 +12,8 @@ INCLUDES = \
 lxterminal_SOURCES = \
 	setting.h \
 	setting.c \
+	tab.h \
+	tab.c \
 	lxterminal.h \
 	lxterminal.c
 

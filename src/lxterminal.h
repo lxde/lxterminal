@@ -1,6 +1,8 @@
 #ifndef LXTERMINAL_H
 #define LXTERMINAL_H
 
+#include "tab.h"
+
 #define NEW_TAB_ACCEL "<CTRL><SHIFT>T"
 #define CLOSE_TAB_ACCEL "<CTRL><SHIFT>W"
 #define QUIT_ACCEL "<CTRL><SHIFT>Q"
@@ -39,8 +41,8 @@ typedef struct _lxterminal {
 typedef struct _term {
 	gint index;
 	LXTerminal *parent;
+	LXTab *label;
 	GtkWidget *vte;
-	GtkWidget *label;
 	GtkWidget *scrollbar;
 	GtkWidget *box;
 } Term;
