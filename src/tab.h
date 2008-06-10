@@ -1,10 +1,11 @@
 #ifndef LXTERMINAL_TAB_H
 #define LXTERMINAL_TAB_H
 
-typedef struct _tab {
-	GtkWidget *main;
-	GtkWidget *label;
-	GtkWidget *close_btn;
-} LXTab;
+#include "lxterminal.h"
+
+void lxterminal_tab_label_close_button_clicked(GCallback func, Term *term);
+void lxterminal_tab_label_set_text(LXTab *tab, const gchar *str);
+LXTab *lxterminal_tab_label_new(const gchar *str);
 
 #endif
+

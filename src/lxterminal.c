@@ -369,6 +369,47 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
 }
 
+gboolean terminal_window_resize(LXTerminal *terminal)
+{
+	Term *term;
+	GdkGeometry hints;
+	gint i;
+	gint xpad;
+	gint ypad;
+	gint grid_width;
+	gint grid_height;
+  
+	/* The trick is rather simple here. This is called before any Gtk+ resizing operation takes
+	 * place, so the columns/rows on the active terminal screen are still set to their old values.
+	 * We simply query these values and force them to be set with the new style.
+	 */
+	for (i=0;i<terminal->terms->len;i++) {
+		term = g_ptr_array_index(terminal->terms, i);
+		vte_terminal_get_padding(VTE_TERMINAL(term->vte), &xpad, &ypad);
+
+		hints.base_width = xpad;
+		hints.base_height = ypad;
+		hints.width_inc = VTE_TERMINAL(term->vte)->char_width;
+		hints.height_inc = VTE_TERMINAL(term->vte)->char_height;
+		hints.min_width = hints.base_width + hints.width_inc * 4;
+		hints.min_height = hints.base_height + hints.height_inc * 2;
+
+		gtk_window_set_geometry_hints (GTK_WINDOW(terminal->mainw),
+									term->vte,
+									&hints,
+									GDK_HINT_RESIZE_INC
+									| GDK_HINT_MIN_SIZE
+									| GDK_HINT_BASE_SIZE);
+	}
+
+	return FALSE;
+}
+
+void terminal_window_resize_destroy(LXTerminal *terminal)
+{
+	g_source_remove(terminal->resize_idle_id);
+}
+
 LXTerminal *lxterminal_init(gint argc, gchar **argv)
 {
 	LXTerminal *terminal;
@@ -407,6 +448,13 @@ LXTerminal *lxterminal_init(gint argc, gchar **argv)
 	lxterminal_accelerator_init(terminal);
 
 	gtk_widget_show_all(terminal->mainw);
+
+	/* Gtk+ uses a priority of G_PRIORITY_HIGH_IDLE + 10 for resizing operations, so we
+	 * use a slightly higher priority for the reset size operation.
+	 */
+	terminal->resize_idle_id = g_idle_add_full(G_PRIORITY_HIGH_IDLE + 5,
+												(GSourceFunc) terminal_window_resize, terminal,
+												(GDestroyNotify) terminal_window_resize_destroy);
 
 	return terminal;
 }
