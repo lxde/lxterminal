@@ -15,7 +15,9 @@ lxterminal_SOURCES = \
 	tab.h \
 	tab.c \
 	lxterminal.h \
-	lxterminal.c
+	lxterminal.c \
+	preferences.h \
+	preferences.c
 
 lxterminal_LDADD = \
 		$(PACKAGE_LIBS) \

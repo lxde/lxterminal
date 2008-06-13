@@ -25,16 +25,7 @@
 #include "lxterminal.h"
 #include "setting.h"
 #include "tab.h"
-
-Setting *global_setting;
-
-Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env);
-void terminal_newtab(gpointer data, guint action, GtkWidget *item);
-void terminal_closetab(gpointer data, guint action, GtkWidget *item);
-void terminal_nexttab(gpointer data, guint action, GtkWidget *item);
-void terminal_prevtab(gpointer data, guint action, GtkWidget *item);
-void terminal_copy(gpointer data, guint action, GtkWidget *item);
-void terminal_paste(gpointer data, guint action, GtkWidget *item);
+#include "preferences.h"
 
 static GtkItemFactoryEntry menu_items[] =
 {
@@ -47,7 +38,7 @@ static GtkItemFactoryEntry menu_items[] =
 	{ N_("/_Edit/_Copy"), COPY_ACCEL, terminal_copy, 0, "<StockItem>", GTK_STOCK_COPY },
 	{ N_("/_Edit/_Paste"), PASTE_ACCEL, terminal_paste, 0, "<StockItem>", GTK_STOCK_PASTE },
 	{ N_("/_Edit/sep1"), NULL, NULL, 0, "<Separator>" },
-	{ N_("/_Edit/_Settings..."), NULL, NULL, 0, "<StockItem>", GTK_STOCK_EXECUTE },
+	{ N_("/_Edit/_Preferences..."), NULL, lxterminal_preferences_dialog, 0, "<StockItem>", GTK_STOCK_EXECUTE },
 	{ N_("/_Tabs"), NULL, NULL, 0, "<Branch>" },
 	{ N_("/_Tabs/_Previous Tab"), PREVIOUS_TAB_ACCEL, terminal_prevtab, 1, "<Item>"},
 	{ N_("/_Tabs/_Next Tab"), NEXT_TAB_ACCEL, terminal_nexttab, 1, "<Item>"},
@@ -60,7 +51,7 @@ static GtkItemFactoryEntry vte_menu_items[] =
 	{ N_("/_Copy"), COPY_ACCEL, terminal_copy, 0, "<StockItem>", GTK_STOCK_COPY },
 	{ N_("/_Paste"), PASTE_ACCEL, terminal_paste, 0, "<StockItem>", GTK_STOCK_PASTE },
 	{ N_("/sep2"), NULL, NULL, 0, "<Separator>" },
-	{ N_("/_Settings..."), NULL, NULL, 0, "<StockItem>", GTK_STOCK_EXECUTE },
+	{ N_("/_Preferences..."), NULL, lxterminal_preferences_dialog, 0, "<StockItem>", GTK_STOCK_EXECUTE },
 	{ N_("/sep3"), NULL, NULL, 0, "<Separator>" },
 	{ N_("/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE }
 };
@@ -275,13 +266,8 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	gtk_box_pack_start(GTK_BOX(term->box), term->scrollbar, FALSE, TRUE, 0);
 
 	/* setting terminal */
-	if (!global_setting) {
-		vte_terminal_set_font_from_string(term->vte, "monospace 10");
-		vte_terminal_set_color_background(term->vte, &black);
-	} else {
-		vte_terminal_set_font_from_string(term->vte, global_setting->fontname);
-		vte_terminal_set_color_background(term->vte, &black);
-	}
+	vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
+	vte_terminal_set_color_background(term->vte, &black);
 
 	/* create label for tab */
 	term->label = lxterminal_tab_label_new(label);
@@ -369,6 +355,20 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
 }
 
+void terminal_setting_update(LXTerminal *terminal, Setting *setting)
+{
+	Term *term;
+	gint i;
+
+	/* update all of terminals */
+	for (i=0;i<terminal->terms->len;i++) {
+		term = g_ptr_array_index(terminal->terms, i);
+
+		vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
+//		vte_terminal_set_color_background(term->vte, &black);
+	}
+}
+
 gboolean terminal_window_resize(LXTerminal *terminal)
 {
 	Term *term;
@@ -383,16 +383,17 @@ gboolean terminal_window_resize(LXTerminal *terminal)
 	 * place, so the columns/rows on the active terminal screen are still set to their old values.
 	 * We simply query these values and force them to be set with the new style.
 	 */
+	term = g_ptr_array_index(terminal->terms, 0);
+	vte_terminal_get_padding(VTE_TERMINAL(term->vte), &xpad, &ypad);
+	hints.base_width = xpad;
+	hints.base_height = ypad;
+	hints.width_inc = VTE_TERMINAL(term->vte)->char_width;
+	hints.height_inc = VTE_TERMINAL(term->vte)->char_height;
+	hints.min_width = hints.base_width + hints.width_inc * 4;
+	hints.min_height = hints.base_height + hints.height_inc * 2;
+
 	for (i=0;i<terminal->terms->len;i++) {
 		term = g_ptr_array_index(terminal->terms, i);
-		vte_terminal_get_padding(VTE_TERMINAL(term->vte), &xpad, &ypad);
-
-		hints.base_width = xpad;
-		hints.base_height = ypad;
-		hints.width_inc = VTE_TERMINAL(term->vte)->char_width;
-		hints.height_inc = VTE_TERMINAL(term->vte)->char_height;
-		hints.min_width = hints.base_width + hints.width_inc * 4;
-		hints.min_height = hints.base_height + hints.height_inc * 2;
 
 		gtk_window_set_geometry_hints (GTK_WINDOW(terminal->mainw),
 									term->vte,
@@ -410,13 +411,17 @@ void terminal_window_resize_destroy(LXTerminal *terminal)
 	g_source_remove(terminal->resize_idle_id);
 }
 
-LXTerminal *lxterminal_init(gint argc, gchar **argv)
+LXTerminal *lxterminal_init(gint argc, gchar **argv, Setting *setting)
 {
 	LXTerminal *terminal;
 	Term *term;
 
 	terminal = g_new0(LXTerminal, 1);
 	terminal->terms = g_ptr_array_new();
+
+	/* Setting */
+	if (setting)
+		terminal->setting = setting;
 
 	/* create window */
 	terminal->mainw = gtk_window_new(GTK_WINDOW_TOPLEVEL);
@@ -462,6 +467,8 @@ LXTerminal *lxterminal_init(gint argc, gchar **argv)
 int main(gint argc, gchar** argv)
 {
 	LXTerminal *terminal;
+	Setting *setting;
+	gchar *dir, *path;
 	gtk_init(&argc, &argv);
 
 #ifdef ENABLE_NLS
@@ -471,10 +478,23 @@ int main(gint argc, gchar** argv)
 #endif
 
 	/* load config file */
-	global_setting = load_setting_from_file(PACKAGE_DATA_DIR "/lxterminal/lxterminal.conf");
+	dir = g_build_filename(g_get_user_config_dir(), "lxterminal" , NULL);
+	g_mkdir_with_parents(dir, 0700);
+	path = g_build_filename(dir, "lxterminal.conf", NULL);
+	g_free(dir);
+
+	if (!g_file_test(path, G_FILE_TEST_EXISTS)) {
+		setting = load_setting_from_file(PACKAGE_DATA_DIR "/lxterminal/lxterminal.conf");
+		/* save to user's directory */
+		setting_save(setting);
+	} else {
+		setting = load_setting_from_file(path);
+	}
+
+	g_free(path);
 
 	/* initializing LXTerminal */
-	terminal = lxterminal_init(argc, argv);
+	terminal = lxterminal_init(argc, argv, setting);
 
 	gtk_main();
 

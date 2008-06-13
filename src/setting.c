@@ -23,28 +23,65 @@
 
 #include "setting.h"
 
+void setting_save_to_file(const char *path, const char *data)
+{
+	FILE *fp;
+
+	if (!g_file_test(path, G_FILE_TEST_EXISTS))
+		g_creat(path, 0700);
+
+	/* open config file */
+	fp = fopen(path, "w");
+	fputs(data, fp);
+	fclose(fp);
+}
+
+void setting_save(Setting *setting)
+{
+	gchar *path;
+	gchar *file_data;
+
+	/* build config path */
+	path = g_build_filename(g_get_user_config_dir(), "lxterminal/lxterminal.conf", NULL);
+
+	/* push settings to GKeyFile */
+	g_key_file_set_string(setting->keyfile, "general", "fontname", setting->fontname);
+
+	/* generate config data */
+	file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
+
+	/* save to config file */
+	setting_save_to_file(path, file_data);
+
+	/* release */
+	g_free(file_data);
+}
+
 Setting *load_setting_from_file(const char *filename)
 {
-	GKeyFile *keyfile;
 	GKeyFileFlags flags;
 	GError *error = NULL;
 	Setting *setting;
 
+	setting = (Setting *)malloc(sizeof(Setting));
+
 	/* initiate key_file */
-	keyfile = g_key_file_new();
+	setting->keyfile = g_key_file_new();
 	flags = G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS;
 
 	/* Load config */
-	if (g_file_test(filename, G_FILE_TEST_EXISTS))
-		return NULL;
+	if (g_file_test(filename, G_FILE_TEST_EXISTS)) {
+		if (!g_key_file_load_from_file(setting->keyfile, filename, flags, &error))
+			goto setting_default;
 
-	if (!g_key_file_load_from_file (keyfile, filename, flags, &error))
-		return NULL;
+		/* general setting */
+		setting->fontname = g_key_file_get_string(setting->keyfile, "general", "fontname", NULL);
+	}
 
-	setting = (Setting *)malloc(sizeof(Setting));
+setting_default:
 
-	/* general setting */
-	setting->fontname = g_key_file_get_string(keyfile, "general", "fontname", NULL);
+	if (!setting->fontname)
+		setting->fontname = g_strdup("monospace 10");
 
 	return setting;
 }

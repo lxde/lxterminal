@@ -1,6 +1,8 @@
 #ifndef LXTERMINAL_H
 #define LXTERMINAL_H
 
+#include "setting.h"
+
 #define NEW_TAB_ACCEL "<CTRL><SHIFT>T"
 #define CLOSE_TAB_ACCEL "<CTRL><SHIFT>W"
 #define QUIT_ACCEL "<CTRL><SHIFT>Q"
@@ -35,6 +37,7 @@ typedef struct _lxterminal {
 	GtkWidget *notebook;
 	GPtrArray *terms;
 	gint       resize_idle_id;
+	Setting   *setting;
 } LXTerminal;
 
 typedef struct _tab {
@@ -51,5 +54,15 @@ typedef struct _term {
 	GtkWidget *scrollbar;
 	GtkWidget *box;
 } Term;
+
+Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env);
+void terminal_newtab(gpointer data, guint action, GtkWidget *item);
+void terminal_closetab(gpointer data, guint action, GtkWidget *item);
+void terminal_nexttab(gpointer data, guint action, GtkWidget *item);
+void terminal_prevtab(gpointer data, guint action, GtkWidget *item);
+void terminal_copy(gpointer data, guint action, GtkWidget *item);
+void terminal_paste(gpointer data, guint action, GtkWidget *item);
+
+void terminal_setting_update(LXTerminal *terminal, Setting *setting);
 
 #endif
