@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lxterminal 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-06-14 10:14+0800\n"
+"PO-Revision-Date: 2008-06-14 00:27+0100\n"
+"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+
+#: src/lxterminal.c:32
+msgid "/_File"
+msgstr "/_Fájl"
+
+#: src/lxterminal.c:33
+msgid "/_File/_New Tab"
+msgstr "/_Fájl/Ú_j lap"
+
+#: src/lxterminal.c:34
+msgid "/_File/_Close Tab"
+msgstr "/_Fájl/Lap be_zárása"
+
+#: src/lxterminal.c:35
+msgid "/_File/sep1"
+msgstr "/_Fájl/sep1"
+
+#: src/lxterminal.c:36
+msgid "/_File/_Quit"
+msgstr "/_Fájl/_Kilép"
+
+#: src/lxterminal.c:37
+msgid "/_Edit"
+msgstr "/Sz_erkeszt"
+
+#: src/lxterminal.c:38
+msgid "/_Edit/_Copy"
+msgstr "/Sz_erkeszt/_Másol"
+
+#: src/lxterminal.c:39
+msgid "/_Edit/_Paste"
+msgstr "/Sz_erkeszt/Be_illeszt"
+
+#: src/lxterminal.c:40
+msgid "/_Edit/sep1"
+msgstr "/Sz_erkeszt/sep1"
+
+#: src/lxterminal.c:41
+msgid "/_Edit/_Preferences..."
+msgstr "/Sz_erkeszt/_Beállítások..."
+
+#: src/lxterminal.c:42
+msgid "/_Tabs"
+msgstr "/_Lapok"
+
+#: src/lxterminal.c:43
+msgid "/_Tabs/_Previous Tab"
+msgstr "/_Lapok/_Előző lap"
+
+#: src/lxterminal.c:44
+msgid "/_Tabs/_Next Tab"
+msgstr "/_Lapok/_Következő lap"
+
+#: src/lxterminal.c:49
+msgid "/_New Tab"
+msgstr "/Ú_j lap"
+
+#: src/lxterminal.c:51
+msgid "/_Copy"
+msgstr "/_Másol"
+
+#: src/lxterminal.c:52
+msgid "/_Paste"
+msgstr "/Be_illeszt"
+
+#: src/lxterminal.c:54
+msgid "/_Preferences..."
+msgstr "/_Beállítások"
+
+#: src/lxterminal.c:56
+msgid "/_Close Tab"
+msgstr "/Lap be_zárása"
+
+#: src/lxterminal.c:166
+#: src/lxterminal.c:194
+#: src/lxterminal.c:296
+#: src/lxterminal.c:428
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#: src/preferences.c:34
+msgid "General"
+msgstr "Általános"
+
+#: src/preferences.c:54
+msgid "Terminal Font:"
+msgstr "Terminál betű:"
+
+#: src/preferences.c:176
+msgid "Preferences"
+msgstr "Beállítások"
+
