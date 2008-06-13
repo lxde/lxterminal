@@ -2,6 +2,7 @@ AC_PREREQ(2.57)
 AC_INIT(lxterminal, 0.1, http://lxde.org/)
 AM_CONFIG_HEADER(config.h)
 AM_INIT_AUTOMAKE
+AC_PROG_INTLTOOL
 AM_MAINTAINER_MODE
 
 AC_PROG_CC
@@ -13,8 +14,8 @@ AC_HEADER_STDC
 pkg_modules="glib-2.0 >= 2.6.0 \
              gthread-2.0 \
              vte"
-PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
 
+PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
 AC_SUBST(PACKAGE_CFLAGS)
 AC_SUBST(PACKAGE_LIBS)
 
