@@ -6,6 +6,7 @@ INCLUDES = \
 	-I$(top_srcdir) \
 	-DPACKAGE_BIN_DIR=\""$(bindir)"\" \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
 	$(PACKAGE_CFLAGS) \
 	$(G_CAST_CHECKS)
 
