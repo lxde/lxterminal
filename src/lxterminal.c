@@ -167,7 +167,7 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 
-	Term *term = terminal_new(terminal, "LXTerminal", g_get_current_dir(), NULL);
+	Term *term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL);
 	
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
@@ -195,7 +195,7 @@ void terminal_switch_tab(GtkNotebook *notebook, GtkNotebookPage *page, guint num
 
 	/* if title of VTE is NULL */
 	if ((title = vte_terminal_get_window_title(VTE_TERMINAL(term->vte))) == NULL)
-		gtk_window_set_title(GTK_WINDOW(terminal->mainw), "LXTerminal");
+		gtk_window_set_title(GTK_WINDOW(terminal->mainw), _("LXTerminal"));
 	else
 		gtk_window_set_title(GTK_WINDOW(terminal->mainw), title);
 
@@ -242,12 +242,18 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 	}
 }
 
+gchar* gettext_translate_func(const gchar *path, gpointer data)
+{
+	return _(path);
+}
+
 gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpointer data)
 {
 	GtkItemFactory *item_factory;
 
 	if (event->button == 3) {
 		item_factory = gtk_item_factory_new(GTK_TYPE_MENU, "<main>", NULL);
+		gtk_item_factory_set_translate_func(item_factory, gettext_translate_func, NULL, NULL);
 		gtk_item_factory_create_items(item_factory, sizeof(vte_menu_items) / sizeof(vte_menu_items[0]), vte_menu_items, data);
 		gtk_menu_popup(GTK_MENU(gtk_item_factory_get_widget(item_factory, "<main>")), NULL, NULL, NULL, NULL, event->button, event->time);
 	}
@@ -309,6 +315,7 @@ Menu *menubar_init(LXTerminal *terminal)
 	menubar = g_new0(Menu, 1);
 
 	menubar->item_factory = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<main>", NULL);
+	gtk_item_factory_set_translate_func(menubar->item_factory, gettext_translate_func, NULL, NULL);
     gtk_item_factory_create_items(menubar->item_factory, sizeof(menu_items) / sizeof(menu_items[0]), menu_items, terminal);
     menubar->menu = gtk_item_factory_get_widget(menubar->item_factory, "<main>");
 
@@ -429,7 +436,7 @@ LXTerminal *lxterminal_init(gint argc, gchar **argv, Setting *setting)
 
 	/* create window */
 	terminal->mainw = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-	gtk_window_set_title(GTK_WINDOW(terminal->mainw), "LXTerminal");
+	gtk_window_set_title(GTK_WINDOW(terminal->mainw), _("LXTerminal"));
     g_signal_connect(terminal->mainw, "delete_event", gtk_main_quit, NULL);
 
 	/* create box for putting menubar and notebook */

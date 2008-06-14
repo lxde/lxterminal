@@ -102,7 +102,7 @@ msgstr "一般"
 
 #: src/preferences.c:54
 msgid "Terminal Font:"
-msgstr "終端機字體:"
+msgstr "終端機字型："
 
 #: src/preferences.c:176
 msgid "Preferences"

@@ -86,6 +86,9 @@ TabWidget *lxterminal_preferences_page_new(TabGroup *tabgroup)
 	tab->page = gtk_event_box_new();
 	GTK_WIDGET_SET_FLAGS(tab->page, GTK_NO_WINDOW);
 
+	/* Sets the border width of the container. */
+	gtk_container_set_border_width(GTK_CONTAINER(tab->page), 10);
+
 	/* create container for label */
 	tab->label_box = gtk_hbox_new(FALSE, 4);
 
@@ -93,9 +96,9 @@ TabWidget *lxterminal_preferences_page_new(TabGroup *tabgroup)
 	tab->icon = gtk_image_new_from_file(tabgroup->icon);
 
 	/* create label */
-	tab->label = gtk_label_new(tabgroup->name);
+	tab->label = gtk_label_new(_(tabgroup->name));
 	gtk_misc_set_alignment(GTK_MISC(tab->label), 0.0, 0.5);
-	gtk_misc_set_padding(GTK_MISC(tab->label), 0, 0);
+	gtk_misc_set_padding(GTK_MISC(tab->label), 2, 2);
 
 	/* add all of widgets to label box */
 	gtk_box_pack_start(GTK_BOX(tab->label_box), tab->icon, FALSE, FALSE, 0);
