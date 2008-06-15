@@ -303,7 +303,7 @@ Term *terminal_init(LXTerminal *terminal)
 {
 	Term *term;
 
-	term = terminal_new(terminal, "LXTerminal", g_get_current_dir(), NULL);
+	term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL);
 
 	return term;
 }
@@ -471,6 +471,24 @@ LXTerminal *lxterminal_init(gint argc, gchar **argv, Setting *setting)
 	terminal->resize_idle_id = g_idle_add_full(G_PRIORITY_HIGH_IDLE + 5,
 												(GSourceFunc) terminal_window_resize, terminal,
 												(GDestroyNotify) terminal_window_resize_destroy);
+
+	/* process argument */
+	if (argc>1) {
+		int i;
+
+		for (i=1;i<argc;i++) {
+			if ((strcmp(argv[i],"--command")==0||strcmp(argv[i],"-e")==0)&&(i+1<argc)) {
+				vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(argv+i+1), argv+i+1, NULL, g_get_current_dir(), FALSE, TRUE, TRUE);
+				break;
+			} else if (strncmp(argv[i],"--command=", 10)==0) {
+				gchar **command;
+				g_shell_parse_argv(argv[i]+10, NULL, &command, NULL);
+				vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(command), command, NULL, g_get_current_dir(), FALSE, TRUE, TRUE);
+				g_strfreev(command);
+				break;
+			}
+		}
+	}
 
 	return terminal;
 }
