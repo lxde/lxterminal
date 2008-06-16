@@ -31,12 +31,15 @@
 #include "tab.h"
 #include "preferences.h"
 
+LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
+
 static GtkItemFactoryEntry menu_items[] =
 {
 	{ N_("/_File"), NULL, NULL, 0, "<Branch>" },
+	{ N_("/_File/_New Window"), NEW_WINDOW_ACCEL, terminal_newwindow, 1, "<StockItem>", GTK_STOCK_ADD },
 	{ N_("/_File/_New Tab"), NEW_TAB_ACCEL, terminal_newtab, 1, "<StockItem>", GTK_STOCK_ADD },
-	{ N_("/_File/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE },
 	{ N_("/_File/sep1"), NULL, NULL, 0, "<Separator>" },
+	{ N_("/_File/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE },
 	{ N_("/_File/_Quit"), QUIT_ACCEL, gtk_main_quit, 0, "<StockItem>", GTK_STOCK_QUIT },
 	{ N_("/_Edit"), NULL, NULL, 0, "<Branch>" },
 	{ N_("/_Edit/_Copy"), COPY_ACCEL, terminal_copy, 0, "<StockItem>", GTK_STOCK_COPY },
@@ -50,6 +53,7 @@ static GtkItemFactoryEntry menu_items[] =
 
 static GtkItemFactoryEntry vte_menu_items[] =
 {
+	{ N_("/_New Window"), NEW_WINDOW_ACCEL, terminal_newwindow, 1, "<StockItem>", GTK_STOCK_ADD },
 	{ N_("/_New Tab"), NEW_TAB_ACCEL, terminal_newtab, 1, "<StockItem>", GTK_STOCK_ADD },
 	{ N_("/sep1"), NULL, NULL, 0, "<Separator>" },
 	{ N_("/_Copy"), COPY_ACCEL, terminal_copy, 0, "<StockItem>", GTK_STOCK_COPY },
@@ -163,6 +167,13 @@ void terminal_closetab(gpointer data, guint action, GtkWidget *item)
 	terminal_childexit(VTE_TERMINAL(term->vte), term);
 }
 
+void terminal_newwindow(gpointer data, guint action, GtkWidget *item)
+{
+	LXTerminal *terminal = (LXTerminal *)data;
+
+	lxterminal_init(terminal->parent, NULL, NULL, terminal->setting);
+}
+
 void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
@@ -210,6 +221,23 @@ void terminal_title_changed(VteTerminal *vte, Term *term)
 	gtk_window_set_title(GTK_WINDOW(term->parent->mainw), vte_terminal_get_window_title(VTE_TERMINAL(vte)));
 }
 
+void terminal_windowexit(LXTerminal *terminal)
+{
+	int i;
+
+	if (terminal->parent->windows->len==1) {
+		gtk_main_quit();
+	} else {
+		g_ptr_array_remove_index(terminal->parent->windows, terminal->index);
+
+		/* decreasing index number after the window be removed */
+		for (i=terminal->index;i<terminal->parent->windows->len;i++) {
+			LXTerminal *t = g_ptr_array_index(terminal->parent->windows, i);
+			t->index--;
+		}
+	}
+}
+
 void terminal_childexit(VteTerminal *vte, Term *term)
 {
 	int i;
@@ -220,7 +248,7 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 		g_ptr_array_free(terminal->terms, TRUE);
 
 		/* quit */
-		gtk_main_quit();
+		gtk_widget_destroy(terminal->mainw);
 	} else {
 		/* remove page */
 		g_ptr_array_remove_index(terminal->terms, term->index);
@@ -422,13 +450,17 @@ void terminal_window_resize_destroy(LXTerminal *terminal)
 	g_source_remove(terminal->resize_idle_id);
 }
 
-LXTerminal *lxterminal_init(gint argc, gchar **argv, Setting *setting)
+LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting)
 {
 	LXTerminal *terminal;
 	Term *term;
 
 	terminal = g_new0(LXTerminal, 1);
+	terminal->parent = lxtermwin;
 	terminal->terms = g_ptr_array_new();
+
+    g_ptr_array_add(lxtermwin->windows, terminal);
+	terminal->index = terminal->parent->windows->len - 1;
 
 	/* Setting */
 	if (setting)
@@ -437,7 +469,7 @@ LXTerminal *lxterminal_init(gint argc, gchar **argv, Setting *setting)
 	/* create window */
 	terminal->mainw = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	gtk_window_set_title(GTK_WINDOW(terminal->mainw), _("LXTerminal"));
-    g_signal_connect(terminal->mainw, "delete_event", gtk_main_quit, NULL);
+	g_object_weak_ref(terminal->mainw, terminal_windowexit, terminal);
 
 	/* create box for putting menubar and notebook */
 	terminal->box = gtk_vbox_new(FALSE, 1);
@@ -496,6 +528,7 @@ LXTerminal *lxterminal_init(gint argc, gchar **argv, Setting *setting)
 int main(gint argc, gchar** argv)
 {
 	LXTerminal *terminal;
+	LXTermWindow *lxtermwin;
 	Setting *setting;
 	gchar *dir, *path;
 	gtk_init(&argc, &argv);
@@ -522,8 +555,12 @@ int main(gint argc, gchar** argv)
 
 	g_free(path);
 
+	/* initializing Window Array */
+	lxtermwin = g_new0(LXTermWindow, 1);
+	lxtermwin->windows = g_ptr_array_new();
+
 	/* initializing LXTerminal */
-	terminal = lxterminal_init(argc, argv, setting);
+	terminal = lxterminal_init(lxtermwin, argc, argv, setting);
 
 	gtk_main();
 
