@@ -11,6 +11,8 @@ INCLUDES = \
 	$(G_CAST_CHECKS)
 
 lxterminal_SOURCES = \
+	unixsocket.h \
+	unixsocket.c \
 	setting.h \
 	setting.c \
 	tab.h \

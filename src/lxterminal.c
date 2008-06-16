@@ -30,6 +30,7 @@
 #include "setting.h"
 #include "tab.h"
 #include "preferences.h"
+#include "unixsocket.h"
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
 
@@ -558,6 +559,11 @@ int main(gint argc, gchar** argv)
 	/* initializing Window Array */
 	lxtermwin = g_new0(LXTermWindow, 1);
 	lxtermwin->windows = g_ptr_array_new();
+	lxtermwin->setting = setting;
+
+	/* initializing socket */
+	if (!lxterminal_socket_init(lxtermwin, argc, argv))
+		return 0;
 
 	/* initializing LXTerminal */
 	terminal = lxterminal_init(lxtermwin, argc, argv, setting);

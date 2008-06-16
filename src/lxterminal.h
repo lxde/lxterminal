@@ -25,6 +25,7 @@
 #define SWITCH_TAB9_ACCEL "<ALT>9"
 
 typedef struct _lxtermwindow {
+	Setting   *setting;
 	GPtrArray *windows;
 } LXTermWindow;
 
