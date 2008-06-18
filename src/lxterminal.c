@@ -127,7 +127,6 @@ gdk_window_get_geometry_hints(GdkWindow *window,
 		*geom_mask |= GDK_HINT_WIN_GRAVITY;
 		geometry->win_gravity = size_hints.win_gravity;
 	}
-
 }
 
 void terminal_window_resize_destroy(LXTerminal *terminal)
@@ -155,7 +154,6 @@ gboolean terminal_window_resize(LXTerminal *terminal)
 	hints.base_height = ypad;
 	hints.min_width = hints.base_width + hints.width_inc * 4;
 	hints.min_height = hints.base_height + hints.height_inc * 2;
-	printf("T:%dx%d\n", width, height);
 
 	/* allow resizing by user */
 	for (i=0;i<terminal->terms->len;i++) {
@@ -446,18 +444,13 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 	}
 }
 
-gchar* gettext_translate_func(const gchar *path, gpointer data)
-{
-	return _(path);
-}
-
 gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpointer data)
 {
 	GtkItemFactory *item_factory;
 
 	if (event->button == 3) {
 		item_factory = gtk_item_factory_new(GTK_TYPE_MENU, "<main>", NULL);
-		gtk_item_factory_set_translate_func(item_factory, gettext_translate_func, NULL, NULL);
+		gtk_item_factory_set_translate_func(item_factory, gettext, NULL, NULL);
 		gtk_item_factory_create_items(item_factory, sizeof(vte_menu_items) / sizeof(vte_menu_items[0]), vte_menu_items, data);
 		gtk_menu_popup(GTK_MENU(gtk_item_factory_get_widget(item_factory, "<main>")), NULL, NULL, NULL, NULL, event->button, event->time);
 	}
@@ -510,15 +503,6 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	return term;
 }
 
-Term *terminal_init(LXTerminal *terminal)
-{
-	Term *term;
-
-	term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, NULL);
-
-	return term;
-}
-
 Menu *menubar_init(LXTerminal *terminal)
 {
 	Menu *menubar;
@@ -526,7 +510,7 @@ Menu *menubar_init(LXTerminal *terminal)
 	menubar = g_new0(Menu, 1);
 
 	menubar->item_factory = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<main>", NULL);
-	gtk_item_factory_set_translate_func(menubar->item_factory, gettext_translate_func, NULL, NULL);
+	gtk_item_factory_set_translate_func(menubar->item_factory, gettext, NULL, NULL);
     gtk_item_factory_create_items(menubar->item_factory, sizeof(menu_items) / sizeof(menu_items[0]), menu_items, terminal);
     menubar->menu = gtk_item_factory_get_widget(menubar->item_factory, "<main>");
 
@@ -595,6 +579,29 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 {
 	LXTerminal *terminal;
 	Term *term = NULL;
+	gchar *cmd = NULL;
+	gchar *workdir = NULL;
+
+	/* argument */
+	if (argc>1) {
+		int i;
+
+		for (i=1;i<argc;i++) {
+			if (strncmp(argv[i],"--command=", 10)==0) {
+				cmd = argv[i]+10;
+				continue;
+			} else if ((strcmp(argv[i],"--command")==0||strcmp(argv[i],"-e")==0)&&(i+1<argc)) {
+				cmd = argv[++i];
+				continue;
+			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
+				workdir = argv[i]+20;
+				continue;
+			}
+
+			printf("%s\n", helpmsg);
+			return NULL;
+		}
+	}
 
 	terminal = g_new0(LXTerminal, 1);
 	terminal->parent = lxtermwin;
@@ -627,41 +634,14 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
     g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
     gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 
-	/* argument */
-	if (argc>1) {
-		int i;
-		gchar *cmd = NULL;
-		gchar *workdir = NULL;
 
-		for (i=1;i<argc;i++) {
-			if (strncmp(argv[i],"--command=", 10)==0) {
-				cmd = argv[i]+10;
-				//term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, argv[i]+10);
-				continue;
-			} else if ((strcmp(argv[i],"--command")==0||strcmp(argv[i],"-e")==0)&&(i+1<argc)) {
-				cmd = argv[++i];
-				//term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, argv[++i]);
-				continue;
-			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
-				workdir = argv[i]+20;
-				continue;
-			}
-
-			printf("%s\n", helpmsg);
-			return NULL;
-		}
-
-		if (!workdir) {
-			workdir = g_get_current_dir();
-			term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
-			g_free(workdir);
-		} else {
-			term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
-		}
+	if (!workdir) {
+		workdir = g_get_current_dir();
+		term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
+		g_free(workdir);
+	} else {
+		term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
 	}
-
-	if (!term)
-		term = terminal_init(terminal);
 
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
@@ -678,13 +658,6 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 										&terminal->geom_mask);
 
 	/* resizing terminal with window size */
-	/* Gtk+ uses a priority of G_PRIORITY_HIGH_IDLE + 10 for resizing operations, so we
-	 * use a slightly higher priority for the reset size operation.
-	 */
-	//terminal->resize_idle_id = g_idle_add_full(G_PRIORITY_HIGH_IDLE + 5,
-	//											(GSourceFunc) terminal_window_resize, terminal,
-	//											(GDestroyNotify) terminal_window_resize_destroy);
-
 	terminal_window_resize(terminal);
 
 	return terminal;
@@ -696,6 +669,8 @@ int main(gint argc, gchar** argv)
 	LXTermWindow *lxtermwin;
 	Setting *setting;
 	gchar *dir, *path;
+	gint i;
+
 	gtk_init(&argc, &argv);
 
 #ifdef ENABLE_NLS
@@ -703,6 +678,29 @@ int main(gint argc, gchar** argv)
 	bind_textdomain_codeset ( GETTEXT_PACKAGE, "UTF-8" );
 	textdomain ( GETTEXT_PACKAGE );
 #endif
+
+	if (argc>1) {
+		for (i=1;i<argc;i++) {
+			if (strncmp(argv[i],"--command=", 10)==0) {
+				continue;
+			} else if ((strcmp(argv[i],"--command")==0||strcmp(argv[i],"-e")==0)&&(i+1<argc)) {
+				i++;
+				continue;
+			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
+				continue;
+			}
+
+			printf("%s\n", helpmsg);
+			return 0;
+		}
+	}
+
+	/* initializing Window Array */
+	lxtermwin = g_new0(LXTermWindow, 1);
+
+	/* initializing socket */
+	if (!lxterminal_socket_init(lxtermwin, argc, argv))
+		return 0;
 
 	/* load config file */
 	dir = g_build_filename(g_get_user_config_dir(), "lxterminal" , NULL);
@@ -720,14 +718,9 @@ int main(gint argc, gchar** argv)
 
 	g_free(path);
 
-	/* initializing Window Array */
-	lxtermwin = g_new0(LXTermWindow, 1);
+	/* initializing something */
 	lxtermwin->windows = g_ptr_array_new();
 	lxtermwin->setting = setting;
-
-	/* initializing socket */
-	if (!lxterminal_socket_init(lxtermwin, argc, argv))
-		return 0;
 
 	/* initializing LXTerminal */
 	terminal = lxterminal_init(lxtermwin, argc, argv, setting);
