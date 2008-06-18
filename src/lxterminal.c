@@ -448,6 +448,7 @@ gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpoi
 {
 	GtkItemFactory *item_factory;
 
+	/* right-click */
 	if (event->button == 3) {
 		item_factory = gtk_item_factory_new(GTK_TYPE_MENU, "<main>", NULL);
 		gtk_item_factory_set_translate_func(item_factory, gettext, NULL, NULL);
@@ -597,9 +598,6 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 				workdir = argv[i]+20;
 				continue;
 			}
-
-			printf("%s\n", helpmsg);
-			return NULL;
 		}
 	}
 
@@ -634,7 +632,6 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
     g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
     gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 
-
 	if (!workdir) {
 		workdir = g_get_current_dir();
 		term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
@@ -665,7 +662,6 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 int main(gint argc, gchar** argv)
 {
-	LXTerminal *terminal;
 	LXTermWindow *lxtermwin;
 	Setting *setting;
 	gchar *dir, *path;
@@ -723,9 +719,7 @@ int main(gint argc, gchar** argv)
 	lxtermwin->setting = setting;
 
 	/* initializing LXTerminal */
-	terminal = lxterminal_init(lxtermwin, argc, argv, setting);
-	if (!terminal)
-		return 0;
+	lxterminal_init(lxtermwin, argc, argv, setting);
 
 	gtk_main();
 
