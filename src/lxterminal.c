@@ -21,8 +21,10 @@
 	#include <config.h>
 #endif
 
+#include <X11/Xutil.h>
 #include <glib.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkx.h>
 #include <glib/gi18n.h>
 #include <vte/vte.h>
 
@@ -33,6 +35,15 @@
 #include "unixsocket.h"
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
+gboolean terminal_window_size_reset(LXTerminal *terminal, gboolean enable);
+
+static gchar helpmsg[] = {
+	"Usage:\n"
+	"  lxterminal [Options...] - LXTerminal is a terinal emulatoor\n\n"
+	"Options:\n"
+	"  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
+	"  --working-directory=DIRECTOR     Set the terminal's working directory\n"
+};
 
 static GtkItemFactoryEntry menu_items[] =
 {
@@ -64,6 +75,134 @@ static GtkItemFactoryEntry vte_menu_items[] =
 	{ N_("/sep3"), NULL, NULL, 0, "<Separator>" },
 	{ N_("/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE }
 };
+
+static void
+gdk_window_get_geometry_hints(GdkWindow *window,
+								GdkGeometry *geometry,
+								GdkWindowHints *geom_mask)
+{
+	XSizeHints size_hints; 
+	glong junk_size_mask = 0;
+
+	g_return_if_fail (GDK_IS_WINDOW (window));
+	g_return_if_fail (geometry != NULL);
+	g_return_if_fail (geom_mask != NULL);
+
+	*geom_mask = 0;
+
+	if (GDK_WINDOW_DESTROYED (window))
+		return;
+
+	if (!XGetWMNormalHints (GDK_WINDOW_XDISPLAY (window),
+							GDK_WINDOW_XID (window),
+							&size_hints,
+							&junk_size_mask))
+	return;                   
+
+	if (size_hints.flags & PMinSize) {
+		*geom_mask |= GDK_HINT_MIN_SIZE;
+		geometry->min_width = size_hints.min_width;
+		geometry->min_height = size_hints.min_height;
+	}
+
+	if (size_hints.flags & PMaxSize) {
+		*geom_mask |= GDK_HINT_MAX_SIZE;
+		geometry->max_width = MAX (size_hints.max_width, 1);
+		geometry->max_height = MAX (size_hints.max_height, 1);
+	}
+
+	if (size_hints.flags & PResizeInc) {
+		*geom_mask |= GDK_HINT_RESIZE_INC;
+		geometry->width_inc = size_hints.width_inc;
+		geometry->height_inc = size_hints.height_inc;
+	}
+
+	if (size_hints.flags & PAspect) {
+		*geom_mask |= GDK_HINT_ASPECT;
+		geometry->min_aspect = (gdouble) size_hints.min_aspect.x / (gdouble) size_hints.min_aspect.y;
+		geometry->max_aspect = (gdouble) size_hints.max_aspect.x / (gdouble) size_hints.max_aspect.y;
+	}
+
+	if (size_hints.flags & PWinGravity) {
+		*geom_mask |= GDK_HINT_WIN_GRAVITY;
+		geometry->win_gravity = size_hints.win_gravity;
+	}
+
+}
+
+void terminal_window_resize_destroy(LXTerminal *terminal)
+{
+	g_source_remove(terminal->resize_idle_id);
+}
+
+gboolean terminal_window_resize(LXTerminal *terminal)
+{
+	Term *term;
+	GdkGeometry hints;
+	gint width;
+	gint height;
+	gint xpad;
+	gint ypad;
+	gint i;
+
+	/* getting window size by fixed */
+	gtk_window_get_size(terminal->mainw, &width, &height);
+	term = g_ptr_array_index(terminal->terms, 0);
+	vte_terminal_get_padding(VTE_TERMINAL(term->vte), &xpad, &ypad);
+	hints.width_inc = VTE_TERMINAL(term->vte)->char_width;
+	hints.height_inc = VTE_TERMINAL(term->vte)->char_height;
+	hints.base_width = xpad;
+	hints.base_height = ypad;
+	hints.min_width = hints.base_width + hints.width_inc * 4;
+	hints.min_height = hints.base_height + hints.height_inc * 2;
+	printf("T:%dx%d\n", width, height);
+
+	/* allow resizing by user */
+	for (i=0;i<terminal->terms->len;i++) {
+		term = g_ptr_array_index(terminal->terms, i);
+
+		gtk_window_set_geometry_hints(GTK_WINDOW(terminal->mainw),
+									term->vte,
+									&hints,
+									GDK_HINT_RESIZE_INC
+									| GDK_HINT_MIN_SIZE
+									| GDK_HINT_BASE_SIZE);
+	}
+
+	/* setting fixed size */
+	gtk_window_resize(terminal->mainw, width, height);
+
+	return FALSE;
+}
+
+gboolean terminal_window_size_reset(LXTerminal *terminal, gboolean enable)
+{
+	Term *term;
+	GdkGeometry hints;
+	gint i;
+	gint xpad;
+	gint ypad;
+
+	if (enable) {
+		/* Gtk+ uses a priority of G_PRIORITY_HIGH_IDLE + 10 for resizing operations, so we
+		 * use a lower priority for getting the size and enable resizing.
+		 */
+		terminal->resize_idle_id = g_idle_add_full(G_PRIORITY_HIGH_IDLE + 15,
+												(GSourceFunc) terminal_window_resize, terminal,
+												(GDestroyNotify) terminal_window_resize_destroy);
+	} else {
+		for (i=0;i<terminal->terms->len;i++) {
+			term = g_ptr_array_index(terminal->terms, i);
+
+			gtk_window_set_geometry_hints(GTK_WINDOW(terminal->mainw),
+										term->vte,
+										&terminal->geometry,
+										terminal->geom_mask);
+		}
+	}
+
+	return FALSE;
+}
 
 void terminal_switchtab1(LXTerminal *terminal)
 {
@@ -179,8 +318,9 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 
-	Term *term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL);
-	
+	Term *term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, NULL);
+
+	/* add page to notebook */
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
@@ -190,8 +330,16 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 
 	gtk_notebook_set_current_page(GTK_NOTEBOOK(term->parent->notebook), term->index);
 
-	if (term->index > 0)
+	if (term->index > 0) {
+		/* fixed VTE size */
+		terminal_window_size_reset(terminal, FALSE);
+
+		/* show tab */
 		gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), TRUE);
+
+		/* resizing terminal with window size */
+		terminal_window_size_reset(terminal, TRUE);
+	}
 }
 
 void terminal_switch_tab(GtkNotebook *notebook, GtkNotebookPage *page, guint num, gpointer data)
@@ -265,9 +413,36 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 		g_free(term);
 
 		/* if only one page, hide tab */
-		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
+		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1) {
+			gint xpad;
+			gint ypad;
+			gint cols;
+			gint rows;
+
+			/* get original info of VTE */
+			Term *t = g_ptr_array_index(terminal->terms, 0);
+			vte_terminal_get_padding(VTE_TERMINAL(t->vte), &xpad, &ypad);
+			cols = vte_terminal_get_column_count(t->vte);
+			rows = vte_terminal_get_row_count(t->vte);
+
+			/* fixed VTE size */
+			terminal_window_size_reset(terminal, FALSE);
+
+			/* hide tab */
 			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
 
+			/* recovery window size */
+			vte_terminal_set_size(t->vte, cols, rows);
+			gtk_window_resize(terminal->mainw,
+								xpad + VTE_TERMINAL(t->vte)->char_width,
+								ypad + VTE_TERMINAL(t->vte)->char_height);
+
+			/* it is tricky to wait 0.5s for window resize by itself. and then we can allow resizing
+			 * window by user.
+			 */
+			g_timeout_add(500, terminal_window_resize, terminal);
+			//terminal_window_size_reset(terminal, TRUE);
+		}
 	}
 }
 
@@ -290,7 +465,7 @@ gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpoi
 	return FALSE;
 }
 
-Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env)
+Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env, const gchar *exec)
 {
 	Term *term;
 	GdkColor black = {0};
@@ -316,7 +491,14 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), VTE_TERMINAL(term->vte)->adjustment);
 
 	/* terminal fork */
-	vte_terminal_fork_command(VTE_TERMINAL(term->vte), NULL, NULL, env, pwd, FALSE, TRUE, TRUE);
+	if (!exec) {
+		vte_terminal_fork_command(VTE_TERMINAL(term->vte), NULL, NULL, env, pwd, FALSE, TRUE, TRUE);
+	} else {
+		gchar **command;
+		g_shell_parse_argv(exec, NULL, &command, NULL);
+		vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(command), command, env, pwd, FALSE, TRUE, TRUE);
+		g_strfreev(command);
+	}
 
 	/* signal handler */
 	g_signal_connect(term->vte, "child-exited", G_CALLBACK(terminal_childexit), term);
@@ -332,7 +514,7 @@ Term *terminal_init(LXTerminal *terminal)
 {
 	Term *term;
 
-	term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL);
+	term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, NULL);
 
 	return term;
 }
@@ -409,52 +591,10 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 	}
 }
 
-gboolean terminal_window_resize(LXTerminal *terminal)
-{
-	Term *term;
-	GdkGeometry hints;
-	gint i;
-	gint xpad;
-	gint ypad;
-	gint grid_width;
-	gint grid_height;
-  
-	/* The trick is rather simple here. This is called before any Gtk+ resizing operation takes
-	 * place, so the columns/rows on the active terminal screen are still set to their old values.
-	 * We simply query these values and force them to be set with the new style.
-	 */
-	term = g_ptr_array_index(terminal->terms, 0);
-	vte_terminal_get_padding(VTE_TERMINAL(term->vte), &xpad, &ypad);
-	hints.base_width = xpad;
-	hints.base_height = ypad;
-	hints.width_inc = VTE_TERMINAL(term->vte)->char_width;
-	hints.height_inc = VTE_TERMINAL(term->vte)->char_height;
-	hints.min_width = hints.base_width + hints.width_inc * 4;
-	hints.min_height = hints.base_height + hints.height_inc * 2;
-
-	for (i=0;i<terminal->terms->len;i++) {
-		term = g_ptr_array_index(terminal->terms, i);
-
-		gtk_window_set_geometry_hints (GTK_WINDOW(terminal->mainw),
-									term->vte,
-									&hints,
-									GDK_HINT_RESIZE_INC
-									| GDK_HINT_MIN_SIZE
-									| GDK_HINT_BASE_SIZE);
-	}
-
-	return FALSE;
-}
-
-void terminal_window_resize_destroy(LXTerminal *terminal)
-{
-	g_source_remove(terminal->resize_idle_id);
-}
-
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting)
 {
 	LXTerminal *terminal;
-	Term *term;
+	Term *term = NULL;
 
 	terminal = g_new0(LXTerminal, 1);
 	terminal->parent = lxtermwin;
@@ -487,8 +627,42 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
     g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
     gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 
-	/* create terminal */
-	term = terminal_init(terminal);
+	/* argument */
+	if (argc>1) {
+		int i;
+		gchar *cmd = NULL;
+		gchar *workdir = NULL;
+
+		for (i=1;i<argc;i++) {
+			if (strncmp(argv[i],"--command=", 10)==0) {
+				cmd = argv[i]+10;
+				//term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, argv[i]+10);
+				continue;
+			} else if ((strcmp(argv[i],"--command")==0||strcmp(argv[i],"-e")==0)&&(i+1<argc)) {
+				cmd = argv[++i];
+				//term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, argv[++i]);
+				continue;
+			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
+				workdir = argv[i]+20;
+				continue;
+			}
+
+			printf("%s\n", helpmsg);
+			return NULL;
+		}
+
+		if (!workdir) {
+			workdir = g_get_current_dir();
+			term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
+			g_free(workdir);
+		} else {
+			term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
+		}
+	}
+
+	if (!term)
+		term = terminal_init(terminal);
+
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
@@ -498,30 +672,20 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	gtk_widget_show_all(terminal->mainw);
 
+	/* original hints of VTE */
+	gdk_window_get_geometry_hints(GTK_WIDGET(term->vte)->window,
+										&terminal->geometry,
+										&terminal->geom_mask);
+
+	/* resizing terminal with window size */
 	/* Gtk+ uses a priority of G_PRIORITY_HIGH_IDLE + 10 for resizing operations, so we
 	 * use a slightly higher priority for the reset size operation.
 	 */
-	terminal->resize_idle_id = g_idle_add_full(G_PRIORITY_HIGH_IDLE + 5,
-												(GSourceFunc) terminal_window_resize, terminal,
-												(GDestroyNotify) terminal_window_resize_destroy);
+	//terminal->resize_idle_id = g_idle_add_full(G_PRIORITY_HIGH_IDLE + 5,
+	//											(GSourceFunc) terminal_window_resize, terminal,
+	//											(GDestroyNotify) terminal_window_resize_destroy);
 
-	/* process argument */
-	if (argc>1) {
-		int i;
-
-		for (i=1;i<argc;i++) {
-			if ((strcmp(argv[i],"--command")==0||strcmp(argv[i],"-e")==0)&&(i+1<argc)) {
-				vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(argv+i+1), argv+i+1, NULL, g_get_current_dir(), FALSE, TRUE, TRUE);
-				break;
-			} else if (strncmp(argv[i],"--command=", 10)==0) {
-				gchar **command;
-				g_shell_parse_argv(argv[i]+10, NULL, &command, NULL);
-				vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(command), command, NULL, g_get_current_dir(), FALSE, TRUE, TRUE);
-				g_strfreev(command);
-				break;
-			}
-		}
-	}
+	terminal_window_resize(terminal);
 
 	return terminal;
 }
@@ -567,6 +731,8 @@ int main(gint argc, gchar** argv)
 
 	/* initializing LXTerminal */
 	terminal = lxterminal_init(lxtermwin, argc, argv, setting);
+	if (!terminal)
+		return 0;
 
 	gtk_main();
 

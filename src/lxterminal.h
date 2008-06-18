@@ -45,6 +45,8 @@ typedef struct _lxterminal {
 	GPtrArray *terms;
 	gint       resize_idle_id;
 	Setting   *setting;
+	GdkGeometry geometry;
+	GdkWindowHints geom_mask;
 } LXTerminal;
 
 typedef struct _tab {
@@ -63,7 +65,7 @@ typedef struct _term {
 } Term;
 
 
-Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env);
+Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env, const gchar *exec);
 void terminal_newwindow(gpointer data, guint action, GtkWidget *item);
 void terminal_newtab(gpointer data, guint action, GtkWidget *item);
 void terminal_closetab(gpointer data, guint action, GtkWidget *item);
