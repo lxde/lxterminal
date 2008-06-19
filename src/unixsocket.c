@@ -156,14 +156,27 @@ lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
 		return TRUE;
 	} else {
 		int i;
+		gboolean setworkdir = FALSE;
 
 		gio = g_io_channel_unix_new(skfd);
 		g_io_channel_set_encoding(gio, NULL, NULL);
 
 		for (i=0;i<argc;i++) {
+			if (strncmp(argv[i],"--working-directory=", 20)==0) {
+				setworkdir = TRUE;
+			}
+
 			g_io_channel_write_chars(gio, *(argv+i), -1, NULL, NULL);
-			if (i+1!=argc)
+			if (i+1!=argc) {
 				g_io_channel_write_chars(gio, " ", -1, NULL, NULL);
+			} else {
+				if (!setworkdir) {
+					gchar *workdir = g_get_current_dir();
+					g_io_channel_write_chars(gio, " --working-directory=", -1, NULL, NULL);
+					g_io_channel_write_chars(gio, workdir, -1, NULL, NULL);
+					g_free(workdir);
+				}
+			}
 		}
 
 		g_io_channel_write_chars(gio, "\n", -1, NULL, NULL);
