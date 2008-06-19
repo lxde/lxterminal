@@ -187,49 +187,58 @@ void terminal_window_set_fixed_size(LXTerminal *terminal)
 	}
 }
 
-void terminal_switchtab1(LXTerminal *terminal)
+gboolean terminal_switchtab1(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 0);
+	return TRUE;
 }
 
-void terminal_switchtab2(LXTerminal *terminal)
+gboolean terminal_switchtab2(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 1);
+	return TRUE;
 }
 
-void terminal_switchtab3(LXTerminal *terminal)
+gboolean terminal_switchtab3(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 2);
+	return TRUE;
 }
 
-void terminal_switchtab4(LXTerminal *terminal)
+gboolean terminal_switchtab4(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 3);
+	return TRUE;
 }
 
-void terminal_switchtab5(LXTerminal *terminal)
+gboolean terminal_switchtab5(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 4);
+	return TRUE;
 }
 
-void terminal_switchtab6(LXTerminal *terminal)
+gboolean terminal_switchtab6(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 5);
+	return TRUE;
 }
 
-void terminal_switchtab7(LXTerminal *terminal)
+gboolean terminal_switchtab7(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 6);
+	return TRUE;
 }
 
-void terminal_switchtab8(LXTerminal *terminal)
+gboolean terminal_switchtab8(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 7);
+	return TRUE;
 }
 
-void terminal_switchtab9(LXTerminal *terminal)
+gboolean terminal_switchtab9(LXTerminal *terminal)
 {
 	gtk_notebook_set_current_page(terminal->notebook, 8);
+	return TRUE;
 }
 
 gboolean terminal_copy(gpointer data, guint action, GtkWidget *item)
