@@ -73,7 +73,8 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 {
 	PreferGeneral *pg = tab->childs;
 
-	prefer->terminal->setting->fontname = gtk_font_button_get_font_name(pg->font_button);
+    g_free( prefer->terminal->setting->fontname );
+	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name(pg->font_button) );
 }
 
 TabWidget *lxterminal_preferences_page_new(TabGroup *tabgroup)
