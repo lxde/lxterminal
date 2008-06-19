@@ -94,7 +94,7 @@ TabWidget *lxterminal_preferences_page_new(TabGroup *tabgroup)
 	tab->label_box = gtk_hbox_new(FALSE, 4);
 
 	/* create icon */
-	tab->icon = gtk_image_new_from_file(tabgroup->icon);
+	/* tab->icon = gtk_image_new_from_file(tabgroup->icon); */
 
 	/* create label */
 	tab->label = gtk_label_new(_(tabgroup->name));
@@ -102,7 +102,7 @@ TabWidget *lxterminal_preferences_page_new(TabGroup *tabgroup)
 	gtk_misc_set_padding(GTK_MISC(tab->label), 2, 2);
 
 	/* add all of widgets to label box */
-	gtk_box_pack_start(GTK_BOX(tab->label_box), tab->icon, FALSE, FALSE, 0);
+	/* gtk_box_pack_start(GTK_BOX(tab->label_box), tab->icon, FALSE, FALSE, 0); */
 	gtk_box_pack_start(GTK_BOX(tab->label_box), tab->label, FALSE, FALSE, 0);
 
 	gtk_widget_show_all(tab->label_box);
@@ -160,7 +160,10 @@ void lxterminal_preferences_on_response(GtkDialog* dlg, gint response, Prefer *p
 		setting_save(prefer->terminal->setting);
 
 		/* update NOW! */
-		terminal_setting_update(prefer->terminal, prefer->terminal->setting);
+        /* update all terminals in all windows */
+        g_ptr_array_foreach( prefer->terminal->parent->windows,
+                             terminal_setting_update,
+                             prefer->terminal->setting);
     }
 
 	gtk_widget_destroy(dlg);
@@ -180,9 +183,10 @@ void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget
     prefer->dialog = gtk_dialog_new_with_buttons(_("Preferences"),
                                        NULL,
                                        GTK_DIALOG_NO_SEPARATOR,
-                                       GTK_STOCK_OK, GTK_RESPONSE_OK,
                                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                                       GTK_STOCK_OK, GTK_RESPONSE_OK,
                                        NULL );
+    gtk_dialog_set_alternative_button_order( prefer->dialog, GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1 );
     gtk_dialog_set_default_response(GTK_WINDOW(prefer->dialog), GTK_RESPONSE_OK);
     gtk_window_set_position(GTK_WINDOW(prefer->dialog), GTK_WIN_POS_CENTER);
 

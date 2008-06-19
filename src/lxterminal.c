@@ -60,7 +60,9 @@ static GtkItemFactoryEntry menu_items[] =
 	{ N_("/_Tabs"), NULL, NULL, 0, "<Branch>" },
 	{ N_("/_Tabs/_Previous Tab"), PREVIOUS_TAB_ACCEL, terminal_prevtab, 1, "<Item>"},
 	{ N_("/_Tabs/_Next Tab"), NEXT_TAB_ACCEL, terminal_nexttab, 1, "<Item>"},
-};  
+	{ N_("/_Help"), NULL, NULL, 0, "<Branch>" },
+	{ N_("/_Help/_About"), 0, terminal_about, 1, "<StockItem>", GTK_STOCK_ABOUT},
+};
 
 static GtkItemFactoryEntry vte_menu_items[] =
 {
@@ -80,7 +82,7 @@ gdk_window_get_geometry_hints(GdkWindow *window,
 								GdkGeometry *geometry,
 								GdkWindowHints *geom_mask)
 {
-	XSizeHints size_hints; 
+	XSizeHints size_hints;
 	glong junk_size_mask = 0;
 
 	g_return_if_fail (GDK_IS_WINDOW (window));
@@ -96,7 +98,7 @@ gdk_window_get_geometry_hints(GdkWindow *window,
 							GDK_WINDOW_XID (window),
 							&size_hints,
 							&junk_size_mask))
-	return;                   
+	return;
 
 	if (size_hints.flags & PMinSize) {
 		*geom_mask |= GDK_HINT_MIN_SIZE;
@@ -335,6 +337,41 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 	}
 }
 
+static void open_url( GtkDialog* dlg, const char* url, gpointer data )
+{
+    /* FIXME: */
+}
+
+void terminal_about( gpointer data, guint action, GtkWidget* item )
+{
+    GtkWidget * about_dlg;
+    const gchar *authors[] =
+    {
+        "Fred Chien <cfsghost@gmail.com>",
+        NULL
+    };
+    /* TRANSLATORS: Replace mw string with your names, one name per line. */
+    gchar *translators = _( "translator-credits" );
+
+    gtk_about_dialog_set_url_hook( open_url, NULL, NULL);
+
+    about_dlg = gtk_about_dialog_new ();
+
+    gtk_container_set_border_width ( ( GtkContainer*)about_dlg , 2 );
+    gtk_about_dialog_set_version ( (GtkAboutDialog*)about_dlg, VERSION );
+    gtk_about_dialog_set_name ( (GtkAboutDialog*)about_dlg, _( "LXTerminal" ) );
+    gtk_about_dialog_set_logo( (GtkAboutDialog*)about_dlg, gdk_pixbuf_new_from_file(  PACKAGE_DATA_DIR"/pixmaps/lxterminal.png", NULL ) );
+    gtk_about_dialog_set_copyright ( (GtkAboutDialog*)about_dlg, _( "Copyright (C) 2008" ) );
+    gtk_about_dialog_set_comments ( (GtkAboutDialog*)about_dlg, _( "Terminal emulator for LXDE project" ) );
+    gtk_about_dialog_set_license ( (GtkAboutDialog*)about_dlg, "This program is free software; you can redistribute it and/or\nmodify it under the terms of the GNU General Public License\nas published by the Free Software Foundation; either version 2\nof the License, or (at your option) any later version.\n\nmw program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with mw program; if not, write to the Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA." );
+    gtk_about_dialog_set_website ( (GtkAboutDialog*)about_dlg, "http://lxde.org/" );
+    gtk_about_dialog_set_authors ( (GtkAboutDialog*)about_dlg, authors );
+    gtk_about_dialog_set_translator_credits ( (GtkAboutDialog*)about_dlg, translators );
+
+    gtk_dialog_run( ( GtkDialog*)about_dlg );
+    gtk_widget_destroy( about_dlg );
+}
+
 void terminal_switch_tab(GtkNotebook *notebook, GtkNotebookPage *page, guint num, gpointer data)
 {
 	gchar *title;
@@ -487,7 +524,7 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	g_signal_connect(term->vte, "child-exited", G_CALLBACK(terminal_childexit), term);
 	g_signal_connect(term->vte, "window-title-changed", G_CALLBACK(terminal_title_changed), term);
 	g_signal_connect(term->vte, "button-press-event", G_CALLBACK(terminal_vte_button_press), terminal);
-	
+
 	gtk_widget_show_all(term->box);
 
 	return term;

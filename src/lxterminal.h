@@ -72,6 +72,7 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item);
 void terminal_closetab(gpointer data, guint action, GtkWidget *item);
 void terminal_nexttab(gpointer data, guint action, GtkWidget *item);
 void terminal_prevtab(gpointer data, guint action, GtkWidget *item);
+void terminal_about( gpointer data, guint action, GtkWidget* item );
 gboolean terminal_copy(gpointer data, guint action, GtkWidget *item);
 gboolean terminal_paste(gpointer data, guint action, GtkWidget *item);
 
