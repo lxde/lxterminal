@@ -35,7 +35,6 @@
 #include "unixsocket.h"
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
-gboolean terminal_window_size_reset(LXTerminal *terminal, gboolean enable);
 
 static gchar helpmsg[] = {
 	"Usage:\n"
@@ -127,11 +126,6 @@ gdk_window_get_geometry_hints(GdkWindow *window,
 		*geom_mask |= GDK_HINT_WIN_GRAVITY;
 		geometry->win_gravity = size_hints.win_gravity;
 	}
-}
-
-void terminal_window_resize_destroy(LXTerminal *terminal)
-{
-	g_source_remove(terminal->resize_idle_id);
 }
 
 gboolean terminal_window_resize(GtkWidget *widget, GtkRequisition *requisition, LXTerminal *terminal)
@@ -238,7 +232,7 @@ void terminal_switchtab9(LXTerminal *terminal)
 	gtk_notebook_set_current_page(terminal->notebook, 8);
 }
 
-void terminal_copy(gpointer data, guint action, GtkWidget *item)
+gboolean terminal_copy(gpointer data, guint action, GtkWidget *item)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 	Term *term;
@@ -248,9 +242,11 @@ void terminal_copy(gpointer data, guint action, GtkWidget *item)
 
 	/* copy from vte */
 	vte_terminal_copy_clipboard(VTE_TERMINAL(term->vte));
+
+	return TRUE;
 }
 
-void terminal_paste(gpointer data, guint action, GtkWidget *item)
+gboolean terminal_paste(gpointer data, guint action, GtkWidget *item)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 	Term *term;
@@ -260,6 +256,8 @@ void terminal_paste(gpointer data, guint action, GtkWidget *item)
 
 	/* copy from vte */
 	vte_terminal_paste_clipboard(VTE_TERMINAL(term->vte));
+
+	return TRUE;
 }
 
 void terminal_nexttab(gpointer data, guint action, GtkWidget *item)
@@ -512,6 +510,12 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 
 	gtk_accelerator_parse(CLOSE_TAB_ACCEL, &key, &mods);
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_closetab, terminal, NULL));
+
+	gtk_accelerator_parse(COPY_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_copy, terminal, NULL));
+
+	gtk_accelerator_parse(PASTE_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_paste, terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB1_ACCEL, &key, &mods);
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab1, terminal, NULL));
