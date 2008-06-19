@@ -615,6 +615,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	/* create window */
 	terminal->mainw = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	gtk_window_set_title(GTK_WINDOW(terminal->mainw), _("LXTerminal"));
+	gtk_window_set_icon_from_file(GTK_WINDOW(terminal->mainw), PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL);
 	g_object_weak_ref(terminal->mainw, terminal_windowexit, terminal);
 
 	/* create box for putting menubar and notebook */
