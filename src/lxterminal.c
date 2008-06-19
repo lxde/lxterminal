@@ -134,18 +134,21 @@ void terminal_window_resize_destroy(LXTerminal *terminal)
 	g_source_remove(terminal->resize_idle_id);
 }
 
-gboolean terminal_window_resize(LXTerminal *terminal)
+gboolean terminal_window_resize(GtkWidget *widget, GtkRequisition *requisition, LXTerminal *terminal)
 {
 	Term *term;
 	GdkGeometry hints;
-	gint width;
-	gint height;
 	gint xpad;
 	gint ypad;
 	gint i;
 
+	if (!terminal->fixedsize) {
+		return FALSE;
+	}
+
+	terminal->fixedsize = FALSE;
+
 	/* getting window size by fixed */
-	gtk_window_get_size(terminal->mainw, &width, &height);
 	term = g_ptr_array_index(terminal->terms, 0);
 	vte_terminal_get_padding(VTE_TERMINAL(term->vte), &xpad, &ypad);
 	hints.width_inc = VTE_TERMINAL(term->vte)->char_width;
@@ -168,38 +171,26 @@ gboolean terminal_window_resize(LXTerminal *terminal)
 	}
 
 	/* setting fixed size */
-	gtk_window_resize(terminal->mainw, width, height);
+	gtk_window_resize(GTK_WINDOW(terminal->mainw), requisition->width, requisition->height);
 
 	return FALSE;
 }
 
-gboolean terminal_window_size_reset(LXTerminal *terminal, gboolean enable)
+void terminal_window_set_fixed_size(LXTerminal *terminal)
 {
 	Term *term;
-	GdkGeometry hints;
 	gint i;
-	gint xpad;
-	gint ypad;
 
-	if (enable) {
-		/* Gtk+ uses a priority of G_PRIORITY_HIGH_IDLE + 10 for resizing operations, so we
-		 * use a lower priority for getting the size and enable resizing.
-		 */
-		terminal->resize_idle_id = g_idle_add_full(G_PRIORITY_HIGH_IDLE + 15,
-												(GSourceFunc) terminal_window_resize, terminal,
-												(GDestroyNotify) terminal_window_resize_destroy);
-	} else {
-		for (i=0;i<terminal->terms->len;i++) {
-			term = g_ptr_array_index(terminal->terms, i);
+	terminal->fixedsize = TRUE;
 
-			gtk_window_set_geometry_hints(GTK_WINDOW(terminal->mainw),
-										term->vte,
-										&terminal->geometry,
-										terminal->geom_mask);
-		}
+	for (i=0;i<terminal->terms->len;i++) {
+		term = g_ptr_array_index(terminal->terms, i);
+
+		gtk_window_set_geometry_hints(GTK_WINDOW(terminal->mainw),
+									term->vte,
+									&terminal->geometry,
+									terminal->geom_mask);
 	}
-
-	return FALSE;
 }
 
 void terminal_switchtab1(LXTerminal *terminal)
@@ -330,13 +321,10 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 
 	if (term->index > 0) {
 		/* fixed VTE size */
-		terminal_window_size_reset(terminal, FALSE);
+		terminal_window_set_fixed_size(terminal);
 
 		/* show tab */
 		gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), TRUE);
-
-		/* resizing terminal with window size */
-		terminal_window_size_reset(terminal, TRUE);
 	}
 }
 
@@ -424,7 +412,7 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 			rows = vte_terminal_get_row_count(t->vte);
 
 			/* fixed VTE size */
-			terminal_window_size_reset(terminal, FALSE);
+			terminal_window_set_fixed_size(terminal);
 
 			/* hide tab */
 			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
@@ -434,12 +422,6 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 			gtk_window_resize(terminal->mainw,
 								xpad + VTE_TERMINAL(t->vte)->char_width,
 								ypad + VTE_TERMINAL(t->vte)->char_height);
-
-			/* it is tricky to wait 0.5s for window resize by itself. and then we can allow resizing
-			 * window by user.
-			 */
-			g_timeout_add(500, terminal_window_resize, terminal);
-			//terminal_window_size_reset(terminal, TRUE);
 		}
 	}
 }
@@ -604,6 +586,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	terminal = g_new0(LXTerminal, 1);
 	terminal->parent = lxtermwin;
 	terminal->terms = g_ptr_array_new();
+	terminal->fixedsize = TRUE;
 
     g_ptr_array_add(lxtermwin->windows, terminal);
 	terminal->index = terminal->parent->windows->len - 1;
@@ -655,8 +638,9 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 										&terminal->geometry,
 										&terminal->geom_mask);
 
+
 	/* resizing terminal with window size */
-	terminal_window_resize(terminal);
+    g_signal_connect(terminal->mainw, "size-request", G_CALLBACK(terminal_window_resize), terminal);
 
 	return terminal;
 }
