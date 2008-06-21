@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-sbin_PROGRAMS = lxterminal
+bin_PROGRAMS = lxterminal
 
 INCLUDES = \
 	-I$(top_srcdir) \

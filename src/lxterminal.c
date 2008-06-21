@@ -38,7 +38,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 static gchar helpmsg[] = {
 	"Usage:\n"
-	"  lxterminal [Options...] - LXTerminal is a terinal emulatoor\n\n"
+	"  lxterminal [Options...] - LXTerminal is a terimnal emulator\n\n"
 	"Options:\n"
 	"  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
 	"  --working-directory=DIRECTOR     Set the terminal's working directory\n"
@@ -388,7 +388,6 @@ void terminal_switch_tab(GtkNotebook *notebook, GtkNotebookPage *page, guint num
 		gtk_window_set_title(GTK_WINDOW(terminal->mainw), _("LXTerminal"));
 	else
 		gtk_window_set_title(GTK_WINDOW(terminal->mainw), title);
-
 }
 
 void terminal_title_changed(VteTerminal *vte, Term *term)
