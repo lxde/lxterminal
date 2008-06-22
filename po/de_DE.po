@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lxterminal 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-06-20 04:17+0800\n"
+"PO-Revision-Date: 2008-06-22 14:40+0100\n"
+"Last-Translator: Christoph Wickert <christoph.wickert@googlemail.de>\n"
+"Language-Team: de_DE <christoph.wickert@googlemail.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/lxterminal.c:49
+msgid "/_File"
+msgstr "/_Datei"
+
+#: ../src/lxterminal.c:50
+msgid "/_File/_New Window"
+msgstr "/_Datei/Neues _Fenster"
+
+#: ../src/lxterminal.c:51
+msgid "/_File/_New Tab"
+msgstr "/_Datei/Neuer _Reiter"
+
+#: ../src/lxterminal.c:52
+msgid "/_File/sep1"
+msgstr "/_Datei/sep1"
+
+#: ../src/lxterminal.c:53
+msgid "/_File/_Close Tab"
+msgstr "/_Datei/Reiter _schließen"
+
+#: ../src/lxterminal.c:54
+msgid "/_File/_Quit"
+msgstr "/_Datei/_Beenden"
+
+#: ../src/lxterminal.c:55
+msgid "/_Edit"
+msgstr "/_Bearbeiten"
+
+#: ../src/lxterminal.c:56
+msgid "/_Edit/_Copy"
+msgstr "/_Bearbeiten/_Kopieren"
+
+#: ../src/lxterminal.c:57
+msgid "/_Edit/_Paste"
+msgstr "/_Bearbeiten/E_infügen"
+
+#: ../src/lxterminal.c:58
+msgid "/_Edit/sep1"
+msgstr "/_Bearbeiten/sep1"
+
+#: ../src/lxterminal.c:59
+msgid "/_Edit/_Preferences..."
+msgstr "/_Bearbeiten/_Einstellungen..."
+
+#: ../src/lxterminal.c:60
+msgid "/_Tabs"
+msgstr "/_Reiter"
+
+#: ../src/lxterminal.c:61
+msgid "/_Tabs/_Previous Tab"
+msgstr "/_Reiter/_Vorheriger Reiter"
+
+#: ../src/lxterminal.c:62
+msgid "/_Tabs/_Next Tab"
+msgstr "/_Reiter/_Nächster Reiter"
+
+#: ../src/lxterminal.c:63
+msgid "/_Help"
+msgstr "/_Hilfe"
+
+#: ../src/lxterminal.c:64
+msgid "/_Help/_About"
+msgstr "/_Hilfe/_Info"
+
+#: ../src/lxterminal.c:69
+msgid "/_New Window"
+msgstr "/Neues _Fenster"
+
+#: ../src/lxterminal.c:70
+msgid "/_New Tab"
+msgstr "/Neuer _Reiter"
+
+#: ../src/lxterminal.c:71
+msgid "/sep1"
+msgstr ""
+
+#: ../src/lxterminal.c:72
+msgid "/_Copy"
+msgstr "/_Kopieren"
+
+#: ../src/lxterminal.c:73
+msgid "/_Paste"
+msgstr "/E_infügen"
+
+#: ../src/lxterminal.c:74
+msgid "/sep2"
+msgstr ""
+
+#: ../src/lxterminal.c:75
+msgid "/_Preferences..."
+msgstr "/_Einstellungen..."
+
+#: ../src/lxterminal.c:76
+msgid "/sep3"
+msgstr ""
+
+#: ../src/lxterminal.c:77
+msgid "/_Close Tab"
+msgstr "/Reiter _schließen"
+
+#: ../src/lxterminal.c:319
+#: ../src/lxterminal.c:362
+#: ../src/lxterminal.c:388
+#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:671
+#: ../src/lxterminal.c:674
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#. TRANSLATORS: Replace mw string with your names, one name per line.
+#: ../src/lxterminal.c:354
+msgid "translator-credits"
+msgstr "Christoph Wickert <christoph.wickert@googlemail.de>"
+
+#: ../src/lxterminal.c:364
+msgid "Copyright (C) 2008"
+msgstr ""
+
+#: ../src/lxterminal.c:365
+msgid "Terminal emulator for LXDE project"
+msgstr "Terminalemulator für das LXDE Projekt"
+
+#: ../src/preferences.c:34
+msgid "General"
+msgstr "Allgemein"
+
+#: ../src/preferences.c:54
+msgid "Terminal Font:"
+msgstr "Terminal Schriftart:"
+
+#. create window
+#: ../src/preferences.c:180
+msgid "Preferences"
+msgstr "Einstellungen"
+
