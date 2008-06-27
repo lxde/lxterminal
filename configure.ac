@@ -33,6 +33,7 @@ AC_OUTPUT([
   data/Makefile
   data/lxterminal.conf
   po/Makefile.in
+  man/Makefile
 ])
 
 echo
