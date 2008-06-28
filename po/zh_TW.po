@@ -148,6 +148,10 @@ msgstr "一般"
 msgid "Terminal Font:"
 msgstr "終端機字型："
 
+#: ../src/preferences.c:63
+msgid "Select-by-word characters:"
+msgstr "選取字詞時會選取以下的字元："
+
 #. create window
 #: ../src/preferences.c:180
 msgid "Preferences"

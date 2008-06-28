@@ -3,6 +3,7 @@
 
 typedef struct _setting {
 	char *fontname;
+	char *selchars;
 	GKeyFile *keyfile;
 } Setting;
 

@@ -500,6 +500,7 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 
 	/* setting terminal */
 	vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
+	vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
 	vte_terminal_set_color_background(term->vte, &black);
 
 	/* create label for tab */
@@ -603,6 +604,7 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 		term = g_ptr_array_index(terminal->terms, i);
 
 		vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
+		vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
 //		vte_terminal_set_color_background(term->vte, &black);
 	}
 }

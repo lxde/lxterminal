@@ -29,6 +29,9 @@ typedef struct {
 	GtkWidget *font_box;
 	GtkWidget *font_label;
 	GtkWidget *font_button;
+	GtkWidget *selchars_box;
+	GtkWidget *selchars_label;
+	GtkWidget *selchars_entry;
 } PreferGeneral;
 
 void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget *item);

@@ -58,6 +58,16 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	/* adding to box */
 	gtk_box_pack_start(GTK_BOX(pg->box), pg->font_box, FALSE, FALSE, 0);
 
+	/* Select-by-word */
+	pg->selchars_box = gtk_hbox_new(FALSE, 4);
+	pg->selchars_label = gtk_label_new(_("Select-by-word characters:"));
+	pg->selchars_entry = gtk_entry_new();
+	gtk_entry_set_text(pg->selchars_entry, prefer->terminal->setting->selchars);
+	gtk_box_pack_start(GTK_BOX(pg->selchars_box), pg->selchars_label, FALSE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX(pg->selchars_box), pg->selchars_entry, FALSE, FALSE, 0);
+	/* adding to box */
+	gtk_box_pack_start(GTK_BOX(pg->box), pg->selchars_box, FALSE, FALSE, 0);
+
 	/* adding to page */
     gtk_container_add(GTK_CONTAINER(tab->page), pg->box);
 }
@@ -75,6 +85,7 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 
     g_free( prefer->terminal->setting->fontname );
 	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name(pg->font_button) );
+	prefer->terminal->setting->selchars = g_strdup( gtk_entry_get_text(pg->selchars_entry) );
 }
 
 TabWidget *lxterminal_preferences_page_new(TabGroup *tabgroup)
