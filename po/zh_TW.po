@@ -84,7 +84,7 @@ msgstr "/說明(_H)/關於(_A)"
 
 #: ../src/lxterminal.c:69
 msgid "/_New Window"
-msgstr ""
+msgstr "/開新視窗(_N)"
 
 #: ../src/lxterminal.c:70
 msgid "/_New Tab"

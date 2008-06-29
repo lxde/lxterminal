@@ -34,6 +34,30 @@
 #include "preferences.h"
 #include "unixsocket.h"
 
+const GdkColor background = { 0 };
+const GdkColor foreground = { 0, 0xaaaa, 0xaaaa, 0xaaaa};
+
+/* Linux color for palette */
+const GdkColor linux_color[16] =
+{
+  { 0, 0x0000, 0x0000, 0x0000 },
+  { 0, 0xaaaa, 0x0000, 0x0000 },
+  { 0, 0x0000, 0xaaaa, 0x0000 },
+  { 0, 0xaaaa, 0x5555, 0x0000 },
+  { 0, 0x0000, 0x0000, 0xaaaa },
+  { 0, 0xaaaa, 0x0000, 0xaaaa },
+  { 0, 0x0000, 0xaaaa, 0xaaaa },
+  { 0, 0xaaaa, 0xaaaa, 0xaaaa },
+  { 0, 0x5555, 0x5555, 0x5555 },
+  { 0, 0xffff, 0x5555, 0x5555 },
+  { 0, 0x5555, 0xffff, 0x5555 },
+  { 0, 0xffff, 0xffff, 0x5555 },
+  { 0, 0x5555, 0x5555, 0xffff },
+  { 0, 0xffff, 0x5555, 0xffff },
+  { 0, 0x5555, 0xffff, 0xffff },
+  { 0, 0xffff, 0xffff, 0xffff }
+};
+
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
 
 static gchar helpmsg[] = {
@@ -487,7 +511,7 @@ gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpoi
 Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env, const gchar *exec)
 {
 	Term *term;
-	GdkColor black = {0};
+
 
 	/* create terminal */
 	term = g_new0(Term, 1);
@@ -501,7 +525,8 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	/* setting terminal */
 	vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
 	vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
-	vte_terminal_set_color_background(term->vte, &black);
+	vte_terminal_set_emulation(term->vte, "xterm");
+	vte_terminal_set_colors(term->vte, &foreground, &background, &linux_color, 16);
 
 	/* create label for tab */
 	term->label = lxterminal_tab_label_new(label);
