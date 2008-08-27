@@ -1,0 +1,3 @@
+?package(lxterminal):needs="X11"\
+  section="Applications/Terminal Emulators"\
+  title="lxterminal" command="/usr/bin/lxterminal"

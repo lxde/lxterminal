@@ -1,0 +1,18 @@
+Source: lxterminal
+Section: x11
+Priority: extra
+Maintainer: Andrew Lee <andrew@linux.org.tw>
+Build-Depends: debhelper (>= 6), autotools-dev, libvte-dev, libglib2.0-dev (>= 2.6.0), libgtk2.0-dev (>= 2.6.0), intltool
+Standards-Version: 3.8.0.0
+Homepage: http://lxde.org
+
+Package: lxterminal
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: desktop independent vte-based terminal emulator
+ LXterminal is a VTE-based terminal emulator from LXDE project which
+ supports multiple tabs. It is completely desktop-independent and does
+ not have any unnecessary dependencies.
+ .
+ In order to reduce memory usage and increase the performance,
+ all instances of the terminal are sharing a single process.

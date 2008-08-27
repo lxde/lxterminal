@@ -1,0 +1,5 @@
+lxterminal (0.1.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #487429)
+
+ -- Andrew Lee <andrew@linux.org.tw>  Sat, 28 Jun 2008 16:55:49 +0800
