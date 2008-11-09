@@ -1,0 +1,156 @@
+# Finnish translation for LXTerminal
+# Copyright (C) 2008
+# This file is distributed under the same license as the PACKAGE package.
+# Elias Julkunen <elias.julkunen@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-11-09 13:24+0200\n"
+"PO-Revision-Date: 2008-11-09 13:28+0200\n"
+"Last-Translator: Elias Julkunen <elias.julkunen@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/lxterminal.c:73
+msgid "/_File"
+msgstr "/_Tiedosto"
+
+#: ../src/lxterminal.c:74
+msgid "/_File/_New Window"
+msgstr "/_Tiedosto/_Uusi ikkuna"
+
+#: ../src/lxterminal.c:75
+msgid "/_File/_New Tab"
+msgstr "/_Tiedosto/Uusi _välilehti"
+
+#: ../src/lxterminal.c:76
+msgid "/_File/sep1"
+msgstr ""
+
+#: ../src/lxterminal.c:77
+msgid "/_File/_Close Tab"
+msgstr "/_Tiedosto/_Sulje välilehti"
+
+#: ../src/lxterminal.c:78
+msgid "/_File/_Quit"
+msgstr "/_Tiedosto/_Poistu"
+
+#: ../src/lxterminal.c:79
+msgid "/_Edit"
+msgstr "/_Muokkaa"
+
+#: ../src/lxterminal.c:80
+msgid "/_Edit/_Copy"
+msgstr "/_Muokkaa/_Kopioi"
+
+#: ../src/lxterminal.c:81
+msgid "/_Edit/_Paste"
+msgstr "/_Muokkaa/_Liitä"
+
+#: ../src/lxterminal.c:82
+msgid "/_Edit/sep1"
+msgstr ""
+
+#: ../src/lxterminal.c:83
+msgid "/_Edit/_Preferences..."
+msgstr "/_Edit/_Asetukset..."
+
+#: ../src/lxterminal.c:84
+msgid "/_Tabs"
+msgstr "/_Välilehdet"
+
+#: ../src/lxterminal.c:85
+msgid "/_Tabs/_Previous Tab"
+msgstr "/_Välilehdet/_Edellinen välilehti"
+
+#: ../src/lxterminal.c:86
+msgid "/_Tabs/_Next Tab"
+msgstr "/_Välilehdet/_Seuraava välilehti"
+
+#: ../src/lxterminal.c:87
+msgid "/_Help"
+msgstr "/_Ohje"
+
+#: ../src/lxterminal.c:88
+msgid "/_Help/_About"
+msgstr "/_Ohje/_Tietoja"
+
+#: ../src/lxterminal.c:93
+msgid "/_New Window"
+msgstr "/_Uusi ikkuna"
+
+#: ../src/lxterminal.c:94
+msgid "/_New Tab"
+msgstr "/Uusi _välilehti"
+
+#: ../src/lxterminal.c:95
+msgid "/sep1"
+msgstr ""
+
+#: ../src/lxterminal.c:96
+msgid "/_Copy"
+msgstr "/_Kopioi"
+
+#: ../src/lxterminal.c:97
+msgid "/_Paste"
+msgstr "/_Liitä"
+
+#: ../src/lxterminal.c:98
+msgid "/sep2"
+msgstr ""
+
+#: ../src/lxterminal.c:99
+msgid "/_Preferences..."
+msgstr "/_Asetukset..."
+
+#: ../src/lxterminal.c:100
+msgid "/sep3"
+msgstr ""
+
+#: ../src/lxterminal.c:101
+msgid "/_Close Tab"
+msgstr "/_Sulje välilehti"
+
+#: ../src/lxterminal.c:343
+#: ../src/lxterminal.c:386
+#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:676
+#: ../src/lxterminal.c:697
+#: ../src/lxterminal.c:700
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#. TRANSLATORS: Replace mw string with your names, one name per line.
+#: ../src/lxterminal.c:378
+msgid "translator-credits"
+msgstr "Elias Julkunen <elias.julkunen@gmail.com>"
+
+#: ../src/lxterminal.c:388
+msgid "Copyright (C) 2008"
+msgstr "Tekijänoikeudet (C) 2008"
+
+#: ../src/lxterminal.c:389
+msgid "Terminal emulator for LXDE project"
+msgstr "Pääteohjelma LXDE-projektille"
+
+#: ../src/preferences.c:34
+msgid "General"
+msgstr "Yleiset"
+
+#: ../src/preferences.c:54
+msgid "Terminal Font:"
+msgstr "Päätteen kirjasin:"
+
+#: ../src/preferences.c:63
+msgid "Select-by-word characters:"
+msgstr "Valitse sanana -merkit:"
+
+#. create window
+#: ../src/preferences.c:194
+msgid "Preferences"
+msgstr "Asetukset"
+
