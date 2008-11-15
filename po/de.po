@@ -1,15 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# German translation for LXTerminal.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the LXTerminal package.
+# Christoph Wickert <christoph.wickert@googlemail.de>, 2008.
+# Mario Blättermann <mario.blaettermann@t-online.de>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-20 04:17+0800\n"
-"PO-Revision-Date: 2008-06-23 00:51+0100\n"
-"Last-Translator: Christoph Wickert <christoph.wickert@googlemail.de>\n"
+"POT-Creation-Date: 2008-11-15 22:41+0100\n"
+"PO-Revision-Date: 2008-11-15 22:48+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@t-online.de>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -17,125 +18,127 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/lxterminal.c:49
+#: ../src/lxterminal.c:73
 msgid "/_File"
 msgstr "/_Datei"
 
-#: ../src/lxterminal.c:50
+#: ../src/lxterminal.c:74
 msgid "/_File/_New Window"
 msgstr "/_Datei/Neues _Fenster"
 
-#: ../src/lxterminal.c:51
+#: ../src/lxterminal.c:75
 msgid "/_File/_New Tab"
 msgstr "/_Datei/Neuer _Reiter"
 
-#: ../src/lxterminal.c:52
+#: ../src/lxterminal.c:76
 msgid "/_File/sep1"
 msgstr "/_Datei/sep1"
 
-#: ../src/lxterminal.c:53
+#: ../src/lxterminal.c:77
 msgid "/_File/_Close Tab"
 msgstr "/_Datei/Reiter s_chließen"
 
-#: ../src/lxterminal.c:54
+#: ../src/lxterminal.c:78
 msgid "/_File/_Quit"
 msgstr "/_Datei/_Beenden"
 
-#: ../src/lxterminal.c:55
+#: ../src/lxterminal.c:79
 msgid "/_Edit"
 msgstr "/_Bearbeiten"
 
-#: ../src/lxterminal.c:56
+#: ../src/lxterminal.c:80
 msgid "/_Edit/_Copy"
 msgstr "/_Bearbeiten/_Kopieren"
 
-#: ../src/lxterminal.c:57
+#: ../src/lxterminal.c:81
 msgid "/_Edit/_Paste"
 msgstr "/_Bearbeiten/E_infügen"
 
-#: ../src/lxterminal.c:58
+#: ../src/lxterminal.c:82
 msgid "/_Edit/sep1"
 msgstr "/_Bearbeiten/sep1"
 
-#: ../src/lxterminal.c:59
+#: ../src/lxterminal.c:83
 msgid "/_Edit/_Preferences..."
 msgstr "/_Bearbeiten/_Einstellungen ..."
 
-#: ../src/lxterminal.c:60
+#: ../src/lxterminal.c:84
 msgid "/_Tabs"
 msgstr "/_Reiter"
 
-#: ../src/lxterminal.c:61
+#: ../src/lxterminal.c:85
 msgid "/_Tabs/_Previous Tab"
 msgstr "/_Reiter/_Vorheriger Reiter"
 
-#: ../src/lxterminal.c:62
+#: ../src/lxterminal.c:86
 msgid "/_Tabs/_Next Tab"
 msgstr "/_Reiter/_Nächster Reiter"
 
-#: ../src/lxterminal.c:63
+#: ../src/lxterminal.c:87
 msgid "/_Help"
 msgstr "/_Hilfe"
 
-#: ../src/lxterminal.c:64
+#: ../src/lxterminal.c:88
 msgid "/_Help/_About"
 msgstr "/_Hilfe/_Info"
 
-#: ../src/lxterminal.c:69
+#: ../src/lxterminal.c:93
 msgid "/_New Window"
 msgstr "/Neues _Fenster"
 
-#: ../src/lxterminal.c:70
+#: ../src/lxterminal.c:94
 msgid "/_New Tab"
 msgstr "/Neuer _Reiter"
 
-#: ../src/lxterminal.c:71
+#: ../src/lxterminal.c:95
 msgid "/sep1"
-msgstr ""
+msgstr "/sep1"
 
-#: ../src/lxterminal.c:72
+#: ../src/lxterminal.c:96
 msgid "/_Copy"
 msgstr "/_Kopieren"
 
-#: ../src/lxterminal.c:73
+#: ../src/lxterminal.c:97
 msgid "/_Paste"
 msgstr "/E_infügen"
 
-#: ../src/lxterminal.c:74
+#: ../src/lxterminal.c:98
 msgid "/sep2"
-msgstr ""
+msgstr "/sep2"
 
-#: ../src/lxterminal.c:75
+#: ../src/lxterminal.c:99
 msgid "/_Preferences..."
 msgstr "/_Einstellungen ..."
 
-#: ../src/lxterminal.c:76
+#: ../src/lxterminal.c:100
 msgid "/sep3"
-msgstr ""
+msgstr "/sep3"
 
-#: ../src/lxterminal.c:77
+#: ../src/lxterminal.c:101
 msgid "/_Close Tab"
 msgstr "/Reiter s_chließen"
 
-#: ../src/lxterminal.c:319
-#: ../src/lxterminal.c:362
-#: ../src/lxterminal.c:388
-#: ../src/lxterminal.c:650
-#: ../src/lxterminal.c:671
-#: ../src/lxterminal.c:674
+#: ../src/lxterminal.c:343
+#: ../src/lxterminal.c:386
+#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:676
+#: ../src/lxterminal.c:697
+#: ../src/lxterminal.c:700
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:354
+#: ../src/lxterminal.c:378
 msgid "translator-credits"
-msgstr "Christoph Wickert <christoph.wickert@googlemail.de>"
-
-#: ../src/lxterminal.c:364
-msgid "Copyright (C) 2008"
 msgstr ""
+"Christoph Wickert <christoph.wickert@googlemail.de>\n"
+"Mario Blättermann <mario.blaettermann@t-online.de>"
 
-#: ../src/lxterminal.c:365
+#: ../src/lxterminal.c:388
+msgid "Copyright (C) 2008"
+msgstr "Copyright (C) 2008"
+
+#: ../src/lxterminal.c:389
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal-Emulator für das LXDE Projekt"
 
@@ -147,8 +150,12 @@ msgstr "Allgemein"
 msgid "Terminal Font:"
 msgstr "Terminal-Schriftart:"
 
+#: ../src/preferences.c:63
+msgid "Select-by-word characters:"
+msgstr "Zeichen für Auswahl nach Wort:"
+
 #. create window
-#: ../src/preferences.c:180
+#: ../src/preferences.c:194
 msgid "Preferences"
 msgstr "Einstellungen"
 
