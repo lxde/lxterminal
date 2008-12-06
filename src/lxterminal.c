@@ -34,9 +34,6 @@
 #include "preferences.h"
 #include "unixsocket.h"
 
-const GdkColor background = { 0 };
-const GdkColor foreground = { 0, 0xaaaa, 0xaaaa, 0xaaaa};
-
 /* Linux color for palette */
 const GdkColor linux_color[16] =
 {
@@ -512,7 +509,6 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 {
 	Term *term;
 
-
 	/* create terminal */
 	term = g_new0(Term, 1);
 	term->parent = terminal;
@@ -526,7 +522,18 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
 	vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
 	vte_terminal_set_emulation(term->vte, "xterm");
-	vte_terminal_set_colors(term->vte, &foreground, &background, &linux_color, 16);
+
+	if (!gdk_color_parse(terminal->setting->bgcolor, &terminal->background)) {
+		terminal->background = (GdkColor){ 0, 0, 0, 0 };
+		printf("Bad bgcolor string in config: %s\n", terminal->setting->bgcolor);
+	}
+	
+	if (!gdk_color_parse(terminal->setting->fgcolor, &terminal->foreground)) {
+		terminal->foreground = (GdkColor){ 0, 0xaaaa, 0xaaaa, 0xaaaa};
+		printf("Bad fgcolor string in config: %s\n", terminal->setting->fgcolor);
+	}
+
+	vte_terminal_set_colors(term->vte, &terminal->foreground, &terminal->background, &linux_color, 16);
 
 	/* create label for tab */
 	term->label = lxterminal_tab_label_new(label);
@@ -630,7 +637,8 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 
 		vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
 		vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
-//		vte_terminal_set_color_background(term->vte, &black);
+		vte_terminal_set_color_background(term->vte, &terminal->background);
+		vte_terminal_set_color_foreground(term->vte, &terminal->foreground);
 	}
 }
 
@@ -664,7 +672,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	terminal->terms = g_ptr_array_new();
 	terminal->fixedsize = TRUE;
 
-    g_ptr_array_add(lxtermwin->windows, terminal);
+	g_ptr_array_add(lxtermwin->windows, terminal);
 	terminal->index = terminal->parent->windows->len - 1;
 
 	/* Setting */
@@ -679,7 +687,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	/* create box for putting menubar and notebook */
 	terminal->box = gtk_vbox_new(FALSE, 1);
-    gtk_container_add(GTK_CONTAINER(terminal->mainw), terminal->box);
+	gtk_container_add(GTK_CONTAINER(terminal->mainw), terminal->box);
 
 	/* create menuar */
 	terminal->menubar = menubar_init(terminal);
@@ -687,10 +695,10 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	/* create notebook */
 	terminal->notebook = gtk_notebook_new();
-    gtk_notebook_set_scrollable(GTK_NOTEBOOK(terminal->notebook), TRUE);
-    gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
-    g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
-    gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
+	gtk_notebook_set_scrollable(GTK_NOTEBOOK(terminal->notebook), TRUE);
+	gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
+	g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
+	gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 
 	if (!workdir) {
 		workdir = g_get_current_dir();
@@ -700,9 +708,9 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 		term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
 	}
 
-    gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
-    term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
-    g_ptr_array_add(terminal->terms, term);
+	gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
+	term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
+	g_ptr_array_add(terminal->terms, term);
 
 	/* initializing accelerator */
 	lxterminal_accelerator_init(terminal);
@@ -716,7 +724,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 
 	/* resizing terminal with window size */
-    g_signal_connect(terminal->mainw, "size-request", G_CALLBACK(terminal_window_resize), terminal);
+	g_signal_connect(terminal->mainw, "size-request", G_CALLBACK(terminal_window_resize), terminal);
 
 	return terminal;
 }

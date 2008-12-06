@@ -48,6 +48,8 @@ typedef struct _lxterminal {
 	GdkGeometry geometry;
 	GdkWindowHints geom_mask;
 	gboolean fixedsize;
+	GdkColor background;
+	GdkColor foreground;
 } LXTerminal;
 
 typedef struct _tab {

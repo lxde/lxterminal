@@ -26,12 +26,14 @@ typedef struct {
 
 typedef struct {
 	GtkWidget *box;
-	GtkWidget *font_box;
 	GtkWidget *font_label;
 	GtkWidget *font_button;
-	GtkWidget *selchars_box;
 	GtkWidget *selchars_label;
 	GtkWidget *selchars_entry;
+	GtkWidget *bgcolor_label;
+	GtkWidget *bgcolor_entry;
+	GtkWidget *fgcolor_label;
+	GtkWidget *fgcolor_entry;
 } PreferGeneral;
 
 void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget *item);

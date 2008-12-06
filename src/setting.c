@@ -47,6 +47,8 @@ void setting_save(Setting *setting)
 	/* push settings to GKeyFile */
 	g_key_file_set_string(setting->keyfile, "general", "fontname", setting->fontname);
 	g_key_file_set_string(setting->keyfile, "general", "selchars", setting->selchars);
+	g_key_file_set_string(setting->keyfile, "general", "bgcolor", setting->bgcolor);
+	g_key_file_set_string(setting->keyfile, "general", "fgcolor", setting->fgcolor);
 
 	/* generate config data */
 	file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
@@ -78,6 +80,8 @@ Setting *load_setting_from_file(const char *filename)
 		/* general setting */
 		setting->fontname = g_key_file_get_string(setting->keyfile, "general", "fontname", NULL);
 		setting->selchars = g_key_file_get_string(setting->keyfile, "general", "selchars", NULL);
+		setting->bgcolor = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
+		setting->fgcolor = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
 	}
 
 setting_default:
@@ -87,6 +91,12 @@ setting_default:
 
 	if (!setting->selchars)
 		setting->selchars = g_strdup("-A-Za-z0-9,./?%&#:_");
+
+	if (!setting->bgcolor)
+		setting->bgcolor = g_strdup("#000000");
+	
+	if (!setting->fgcolor)
+		setting->fgcolor = g_strdup("#aaaaaa");
 
 	return setting;
 }

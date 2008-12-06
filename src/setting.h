@@ -4,6 +4,8 @@
 typedef struct _setting {
 	char *fontname;
 	char *selchars;
+	char *bgcolor;
+	char *fgcolor;
 	GKeyFile *keyfile;
 } Setting;
 
