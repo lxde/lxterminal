@@ -31,7 +31,7 @@ void lxterminal_tab_label_close_button_clicked(GCallback func, Term *term)
 
 void lxterminal_tab_label_set_text(LXTab *tab, const gchar *str)
 {
-	gtk_label_set_text(tab->label, str);
+	gtk_label_set_text((GtkLabel *)tab->label, str);
 }
 
 LXTab *lxterminal_tab_label_new(const gchar *str)

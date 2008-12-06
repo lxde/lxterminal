@@ -83,7 +83,7 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 {
 	PreferGeneral *pg = tab->childs;
 
-    g_free( prefer->terminal->setting->fontname );
+	g_free( prefer->terminal->setting->fontname );
 	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name(pg->font_button) );
 	prefer->terminal->setting->selchars = g_strdup( gtk_entry_get_text(pg->selchars_entry) );
 }
@@ -161,7 +161,7 @@ void lxterminal_preferences_on_response(GtkDialog* dlg, gint response, Prefer *p
 	gint i;
 	TabWidget *tab;
 
-    if(G_LIKELY(response == GTK_RESPONSE_OK)) {
+	if(G_LIKELY(response == GTK_RESPONSE_OK)) {
 		for (i=0;i<prefer->tab->len;i++) {
 			tab = g_ptr_array_index(prefer->tab, i);
 			tabs[i].save(prefer, tab);
@@ -171,13 +171,13 @@ void lxterminal_preferences_on_response(GtkDialog* dlg, gint response, Prefer *p
 		setting_save(prefer->terminal->setting);
 
 		/* update NOW! */
-        /* update all terminals in all windows */
-        g_ptr_array_foreach( prefer->terminal->parent->windows,
-                             terminal_setting_update,
-                             prefer->terminal->setting);
-    }
+		/* update all terminals in all windows */
+		g_ptr_array_foreach(prefer->terminal->parent->windows,
+					terminal_setting_update,
+					prefer->terminal->setting);
+	}
 
-	gtk_widget_destroy(dlg);
+	gtk_widget_destroy((GtkWidget *)dlg);
 }
 
 void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget *item)
@@ -191,24 +191,24 @@ void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget
 	prefer->tab = g_ptr_array_new();
 
 	/* create window */
-    prefer->dialog = gtk_dialog_new_with_buttons(_("Preferences"),
+	prefer->dialog = gtk_dialog_new_with_buttons(_("Preferences"),
                                        NULL,
                                        GTK_DIALOG_NO_SEPARATOR,
                                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
                                        GTK_STOCK_OK, GTK_RESPONSE_OK,
                                        NULL );
-    gtk_dialog_set_alternative_button_order( prefer->dialog, GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1 );
-    gtk_dialog_set_default_response(GTK_WINDOW(prefer->dialog), GTK_RESPONSE_OK);
-    gtk_window_set_position(GTK_WINDOW(prefer->dialog), GTK_WIN_POS_CENTER);
+	gtk_dialog_set_alternative_button_order((GtkDialog *)prefer->dialog, GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1);
+	gtk_dialog_set_default_response((GtkDialog *)prefer->dialog, GTK_RESPONSE_OK);
+	gtk_window_set_position(GTK_WINDOW(prefer->dialog), GTK_WIN_POS_CENTER);
 
-    /* g_signal */
-    g_signal_connect(prefer->dialog, "response", G_CALLBACK(lxterminal_preferences_on_response), prefer);
-    g_object_weak_ref(prefer->dialog, lxterminal_preferences_free, prefer);
+	/* g_signal */
+	g_signal_connect(prefer->dialog, "response", G_CALLBACK(lxterminal_preferences_on_response), prefer);
+	g_object_weak_ref((GObject *)prefer->dialog, lxterminal_preferences_free, prefer);
 
 	/* create notebook */
 	prefer->notebook = gtk_notebook_new();
-    gtk_notebook_set_scrollable(GTK_NOTEBOOK(prefer->notebook), TRUE);
-    gtk_notebook_set_show_tabs(GTK_NOTEBOOK(prefer->notebook), TRUE);
+	gtk_notebook_set_scrollable(GTK_NOTEBOOK(prefer->notebook), TRUE);
+	gtk_notebook_set_show_tabs(GTK_NOTEBOOK(prefer->notebook), TRUE);
 	gtk_box_pack_start(GTK_BOX(((GtkDialog *)prefer->dialog)->vbox), prefer->notebook, FALSE, FALSE, 0);
 
 	/* initializing pages */
