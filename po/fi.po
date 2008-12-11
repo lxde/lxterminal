@@ -7,133 +7,133 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-09 13:24+0200\n"
-"PO-Revision-Date: 2008-11-09 13:28+0200\n"
+"POT-Creation-Date: 2008-12-11 19:09+0200\n"
+"PO-Revision-Date: 2008-12-11 19:11+0200\n"
 "Last-Translator: Elias Julkunen <elias.julkunen@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/lxterminal.c:73
+#: ../src/lxterminal.c:70
 msgid "/_File"
 msgstr "/_Tiedosto"
 
-#: ../src/lxterminal.c:74
+#: ../src/lxterminal.c:71
 msgid "/_File/_New Window"
 msgstr "/_Tiedosto/_Uusi ikkuna"
 
-#: ../src/lxterminal.c:75
+#: ../src/lxterminal.c:72
 msgid "/_File/_New Tab"
 msgstr "/_Tiedosto/Uusi _välilehti"
 
-#: ../src/lxterminal.c:76
+#: ../src/lxterminal.c:73
 msgid "/_File/sep1"
 msgstr ""
 
-#: ../src/lxterminal.c:77
+#: ../src/lxterminal.c:74
 msgid "/_File/_Close Tab"
 msgstr "/_Tiedosto/_Sulje välilehti"
 
-#: ../src/lxterminal.c:78
+#: ../src/lxterminal.c:75
 msgid "/_File/_Quit"
 msgstr "/_Tiedosto/_Poistu"
 
-#: ../src/lxterminal.c:79
+#: ../src/lxterminal.c:76
 msgid "/_Edit"
 msgstr "/_Muokkaa"
 
-#: ../src/lxterminal.c:80
+#: ../src/lxterminal.c:77
 msgid "/_Edit/_Copy"
 msgstr "/_Muokkaa/_Kopioi"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:78
 msgid "/_Edit/_Paste"
 msgstr "/_Muokkaa/_Liitä"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:79
 msgid "/_Edit/sep1"
 msgstr ""
 
-#: ../src/lxterminal.c:83
+#: ../src/lxterminal.c:80
 msgid "/_Edit/_Preferences..."
 msgstr "/_Edit/_Asetukset..."
 
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:81
 msgid "/_Tabs"
 msgstr "/_Välilehdet"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:82
 msgid "/_Tabs/_Previous Tab"
 msgstr "/_Välilehdet/_Edellinen välilehti"
 
-#: ../src/lxterminal.c:86
+#: ../src/lxterminal.c:83
 msgid "/_Tabs/_Next Tab"
 msgstr "/_Välilehdet/_Seuraava välilehti"
 
-#: ../src/lxterminal.c:87
+#: ../src/lxterminal.c:84
 msgid "/_Help"
 msgstr "/_Ohje"
 
-#: ../src/lxterminal.c:88
+#: ../src/lxterminal.c:85
 msgid "/_Help/_About"
 msgstr "/_Ohje/_Tietoja"
 
-#: ../src/lxterminal.c:93
+#: ../src/lxterminal.c:90
 msgid "/_New Window"
 msgstr "/_Uusi ikkuna"
 
-#: ../src/lxterminal.c:94
+#: ../src/lxterminal.c:91
 msgid "/_New Tab"
 msgstr "/Uusi _välilehti"
 
-#: ../src/lxterminal.c:95
+#: ../src/lxterminal.c:92
 msgid "/sep1"
 msgstr ""
 
-#: ../src/lxterminal.c:96
+#: ../src/lxterminal.c:93
 msgid "/_Copy"
 msgstr "/_Kopioi"
 
-#: ../src/lxterminal.c:97
+#: ../src/lxterminal.c:94
 msgid "/_Paste"
 msgstr "/_Liitä"
 
-#: ../src/lxterminal.c:98
+#: ../src/lxterminal.c:95
 msgid "/sep2"
 msgstr ""
 
-#: ../src/lxterminal.c:99
+#: ../src/lxterminal.c:96
 msgid "/_Preferences..."
 msgstr "/_Asetukset..."
 
-#: ../src/lxterminal.c:100
+#: ../src/lxterminal.c:97
 msgid "/sep3"
 msgstr ""
 
-#: ../src/lxterminal.c:101
+#: ../src/lxterminal.c:98
 msgid "/_Close Tab"
 msgstr "/_Sulje välilehti"
 
-#: ../src/lxterminal.c:343
-#: ../src/lxterminal.c:386
-#: ../src/lxterminal.c:412
-#: ../src/lxterminal.c:676
-#: ../src/lxterminal.c:697
-#: ../src/lxterminal.c:700
+#: ../src/lxterminal.c:340
+#: ../src/lxterminal.c:383
+#: ../src/lxterminal.c:409
+#: ../src/lxterminal.c:684
+#: ../src/lxterminal.c:705
+#: ../src/lxterminal.c:708
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:378
+#: ../src/lxterminal.c:375
 msgid "translator-credits"
 msgstr "Elias Julkunen <elias.julkunen@gmail.com>"
 
-#: ../src/lxterminal.c:388
+#: ../src/lxterminal.c:385
 msgid "Copyright (C) 2008"
 msgstr "Tekijänoikeudet (C) 2008"
 
-#: ../src/lxterminal.c:389
+#: ../src/lxterminal.c:386
 msgid "Terminal emulator for LXDE project"
 msgstr "Pääteohjelma LXDE-projektille"
 
@@ -141,16 +141,28 @@ msgstr "Pääteohjelma LXDE-projektille"
 msgid "General"
 msgstr "Yleiset"
 
-#: ../src/preferences.c:54
+#. terminal font
+#: ../src/preferences.c:55
 msgid "Terminal Font:"
 msgstr "Päätteen kirjasin:"
 
-#: ../src/preferences.c:63
+#. Select-by-word
+#: ../src/preferences.c:62
 msgid "Select-by-word characters:"
-msgstr "Valitse sanana -merkit:"
+msgstr "Sanoina valittavat merkit:"
+
+#. Background color
+#: ../src/preferences.c:70
+msgid "Background:"
+msgstr "Taustaväri:"
+
+#. Foreground color
+#: ../src/preferences.c:77
+msgid "Foreground:"
+msgstr "Edustaväri:"
 
 #. create window
-#: ../src/preferences.c:194
+#: ../src/preferences.c:212
 msgid "Preferences"
 msgstr "Asetukset"
 
