@@ -121,7 +121,7 @@ lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
 
 	/* setting UNIX socket */
 	skaddr.sun_family = AF_UNIX;
-	snprintf(skaddr.sun_path, sizeof(skaddr.sun_path), socket_path);
+	snprintf(skaddr.sun_path, sizeof(skaddr.sun_path), "%s", socket_path);
 
 	/* try to connect to current LXTerminal */
 	if (connect(skfd, (struct sockaddr *)&skaddr, sizeof(skaddr)) < 0) {
