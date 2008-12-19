@@ -25,6 +25,13 @@
 #include "setting.h"
 #include "preferences.h"
 
+#if (GTK_MINOR_VERSION < 12)
+gchar *gdk_color_to_string(const GdkColor *color)
+{
+    return g_strdup_printf("#%04x%04x%04x", color->red, color->green, color->blue);
+}
+#endif
+
 void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab);
 void lxterminal_preferences_general_destructor(Prefer *prefer, TabWidget *tab);
 void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab);
