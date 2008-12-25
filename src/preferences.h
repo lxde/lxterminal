@@ -34,6 +34,8 @@ typedef struct {
 	GtkWidget *bgcolor_entry;
 	GtkWidget *fgcolor_label;
 	GtkWidget *fgcolor_entry;
+	GtkWidget *scrollback_label;
+	GtkWidget *scrollback_entry;
 } PreferGeneral;
 
 void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget *item);

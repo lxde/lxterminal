@@ -54,38 +54,46 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	pg = g_new0(PreferGeneral, 1);
 	tab->childs = pg;
 
-	pg->box = gtk_table_new(5,2, FALSE);
+	pg->box = gtk_table_new(6,4, FALSE);
 	gtk_table_set_row_spacings(pg->box, 3);
-	gtk_table_set_col_spacings(pg->box, 6);
+	gtk_table_set_col_spacings(pg->box, 5);
 
 	/* terminal font */
 	pg->font_label = gtk_label_new(_("Terminal Font:"));
 	gtk_misc_set_alignment(pg->font_label, 1, 0.5);
 	pg->font_button = gtk_font_button_new_with_font(prefer->terminal->setting->fontname);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_label, 0,1, 0,1);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_button, 1,2, 0,1);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_label, 0,2, 0,1);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_button, 2,4, 0,1);
 
 	/* Select-by-word */
 	pg->selchars_label = gtk_label_new(_("Select-by-word characters:"));
 	gtk_misc_set_alignment(pg->selchars_label, 1, 0.5);
 	pg->selchars_entry = gtk_entry_new();
 	gtk_entry_set_text((GtkEntry *)pg->selchars_entry, prefer->terminal->setting->selchars);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_label, 0,1, 1,2);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_entry, 1,2, 1,2);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_label, 0,2, 1,2);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_entry, 2,4, 1,2);
 
 	/* Background color */
 	pg->bgcolor_label = gtk_label_new(_("Background:"));
 	gtk_misc_set_alignment(pg->bgcolor_label, 1, 0.5);
 	pg->bgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->background);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_label, 0,1, 3,4);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_entry, 1,2, 3,4);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_label, 0,2, 3,4);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_entry, 2,4, 3,4);
 
 	/* Foreground color */
 	pg->fgcolor_label = gtk_label_new(_("Foreground:"));
 	gtk_misc_set_alignment(pg->fgcolor_label, 1, 0.5);
 	pg->fgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->foreground);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_label, 0,1, 4,5);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_entry, 1,2, 4,5);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_label, 0,2, 4,5);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_entry, 2,4, 4,5);
+
+	/* Scrollback buffer */
+	pg->scrollback_label = gtk_label_new(_("Scrollback lines:"));
+	gtk_misc_set_alignment(pg->scrollback_label, 1, 0.5);
+	pg->scrollback_entry = gtk_spin_button_new_with_range(100, 100000, 10);
+	gtk_spin_button_set_value((GtkSpinButton *)pg->scrollback_entry, (gdouble)prefer->terminal->setting->scrollback);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_label, 0,2, 5,6);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_entry, 2,3, 5,6);
 
 	/* adding to page */
 	gtk_container_add(GTK_CONTAINER(tab->page), pg->box);
@@ -105,6 +113,7 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 	g_free( prefer->terminal->setting->fontname );
 	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name((GtkFontButton *)pg->font_button) );
 	prefer->terminal->setting->selchars = g_strdup( gtk_entry_get_text((GtkEntry *)pg->selchars_entry) );
+	prefer->terminal->setting->scrollback = (glong)gtk_spin_button_get_value_as_int((GtkSpinButton *)pg->scrollback_entry);
 
 	/* background and foreground */
 	gtk_color_button_get_color( GTK_COLOR_BUTTON(pg->bgcolor_entry), &prefer->terminal->background);

@@ -6,6 +6,7 @@ typedef struct _setting {
 	char *selchars;
 	char *bgcolor;
 	char *fgcolor;
+	glong scrollback;
 	GKeyFile *keyfile;
 } Setting;
 

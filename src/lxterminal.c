@@ -521,6 +521,7 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	/* setting terminal */
 	vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
 	vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
+	vte_terminal_set_scrollback_lines(term->vte, terminal->setting->scrollback);
 	vte_terminal_set_emulation(term->vte, "xterm");
 
 	if (!gdk_color_parse(terminal->setting->bgcolor, &terminal->background)) {
@@ -637,6 +638,7 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 
 		vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
 		vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
+		vte_terminal_set_scrollback_lines(term->vte, terminal->setting->scrollback);
 		vte_terminal_set_color_background(term->vte, &terminal->background);
 		vte_terminal_set_color_foreground(term->vte, &terminal->foreground);
 	}
