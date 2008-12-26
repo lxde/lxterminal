@@ -340,9 +340,9 @@ void terminal_newtab(gpointer data, guint action, GtkWidget *item)
 	Term *term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, NULL);
 
 	/* add page to notebook */
-    gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
-    term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
-    g_ptr_array_add(terminal->terms, term);
+	gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
+	term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
+	g_ptr_array_add(terminal->terms, term);
 
 	/* push VTE to queue */
 	gtk_widget_queue_draw(term->vte);
@@ -571,8 +571,8 @@ Menu *menubar_init(LXTerminal *terminal)
 
 	menubar->item_factory = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<main>", NULL);
 	gtk_item_factory_set_translate_func(menubar->item_factory, gettext, NULL, NULL);
-    gtk_item_factory_create_items(menubar->item_factory, sizeof(menu_items) / sizeof(menu_items[0]), menu_items, terminal);
-    menubar->menu = gtk_item_factory_get_widget(menubar->item_factory, "<main>");
+	gtk_item_factory_create_items(menubar->item_factory, sizeof(menu_items) / sizeof(menu_items[0]), menu_items, terminal);
+	menubar->menu = gtk_item_factory_get_widget(menubar->item_factory, "<main>");
 
 	return menubar;
 }
@@ -642,6 +642,9 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 		vte_terminal_set_color_background(term->vte, &terminal->background);
 		vte_terminal_set_color_foreground(term->vte, &terminal->foreground);
 	}
+
+	/* update tab position */
+	lxterminal_tab_set_position(terminal->notebook, terminal->tabpos);
 }
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting)
@@ -699,6 +702,11 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	terminal->notebook = gtk_notebook_new();
 	gtk_notebook_set_scrollable(GTK_NOTEBOOK(terminal->notebook), TRUE);
 	gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
+
+	/* Tab Position */
+	terminal->tabpos = lxterminal_tab_get_position_id(terminal->setting->tabpos);
+	lxterminal_tab_set_position(terminal->notebook, terminal->tabpos);
+
 	g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
 	gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 

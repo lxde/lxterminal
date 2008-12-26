@@ -50,6 +50,7 @@ typedef struct _lxterminal {
 	gboolean fixedsize;
 	GdkColor background;
 	GdkColor foreground;
+	gint     tabpos;
 } LXTerminal;
 
 typedef struct _tab {

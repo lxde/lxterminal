@@ -49,6 +49,7 @@ void setting_save(Setting *setting)
 	g_key_file_set_string(setting->keyfile, "general", "selchars", setting->selchars);
 	g_key_file_set_string(setting->keyfile, "general", "bgcolor", setting->bgcolor);
 	g_key_file_set_string(setting->keyfile, "general", "fgcolor", setting->fgcolor);
+	g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tabpos);
 	g_key_file_set_integer(setting->keyfile, "general", "scrollback", (gint)setting->scrollback);
 
 	/* generate config data */
@@ -83,6 +84,7 @@ Setting *load_setting_from_file(const char *filename)
 		setting->selchars = g_key_file_get_string(setting->keyfile, "general", "selchars", NULL);
 		setting->bgcolor = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
 		setting->fgcolor = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
+		setting->tabpos = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
 		setting->scrollback = (glong)g_key_file_get_integer(setting->keyfile, "general", "scrollback", NULL);
 	}
 
@@ -99,6 +101,9 @@ setting_default:
 	
 	if (!setting->fgcolor)
 		setting->fgcolor = g_strdup("#aaaaaa");
+
+	if (!setting->tabpos)
+		setting->tabpos = g_strdup("top");
 
 	if (!setting->scrollback)
 		setting->scrollback = (glong)1000;

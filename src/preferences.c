@@ -95,6 +95,18 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_label, 0,2, 5,6);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_entry, 2,3, 5,6);
 
+	/* tab-panel position */
+	pg->tabpos_box = gtk_hbox_new(FALSE, 4);
+	pg->tabpos_label = gtk_label_new(_("Tab panel position:"));
+	pg->tabpos_combobox = gtk_combo_box_new_text();
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Top"));
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Bottom"));
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Left"));
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Right"));
+	gtk_combo_box_set_active (GTK_COMBO_BOX (pg->tabpos_combobox), prefer->terminal->tabpos);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_label, 0,2, 6,7);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_combobox, 2,3, 6,7);
+
 	/* adding to page */
 	gtk_container_add(GTK_CONTAINER(tab->page), pg->box);
 }
@@ -111,9 +123,28 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 	PreferGeneral *pg = tab->childs;
 
 	g_free( prefer->terminal->setting->fontname );
+	g_free( prefer->terminal->setting->selchars );
 	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name((GtkFontButton *)pg->font_button) );
 	prefer->terminal->setting->selchars = g_strdup( gtk_entry_get_text((GtkEntry *)pg->selchars_entry) );
 	prefer->terminal->setting->scrollback = (glong)gtk_spin_button_get_value_as_int((GtkSpinButton *)pg->scrollback_entry);
+
+	/* Tab position */
+	g_free( prefer->terminal->setting->tabpos );
+	prefer->terminal->tabpos = gtk_combo_box_get_active((GtkComboBox *)pg->tabpos_combobox);
+	switch(prefer->terminal->tabpos) {
+		case 0:
+			prefer->terminal->setting->tabpos = g_strdup("top");
+			break;
+		case 1:
+			prefer->terminal->setting->tabpos = g_strdup("bottom");
+			break;
+		case 2:
+			prefer->terminal->setting->tabpos = g_strdup("left");
+			break;
+		case 3:
+			prefer->terminal->setting->tabpos = g_strdup("right");
+			break;
+	}
 
 	/* background and foreground */
 	gtk_color_button_get_color( GTK_COLOR_BUTTON(pg->bgcolor_entry), &prefer->terminal->background);
