@@ -1,5 +1,5 @@
 AC_PREREQ(2.57)
-AC_INIT(lxterminal, 0.1.3, http://lxde.org/)
+AC_INIT(lxterminal, 0.1.4, http://lxde.org/)
 AM_CONFIG_HEADER(config.h)
 AM_INIT_AUTOMAKE
 AC_PROG_INTLTOOL
