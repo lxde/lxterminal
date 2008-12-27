@@ -63,6 +63,7 @@ static gchar helpmsg[] = {
 	"Options:\n"
 	"  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
 	"  --working-directory=DIRECTOR     Set the terminal's working directory\n"
+	"  --geometry=GEOMETRY              X geometry specification (see \"X\" man page), can be specified once per window to be opened.\n"
 };
 
 static GtkItemFactoryEntry menu_items[] =
@@ -653,6 +654,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	Term *term = NULL;
 	gchar *cmd = NULL;
 	gchar *workdir = NULL;
+	gint cols = 0, rows = 0;
 
 	/* argument */
 	if (argc>1) {
@@ -667,6 +669,9 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 				continue;
 			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
 				workdir = argv[i]+20;
+				continue;
+			} else if (strncmp(argv[i],"--geometry=", 11)==0) {
+				sscanf(argv[i]+11, "%dx%d", &cols, &rows);
 				continue;
 			}
 		}
@@ -718,6 +723,10 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 		term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
 	}
 
+	/* set default cols and rows */
+	if (cols&&rows)
+		vte_terminal_set_size(term->vte, cols, rows);
+
 	gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
 	term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
 	g_ptr_array_add(terminal->terms, term);
@@ -762,6 +771,8 @@ int main(gint argc, gchar** argv)
 				i++;
 				continue;
 			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
+				continue;
+			} else if (strncmp(argv[i],"--geometry=", 11)==0) {
 				continue;
 			}
 
