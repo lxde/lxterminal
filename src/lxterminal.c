@@ -213,55 +213,55 @@ void terminal_window_set_fixed_size(LXTerminal *terminal)
 
 gboolean terminal_switchtab1(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 0);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 0);
 	return TRUE;
 }
 
 gboolean terminal_switchtab2(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 1);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 1);
 	return TRUE;
 }
 
 gboolean terminal_switchtab3(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 2);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 2);
 	return TRUE;
 }
 
 gboolean terminal_switchtab4(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 3);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 3);
 	return TRUE;
 }
 
 gboolean terminal_switchtab5(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 4);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 4);
 	return TRUE;
 }
 
 gboolean terminal_switchtab6(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 5);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 5);
 	return TRUE;
 }
 
 gboolean terminal_switchtab7(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 6);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 6);
 	return TRUE;
 }
 
 gboolean terminal_switchtab8(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 7);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 7);
 	return TRUE;
 }
 
 gboolean terminal_switchtab9(LXTerminal *terminal)
 {
-	gtk_notebook_set_current_page(terminal->notebook, 8);
+	gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 8);
 	return TRUE;
 }
 
@@ -271,7 +271,7 @@ gboolean terminal_copy(gpointer data, guint action, GtkWidget *item)
 	Term *term;
 
 	/* getting current vte */
-	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(terminal->notebook));
+	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
 
 	/* copy from vte */
 	vte_terminal_copy_clipboard(VTE_TERMINAL(term->vte));
@@ -285,7 +285,7 @@ gboolean terminal_paste(gpointer data, guint action, GtkWidget *item)
 	Term *term;
 
 	/* getting current vte */
-	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(terminal->notebook));
+	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
 
 	/* copy from vte */
 	vte_terminal_paste_clipboard(VTE_TERMINAL(term->vte));
@@ -298,10 +298,10 @@ void terminal_nexttab(gpointer data, guint action, GtkWidget *item)
 	LXTerminal *terminal = (LXTerminal *)data;
 
 	/* cycle */
-	if (gtk_notebook_get_current_page(terminal->notebook)==gtk_notebook_get_n_pages(terminal->notebook)-1)
-		gtk_notebook_set_current_page(terminal->notebook, 0);
+	if (gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook))==gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook))-1)
+		gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 0);
 	else
-		gtk_notebook_next_page(terminal->notebook);
+		gtk_notebook_next_page(GTK_NOTEBOOK(terminal->notebook));
 }
 
 void terminal_prevtab(gpointer data, guint action, GtkWidget *item)
@@ -309,10 +309,10 @@ void terminal_prevtab(gpointer data, guint action, GtkWidget *item)
 	LXTerminal *terminal = (LXTerminal *)data;
 
 	/* cycle */
-	if (gtk_notebook_get_current_page(terminal->notebook)==0)
-		gtk_notebook_set_current_page(terminal->notebook, -1);
+	if (gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook))==0)
+		gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), -1);
 	else
-		gtk_notebook_prev_page(terminal->notebook);
+		gtk_notebook_prev_page(GTK_NOTEBOOK(terminal->notebook));
 }
 
 void terminal_closetab(gpointer data, guint action, GtkWidget *item)
@@ -321,7 +321,7 @@ void terminal_closetab(gpointer data, guint action, GtkWidget *item)
 	Term *term;
 
 	/* getting current vte */
-	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(terminal->notebook));
+	term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
 
 	/* release child */
 	terminal_childexit(VTE_TERMINAL(term->vte), term);
@@ -443,7 +443,7 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 	int i;
 	LXTerminal *terminal = term->parent;
 
-	if(gtk_notebook_get_n_pages(terminal->notebook)==1) {
+	if(gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook))==1) {
 		/* release */
 		g_ptr_array_free(terminal->terms, TRUE);
 
@@ -460,7 +460,7 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 		}
 
 		/* release */
-		gtk_notebook_remove_page(terminal->notebook, term->index);
+		gtk_notebook_remove_page(GTK_NOTEBOOK(terminal->notebook), term->index);
 		g_free(term);
 
 		/* if only one page, hide tab */
@@ -473,8 +473,8 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 			/* get original info of VTE */
 			Term *t = g_ptr_array_index(terminal->terms, 0);
 			vte_terminal_get_padding(VTE_TERMINAL(t->vte), &xpad, &ypad);
-			cols = vte_terminal_get_column_count(t->vte);
-			rows = vte_terminal_get_row_count(t->vte);
+			cols = vte_terminal_get_column_count(VTE_TERMINAL(t->vte));
+			rows = vte_terminal_get_row_count(VTE_TERMINAL(t->vte));
 
 			/* fixed VTE size */
 			terminal_window_set_fixed_size(terminal);
@@ -483,7 +483,7 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
 
 			/* recovery window size */
-			vte_terminal_set_size(t->vte, cols, rows);
+			vte_terminal_set_size(VTE_TERMINAL(t->vte), cols, rows);
 			gtk_window_resize(terminal->mainw,
 								xpad + VTE_TERMINAL(t->vte)->char_width,
 								ypad + VTE_TERMINAL(t->vte)->char_height);
@@ -520,10 +520,10 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	gtk_box_pack_start(GTK_BOX(term->box), term->scrollbar, FALSE, TRUE, 0);
 
 	/* setting terminal */
-	vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
-	vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
-	vte_terminal_set_scrollback_lines(term->vte, terminal->setting->scrollback);
-	vte_terminal_set_emulation(term->vte, "xterm");
+	vte_terminal_set_font_from_string((VteTerminal *)term->vte, terminal->setting->fontname);
+	vte_terminal_set_word_chars((VteTerminal *)term->vte, terminal->setting->selchars);
+	vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
+	vte_terminal_set_emulation((VteTerminal *)term->vte, "xterm");
 
 	if (!gdk_color_parse(terminal->setting->bgcolor, &terminal->background)) {
 		terminal->background = (GdkColor){ 0, 0, 0, 0 };
@@ -535,7 +535,7 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 		printf("Bad fgcolor string in config: %s\n", terminal->setting->fgcolor);
 	}
 
-	vte_terminal_set_colors(term->vte, &terminal->foreground, &terminal->background, &linux_color, 16);
+	vte_terminal_set_colors(VTE_TERMINAL(term->vte), &terminal->foreground, &terminal->background, &linux_color, 16);
 
 	/* create label for tab */
 	term->label = lxterminal_tab_label_new(label);
@@ -637,11 +637,11 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 	for (i=0;i<terminal->terms->len;i++) {
 		term = g_ptr_array_index(terminal->terms, i);
 
-		vte_terminal_set_font_from_string(term->vte, terminal->setting->fontname);
-		vte_terminal_set_word_chars(term->vte, terminal->setting->selchars);
-		vte_terminal_set_scrollback_lines(term->vte, terminal->setting->scrollback);
-		vte_terminal_set_color_background(term->vte, &terminal->background);
-		vte_terminal_set_color_foreground(term->vte, &terminal->foreground);
+		vte_terminal_set_font_from_string((VteTerminal *)term->vte, terminal->setting->fontname);
+		vte_terminal_set_word_chars((VteTerminal *)term->vte, terminal->setting->selchars);
+		vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
+		vte_terminal_set_color_background((VteTerminal *)term->vte, &terminal->background);
+		vte_terminal_set_color_foreground((VteTerminal *)term->vte, &terminal->foreground);
 	}
 
 	/* update tab position */
@@ -725,7 +725,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	/* set default cols and rows */
 	if (cols&&rows)
-		vte_terminal_set_size(term->vte, cols, rows);
+		vte_terminal_set_size(VTE_TERMINAL(term->vte), cols, rows);
 
 	gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
 	term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
