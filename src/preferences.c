@@ -245,8 +245,9 @@ void lxterminal_preferences_on_response(GtkDialog* dlg, gint response, Prefer *p
 	gtk_widget_destroy((GtkWidget *)dlg);
 }
 
-void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget *item)
+void lxterminal_preferences_dialog(GtkAction *action, gpointer data)
 {
+	LXTerminal *terminal = (LXTerminal *)data;
 	Prefer *prefer;
 	GtkWidget *pdialog;
 	GtkWidget *tab;

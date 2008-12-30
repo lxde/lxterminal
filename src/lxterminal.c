@@ -65,7 +65,7 @@ static gchar helpmsg[] = {
 	"  --working-directory=DIRECTOR     Set the terminal's working directory\n"
 	"  --geometry=GEOMETRY              X geometry specification (see \"X\" man page), can be specified once per window to be opened.\n"
 };
-
+/*
 static GtkItemFactoryEntry menu_items[] =
 {
 	{ N_("/_File"), NULL, NULL, 0, "<Branch>" },
@@ -85,7 +85,8 @@ static GtkItemFactoryEntry menu_items[] =
 	{ N_("/_Help"), NULL, NULL, 0, "<Branch>" },
 	{ N_("/_Help/_About"), 0, terminal_about, 1, "<StockItem>", GTK_STOCK_ABOUT},
 };
-
+*/
+/*
 static GtkItemFactoryEntry vte_menu_items[] =
 {
 	{ N_("/_New Window"), NEW_WINDOW_ACCEL, terminal_newwindow, 1, "<StockItem>", GTK_STOCK_ADD },
@@ -97,6 +98,49 @@ static GtkItemFactoryEntry vte_menu_items[] =
 	{ N_("/_Preferences..."), NULL, lxterminal_preferences_dialog, 0, "<StockItem>", GTK_STOCK_EXECUTE },
 	{ N_("/sep3"), NULL, NULL, 0, "<Separator>" },
 	{ N_("/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE }
+};
+*/
+
+#define MENUBAR_MENU_COUNT 4
+static GtkActionEntry menus[] =
+{
+	{ "File", NULL, N_("_File") },
+	{ "Edit", NULL, N_("_Edit") },
+	{ "Tabs", NULL, N_("_Tabs") },
+	{ "Help", NULL, N_("_Help") }
+};
+
+#define MENUBAR_MENUITEM_COUNT 13
+static GtkActionEntry menu_items[] =
+{
+	{ "MenuBar", NULL, "MenuBar" },
+	{ "File_NewWindow", GTK_STOCK_ADD, N_("_New Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_newwindow)},
+	{ "File_NewTab", GTK_STOCK_ADD, N_("_New Tab"), NEW_TAB_ACCEL, "New Tab", G_CALLBACK(terminal_newtab)},
+	{ "File_Sep1", NULL, "Sep" },
+	{ "File_CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), CLOSE_TAB_ACCEL, "Close Tab", G_CALLBACK(terminal_closetab)},
+	{ "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL, "Quit", G_CALLBACK(gtk_main_quit)},
+	{ "Edit_Copy", GTK_STOCK_COPY, N_("_Copy"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy)},
+	{ "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste)},
+	{ "Edit_Sep1", NULL, "Sep" },
+	{ "Edit_Preferences", GTK_STOCK_EXECUTE, N_("_Preferences"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
+	{ "Tabs_PreviousTab", NULL, N_("_Previous Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
+	{ "Tabs_NextTab", NULL, N_("_Next Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_nexttab)},
+	{ "Help_About", NULL, N_("_About"), NULL, "About", G_CALLBACK(terminal_about)}
+};
+
+#define VTE_MENUITEM_COUNT 10
+static GtkActionEntry vte_menu_items[] =
+{
+	{ "VTEMenu", NULL, "VTEMenu" },
+	{ "NewWindow", GTK_STOCK_ADD, N_("_New Window"), NULL, "New Window", G_CALLBACK(terminal_newwindow)},
+	{ "NewTab", GTK_STOCK_ADD, N_("_New Tab"), NULL, "New Tab", G_CALLBACK(terminal_newtab)},
+	{ "Sep1", NULL, "Sep" },
+	{ "Copy", GTK_STOCK_COPY, N_("_Copy"), NULL, "Copy", G_CALLBACK(terminal_copy)},
+	{ "Paste", GTK_STOCK_PASTE, N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste)},
+	{ "Sep2", NULL, "Sep" },
+	{ "Preferences", GTK_STOCK_EXECUTE, N_("_Preferences"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
+	{ "Sep3", NULL, "Sep" },
+	{ "CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), NULL, "Close Tab", G_CALLBACK(terminal_closetab)}
 };
 
 static void
@@ -265,7 +309,12 @@ gboolean terminal_switchtab9(LXTerminal *terminal)
 	return TRUE;
 }
 
-gboolean terminal_copy(gpointer data, guint action, GtkWidget *item)
+gboolean terminal_copy_accel(gpointer data, guint action, GtkWidget *item)
+{
+	return terminal_copy(NULL, data);
+}
+
+gboolean terminal_copy(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 	Term *term;
@@ -279,7 +328,12 @@ gboolean terminal_copy(gpointer data, guint action, GtkWidget *item)
 	return TRUE;
 }
 
-gboolean terminal_paste(gpointer data, guint action, GtkWidget *item)
+gboolean terminal_paste_accel(gpointer data, guint action, GtkWidget *item)
+{
+	return terminal_paste(NULL, data);
+}
+
+gboolean terminal_paste(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 	Term *term;
@@ -293,7 +347,7 @@ gboolean terminal_paste(gpointer data, guint action, GtkWidget *item)
 	return TRUE;
 }
 
-void terminal_nexttab(gpointer data, guint action, GtkWidget *item)
+void terminal_nexttab(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 
@@ -304,7 +358,7 @@ void terminal_nexttab(gpointer data, guint action, GtkWidget *item)
 		gtk_notebook_next_page(GTK_NOTEBOOK(terminal->notebook));
 }
 
-void terminal_prevtab(gpointer data, guint action, GtkWidget *item)
+void terminal_prevtab(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 
@@ -315,7 +369,12 @@ void terminal_prevtab(gpointer data, guint action, GtkWidget *item)
 		gtk_notebook_prev_page(GTK_NOTEBOOK(terminal->notebook));
 }
 
-void terminal_closetab(gpointer data, guint action, GtkWidget *item)
+void terminal_closetab_accel(gpointer data, guint action, GtkWidget *item)
+{
+	terminal_closetab(NULL, data);
+}
+
+void terminal_closetab(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 	Term *term;
@@ -327,14 +386,24 @@ void terminal_closetab(gpointer data, guint action, GtkWidget *item)
 	terminal_childexit(VTE_TERMINAL(term->vte), term);
 }
 
-void terminal_newwindow(gpointer data, guint action, GtkWidget *item)
+void terminal_newwindow_accel(gpointer data, guint action, GtkWidget *item)
+{
+	terminal_newwindow(NULL, data);
+}
+
+void terminal_newwindow(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 
 	lxterminal_init(terminal->parent, NULL, NULL, terminal->setting);
 }
 
-void terminal_newtab(gpointer data, guint action, GtkWidget *item)
+void terminal_newtab_accel(gpointer data, guint action, GtkWidget *item)
+{
+	terminal_newtab(NULL, data);
+}
+
+void terminal_newtab(GtkWidget *widget, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 
@@ -364,7 +433,7 @@ static void open_url( GtkDialog* dlg, const char* url, gpointer data )
     /* FIXME: */
 }
 
-void terminal_about( gpointer data, guint action, GtkWidget* item )
+void terminal_about(GtkAction *action, gpointer data)
 {
     GtkWidget * about_dlg;
     const gchar *authors[] =
@@ -493,6 +562,35 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 
 gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpointer data)
 {
+	LXTerminal *terminal = (LXTerminal *)data;
+	GtkWidget *menu_item;
+	GtkActionGroup *action_group;
+	GtkUIManager *manager;
+	guint merge_id;
+	gint i;
+
+	/* right-click */
+	if (event->button == 3) {
+		/* initializing UI manager */
+		manager = gtk_ui_manager_new();
+		action_group = gtk_action_group_new("VTEMenu");
+		gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
+		gtk_action_group_add_actions(action_group, vte_menu_items, VTE_MENUITEM_COUNT, terminal);
+		gtk_ui_manager_insert_action_group(manager, action_group, 0);
+
+		merge_id = gtk_ui_manager_new_merge_id(manager);
+
+		gtk_ui_manager_add_ui(manager, merge_id, "/", "VTEMenu", NULL, GTK_UI_MANAGER_POPUP, FALSE);
+		for (i=1;i<VTE_MENUITEM_COUNT;i++) {
+			if (strcmp(vte_menu_items[i].label, "Sep")==0)
+				gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu", vte_menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
+			else
+				gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu", vte_menu_items[i].name, vte_menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+		}
+
+		gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")), NULL, NULL, NULL, NULL, event->button, event->time);
+	}
+#if 0
 	GtkItemFactory *item_factory;
 
 	/* right-click */
@@ -502,7 +600,7 @@ gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpoi
 		gtk_item_factory_create_items(item_factory, sizeof(vte_menu_items) / sizeof(vte_menu_items[0]), vte_menu_items, data);
 		gtk_menu_popup(GTK_MENU(gtk_item_factory_get_widget(item_factory, "<main>")), NULL, NULL, NULL, NULL, event->button, event->time);
 	}
-
+#endif
 	return FALSE;
 }
 
@@ -567,6 +665,65 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 Menu *menubar_init(LXTerminal *terminal)
 {
 	Menu *menubar;
+	GtkWidget *menu_item;
+	GtkActionGroup *action_group;
+	GtkUIManager *manager;
+	guint merge_id;
+	gint i;
+	gchar *path, *path_ptr;
+
+	/* initializing menu */
+	menubar = g_new0(Menu, 1);
+
+	/* initializing UI manager */
+	manager = gtk_ui_manager_new();
+	action_group = gtk_action_group_new("MenuBar");
+	gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
+	gtk_action_group_add_actions(action_group, menus, MENUBAR_MENU_COUNT, terminal);
+	gtk_action_group_add_actions(action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
+	gtk_ui_manager_insert_action_group(manager, action_group, 0);
+
+	merge_id = gtk_ui_manager_new_merge_id(manager);
+
+	gtk_ui_manager_add_ui(manager, merge_id, "/", "MenuBar", NULL, GTK_UI_MANAGER_MENUBAR, FALSE);
+
+	/* menus */
+	for (i=0;i<MENUBAR_MENU_COUNT;i++) {
+		path = g_strdup_printf("/MenuBar/%s", menus[i].name);
+		for (path_ptr=path;*path_ptr!='\0';path_ptr++) {
+			if (*path_ptr=='_')
+				*path_ptr = '/';
+		}
+
+		path_ptr = g_path_get_dirname(path);
+		gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menus[i].name, menus[i].name, GTK_UI_MANAGER_MENU, FALSE);
+		g_free(path);
+		g_free(path_ptr);
+	}
+
+	/* items */
+	for (i=1;i<MENUBAR_MENUITEM_COUNT;i++) {
+		path = g_strdup_printf("/MenuBar/%s", menu_items[i].name);
+		for (path_ptr=path;*path_ptr!='\0';path_ptr++) {
+			if (*path_ptr=='_')
+				*path_ptr = '/';
+		}
+
+		path_ptr = g_path_get_dirname(path);
+
+		if (strcmp(menu_items[i].label, "Sep")==0)
+			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
+		else
+			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+
+		g_free(path);
+		g_free(path_ptr);
+	}
+
+	menubar->menu = gtk_ui_manager_get_widget(manager, "/MenuBar");
+	//gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/MenuBar")), NULL, NULL, NULL, NULL, event->button, event->time);
+/*
+	Menu *menubar;
 
 	menubar = g_new0(Menu, 1);
 
@@ -574,7 +731,7 @@ Menu *menubar_init(LXTerminal *terminal)
 	gtk_item_factory_set_translate_func(menubar->item_factory, gettext, NULL, NULL);
 	gtk_item_factory_create_items(menubar->item_factory, sizeof(menu_items) / sizeof(menu_items[0]), menu_items, terminal);
 	menubar->menu = gtk_item_factory_get_widget(menubar->item_factory, "<main>");
-
+*/
 	return menubar;
 }
 
@@ -585,17 +742,23 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 
 	terminal->menubar->accel_group = gtk_accel_group_new();
 
+	gtk_accelerator_parse(NEW_WINDOW_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newwindow_accel, terminal, NULL));
+
+	gtk_accelerator_parse(QUIT_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(gtk_main_quit, NULL, NULL));
+
 	gtk_accelerator_parse(NEW_TAB_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newtab, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newtab_accel, terminal, NULL));
 
 	gtk_accelerator_parse(CLOSE_TAB_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_closetab, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_closetab_accel, terminal, NULL));
 
 	gtk_accelerator_parse(COPY_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_copy, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_copy_accel, terminal, NULL));
 
 	gtk_accelerator_parse(PASTE_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_paste, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_paste_accel, terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB1_ACCEL, &key, &mods);
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab1, terminal, NULL));
@@ -624,7 +787,7 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 	gtk_accelerator_parse(SWITCH_TAB9_ACCEL, &key, &mods);
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab9, terminal, NULL));
 
-	gtk_accel_group_lock(terminal->menubar->accel_group);
+//	gtk_accel_group_lock(terminal->menubar->accel_group);
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
 }
 

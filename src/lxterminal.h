@@ -70,14 +70,15 @@ typedef struct _term {
 
 
 Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env, const gchar *exec);
-void terminal_newwindow(gpointer data, guint action, GtkWidget *item);
-void terminal_newtab(gpointer data, guint action, GtkWidget *item);
-void terminal_closetab(gpointer data, guint action, GtkWidget *item);
-void terminal_nexttab(gpointer data, guint action, GtkWidget *item);
-void terminal_prevtab(gpointer data, guint action, GtkWidget *item);
-void terminal_about( gpointer data, guint action, GtkWidget* item );
-gboolean terminal_copy(gpointer data, guint action, GtkWidget *item);
-gboolean terminal_paste(gpointer data, guint action, GtkWidget *item);
+void terminal_newwindow(GtkAction *action, gpointer data);
+//void terminal_newwindow(gpointer data, guint action, GtkWidget *item);
+void terminal_newtab(GtkWidget *widget, gpointer data);
+void terminal_closetab(GtkAction *action, gpointer data);
+void terminal_nexttab(GtkAction *action, gpointer data);
+void terminal_prevtab(GtkAction *action, gpointer data);
+void terminal_about(GtkAction *action, gpointer data);
+gboolean terminal_copy(GtkAction *action, gpointer data);
+gboolean terminal_paste(GtkAction *action, gpointer data);
 
 void terminal_setting_update(LXTerminal *terminal, Setting *setting);
 

@@ -41,6 +41,6 @@ typedef struct {
 	GtkWidget *tabpos_combobox;
 } PreferGeneral;
 
-void lxterminal_preferences_dialog(LXTerminal *terminal, guint action, GtkWidget *item);
+void lxterminal_preferences_dialog(GtkAction *action, gpointer data);
 
 #endif
