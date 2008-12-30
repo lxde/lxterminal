@@ -113,8 +113,15 @@ lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
 
 	/* create socket */
 	skfd = socket(PF_UNIX, SOCK_STREAM, 0);
-	if (skfd < 0)
-		g_error("Cannot create socket!");
+	if (skfd < 0) {
+		if (g_file_test(socket_path, G_FILE_TEST_EXISTS)) {
+			unlink(socket_path);
+		}
+
+		skfd = socket(PF_UNIX, SOCK_STREAM, 0);
+		if (skfd < 0) {
+			g_error("Cannot create socket!");
+	}
 
 	/* Initiate socket */
 	bzero(&skaddr, sizeof(skaddr));
@@ -153,6 +160,7 @@ lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
 		g_io_channel_set_close_on_unref(gio, TRUE);
 		g_io_channel_unref(gio);
 
+		g_free(socket_path);
 		return TRUE;
 	} else {
 		int i;
@@ -182,6 +190,7 @@ lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
 		g_io_channel_write_chars(gio, "\n", -1, NULL, NULL);
 		g_io_channel_flush(gio, NULL);
 		g_io_channel_unref(gio);
+		g_free(socket_path);
 		return FALSE;
 	}
 }
