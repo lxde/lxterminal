@@ -93,11 +93,11 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	pg->scrollback_entry = gtk_spin_button_new_with_range(100, 100000, 10);
 	gtk_spin_button_set_value((GtkSpinButton *)pg->scrollback_entry, (gdouble)prefer->terminal->setting->scrollback);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_label, 0,2, 5,6);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_entry, 2,3, 5,6);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_entry, 2,4, 5,6);
 
 	/* tab-panel position */
-	pg->tabpos_box = gtk_hbox_new(FALSE, 4);
 	pg->tabpos_label = gtk_label_new(_("Tab panel position:"));
+	gtk_misc_set_alignment(pg->tabpos_label, 1, 0.5);
 	pg->tabpos_combobox = gtk_combo_box_new_text();
 	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Top"));
 	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Bottom"));
@@ -105,7 +105,7 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Right"));
 	gtk_combo_box_set_active (GTK_COMBO_BOX (pg->tabpos_combobox), prefer->terminal->tabpos);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_label, 0,2, 6,7);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_combobox, 2,3, 6,7);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_combobox, 2,4, 6,7);
 
 	/* adding to page */
 	gtk_container_add(GTK_CONTAINER(tab->page), pg->box);

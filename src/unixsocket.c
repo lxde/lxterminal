@@ -119,7 +119,7 @@ lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
 		}
 
 		skfd = socket(PF_UNIX, SOCK_STREAM, 0);
-		if (skfd < 0) {
+		if (skfd < 0)
 			g_error("Cannot create socket!");
 	}
 

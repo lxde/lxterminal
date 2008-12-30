@@ -36,7 +36,6 @@ typedef struct {
 	GtkWidget *fgcolor_entry;
 	GtkWidget *scrollback_label;
 	GtkWidget *scrollback_entry;
-	GtkWidget *tabpos_box;
 	GtkWidget *tabpos_label;
 	GtkWidget *tabpos_combobox;
 } PreferGeneral;
