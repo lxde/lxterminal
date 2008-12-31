@@ -33,6 +33,7 @@
 #include "tab.h"
 #include "preferences.h"
 #include "unixsocket.h"
+#include "encoding.h"
 
 /* Linux color for palette */
 const GdkColor linux_color[16] =
@@ -101,11 +102,12 @@ static GtkItemFactoryEntry vte_menu_items[] =
 };
 */
 
-#define MENUBAR_MENU_COUNT 4
+#define MENUBAR_MENU_COUNT 5
 static GtkActionEntry menus[] =
 {
 	{ "File", NULL, N_("_File") },
 	{ "Edit", NULL, N_("_Edit") },
+	{ "View", NULL, N_("_View") },
 	{ "Tabs", NULL, N_("_Tabs") },
 	{ "Help", NULL, N_("_Help") }
 };
@@ -113,7 +115,6 @@ static GtkActionEntry menus[] =
 #define MENUBAR_MENUITEM_COUNT 13
 static GtkActionEntry menu_items[] =
 {
-	{ "MenuBar", NULL, "MenuBar" },
 	{ "File_NewWindow", GTK_STOCK_ADD, N_("_New Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_newwindow)},
 	{ "File_NewTab", GTK_STOCK_ADD, N_("_New Tab"), NEW_TAB_ACCEL, "New Tab", G_CALLBACK(terminal_newtab)},
 	{ "File_Sep1", NULL, "Sep" },
@@ -123,6 +124,7 @@ static GtkActionEntry menu_items[] =
 	{ "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste)},
 	{ "Edit_Sep1", NULL, "Sep" },
 	{ "Edit_Preferences", GTK_STOCK_EXECUTE, N_("_Preferences"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
+	{ "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 	{ "Tabs_PreviousTab", NULL, N_("_Previous Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
 	{ "Tabs_NextTab", NULL, N_("_Next Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_nexttab)},
 	{ "Help_About", NULL, N_("_About"), NULL, "About", G_CALLBACK(terminal_about)}
@@ -667,6 +669,7 @@ Menu *menubar_init(LXTerminal *terminal)
 	Menu *menubar;
 	GtkWidget *menu_item;
 	GtkActionGroup *action_group;
+	GtkAction *encoding_action;
 	GtkUIManager *manager;
 	guint merge_id;
 	gint i;
@@ -675,12 +678,16 @@ Menu *menubar_init(LXTerminal *terminal)
 	/* initializing menu */
 	menubar = g_new0(Menu, 1);
 
+	/* initializing encoding Action */
+	encoding_action = encoding_action_new("CharacterEncoding");
+
 	/* initializing UI manager */
 	manager = gtk_ui_manager_new();
 	action_group = gtk_action_group_new("MenuBar");
 	gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
 	gtk_action_group_add_actions(action_group, menus, MENUBAR_MENU_COUNT, terminal);
 	gtk_action_group_add_actions(action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
+	gtk_action_group_add_action(action_group, encoding_action);
 	gtk_ui_manager_insert_action_group(manager, action_group, 0);
 
 	merge_id = gtk_ui_manager_new_merge_id(manager);
@@ -702,7 +709,7 @@ Menu *menubar_init(LXTerminal *terminal)
 	}
 
 	/* items */
-	for (i=1;i<MENUBAR_MENUITEM_COUNT;i++) {
+	for (i=0;i<MENUBAR_MENUITEM_COUNT;i++) {
 		path = g_strdup_printf("/MenuBar/%s", menu_items[i].name);
 		for (path_ptr=path;*path_ptr!='\0';path_ptr++) {
 			if (*path_ptr=='_')
@@ -711,14 +718,21 @@ Menu *menubar_init(LXTerminal *terminal)
 
 		path_ptr = g_path_get_dirname(path);
 
-		if (strcmp(menu_items[i].label, "Sep")==0)
+		if (strcmp(menu_items[i].label, "Sep")==0) {
 			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
-		else
+		} else if (strcmp(menu_items[i].name, "View_CharacterEncoding")==0) {
+			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, "CharacterEncoding", GTK_UI_MANAGER_MENUITEM, FALSE);
+		} else {
 			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+		}
 
 		g_free(path);
 		g_free(path_ptr);
 	}
+
+	/* encoding list */
+//	gtk_menu_shell_append(GTK_MENU_SHELL(gtk_ui_manager_get_widget(manager, "/MenuBar/View/CharacterEncoding")), encoding_list_menu_init());
+//	gtk_menu_item_set_submenu(GTK_MENU_ITEM(gtk_ui_manager_get_widget(manager, "/MenuBar/View/CharacterEncoding")), encoding_list_menu_init());
 
 	menubar->menu = gtk_ui_manager_get_widget(manager, "/MenuBar");
 	//gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/MenuBar")), NULL, NULL, NULL, NULL, event->button, event->time);
