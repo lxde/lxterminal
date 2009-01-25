@@ -1,155 +1,198 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# German translation for LXTerminal.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the LXTerminal package.
+# Christoph Wickert <christoph.wickert@googlemail.de>, 2008.
+# Mario Blättermann <mario.blaettermann@t-online.de>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-20 04:17+0800\n"
-"PO-Revision-Date: 2008-06-22 14:41+0100\n"
-"Last-Translator: Christoph Wickert <christoph.wickert@googlemail.de>\n"
-"Language-Team: de_CH <christoph.wickert@googlemail.de>\n"
+"POT-Creation-Date: 2009-01-25 17:00+0100\n"
+"PO-Revision-Date: 2009-01-25 17:08+0100\n"
+"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: German\n"
-"X-Poedit-Country: SWAZILAND\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/lxterminal.c:49
-msgid "/_File"
-msgstr "/_Datei"
+#: ../src/lxterminal.c:108
+msgid "_File"
+msgstr "_Datei"
 
-#: ../src/lxterminal.c:50
-msgid "/_File/_New Window"
-msgstr "/_Datei/Neues _Fenster"
+#: ../src/lxterminal.c:109
+msgid "_Edit"
+msgstr "_Bearbeiten"
 
-#: ../src/lxterminal.c:51
-msgid "/_File/_New Tab"
-msgstr "/_Datei/Neuer _Reiter"
+#: ../src/lxterminal.c:110
+msgid "_View"
+msgstr "_Ansicht"
 
-#: ../src/lxterminal.c:52
-msgid "/_File/sep1"
-msgstr "/_Datei/sep1"
+#: ../src/lxterminal.c:111
+msgid "_Tabs"
+msgstr "_Reiter"
 
-#: ../src/lxterminal.c:53
-msgid "/_File/_Close Tab"
-msgstr "/_Datei/Reiter _schließen"
+#: ../src/lxterminal.c:112
+msgid "_Help"
+msgstr "_Hilfe"
 
-#: ../src/lxterminal.c:54
-msgid "/_File/_Quit"
-msgstr "/_Datei/_Beenden"
+#: ../src/lxterminal.c:118
+#: ../src/lxterminal.c:137
+msgid "_New Window"
+msgstr "Neues _Fenster"
 
-#: ../src/lxterminal.c:55
-msgid "/_Edit"
-msgstr "/_Bearbeiten"
+#: ../src/lxterminal.c:119
+#: ../src/lxterminal.c:138
+msgid "_New Tab"
+msgstr "Neuer _Reiter"
 
-#: ../src/lxterminal.c:56
-msgid "/_Edit/_Copy"
-msgstr "/_Bearbeiten/_Kopieren"
+#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:145
+msgid "_Close Tab"
+msgstr "Reiter s_chließen"
 
-#: ../src/lxterminal.c:57
-msgid "/_Edit/_Paste"
-msgstr "/_Bearbeiten/E_infügen"
+#: ../src/lxterminal.c:122
+msgid "_Quit"
+msgstr "_Beenden"
 
-#: ../src/lxterminal.c:58
-msgid "/_Edit/sep1"
-msgstr "/_Bearbeiten/sep1"
+#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:140
+msgid "_Copy"
+msgstr "_Kopieren"
 
-#: ../src/lxterminal.c:59
-msgid "/_Edit/_Preferences..."
-msgstr "/_Bearbeiten/_Einstellungen..."
+#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:141
+msgid "_Paste"
+msgstr "E_infügen"
 
-#: ../src/lxterminal.c:60
-msgid "/_Tabs"
-msgstr "/_Reiter"
+#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:143
+msgid "_Preferences"
+msgstr "_Einstellungen"
 
-#: ../src/lxterminal.c:61
-msgid "/_Tabs/_Previous Tab"
-msgstr "/_Reiter/_Vorheriger Reiter"
+#: ../src/lxterminal.c:127
+msgid "_Character Encoding"
+msgstr "_Zeichenkodierung"
 
-#: ../src/lxterminal.c:62
-msgid "/_Tabs/_Next Tab"
-msgstr "/_Reiter/_Nächster Reiter"
+#: ../src/lxterminal.c:128
+msgid "_Previous Tab"
+msgstr "_Vorheriger Reiter"
 
-#: ../src/lxterminal.c:63
-msgid "/_Help"
-msgstr "/_Hilfe"
+#: ../src/lxterminal.c:129
+msgid "_Next Tab"
+msgstr "Nächster _Reiter"
 
-#: ../src/lxterminal.c:64
-msgid "/_Help/_About"
-msgstr "/_Hilfe/_Info"
+#: ../src/lxterminal.c:130
+msgid "_About"
+msgstr "_Info"
 
-#: ../src/lxterminal.c:69
-msgid "/_New Window"
-msgstr "/Neues _Fenster"
-
-#: ../src/lxterminal.c:70
-msgid "/_New Tab"
-msgstr "/Neuer _Reiter"
-
-#: ../src/lxterminal.c:71
-msgid "/sep1"
-msgstr ""
-
-#: ../src/lxterminal.c:72
-msgid "/_Copy"
-msgstr "/_Kopieren"
-
-#: ../src/lxterminal.c:73
-msgid "/_Paste"
-msgstr "/E_infügen"
-
-#: ../src/lxterminal.c:74
-msgid "/sep2"
-msgstr ""
-
-#: ../src/lxterminal.c:75
-msgid "/_Preferences..."
-msgstr "/_Einstellungen..."
-
-#: ../src/lxterminal.c:76
-msgid "/sep3"
-msgstr ""
-
-#: ../src/lxterminal.c:77
-msgid "/_Close Tab"
-msgstr "/Reiter _schließen"
-
-#: ../src/lxterminal.c:319
-#: ../src/lxterminal.c:362
-#: ../src/lxterminal.c:388
-#: ../src/lxterminal.c:650
-#: ../src/lxterminal.c:671
-#: ../src/lxterminal.c:674
+#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:455
+#: ../src/lxterminal.c:481
+#: ../src/lxterminal.c:871
+#: ../src/lxterminal.c:897
+#: ../src/lxterminal.c:900
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:354
+#: ../src/lxterminal.c:447
 msgid "translator-credits"
-msgstr "Christoph Wickert <christoph.wickert@googlemail.de>"
-
-#: ../src/lxterminal.c:364
-msgid "Copyright (C) 2008"
 msgstr ""
+"Christoph Wickert <christoph.wickert@googlemail.de>\n"
+"Mario Blättermann <mario.blaettermann@t-online.de>"
 
-#: ../src/lxterminal.c:365
+#: ../src/lxterminal.c:457
+msgid "Copyright (C) 2008"
+msgstr "Copyright (C) 2008"
+
+#: ../src/lxterminal.c:458
 msgid "Terminal emulator for LXDE project"
-msgstr "Terminalemulator für das LXDE Projekt"
+msgstr "Terminal-Emulator für das LXDE Projekt"
 
-#: ../src/preferences.c:34
+#: ../src/preferences.c:41
 msgid "General"
 msgstr "Allgemein"
 
-#: ../src/preferences.c:54
+#. terminal font
+#: ../src/preferences.c:62
 msgid "Terminal Font:"
-msgstr "Terminal Schriftart:"
+msgstr "Terminal-Schriftart:"
+
+#. Select-by-word
+#: ../src/preferences.c:69
+msgid "Select-by-word characters:"
+msgstr "Zeichen für Auswahl nach Wort:"
+
+#. Background color
+#: ../src/preferences.c:77
+msgid "Background:"
+msgstr "Hintergrund:"
+
+#. Foreground color
+#: ../src/preferences.c:84
+msgid "Foreground:"
+msgstr "Vordergrund:"
+
+#. Scrollback buffer
+#: ../src/preferences.c:91
+msgid "Scrollback lines:"
+msgstr "Zeilen zurückrollen:"
+
+#. tab-panel position
+#: ../src/preferences.c:99
+msgid "Tab panel position:"
+msgstr "Position des Reiterpanels:"
+
+#: ../src/preferences.c:102
+msgid "Top"
+msgstr "Oben"
+
+#: ../src/preferences.c:103
+msgid "Bottom"
+msgstr "Unten"
+
+#: ../src/preferences.c:104
+msgid "Left"
+msgstr "Links"
+
+#: ../src/preferences.c:105
+msgid "Right"
+msgstr "Rechts"
 
 #. create window
-#: ../src/preferences.c:180
+#: ../src/preferences.c:260
 msgid "Preferences"
 msgstr "Einstellungen"
+
+#~ msgid "/_File/_New Window"
+#~ msgstr "/_Datei/Neues _Fenster"
+#~ msgid "/_File/_New Tab"
+#~ msgstr "/_Datei/Neuer _Reiter"
+#~ msgid "/_File/sep1"
+#~ msgstr "/_Datei/sep1"
+#~ msgid "/_File/_Close Tab"
+#~ msgstr "/_Datei/Reiter s_chließen"
+#~ msgid "/_File/_Quit"
+#~ msgstr "/_Datei/_Beenden"
+#~ msgid "/_Edit/_Copy"
+#~ msgstr "/_Bearbeiten/_Kopieren"
+#~ msgid "/_Edit/_Paste"
+#~ msgstr "/_Bearbeiten/E_infügen"
+#~ msgid "/_Edit/sep1"
+#~ msgstr "/_Bearbeiten/sep1"
+#~ msgid "/_Edit/_Preferences..."
+#~ msgstr "/_Bearbeiten/_Einstellungen ..."
+#~ msgid "/_Tabs/_Next Tab"
+#~ msgstr "/_Reiter/_Nächster Reiter"
+#~ msgid "/sep1"
+#~ msgstr "/sep1"
+#~ msgid "/sep2"
+#~ msgstr "/sep2"
+#~ msgid "/_Preferences..."
+#~ msgstr "/_Einstellungen ..."
+#~ msgid "/sep3"
+#~ msgstr "/sep3"
 
