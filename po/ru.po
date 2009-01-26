@@ -1,0 +1,157 @@
+# German translation for LXTerminal.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the LXTerminal package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lxterminal 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-11-15 22:41+0100\n"
+"PO-Revision-Date: 2009-01-25 22:52+0300\n"
+"Last-Translator: das-ich <das-ich@yandex.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/lxterminal.c:73
+msgid "/_File"
+msgstr "/_Файл"
+
+#: ../src/lxterminal.c:74
+msgid "/_File/_New Window"
+msgstr "/_Файл/Новое окно"
+
+#: ../src/lxterminal.c:75
+msgid "/_File/_New Tab"
+msgstr "/_Файл/Новая вкладка"
+
+#: ../src/lxterminal.c:76
+msgid "/_File/sep1"
+msgstr "/_Файл/sep1"
+
+#: ../src/lxterminal.c:77
+msgid "/_File/_Close Tab"
+msgstr "/_Файл/Закрыть вкладку"
+
+#: ../src/lxterminal.c:78
+msgid "/_File/_Quit"
+msgstr "/_Файл/_Выход"
+
+#: ../src/lxterminal.c:79
+msgid "/_Edit"
+msgstr "/_Правка"
+
+#: ../src/lxterminal.c:80
+msgid "/_Edit/_Copy"
+msgstr "/_Правка/_Копировать"
+
+#: ../src/lxterminal.c:81
+msgid "/_Edit/_Paste"
+msgstr "/_Правка/_Вставить"
+
+#: ../src/lxterminal.c:82
+msgid "/_Edit/sep1"
+msgstr "/_Правка/sep1"
+
+#: ../src/lxterminal.c:83
+msgid "/_Edit/_Preferences..."
+msgstr "/_Правка/_Настройка ..."
+
+#: ../src/lxterminal.c:84
+msgid "/_Tabs"
+msgstr "/_Вкладки"
+
+#: ../src/lxterminal.c:85
+msgid "/_Tabs/_Previous Tab"
+msgstr "/_Вкладки/_Предыдущая вкладка"
+
+#: ../src/lxterminal.c:86
+msgid "/_Tabs/_Next Tab"
+msgstr "/_Вкладки/_Следующая вкладка"
+
+#: ../src/lxterminal.c:87
+msgid "/_Help"
+msgstr "/_Помощь"
+
+#: ../src/lxterminal.c:88
+msgid "/_Help/_About"
+msgstr "/_Помощь/_О программе"
+
+#: ../src/lxterminal.c:93
+msgid "/_New Window"
+msgstr "/Новое окно"
+
+#: ../src/lxterminal.c:94
+msgid "/_New Tab"
+msgstr "/Новая вкладка"
+
+#: ../src/lxterminal.c:95
+msgid "/sep1"
+msgstr "/sep1"
+
+#: ../src/lxterminal.c:96
+msgid "/_Copy"
+msgstr "/_Копировать"
+
+#: ../src/lxterminal.c:97
+msgid "/_Paste"
+msgstr "/_Вставить"
+
+#: ../src/lxterminal.c:98
+msgid "/sep2"
+msgstr "/sep2"
+
+#: ../src/lxterminal.c:99
+msgid "/_Preferences..."
+msgstr "/_Настройки ..."
+
+#: ../src/lxterminal.c:100
+msgid "/sep3"
+msgstr "/sep3"
+
+#: ../src/lxterminal.c:101
+msgid "/_Close Tab"
+msgstr "/_Закрыть вкладки"
+
+#: ../src/lxterminal.c:343
+#: ../src/lxterminal.c:386
+#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:676
+#: ../src/lxterminal.c:697
+#: ../src/lxterminal.c:700
+msgid "LXTerminal"
+msgstr "LXТерминал"
+
+#. TRANSLATORS: Replace mw string with your names, one name per line.
+#: ../src/lxterminal.c:378
+msgid "translator-credits"
+msgstr "das-ich <das-ich@yandex.ru>"
+
+#: ../src/lxterminal.c:388
+msgid "Copyright (C) 2008"
+msgstr "Copyright (C) 2009"
+
+#: ../src/lxterminal.c:389
+msgid "Terminal emulator for LXDE project"
+msgstr "Эмулятор терминала для LXDE"
+
+#: ../src/preferences.c:34
+msgid "General"
+msgstr "Основные"
+
+#: ../src/preferences.c:54
+msgid "Terminal Font:"
+msgstr "Шрифт:"
+
+#: ../src/preferences.c:63
+msgid "Select-by-word characters:"
+msgstr ""
+
+#. create window
+#: ../src/preferences.c:194
+msgid "Preferences"
+msgstr "Настройки"
+
