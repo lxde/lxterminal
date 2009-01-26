@@ -1,2 +1,3 @@
+src/encoding.c
 src/lxterminal.c
 src/preferences.c

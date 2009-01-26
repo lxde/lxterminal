@@ -1,3 +1,11 @@
+2009-01-26 Og Maciel <ogmaciel@gnome.org>
+
+	* lxterminal.pot: Updated.
+	* POTFILES.in: Updated to include src/encoding.c.
+	* LINGUAS: Added with all available languages.
+	* pt.po: Renamed as there is no pt_PT.
+	* .po: Updated againt new pot file.
+
 2009-01-26  Ming-Ting Wei  <medicalwei@gmail.com>
 
 	* ar.po: Added Arabic translation

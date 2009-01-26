@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl_PL\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-04 23:59+0100\n"
+"POT-Creation-Date: 2009-01-26 12:51-0500\n"
 "PO-Revision-Date: 2009-01-10 21:02+0100\n"
 "Last-Translator: Grzegorz Gibas <amigib@gmail.com>\n"
 "Language-Team: Polish\n"
@@ -21,6 +21,156 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
+
+#: ../src/encoding.c:124
+msgid "West European"
+msgstr ""
+
+#: ../src/encoding.c:125
+msgid "East European"
+msgstr ""
+
+#: ../src/encoding.c:126
+msgid "East Asian"
+msgstr ""
+
+#: ../src/encoding.c:127
+msgid "SE & SW Asian"
+msgstr ""
+
+#: ../src/encoding.c:128
+msgid "Middle Eastern"
+msgstr ""
+
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+msgid "Unicode"
+msgstr ""
+
+#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
+msgid "Western"
+msgstr ""
+
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:208
+msgid "Central European"
+msgstr ""
+
+#: ../src/encoding.c:137
+msgid "South European"
+msgstr ""
+
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+msgid "Baltic"
+msgstr ""
+
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+msgid "Cyrillic"
+msgstr ""
+
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:214
+msgid "Arabic"
+msgstr ""
+
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+msgid "Greek"
+msgstr ""
+
+#: ../src/encoding.c:142
+msgid "Hebrew Visual"
+msgstr ""
+
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:213
+msgid "Hebrew"
+msgstr ""
+
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:212
+msgid "Turkish"
+msgstr ""
+
+#: ../src/encoding.c:145
+msgid "Nordic"
+msgstr ""
+
+#: ../src/encoding.c:147
+msgid "Celtic"
+msgstr ""
+
+#: ../src/encoding.c:149 ../src/encoding.c:198
+msgid "Romanian"
+msgstr ""
+
+#: ../src/encoding.c:157
+msgid "Armenian"
+msgstr ""
+
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+msgid "Chinese Traditional"
+msgstr ""
+
+#: ../src/encoding.c:160
+msgid "Cyrillic/Russian"
+msgstr ""
+
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+msgid "Japanese"
+msgstr ""
+
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:205
+msgid "Korean"
+msgstr ""
+
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:170
+msgid "Chinese Simplified"
+msgstr ""
+
+#: ../src/encoding.c:169
+msgid "Georgian"
+msgstr ""
+
+#: ../src/encoding.c:184 ../src/encoding.c:200
+msgid "Cyrillic/Ukrainian"
+msgstr ""
+
+#: ../src/encoding.c:188
+msgid "Croatian"
+msgstr ""
+
+#: ../src/encoding.c:190
+msgid "Hindi"
+msgstr ""
+
+#: ../src/encoding.c:191
+msgid "Farsi"
+msgstr ""
+
+#: ../src/encoding.c:193
+msgid "Gujarati"
+msgstr ""
+
+#: ../src/encoding.c:194
+msgid "Gurmukhi"
+msgstr ""
+
+#: ../src/encoding.c:196
+msgid "Icelandic"
+msgstr ""
+
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+msgid "Vietnamese"
+msgstr ""
+
+#: ../src/encoding.c:204
+msgid "Thai"
+msgstr ""
 
 #: ../src/lxterminal.c:108
 msgid "_File"
@@ -158,4 +308,3 @@ msgstr "Po prawej"
 #: ../src/preferences.c:260
 msgid "Preferences"
 msgstr "Ustawienia"
-
