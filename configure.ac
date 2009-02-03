@@ -24,7 +24,7 @@ GETTEXT_PACKAGE=lxterminal
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package.])
 
-ALL_LINGUAS="zh_TW de de_AT de_CH de_DE hu pt_BR zh_CN fi es et pt_PT sv it pl_PL eu ar ru"
+ALL_LINGUAS="zh_TW cs de de_AT de_CH de_DE hu pt_BR zh_CN fi es et pt_PT sv it pl_PL eu ar ru"
 AM_GLIB_GNU_GETTEXT
 
 AC_OUTPUT([
