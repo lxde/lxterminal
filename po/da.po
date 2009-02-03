@@ -1,19 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# German translation for LXTerminal.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the LXTerminal package.
+# Christoph Wickert <christoph.wickert@googlemail.de>, 2008.
+# Mario Blättermann <mario.blaettermann@t-online.de>, 2008.
 #
-#, fuzzy
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-03 01:15+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2009-01-28 06:55+0000\n"
+"Last-Translator: Vidar Jon Bauge <vidarjb@gmail.com>\n"
+"Language-Team: da\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/encoding.c:124
@@ -167,100 +168,113 @@ msgid "Thai"
 msgstr ""
 
 #: ../src/lxterminal.c:108
+#, fuzzy
 msgid "_File"
-msgstr ""
+msgstr "/_Fil"
 
 #: ../src/lxterminal.c:109
+#, fuzzy
 msgid "_Edit"
-msgstr ""
+msgstr "/_Rediger"
 
 #: ../src/lxterminal.c:110
 msgid "_View"
 msgstr ""
 
 #: ../src/lxterminal.c:111
+#, fuzzy
 msgid "_Tabs"
-msgstr ""
+msgstr "/_Tabs"
 
 #: ../src/lxterminal.c:112
+#, fuzzy
 msgid "_Help"
-msgstr ""
+msgstr "/_Hjælp"
 
 #: ../src/lxterminal.c:118 ../src/lxterminal.c:137
+#, fuzzy
 msgid "_New Window"
-msgstr ""
+msgstr "/_Nyt Vindue"
 
 #: ../src/lxterminal.c:119 ../src/lxterminal.c:138
+#, fuzzy
 msgid "_New Tab"
-msgstr ""
+msgstr "/_Ny Tab"
 
 #: ../src/lxterminal.c:121 ../src/lxterminal.c:145
+#, fuzzy
 msgid "_Close Tab"
-msgstr ""
+msgstr "/_Luk Tab"
 
 #: ../src/lxterminal.c:122
 msgid "_Quit"
 msgstr ""
 
 #: ../src/lxterminal.c:123 ../src/lxterminal.c:140
+#, fuzzy
 msgid "_Copy"
-msgstr ""
+msgstr "/_Kopier"
 
 #: ../src/lxterminal.c:124 ../src/lxterminal.c:141
+#, fuzzy
 msgid "_Paste"
-msgstr ""
+msgstr "/Sæt _Ind"
 
 #: ../src/lxterminal.c:126 ../src/lxterminal.c:143
+#, fuzzy
 msgid "_Preferences"
-msgstr ""
+msgstr "Indstillinger"
 
 #: ../src/lxterminal.c:127
 msgid "_Character Encoding"
 msgstr ""
 
 #: ../src/lxterminal.c:128
+#, fuzzy
 msgid "_Previous Tab"
-msgstr ""
+msgstr "/_Tabs/_Forrige Tab"
 
 #: ../src/lxterminal.c:129
+#, fuzzy
 msgid "_Next Tab"
-msgstr ""
+msgstr "/_Ny Tab"
 
 #: ../src/lxterminal.c:130
+#, fuzzy
 msgid "_About"
-msgstr ""
+msgstr "/_Hjælp/_Om\t"
 
 #: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
 #: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
 msgid "LXTerminal"
-msgstr ""
+msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
 #: ../src/lxterminal.c:447
 msgid "translator-credits"
-msgstr ""
+msgstr "Vidar Jon Bauge <vidarjb@gmail.com>"
 
 #: ../src/lxterminal.c:457
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Copyright (C) 2008"
 
 #: ../src/lxterminal.c:458
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "Terminal emulator for LXDE projektet"
 
 #: ../src/preferences.c:41
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #. terminal font
 #: ../src/preferences.c:62
 msgid "Terminal Font:"
-msgstr ""
+msgstr "Terminal Font:"
 
 #. Select-by-word
 #: ../src/preferences.c:69
 msgid "Select-by-word characters:"
-msgstr ""
+msgstr "Vælg-efter-ord tegn:"
 
 #. Background color
 #: ../src/preferences.c:77
@@ -301,4 +315,47 @@ msgstr ""
 #. create window
 #: ../src/preferences.c:260
 msgid "Preferences"
-msgstr ""
+msgstr "Indstillinger"
+
+#~ msgid "/_File/_New Window"
+#~ msgstr "/_Fil/_Nyt Vindue"
+
+#~ msgid "/_File/_New Tab"
+#~ msgstr "/_Fil/_Ny Tab"
+
+#~ msgid "/_File/sep1"
+#~ msgstr "/_Fil/sep1"
+
+#~ msgid "/_File/_Close Tab"
+#~ msgstr "/_Fil/Luk Tab"
+
+#~ msgid "/_File/_Quit"
+#~ msgstr "/_Fil/_Afslut"
+
+#~ msgid "/_Edit/_Copy"
+#~ msgstr "/_Rediger/_Kopier"
+
+#~ msgid "/_Edit/_Paste"
+#~ msgstr "/_Rediger/Sæt Ind"
+
+#~ msgid "/_Edit/sep1"
+#~ msgstr "/_Rediger/sep1"
+
+#~ msgid "/_Edit/_Preferences..."
+#~ msgstr "/_Rediger/Indstillinger..."
+
+#, fuzzy
+#~ msgid "/_Tabs/_Next Tab"
+#~ msgstr "/_Tabs/_Næste Tab"
+
+#~ msgid "/sep1"
+#~ msgstr "/sep1"
+
+#~ msgid "/sep2"
+#~ msgstr "/sep2"
+
+#~ msgid "/_Preferences..."
+#~ msgstr "/Indstilling_er ..."
+
+#~ msgid "/sep3"
+#~ msgstr "/sep3"
