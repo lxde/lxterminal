@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-26 12:51-0500\n"
+"POT-Creation-Date: 2009-02-09 03:05+0100\n"
 "PO-Revision-Date: 2009-02-03 01:01+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech\n"
@@ -36,27 +36,18 @@ msgstr "jihovýchodní a jihozápadní Asie"
 msgid "Middle Eastern"
 msgstr "Střední Východ"
 
-#: ../src/encoding.c:129
-#: ../src/encoding.c:151
-#: ../src/encoding.c:152
-#: ../src/encoding.c:153
-#: ../src/encoding.c:154
-#: ../src/encoding.c:155
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135
-#: ../src/encoding.c:148
-#: ../src/encoding.c:172
-#: ../src/encoding.c:197
-#: ../src/encoding.c:210
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
 msgstr "západní"
 
-#: ../src/encoding.c:136
-#: ../src/encoding.c:173
-#: ../src/encoding.c:187
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "středoevropské"
@@ -65,31 +56,21 @@ msgstr "středoevropské"
 msgid "South European"
 msgstr "jihoevropské"
 
-#: ../src/encoding.c:138
-#: ../src/encoding.c:146
-#: ../src/encoding.c:215
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
 msgstr "pobaltské"
 
-#: ../src/encoding.c:139
-#: ../src/encoding.c:174
-#: ../src/encoding.c:181
-#: ../src/encoding.c:183
-#: ../src/encoding.c:189
-#: ../src/encoding.c:209
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "cyrilice"
 
-#: ../src/encoding.c:140
-#: ../src/encoding.c:177
-#: ../src/encoding.c:186
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "arabské"
 
-#: ../src/encoding.c:141
-#: ../src/encoding.c:192
-#: ../src/encoding.c:211
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
 msgstr "řecké"
 
@@ -97,16 +78,12 @@ msgstr "řecké"
 msgid "Hebrew Visual"
 msgstr "hebrejské vizuální"
 
-#: ../src/encoding.c:143
-#: ../src/encoding.c:176
-#: ../src/encoding.c:195
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "hebrejské"
 
-#: ../src/encoding.c:144
-#: ../src/encoding.c:175
-#: ../src/encoding.c:199
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "turecké"
@@ -119,8 +96,7 @@ msgstr "skandinávské"
 msgid "Celtic"
 msgstr "keltské"
 
-#: ../src/encoding.c:149
-#: ../src/encoding.c:198
+#: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
 msgstr "rumunské"
 
@@ -128,9 +104,7 @@ msgstr "rumunské"
 msgid "Armenian"
 msgstr "arménské"
 
-#: ../src/encoding.c:158
-#: ../src/encoding.c:159
-#: ../src/encoding.c:164
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "tradiční čínské"
 
@@ -138,22 +112,16 @@ msgstr "tradiční čínské"
 msgid "Cyrillic/Russian"
 msgstr "ruská cyrilice"
 
-#: ../src/encoding.c:162
-#: ../src/encoding.c:179
-#: ../src/encoding.c:202
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
 msgstr "japonské"
 
-#: ../src/encoding.c:163
-#: ../src/encoding.c:180
-#: ../src/encoding.c:182
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "korejské"
 
-#: ../src/encoding.c:166
-#: ../src/encoding.c:167
-#: ../src/encoding.c:168
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "zjednodušená čínština"
@@ -162,8 +130,7 @@ msgstr "zjednodušená čínština"
 msgid "Georgian"
 msgstr "gruzínské"
 
-#: ../src/encoding.c:184
-#: ../src/encoding.c:200
+#: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "ukrajinská cyrilice"
 
@@ -191,9 +158,7 @@ msgstr "gurmuchština"
 msgid "Icelandic"
 msgstr "islandské"
 
-#: ../src/encoding.c:203
-#: ../src/encoding.c:206
-#: ../src/encoding.c:216
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "vietnamské"
 
@@ -221,18 +186,15 @@ msgstr "_Karty"
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/lxterminal.c:118
-#: ../src/lxterminal.c:137
+#: ../src/lxterminal.c:118 ../src/lxterminal.c:137
 msgid "_New Window"
 msgstr "_Nové okno"
 
-#: ../src/lxterminal.c:119
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:119 ../src/lxterminal.c:138
 msgid "_New Tab"
 msgstr "_Nový panel"
 
-#: ../src/lxterminal.c:121
-#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:121 ../src/lxterminal.c:145
 msgid "_Close Tab"
 msgstr "_Zavřít panel"
 
@@ -240,18 +202,15 @@ msgstr "_Zavřít panel"
 msgid "_Quit"
 msgstr "_Ukončit"
 
-#: ../src/lxterminal.c:123
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:123 ../src/lxterminal.c:140
 msgid "_Copy"
 msgstr "_Kopírovat"
 
-#: ../src/lxterminal.c:124
-#: ../src/lxterminal.c:141
+#: ../src/lxterminal.c:124 ../src/lxterminal.c:141
 msgid "_Paste"
 msgstr "_Vložit"
 
-#: ../src/lxterminal.c:126
-#: ../src/lxterminal.c:143
+#: ../src/lxterminal.c:126 ../src/lxterminal.c:143
 msgid "_Preferences"
 msgstr "_Předvolby"
 
@@ -271,12 +230,8 @@ msgstr "_Další karta"
 msgid "_About"
 msgstr "_O aplikaci"
 
-#: ../src/lxterminal.c:412
-#: ../src/lxterminal.c:455
-#: ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871
-#: ../src/lxterminal.c:897
-#: ../src/lxterminal.c:900
+#: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -347,4 +302,3 @@ msgstr "Vpravo"
 #: ../src/preferences.c:260
 msgid "Preferences"
 msgstr "Předvolby"
-

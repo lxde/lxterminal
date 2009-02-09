@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-29 19:49+0200\n"
+"POT-Creation-Date: 2009-02-09 03:05+0100\n"
 "PO-Revision-Date: 2009-01-29 19:54+0200\n"
 "Last-Translator: Elias Julkunen <elias.julkunen@gmail.com>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -35,27 +35,18 @@ msgstr ""
 msgid "Middle Eastern"
 msgstr ""
 
-#: ../src/encoding.c:129
-#: ../src/encoding.c:151
-#: ../src/encoding.c:152
-#: ../src/encoding.c:153
-#: ../src/encoding.c:154
-#: ../src/encoding.c:155
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
 msgstr ""
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135
-#: ../src/encoding.c:148
-#: ../src/encoding.c:172
-#: ../src/encoding.c:197
-#: ../src/encoding.c:210
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
 msgstr ""
 
-#: ../src/encoding.c:136
-#: ../src/encoding.c:173
-#: ../src/encoding.c:187
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr ""
@@ -64,31 +55,21 @@ msgstr ""
 msgid "South European"
 msgstr ""
 
-#: ../src/encoding.c:138
-#: ../src/encoding.c:146
-#: ../src/encoding.c:215
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
 msgstr ""
 
-#: ../src/encoding.c:139
-#: ../src/encoding.c:174
-#: ../src/encoding.c:181
-#: ../src/encoding.c:183
-#: ../src/encoding.c:189
-#: ../src/encoding.c:209
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr ""
 
-#: ../src/encoding.c:140
-#: ../src/encoding.c:177
-#: ../src/encoding.c:186
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr ""
 
-#: ../src/encoding.c:141
-#: ../src/encoding.c:192
-#: ../src/encoding.c:211
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
 msgstr ""
 
@@ -96,16 +77,12 @@ msgstr ""
 msgid "Hebrew Visual"
 msgstr ""
 
-#: ../src/encoding.c:143
-#: ../src/encoding.c:176
-#: ../src/encoding.c:195
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr ""
 
-#: ../src/encoding.c:144
-#: ../src/encoding.c:175
-#: ../src/encoding.c:199
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr ""
@@ -118,8 +95,7 @@ msgstr ""
 msgid "Celtic"
 msgstr ""
 
-#: ../src/encoding.c:149
-#: ../src/encoding.c:198
+#: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
 msgstr ""
 
@@ -127,9 +103,7 @@ msgstr ""
 msgid "Armenian"
 msgstr ""
 
-#: ../src/encoding.c:158
-#: ../src/encoding.c:159
-#: ../src/encoding.c:164
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr ""
 
@@ -137,22 +111,16 @@ msgstr ""
 msgid "Cyrillic/Russian"
 msgstr ""
 
-#: ../src/encoding.c:162
-#: ../src/encoding.c:179
-#: ../src/encoding.c:202
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
 msgstr ""
 
-#: ../src/encoding.c:163
-#: ../src/encoding.c:180
-#: ../src/encoding.c:182
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr ""
 
-#: ../src/encoding.c:166
-#: ../src/encoding.c:167
-#: ../src/encoding.c:168
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr ""
@@ -161,8 +129,7 @@ msgstr ""
 msgid "Georgian"
 msgstr ""
 
-#: ../src/encoding.c:184
-#: ../src/encoding.c:200
+#: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr ""
 
@@ -190,9 +157,7 @@ msgstr ""
 msgid "Icelandic"
 msgstr ""
 
-#: ../src/encoding.c:203
-#: ../src/encoding.c:206
-#: ../src/encoding.c:216
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr ""
 
@@ -220,18 +185,15 @@ msgstr "_Välilehdet"
 msgid "_Help"
 msgstr "_Ohje"
 
-#: ../src/lxterminal.c:118
-#: ../src/lxterminal.c:137
+#: ../src/lxterminal.c:118 ../src/lxterminal.c:137
 msgid "_New Window"
 msgstr "_Uusi ikkuna"
 
-#: ../src/lxterminal.c:119
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:119 ../src/lxterminal.c:138
 msgid "_New Tab"
 msgstr "Uusi _välilehti"
 
-#: ../src/lxterminal.c:121
-#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:121 ../src/lxterminal.c:145
 msgid "_Close Tab"
 msgstr "_Sulje välilehti"
 
@@ -239,18 +201,15 @@ msgstr "_Sulje välilehti"
 msgid "_Quit"
 msgstr "_Poistu"
 
-#: ../src/lxterminal.c:123
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:123 ../src/lxterminal.c:140
 msgid "_Copy"
 msgstr "_Kopioi"
 
-#: ../src/lxterminal.c:124
-#: ../src/lxterminal.c:141
+#: ../src/lxterminal.c:124 ../src/lxterminal.c:141
 msgid "_Paste"
 msgstr "_Liitä"
 
-#: ../src/lxterminal.c:126
-#: ../src/lxterminal.c:143
+#: ../src/lxterminal.c:126 ../src/lxterminal.c:143
 msgid "_Preferences"
 msgstr "_Asetukset"
 
@@ -270,12 +229,8 @@ msgstr "_Seuraava välilehti"
 msgid "_About"
 msgstr "_Tietoja"
 
-#: ../src/lxterminal.c:412
-#: ../src/lxterminal.c:455
-#: ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871
-#: ../src/lxterminal.c:897
-#: ../src/lxterminal.c:900
+#: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -346,4 +301,3 @@ msgstr "Oikealla"
 #: ../src/preferences.c:260
 msgid "Preferences"
 msgstr "Asetukset"
-
