@@ -1,0 +1,190 @@
+# Japanese translations for lxterminal package
+# lxterminal パッケージに対する日本語訳.
+# Copyright (C) 2008, 2009 THE lxterminal'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the lxterminal package.
+# Hironao Komatsu <hironao@users.sourceforge.net>, 2008, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lxterminal 0.1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-12 22:47+0900\n"
+"PO-Revision-Date: 2009-01-12 22:52+0900\n"
+"Last-Translator: Hironao Komatsu <hironao@users.sourceforge.net>\n"
+"Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/lxterminal.c:70
+msgid "/_File"
+msgstr "/ファイル(_F)"
+
+#: ../src/lxterminal.c:71
+msgid "/_File/_New Window"
+msgstr "/ファイル(_F)/新規ウィンドウ(_N)"
+
+#: ../src/lxterminal.c:72
+msgid "/_File/_New Tab"
+msgstr "/ファイル(_F)/新規タブ(_N)"
+
+#: ../src/lxterminal.c:73
+msgid "/_File/sep1"
+msgstr "/ファイル(_F)/sep1"
+
+#: ../src/lxterminal.c:74
+msgid "/_File/_Close Tab"
+msgstr "/ファイル(_F)/タブを閉じる(_C)"
+
+#: ../src/lxterminal.c:75
+msgid "/_File/_Quit"
+msgstr "/ファイル(_F)/終了(_Q)"
+
+#: ../src/lxterminal.c:76
+msgid "/_Edit"
+msgstr "/編集(_E)"
+
+#: ../src/lxterminal.c:77
+msgid "/_Edit/_Copy"
+msgstr "/編集(_E)/コピー(_C)"
+
+#: ../src/lxterminal.c:78
+msgid "/_Edit/_Paste"
+msgstr "/編集(_E)/貼り付け(_P)"
+
+#: ../src/lxterminal.c:79
+msgid "/_Edit/sep1"
+msgstr "/編集(_E)/sep1"
+
+#: ../src/lxterminal.c:80
+msgid "/_Edit/_Preferences..."
+msgstr "/編集(_E)/設定(_P)"
+
+#: ../src/lxterminal.c:81
+msgid "/_Tabs"
+msgstr "/タブ(_T)"
+
+#: ../src/lxterminal.c:82
+msgid "/_Tabs/_Previous Tab"
+msgstr "/タブ(_T)/前のタブ(_P)"
+
+#: ../src/lxterminal.c:83
+msgid "/_Tabs/_Next Tab"
+msgstr "/タブ(_T)/次のタブ(_N)"
+
+#: ../src/lxterminal.c:84
+msgid "/_Help"
+msgstr "/ヘルプ(_H)"
+
+#: ../src/lxterminal.c:85
+msgid "/_Help/_About"
+msgstr "/ヘルプ(_H)/情報(_A)"
+
+#: ../src/lxterminal.c:90
+msgid "/_New Window"
+msgstr "/新規ウィンドウ(_N)"
+
+#: ../src/lxterminal.c:91
+msgid "/_New Tab"
+msgstr "/新規タブ(_N)"
+
+#: ../src/lxterminal.c:92
+msgid "/sep1"
+msgstr "/sep1"
+
+#: ../src/lxterminal.c:93
+msgid "/_Copy"
+msgstr "/コピー(_C)"
+
+#: ../src/lxterminal.c:94
+msgid "/_Paste"
+msgstr "/貼り付け(_P)"
+
+#: ../src/lxterminal.c:95
+msgid "/sep2"
+msgstr "/sep2"
+
+#: ../src/lxterminal.c:96
+msgid "/_Preferences..."
+msgstr "/設定(_P)"
+
+#: ../src/lxterminal.c:97
+msgid "/sep3"
+msgstr "/sep3"
+
+#: ../src/lxterminal.c:98
+msgid "/_Close Tab"
+msgstr "/タブを閉じる(_T)"
+
+#: ../src/lxterminal.c:340 ../src/lxterminal.c:383 ../src/lxterminal.c:409
+#: ../src/lxterminal.c:689 ../src/lxterminal.c:715 ../src/lxterminal.c:718
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#. TRANSLATORS: Replace mw string with your names, one name per line.
+#: ../src/lxterminal.c:375
+msgid "translator-credits"
+msgstr "Hironao Komatsu <hironao@users.sourceforge.net>"
+
+#: ../src/lxterminal.c:385
+msgid "Copyright (C) 2008"
+msgstr "Copyright (C) 2008"
+
+#: ../src/lxterminal.c:386
+msgid "Terminal emulator for LXDE project"
+msgstr "LXDEプロジェクトのための端末エミュレータ"
+
+#: ../src/preferences.c:41
+msgid "General"
+msgstr "一般"
+
+#. terminal font
+#: ../src/preferences.c:62
+msgid "Terminal Font:"
+msgstr "端末のフォント:"
+
+#. Select-by-word
+#: ../src/preferences.c:69
+msgid "Select-by-word characters:"
+msgstr "選択時に語に含まれる文字:"
+
+#. Background color
+#: ../src/preferences.c:77
+msgid "Background:"
+msgstr "背景色:"
+
+#. Foreground color
+#: ../src/preferences.c:84
+msgid "Foreground:"
+msgstr "前景色:"
+
+#. Scrollback buffer
+#: ../src/preferences.c:91
+msgid "Scrollback lines:"
+msgstr "履歴の行数:"
+
+#: ../src/preferences.c:100
+msgid "Tab panel position:"
+msgstr "タブの位置:"
+
+#: ../src/preferences.c:102
+msgid "Top"
+msgstr "上"
+
+#: ../src/preferences.c:103
+msgid "Bottom"
+msgstr "下"
+
+#: ../src/preferences.c:104
+msgid "Left"
+msgstr "左"
+
+#: ../src/preferences.c:105
+msgid "Right"
+msgstr "右"
+
+#. create window
+#: ../src/preferences.c:259
+msgid "Preferences"
+msgstr "設定"
