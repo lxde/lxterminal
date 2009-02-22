@@ -1,304 +1,349 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Slovak translation of lxterminal
+# Copyright (C) 2006 lxde team
+# This file is distributed under the same license as the lxterminal package.
+# Ivan MasÃ¡r <helix84@centrum.sk>, 2009.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-09 03:05+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2009-02-13 15:59+0100\n"
+"Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Západoeurópske"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Východoeurópske"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Východoázijské"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "Juhoázijské"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Stredný východ"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Západné"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Stredná Európa"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Južná Európa"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Pobaltské"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Azbuka"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Arabské"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Grécke"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Hebrejské vizuálne"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebrejské"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Turecké"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr ""
+msgstr "Nordické"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Keltské"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Rumunské"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Arménske"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Čínske (tradičná)"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Azbuka/ruské"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Japonské"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Kórejské"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Čínske (zjednodušená)"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Gruzínske"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Akzbuka/ukrajinské"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Chorvátske"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Hindské"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Perzské"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Guadžarátske"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Islandské"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamské"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Thajské"
 
 #: ../src/lxterminal.c:108
 msgid "_File"
-msgstr ""
+msgstr "_Súbor"
 
 #: ../src/lxterminal.c:109
 msgid "_Edit"
-msgstr ""
+msgstr "_Upraviť"
 
 #: ../src/lxterminal.c:110
 msgid "_View"
-msgstr ""
+msgstr "_Zobraziť"
 
 #: ../src/lxterminal.c:111
 msgid "_Tabs"
-msgstr ""
+msgstr "_Karty"
 
 #: ../src/lxterminal.c:112
 msgid "_Help"
-msgstr ""
+msgstr "_Pomocník"
 
-#: ../src/lxterminal.c:118 ../src/lxterminal.c:137
+#: ../src/lxterminal.c:118
+#: ../src/lxterminal.c:137
 msgid "_New Window"
-msgstr ""
+msgstr "_Nové okno"
 
-#: ../src/lxterminal.c:119 ../src/lxterminal.c:138
+#: ../src/lxterminal.c:119
+#: ../src/lxterminal.c:138
 msgid "_New Tab"
-msgstr ""
+msgstr "_Nová karta"
 
-#: ../src/lxterminal.c:121 ../src/lxterminal.c:145
+#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:145
 msgid "_Close Tab"
-msgstr ""
+msgstr "_Zatvoriť kartu"
 
 #: ../src/lxterminal.c:122
 msgid "_Quit"
-msgstr ""
+msgstr "_Ukončiť"
 
-#: ../src/lxterminal.c:123 ../src/lxterminal.c:140
+#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:140
 msgid "_Copy"
-msgstr ""
+msgstr "_Kopírovať"
 
-#: ../src/lxterminal.c:124 ../src/lxterminal.c:141
+#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:141
 msgid "_Paste"
-msgstr ""
+msgstr "_Vložiť"
 
-#: ../src/lxterminal.c:126 ../src/lxterminal.c:143
+#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:143
 msgid "_Preferences"
-msgstr ""
+msgstr "_Nastavenia"
 
 #: ../src/lxterminal.c:127
 msgid "_Character Encoding"
-msgstr ""
+msgstr "_Kódovanie znakov"
 
 #: ../src/lxterminal.c:128
 msgid "_Previous Tab"
-msgstr ""
+msgstr "_Predošlá karta"
 
 #: ../src/lxterminal.c:129
 msgid "_Next Tab"
-msgstr ""
+msgstr "_Nasledovná karta"
 
 #: ../src/lxterminal.c:130
 msgid "_About"
-msgstr ""
+msgstr "O _aplikácii"
 
-#: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
+#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:455
+#: ../src/lxterminal.c:481
+#: ../src/lxterminal.c:871
+#: ../src/lxterminal.c:897
+#: ../src/lxterminal.c:900
 msgid "LXTerminal"
-msgstr ""
+msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
 #: ../src/lxterminal.c:447
 msgid "translator-credits"
-msgstr ""
+msgstr "Ivan Masár <helix84@centrum.sk>"
 
 #: ../src/lxterminal.c:457
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Copyright (C) 2008"
 
 #: ../src/lxterminal.c:458
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "Emulátor terminálu pre projekt LXDE"
 
 #: ../src/preferences.c:41
 msgid "General"
-msgstr ""
+msgstr "Všeobecné"
 
 #. terminal font
 #: ../src/preferences.c:62
 msgid "Terminal Font:"
-msgstr ""
+msgstr "Písmo terminálu:"
 
 #. Select-by-word
 #: ../src/preferences.c:69
 msgid "Select-by-word characters:"
-msgstr ""
+msgstr "Znaky na výber po slovách:"
 
 #. Background color
 #: ../src/preferences.c:77
 msgid "Background:"
-msgstr ""
+msgstr "Pozadie:"
 
 #. Foreground color
 #: ../src/preferences.c:84
 msgid "Foreground:"
-msgstr ""
+msgstr "Popredie:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:91
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Pamäť riadkov:"
 
 #. tab-panel position
 #: ../src/preferences.c:99
 msgid "Tab panel position:"
-msgstr ""
+msgstr "Umiestnenie panelu kariet:"
 
 #: ../src/preferences.c:102
 msgid "Top"
-msgstr ""
+msgstr "Hore"
 
 #: ../src/preferences.c:103
 msgid "Bottom"
-msgstr ""
+msgstr "Dolu"
 
 #: ../src/preferences.c:104
 msgid "Left"
-msgstr ""
+msgstr "Vľavo"
 
 #: ../src/preferences.c:105
 msgid "Right"
-msgstr ""
+msgstr "Vpravo"
 
 #. create window
 #: ../src/preferences.c:260
 msgid "Preferences"
-msgstr ""
+msgstr "Nastavenia"
+
