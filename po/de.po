@@ -9,164 +9,166 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-09 03:05+0100\n"
-"PO-Revision-Date: 2009-01-25 17:08+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"PO-Revision-Date: 2009-02-25 01:23+0100\n"
+"Last-Translator: Christoph Wickert <christoph.wickert@googlemail.com>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Westeuropäisch"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Osteuropäisch"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Ostasiatisch"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "Südost- & Südwestasiatisch"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Nahöstlich"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Westlich"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Zentraleuropäisch"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Südeuropäisch"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Baltisch"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Kyrillisch"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Arabisch"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Griechisch"
 
+# Ist "visuell" richtig?
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Hebräisch visuell"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebräisch"
 
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Türkisch"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr ""
+msgstr "Nordisch"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Keltisch"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Rumänisch"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Armenisch"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Chinesisch traditionell"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Kyrillisch/Russisch"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Japanisch"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Koreanisch"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Chinesisch vereinfacht"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Georgisch"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Kyrillisch/Ukrainisch"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Kroatisch"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Persisch (Farsi)"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Isländisch"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamesisch"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Thailändisch"
 
 #: ../src/lxterminal.c:108
 msgid "_File"
