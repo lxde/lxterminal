@@ -1,304 +1,403 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-13 08:45-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2008-08-15 04:17+0800\n"
+"PO-Revision-Date: 2009-03-04 22:41+0100\n"
+"Last-Translator: Y P <yupadmin@gmail.com>\n"
+"Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Західноєвропейське"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Східноєвропейське"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Східноазіатське"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "ПС та ПЗ Азія"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Середній Схід"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Західне"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Центральноєвропейське"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Південноєвропейське"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Балтійске"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Кирилиця"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Арабське"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Грецьке"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Візуальний Іврит"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Іврит"
 
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Турецьке"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr ""
+msgstr "Скандінавське"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Кельтське"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Південноєвропейське"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Вірменське"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Традиційне китайське"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Кирилиця/Росія"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Японське"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Корейське"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Спрощене китайське"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Грузинське"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Кирилиця/Україна"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Хорватське"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Хінді"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Фарсі"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Гуяраті"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Гурмухі"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Ісладське"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "В’єтнамське"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Тайське"
 
 #: ../src/lxterminal.c:108
 msgid "_File"
-msgstr ""
+msgstr "_Файл"
 
 #: ../src/lxterminal.c:109
 msgid "_Edit"
-msgstr ""
+msgstr "_Редагувати"
 
 #: ../src/lxterminal.c:110
 msgid "_View"
-msgstr ""
+msgstr "_Вигляд"
 
 #: ../src/lxterminal.c:111
 msgid "_Tabs"
-msgstr ""
+msgstr "_Вкладки"
 
 #: ../src/lxterminal.c:112
 msgid "_Help"
-msgstr ""
+msgstr "_Допомога"
 
 #: ../src/lxterminal.c:118 ../src/lxterminal.c:137
 msgid "_New Window"
-msgstr ""
+msgstr "_Нове вікно"
 
 #: ../src/lxterminal.c:119 ../src/lxterminal.c:138
 msgid "_New Tab"
-msgstr ""
+msgstr "_Нова вкладка"
 
 #: ../src/lxterminal.c:121 ../src/lxterminal.c:145
 msgid "_Close Tab"
-msgstr ""
+msgstr "_Закрити вкладку"
 
 #: ../src/lxterminal.c:122
 msgid "_Quit"
-msgstr ""
+msgstr "_Вийти"
 
 #: ../src/lxterminal.c:123 ../src/lxterminal.c:140
 msgid "_Copy"
-msgstr ""
+msgstr "_Копіювати"
 
 #: ../src/lxterminal.c:124 ../src/lxterminal.c:141
 msgid "_Paste"
-msgstr ""
+msgstr "_Вставити"
 
 #: ../src/lxterminal.c:126 ../src/lxterminal.c:143
 msgid "_Preferences"
-msgstr ""
+msgstr "_Налаштування"
 
 #: ../src/lxterminal.c:127
 msgid "_Character Encoding"
-msgstr ""
+msgstr "_Кодування символів"
 
 #: ../src/lxterminal.c:128
 msgid "_Previous Tab"
-msgstr ""
+msgstr "_Попередня вкладка"
 
 #: ../src/lxterminal.c:129
 msgid "_Next Tab"
-msgstr ""
+msgstr "_Наступна вкладка"
 
 #: ../src/lxterminal.c:130
 msgid "_About"
-msgstr ""
+msgstr "_Про"
 
-#: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
+#: ../src/lxterminal.c:319
+#: ../src/lxterminal.c:362
+#: ../src/lxterminal.c:388
+#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:671
+#: ../src/lxterminal.c:674
 msgid "LXTerminal"
-msgstr ""
+msgstr "LX-термінал"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:447
+#: ../src/lxterminal.c:354
 msgid "translator-credits"
-msgstr ""
+msgstr "Yarema aka Knedlyk <yupadmin@gmail.com>"
 
-#: ../src/lxterminal.c:457
+#: ../src/lxterminal.c:364
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:458
+#: ../src/lxterminal.c:365
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "Емулятор терміналу для проекту LXDE"
 
-#: ../src/preferences.c:41
+#: ../src/preferences.c:34
 msgid "General"
-msgstr ""
+msgstr "Загальне"
 
 #. terminal font
-#: ../src/preferences.c:62
+#: ../src/preferences.c:54
 msgid "Terminal Font:"
-msgstr ""
+msgstr "Фонти терміналу:"
 
 #. Select-by-word
 #: ../src/preferences.c:69
 msgid "Select-by-word characters:"
-msgstr ""
+msgstr "Помітити-за-словом символи:"
 
 #. Background color
 #: ../src/preferences.c:77
 msgid "Background:"
-msgstr ""
+msgstr "Тло:"
 
 #. Foreground color
 #: ../src/preferences.c:84
 msgid "Foreground:"
-msgstr ""
+msgstr "Передній план:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:91
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Лінії прокрутки:"
 
 #. tab-panel position
 #: ../src/preferences.c:99
 msgid "Tab panel position:"
-msgstr ""
+msgstr "Позиція панелі вкладок:"
 
 #: ../src/preferences.c:102
 msgid "Top"
-msgstr ""
+msgstr "Вверху"
 
 #: ../src/preferences.c:103
 msgid "Bottom"
-msgstr ""
+msgstr "Внизу"
 
 #: ../src/preferences.c:104
 msgid "Left"
-msgstr ""
+msgstr "Зліва"
 
 #: ../src/preferences.c:105
 msgid "Right"
-msgstr ""
+msgstr "Справа"
 
 #. create window
-#: ../src/preferences.c:260
+#: ../src/preferences.c:180
 msgid "Preferences"
-msgstr ""
+msgstr "Налаштування"
+
+#: ../src/lxterminal.c:49
+msgid "/_File"
+msgstr "/_Файл"
+
+#: ../src/lxterminal.c:50
+msgid "/_File/_New Window"
+msgstr "/_Файл/Нове _вікно"
+
+#: ../src/lxterminal.c:51
+msgid "/_File/_New Tab"
+msgstr "/_Файл/_Нова вкладка"
+
+#: ../src/lxterminal.c:52
+msgid "/_File/sep1"
+msgstr "/_Файл/sep1"
+
+#: ../src/lxterminal.c:53
+msgid "/_File/_Close Tab"
+msgstr "/_Файл/_Закрити вкладку"
+
+#: ../src/lxterminal.c:54
+msgid "/_File/_Quit"
+msgstr "/_Файл/За_крити"
+
+#: ../src/lxterminal.c:55
+msgid "/_Edit"
+msgstr "/_Редагувати"
+
+#: ../src/lxterminal.c:56
+msgid "/_Edit/_Copy"
+msgstr "/_Редагувати/_Копіювати"
+
+#: ../src/lxterminal.c:57
+msgid "/_Edit/_Paste"
+msgstr "/_Редагувати/_Вставити"
+
+#: ../src/lxterminal.c:58
+msgid "/_Edit/sep1"
+msgstr "/_Редагувати/sep1"
+
+#: ../src/lxterminal.c:59
+msgid "/_Edit/_Preferences..."
+msgstr "/_Редагувати/_Налаштування..."
+
+#: ../src/lxterminal.c:60
+msgid "/_Tabs"
+msgstr "/_Вкладки"
+
+#: ../src/lxterminal.c:61
+msgid "/_Tabs/_Previous Tab"
+msgstr "/_Вкладки/_Попередня вкладка"
+
+#: ../src/lxterminal.c:62
+msgid "/_Tabs/_Next Tab"
+msgstr "/_Вкладки/_Наступна вкладка"
+
+#: ../src/lxterminal.c:63
+msgid "/_Help"
+msgstr "/_Допомога"
+
+#: ../src/lxterminal.c:64
+msgid "/_Help/_About"
+msgstr "/_Допомога/_Інформація"
+
+#: ../src/lxterminal.c:69
+msgid "/_New Window"
+msgstr "/Нове _вікно"
+
+#: ../src/lxterminal.c:70
+msgid "/_New Tab"
+msgstr "/Нова в_кладка"
+
+#: ../src/lxterminal.c:71
+msgid "/sep1"
+msgstr "/Переділ1"
+
+#: ../src/lxterminal.c:72
+msgid "/_Copy"
+msgstr "/_Копіювати"
+
+#: ../src/lxterminal.c:73
+msgid "/_Paste"
+msgstr "/В_ставити"
+
+#: ../src/lxterminal.c:74
+msgid "/sep2"
+msgstr "/Переділ2"
+
+#: ../src/lxterminal.c:75
+msgid "/_Preferences..."
+msgstr "/_Налаштування..."
+
+#: ../src/lxterminal.c:76
+msgid "/sep3"
+msgstr "/Переділ3"
+
+#: ../src/lxterminal.c:77
+msgid "/_Close Tab"
+msgstr "/_Закрити вкладку"
