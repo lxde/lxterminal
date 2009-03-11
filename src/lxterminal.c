@@ -625,6 +625,13 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
 	vte_terminal_set_emulation((VteTerminal *)term->vte, "xterm");
 
+	/* fixing bugs for specific environment */
+	vte_terminal_set_backspace_binding((VteTerminal *)term->vte, VTE_ERASE_ASCII_DELETE);
+	vte_terminal_set_delete_binding((VteTerminal *)term->vte, VTE_ERASE_DELETE_SEQUENCE);
+
+	/* disable beeping */
+	vte_terminal_set_audible_bell((VteTerminal *)term->vte, FALSE);
+
 	if (!gdk_color_parse(terminal->setting->bgcolor, &terminal->background)) {
 		terminal->background = (GdkColor){ 0, 0, 0, 0 };
 		printf("Bad bgcolor string in config: %s\n", terminal->setting->bgcolor);
