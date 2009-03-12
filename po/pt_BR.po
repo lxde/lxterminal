@@ -1,5 +1,5 @@
-# Brazilian Portuguese translation for LXTerminal.
-# Copyright (C) 2008-2009.
+# Brazilian Portuguese translation for LXTerminal package.
+# Copyright (C) 2008-2009 The LXTerminal authors.
 # This file is distributed under the same license as the lxterminal package.
 # Fábio Antunes <nospam@emal.com>, 2008.
 # Og Maciel <ogmaciel@gnome.org>, 2009.
@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-13 08:45-0500\n"
-"PO-Revision-Date: 2009-02-13 09:09-0500\n"
+"PO-Revision-Date: 2009-03-12 01:50-0300\n"
 "Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
-"Language-Team: pt_BR <LL@li.org>\n"
+"Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -289,7 +289,7 @@ msgstr "Fábio Antunes <nospam@emal.com>\n"
 
 #: ../src/lxterminal.c:457
 msgid "Copyright (C) 2008"
-msgstr "Direitos autorais (C) 2008"
+msgstr "Copyright (C) 2008"
 
 #: ../src/lxterminal.c:458
 msgid "Terminal emulator for LXDE project"
