@@ -66,53 +66,20 @@ static gchar helpmsg[] = {
 	"  --working-directory=DIRECTOR     Set the terminal's working directory\n"
 	"  --geometry=GEOMETRY              X geometry specification (see \"X\" man page), can be specified once per window to be opened.\n"
 };
-/*
-static GtkItemFactoryEntry menu_items[] =
-{
-	{ N_("/_File"), NULL, NULL, 0, "<Branch>" },
-	{ N_("/_File/_New Window"), NEW_WINDOW_ACCEL, terminal_newwindow, 1, "<StockItem>", GTK_STOCK_ADD },
-	{ N_("/_File/_New Tab"), NEW_TAB_ACCEL, terminal_newtab, 1, "<StockItem>", GTK_STOCK_ADD },
-	{ N_("/_File/sep1"), NULL, NULL, 0, "<Separator>" },
-	{ N_("/_File/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE },
-	{ N_("/_File/_Quit"), QUIT_ACCEL, gtk_main_quit, 0, "<StockItem>", GTK_STOCK_QUIT },
-	{ N_("/_Edit"), NULL, NULL, 0, "<Branch>" },
-	{ N_("/_Edit/_Copy"), COPY_ACCEL, terminal_copy, 0, "<StockItem>", GTK_STOCK_COPY },
-	{ N_("/_Edit/_Paste"), PASTE_ACCEL, terminal_paste, 0, "<StockItem>", GTK_STOCK_PASTE },
-	{ N_("/_Edit/sep1"), NULL, NULL, 0, "<Separator>" },
-	{ N_("/_Edit/_Preferences..."), NULL, lxterminal_preferences_dialog, 0, "<StockItem>", GTK_STOCK_EXECUTE },
-	{ N_("/_Tabs"), NULL, NULL, 0, "<Branch>" },
-	{ N_("/_Tabs/_Previous Tab"), PREVIOUS_TAB_ACCEL, terminal_prevtab, 1, "<Item>"},
-	{ N_("/_Tabs/_Next Tab"), NEXT_TAB_ACCEL, terminal_nexttab, 1, "<Item>"},
-	{ N_("/_Help"), NULL, NULL, 0, "<Branch>" },
-	{ N_("/_Help/_About"), 0, terminal_about, 1, "<StockItem>", GTK_STOCK_ABOUT},
-};
-*/
-/*
-static GtkItemFactoryEntry vte_menu_items[] =
-{
-	{ N_("/_New Window"), NEW_WINDOW_ACCEL, terminal_newwindow, 1, "<StockItem>", GTK_STOCK_ADD },
-	{ N_("/_New Tab"), NEW_TAB_ACCEL, terminal_newtab, 1, "<StockItem>", GTK_STOCK_ADD },
-	{ N_("/sep1"), NULL, NULL, 0, "<Separator>" },
-	{ N_("/_Copy"), COPY_ACCEL, terminal_copy, 0, "<StockItem>", GTK_STOCK_COPY },
-	{ N_("/_Paste"), PASTE_ACCEL, terminal_paste, 0, "<StockItem>", GTK_STOCK_PASTE },
-	{ N_("/sep2"), NULL, NULL, 0, "<Separator>" },
-	{ N_("/_Preferences..."), NULL, lxterminal_preferences_dialog, 0, "<StockItem>", GTK_STOCK_EXECUTE },
-	{ N_("/sep3"), NULL, NULL, 0, "<Separator>" },
-	{ N_("/_Close Tab"), CLOSE_TAB_ACCEL, terminal_closetab, 1, "<StockItem>", GTK_STOCK_CLOSE }
-};
-*/
 
-#define MENUBAR_MENU_COUNT 5
+#define MENUBAR_MENU_COUNT 4
+//#define MENUBAR_MENU_COUNT 5
 static GtkActionEntry menus[] =
 {
 	{ "File", NULL, N_("_File") },
 	{ "Edit", NULL, N_("_Edit") },
-	{ "View", NULL, N_("_View") },
+//	{ "View", NULL, N_("_View") },
 	{ "Tabs", NULL, N_("_Tabs") },
 	{ "Help", NULL, N_("_Help") }
 };
 
-#define MENUBAR_MENUITEM_COUNT 13
+#define MENUBAR_MENUITEM_COUNT 12
+//#define MENUBAR_MENUITEM_COUNT 13
 static GtkActionEntry menu_items[] =
 {
 	{ "File_NewWindow", GTK_STOCK_ADD, N_("_New Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_newwindow)},
@@ -124,7 +91,7 @@ static GtkActionEntry menu_items[] =
 	{ "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste)},
 	{ "Edit_Sep1", NULL, "Sep" },
 	{ "Edit_Preferences", GTK_STOCK_EXECUTE, N_("_Preferences"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
-	{ "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+//	{ "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 	{ "Tabs_PreviousTab", NULL, N_("_Previous Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
 	{ "Tabs_NextTab", NULL, N_("_Next Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_nexttab)},
 	{ "Help_About", NULL, N_("_About"), NULL, "About", G_CALLBACK(terminal_about)}
@@ -698,7 +665,7 @@ Menu *menubar_init(LXTerminal *terminal)
 	menubar = g_new0(Menu, 1);
 
 	/* initializing encoding Action */
-	encoding_action = encoding_action_new("CharacterEncoding");
+//	encoding_action = encoding_action_new("CharacterEncoding");
 
 	/* initializing UI manager */
 	manager = gtk_ui_manager_new();
@@ -706,7 +673,7 @@ Menu *menubar_init(LXTerminal *terminal)
 	gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
 	gtk_action_group_add_actions(action_group, menus, MENUBAR_MENU_COUNT, terminal);
 	gtk_action_group_add_actions(action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
-	gtk_action_group_add_action(action_group, encoding_action);
+//	gtk_action_group_add_action(action_group, encoding_action);
 	gtk_ui_manager_insert_action_group(manager, action_group, 0);
 
 	merge_id = gtk_ui_manager_new_merge_id(manager);
@@ -739,8 +706,11 @@ Menu *menubar_init(LXTerminal *terminal)
 
 		if (strcmp(menu_items[i].label, "Sep")==0) {
 			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
+#if 0
+		/* Encoding */
 		} else if (strcmp(menu_items[i].name, "View_CharacterEncoding")==0) {
 			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, "CharacterEncoding", GTK_UI_MANAGER_MENUITEM, FALSE);
+#endif
 		} else {
 			gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
 		}
@@ -749,22 +719,8 @@ Menu *menubar_init(LXTerminal *terminal)
 		g_free(path_ptr);
 	}
 
-	/* encoding list */
-//	gtk_menu_shell_append(GTK_MENU_SHELL(gtk_ui_manager_get_widget(manager, "/MenuBar/View/CharacterEncoding")), encoding_list_menu_init());
-//	gtk_menu_item_set_submenu(GTK_MENU_ITEM(gtk_ui_manager_get_widget(manager, "/MenuBar/View/CharacterEncoding")), encoding_list_menu_init());
-
 	menubar->menu = gtk_ui_manager_get_widget(manager, "/MenuBar");
-	//gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/MenuBar")), NULL, NULL, NULL, NULL, event->button, event->time);
-/*
-	Menu *menubar;
 
-	menubar = g_new0(Menu, 1);
-
-	menubar->item_factory = gtk_item_factory_new(GTK_TYPE_MENU_BAR, "<main>", NULL);
-	gtk_item_factory_set_translate_func(menubar->item_factory, gettext, NULL, NULL);
-	gtk_item_factory_create_items(menubar->item_factory, sizeof(menu_items) / sizeof(menu_items[0]), menu_items, terminal);
-	menubar->menu = gtk_item_factory_get_widget(menubar->item_factory, "<main>");
-*/
 	return menubar;
 }
 
