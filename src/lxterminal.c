@@ -223,7 +223,8 @@ gboolean terminal_window_resize(GtkWidget *widget, GtkRequisition *requisition, 
 	hints.min_height = hints.base_height + hints.height_inc * 2;
 
 	/* allow resizing by user */
-	for (i=0;i<terminal->terms->len;i++) {
+	//for (i=0;i<terminal->terms->len;i++) {
+	for (i=terminal->terms->len-1;i>=0;i--) {
 		term = g_ptr_array_index(terminal->terms, i);
 
 		gtk_window_set_geometry_hints(GTK_WINDOW(terminal->mainw),
@@ -360,6 +361,11 @@ void terminal_nexttab(GtkAction *action, gpointer data)
 		gtk_notebook_next_page(GTK_NOTEBOOK(terminal->notebook));
 }
 
+void terminal_nexttab_accel(gpointer data, guint action, GtkWidget *item)
+{
+	terminal_nexttab(NULL, data);
+}
+
 void terminal_prevtab(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
@@ -369,6 +375,11 @@ void terminal_prevtab(GtkAction *action, gpointer data)
 		gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), -1);
 	else
 		gtk_notebook_prev_page(GTK_NOTEBOOK(terminal->notebook));
+}
+
+void terminal_prevtab_accel(gpointer data, guint action, GtkWidget *item)
+{
+	terminal_prevtab(NULL, data);
 }
 
 void terminal_closetab_accel(gpointer data, guint action, GtkWidget *item)
@@ -502,7 +513,8 @@ void terminal_windowexit(LXTerminal *terminal)
 		g_ptr_array_remove_index(terminal->parent->windows, terminal->index);
 
 		/* decreasing index number after the window be removed */
-		for (i=terminal->index;i<terminal->parent->windows->len;i++) {
+		//for (i=terminal->index;i<terminal->parent->windows->len;i++) {
+		for (i=terminal->parent->windows->len+1;i>=terminal->index;i--) {
 			LXTerminal *t = g_ptr_array_index(terminal->parent->windows, i);
 			t->index--;
 		}
@@ -807,6 +819,12 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 
 	gtk_accelerator_parse(SWITCH_TAB9_ACCEL, &key, &mods);
 	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab9, terminal, NULL));
+
+	gtk_accelerator_parse(NEXT_TAB_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_nexttab_accel, terminal, NULL));
+
+	gtk_accelerator_parse(PREVIOUS_TAB_ACCEL, &key, &mods);
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_prevtab_accel, terminal, NULL));
 
 //	gtk_accel_group_lock(terminal->menubar->accel_group);
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
