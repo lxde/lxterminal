@@ -190,8 +190,7 @@ gboolean terminal_window_resize(GtkWidget *widget, GtkRequisition *requisition, 
 	hints.min_height = hints.base_height + hints.height_inc * 2;
 
 	/* allow resizing by user */
-	//for (i=0;i<terminal->terms->len;i++) {
-	for (i=terminal->terms->len-1;i>=0;i--) {
+	for (i=0;i<terminal->terms->len;i++) {
 		term = g_ptr_array_index(terminal->terms, i);
 
 		gtk_window_set_geometry_hints(GTK_WINDOW(terminal->mainw),
@@ -480,11 +479,11 @@ void terminal_windowexit(LXTerminal *terminal)
 		g_ptr_array_remove_index(terminal->parent->windows, terminal->index);
 
 		/* decreasing index number after the window be removed */
-		//for (i=terminal->index;i<terminal->parent->windows->len;i++) {
-		for (i=terminal->parent->windows->len+1;i>=terminal->index;i--) {
+		for (i=terminal->index;i<terminal->parent->windows->len;i++) {
 			LXTerminal *t = g_ptr_array_index(terminal->parent->windows, i);
 			t->index--;
 		}
+
 	}
 }
 
@@ -842,6 +841,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	g_ptr_array_add(lxtermwin->windows, terminal);
 	terminal->index = terminal->parent->windows->len - 1;
+	printf("%d\n", terminal->index);
 
 	/* Setting */
 	if (setting)
