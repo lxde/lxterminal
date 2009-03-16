@@ -841,7 +841,6 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	g_ptr_array_add(lxtermwin->windows, terminal);
 	terminal->index = terminal->parent->windows->len - 1;
-	printf("%d\n", terminal->index);
 
 	/* Setting */
 	if (setting)
@@ -873,13 +872,9 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
 	gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 
-	if (!workdir) {
-		workdir = g_get_current_dir();
-		term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
-		g_free(workdir);
-	} else {
-		term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
-	}
+	workdir = (!workdir) ? g_get_current_dir() : NULL;
+	term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
+	g_free(workdir);
 
 	/* set default cols and rows */
 	if (cols&&rows)
