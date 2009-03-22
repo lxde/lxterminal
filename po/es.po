@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-09 03:05+0100\n"
-"PO-Revision-Date: 2009-03-22 01:28+0100\n"
+"PO-Revision-Date: 2009-03-22 19:29+0100\n"
 "Last-Translator: Guillermo Iguaran <johnnyprez@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -188,7 +188,7 @@ msgstr "_Pestañas"
 
 #: ../src/lxterminal.c:112
 msgid "_Help"
-msgstr "_Ayuda"
+msgstr "A_yuda"
 
 #: ../src/lxterminal.c:118 ../src/lxterminal.c:137
 msgid "_New Window"
@@ -224,11 +224,11 @@ msgstr "_Juego de caracteres"
 
 #: ../src/lxterminal.c:128
 msgid "_Previous Tab"
-msgstr "_Pestaña Anterior"
+msgstr "Pestaña _Anterior"
 
 #: ../src/lxterminal.c:129
 msgid "_Next Tab"
-msgstr "_Pestaña Siguiente"
+msgstr "Pestaña _Siguiente"
 
 #: ../src/lxterminal.c:130
 msgid "_About"
@@ -243,9 +243,9 @@ msgstr "LXTerminal"
 #: ../src/lxterminal.c:447
 msgid "translator-credits"
 msgstr ""
-"Daniel Pacheco <daniel@tunki.org>, 2008\r\n"
-"Julio Napurí Carlos <julionc@gmail.com>, 2008\r\n"
-"Guillermo Iguaran <tronador@cuteam.org>, 2009\r\n"
+"Daniel Pacheco <daniel@tunki.org>, 2008\n"
+"Julio Napurí Carlos <julionc@gmail.com>, 2008\n"
+"Guillermo Iguarán <tronador@cuteam.org>, 2009\n"
 "Hugo Florentino <sysadmin@cips.cu>, 2009"
 
 #: ../src/lxterminal.c:457
