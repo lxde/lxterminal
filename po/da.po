@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-09 03:05+0100\n"
-"PO-Revision-Date: 2009-03-10 18:18+0100\n"
+"PO-Revision-Date: 2009-03-23 16:35+0100\n"
 "Last-Translator: charlie tyrrestrup <chalze06@gmail.com>\n"
 "Language-Team: da\n"
 "MIME-Version: 1.0\n"
@@ -240,7 +240,9 @@ msgstr "LXTerminal"
 #. TRANSLATORS: Replace mw string with your names, one name per line.
 #: ../src/lxterminal.c:447
 msgid "translator-credits"
-msgstr "Vidar Jon Bauge <vidarjb@gmail.com>, Charlie Tyrrestrup"
+msgstr ""
+"Vidar Jon Bauge \n"
+"Charlie Tyrrestrup\n"
 
 #: ../src/lxterminal.c:457
 msgid "Copyright (C) 2008"
