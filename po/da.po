@@ -242,7 +242,7 @@ msgstr "LXTerminal"
 msgid "translator-credits"
 msgstr ""
 "Vidar Jon Bauge \n"
-"Charlie Tyrrestrup\n"
+"Charlie Tyrrestrup"
 
 #: ../src/lxterminal.c:457
 msgid "Copyright (C) 2008"
