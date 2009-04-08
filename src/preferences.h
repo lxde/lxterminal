@@ -38,6 +38,8 @@ typedef struct {
 	GtkWidget *scrollback_entry;
 	GtkWidget *tabpos_label;
 	GtkWidget *tabpos_combobox;
+	GtkWidget *disablef10_label;
+	GtkWidget *disablef10_checkbox;
 } PreferGeneral;
 
 void lxterminal_preferences_dialog(GtkAction *action, gpointer data);

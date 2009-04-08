@@ -107,6 +107,15 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_label, 0,2, 6,7);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_combobox, 2,4, 6,7);
 
+	/* Disable F10 for menu */
+	pg->disablef10_label = gtk_label_new(_("Disable F10 shortcut for menu:"));
+	gtk_misc_set_alignment(pg->disablef10_label, 1, 0.5);
+	pg->disablef10_checkbox = gtk_check_button_new();
+
+	gtk_toggle_button_set_active((GtkToggleButton *)pg->disablef10_checkbox, prefer->terminal->setting->disablef10);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_label, 0,2, 7,8);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_checkbox, 2,4, 7,8);
+
 	/* adding to page */
 	gtk_container_add(GTK_CONTAINER(tab->page), pg->box);
 }
@@ -127,6 +136,7 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name((GtkFontButton *)pg->font_button) );
 	prefer->terminal->setting->selchars = g_strdup( gtk_entry_get_text((GtkEntry *)pg->selchars_entry) );
 	prefer->terminal->setting->scrollback = (glong)gtk_spin_button_get_value_as_int((GtkSpinButton *)pg->scrollback_entry);
+	prefer->terminal->setting->disablef10 = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->disablef10_checkbox);
 
 	/* Tab position */
 	g_free( prefer->terminal->setting->tabpos );

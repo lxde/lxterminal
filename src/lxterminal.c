@@ -58,6 +58,9 @@ const GdkColor linux_color[16] =
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
 
+/* menu accel saved when the user disables it */
+static char *saved_menu_accel = NULL;
+
 static gchar helpmsg[] = {
 	"Usage:\n"
 	"  lxterminal [Options...] - LXTerminal is a terimnal emulator\n\n"
@@ -786,6 +789,36 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
 }
 
+void lxterminal_menuaccel_update(Setting *setting)
+{
+	/* update F10 status */
+	/* hack took from gnome-terminal */
+	
+	if (saved_menu_accel == NULL) {
+		g_object_get (G_OBJECT (gtk_settings_get_default ()),
+					"gtk-menu-bar-accel",
+					&saved_menu_accel,
+					NULL);
+		/* FIXME if gtkrc is reparsed we don't catch on,
+		 * I guess.
+		 */
+	}
+
+	
+	if (setting->disablef10) {
+		gtk_settings_set_string_property (gtk_settings_get_default(),
+										"gtk-menu-bar-accel",
+										/* no one will ever press this ;-) */
+										"<Shift><Control><Mod1><Mod2><Mod3><Mod4><Mod5>F10",
+										"lxterminal");
+	} else {
+		gtk_settings_set_string_property (gtk_settings_get_default(),
+										"gtk-menu-bar-accel",
+										saved_menu_accel,
+										"lxterminal");
+	}
+}
+
 void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 {
 	Term *term;
@@ -804,6 +837,9 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 
 	/* update tab position */
 	lxterminal_tab_set_position(terminal->notebook, terminal->tabpos);
+
+	/* update menu accel */
+	lxterminal_menuaccel_update(setting);
 }
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting)
@@ -978,6 +1014,9 @@ int main(gint argc, gchar** argv)
 	/* initializing something */
 	lxtermwin->windows = g_ptr_array_new();
 	lxtermwin->setting = setting;
+
+	/* initializing menu accelerator */
+	lxterminal_menuaccel_update(setting);
 
 	/* initializing LXTerminal */
 	lxterminal_init(lxtermwin, argc, argv, setting);
