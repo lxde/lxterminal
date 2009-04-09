@@ -1,4 +1,3 @@
-﻿# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,16 +7,18 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-13 08:45-0500\n"
-"PO-Revision-Date: 2009-04-04 23:59+0100\n"
+"PO-Revision-Date: 2009-04-08 19:23+0200\n"
 "Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
+"X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: SLOVENIA\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -256,7 +257,7 @@ msgstr "_Prilepi"
 #: ../src/lxterminal.c:126
 #: ../src/lxterminal.c:143
 msgid "_Preferences"
-msgstr "_Lastnosti"
+msgstr "_Nastavitve"
 
 #: ../src/lxterminal.c:127
 msgid "_Character Encoding"
@@ -272,7 +273,7 @@ msgstr "_Naslednji zavihek"
 
 #: ../src/lxterminal.c:130
 msgid "_About"
-msgstr "_O"
+msgstr "_O programu"
 
 #: ../src/lxterminal.c:412
 #: ../src/lxterminal.c:455
@@ -308,7 +309,7 @@ msgstr "Pisava:"
 #. Select-by-word
 #: ../src/preferences.c:69
 msgid "Select-by-word characters:"
-msgstr "Izberi-s-klikom znaki: "
+msgstr "Dovoljeni znaki za izbiranje z dvoklikom: "
 
 #. Background color
 #: ../src/preferences.c:77
@@ -318,12 +319,12 @@ msgstr "Ozadje:"
 #. Foreground color
 #: ../src/preferences.c:84
 msgid "Foreground:"
-msgstr "Barva ospredja:"
+msgstr "Barva pisave:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:91
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Število zapomnjenih vrstic pri drsenju:"
 
 #. tab-panel position
 #: ../src/preferences.c:99
@@ -353,30 +354,9 @@ msgstr "Lastnosti"
 
 #~ msgid "/_File/_New Window"
 #~ msgstr "/_Datoteka/Novo _okno"
-#~ msgid "/_File/_New Tab"
-#~ msgstr "/_Datoteka/Nov za_vihek"
-#~ msgid "/_File/sep1"
-#~ msgstr "/_Datoteka/sep1"
-#~ msgid "/_File/_Close Tab"
-#~ msgstr "/_Datoteka/Zapri _zavihek"
-#~ msgid "/_File/_Quit"
-#~ msgstr "/_Datoteka/_Končaj"
-#~ msgid "/_Edit/_Copy"
-#~ msgstr "/_Uredi/_Kopiraj"
-#~ msgid "/_Edit/_Paste"
-#~ msgstr "/_Uredi/_Prilepi"
-#~ msgid "/_Edit/sep1"
-#~ msgstr "/_Uredi/sep1"
-#~ msgid "/_Edit/_Preferences..."
-#~ msgstr "/_Uredi/_Lastnosti ..."
-#~ msgid "/_Tabs/_Next Tab"
-#~ msgstr "/_Zavihki/_Naslednji zavihek"
-#~ msgid "/sep1"
-#~ msgstr "/sep1"
-#~ msgid "/sep2"
-#~ msgstr "/sep2"
-#~ msgid "/_Preferences..."
-#~ msgstr "/_Lastnosti ..."
-#~ msgid "/sep3"
-#~ msgstr "/sep3"
 
+#~ msgid ""
+#~ msgstr "/_Datoteka/Nov za_vihek"
+
+#~ msgid ""
+#~ msgstr "/_Datoteka/sep1"
