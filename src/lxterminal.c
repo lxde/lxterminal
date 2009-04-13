@@ -626,6 +626,8 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 
 	vte_terminal_set_colors(VTE_TERMINAL(term->vte), &terminal->foreground, &terminal->background, &linux_color, 16);
 
+	vte_terminal_set_background_transparent(VTE_TERMINAL(term->vte), terminal->setting->bgtransparent);
+
 	/* create label for tab */
 	term->label = lxterminal_tab_label_new(label);
 	lxterminal_tab_label_close_button_clicked(G_CALLBACK(terminal_childexit), term);
@@ -833,6 +835,7 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 		vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
 		vte_terminal_set_color_background((VteTerminal *)term->vte, &terminal->background);
 		vte_terminal_set_color_foreground((VteTerminal *)term->vte, &terminal->foreground);
+		vte_terminal_set_background_transparent(VTE_TERMINAL(term->vte), terminal->setting->bgtransparent);
 	}
 
 	/* update tab position */

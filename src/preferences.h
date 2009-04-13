@@ -34,6 +34,8 @@ typedef struct {
 	GtkWidget *bgcolor_entry;
 	GtkWidget *fgcolor_label;
 	GtkWidget *fgcolor_entry;
+	GtkWidget *bgtransparent_label;
+	GtkWidget *bgtransparent_checkbox;
 	GtkWidget *scrollback_label;
 	GtkWidget *scrollback_entry;
 	GtkWidget *tabpos_label;

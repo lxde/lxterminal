@@ -9,6 +9,7 @@ typedef struct _setting {
 	char *tabpos;
 	glong scrollback;
 	gboolean disablef10;
+	gboolean bgtransparent;
 	GKeyFile *keyfile;
 } Setting;
 
