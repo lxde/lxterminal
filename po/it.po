@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-09 03:05+0100\n"
+"POT-Creation-Date: 2009-04-15 21:08+0200\n"
 "PO-Revision-Date: 2009-01-07 00:33+0100\n"
 "Last-Translator: Fabio Barone <phonky@gmx.net>\n"
 "Language-Team: \n"
@@ -168,99 +168,92 @@ msgstr ""
 msgid "Thai"
 msgstr ""
 
-#: ../src/lxterminal.c:108
+#: ../src/lxterminal.c:78
 #, fuzzy
 msgid "_File"
 msgstr "/_File"
 
-#: ../src/lxterminal.c:109
+#: ../src/lxterminal.c:79
 #, fuzzy
 msgid "_Edit"
 msgstr "/_Modificare"
 
-#: ../src/lxterminal.c:110
-msgid "_View"
-msgstr "_Visualizzare"
-
-#: ../src/lxterminal.c:111
+#. { "View", NULL, N_("_View") },
+#: ../src/lxterminal.c:81
 #, fuzzy
 msgid "_Tabs"
 msgstr "/_Schede"
 
-#: ../src/lxterminal.c:112
+#: ../src/lxterminal.c:82
 #, fuzzy
 msgid "_Help"
 msgstr "/_Aiuto"
 
-#: ../src/lxterminal.c:118 ../src/lxterminal.c:137
+#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
 #, fuzzy
 msgid "_New Window"
 msgstr "/Nuova _Finestra"
 
-#: ../src/lxterminal.c:119 ../src/lxterminal.c:138
+#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
 #, fuzzy
 msgid "_New Tab"
 msgstr "/Nuova _Scheda"
 
-#: ../src/lxterminal.c:121 ../src/lxterminal.c:145
+#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
 #, fuzzy
 msgid "_Close Tab"
 msgstr "/Chiudere _scheda"
 
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:93
 msgid "_Quit"
 msgstr "_Uscire"
 
-#: ../src/lxterminal.c:123 ../src/lxterminal.c:140
+#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
 #, fuzzy
 msgid "_Copy"
 msgstr "/_Copiare"
 
-#: ../src/lxterminal.c:124 ../src/lxterminal.c:141
+#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
 #, fuzzy
 msgid "_Paste"
 msgstr "/_Inserire"
 
-#: ../src/lxterminal.c:126 ../src/lxterminal.c:143
+#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
 #, fuzzy
 msgid "_Preferences"
 msgstr "Impostazioni"
 
-#: ../src/lxterminal.c:127
-#, fuzzy
-msgid "_Character Encoding"
-msgstr "_Codificazione caratteri"
-
-#: ../src/lxterminal.c:128
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:99
 #, fuzzy
 msgid "_Previous Tab"
 msgstr "/_Schede/Scheda _precedente"
 
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:100
 #, fuzzy
 msgid "_Next Tab"
 msgstr "/Nuova _Scheda"
 
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:101
 #, fuzzy
 msgid "_About"
 msgstr "/_Aiuto/_Riguardo a"
 
-#: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
+#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
+#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:447
+#: ../src/lxterminal.c:428
 msgid "translator-credits"
 msgstr "Fabio Barone<phonky@gmx.net>"
 
-#: ../src/lxterminal.c:457
+#: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:458
+#: ../src/lxterminal.c:439
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulatore di terminale per il progetto LXDE"
 
@@ -290,37 +283,55 @@ msgstr "Sfondo:"
 msgid "Foreground:"
 msgstr "Fronte:"
 
-#. Scrollback buffer
+#. Transparent background
 #: ../src/preferences.c:91
+#, fuzzy
+msgid "Transparent Background:"
+msgstr "Sfondo:"
+
+#. Scrollback buffer
+#: ../src/preferences.c:100
 #, fuzzy
 msgid "Scrollback lines:"
 msgstr "Linee scrollback:"
 
 #. tab-panel position
-#: ../src/preferences.c:99
+#: ../src/preferences.c:108
 msgid "Tab panel position:"
 msgstr "Posizione pannello tab:"
 
-#: ../src/preferences.c:102
+#: ../src/preferences.c:111
 msgid "Top"
 msgstr "Sopra"
 
-#: ../src/preferences.c:103
+#: ../src/preferences.c:112
 msgid "Bottom"
 msgstr "Sotto"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:113
 msgid "Left"
 msgstr "Sinistra"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:114
 msgid "Right"
 msgstr "Destra"
 
+#. Disable F10 for menu
+#: ../src/preferences.c:120
+msgid "Disable F10 shortcut for menu:"
+msgstr ""
+
 #. create window
-#: ../src/preferences.c:260
+#: ../src/preferences.c:280
 msgid "Preferences"
 msgstr "Impostazioni"
+
+#~ msgid "_View"
+#~ msgstr "_Visualizzare"
+
+#, fuzzy
+#~ msgid "_Character Encoding"
+#~ msgstr "_Codificazione caratteri"
 
 #, fuzzy
 #~ msgid "/_File/_New Window"

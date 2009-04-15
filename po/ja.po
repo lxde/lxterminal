@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-11 20:34+0100\n"
+"POT-Creation-Date: 2009-04-15 21:08+0200\n"
 "PO-Revision-Date: 2009-03-25 18:10+0900\n"
 "Last-Translator: IWAI, Masaharu <iwai@alib.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -167,87 +167,81 @@ msgstr ""
 msgid "Thai"
 msgstr ""
 
-#: ../src/lxterminal.c:108
+#: ../src/lxterminal.c:78
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: ../src/lxterminal.c:109
+#: ../src/lxterminal.c:79
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../src/lxterminal.c:110
-msgid "_View"
-msgstr ""
-
-#: ../src/lxterminal.c:111
+#. { "View", NULL, N_("_View") },
+#: ../src/lxterminal.c:81
 msgid "_Tabs"
 msgstr "タブ(_T)"
 
-#: ../src/lxterminal.c:112
+#: ../src/lxterminal.c:82
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../src/lxterminal.c:118 ../src/lxterminal.c:137
+#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
 msgid "_New Window"
 msgstr "新規ウィンドウ(_N)"
 
-#: ../src/lxterminal.c:119 ../src/lxterminal.c:138
+#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
 msgid "_New Tab"
 msgstr "新規タブ(_N)"
 
-#: ../src/lxterminal.c:121 ../src/lxterminal.c:145
+#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
 msgid "_Close Tab"
 msgstr "タブを閉じる(_C)"
 
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:93
 msgid "_Quit"
 msgstr "閉じる(_Q)"
 
-#: ../src/lxterminal.c:123 ../src/lxterminal.c:140
+#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
 msgid "_Copy"
 msgstr "コピー(_C)"
 
-#: ../src/lxterminal.c:124 ../src/lxterminal.c:141
+#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
-#: ../src/lxterminal.c:126 ../src/lxterminal.c:143
+#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
 msgid "_Preferences"
 msgstr "設定(_P)"
 
-#: ../src/lxterminal.c:127
-msgid "_Character Encoding"
-msgstr "文字エンコーディング(_C)"
-
-#: ../src/lxterminal.c:128
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:99
 msgid "_Previous Tab"
 msgstr "前のタブ(_P)"
 
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:100
 msgid "_Next Tab"
 msgstr "次のタブ(_N)"
 
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:101
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
+#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
+#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:447
+#: ../src/lxterminal.c:428
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>"
 
-#: ../src/lxterminal.c:457
+#: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:458
+#: ../src/lxterminal.c:439
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDEプロジェクトのための端末エミュレータ"
 
@@ -275,34 +269,47 @@ msgstr "背景色:"
 msgid "Foreground:"
 msgstr "前景色:"
 
-#. Scrollback buffer
+#. Transparent background
 #: ../src/preferences.c:91
+#, fuzzy
+msgid "Transparent Background:"
+msgstr "背景色:"
+
+#. Scrollback buffer
+#: ../src/preferences.c:100
 msgid "Scrollback lines:"
 msgstr "履歴の行数:"
 
 #. tab-panel position
-#: ../src/preferences.c:99
+#: ../src/preferences.c:108
 msgid "Tab panel position:"
 msgstr "タブの位置:"
 
-#: ../src/preferences.c:102
+#: ../src/preferences.c:111
 msgid "Top"
 msgstr "上"
 
-#: ../src/preferences.c:103
+#: ../src/preferences.c:112
 msgid "Bottom"
 msgstr "下"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:113
 msgid "Left"
 msgstr "左"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:114
 msgid "Right"
 msgstr "右"
 
+#. Disable F10 for menu
+#: ../src/preferences.c:120
+msgid "Disable F10 shortcut for menu:"
+msgstr ""
+
 #. create window
-#: ../src/preferences.c:260
+#: ../src/preferences.c:280
 msgid "Preferences"
 msgstr "設定"
 
+#~ msgid "_Character Encoding"
+#~ msgstr "文字エンコーディング(_C)"

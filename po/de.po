@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-09 03:05+0100\n"
+"POT-Creation-Date: 2009-04-15 21:08+0200\n"
 "PO-Revision-Date: 2009-03-22 15:27+0100\n"
 "Last-Translator: Benedikt Klus <b.klus89@web.de>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
@@ -39,27 +39,18 @@ msgstr "Südost- & Südwestasiatisch"
 msgid "Middle Eastern"
 msgstr "Nahöstlich"
 
-#: ../src/encoding.c:129
-#: ../src/encoding.c:151
-#: ../src/encoding.c:152
-#: ../src/encoding.c:153
-#: ../src/encoding.c:154
-#: ../src/encoding.c:155
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135
-#: ../src/encoding.c:148
-#: ../src/encoding.c:172
-#: ../src/encoding.c:197
-#: ../src/encoding.c:210
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
 msgstr "Westlich"
 
-#: ../src/encoding.c:136
-#: ../src/encoding.c:173
-#: ../src/encoding.c:187
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "Zentraleuropäisch"
@@ -68,31 +59,21 @@ msgstr "Zentraleuropäisch"
 msgid "South European"
 msgstr "Südeuropäisch"
 
-#: ../src/encoding.c:138
-#: ../src/encoding.c:146
-#: ../src/encoding.c:215
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
 msgstr "Baltisch"
 
-#: ../src/encoding.c:139
-#: ../src/encoding.c:174
-#: ../src/encoding.c:181
-#: ../src/encoding.c:183
-#: ../src/encoding.c:189
-#: ../src/encoding.c:209
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "Kyrillisch"
 
-#: ../src/encoding.c:140
-#: ../src/encoding.c:177
-#: ../src/encoding.c:186
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "Arabisch"
 
-#: ../src/encoding.c:141
-#: ../src/encoding.c:192
-#: ../src/encoding.c:211
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
 msgstr "Griechisch"
 
@@ -101,16 +82,12 @@ msgstr "Griechisch"
 msgid "Hebrew Visual"
 msgstr "Hebräisch visuell"
 
-#: ../src/encoding.c:143
-#: ../src/encoding.c:176
-#: ../src/encoding.c:195
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "Hebräisch"
 
-#: ../src/encoding.c:144
-#: ../src/encoding.c:175
-#: ../src/encoding.c:199
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "Türkisch"
@@ -123,8 +100,7 @@ msgstr "Nordisch"
 msgid "Celtic"
 msgstr "Keltisch"
 
-#: ../src/encoding.c:149
-#: ../src/encoding.c:198
+#: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
 msgstr "Rumänisch"
 
@@ -132,9 +108,7 @@ msgstr "Rumänisch"
 msgid "Armenian"
 msgstr "Armenisch"
 
-#: ../src/encoding.c:158
-#: ../src/encoding.c:159
-#: ../src/encoding.c:164
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "Chinesisch traditionell"
 
@@ -142,22 +116,16 @@ msgstr "Chinesisch traditionell"
 msgid "Cyrillic/Russian"
 msgstr "Kyrillisch/Russisch"
 
-#: ../src/encoding.c:162
-#: ../src/encoding.c:179
-#: ../src/encoding.c:202
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
 msgstr "Japanisch"
 
-#: ../src/encoding.c:163
-#: ../src/encoding.c:180
-#: ../src/encoding.c:182
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "Koreanisch"
 
-#: ../src/encoding.c:166
-#: ../src/encoding.c:167
-#: ../src/encoding.c:168
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "Chinesisch vereinfacht"
@@ -166,8 +134,7 @@ msgstr "Chinesisch vereinfacht"
 msgid "Georgian"
 msgstr "Georgisch"
 
-#: ../src/encoding.c:184
-#: ../src/encoding.c:200
+#: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "Kyrillisch/Ukrainisch"
 
@@ -195,9 +162,7 @@ msgstr "Gurmukhi"
 msgid "Icelandic"
 msgstr "Isländisch"
 
-#: ../src/encoding.c:203
-#: ../src/encoding.c:206
-#: ../src/encoding.c:216
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "Vietnamesisch"
 
@@ -205,97 +170,81 @@ msgstr "Vietnamesisch"
 msgid "Thai"
 msgstr "Thailändisch"
 
-#: ../src/lxterminal.c:108
+#: ../src/lxterminal.c:78
 msgid "_File"
 msgstr "_Datei"
 
-#: ../src/lxterminal.c:109
+#: ../src/lxterminal.c:79
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../src/lxterminal.c:110
-msgid "_View"
-msgstr "_Ansicht"
-
-#: ../src/lxterminal.c:111
+#. { "View", NULL, N_("_View") },
+#: ../src/lxterminal.c:81
 msgid "_Tabs"
 msgstr "_Reiter"
 
-#: ../src/lxterminal.c:112
+#: ../src/lxterminal.c:82
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/lxterminal.c:118
-#: ../src/lxterminal.c:137
+#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
 msgid "_New Window"
 msgstr "_Neues Fenster"
 
-#: ../src/lxterminal.c:119
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
 msgid "_New Tab"
 msgstr "_Neuer Reiter"
 
-#: ../src/lxterminal.c:121
-#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
 msgid "_Close Tab"
 msgstr "Reiter _schließen"
 
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:93
 msgid "_Quit"
 msgstr "_Beenden"
 
-#: ../src/lxterminal.c:123
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
 msgid "_Copy"
 msgstr "_Kopieren"
 
-#: ../src/lxterminal.c:124
-#: ../src/lxterminal.c:141
+#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
 msgid "_Paste"
 msgstr "_Einfügen"
 
-#: ../src/lxterminal.c:126
-#: ../src/lxterminal.c:143
+#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
 msgid "_Preferences"
 msgstr "_Einstellungen"
 
-#: ../src/lxterminal.c:127
-msgid "_Character Encoding"
-msgstr "_Zeichenkodierung"
-
-#: ../src/lxterminal.c:128
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:99
 msgid "_Previous Tab"
 msgstr "_Vorheriger Reiter"
 
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:100
 msgid "_Next Tab"
 msgstr "_Nächster Reiter"
 
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:101
 msgid "_About"
 msgstr "_Info"
 
-#: ../src/lxterminal.c:412
-#: ../src/lxterminal.c:455
-#: ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871
-#: ../src/lxterminal.c:897
-#: ../src/lxterminal.c:900
+#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
+#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:447
+#: ../src/lxterminal.c:428
 msgid "translator-credits"
 msgstr ""
 "Christoph Wickert <christoph.wickert@googlemail.de>\n"
 "Mario Blättermann <mario.blaettermann@t-online.de>"
 
-#: ../src/lxterminal.c:457
+#: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:458
+#: ../src/lxterminal.c:439
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal-Emulator für das LXDE Projekt"
 
@@ -323,65 +272,92 @@ msgstr "Hintergrund:"
 msgid "Foreground:"
 msgstr "Vordergrund:"
 
-#. Scrollback buffer
+#. Transparent background
 #: ../src/preferences.c:91
+#, fuzzy
+msgid "Transparent Background:"
+msgstr "Hintergrund:"
+
+#. Scrollback buffer
+#: ../src/preferences.c:100
 msgid "Scrollback lines:"
 msgstr "Zeilen zurückrollen:"
 
 #. tab-panel position
-#: ../src/preferences.c:99
+#: ../src/preferences.c:108
 msgid "Tab panel position:"
 msgstr "Position des Reiterpanels:"
 
-#: ../src/preferences.c:102
+#: ../src/preferences.c:111
 msgid "Top"
 msgstr "Oben"
 
-#: ../src/preferences.c:103
+#: ../src/preferences.c:112
 msgid "Bottom"
 msgstr "Unten"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:113
 msgid "Left"
 msgstr "Links"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:114
 msgid "Right"
 msgstr "Rechts"
 
+#. Disable F10 for menu
+#: ../src/preferences.c:120
+msgid "Disable F10 shortcut for menu:"
+msgstr ""
+
 #. create window
-#: ../src/preferences.c:260
+#: ../src/preferences.c:280
 msgid "Preferences"
 msgstr "Einstellungen"
 
+#~ msgid "_View"
+#~ msgstr "_Ansicht"
+
+#~ msgid "_Character Encoding"
+#~ msgstr "_Zeichenkodierung"
+
 #~ msgid "/_File/_New Window"
 #~ msgstr "/_Datei/Neues _Fenster"
+
 #~ msgid "/_File/_New Tab"
 #~ msgstr "/_Datei/Neuer _Reiter"
+
 #~ msgid "/_File/sep1"
 #~ msgstr "/_Datei/sep1"
+
 #~ msgid "/_File/_Close Tab"
 #~ msgstr "/_Datei/Reiter s_chließen"
+
 #~ msgid "/_File/_Quit"
 #~ msgstr "/_Datei/_Beenden"
+
 #~ msgid "/_Edit/_Copy"
 #~ msgstr "/_Bearbeiten/_Kopieren"
+
 #~ msgid "/_Edit/_Paste"
 #~ msgstr "/_Bearbeiten/E_infügen"
+
 #~ msgid "/_Edit/sep1"
 #~ msgstr "/_Bearbeiten/sep1"
+
 #~ msgid "/_Edit/_Preferences..."
 #~ msgstr "/_Bearbeiten/_Einstellungen ..."
+
 #~ msgid "/_Tabs/_Next Tab"
 #~ msgstr "/_Reiter/_Nächster Reiter"
+
 #~ msgid "/sep1"
 #~ msgstr "/sep1"
+
 #~ msgid "/sep2"
 #~ msgstr "/sep2"
+
 #~ msgid "/_Preferences..."
 #~ msgstr "/_Einstellungen ..."
+
 #~ msgid "/sep3"
 #~ msgstr "/sep3"
-
-
- 	  	 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-28 16:40+0300\n"
+"POT-Creation-Date: 2009-04-15 21:08+0200\n"
 "PO-Revision-Date: 2009-03-29 18:51+0300\n"
 "Last-Translator: Sash0k <vodka_ploho@mail.ru>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
@@ -17,127 +17,244 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../src/lxterminal.c:70
-msgid "/_File"
-msgstr "/_Файл"
+#: ../src/encoding.c:124
+msgid "West European"
+msgstr ""
 
-#: ../src/lxterminal.c:71
-msgid "/_File/_New Window"
-msgstr "/_Файл/_Новое окно"
+#: ../src/encoding.c:125
+msgid "East European"
+msgstr ""
 
-#: ../src/lxterminal.c:72
-msgid "/_File/_New Tab"
-msgstr "/_Файл/_Новая вкладка"
+#: ../src/encoding.c:126
+msgid "East Asian"
+msgstr ""
 
-#: ../src/lxterminal.c:73
-msgid "/_File/sep1"
-msgstr "/_Файл/sep1"
+#: ../src/encoding.c:127
+msgid "SE & SW Asian"
+msgstr ""
 
-#: ../src/lxterminal.c:74
-msgid "/_File/_Close Tab"
-msgstr "/_Файл/_Закрыть вкладку"
+#: ../src/encoding.c:128
+msgid "Middle Eastern"
+msgstr ""
 
-#: ../src/lxterminal.c:75
-msgid "/_File/_Quit"
-msgstr "/_Файл/_Выйти"
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+msgid "Unicode"
+msgstr ""
 
-#: ../src/lxterminal.c:76
-msgid "/_Edit"
-msgstr "/_Правка"
+#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
+msgid "Western"
+msgstr ""
 
-#: ../src/lxterminal.c:77
-msgid "/_Edit/_Copy"
-msgstr "/_Правка/_Копировать"
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:208
+msgid "Central European"
+msgstr ""
+
+#: ../src/encoding.c:137
+msgid "South European"
+msgstr ""
+
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+msgid "Baltic"
+msgstr ""
+
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+msgid "Cyrillic"
+msgstr ""
+
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:214
+msgid "Arabic"
+msgstr ""
+
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+msgid "Greek"
+msgstr ""
+
+#: ../src/encoding.c:142
+msgid "Hebrew Visual"
+msgstr ""
+
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:213
+msgid "Hebrew"
+msgstr ""
+
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:212
+msgid "Turkish"
+msgstr ""
+
+#: ../src/encoding.c:145
+msgid "Nordic"
+msgstr ""
+
+#: ../src/encoding.c:147
+msgid "Celtic"
+msgstr ""
+
+#: ../src/encoding.c:149 ../src/encoding.c:198
+msgid "Romanian"
+msgstr ""
+
+#: ../src/encoding.c:157
+msgid "Armenian"
+msgstr ""
+
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+msgid "Chinese Traditional"
+msgstr ""
+
+#: ../src/encoding.c:160
+msgid "Cyrillic/Russian"
+msgstr ""
+
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+msgid "Japanese"
+msgstr ""
+
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:205
+msgid "Korean"
+msgstr ""
+
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:170
+msgid "Chinese Simplified"
+msgstr ""
+
+#: ../src/encoding.c:169
+msgid "Georgian"
+msgstr ""
+
+#: ../src/encoding.c:184 ../src/encoding.c:200
+msgid "Cyrillic/Ukrainian"
+msgstr ""
+
+#: ../src/encoding.c:188
+msgid "Croatian"
+msgstr ""
+
+#: ../src/encoding.c:190
+msgid "Hindi"
+msgstr ""
+
+#: ../src/encoding.c:191
+msgid "Farsi"
+msgstr ""
+
+#: ../src/encoding.c:193
+msgid "Gujarati"
+msgstr ""
+
+#: ../src/encoding.c:194
+msgid "Gurmukhi"
+msgstr ""
+
+#: ../src/encoding.c:196
+msgid "Icelandic"
+msgstr ""
+
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+msgid "Vietnamese"
+msgstr ""
+
+#: ../src/encoding.c:204
+msgid "Thai"
+msgstr ""
 
 #: ../src/lxterminal.c:78
-msgid "/_Edit/_Paste"
-msgstr "/_Правка/_Вставить"
+#, fuzzy
+msgid "_File"
+msgstr "/_Файл"
 
 #: ../src/lxterminal.c:79
-msgid "/_Edit/sep1"
-msgstr "/_Правка/sep1"
+#, fuzzy
+msgid "_Edit"
+msgstr "/_Правка"
 
-#: ../src/lxterminal.c:80
-msgid "/_Edit/_Preferences..."
-msgstr "/_Правка/_Параметры..."
-
+#. { "View", NULL, N_("_View") },
 #: ../src/lxterminal.c:81
-msgid "/_Tabs"
+#, fuzzy
+msgid "_Tabs"
 msgstr "/_Вкладки"
 
 #: ../src/lxterminal.c:82
-msgid "/_Tabs/_Previous Tab"
-msgstr "/_Вкладки/_Предыдущая вкладка"
-
-#: ../src/lxterminal.c:83
-msgid "/_Tabs/_Next Tab"
-msgstr "/_Вкладки/_Следующая вкладка"
-
-#: ../src/lxterminal.c:84
-msgid "/_Help"
+#, fuzzy
+msgid "_Help"
 msgstr "/_Справка"
 
-#: ../src/lxterminal.c:85
-msgid "/_Help/_About"
-msgstr "/_Справка/_О программе"
-
-#: ../src/lxterminal.c:90
-msgid "/_New Window"
+#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
+#, fuzzy
+msgid "_New Window"
 msgstr "/_Новое окно"
 
-#: ../src/lxterminal.c:91
-msgid "/_New Tab"
+#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
+#, fuzzy
+msgid "_New Tab"
 msgstr "/_Новая вкладка"
 
-#: ../src/lxterminal.c:92
-msgid "/sep1"
-msgstr "/sep1"
-
-#: ../src/lxterminal.c:93
-msgid "/_Copy"
-msgstr "/_Копировать"
-
-#: ../src/lxterminal.c:94
-msgid "/_Paste"
-msgstr "/_Вставить"
-
-#: ../src/lxterminal.c:95
-msgid "/sep2"
-msgstr "/sep2"
-
-#: ../src/lxterminal.c:96
-msgid "/_Preferences..."
-msgstr "/_Параметры..."
-
-#: ../src/lxterminal.c:97
-msgid "/sep3"
-msgstr "/sep3"
-
-#: ../src/lxterminal.c:98
-msgid "/_Close Tab"
+#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
+#, fuzzy
+msgid "_Close Tab"
 msgstr "/_Закрыть вкладку"
 
-#: ../src/lxterminal.c:340
-#: ../src/lxterminal.c:383
-#: ../src/lxterminal.c:409
-#: ../src/lxterminal.c:689
-#: ../src/lxterminal.c:715
-#: ../src/lxterminal.c:718
+#: ../src/lxterminal.c:93
+msgid "_Quit"
+msgstr ""
+
+#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
+#, fuzzy
+msgid "_Copy"
+msgstr "/_Копировать"
+
+#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
+#, fuzzy
+msgid "_Paste"
+msgstr "/_Вставить"
+
+#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
+#, fuzzy
+msgid "_Preferences"
+msgstr "Параметры"
+
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:99
+#, fuzzy
+msgid "_Previous Tab"
+msgstr "/_Вкладки/_Предыдущая вкладка"
+
+#: ../src/lxterminal.c:100
+#, fuzzy
+msgid "_Next Tab"
+msgstr "/_Новая вкладка"
+
+#: ../src/lxterminal.c:101
+#, fuzzy
+msgid "_About"
+msgstr "/_Справка/_О программе"
+
+#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
+#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:375
+#: ../src/lxterminal.c:428
 msgid "translator-credits"
 msgstr ""
 "Runtu Translation Team \n"
 "Alexander Vozhennikov (vodka_ploho@mail.ru)"
 
-#: ../src/lxterminal.c:385
+#: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
 msgstr "Авторские права(C) 2009"
 
-#: ../src/lxterminal.c:386
+#: ../src/lxterminal.c:439
 msgid "Terminal emulator for LXDE project"
 msgstr "Эмулятор терминала для проекта LXDE"
 
@@ -165,35 +282,86 @@ msgstr "Цвет фона:"
 msgid "Foreground:"
 msgstr "Цвет текста:"
 
-#. Scrollback buffer
+#. Transparent background
 #: ../src/preferences.c:91
+#, fuzzy
+msgid "Transparent Background:"
+msgstr "Цвет фона:"
+
+#. Scrollback buffer
+#: ../src/preferences.c:100
 msgid "Scrollback lines:"
 msgstr "Прокручивать строк:"
 
-#: ../src/preferences.c:100
+#. tab-panel position
+#: ../src/preferences.c:108
 msgid "Tab panel position:"
 msgstr "Расположение вкладок:"
 
-#: ../src/preferences.c:102
+#: ../src/preferences.c:111
 msgid "Top"
 msgstr "Сверху"
 
-#: ../src/preferences.c:103
+#: ../src/preferences.c:112
 msgid "Bottom"
 msgstr "Снизу"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:113
 msgid "Left"
 msgstr "Слева"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:114
 msgid "Right"
 msgstr "Справа"
 
+#. Disable F10 for menu
+#: ../src/preferences.c:120
+msgid "Disable F10 shortcut for menu:"
+msgstr ""
+
 #. create window
-#: ../src/preferences.c:259
+#: ../src/preferences.c:280
 msgid "Preferences"
 msgstr "Параметры"
 
+#~ msgid "/_File/_New Window"
+#~ msgstr "/_Файл/_Новое окно"
 
- 	  	 
+#~ msgid "/_File/_New Tab"
+#~ msgstr "/_Файл/_Новая вкладка"
+
+#~ msgid "/_File/sep1"
+#~ msgstr "/_Файл/sep1"
+
+#~ msgid "/_File/_Close Tab"
+#~ msgstr "/_Файл/_Закрыть вкладку"
+
+#~ msgid "/_File/_Quit"
+#~ msgstr "/_Файл/_Выйти"
+
+#~ msgid "/_Edit/_Copy"
+#~ msgstr "/_Правка/_Копировать"
+
+#~ msgid "/_Edit/_Paste"
+#~ msgstr "/_Правка/_Вставить"
+
+#~ msgid "/_Edit/sep1"
+#~ msgstr "/_Правка/sep1"
+
+#~ msgid "/_Edit/_Preferences..."
+#~ msgstr "/_Правка/_Параметры..."
+
+#~ msgid "/_Tabs/_Next Tab"
+#~ msgstr "/_Вкладки/_Следующая вкладка"
+
+#~ msgid "/sep1"
+#~ msgstr "/sep1"
+
+#~ msgid "/sep2"
+#~ msgstr "/sep2"
+
+#~ msgid "/_Preferences..."
+#~ msgstr "/_Параметры..."
+
+#~ msgid "/sep3"
+#~ msgstr "/sep3"

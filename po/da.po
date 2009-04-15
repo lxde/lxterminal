@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-09 03:05+0100\n"
+"POT-Creation-Date: 2009-04-15 21:08+0200\n"
 "PO-Revision-Date: 2009-03-23 16:35+0100\n"
 "Last-Translator: charlie tyrrestrup <chalze06@gmail.com>\n"
 "Language-Team: da\n"
@@ -168,87 +168,81 @@ msgstr "Vietnamesisk"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/lxterminal.c:108
+#: ../src/lxterminal.c:78
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/lxterminal.c:109
+#: ../src/lxterminal.c:79
 msgid "_Edit"
 msgstr "_Rediger"
 
-#: ../src/lxterminal.c:110
-msgid "_View"
-msgstr "_Vis"
-
-#: ../src/lxterminal.c:111
+#. { "View", NULL, N_("_View") },
+#: ../src/lxterminal.c:81
 msgid "_Tabs"
 msgstr "_Faneblade"
 
-#: ../src/lxterminal.c:112
+#: ../src/lxterminal.c:82
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../src/lxterminal.c:118 ../src/lxterminal.c:137
+#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
 msgid "_New Window"
 msgstr "_Nyt Vindue"
 
-#: ../src/lxterminal.c:119 ../src/lxterminal.c:138
+#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
 msgid "_New Tab"
 msgstr "_Nyt Faneblad"
 
-#: ../src/lxterminal.c:121 ../src/lxterminal.c:145
+#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
 msgid "_Close Tab"
 msgstr "_Luk Faneblad"
 
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:93
 msgid "_Quit"
 msgstr "_Afslut"
 
-#: ../src/lxterminal.c:123 ../src/lxterminal.c:140
+#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
 msgid "_Copy"
 msgstr "_Kopier"
 
-#: ../src/lxterminal.c:124 ../src/lxterminal.c:141
+#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
 msgid "_Paste"
 msgstr "_Indsæt"
 
-#: ../src/lxterminal.c:126 ../src/lxterminal.c:143
+#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
 msgid "_Preferences"
 msgstr "_Indstillinger"
 
-#: ../src/lxterminal.c:127
-msgid "_Character Encoding"
-msgstr "_Tegnkode"
-
-#: ../src/lxterminal.c:128
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:99
 msgid "_Previous Tab"
 msgstr "_Forrige Faneblad"
 
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:100
 msgid "_Next Tab"
 msgstr "_Næste Faneblad"
 
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:101
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/lxterminal.c:412 ../src/lxterminal.c:455 ../src/lxterminal.c:481
-#: ../src/lxterminal.c:871 ../src/lxterminal.c:897 ../src/lxterminal.c:900
+#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
+#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:447
+#: ../src/lxterminal.c:428
 msgid "translator-credits"
 msgstr ""
 "Vidar Jon Bauge \n"
 "Charlie Tyrrestrup"
 
-#: ../src/lxterminal.c:457
+#: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:458
+#: ../src/lxterminal.c:439
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal emulator for LXDE projektet"
 
@@ -276,36 +270,53 @@ msgstr "Baggrund:"
 msgid "Foreground:"
 msgstr "Forgrund:"
 
-#. Scrollback buffer
+#. Transparent background
 #: ../src/preferences.c:91
+#, fuzzy
+msgid "Transparent Background:"
+msgstr "Baggrund:"
+
+#. Scrollback buffer
+#: ../src/preferences.c:100
 msgid "Scrollback lines:"
 msgstr "Scrollback linjer:"
 
 #. tab-panel position
-#: ../src/preferences.c:99
+#: ../src/preferences.c:108
 msgid "Tab panel position:"
 msgstr "Faneblad panel position:"
 
-#: ../src/preferences.c:102
+#: ../src/preferences.c:111
 msgid "Top"
 msgstr "Top"
 
-#: ../src/preferences.c:103
+#: ../src/preferences.c:112
 msgid "Bottom"
 msgstr "Bund"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:113
 msgid "Left"
 msgstr "Venstre"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:114
 msgid "Right"
 msgstr "Højre"
 
+#. Disable F10 for menu
+#: ../src/preferences.c:120
+msgid "Disable F10 shortcut for menu:"
+msgstr ""
+
 #. create window
-#: ../src/preferences.c:260
+#: ../src/preferences.c:280
 msgid "Preferences"
 msgstr "Indstillinger"
+
+#~ msgid "_View"
+#~ msgstr "_Vis"
+
+#~ msgid "_Character Encoding"
+#~ msgstr "_Tegnkode"
 
 #~ msgid "/_File/_New Window"
 #~ msgstr "/_Fil/_Nyt Vindue"
