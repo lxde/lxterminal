@@ -8,12 +8,13 @@ msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-01-25 14:56+0200\n"
+"PO-Revision-Date: 2009-04-16 17:12+0200\n"
 "Last-Translator: Ahmad Farghal <ahmad.farghal@gmail.com>\n"
 "Language-Team: Arabic\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -267,9 +268,8 @@ msgstr "النص:"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "الخلفية:"
+msgstr "خلفية شفافة:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
@@ -300,7 +300,7 @@ msgstr "اليمين"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "عطّل الاختصار F10 للقائمة:"
 
 #. create window
 #: ../src/preferences.c:280

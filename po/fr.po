@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-04-10 00:28+0200\n"
+"PO-Revision-Date: 2009-04-16 09:24+0200\n"
 "Last-Translator: Cilyan Olowen <gaknar@gmail.com>\n"
 "Language-Team: fr <gaknar@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -263,14 +263,13 @@ msgstr "Premier plan :"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "Arrière-plan :"
+msgstr "Arrière-plan transparent :"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Lignes dans l'historique :"
 
 #. tab-panel position
 #: ../src/preferences.c:108
@@ -296,7 +295,7 @@ msgstr "Droite"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Désactiver le raccourcis pour le menu F10 :"
 
 #. create window
 #: ../src/preferences.c:280

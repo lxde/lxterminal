@@ -8,12 +8,13 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-01-05 10:20+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"PO-Revision-Date: 2009-04-16 00:23+0200\n"
+"Last-Translator: Martin Bagge <brother@bsnet.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -271,9 +272,8 @@ msgstr "Förgrund:"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "Bakgrund:"
+msgstr "Transparent bakgrund:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
@@ -304,7 +304,7 @@ msgstr "Höger"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Avaktivera tangentbordsgenvägen F10 för meny:"
 
 #. create window
 #: ../src/preferences.c:280
