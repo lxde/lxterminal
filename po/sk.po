@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-02-13 15:59+0100\n"
+"PO-Revision-Date: 2009-04-16 11:00+0100\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -267,9 +267,8 @@ msgstr "Popredie:"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "Pozadie:"
+msgstr "Priesvitné pozadie:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
@@ -300,7 +299,7 @@ msgstr "Vpravo"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Vypnúť vyvolanie menu pomocou F10:"
 
 #. create window
 #: ../src/preferences.c:280
