@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-03-04 22:41+0100\n"
+"PO-Revision-Date: 2009-04-21 22:06+0200\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -263,9 +263,8 @@ msgstr "Передній план:"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "Тло:"
+msgstr "Прозоре тло:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
@@ -296,7 +295,7 @@ msgstr "Справа"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Вимкнути скорочення F10 в меню:"
 
 #. create window
 #: ../src/preferences.c:280
