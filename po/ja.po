@@ -3,13 +3,14 @@
 # Copyright (C) 2008, 2009 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
 # Hironao Komatsu <hironao@users.sourceforge.net>, 2008, 2009.
+# IWAI, Masaharu <iwai@alib.jp>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-03-25 18:10+0900\n"
+"PO-Revision-Date: 2009-04-24 18:28+0900\n"
 "Last-Translator: IWAI, Masaharu <iwai@alib.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -271,9 +272,8 @@ msgstr "前景色:"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "背景色:"
+msgstr "透過/背景色:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
@@ -304,7 +304,7 @@ msgstr "右"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "メニューへのショートカット F10 の無効化:"
 
 #. create window
 #: ../src/preferences.c:280
