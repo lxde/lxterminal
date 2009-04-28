@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-15 21:08+0200\n"
+"POT-Creation-Date: 2009-04-27 21:53-0400\n"
 "PO-Revision-Date: 2009-03-12 01:50-0300\n"
 "Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
@@ -56,7 +56,7 @@ msgstr "Europeu Central"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Europeu do sul"
+msgstr "Europeu do Sul"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
@@ -236,7 +236,8 @@ msgstr "LXTerminal"
 msgid "translator-credits"
 msgstr ""
 "Fábio Antunes <nospam@emal.com>\n"
-"Og Maciel <ogmaciel@gnome.org>"
+"Og Maciel <ogmaciel@gnome.org>\n"
+"Henrique P. Machado <zehrique@gmail.com>"
 
 #: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
@@ -272,9 +273,8 @@ msgstr "Frente:"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "Fundo:"
+msgstr "Fundo transparente:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
@@ -305,7 +305,7 @@ msgstr "Direita"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Desabilitar atalho de tecla F10 para menu:"
 
 #. create window
 #: ../src/preferences.c:280
