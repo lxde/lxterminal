@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-04-25 10:25+0200\n"
-"Last-Translator: Александр Голубев <ag@lhp.ru>\n"
+"PO-Revision-Date: 2009-04-29 09:46+0200\n"
+"Last-Translator: Vitaly Pashkov <admin@fluda.net>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -32,7 +32,7 @@ msgstr "Восточноазиатская"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "Юговосточная и югозападная азиатская"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
@@ -60,7 +60,7 @@ msgstr "Южноевропейская"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr "Прибалтика"
+msgstr "Прибалтийская"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
@@ -70,11 +70,11 @@ msgstr "Кириллица"
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr "Арабский"
+msgstr "Арабская"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr "Греческий"
+msgstr "Греческая"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
@@ -88,49 +88,49 @@ msgstr "Иврит"
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr "Турецкий"
+msgstr "Турецкая"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr "Северная"
+msgstr "Скандинавская"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Кельтская"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr "Романский"
+msgstr "Румынская"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr "Армянский"
+msgstr "Армянская"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr "Китайский традиционный"
+msgstr "Китайская традиционная"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr "Кириллица/Русский"
+msgstr "Кириллица/Россия"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr "Японский"
+msgstr "Японская"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr "Корейский"
+msgstr "Корейская"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr "Китайский упрощенный"
+msgstr "Китайская упрощенная"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr "Грузинский"
+msgstr "Грузинская"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
@@ -138,7 +138,7 @@ msgstr "Кириллица/Украина"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr "Хорватский"
+msgstr "Хорватская"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
@@ -150,23 +150,23 @@ msgstr "Фарси"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Гуджарати"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Гурмуки"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Исландская"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr "Вьетнамский"
+msgstr "Вьетнамская"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr "Тайский"
+msgstr "Тайская"
 
 #: ../src/lxterminal.c:78
 #, fuzzy
