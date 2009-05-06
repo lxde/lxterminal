@@ -48,6 +48,7 @@ void setting_save(Setting *setting)
 	g_key_file_set_string(setting->keyfile, "general", "fontname", setting->fontname);
 	g_key_file_set_string(setting->keyfile, "general", "selchars", setting->selchars);
 	g_key_file_set_string(setting->keyfile, "general", "bgcolor", setting->bgcolor);
+	g_key_file_set_integer(setting->keyfile, "general", "bgalpha", setting->bgalpha);
 	g_key_file_set_string(setting->keyfile, "general", "fgcolor", setting->fgcolor);
 	g_key_file_set_boolean(setting->keyfile, "general", "bgtransparent", setting->bgtransparent);
 	g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tabpos);
@@ -85,6 +86,7 @@ Setting *load_setting_from_file(const char *filename)
 		setting->fontname = g_key_file_get_string(setting->keyfile, "general", "fontname", NULL);
 		setting->selchars = g_key_file_get_string(setting->keyfile, "general", "selchars", NULL);
 		setting->bgcolor = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
+		setting->bgalpha = g_key_file_get_integer(setting->keyfile, "general", "bgalpha", NULL);
 		setting->fgcolor = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
 		setting->bgtransparent = g_key_file_get_boolean(setting->keyfile, "general", "bgtransparent", NULL);
 		setting->tabpos = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
@@ -103,6 +105,9 @@ setting_default:
 	if (!setting->bgcolor)
 		setting->bgcolor = g_strdup("#000000");
 	
+	if (!setting->bgalpha)
+		setting->bgalpha = (guint16) 0xDDDD;
+
 	if (!setting->fgcolor)
 		setting->fgcolor = g_strdup("#aaaaaa");
 

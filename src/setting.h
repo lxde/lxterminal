@@ -7,6 +7,7 @@ typedef struct _setting {
 	char *bgcolor;
 	char *fgcolor;
 	char *tabpos;
+	guint16 bgalpha;
 	glong scrollback;
 	gboolean disablef10;
 	gboolean bgtransparent;

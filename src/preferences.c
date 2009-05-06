@@ -77,6 +77,8 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	pg->bgcolor_label = gtk_label_new(_("Background:"));
 	gtk_misc_set_alignment(pg->bgcolor_label, 1, 0.5);
 	pg->bgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->background);
+	gtk_color_button_set_use_alpha( pg->bgcolor_entry, TRUE );
+	gtk_color_button_set_alpha( pg->bgcolor_entry, prefer->terminal->setting->bgalpha );
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_label, 0,2, 3,4);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_entry, 2,4, 3,4);
 
@@ -147,6 +149,7 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 	prefer->terminal->setting->scrollback = (glong)gtk_spin_button_get_value_as_int((GtkSpinButton *)pg->scrollback_entry);
 	prefer->terminal->setting->disablef10 = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->disablef10_checkbox);
 	prefer->terminal->setting->bgtransparent = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->bgtransparent_checkbox);
+	prefer->terminal->setting->bgalpha = (guint16)gtk_color_button_get_alpha( (GtkColorButton *)pg->bgcolor_entry );
 
 	/* Tab position */
 	g_free( prefer->terminal->setting->tabpos );

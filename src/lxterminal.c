@@ -626,7 +626,19 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 
 	vte_terminal_set_colors(VTE_TERMINAL(term->vte), &terminal->foreground, &terminal->background, &linux_color, 16);
 
-	vte_terminal_set_background_transparent(VTE_TERMINAL(term->vte), terminal->setting->bgtransparent);
+	/* background transparent */
+	if( terminal->setting->bgtransparent ){
+		if( terminal->rgba ){
+			vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
+			vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
+		} else {
+			vte_terminal_set_background_transparent((VteTerminal *)term->vte, TRUE);
+			vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
+		}
+	} else {
+		vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
+		vte_terminal_set_opacity((VteTerminal *)term->vte, 65535);
+	}
 
 	/* create label for tab */
 	term->label = lxterminal_tab_label_new(label);
@@ -833,9 +845,22 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 		vte_terminal_set_font_from_string((VteTerminal *)term->vte, terminal->setting->fontname);
 		vte_terminal_set_word_chars((VteTerminal *)term->vte, terminal->setting->selchars);
 		vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
-		vte_terminal_set_color_background((VteTerminal *)term->vte, &terminal->background);
-		vte_terminal_set_color_foreground((VteTerminal *)term->vte, &terminal->foreground);
-		vte_terminal_set_background_transparent(VTE_TERMINAL(term->vte), terminal->setting->bgtransparent);
+
+		/* background transparent */
+		if( terminal->setting->bgtransparent ){
+			if( terminal->rgba ){
+				vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
+				vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
+			} else {
+				vte_terminal_set_background_transparent((VteTerminal *)term->vte, TRUE);
+				vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
+			}
+		} else {
+			vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
+			vte_terminal_set_opacity((VteTerminal *)term->vte, 65535);
+		}
+
+		vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color, 16);
 	}
 
 	/* update tab position */
@@ -896,6 +921,15 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	/* create window */
 	terminal->mainw = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
+	/* know if it is composited */
+	terminal->rgba = gtk_widget_is_composited( GTK_WINDOW(terminal->mainw) );
+
+	if (terminal->rgba){
+		GdkColormap *colormap = gdk_screen_get_rgba_colormap( gtk_widget_get_screen( GTK_WINDOW(terminal->mainw) ) );
+		if (colormap)
+			gtk_widget_set_colormap( GTK_WINDOW(terminal->mainw), colormap );
+	}
+
 	if (!title)
 		gtk_window_set_title(GTK_WINDOW(terminal->mainw), _("LXTerminal"));
 	else
@@ -916,6 +950,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	terminal->notebook = gtk_notebook_new();
 	gtk_notebook_set_scrollable(GTK_NOTEBOOK(terminal->notebook), TRUE);
 	gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
+	gtk_notebook_set_show_border(GTK_NOTEBOOK(terminal->notebook), FALSE);
 
 	/* Tab Position */
 	terminal->tabpos = lxterminal_tab_get_position_id(terminal->setting->tabpos);
@@ -1028,3 +1063,4 @@ int main(gint argc, gchar** argv)
 
     return 0;
 }
+
