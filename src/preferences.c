@@ -55,60 +55,60 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	tab->childs = pg;
 
 	pg->box = gtk_table_new(6,4, FALSE);
-	gtk_table_set_row_spacings(pg->box, 3);
-	gtk_table_set_col_spacings(pg->box, 5);
+	gtk_table_set_row_spacings(GTK_TABLE(pg->box), 3);
+	gtk_table_set_col_spacings(GTK_TABLE(pg->box), 5);
 
 	/* terminal font */
 	pg->font_label = gtk_label_new(_("Terminal Font:"));
-	gtk_misc_set_alignment(pg->font_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->font_label), 1, 0.5);
 	pg->font_button = gtk_font_button_new_with_font(prefer->terminal->setting->fontname);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_label, 0,2, 0,1);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_button, 2,4, 0,1);
 
 	/* Select-by-word */
 	pg->selchars_label = gtk_label_new(_("Select-by-word characters:"));
-	gtk_misc_set_alignment(pg->selchars_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->selchars_label), 1, 0.5);
 	pg->selchars_entry = gtk_entry_new();
-	gtk_entry_set_text((GtkEntry *)pg->selchars_entry, prefer->terminal->setting->selchars);
+	gtk_entry_set_text(GTK_ENTRY(pg->selchars_entry), prefer->terminal->setting->selchars);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_label, 0,2, 1,2);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_entry, 2,4, 1,2);
 
 	/* Background color */
 	pg->bgcolor_label = gtk_label_new(_("Background:"));
-	gtk_misc_set_alignment(pg->bgcolor_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->bgcolor_label), 1, 0.5);
 	pg->bgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->background);
-	gtk_color_button_set_use_alpha( pg->bgcolor_entry, TRUE );
-	gtk_color_button_set_alpha( pg->bgcolor_entry, prefer->terminal->setting->bgalpha );
+	gtk_color_button_set_use_alpha(GTK_COLOR_BUTTON(pg->bgcolor_entry), TRUE);
+	gtk_color_button_set_alpha(GTK_COLOR_BUTTON(pg->bgcolor_entry), prefer->terminal->setting->bgalpha);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_label, 0,2, 3,4);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_entry, 2,4, 3,4);
 
 	/* Foreground color */
 	pg->fgcolor_label = gtk_label_new(_("Foreground:"));
-	gtk_misc_set_alignment(pg->fgcolor_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->fgcolor_label), 1, 0.5);
 	pg->fgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->foreground);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_label, 0,2, 4,5);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_entry, 2,4, 4,5);
 
 	/* Transparent background */
 	pg->bgtransparent_label = gtk_label_new(_("Transparent Background:"));
-	gtk_misc_set_alignment(pg->bgtransparent_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->bgtransparent_label), 1, 0.5);
 	pg->bgtransparent_checkbox = gtk_check_button_new();
 
-	gtk_toggle_button_set_active((GtkToggleButton *)pg->bgtransparent_checkbox, prefer->terminal->setting->bgtransparent);
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->bgtransparent_checkbox), prefer->terminal->setting->bgtransparent);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgtransparent_label, 0,2, 5,6);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgtransparent_checkbox, 2,4, 5,6);
 
 	/* Scrollback buffer */
 	pg->scrollback_label = gtk_label_new(_("Scrollback lines:"));
-	gtk_misc_set_alignment(pg->scrollback_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->scrollback_label), 1, 0.5);
 	pg->scrollback_entry = gtk_spin_button_new_with_range(100, 100000, 10);
-	gtk_spin_button_set_value((GtkSpinButton *)pg->scrollback_entry, (gdouble)prefer->terminal->setting->scrollback);
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(pg->scrollback_entry), (gdouble)prefer->terminal->setting->scrollback);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_label, 0,2, 6,7);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_entry, 2,4, 6,7);
 
 	/* tab-panel position */
 	pg->tabpos_label = gtk_label_new(_("Tab panel position:"));
-	gtk_misc_set_alignment(pg->tabpos_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->tabpos_label), 1, 0.5);
 	pg->tabpos_combobox = gtk_combo_box_new_text();
 	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Top"));
 	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Bottom"));
@@ -120,10 +120,10 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 
 	/* Disable F10 for menu */
 	pg->disablef10_label = gtk_label_new(_("Disable F10 shortcut for menu:"));
-	gtk_misc_set_alignment(pg->disablef10_label, 1, 0.5);
+	gtk_misc_set_alignment(GTK_MISC(pg->disablef10_label), 1, 0.5);
 	pg->disablef10_checkbox = gtk_check_button_new();
 
-	gtk_toggle_button_set_active((GtkToggleButton *)pg->disablef10_checkbox, prefer->terminal->setting->disablef10);
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->disablef10_checkbox), prefer->terminal->setting->disablef10);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_label, 0,2, 8,9);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_checkbox, 2,4, 8,9);
 
@@ -149,7 +149,7 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 	prefer->terminal->setting->scrollback = (glong)gtk_spin_button_get_value_as_int((GtkSpinButton *)pg->scrollback_entry);
 	prefer->terminal->setting->disablef10 = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->disablef10_checkbox);
 	prefer->terminal->setting->bgtransparent = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->bgtransparent_checkbox);
-	prefer->terminal->setting->bgalpha = (guint16)gtk_color_button_get_alpha( (GtkColorButton *)pg->bgcolor_entry );
+	prefer->terminal->setting->bgalpha = (guint16)gtk_color_button_get_alpha(GTK_COLOR_BUTTON(pg->bgcolor_entry));
 
 	/* Tab position */
 	g_free( prefer->terminal->setting->tabpos );
@@ -227,8 +227,9 @@ void lxterminal_preferences_page_init(Prefer *prefer)
 	}
 }
 
-void lxterminal_preferences_free(Prefer *prefer)
+void lxterminal_preferences_free(gpointer prefer_p, GObject * where_the_object_was)
 {
+	Prefer * prefer = (Prefer *) prefer_p;
 	TabWidget *tab;
 	int i;
 
@@ -261,7 +262,7 @@ void lxterminal_preferences_on_response(GtkDialog* dlg, gint response, Prefer *p
 		/* update NOW! */
 		/* update all terminals in all windows */
 		g_ptr_array_foreach(prefer->terminal->parent->windows,
-					terminal_setting_update,
+					(GFunc) terminal_setting_update,
 					prefer->terminal->setting);
 	}
 

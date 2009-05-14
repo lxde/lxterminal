@@ -27,6 +27,8 @@
 #include <gdk/gdkx.h>
 #include <glib/gi18n.h>
 #include <vte/vte.h>
+#include <langinfo.h>
+#include <locale.h>
 
 #include "lxterminal.h"
 #include "setting.h"
@@ -57,17 +59,18 @@ const GdkColor linux_color[16] =
 };
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
+void terminal_childexit(VteTerminal *vte, Term *term);
 
 /* menu accel saved when the user disables it */
 static char *saved_menu_accel = NULL;
 
 static gchar helpmsg[] = {
 	"Usage:\n"
-	"  lxterminal [Options...] - LXTerminal is a terimnal emulator\n\n"
+	"  lxterminal [Options...] - LXTerminal is a terminal emulator\n\n"
 	"Options:\n"
 	"  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
 	"  -t, --title=STRING               Set the terminal's title\n"
-	"  --working-directory=DIRECTOR     Set the terminal's working directory\n"
+	"  --working-directory=DIRECTORY    Set the terminal's working directory\n"
 	"  --geometry=GEOMETRY              X geometry specification (see \"X\" man page), can be specified once per window to be opened.\n"
 };
 
@@ -378,7 +381,7 @@ void terminal_newwindow(GtkAction *action, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
 
-	lxterminal_init(terminal->parent, NULL, NULL, terminal->setting);
+	lxterminal_init(terminal->parent, 0, NULL, terminal->setting);
 }
 
 void terminal_newtab_accel(gpointer data, guint action, GtkWidget *item)
@@ -411,7 +414,7 @@ void terminal_newtab(GtkWidget *widget, gpointer data)
 	}
 }
 
-static void open_url( GtkDialog* dlg, const char* url, gpointer data )
+static void open_url( GtkAboutDialog* dlg, const gchar* url, gpointer data )
 {
     /* FIXME: */
 }
@@ -424,7 +427,7 @@ void terminal_about(GtkAction *action, gpointer data)
         "Fred Chien <cfsghost@gmail.com>",
         NULL
     };
-    /* TRANSLATORS: Replace mw string with your names, one name per line. */
+    /* TRANSLATORS: Replace this string with your names, one name per line. */
     gchar *translators = _( "translator-credits" );
 
     gtk_about_dialog_set_url_hook( open_url, NULL, NULL);
@@ -437,7 +440,7 @@ void terminal_about(GtkAction *action, gpointer data)
     gtk_about_dialog_set_logo( (GtkAboutDialog*)about_dlg, gdk_pixbuf_new_from_file(  PACKAGE_DATA_DIR"/pixmaps/lxterminal.png", NULL ) );
     gtk_about_dialog_set_copyright ( (GtkAboutDialog*)about_dlg, _( "Copyright (C) 2008" ) );
     gtk_about_dialog_set_comments ( (GtkAboutDialog*)about_dlg, _( "Terminal emulator for LXDE project" ) );
-    gtk_about_dialog_set_license ( (GtkAboutDialog*)about_dlg, "This program is free software; you can redistribute it and/or\nmodify it under the terms of the GNU General Public License\nas published by the Free Software Foundation; either version 2\nof the License, or (at your option) any later version.\n\nmw program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with mw program; if not, write to the Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA." );
+    gtk_about_dialog_set_license ( (GtkAboutDialog*)about_dlg, "This program is free software; you can redistribute it and/or\nmodify it under the terms of the GNU General Public License\nas published by the Free Software Foundation; either version 2\nof the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program; if not, write to the Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA." );
     gtk_about_dialog_set_website ( (GtkAboutDialog*)about_dlg, "http://lxde.org/" );
     gtk_about_dialog_set_authors ( (GtkAboutDialog*)about_dlg, authors );
     gtk_about_dialog_set_translator_credits ( (GtkAboutDialog*)about_dlg, translators );
@@ -448,7 +451,7 @@ void terminal_about(GtkAction *action, gpointer data)
 
 void terminal_switch_tab(GtkNotebook *notebook, GtkNotebookPage *page, guint num, gpointer data)
 {
-	gchar *title;
+	const gchar *title;
 	Term *term;
 	LXTerminal *terminal = (LXTerminal *)data;
 
@@ -473,8 +476,9 @@ void terminal_title_changed(VteTerminal *vte, Term *term)
 	gtk_window_set_title(GTK_WINDOW(term->parent->mainw), vte_terminal_get_window_title(VTE_TERMINAL(vte)));
 }
 
-void terminal_windowexit(LXTerminal *terminal)
+void terminal_windowexit(gpointer terminal_p, GObject *where_the_object_was)
 {
+	LXTerminal * terminal = (LXTerminal *) terminal_p;
 	int i;
 
 	if (terminal->parent->windows->len==1) {
@@ -537,9 +541,9 @@ void terminal_childexit(VteTerminal *vte, Term *term)
 
 			/* recovery window size */
 			vte_terminal_set_size(VTE_TERMINAL(t->vte), cols, rows);
-			gtk_window_resize(terminal->mainw,
-								xpad + VTE_TERMINAL(t->vte)->char_width,
-								ypad + VTE_TERMINAL(t->vte)->char_height);
+			gtk_window_resize(GTK_WINDOW(terminal->mainw),
+				xpad + VTE_TERMINAL(t->vte)->char_width,
+				ypad + VTE_TERMINAL(t->vte)->char_height);
 		}
 	}
 }
@@ -588,7 +592,7 @@ gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *event, gpoi
 	return FALSE;
 }
 
-Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env, const gchar *exec)
+Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, gchar **env, const gchar *exec)
 {
 	Term *term;
 
@@ -607,6 +611,10 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 	vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
 	vte_terminal_set_emulation((VteTerminal *)term->vte, "xterm");
 
+	/* Set encoding from locale. */
+	setlocale(LC_ALL, "");
+	vte_terminal_set_encoding((VteTerminal *)term->vte, nl_langinfo(CODESET));
+
 	/* fixing bugs for specific environment */
 	vte_terminal_set_backspace_binding((VteTerminal *)term->vte, VTE_ERASE_ASCII_DELETE);
 	vte_terminal_set_delete_binding((VteTerminal *)term->vte, VTE_ERASE_DELETE_SEQUENCE);
@@ -624,7 +632,7 @@ Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, c
 		printf("Bad fgcolor string in config: %s\n", terminal->setting->fgcolor);
 	}
 
-	vte_terminal_set_colors(VTE_TERMINAL(term->vte), &terminal->foreground, &terminal->background, &linux_color, 16);
+	vte_terminal_set_colors(VTE_TERMINAL(term->vte), &terminal->foreground, &terminal->background, &linux_color[0], 16);
 
 	/* background transparent */
 	if( terminal->setting->bgtransparent ){
@@ -749,57 +757,56 @@ void lxterminal_accelerator_init(LXTerminal *terminal)
 	terminal->menubar->accel_group = gtk_accel_group_new();
 
 	gtk_accelerator_parse(NEW_WINDOW_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newwindow_accel, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_newwindow_accel), terminal, NULL));
 
 	gtk_accelerator_parse(QUIT_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(gtk_main_quit, NULL, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(gtk_main_quit), NULL, NULL));
 
 	gtk_accelerator_parse(NEW_TAB_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_newtab_accel, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_newtab_accel), terminal, NULL));
 
 	gtk_accelerator_parse(CLOSE_TAB_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_closetab_accel, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_closetab_accel), terminal, NULL));
 
 	gtk_accelerator_parse(COPY_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_copy_accel, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_copy_accel), terminal, NULL));
 
 	gtk_accelerator_parse(PASTE_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_paste_accel, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_paste_accel), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB1_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab1, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab1), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB2_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab2, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab2), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB3_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab3, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab3), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB4_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab4, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab4), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB5_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab5, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab5), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB6_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab6, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab6), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB7_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab7, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab7), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB8_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab8, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab8), terminal, NULL));
 
 	gtk_accelerator_parse(SWITCH_TAB9_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_switchtab9, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_switchtab9), terminal, NULL));
 
 	gtk_accelerator_parse(NEXT_TAB_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_nexttab_accel, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_nexttab_accel), terminal, NULL));
 
 	gtk_accelerator_parse(PREVIOUS_TAB_ACCEL, &key, &mods);
-	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(terminal_prevtab_accel, terminal, NULL));
+	gtk_accel_group_connect(terminal->menubar->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_prevtab_accel), terminal, NULL));
 
-//	gtk_accel_group_lock(terminal->menubar->accel_group);
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
 }
 
@@ -860,7 +867,7 @@ void terminal_setting_update(LXTerminal *terminal, Setting *setting)
 			vte_terminal_set_opacity((VteTerminal *)term->vte, 65535);
 		}
 
-		vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color, 16);
+		vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color[0], 16);
 	}
 
 	/* update tab position */
@@ -922,12 +929,12 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	terminal->mainw = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
 	/* know if it is composited */
-	terminal->rgba = gtk_widget_is_composited( GTK_WINDOW(terminal->mainw) );
+	terminal->rgba = gtk_widget_is_composited( GTK_WIDGET(terminal->mainw) );
 
 	if (terminal->rgba){
-		GdkColormap *colormap = gdk_screen_get_rgba_colormap( gtk_widget_get_screen( GTK_WINDOW(terminal->mainw) ) );
+		GdkColormap *colormap = gdk_screen_get_rgba_colormap( gtk_widget_get_screen( GTK_WIDGET(terminal->mainw) ) );
 		if (colormap)
-			gtk_widget_set_colormap( GTK_WINDOW(terminal->mainw), colormap );
+			gtk_widget_set_colormap( GTK_WIDGET(terminal->mainw), colormap );
 	}
 
 	if (!title)
@@ -936,7 +943,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 		gtk_window_set_title(GTK_WINDOW(terminal->mainw), title);
 
 	gtk_window_set_icon_from_file(GTK_WINDOW(terminal->mainw), PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL);
-	g_object_weak_ref(terminal->mainw, terminal_windowexit, terminal);
+	g_object_weak_ref((GObject *) terminal->mainw, terminal_windowexit, terminal);
 
 	/* create box for putting menubar and notebook */
 	terminal->box = gtk_vbox_new(FALSE, 1);

@@ -237,7 +237,7 @@ GtkWidget *encoding_list_menu_init()
 			if (encodings[j].category==encategories[i].index) {
 //				printf("%s\n", gettext(encodings[j].name));
 				sprintf(en_name, "%s (%s)", gettext(encodings[j].name), encodings[j].charset);
-				item = gtk_radio_menu_item_new_with_label(item ? gtk_radio_menu_item_get_group(item) : NULL, en_name);
+				item = gtk_radio_menu_item_new_with_label(item ? gtk_radio_menu_item_get_group((GtkRadioMenuItem *) item) : NULL, en_name);
 				gtk_menu_shell_append(GTK_MENU_SHELL(submenu), item);
 			}
 		}

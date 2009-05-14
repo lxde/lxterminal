@@ -10,10 +10,8 @@
 #define COPY_ACCEL "<CTRL><SHIFT>C"
 #define PASTE_ACCEL "<CTRL><SHIFT>V"
 #define RENAME_TAB_ACCEL "<CTRL><SHIFT>R"
-#define PREVIOUS_TAB_ACCEL "<CTRL>Page_Up"
-#define NEXT_TAB_ACCEL "<CTRL>Page_Down"
-#define PREVIOUS_TAB_ACCEL_GNOME "<CTRL><SHIFT>Page_Down"
-#define NEXT_TAB_ACCEL_GNOME "<CTRL><SHIFT>Page_Up"
+#define PREVIOUS_TAB_ACCEL "<CTRL><SHIFT>Page_Down"
+#define NEXT_TAB_ACCEL "<CTRL><SHIFT>Page_Up"
 #define SWITCH_TAB1_ACCEL "<ALT>1"
 #define SWITCH_TAB2_ACCEL "<ALT>2"
 #define SWITCH_TAB3_ACCEL "<ALT>3"
@@ -70,9 +68,8 @@ typedef struct _term {
 } Term;
 
 
-Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, const gchar **env, const gchar *exec);
+Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, gchar **env, const gchar *exec);
 void terminal_newwindow(GtkAction *action, gpointer data);
-//void terminal_newwindow(gpointer data, guint action, GtkWidget *item);
 void terminal_newtab(GtkWidget *widget, gpointer data);
 void terminal_closetab(GtkAction *action, gpointer data);
 void terminal_nexttab(GtkAction *action, gpointer data);

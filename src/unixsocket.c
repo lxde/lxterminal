@@ -31,7 +31,7 @@
 #include "unixsocket.h"
 
 static gboolean
-lxterminal_socket_read_channel(GIOChannel *gio, GIOCondition condition, LXTermWindow *lxtermwin)
+lxterminal_socket_read_channel(GIOChannel *gio, GIOCondition condition, gpointer lxtermwin)
 {
 	GIOStatus ret;
 	GError *err = NULL;
@@ -54,7 +54,7 @@ lxterminal_socket_read_channel(GIOChannel *gio, GIOCondition condition, LXTermWi
 		g_shell_parse_argv(msg, &argc, &argv, NULL);
 
 		/* initializing LXTerminal and create a new window */
-		lxterminal_init(lxtermwin, argc, argv, lxtermwin->setting);
+		lxterminal_init(lxtermwin, argc, argv, ((LXTermWindow *) lxtermwin)->setting);
 
 		/* release */
 		g_strfreev(argv);
@@ -68,7 +68,7 @@ lxterminal_socket_read_channel(GIOChannel *gio, GIOCondition condition, LXTermWi
 }
 
 static gboolean
-lxterminal_socket_accept_client(GIOChannel *source, GIOCondition condition, LXTermWindow *lxtermwin)
+lxterminal_socket_accept_client(GIOChannel *source, GIOCondition condition, gpointer lxtermwin)
 {
 	if (condition & G_IO_IN) {
 		GIOChannel *gio;

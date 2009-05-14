@@ -11,6 +11,7 @@ AC_PROG_INSTALL
 AM_PROG_CC_C_O
 
 AC_HEADER_STDC
+AC_CHECK_HEADERS(locale.h langinfo.h)
 # Checks for libraries.
 pkg_modules="glib-2.0 >= 2.6.0 \
              gthread-2.0 \
