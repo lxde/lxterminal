@@ -57,7 +57,7 @@ manpage.1: manpage.sgml
   <refnamediv>
     <refname>&dhpackage;</refname>
 
-    <refpurpose>a lightweight terminal emulator based on GTK+ for LXDE desktop.</refpurpose>
+    <refpurpose>a lightweight terminal emulator based on GTK+ for the LXDE desktop.</refpurpose>
   </refnamediv>
   <refsynopsisdiv>
     <cmdsynopsis>
@@ -73,7 +73,7 @@ manpage.1: manpage.sgml
 
     <para><command>&dhpackage;</command> is a program that provides a terminal
     emulator
-    for desktop, usually for LXDE. It is lightweight GTK+ 2.x based desktop 
+    for the desktop, usually for LXDE. It is a lightweight GTK+ 2.x based desktop 
     panel.
     </para>
    
@@ -94,16 +94,33 @@ manpage.1: manpage.sgml
           <option>--command=<replaceable>STRING</replaceable></option>
         </term>
         <listitem>
-          <para>Execute the argument to this option inside the terminal</para>
+          <para>Execute the argument to this option inside the terminal.</para>
         </listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <option>-t <replaceable>STRING</replaceable></option>
+	  <option>--title=<replaceable>STRING</replaceable></option>
+	</term>
+	<listitem>
+	  <para>Set the terminal's title.</para>
+	</listitem>
       </varlistentry>
       <varlistentry>
         <term>
           <option>--working-directory=<replaceable>DIRECTORY</replaceable></option>
         </term>
         <listitem>
-          <para>Set the terminal's working directory</para>
+          <para>Set the terminal's working directory.</para>
         </listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <option>--geometry=<replaceable>CHARACTERS</replaceable>x<replaceable>LINES</replaceable></option>
+	</term>
+	<listitem>
+	  <para>Set the terminal's size in characters and lines.</para>
+	</listitem>
       </varlistentry>
     </variablelist>
   </refsect1>

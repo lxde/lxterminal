@@ -8,4 +8,4 @@ dist-hook: lxterminal.1
 lxterminal.1: lxterminal.sgml
 	(test -f "`which docbook-to-man`" && docbook-to-man $< > $@) || \
 	(test -f "`which db2man`" && db2man $< > $@) || \
-	(test -f "`which docbook2man`" && docbook2man $< > $@)
+	(test -f "`which docbook2man`" && docbook2man $< && mv LXTERMINAL.1 $@)
