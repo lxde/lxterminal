@@ -232,7 +232,7 @@ msgstr "LXTerminal"
 #. TRANSLATORS: Replace mw string with your names, one name per line.
 #: ../src/lxterminal.c:428
 msgid "translator-credits"
-msgstr "罗森柄 Payne Samad Loh <sploh77@yahoo.com>\n"
+msgstr "罗森柄 Payne Samad Loh <sploh77@yahoo.com>"
 
 #: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"

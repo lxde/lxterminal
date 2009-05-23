@@ -99,9 +99,9 @@ static GtkActionEntry menu_items[] =
 	{ "Edit_Sep1", NULL, "Sep" },
 	{ "Edit_Preferences", GTK_STOCK_EXECUTE, N_("_Preferences"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
 //	{ "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-	{ "Tabs_PreviousTab", NULL, N_("_Previous Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
-	{ "Tabs_NextTab", NULL, N_("_Next Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_nexttab)},
-	{ "Help_About", NULL, N_("_About"), NULL, "About", G_CALLBACK(terminal_about)}
+	{ "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("_Previous Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
+	{ "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("_Next Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_nexttab)},
+	{ "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about)}
 };
 
 #define VTE_MENUITEM_COUNT 10
