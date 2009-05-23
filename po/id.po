@@ -8,12 +8,13 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-02-27 22:27+0700\n"
-"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
+"PO-Revision-Date: 2009-05-23 03:59+0200\n"
+"Last-Translator: Rahman Yusri Aftian <aftian@yahoo.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -267,9 +268,8 @@ msgstr "Latar depan:"
 
 #. Transparent background
 #: ../src/preferences.c:91
-#, fuzzy
 msgid "Transparent Background:"
-msgstr "Latar belakang:"
+msgstr "Latar belakang Trasnparan:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
@@ -300,7 +300,7 @@ msgstr "Kanan"
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "F10 Tidak digunakan jalan cepat untuk menu:"
 
 #. create window
 #: ../src/preferences.c:280
