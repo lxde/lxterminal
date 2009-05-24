@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-05-23 14:59+0200\n"
+"PO-Revision-Date: 2009-05-24 01:20+0200\n"
 "Last-Translator: Payne Samad Loh <sploh77@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -209,7 +209,7 @@ msgstr "_Tampal"
 
 #: ../src/lxterminal.c:97 ../src/lxterminal.c:114
 msgid "_Preferences"
-msgstr "_Kesukaan"
+msgstr "_Kegemaran"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:99
@@ -305,4 +305,4 @@ msgstr "Lumpuhkan jalanpintas F10 untuk menu:"
 #. create window
 #: ../src/preferences.c:280
 msgid "Preferences"
-msgstr "Kesukaan-Kesukaan"
+msgstr "Kegemaran"
