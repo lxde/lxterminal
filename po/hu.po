@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2008-06-14 00:27+0100\n"
+"PO-Revision-Date: 2009-05-25 16:16+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,75 +19,98 @@ msgstr ""
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Nyugat-európai"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Kelet-európai"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Kelet-ázsiai"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "DK.- és DNy.-ázsiai"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Közel-keleti"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Nyugati"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Közép-európai"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Dél-európai"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Balti"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Cirill"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Arab"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Görög"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
 msgstr ""
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Héber"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Török"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
@@ -95,163 +118,174 @@ msgstr ""
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Kelta"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Román"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Örmény"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Hagyományos kínai"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Cirill/orosz"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Japán"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Koreai"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Egyszerűsített kínai"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Grúz"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Cirill/ukrán"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Horvát"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Fárszi"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Gudzsaráti"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmuki"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Izlandi"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnámi"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Thai"
 
 #: ../src/lxterminal.c:78
-#, fuzzy
 msgid "_File"
-msgstr "/_Fájl"
+msgstr "_Fájl"
 
 #: ../src/lxterminal.c:79
-#, fuzzy
 msgid "_Edit"
-msgstr "/Sz_erkeszt"
+msgstr "Sz_erkeszt"
 
 #. { "View", NULL, N_("_View") },
 #: ../src/lxterminal.c:81
-#, fuzzy
 msgid "_Tabs"
-msgstr "/_Lapok"
+msgstr "_Lapok"
 
 #: ../src/lxterminal.c:82
 msgid "_Help"
-msgstr ""
+msgstr "_Súgó"
 
-#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
+#: ../src/lxterminal.c:89
+#: ../src/lxterminal.c:108
 msgid "_New Window"
-msgstr ""
+msgstr "Ú_j ablak"
 
-#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
-#, fuzzy
+#: ../src/lxterminal.c:90
+#: ../src/lxterminal.c:109
 msgid "_New Tab"
-msgstr "/Ú_j lap"
+msgstr "Ú_j lap"
 
-#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
-#, fuzzy
+#: ../src/lxterminal.c:92
+#: ../src/lxterminal.c:116
 msgid "_Close Tab"
-msgstr "/Lap be_zárása"
+msgstr "Lap be_zárása"
 
 #: ../src/lxterminal.c:93
 msgid "_Quit"
-msgstr ""
+msgstr "_Kilép"
 
-#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
-#, fuzzy
+#: ../src/lxterminal.c:94
+#: ../src/lxterminal.c:111
 msgid "_Copy"
-msgstr "/_Másol"
+msgstr "_Másol"
 
-#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
-#, fuzzy
+#: ../src/lxterminal.c:95
+#: ../src/lxterminal.c:112
 msgid "_Paste"
-msgstr "/Be_illeszt"
+msgstr "Be_illeszt"
 
-#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
-#, fuzzy
+#: ../src/lxterminal.c:97
+#: ../src/lxterminal.c:114
 msgid "_Preferences"
-msgstr "Beállítások"
+msgstr "_Beállítások"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:99
-#, fuzzy
 msgid "_Previous Tab"
-msgstr "/_Lapok/_Előző lap"
+msgstr "Előző lap"
 
 #: ../src/lxterminal.c:100
-#, fuzzy
 msgid "_Next Tab"
-msgstr "/Ú_j lap"
+msgstr "Következő lap"
 
 #: ../src/lxterminal.c:101
 msgid "_About"
-msgstr ""
+msgstr "_Névjegy"
 
-#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
-#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
+#: ../src/lxterminal.c:393
+#: ../src/lxterminal.c:436
+#: ../src/lxterminal.c:462
+#: ../src/lxterminal.c:900
+#: ../src/lxterminal.c:928
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace mw string with your names, one name per line.
 #: ../src/lxterminal.c:428
 msgid "translator-credits"
-msgstr ""
+msgstr "SZERVÁC Attila"
 
 #: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Copyright (C) 2008"
 
 #: ../src/lxterminal.c:439
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "Terminál emulátor az LXDE projekthez"
 
 #: ../src/preferences.c:41
 msgid "General"
@@ -265,53 +299,53 @@ msgstr "Terminál betű:"
 #. Select-by-word
 #: ../src/preferences.c:69
 msgid "Select-by-word characters:"
-msgstr ""
+msgstr "Szó-alapú-választás karakterek:"
 
 #. Background color
 #: ../src/preferences.c:77
 msgid "Background:"
-msgstr ""
+msgstr "Háttér:"
 
 #. Foreground color
 #: ../src/preferences.c:84
 msgid "Foreground:"
-msgstr ""
+msgstr "Előtér:"
 
 #. Transparent background
 #: ../src/preferences.c:91
 msgid "Transparent Background:"
-msgstr ""
+msgstr "Átlátszó háttér:"
 
 #. Scrollback buffer
 #: ../src/preferences.c:100
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Visszagördítő sorok:"
 
 #. tab-panel position
 #: ../src/preferences.c:108
 msgid "Tab panel position:"
-msgstr ""
+msgstr "Lap panel helyzete:"
 
 #: ../src/preferences.c:111
 msgid "Top"
-msgstr ""
+msgstr "Fent"
 
 #: ../src/preferences.c:112
 msgid "Bottom"
-msgstr ""
+msgstr "Lent"
 
 #: ../src/preferences.c:113
 msgid "Left"
-msgstr ""
+msgstr "Balra"
 
 #: ../src/preferences.c:114
 msgid "Right"
-msgstr ""
+msgstr "Jobbra"
 
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "F10 gyorsbillentyű kikapcsolása a menühöz:"
 
 #. create window
 #: ../src/preferences.c:280
@@ -320,30 +354,22 @@ msgstr "Beállítások"
 
 #~ msgid "/_File/_New Tab"
 #~ msgstr "/_Fájl/Ú_j lap"
-
 #~ msgid "/_File/_Close Tab"
 #~ msgstr "/_Fájl/Lap be_zárása"
-
 #~ msgid "/_File/sep1"
 #~ msgstr "/_Fájl/sep1"
-
 #~ msgid "/_File/_Quit"
 #~ msgstr "/_Fájl/_Kilép"
-
 #~ msgid "/_Edit/_Copy"
 #~ msgstr "/Sz_erkeszt/_Másol"
-
 #~ msgid "/_Edit/_Paste"
 #~ msgstr "/Sz_erkeszt/Be_illeszt"
-
 #~ msgid "/_Edit/sep1"
 #~ msgstr "/Sz_erkeszt/sep1"
-
 #~ msgid "/_Edit/_Preferences..."
 #~ msgstr "/Sz_erkeszt/_Beállítások..."
-
 #~ msgid "/_Tabs/_Next Tab"
 #~ msgstr "/_Lapok/_Következő lap"
-
 #~ msgid "/_Preferences..."
 #~ msgstr "/_Beállítások"
+
