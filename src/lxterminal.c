@@ -904,7 +904,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 				title = argv[++i];
 				continue;
 			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
-				workdir = argv[i]+20;
+				workdir = g_strdup(argv[i]+20);
 				continue;
 			} else if (strncmp(argv[i],"--geometry=", 11)==0) {
 				sscanf(argv[i]+11, "%dx%d", &cols, &rows);
@@ -966,7 +966,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
 	gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 
-	workdir = (!workdir) ? g_get_current_dir() : NULL;
+	if ( ! workdir) workdir = g_get_current_dir();
 	term = terminal_new(terminal, _("LXTerminal"), workdir, NULL, cmd);
 	g_free(workdir);
 
