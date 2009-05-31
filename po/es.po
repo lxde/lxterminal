@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-04-16 06:26+0200\n"
-"Last-Translator: Guillermo Iguaran <johnnyprez@gmail.com>\n"
+"PO-Revision-Date: 2009-05-31 16:18+0200\n"
+"Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -183,21 +183,22 @@ msgstr "_Edición"
 msgid "_Tabs"
 msgstr "_Pestañas"
 
+# subrayar la y puede resultar confuso en ciertas tipografías
 #: ../src/lxterminal.c:82
 msgid "_Help"
-msgstr "A_yuda"
+msgstr "Ay_uda"
 
 #: ../src/lxterminal.c:89 ../src/lxterminal.c:108
 msgid "_New Window"
-msgstr "_Nueva Ventana"
+msgstr "_Nueva ventana"
 
 #: ../src/lxterminal.c:90 ../src/lxterminal.c:109
 msgid "_New Tab"
-msgstr "_Nueva Pestaña"
+msgstr "_Nueva pestaña"
 
 #: ../src/lxterminal.c:92 ../src/lxterminal.c:116
 msgid "_Close Tab"
-msgstr "_Cerrar Pestaña"
+msgstr "_Cerrar pestaña"
 
 #: ../src/lxterminal.c:93
 msgid "_Quit"
@@ -218,11 +219,11 @@ msgstr "_Preferencias"
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:99
 msgid "_Previous Tab"
-msgstr "Pestaña _Anterior"
+msgstr "Pestaña _anterior"
 
 #: ../src/lxterminal.c:100
 msgid "_Next Tab"
-msgstr "Pestaña _Siguiente"
+msgstr "Pestaña _siguiente"
 
 #: ../src/lxterminal.c:101
 msgid "_About"
