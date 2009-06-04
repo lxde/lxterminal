@@ -89,33 +89,35 @@ static GtkActionEntry menus[] =
 //#define MENUBAR_MENUITEM_COUNT 13
 static GtkActionEntry menu_items[] =
 {
-	{ "File_NewWindow", GTK_STOCK_ADD, N_("_New Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_newwindow)},
-	{ "File_NewTab", GTK_STOCK_ADD, N_("_New Tab"), NEW_TAB_ACCEL, "New Tab", G_CALLBACK(terminal_newtab)},
+	{ "File_NewWindow", GTK_STOCK_ADD, N_("New _Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_newwindow)},
+	{ "File_NewTab", GTK_STOCK_ADD, N_("New _Tab"), NEW_TAB_ACCEL, "New Tab", G_CALLBACK(terminal_newtab)},
 	{ "File_Sep1", NULL, "Sep" },
 	{ "File_CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), CLOSE_TAB_ACCEL, "Close Tab", G_CALLBACK(terminal_closetab)},
 	{ "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL, "Quit", G_CALLBACK(gtk_main_quit)},
-	{ "Edit_Copy", GTK_STOCK_COPY, N_("_Copy"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy)},
+	{ "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy)},
 	{ "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste)},
 	{ "Edit_Sep1", NULL, "Sep" },
-	{ "Edit_Preferences", GTK_STOCK_EXECUTE, N_("_Preferences"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
+	{ "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
 //	{ "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-	{ "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("_Previous Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
-	{ "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("_Next Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_nexttab)},
+	{ "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
+	{ "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_nexttab)},
 	{ "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about)}
 };
 
-#define VTE_MENUITEM_COUNT 10
+#define VTE_MENUITEM_COUNT 12
 static GtkActionEntry vte_menu_items[] =
 {
 	{ "VTEMenu", NULL, "VTEMenu" },
-	{ "NewWindow", GTK_STOCK_ADD, N_("_New Window"), NULL, "New Window", G_CALLBACK(terminal_newwindow)},
-	{ "NewTab", GTK_STOCK_ADD, N_("_New Tab"), NULL, "New Tab", G_CALLBACK(terminal_newtab)},
+	{ "NewWindow", GTK_STOCK_ADD, N_("New _Window"), NULL, "New Window", G_CALLBACK(terminal_newwindow)},
+	{ "NewTab", GTK_STOCK_ADD, N_("New _Tab"), NULL, "New Tab", G_CALLBACK(terminal_newtab)},
 	{ "Sep1", NULL, "Sep" },
-	{ "Copy", GTK_STOCK_COPY, N_("_Copy"), NULL, "Copy", G_CALLBACK(terminal_copy)},
+	{ "Copy", GTK_STOCK_COPY, N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy)},
 	{ "Paste", GTK_STOCK_PASTE, N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste)},
 	{ "Sep2", NULL, "Sep" },
-	{ "Preferences", GTK_STOCK_EXECUTE, N_("_Preferences"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
+	{ "Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(lxterminal_preferences_dialog)},
 	{ "Sep3", NULL, "Sep" },
+	{ "PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), NULL, "Previous Tab", G_CALLBACK(terminal_prevtab)},
+	{ "NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NULL, "Next Tab", G_CALLBACK(terminal_nexttab)},
 	{ "CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), NULL, "Close Tab", G_CALLBACK(terminal_closetab)}
 };
 
@@ -949,7 +951,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	terminal->box = gtk_vbox_new(FALSE, 1);
 	gtk_container_add(GTK_CONTAINER(terminal->mainw), terminal->box);
 
-	/* create menuar */
+	/* create menubar */
 	terminal->menubar = menubar_init(terminal);
 	gtk_box_pack_start(GTK_BOX(terminal->box), terminal->menubar->menu, FALSE, TRUE, 0);
 
