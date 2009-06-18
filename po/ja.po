@@ -7,10 +7,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lxterminal 0.1.4\n"
+"Project-Id-Version: lxterminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-01 18:35+0900\n"
-"PO-Revision-Date: 2009-05-01 21:23+0900\n"
+"POT-Creation-Date: 2009-06-16 13:42+0900\n"
+"PO-Revision-Date: 2009-06-16 13:44+0900\n"
 "Last-Translator: Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -168,81 +168,81 @@ msgstr "ベトナム語"
 msgid "Thai"
 msgstr "タイ語"
 
-#: ../src/lxterminal.c:78
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: ../src/lxterminal.c:79
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "編集(_E)"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "タブ(_T)"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
-msgid "_New Window"
-msgstr "新規ウィンドウ(_N)"
+#: ../src/lxterminal.c:92 ../src/lxterminal.c:111
+msgid "New _Window"
+msgstr "新規ウィンドウ(_W)"
 
-#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
-msgid "_New Tab"
-msgstr "新規タブ(_N)"
+#: ../src/lxterminal.c:93 ../src/lxterminal.c:112
+msgid "New _Tab"
+msgstr "新規タブ(_T)"
 
-#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
+#: ../src/lxterminal.c:95 ../src/lxterminal.c:121
 msgid "_Close Tab"
 msgstr "タブを閉じる(_C)"
 
-#: ../src/lxterminal.c:93
+#: ../src/lxterminal.c:96
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
-msgid "_Copy"
-msgstr "コピー(_C)"
+#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
+msgid "Cop_y"
+msgstr "コピー(_Y)"
 
-#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
+#: ../src/lxterminal.c:98 ../src/lxterminal.c:115
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
-#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
-msgid "_Preferences"
-msgstr "設定(_P)"
+#: ../src/lxterminal.c:100 ../src/lxterminal.c:117
+msgid "Preference_s"
+msgstr "設定(_S)"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:99
-msgid "_Previous Tab"
-msgstr "前のタブ(_P)"
+#: ../src/lxterminal.c:102 ../src/lxterminal.c:119
+msgid "Pre_vious Tab"
+msgstr "前のタブ(_V)"
 
-#: ../src/lxterminal.c:100
-msgid "_Next Tab"
-msgstr "次のタブ(_N)"
+#: ../src/lxterminal.c:103 ../src/lxterminal.c:120
+msgid "Ne_xt Tab"
+msgstr "次のタブ(_X)"
 
-#: ../src/lxterminal.c:101
+#: ../src/lxterminal.c:104
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
-#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
+#: ../src/lxterminal.c:398 ../src/lxterminal.c:441 ../src/lxterminal.c:467
+#: ../src/lxterminal.c:943 ../src/lxterminal.c:972
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:428
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:433
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>"
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:443
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:439
+#: ../src/lxterminal.c:444
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDEプロジェクトのための端末エミュレータ"
 
@@ -266,47 +266,50 @@ msgid "Background:"
 msgstr "背景色:"
 
 #. Foreground color
-#: ../src/preferences.c:84
+#: ../src/preferences.c:86
 msgid "Foreground:"
 msgstr "前景色:"
 
 #. Transparent background
-#: ../src/preferences.c:91
+#: ../src/preferences.c:93
 msgid "Transparent Background:"
 msgstr "透過/背景色:"
 
 #. Scrollback buffer
-#: ../src/preferences.c:100
+#: ../src/preferences.c:102
 msgid "Scrollback lines:"
 msgstr "履歴の行数:"
 
 #. tab-panel position
-#: ../src/preferences.c:108
+#: ../src/preferences.c:110
 msgid "Tab panel position:"
 msgstr "タブの位置:"
 
-#: ../src/preferences.c:111
+#: ../src/preferences.c:113
 msgid "Top"
 msgstr "上"
 
-#: ../src/preferences.c:112
+#: ../src/preferences.c:114
 msgid "Bottom"
 msgstr "下"
 
-#: ../src/preferences.c:113
+#: ../src/preferences.c:115
 msgid "Left"
 msgstr "左"
 
-#: ../src/preferences.c:114
+#: ../src/preferences.c:116
 msgid "Right"
 msgstr "右"
 
 #. Disable F10 for menu
-#: ../src/preferences.c:120
+#: ../src/preferences.c:122
 msgid "Disable F10 shortcut for menu:"
 msgstr "メニューへのショートカット F10 の無効化:"
 
 #. create window
-#: ../src/preferences.c:280
+#: ../src/preferences.c:284
 msgid "Preferences"
 msgstr "設定"
+
+#~ msgid "_Preferences"
+#~ msgstr "設定(_P)"
