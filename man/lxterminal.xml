@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<refentry>  <refentryinfo>    <address>      <email>grandpaul@gmail.com</email>
+    </address>
+    <author>      <firstname>Ying-Chun</firstname>
+      <surname>Liu</surname>
+    </author>
+    <copyright>      <year>2008</year>
+      <holder>paulliu</holder>
+    </copyright>
+    <date>Jun  28, 2008</date>
+  </refentryinfo>
+  <refmeta>    <refentrytitle>LXTERMINAL</refentrytitle>
+
+    <manvolnum>1</manvolnum>
+  </refmeta>
+  <refnamediv>    <refname>lxterminal</refname>
+
+    <refpurpose>a lightweight terminal emulator based on GTK+ for the LXDE desktop.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>    <cmdsynopsis>      <command>lxterminal</command>
+      <arg rep="repeat"><option>options</option></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  <refsect1>    <title>DESCRIPTION</title>
+
+    <para>This manual page documents briefly the
+      <command>lxterminal</command> command.</para>
+
+    <para><command>lxterminal</command> is a program that provides a terminal
+    emulator
+    for the desktop, usually for LXDE. It is a lightweight GTK+ 2.x based desktop 
+    panel.
+    </para>
+   
+  </refsect1>
+
+  <refsect1>    <title>OPTIONS</title>
+
+    <para>This program follows the usual <acronym>GNU</acronym> command line syntax,
+      with long options starting with two dashes (`-').  A summary of
+      options is included below.  
+    </para>
+
+    <variablelist>      <varlistentry>        <term>	  <option>-e <replaceable>STRING</replaceable></option>
+          <option>--command=<replaceable>STRING</replaceable></option>
+        </term>
+        <listitem>          <para>Execute the argument to this option inside the terminal.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-t <replaceable>STRING</replaceable></option>
+	  <option>--title=<replaceable>STRING</replaceable></option>
+	</term>
+	<listitem>	  <para>Set the terminal's title.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>        <term>          <option>--working-directory=<replaceable>DIRECTORY</replaceable></option>
+        </term>
+        <listitem>          <para>Set the terminal's working directory.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>--geometry=<replaceable>CHARACTERS</replaceable>x<replaceable>LINES</replaceable></option>
+	</term>
+	<listitem>	  <para>Set the terminal's size in characters and lines.</para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+
+  <refsect1>    <title>AUTHOR</title>
+
+    <para>This manual page was written by paulliu <email>grandpaul@gmail.com</email> for
+      the <productname>Debian</productname> system (but may be used by others).  Permission is
+      granted to copy, distribute and/or modify this document under
+      the terms of the <acronym>GNU</acronym> General Public License, Version 2 any 
+      later version published by the Free Software Foundation.
+    </para>
+    <para>	  On Debian systems, the complete text of the GNU General Public
+	  License can be found in /usr/share/common-licenses/GPL.
+    </para>
+
+  </refsect1></refentry>
