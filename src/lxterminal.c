@@ -69,7 +69,7 @@ static gchar helpmsg[] = {
 	"  lxterminal [Options...] - LXTerminal is a terminal emulator\n\n"
 	"Options:\n"
 	"  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
-	"  -t, --title=STRING               Set the terminal's title\n"
+	"  -t, -T, --title=STRING               Set the terminal's title\n"
 	"  --working-directory=DIRECTORY    Set the terminal's working directory\n"
 	"  --geometry=GEOMETRY              X geometry specification (see \"X\" man page), can be specified once per window to be opened.\n"
 };
@@ -902,7 +902,7 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 			} else if (strncmp(argv[i],"--title=", 8)==0) {
 				title = argv[i]+8;
 				continue;
-			} else if ((strcmp(argv[i],"--title")==0||strcmp(argv[i],"-t")==0)&&(i+1<argc)) {
+			} else if ((strcmp(argv[i],"--title")==0||strcmp(argv[i],"-t")==0||strcmp(argv[i],"-T")==0)&&(i+1<argc)) {
 				title = argv[++i];
 				continue;
 			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
@@ -1021,7 +1021,7 @@ int main(gint argc, gchar** argv)
 				continue;
 			} else if (strncmp(argv[i],"--title=", 8)==0) {
 				continue;
-			} else if ((strcmp(argv[i],"--title")==0||strcmp(argv[i],"-t")==0)&&(i+1<argc)) {
+			} else if ((strcmp(argv[i],"--title")==0||strcmp(argv[i],"-t")==0||strcmp(argv[i],"-T")==0)&&(i+1<argc)) {
 				i++;
 				continue;
 			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
