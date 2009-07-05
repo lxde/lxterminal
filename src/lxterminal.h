@@ -10,8 +10,10 @@
 #define COPY_ACCEL "<CTRL><SHIFT>C"
 #define PASTE_ACCEL "<CTRL><SHIFT>V"
 #define RENAME_TAB_ACCEL "<CTRL><SHIFT>R"
-#define PREVIOUS_TAB_ACCEL "<CTRL><SHIFT>Page_Down"
-#define NEXT_TAB_ACCEL "<CTRL><SHIFT>Page_Up"
+#define PREVIOUS_TAB_ACCEL "<CTRL>Page_Up"
+#define NEXT_TAB_ACCEL "<CTRL>Page_Down"
+#define MOVE_TAB_LEFT_ACCEL "<CTRL><SHIFT>Page_Up"
+#define MOVE_TAB_RIGHT_ACCEL "<CTRL><SHIFT>Page_Down"
 #define SWITCH_TAB1_ACCEL "<ALT>1"
 #define SWITCH_TAB2_ACCEL "<ALT>2"
 #define SWITCH_TAB3_ACCEL "<ALT>3"
@@ -74,6 +76,8 @@ void terminal_newtab(GtkWidget *widget, gpointer data);
 void terminal_closetab(GtkAction *action, gpointer data);
 void terminal_nexttab(GtkAction *action, gpointer data);
 void terminal_prevtab(GtkAction *action, gpointer data);
+void terminal_movetableft(GtkAction *action, gpointer data);
+void terminal_movetabright(GtkAction *action, gpointer data);
 void terminal_about(GtkAction *action, gpointer data);
 gboolean terminal_copy(GtkAction *action, gpointer data);
 gboolean terminal_paste(GtkAction *action, gpointer data);
