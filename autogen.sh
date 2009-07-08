@@ -26,7 +26,4 @@ AUTOMAKE=$AUTOMAKE intltoolize -c --automake --force
 $AUTOMAKE --add-missing --copy --include-deps
 ${AUTOCONF:-autoconf$AC_VERSION}
 
-# mkinstalldirs was not correctly installed in some cases.
-cp -f /usr/share/${AUTOMAKE}-*/mkinstalldirs .
-
 rm -rf autom4te.cache
