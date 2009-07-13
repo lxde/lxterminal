@@ -49,7 +49,7 @@ gint lxterminal_tab_get_position_id(gchar *position)
 		return 1;
 	else if (strcmp(position, "left")==0)
 		return 2;
-	else if (strcmp(position, "right")==0)
+	else
 		return 3;
 }
 
