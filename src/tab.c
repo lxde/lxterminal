@@ -63,6 +63,11 @@ void lxterminal_tab_label_set_text(LXTab *tab, const gchar *str)
 	gtk_label_set_text((GtkLabel *)tab->label, str);
 }
 
+void lxterminal_tab_label_set_tooltip_text(LXTab *tab, const gchar *str)
+{
+	gtk_widget_set_tooltip_text(tab->label, str);
+}
+
 LXTab *lxterminal_tab_label_new(const gchar *str)
 {
 	LXTab *tab;

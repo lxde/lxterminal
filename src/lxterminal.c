@@ -511,6 +511,7 @@ void terminal_title_changed(VteTerminal *vte, Term *term)
 {
 	/* setting label */
 	lxterminal_tab_label_set_text(term->label, vte_terminal_get_window_title(VTE_TERMINAL(vte)));
+	lxterminal_tab_label_set_tooltip_text(term->label, vte_terminal_get_window_title(VTE_TERMINAL(vte)));
 
 	/* setting window title */
 	gtk_window_set_title(GTK_WINDOW(term->parent->mainw), vte_terminal_get_window_title(VTE_TERMINAL(vte)));
