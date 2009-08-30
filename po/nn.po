@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-27 19:47+0200\n"
+"POT-Creation-Date: 2009-04-15 21:08+0200\n"
 "PO-Revision-Date: 2009-07-27 20:37+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -167,87 +167,85 @@ msgstr "Vietnamesisk"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:78
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:79
 msgid "_Edit"
 msgstr "_Rediger"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:81
 msgid "_Tabs"
 msgstr "F_aner"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:82
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../src/lxterminal.c:92 ../src/lxterminal.c:113
-msgid "New _Window"
+#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
+#, fuzzy
+msgid "_New Window"
 msgstr "Nytt _vindauge"
 
-#: ../src/lxterminal.c:93 ../src/lxterminal.c:114
-msgid "New _Tab"
+#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
+#, fuzzy
+msgid "_New Tab"
 msgstr "Ny _fane"
 
-#: ../src/lxterminal.c:95 ../src/lxterminal.c:125
+#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
 msgid "_Close Tab"
 msgstr "_Lukk fane"
 
-#: ../src/lxterminal.c:96
+#: ../src/lxterminal.c:93
 msgid "_Quit"
 msgstr "_Avslutt"
 
-#: ../src/lxterminal.c:97 ../src/lxterminal.c:116
-msgid "Cop_y"
+#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
+#, fuzzy
+msgid "_Copy"
 msgstr "_Kopier"
 
-#: ../src/lxterminal.c:98 ../src/lxterminal.c:117
+#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
 msgid "_Paste"
 msgstr "_Lim inn"
 
-#: ../src/lxterminal.c:100 ../src/lxterminal.c:119
-msgid "Preference_s"
-msgstr "_Innstillingar"
+#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
+#, fuzzy
+msgid "_Preferences"
+msgstr "Innstillingar"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:102 ../src/lxterminal.c:121
-msgid "Pre_vious Tab"
+#: ../src/lxterminal.c:99
+#, fuzzy
+msgid "_Previous Tab"
 msgstr "_Førre fane"
 
-#: ../src/lxterminal.c:103 ../src/lxterminal.c:122
-msgid "Ne_xt Tab"
+#: ../src/lxterminal.c:100
+#, fuzzy
+msgid "_Next Tab"
 msgstr "_Neste fane"
 
-#: ../src/lxterminal.c:104 ../src/lxterminal.c:123
-msgid "Move Tab _Left"
-msgstr "Flytt fane til _venstre"
-
-#: ../src/lxterminal.c:105 ../src/lxterminal.c:124
-msgid "Move Tab _Right"
-msgstr "Flytt fane til _høgre"
-
-#: ../src/lxterminal.c:106
+#: ../src/lxterminal.c:101
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:479 ../src/lxterminal.c:505
-#: ../src/lxterminal.c:987 ../src/lxterminal.c:1016
+#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
+#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:471
+#. TRANSLATORS: Replace mw string with your names, one name per line.
+#: ../src/lxterminal.c:428
 msgid "translator-credits"
 msgstr "Karl Ove Hufthammer"
 
-#: ../src/lxterminal.c:481
+#: ../src/lxterminal.c:438
 msgid "Copyright (C) 2008"
 msgstr "Copyright © 2008"
 
-#: ../src/lxterminal.c:482
+#: ../src/lxterminal.c:439
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminalemulator for LXDE"
 
@@ -271,47 +269,56 @@ msgid "Background:"
 msgstr "Bakgrunn:"
 
 #. Foreground color
-#: ../src/preferences.c:86
+#: ../src/preferences.c:84
 msgid "Foreground:"
 msgstr "Framgrunn:"
 
 #. Transparent background
-#: ../src/preferences.c:93
+#: ../src/preferences.c:91
 msgid "Transparent Background:"
 msgstr "Gjennomsiktig bakgrunn:"
 
 #. Scrollback buffer
-#: ../src/preferences.c:102
+#: ../src/preferences.c:100
 msgid "Scrollback lines:"
 msgstr "Linjer rulleminne:"
 
 #. tab-panel position
-#: ../src/preferences.c:110
+#: ../src/preferences.c:108
 msgid "Tab panel position:"
 msgstr "Plassering til fanepanel:"
 
-#: ../src/preferences.c:113
+#: ../src/preferences.c:111
 msgid "Top"
 msgstr "Oppe"
 
-#: ../src/preferences.c:114
+#: ../src/preferences.c:112
 msgid "Bottom"
 msgstr "Nede"
 
-#: ../src/preferences.c:115
+#: ../src/preferences.c:113
 msgid "Left"
 msgstr "Til venstre"
 
-#: ../src/preferences.c:116
+#: ../src/preferences.c:114
 msgid "Right"
 msgstr "Til høgre"
 
 #. Disable F10 for menu
-#: ../src/preferences.c:122
+#: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
 msgstr "Slå av F10-snarvegen til menyen:"
 
 #. create window
-#: ../src/preferences.c:284
+#: ../src/preferences.c:280
 msgid "Preferences"
 msgstr "Innstillingar"
+
+#~ msgid "Preference_s"
+#~ msgstr "_Innstillingar"
+
+#~ msgid "Move Tab _Left"
+#~ msgstr "Flytt fane til _venstre"
+
+#~ msgid "Move Tab _Right"
+#~ msgstr "Flytt fane til _høgre"
