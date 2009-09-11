@@ -8,12 +8,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-04-15 23:23+0200\n"
+"PO-Revision-Date: 2009-09-10 20:37+0200\n"
 "Last-Translator: Julius Vitkauskas <zadintuvas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 "X-Language: lt_LT\n"
 
 #: ../src/encoding.c:124
@@ -323,36 +324,36 @@ msgstr "Įsiminti eilučių:"
 #. tab-panel position
 #: ../src/preferences.c:108
 msgid "Tab panel position:"
-msgstr "Kortelių juostos pozicija:"
+msgstr "Kortelių juosta:"
 
 #: ../src/preferences.c:111
 msgid "Top"
-msgstr "Viršus"
+msgstr "Viršuje"
 
 #: ../src/preferences.c:112
 msgid "Bottom"
-msgstr "Apačia"
+msgstr "Apačioje"
 
 #: ../src/preferences.c:113
 msgid "Left"
-msgstr "Kairė"
+msgstr "Kairėje"
 
 #: ../src/preferences.c:114
 msgid "Right"
-msgstr "Dešinė"
+msgstr "Dešinėje"
 
 #. Disable F10 for menu
 #: ../src/preferences.c:120
 msgid "Disable F10 shortcut for menu:"
-msgstr "Išjungti F10 nuorodą meniu:"
+msgstr "Nenaudoti F10 klavišo atidaryti meniu:"
 
 #. create window
 #: ../src/preferences.c:280
 msgid "Preferences"
-msgstr "Parinktys"
+msgstr "Nustatymai"
 
 #~ msgid "_View"
 #~ msgstr "_Rodymas"
-#~ msgid "_Character Encoding"
-#~ msgstr "_Koduotė"
 
+#~ msgid ""
+#~ msgstr "_Koduotė"
