@@ -14,15 +14,6 @@
 #define NEXT_TAB_ACCEL "<CTRL>Page_Down"
 #define MOVE_TAB_LEFT_ACCEL "<CTRL><SHIFT>Page_Up"
 #define MOVE_TAB_RIGHT_ACCEL "<CTRL><SHIFT>Page_Down"
-#define SWITCH_TAB1_ACCEL "<ALT>1"
-#define SWITCH_TAB2_ACCEL "<ALT>2"
-#define SWITCH_TAB3_ACCEL "<ALT>3"
-#define SWITCH_TAB4_ACCEL "<ALT>4"
-#define SWITCH_TAB5_ACCEL "<ALT>5"
-#define SWITCH_TAB6_ACCEL "<ALT>6"
-#define SWITCH_TAB7_ACCEL "<ALT>7"
-#define SWITCH_TAB8_ACCEL "<ALT>8"
-#define SWITCH_TAB9_ACCEL "<ALT>9"
 
 typedef struct _lxtermwindow {
 	Setting   *setting;
@@ -69,19 +60,7 @@ typedef struct _term {
 	GtkWidget *box;
 } Term;
 
-
-Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, gchar **env, const gchar *exec);
-void terminal_newwindow(GtkAction *action, gpointer data);
-void terminal_newtab(GtkWidget *widget, gpointer data);
-void terminal_closetab(GtkAction *action, gpointer data);
-void terminal_nexttab(GtkAction *action, gpointer data);
-void terminal_prevtab(GtkAction *action, gpointer data);
-void terminal_movetableft(GtkAction *action, gpointer data);
-void terminal_movetabright(GtkAction *action, gpointer data);
-void terminal_about(GtkAction *action, gpointer data);
-gboolean terminal_copy(GtkAction *action, gpointer data);
-gboolean terminal_paste(GtkAction *action, gpointer data);
-
+LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
 void terminal_setting_update(LXTerminal *terminal, Setting *setting);
 
 #endif
