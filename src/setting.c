@@ -54,6 +54,8 @@ void setting_save(Setting *setting)
 	g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tabpos);
 	g_key_file_set_integer(setting->keyfile, "general", "scrollback", (gint)setting->scrollback);
 	g_key_file_set_boolean(setting->keyfile, "general", "disablef10", setting->disablef10);
+	g_key_file_set_boolean(setting->keyfile, "general", "hidemenubar", setting->hidemenubar);
+	g_key_file_set_boolean(setting->keyfile, "general", "hidescrollbar", setting->hidescrollbar);
 
 	/* generate config data */
 	file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
@@ -92,6 +94,8 @@ Setting *load_setting_from_file(const char *filename)
 		setting->tabpos = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
 		setting->scrollback = (glong)g_key_file_get_integer(setting->keyfile, "general", "scrollback", NULL);
 		setting->disablef10 = g_key_file_get_boolean(setting->keyfile, "general", "disablef10", NULL);
+		setting->hidemenubar = g_key_file_get_boolean(setting->keyfile, "general", "hidemenubar", NULL);
+		setting->hidescrollbar = g_key_file_get_boolean(setting->keyfile, "general", "hidescrollbar", NULL);
 	}
 
 setting_default:
@@ -122,6 +126,12 @@ setting_default:
 
 	if (!setting->disablef10)
 		setting->disablef10 = FALSE;
+
+	if (!setting->hidemenubar)
+		setting->hidemenubar = FALSE;
+
+	if (!setting->hidescrollbar)
+		setting->hidescrollbar = FALSE;
 
 	return setting;
 }

@@ -43,6 +43,8 @@ typedef struct _lxterminal {
 	GdkColor background;
 	GdkColor foreground;
 	gint     tabpos;
+	gboolean hidemenubar;
+	gboolean hidescrollbar;
 } LXTerminal;
 
 typedef struct _tab {
@@ -61,6 +63,6 @@ typedef struct _term {
 } Term;
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);
-void terminal_setting_update(LXTerminal *terminal, Setting *setting);
+void terminal_setting_update(LXTerminal *terminal);
 
 #endif

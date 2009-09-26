@@ -54,7 +54,7 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	pg = g_new0(PreferGeneral, 1);
 	tab->childs = pg;
 
-	pg->box = gtk_table_new(6,4, FALSE);
+	pg->box = gtk_table_new(11,4, FALSE);
 	gtk_table_set_row_spacings(GTK_TABLE(pg->box), 3);
 	gtk_table_set_col_spacings(GTK_TABLE(pg->box), 5);
 
@@ -122,10 +122,25 @@ void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
 	pg->disablef10_label = gtk_label_new(_("Disable F10 shortcut for menu:"));
 	gtk_misc_set_alignment(GTK_MISC(pg->disablef10_label), 1, 0.5);
 	pg->disablef10_checkbox = gtk_check_button_new();
-
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->disablef10_checkbox), prefer->terminal->setting->disablef10);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_label, 0,2, 8,9);
 	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_checkbox, 2,4, 8,9);
+
+	/* Hide menu bar */
+	pg->hidemenubar_label = gtk_label_new(_("Hide menu bar:"));
+	gtk_misc_set_alignment(GTK_MISC(pg->hidemenubar_label), 1, 0.5);
+	pg->hidemenubar_checkbox = gtk_check_button_new();
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->hidemenubar_checkbox), prefer->terminal->setting->hidemenubar);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidemenubar_label, 0,2,9,10);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidemenubar_checkbox, 2,4,9,10);
+
+	/* Hide scroll bar */
+	pg->hidescrollbar_label = gtk_label_new(_("Hide scroll bar:"));
+	gtk_misc_set_alignment(GTK_MISC(pg->hidescrollbar_label), 1, 0.5);
+	pg->hidescrollbar_checkbox = gtk_check_button_new();
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->hidescrollbar_checkbox), prefer->terminal->setting->hidescrollbar);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidescrollbar_label, 0,2,10,11);
+	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidescrollbar_checkbox, 2,4,10,11);
 
 	/* adding to page */
 	gtk_container_add(GTK_CONTAINER(tab->page), pg->box);
@@ -150,6 +165,8 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 	prefer->terminal->setting->disablef10 = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->disablef10_checkbox);
 	prefer->terminal->setting->bgtransparent = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->bgtransparent_checkbox);
 	prefer->terminal->setting->bgalpha = (guint16)gtk_color_button_get_alpha(GTK_COLOR_BUTTON(pg->bgcolor_entry));
+	prefer->terminal->setting->hidemenubar = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->hidemenubar_checkbox);
+	prefer->terminal->setting->hidescrollbar = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->hidescrollbar_checkbox);
 
 	/* Tab position */
 	g_free( prefer->terminal->setting->tabpos );

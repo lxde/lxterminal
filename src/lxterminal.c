@@ -601,6 +601,34 @@ static gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *even
 	return FALSE;
 }
 
+void terminal_term_setting_update(Term *term, LXTerminal *terminal){
+	vte_terminal_set_font_from_string((VteTerminal *)term->vte, terminal->setting->fontname);
+	vte_terminal_set_word_chars((VteTerminal *)term->vte, terminal->setting->selchars);
+	vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
+
+	/* background transparent */
+	if( terminal->setting->bgtransparent ){
+		if( terminal->rgba ){
+			vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
+			vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
+		} else {
+			vte_terminal_set_background_transparent((VteTerminal *)term->vte, TRUE);
+			vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
+		}
+	} else {
+		vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
+		vte_terminal_set_opacity((VteTerminal *)term->vte, 65535);
+	}
+
+	vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color[0], 16);
+
+	/* update menubar */
+	if( terminal->setting->hidescrollbar )
+		gtk_widget_hide( term->scrollbar );
+	else
+		gtk_widget_show( term->scrollbar );
+}
+
 static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, gchar **env, const gchar *exec)
 {
 	Term *term;
@@ -615,9 +643,6 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	gtk_box_pack_start(GTK_BOX(term->box), term->scrollbar, FALSE, TRUE, 0);
 
 	/* setting terminal */
-	vte_terminal_set_font_from_string((VteTerminal *)term->vte, terminal->setting->fontname);
-	vte_terminal_set_word_chars((VteTerminal *)term->vte, terminal->setting->selchars);
-	vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
 	vte_terminal_set_emulation((VteTerminal *)term->vte, "xterm");
 
 	/* Set encoding from locale. */
@@ -639,22 +664,6 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	if (!gdk_color_parse(terminal->setting->fgcolor, &terminal->foreground)) {
 		terminal->foreground = (GdkColor){ 0, 0xaaaa, 0xaaaa, 0xaaaa};
 		printf("Bad fgcolor string in config: %s\n", terminal->setting->fgcolor);
-	}
-
-	vte_terminal_set_colors(VTE_TERMINAL(term->vte), &terminal->foreground, &terminal->background, &linux_color[0], 16);
-
-	/* background transparent */
-	if( terminal->setting->bgtransparent ){
-		if( terminal->rgba ){
-			vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
-			vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
-		} else {
-			vte_terminal_set_background_transparent((VteTerminal *)term->vte, TRUE);
-			vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
-		}
-	} else {
-		vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
-		vte_terminal_set_opacity((VteTerminal *)term->vte, 65535);
 	}
 
 	/* create label for tab */
@@ -680,6 +689,9 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	g_signal_connect(term->vte, "button-press-event", G_CALLBACK(terminal_vte_button_press), terminal);
 
 	gtk_widget_show_all(term->box);
+
+	/* apply other settings */
+	terminal_term_setting_update(term, terminal);
 
 	return term;
 }
@@ -798,7 +810,7 @@ static void lxterminal_accelerator_init(LXTerminal *terminal)
 	gtk_window_add_accel_group(GTK_WINDOW(terminal->mainw), terminal->menubar->accel_group);
 }
 
-void lxterminal_menuaccel_update(Setting *setting)
+void lxterminal_menuaccel_update(LXTerminal *terminal)
 {
 	/* update F10 status */
 	/* hack took from gnome-terminal */
@@ -814,7 +826,7 @@ void lxterminal_menuaccel_update(Setting *setting)
 	}
 
 	
-	if (setting->disablef10) {
+	if (terminal->setting->disablef10) {
 		gtk_settings_set_string_property (gtk_settings_get_default(),
 										"gtk-menu-bar-accel",
 										/* no one will ever press this ;-) */
@@ -828,41 +840,25 @@ void lxterminal_menuaccel_update(Setting *setting)
 	}
 }
 
-void terminal_setting_update(LXTerminal *terminal, Setting *setting)
+void terminal_setting_update(LXTerminal *terminal)
 {
-	Term *term;
 	gint i;
 
 	/* update all of terminals */
-	for (i=0;i<terminal->terms->len;i++) {
-		term = g_ptr_array_index(terminal->terms, i);
-
-		vte_terminal_set_font_from_string((VteTerminal *)term->vte, terminal->setting->fontname);
-		vte_terminal_set_word_chars((VteTerminal *)term->vte, terminal->setting->selchars);
-		vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
-
-		/* background transparent */
-		if( terminal->setting->bgtransparent ){
-			if( terminal->rgba ){
-				vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
-				vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
-			} else {
-				vte_terminal_set_background_transparent((VteTerminal *)term->vte, TRUE);
-				vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
-			}
-		} else {
-			vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
-			vte_terminal_set_opacity((VteTerminal *)term->vte, 65535);
-		}
-
-		vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color[0], 16);
-	}
+	for (i=0;i<terminal->terms->len;i++)
+		terminal_term_setting_update(g_ptr_array_index(terminal->terms, i), terminal);
 
 	/* update tab position */
 	lxterminal_tab_set_position(terminal->notebook, terminal->tabpos);
 
 	/* update menu accel */
-	lxterminal_menuaccel_update(setting);
+	lxterminal_menuaccel_update(terminal);
+
+	/* update menubar */
+	if( terminal->setting->hidemenubar )
+		gtk_widget_hide( terminal->menubar->menu );
+	else
+		gtk_widget_show( terminal->menubar->menu );
 }
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting)
@@ -949,7 +945,6 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	/* Tab Position */
 	terminal->tabpos = lxterminal_tab_get_position_id(terminal->setting->tabpos);
-	lxterminal_tab_set_position(terminal->notebook, terminal->tabpos);
 
 	g_signal_connect(terminal->notebook, "switch-page", G_CALLBACK(terminal_switch_tab), terminal);
 	gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
@@ -968,15 +963,17 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 
 	/* initializing accelerator */
 	lxterminal_accelerator_init(terminal);
-    term_set_swicth_accel(term);
+        term_set_swicth_accel(term);
 
 	gtk_widget_show_all(terminal->mainw);
+
+	/* update terminal settings */
+	terminal_setting_update(terminal);
 
 	/* original hints of VTE */
 	gdk_window_get_geometry_hints(GTK_WIDGET(term->vte)->window,
 										&terminal->geometry,
 										&terminal->geom_mask);
-
 
 	/* resizing terminal with window size */
 	g_signal_connect(terminal->mainw, "size-request", G_CALLBACK(terminal_window_resize), terminal);
@@ -1048,9 +1045,6 @@ int main(gint argc, gchar** argv)
 	/* initializing something */
 	lxtermwin->windows = g_ptr_array_new();
 	lxtermwin->setting = setting;
-
-	/* initializing menu accelerator */
-	lxterminal_menuaccel_update(setting);
 
 	/* initializing LXTerminal */
 	lxterminal_init(lxtermwin, argc, argv, setting);

@@ -12,6 +12,8 @@ typedef struct _setting {
 	gboolean disablef10;
 	gboolean bgtransparent;
 	GKeyFile *keyfile;
+	gboolean hidemenubar;
+	gboolean hidescrollbar;
 } Setting;
 
 Setting *load_setting_from_file(const char *filename);
