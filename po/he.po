@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-15 21:08+0200\n"
-"PO-Revision-Date: 2009-09-29 16:47+0200\n"
+"PO-Revision-Date: 2009-09-29 19:58+0200\n"
 "Last-Translator: Yaron Shahrbani <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "מזרח־אסייתי"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr "דרום־מזרח ודרום־מערב אסייתי."
+msgstr "דרום־מזרח ודרום־מערב אסייתי"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
