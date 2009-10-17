@@ -670,7 +670,6 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), VTE_TERMINAL(term->vte)->adjustment);
 
 	/* terminal fork */
-	g_printf("%s\n", exec);
 	if (exec) {
 		gchar **command;
 		g_shell_parse_argv(exec, NULL, &command, NULL);
