@@ -10,7 +10,6 @@ typedef struct _setting {
 	guint16 bgalpha;
 	glong scrollback;
 	gboolean disablef10;
-	gboolean bgtransparent;
 	GKeyFile *keyfile;
 	gboolean hidemenubar;
 	gboolean hidescrollbar;

@@ -50,7 +50,6 @@ void setting_save(Setting *setting)
 	g_key_file_set_string(setting->keyfile, "general", "bgcolor", setting->bgcolor);
 	g_key_file_set_integer(setting->keyfile, "general", "bgalpha", setting->bgalpha);
 	g_key_file_set_string(setting->keyfile, "general", "fgcolor", setting->fgcolor);
-	g_key_file_set_boolean(setting->keyfile, "general", "bgtransparent", setting->bgtransparent);
 	g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tabpos);
 	g_key_file_set_integer(setting->keyfile, "general", "scrollback", (gint)setting->scrollback);
 	g_key_file_set_boolean(setting->keyfile, "general", "disablef10", setting->disablef10);
@@ -90,7 +89,6 @@ Setting *load_setting_from_file(const char *filename)
 		setting->bgcolor = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
 		setting->bgalpha = g_key_file_get_integer(setting->keyfile, "general", "bgalpha", NULL);
 		setting->fgcolor = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
-		setting->bgtransparent = g_key_file_get_boolean(setting->keyfile, "general", "bgtransparent", NULL);
 		setting->tabpos = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
 		setting->scrollback = (glong)g_key_file_get_integer(setting->keyfile, "general", "scrollback", NULL);
 		setting->disablef10 = g_key_file_get_boolean(setting->keyfile, "general", "disablef10", NULL);
@@ -110,13 +108,10 @@ setting_default:
 		setting->bgcolor = g_strdup("#000000");
 	
 	if (!setting->bgalpha)
-		setting->bgalpha = (guint16) 0xDDDD;
+		setting->bgalpha = (guint16) 0xFFFF;
 
 	if (!setting->fgcolor)
 		setting->fgcolor = g_strdup("#aaaaaa");
-
-	if (!setting->bgtransparent)
-		setting->bgtransparent = FALSE;
 
 	if (!setting->tabpos)
 		setting->tabpos = g_strdup("top");

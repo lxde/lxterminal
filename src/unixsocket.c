@@ -50,6 +50,8 @@ lxterminal_socket_read_channel(GIOChannel *gio, GIOCondition condition, gpointer
 
 		msg[term] = '\0';
 
+		g_printf("%s\n", msg);
+
 		/* generate args */
 		g_shell_parse_argv(msg, &argc, &argv, NULL);
 
@@ -174,7 +176,7 @@ lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
 				setworkdir = TRUE;
 			}
 
-			g_io_channel_write_chars(gio, *(argv+i), -1, NULL, NULL);
+			g_io_channel_write_chars(gio, g_shell_quote(*(argv+i)), -1, NULL, NULL);
 			if (i+1!=argc) {
 				g_io_channel_write_chars(gio, " ", -1, NULL, NULL);
 			} else {

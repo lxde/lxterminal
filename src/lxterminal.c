@@ -73,6 +73,7 @@ static gchar helpmsg[] = {
 	"  -t, -T, --title=STRING               Set the terminal's title\n"
 	"  --working-directory=DIRECTORY    Set the terminal's working directory\n"
 	"  --geometry=GEOMETRY              X geometry specification (see \"X\" man page), can be specified once per window to be opened.\n"
+	"  -l, --loginshell                 Executes login shell.\n"
 };
 
 static GtkActionEntry menus[] =
@@ -607,17 +608,12 @@ void terminal_term_setting_update(Term *term, LXTerminal *terminal){
 	vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
 
 	/* background transparent */
-	if( terminal->setting->bgtransparent ){
-		if( terminal->rgba ){
-			vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
-			vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
-		} else {
-			vte_terminal_set_background_transparent((VteTerminal *)term->vte, TRUE);
-			vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
-		}
-	} else {
+	if( terminal->rgba ){
 		vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
-		vte_terminal_set_opacity((VteTerminal *)term->vte, 65535);
+		vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
+	} else {
+		vte_terminal_set_background_transparent((VteTerminal *)term->vte, terminal->setting->bgalpha == 65535 ? FALSE : TRUE);
+		vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
 	}
 
 	vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color[0], 16);
@@ -674,13 +670,14 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), VTE_TERMINAL(term->vte)->adjustment);
 
 	/* terminal fork */
-	if (!exec) {
-		vte_terminal_fork_command(VTE_TERMINAL(term->vte), NULL, NULL, env, pwd, FALSE, TRUE, TRUE);
-	} else {
+	g_printf("%s\n", exec);
+	if (exec) {
 		gchar **command;
 		g_shell_parse_argv(exec, NULL, &command, NULL);
 		vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(command), command, env, pwd, FALSE, TRUE, TRUE);
 		g_strfreev(command);
+	} else {
+		vte_terminal_fork_command(VTE_TERMINAL(term->vte), NULL, NULL, env, pwd, FALSE, TRUE, TRUE);
 	}
 
 	/* signal handler */
@@ -878,13 +875,13 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 			if (strncmp(argv[i],"--command=", 10)==0) {
 				cmd = argv[i]+10;
 				continue;
-			} else if ((strcmp(argv[i],"--command")==0||strcmp(argv[i],"-e")==0)&&(i+1<argc)) {
+			} else if ((strcmp(argv[i],"--command")==0 || strcmp(argv[i],"-e") == 0) && (i+1<argc) ) {
 				cmd = argv[++i];
 				continue;
 			} else if (strncmp(argv[i],"--title=", 8)==0) {
 				title = argv[i]+8;
 				continue;
-			} else if ((strcmp(argv[i],"--title")==0||strcmp(argv[i],"-t")==0||strcmp(argv[i],"-T")==0)&&(i+1<argc)) {
+			} else if ((strcmp(argv[i],"--title")==0 || strcmp(argv[i],"-t")==0 || strcmp(argv[i],"-T")==0)&&(i+1<argc)) {
 				title = argv[++i];
 				continue;
 			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
@@ -893,6 +890,8 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 			} else if (strncmp(argv[i],"--geometry=", 11)==0) {
 				sscanf(argv[i]+11, "%dx%d", &cols, &rows);
 				continue;
+			} else if ((strcmp(argv[i],"--loginshell")==0 || strcmp(argv[i],"-l")==0)&&cmd==NULL) {
+				cmd = "sh -l";
 			}
 		}
 	}
@@ -1011,6 +1010,8 @@ int main(gint argc, gchar** argv)
 			} else if (strncmp(argv[i],"--working-directory=", 20)==0) {
 				continue;
 			} else if (strncmp(argv[i],"--geometry=", 11)==0) {
+				continue;
+			} else if ((strcmp(argv[i],"--loginshell")==0 || strcmp(argv[i],"-l")==0)) {
 				continue;
 			}
 
