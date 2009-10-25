@@ -355,5 +355,3 @@ msgstr "Nustatymai"
 #~ msgid "_View"
 #~ msgstr "_Rodymas"
 
-#~ msgid ""
-#~ msgstr "_Koduotė"
