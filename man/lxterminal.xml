@@ -64,6 +64,12 @@
 	<listitem>	  <para>Set the terminal's size in characters and lines.</para>
 	</listitem>
       </varlistentry>
+      <varlistentry>	<term>	  <option>-l</option>
+	  <option>--loginshell</option>
+	</term>
+	<listitem>	  <para>Executes login shell.</para>
+	</listitem>
+      </varlistentry>
     </variablelist>
   </refsect1>
 

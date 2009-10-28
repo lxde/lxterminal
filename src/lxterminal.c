@@ -616,9 +616,11 @@ void terminal_term_setting_update(Term *term, LXTerminal *terminal){
 		vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
 	}
 
+	vte_terminal_set_cursor_blink_mode((VteTerminal *)term->vte, terminal->setting->cursorblinks?VTE_CURSOR_BLINK_ON:VTE_CURSOR_BLINK_OFF);
+
 	vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color[0], 16);
 
-	/* update menubar */
+	/* update scrollbar */
 	if( terminal->setting->hidescrollbar )
 		gtk_widget_hide( term->scrollbar );
 	else

@@ -32,135 +32,220 @@ gchar *gdk_color_to_string(const GdkColor *color)
 }
 #endif
 
-void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab);
-void lxterminal_preferences_general_destructor(Prefer *prefer, TabWidget *tab);
-void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_style_constructor(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_style_destructor(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_style_save(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_display_constructor(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_display_destructor(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_display_save(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_misc_constructor(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_misc_destructor(Prefer *prefer, TabWidget *tab);
+void lxterminal_preferences_misc_save(Prefer *prefer, TabWidget *tab);
 
 static TabGroup tabs[] = {
 	{
-		N_("General"),
-		"preferences-gerneral.png",
-		lxterminal_preferences_general_constructor,
-		lxterminal_preferences_general_destructor,
-		lxterminal_preferences_general_save
+		N_("Style"),
+		"preferences-style.png",
+		lxterminal_preferences_style_constructor,
+		lxterminal_preferences_style_destructor,
+		lxterminal_preferences_style_save
+	},
+	{
+		N_("Display"),
+		"preferences-display.png",
+		lxterminal_preferences_display_constructor,
+		lxterminal_preferences_display_destructor,
+		lxterminal_preferences_display_save
+	},
+	{
+		N_("Misc"),
+		"preferences-misc.png",
+		lxterminal_preferences_misc_constructor,
+		lxterminal_preferences_misc_destructor,
+		lxterminal_preferences_misc_save
 	}
 };
 
-void lxterminal_preferences_general_constructor(Prefer *prefer, TabWidget *tab)
+void lxterminal_preferences_style_constructor(Prefer *prefer, TabWidget *tab)
 {
-	PreferGeneral *pg;
+	PreferStyle *ps;
 
 	/* create general data structure */
-	pg = g_new0(PreferGeneral, 1);
-	tab->childs = pg;
+	ps = g_new0(PreferStyle, 1);
+	tab->childs = ps;
 
-	pg->box = gtk_table_new(10,4, FALSE);
-	gtk_table_set_row_spacings(GTK_TABLE(pg->box), 3);
-	gtk_table_set_col_spacings(GTK_TABLE(pg->box), 5);
+	ps->box = gtk_table_new(4, 4, FALSE);
+	gtk_table_set_row_spacings(GTK_TABLE(ps->box), 3);
+	gtk_table_set_col_spacings(GTK_TABLE(ps->box), 5);
 
 	/* terminal font */
-	pg->font_label = gtk_label_new(_("Terminal Font:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->font_label), 1, 0.5);
-	pg->font_button = gtk_font_button_new_with_font(prefer->terminal->setting->fontname);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_label, 0,2, 0,1);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->font_button, 2,4, 0,1);
-
-	/* Select-by-word */
-	pg->selchars_label = gtk_label_new(_("Select-by-word characters:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->selchars_label), 1, 0.5);
-	pg->selchars_entry = gtk_entry_new();
-	gtk_entry_set_text(GTK_ENTRY(pg->selchars_entry), prefer->terminal->setting->selchars);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_label, 0,2, 1,2);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->selchars_entry, 2,4, 1,2);
+	ps->font_label = gtk_label_new(_("Terminal Font:"));
+	gtk_misc_set_alignment(GTK_MISC(ps->font_label), 1, 0.5);
+	ps->font_button = gtk_font_button_new_with_font(prefer->terminal->setting->fontname);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->font_label, 0,2, 0,1);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->font_button, 2,4, 0,1);
 
 	/* Background color */
-	pg->bgcolor_label = gtk_label_new(_("Background:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->bgcolor_label), 1, 0.5);
-	pg->bgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->background);
-	gtk_color_button_set_use_alpha(GTK_COLOR_BUTTON(pg->bgcolor_entry), TRUE);
-	gtk_color_button_set_alpha(GTK_COLOR_BUTTON(pg->bgcolor_entry), prefer->terminal->setting->bgalpha);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_label, 0,2, 3,4);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->bgcolor_entry, 2,4, 3,4);
+	ps->bgcolor_label = gtk_label_new(_("Background:"));
+	gtk_misc_set_alignment(GTK_MISC(ps->bgcolor_label), 1, 0.5);
+	ps->bgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->background);
+	gtk_color_button_set_use_alpha(GTK_COLOR_BUTTON(ps->bgcolor_entry), TRUE);
+	gtk_color_button_set_alpha(GTK_COLOR_BUTTON(ps->bgcolor_entry), prefer->terminal->setting->bgalpha);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->bgcolor_label, 0,2, 1,2);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->bgcolor_entry, 2,4, 1,2);
 
 	/* Foreground color */
-	pg->fgcolor_label = gtk_label_new(_("Foreground:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->fgcolor_label), 1, 0.5);
-	pg->fgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->foreground);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_label, 0,2, 4,5);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->fgcolor_entry, 2,4, 4,5);
+	ps->fgcolor_label = gtk_label_new(_("Foreground:"));
+	gtk_misc_set_alignment(GTK_MISC(ps->fgcolor_label), 1, 0.5);
+	ps->fgcolor_entry = gtk_color_button_new_with_color(&prefer->terminal->foreground);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->fgcolor_label, 0,2, 2,3);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->fgcolor_entry, 2,4, 2,3);
 
-	/* Scrollback buffer */
-	pg->scrollback_label = gtk_label_new(_("Scrollback lines:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->scrollback_label), 1, 0.5);
-	pg->scrollback_entry = gtk_spin_button_new_with_range(100, 100000, 10);
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(pg->scrollback_entry), (gdouble)prefer->terminal->setting->scrollback);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_label, 0,2, 5,6);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->scrollback_entry, 2,4, 5,6);
-
-	/* tab-panel position */
-	pg->tabpos_label = gtk_label_new(_("Tab panel position:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->tabpos_label), 1, 0.5);
-	pg->tabpos_combobox = gtk_combo_box_new_text();
-	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Top"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Bottom"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Left"));
-	gtk_combo_box_append_text(GTK_COMBO_BOX (pg->tabpos_combobox), _("Right"));
-	gtk_combo_box_set_active (GTK_COMBO_BOX (pg->tabpos_combobox), prefer->terminal->tabpos);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_label, 0,2, 6,7);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->tabpos_combobox, 2,4, 6,7);
-
-	/* Disable F10 for menu */
-	pg->disablef10_label = gtk_label_new(_("Disable F10 shortcut for menu:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->disablef10_label), 1, 0.5);
-	pg->disablef10_checkbox = gtk_check_button_new();
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->disablef10_checkbox), prefer->terminal->setting->disablef10);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_label, 0,2, 7,8);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->disablef10_checkbox, 2,4, 7,8);
-
-	/* Hide menu bar */
-	pg->hidemenubar_label = gtk_label_new(_("Hide menu bar:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->hidemenubar_label), 1, 0.5);
-	pg->hidemenubar_checkbox = gtk_check_button_new();
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->hidemenubar_checkbox), prefer->terminal->setting->hidemenubar);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidemenubar_label, 0,2,8,9);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidemenubar_checkbox, 2,4,8,9);
-
-	/* Hide scroll bar */
-	pg->hidescrollbar_label = gtk_label_new(_("Hide scroll bar:"));
-	gtk_misc_set_alignment(GTK_MISC(pg->hidescrollbar_label), 1, 0.5);
-	pg->hidescrollbar_checkbox = gtk_check_button_new();
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pg->hidescrollbar_checkbox), prefer->terminal->setting->hidescrollbar);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidescrollbar_label, 0,2,9,10);
-	gtk_table_attach_defaults(GTK_TABLE(pg->box), pg->hidescrollbar_checkbox, 2,4,9,10);
+	/* Cursor Blinks */
+	ps->cursorblinks_label = gtk_label_new(_("Cursor Blinks:"));
+	gtk_misc_set_alignment(GTK_MISC(ps->cursorblinks_label), 1, 0.5);
+	ps->cursorblinks_checkbox = gtk_check_button_new();
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(ps->cursorblinks_checkbox), prefer->terminal->setting->cursorblinks);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->cursorblinks_label, 0,2,3,4);
+	gtk_table_attach_defaults(GTK_TABLE(ps->box), ps->cursorblinks_checkbox, 2,4,3,4);
 
 	/* adding to page */
-	gtk_container_add(GTK_CONTAINER(tab->page), pg->box);
+	gtk_container_add(GTK_CONTAINER(tab->page), ps->box);
 }
 
-void lxterminal_preferences_general_destructor(Prefer *prefer, TabWidget *tab)
+void lxterminal_preferences_display_constructor(Prefer *prefer, TabWidget *tab)
 {
-	PreferGeneral *pg = tab->childs;
+	PreferDisplay *pd;
 
-	g_free(pg);
+	/* create general data structure */
+	pd = g_new0(PreferDisplay, 1);
+	tab->childs = pd;
+
+	pd->box = gtk_table_new(4,4, FALSE);
+	gtk_table_set_row_spacings(GTK_TABLE(pd->box), 3);
+	gtk_table_set_col_spacings(GTK_TABLE(pd->box), 5);
+
+	/* tab-panel position */
+	pd->tabpos_label = gtk_label_new(_("Tab panel position:"));
+	gtk_misc_set_alignment(GTK_MISC(pd->tabpos_label), 1, 0.5);
+	pd->tabpos_combobox = gtk_combo_box_new_text();
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pd->tabpos_combobox), _("Top"));
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pd->tabpos_combobox), _("Bottom"));
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pd->tabpos_combobox), _("Left"));
+	gtk_combo_box_append_text(GTK_COMBO_BOX (pd->tabpos_combobox), _("Right"));
+	gtk_combo_box_set_active (GTK_COMBO_BOX (pd->tabpos_combobox), prefer->terminal->tabpos);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->tabpos_label, 0,2, 0,1);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->tabpos_combobox, 2,4, 0,1);
+
+	/* Scrollback buffer */
+	pd->scrollback_label = gtk_label_new(_("Scrollback lines:"));
+	gtk_misc_set_alignment(GTK_MISC(pd->scrollback_label), 1, 0.5);
+	pd->scrollback_entry = gtk_spin_button_new_with_range(100, 100000, 10);
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(pd->scrollback_entry), (gdouble)prefer->terminal->setting->scrollback);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->scrollback_label, 0,2, 1,2);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->scrollback_entry, 2,4, 1,2);
+
+	/* Hide scroll bar */
+	pd->hidescrollbar_label = gtk_label_new(_("Hide scroll bar:"));
+	gtk_misc_set_alignment(GTK_MISC(pd->hidescrollbar_label), 1, 0.5);
+	pd->hidescrollbar_checkbox = gtk_check_button_new();
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pd->hidescrollbar_checkbox), prefer->terminal->setting->hidescrollbar);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->hidescrollbar_label, 0,2,2,3);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->hidescrollbar_checkbox, 2,4,2,3);
+
+	/* Hide menu bar */
+	pd->hidemenubar_label = gtk_label_new(_("Hide menu bar:"));
+	gtk_misc_set_alignment(GTK_MISC(pd->hidemenubar_label), 1, 0.5);
+	pd->hidemenubar_checkbox = gtk_check_button_new();
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pd->hidemenubar_checkbox), prefer->terminal->setting->hidemenubar);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->hidemenubar_label, 0,2,3,4);
+	gtk_table_attach_defaults(GTK_TABLE(pd->box), pd->hidemenubar_checkbox, 2,4,3,4);
+
+	/* adding to page */
+	gtk_container_add(GTK_CONTAINER(tab->page), pd->box);
 }
 
-void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
+void lxterminal_preferences_misc_constructor(Prefer *prefer, TabWidget *tab)
 {
-	PreferGeneral *pg = tab->childs;
+	PreferMisc *pm;
+
+	/* create general data structure */
+	pm = g_new0(PreferMisc, 1);
+	tab->childs = pm;
+
+	pm->box = gtk_table_new(2,4, FALSE);
+	gtk_table_set_row_spacings(GTK_TABLE(pm->box), 3);
+	gtk_table_set_col_spacings(GTK_TABLE(pm->box), 5);
+
+	/* Select-by-word */
+	pm->selchars_label = gtk_label_new(_("Select-by-word characters:"));
+	gtk_misc_set_alignment(GTK_MISC(pm->selchars_label), 1, 0.5);
+	pm->selchars_entry = gtk_entry_new();
+	gtk_entry_set_text(GTK_ENTRY(pm->selchars_entry), prefer->terminal->setting->selchars);
+	gtk_table_attach_defaults(GTK_TABLE(pm->box), pm->selchars_label, 0,2, 0,1);
+	gtk_table_attach_defaults(GTK_TABLE(pm->box), pm->selchars_entry, 2,4, 0,1);
+
+	/* Disable F10 for menu */
+	pm->disablef10_label = gtk_label_new(_("Disable F10 shortcut for menu:"));
+	gtk_misc_set_alignment(GTK_MISC(pm->disablef10_label), 1, 0.5);
+	pm->disablef10_checkbox = gtk_check_button_new();
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pm->disablef10_checkbox), prefer->terminal->setting->disablef10);
+	gtk_table_attach_defaults(GTK_TABLE(pm->box), pm->disablef10_label, 0,2, 1,2);
+	gtk_table_attach_defaults(GTK_TABLE(pm->box), pm->disablef10_checkbox, 2,4, 1,2);
+
+	/* adding to page */
+	gtk_container_add(GTK_CONTAINER(tab->page), pm->box);
+}
+
+void lxterminal_preferences_style_destructor(Prefer *prefer, TabWidget *tab)
+{
+	PreferStyle *ps = tab->childs;
+
+	g_free(ps);
+}
+
+void lxterminal_preferences_display_destructor(Prefer *prefer, TabWidget *tab)
+{
+	PreferDisplay *pd = tab->childs;
+
+	g_free(pd);
+}
+
+void lxterminal_preferences_misc_destructor(Prefer *prefer, TabWidget *tab)
+{
+	PreferMisc *pm = tab->childs;
+
+	g_free(pm);
+}
+
+void lxterminal_preferences_style_save(Prefer *prefer, TabWidget *tab)
+{
+	PreferStyle *ps = tab->childs;
 
 	g_free( prefer->terminal->setting->fontname );
 	g_free( prefer->terminal->setting->selchars );
-	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name((GtkFontButton *)pg->font_button) );
-	prefer->terminal->setting->selchars = g_strdup( gtk_entry_get_text((GtkEntry *)pg->selchars_entry) );
-	prefer->terminal->setting->scrollback = (glong)gtk_spin_button_get_value_as_int((GtkSpinButton *)pg->scrollback_entry);
-	prefer->terminal->setting->disablef10 = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->disablef10_checkbox);
-	prefer->terminal->setting->bgalpha = (guint16)gtk_color_button_get_alpha(GTK_COLOR_BUTTON(pg->bgcolor_entry));
-	prefer->terminal->setting->hidemenubar = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->hidemenubar_checkbox);
-	prefer->terminal->setting->hidescrollbar = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pg->hidescrollbar_checkbox);
+	prefer->terminal->setting->fontname = g_strdup( gtk_font_button_get_font_name((GtkFontButton *)ps->font_button) );
+	prefer->terminal->setting->bgalpha = (guint16)gtk_color_button_get_alpha(GTK_COLOR_BUTTON(ps->bgcolor_entry));
+	prefer->terminal->setting->cursorblinks = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)ps->cursorblinks_checkbox);
+
+	/* background and foreground */
+	gtk_color_button_get_color( GTK_COLOR_BUTTON(ps->bgcolor_entry), &prefer->terminal->background);
+	prefer->terminal->setting->bgcolor = g_strdup( gdk_color_to_string(&prefer->terminal->background) );
+	gtk_color_button_get_color(GTK_COLOR_BUTTON(ps->fgcolor_entry), &prefer->terminal->foreground);
+	prefer->terminal->setting->fgcolor = g_strdup( gdk_color_to_string(&prefer->terminal->foreground) );
+}
+
+void lxterminal_preferences_display_save(Prefer *prefer, TabWidget *tab)
+{
+	PreferDisplay *pd = tab->childs;
+
+	prefer->terminal->setting->scrollback = (glong)gtk_spin_button_get_value_as_int((GtkSpinButton *)pd->scrollback_entry);
+	prefer->terminal->setting->hidemenubar = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pd->hidemenubar_checkbox);
+	prefer->terminal->setting->hidescrollbar = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pd->hidescrollbar_checkbox);
 
 	/* Tab position */
 	g_free( prefer->terminal->setting->tabpos );
-	prefer->terminal->tabpos = gtk_combo_box_get_active((GtkComboBox *)pg->tabpos_combobox);
+	prefer->terminal->tabpos = gtk_combo_box_get_active((GtkComboBox *)pd->tabpos_combobox);
 	switch(prefer->terminal->tabpos) {
 		case 0:
 			prefer->terminal->setting->tabpos = g_strdup("top");
@@ -175,12 +260,14 @@ void lxterminal_preferences_general_save(Prefer *prefer, TabWidget *tab)
 			prefer->terminal->setting->tabpos = g_strdup("right");
 			break;
 	}
+}
 
-	/* background and foreground */
-	gtk_color_button_get_color( GTK_COLOR_BUTTON(pg->bgcolor_entry), &prefer->terminal->background);
-	prefer->terminal->setting->bgcolor = g_strdup( gdk_color_to_string(&prefer->terminal->background) );
-	gtk_color_button_get_color(GTK_COLOR_BUTTON(pg->fgcolor_entry), &prefer->terminal->foreground);
-	prefer->terminal->setting->fgcolor = g_strdup( gdk_color_to_string(&prefer->terminal->foreground) );
+void lxterminal_preferences_misc_save(Prefer *prefer, TabWidget *tab)
+{
+	PreferMisc *pm = tab->childs;
+
+	prefer->terminal->setting->selchars = g_strdup( gtk_entry_get_text((GtkEntry *)pm->selchars_entry) );
+	prefer->terminal->setting->disablef10 = (gboolean)gtk_toggle_button_get_active((GtkToggleButton *)pm->disablef10_checkbox);
 }
 
 TabWidget *lxterminal_preferences_page_new(TabGroup *tabgroup)

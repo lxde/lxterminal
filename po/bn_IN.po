@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-15 21:08+0200\n"
+"POT-Creation-Date: 2009-10-17 18:33+0800\n"
 "PO-Revision-Date: 2009-07-31 12:42+0200\n"
 "Last-Translator: Sankarshan <sankarshan.mukhopadhyay@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,81 +166,95 @@ msgstr "ভিয়েতনামিজ"
 msgid "Thai"
 msgstr "থাই"
 
-#: ../src/lxterminal.c:78
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "ফাইল(_F)"
 
-#: ../src/lxterminal.c:79
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "সম্পাদনা(_E)"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "ট্যাব(_T)"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "সহায়িকা(_H)"
 
-#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
-msgid "_New Window"
-msgstr "নতুন উইন্ডো(_N)"
-
-#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
-msgid "_New Tab"
-msgstr "নতুন ট্যাব(_N)"
-
-#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
-msgid "_Close Tab"
-msgstr "ট্যাব বন্ধ করুন(_C)"
-
-#: ../src/lxterminal.c:93
-msgid "_Quit"
-msgstr "প্রস্থান(_Q)"
-
-#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
-msgid "_Copy"
-msgstr "কপি করুন(_C)"
-
-#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
-msgid "_Paste"
-msgstr "পেস্ট করুন(_P)"
-
-#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
-msgid "_Preferences"
-msgstr "বৈশিষ্ট্য(_P)"
-
-#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:99
-msgid "_Previous Tab"
-msgstr "পূর্বের ট্যাব(_P)"
-
-#: ../src/lxterminal.c:100
-msgid "_Next Tab"
-msgstr "পরের ট্যাব(_N)"
-
-#: ../src/lxterminal.c:101
-msgid "_About"
-msgstr "পরিচিতি(_A)"
-
-#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
-#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
+#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
+#: ../src/lxterminal.c:924 ../src/lxterminal.c:952
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:428
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:401
 msgid "translator-credits"
 msgstr "সঙ্কর্ষণ মুখোপাধ্যায় (sankarshan@randomink.org)"
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:411
 msgid "Copyright (C) 2008"
 msgstr "স্বত্বাধিকার (C) ২০০৮"
 
-#: ../src/lxterminal.c:439
+#: ../src/lxterminal.c:412
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE প্রকল্পের জন্য টার্মিনাল এমুলেটার"
+
+#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#, fuzzy
+msgid "New _Window"
+msgstr "নতুন উইন্ডো(_N)"
+
+#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#, fuzzy
+msgid "New _Tab"
+msgstr "নতুন ট্যাব(_N)"
+
+#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+msgid "_Close Tab"
+msgstr "ট্যাব বন্ধ করুন(_C)"
+
+#: ../src/lxterminal.c:428
+msgid "_Quit"
+msgstr "প্রস্থান(_Q)"
+
+#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#, fuzzy
+msgid "Cop_y"
+msgstr "কপি করুন(_C)"
+
+#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+msgid "_Paste"
+msgstr "পেস্ট করুন(_P)"
+
+#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#, fuzzy
+msgid "Preference_s"
+msgstr "বৈশিষ্ট্য"
+
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#, fuzzy
+msgid "Pre_vious Tab"
+msgstr "পূর্বের ট্যাব(_P)"
+
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#, fuzzy
+msgid "Ne_xt Tab"
+msgstr "পরের ট্যাব(_N)"
+
+#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+msgid "Move Tab _Left"
+msgstr ""
+
+#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+msgid "Move Tab _Right"
+msgstr ""
+
+#: ../src/lxterminal.c:438
+msgid "_About"
+msgstr "পরিচিতি(_A)"
 
 #: ../src/preferences.c:41
 msgid "General"
@@ -262,47 +276,58 @@ msgid "Background:"
 msgstr "পটভূমি:"
 
 #. Foreground color
-#: ../src/preferences.c:84
+#: ../src/preferences.c:86
 msgid "Foreground:"
 msgstr "অগ্রভূমি:"
 
-#. Transparent background
-#: ../src/preferences.c:91
-msgid "Transparent Background:"
-msgstr "স্বচ্ছ পটভূমি:"
-
 #. Scrollback buffer
-#: ../src/preferences.c:100
+#: ../src/preferences.c:93
 msgid "Scrollback lines:"
 msgstr "পূর্বের স্ক্রোল করা লাইন:"
 
 #. tab-panel position
-#: ../src/preferences.c:108
+#: ../src/preferences.c:101
 msgid "Tab panel position:"
 msgstr "ট্যাব প্যানেলের অবস্থান:"
 
-#: ../src/preferences.c:111
+#: ../src/preferences.c:104
 msgid "Top"
 msgstr "উপরে"
 
-#: ../src/preferences.c:112
+#: ../src/preferences.c:105
 msgid "Bottom"
 msgstr "নীচের"
 
-#: ../src/preferences.c:113
+#: ../src/preferences.c:106
 msgid "Left"
 msgstr "বাঁদিকের"
 
-#: ../src/preferences.c:114
+#: ../src/preferences.c:107
 msgid "Right"
 msgstr "ডানদিকে"
 
 #. Disable F10 for menu
-#: ../src/preferences.c:120
+#: ../src/preferences.c:113
 msgid "Disable F10 shortcut for menu:"
 msgstr "মেনুর জন্য F10 শর্ট-কাট নিষ্ক্রিয় করুন:"
 
+#. Hide menu bar
+#: ../src/preferences.c:121
+msgid "Hide menu bar:"
+msgstr ""
+
+#. Hide scroll bar
+#: ../src/preferences.c:129
+msgid "Hide scroll bar:"
+msgstr ""
+
 #. create window
-#: ../src/preferences.c:280
+#: ../src/preferences.c:291
 msgid "Preferences"
 msgstr "বৈশিষ্ট্য"
+
+#~ msgid "_Preferences"
+#~ msgstr "বৈশিষ্ট্য(_P)"
+
+#~ msgid "Transparent Background:"
+#~ msgstr "স্বচ্ছ পটভূমি:"

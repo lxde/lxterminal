@@ -13,6 +13,7 @@ typedef struct _setting {
 	GKeyFile *keyfile;
 	gboolean hidemenubar;
 	gboolean hidescrollbar;
+	gboolean cursorblinks;
 } Setting;
 
 Setting *load_setting_from_file(const char *filename);

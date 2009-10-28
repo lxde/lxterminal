@@ -45,6 +45,8 @@ typedef struct _lxterminal {
 	gint     tabpos;
 	gboolean hidemenubar;
 	gboolean hidescrollbar;
+	gint cursormode;
+	gboolean cursorblinks;
 } LXTerminal;
 
 typedef struct _tab {

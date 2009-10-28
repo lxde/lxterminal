@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-15 21:08+0200\n"
+"POT-Creation-Date: 2009-10-17 18:33+0800\n"
 "PO-Revision-Date: 2009-04-21 22:06+0200\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
@@ -161,81 +161,95 @@ msgstr "В’єтнамське"
 msgid "Thai"
 msgstr "Тайське"
 
-#: ../src/lxterminal.c:78
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "_Файл"
 
-#: ../src/lxterminal.c:79
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "_Редагувати"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "_Вкладки"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "_Допомога"
 
-#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
-msgid "_New Window"
-msgstr "_Нове вікно"
-
-#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
-msgid "_New Tab"
-msgstr "_Нова вкладка"
-
-#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
-msgid "_Close Tab"
-msgstr "_Закрити вкладку"
-
-#: ../src/lxterminal.c:93
-msgid "_Quit"
-msgstr "_Вийти"
-
-#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
-msgid "_Copy"
-msgstr "_Копіювати"
-
-#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
-msgid "_Paste"
-msgstr "_Вставити"
-
-#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
-msgid "_Preferences"
-msgstr "_Налаштування"
-
-#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:99
-msgid "_Previous Tab"
-msgstr "_Попередня вкладка"
-
-#: ../src/lxterminal.c:100
-msgid "_Next Tab"
-msgstr "_Наступна вкладка"
-
-#: ../src/lxterminal.c:101
-msgid "_About"
-msgstr "_Про"
-
-#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
-#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
+#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
+#: ../src/lxterminal.c:924 ../src/lxterminal.c:952
 msgid "LXTerminal"
 msgstr "LX-термінал"
 
-#. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:428
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:401
 msgid "translator-credits"
 msgstr "Yarema aka Knedlyk <yupadmin@gmail.com>"
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:411
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:439
+#: ../src/lxterminal.c:412
 msgid "Terminal emulator for LXDE project"
 msgstr "Емулятор терміналу для проекту LXDE"
+
+#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#, fuzzy
+msgid "New _Window"
+msgstr "_Нове вікно"
+
+#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#, fuzzy
+msgid "New _Tab"
+msgstr "_Нова вкладка"
+
+#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+msgid "_Close Tab"
+msgstr "_Закрити вкладку"
+
+#: ../src/lxterminal.c:428
+msgid "_Quit"
+msgstr "_Вийти"
+
+#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#, fuzzy
+msgid "Cop_y"
+msgstr "_Копіювати"
+
+#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+msgid "_Paste"
+msgstr "_Вставити"
+
+#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#, fuzzy
+msgid "Preference_s"
+msgstr "Налаштування"
+
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#, fuzzy
+msgid "Pre_vious Tab"
+msgstr "_Попередня вкладка"
+
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#, fuzzy
+msgid "Ne_xt Tab"
+msgstr "_Наступна вкладка"
+
+#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+msgid "Move Tab _Left"
+msgstr ""
+
+#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+msgid "Move Tab _Right"
+msgstr ""
+
+#: ../src/lxterminal.c:438
+msgid "_About"
+msgstr "_Про"
 
 #: ../src/preferences.c:41
 msgid "General"
@@ -257,50 +271,61 @@ msgid "Background:"
 msgstr "Тло:"
 
 #. Foreground color
-#: ../src/preferences.c:84
+#: ../src/preferences.c:86
 msgid "Foreground:"
 msgstr "Передній план:"
 
-#. Transparent background
-#: ../src/preferences.c:91
-msgid "Transparent Background:"
-msgstr "Прозоре тло:"
-
 #. Scrollback buffer
-#: ../src/preferences.c:100
+#: ../src/preferences.c:93
 msgid "Scrollback lines:"
 msgstr "Лінії прокрутки:"
 
 #. tab-panel position
-#: ../src/preferences.c:108
+#: ../src/preferences.c:101
 msgid "Tab panel position:"
 msgstr "Позиція панелі вкладок:"
 
-#: ../src/preferences.c:111
+#: ../src/preferences.c:104
 msgid "Top"
 msgstr "Вверху"
 
-#: ../src/preferences.c:112
+#: ../src/preferences.c:105
 msgid "Bottom"
 msgstr "Внизу"
 
-#: ../src/preferences.c:113
+#: ../src/preferences.c:106
 msgid "Left"
 msgstr "Зліва"
 
-#: ../src/preferences.c:114
+#: ../src/preferences.c:107
 msgid "Right"
 msgstr "Справа"
 
 #. Disable F10 for menu
-#: ../src/preferences.c:120
+#: ../src/preferences.c:113
 msgid "Disable F10 shortcut for menu:"
 msgstr "Вимкнути скорочення F10 в меню:"
 
+#. Hide menu bar
+#: ../src/preferences.c:121
+msgid "Hide menu bar:"
+msgstr ""
+
+#. Hide scroll bar
+#: ../src/preferences.c:129
+msgid "Hide scroll bar:"
+msgstr ""
+
 #. create window
-#: ../src/preferences.c:280
+#: ../src/preferences.c:291
 msgid "Preferences"
 msgstr "Налаштування"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Налаштування"
+
+#~ msgid "Transparent Background:"
+#~ msgstr "Прозоре тло:"
 
 #~ msgid "_View"
 #~ msgstr "_Вигляд"
