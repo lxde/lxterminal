@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-15 21:08+0200\n"
+"POT-Creation-Date: 2009-10-28 15:02+0100\n"
 "PO-Revision-Date: 2009-09-26 17:14+0200\n"
 "Last-Translator: alexandre raymond <alekcxjo@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -172,143 +172,181 @@ msgstr "Vietnamèn"
 msgid "Thai"
 msgstr "Taï"
 
-#: ../src/lxterminal.c:78
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "_Fichèr"
 
-#: ../src/lxterminal.c:79
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "_Edicion"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "_Tirènt"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "_Édi"
 
-#: ../src/lxterminal.c:89 ../src/lxterminal.c:108
-msgid "_New Window"
-msgstr "_Novela fenehtra"
-
-#: ../src/lxterminal.c:90 ../src/lxterminal.c:109
-msgid "_New Tab"
-msgstr "_Noveu tirènt"
-
-#: ../src/lxterminal.c:92 ../src/lxterminal.c:116
-msgid "_Close Tab"
-msgstr "_Sarrar lo tirènt"
-
-#: ../src/lxterminal.c:93
-msgid "_Quit"
-msgstr "_Modar"
-
-#: ../src/lxterminal.c:94 ../src/lxterminal.c:111
-msgid "_Copy"
-msgstr "_Copiar"
-
-#: ../src/lxterminal.c:95 ../src/lxterminal.c:112
-msgid "_Paste"
-msgstr "_Glletar"
-
-#: ../src/lxterminal.c:97 ../src/lxterminal.c:114
-msgid "_Preferences"
-msgstr "_Preferences"
-
-#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:99
-msgid "_Previous Tab"
-msgstr "_Tirènt d'avant"
-
-#: ../src/lxterminal.c:100
-msgid "_Next Tab"
-msgstr "_Tirènt d'apres"
-
-#: ../src/lxterminal.c:101
-msgid "_About"
-msgstr "_A propós"
-
-#: ../src/lxterminal.c:393 ../src/lxterminal.c:436 ../src/lxterminal.c:462
-#: ../src/lxterminal.c:900 ../src/lxterminal.c:928
+#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
+#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#. TRANSLATORS: Replace mw string with your names, one name per line.
-#: ../src/lxterminal.c:428
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:401
 msgid "translator-credits"
 msgstr "Alexandre Raymond <Alexandre.Raymond@univ-lyon2.fr>"
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:411
 msgid "Copyright (C) 2008"
 msgstr "Drét de Copie / Copyright (C) 2008"
 
-#: ../src/lxterminal.c:439
+#: ../src/lxterminal.c:412
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulatór de Terminal per lo projet LXDE"
 
-#: ../src/preferences.c:41
-msgid "General"
-msgstr "General"
+#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#, fuzzy
+msgid "New _Window"
+msgstr "_Novela fenehtra"
+
+#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#, fuzzy
+msgid "New _Tab"
+msgstr "_Noveu tirènt"
+
+#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+msgid "_Close Tab"
+msgstr "_Sarrar lo tirènt"
+
+#: ../src/lxterminal.c:428
+msgid "_Quit"
+msgstr "_Modar"
+
+#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#, fuzzy
+msgid "Cop_y"
+msgstr "_Copiar"
+
+#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+msgid "_Paste"
+msgstr "_Glletar"
+
+#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#, fuzzy
+msgid "Preference_s"
+msgstr "Preferences"
+
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
+#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#, fuzzy
+msgid "Pre_vious Tab"
+msgstr "_Tirènt d'avant"
+
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#, fuzzy
+msgid "Ne_xt Tab"
+msgstr "_Tirènt d'apres"
+
+#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+msgid "Move Tab _Left"
+msgstr ""
+
+#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+msgid "Move Tab _Right"
+msgstr ""
+
+#: ../src/lxterminal.c:438
+msgid "_About"
+msgstr "_A propós"
+
+#: ../src/preferences.c:47
+msgid "Style"
+msgstr ""
+
+#: ../src/preferences.c:54
+msgid "Display"
+msgstr ""
+
+#: ../src/preferences.c:61
+msgid "Misc"
+msgstr ""
 
 #. terminal font
-#: ../src/preferences.c:62
+#: ../src/preferences.c:82
 msgid "Terminal Font:"
 msgstr "Fonda do Terminal:"
 
-#. Select-by-word
-#: ../src/preferences.c:69
-msgid "Select-by-word characters:"
-msgstr ""
-
 #. Background color
-#: ../src/preferences.c:77
+#: ../src/preferences.c:89
 msgid "Background:"
 msgstr ""
 
 #. Foreground color
-#: ../src/preferences.c:84
+#: ../src/preferences.c:98
 msgid "Foreground:"
 msgstr ""
 
-#. Transparent background
-#: ../src/preferences.c:91
-msgid "Transparent Background:"
-msgstr ""
-
-#. Scrollback buffer
-#: ../src/preferences.c:100
-msgid "Scrollback lines:"
+#. Cursor Blinks
+#: ../src/preferences.c:105
+msgid "Cursor Blinks:"
 msgstr ""
 
 #. tab-panel position
-#: ../src/preferences.c:108
+#: ../src/preferences.c:129
 msgid "Tab panel position:"
 msgstr "Posicion do paneu a tirèns"
 
-#: ../src/preferences.c:111
+#: ../src/preferences.c:132
 msgid "Top"
 msgstr "D'amont"
 
-#: ../src/preferences.c:112
+#: ../src/preferences.c:133
 msgid "Bottom"
 msgstr "D'aval"
 
-#: ../src/preferences.c:113
+#: ../src/preferences.c:134
 msgid "Left"
 msgstr "A gauchi"
 
-#: ../src/preferences.c:114
+#: ../src/preferences.c:135
 msgid "Right"
 msgstr "A dréti"
 
+#. Scrollback buffer
+#: ../src/preferences.c:141
+msgid "Scrollback lines:"
+msgstr ""
+
+#. Hide scroll bar
+#: ../src/preferences.c:149
+msgid "Hide scroll bar:"
+msgstr ""
+
+#. Hide menu bar
+#: ../src/preferences.c:157
+msgid "Hide menu bar:"
+msgstr ""
+
+#. Select-by-word
+#: ../src/preferences.c:181
+msgid "Select-by-word characters:"
+msgstr ""
+
 #. Disable F10 for menu
-#: ../src/preferences.c:120
+#: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
 msgstr ""
 
 #. create window
-#: ../src/preferences.c:280
+#: ../src/preferences.c:378
 msgid "Preferences"
 msgstr "Preferences"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Preferences"
+
+#~ msgid "General"
+#~ msgstr "General"

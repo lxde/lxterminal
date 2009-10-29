@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-17 18:33+0800\n"
+"POT-Creation-Date: 2009-10-28 15:02+0100\n"
 "PO-Revision-Date: 2009-06-07 18:33+0200\n"
 "Last-Translator: Payne Samad Loh <sploh77@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -184,7 +184,7 @@ msgid "_Help"
 msgstr "_Bantuan"
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:924 ../src/lxterminal.c:952
+#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -259,75 +259,91 @@ msgstr ""
 msgid "_About"
 msgstr "_About"
 
-#: ../src/preferences.c:41
-msgid "General"
-msgstr "Am"
+#: ../src/preferences.c:47
+msgid "Style"
+msgstr ""
+
+#: ../src/preferences.c:54
+msgid "Display"
+msgstr ""
+
+#: ../src/preferences.c:61
+msgid "Misc"
+msgstr ""
 
 #. terminal font
-#: ../src/preferences.c:62
+#: ../src/preferences.c:82
 msgid "Terminal Font:"
 msgstr "Fon Terminal:"
 
-#. Select-by-word
-#: ../src/preferences.c:69
-msgid "Select-by-word characters:"
-msgstr "karekter pilihan-dari-ayat"
-
 #. Background color
-#: ../src/preferences.c:77
+#: ../src/preferences.c:89
 msgid "Background:"
 msgstr "Latarbelakang"
 
 #. Foreground color
-#: ../src/preferences.c:86
+#: ../src/preferences.c:98
 msgid "Foreground:"
 msgstr "Latardepan"
 
-#. Scrollback buffer
-#: ../src/preferences.c:93
-msgid "Scrollback lines:"
-msgstr "Baris-baris scrollback:"
+#. Cursor Blinks
+#: ../src/preferences.c:105
+msgid "Cursor Blinks:"
+msgstr ""
 
 #. tab-panel position
-#: ../src/preferences.c:101
+#: ../src/preferences.c:129
 msgid "Tab panel position:"
 msgstr "Kedudukan tab panel:"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:132
 msgid "Top"
 msgstr "Atas"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:133
 msgid "Bottom"
 msgstr "Bawah"
 
-#: ../src/preferences.c:106
+#: ../src/preferences.c:134
 msgid "Left"
 msgstr "Kiri"
 
-#: ../src/preferences.c:107
+#: ../src/preferences.c:135
 msgid "Right"
 msgstr "Kanan"
 
-#. Disable F10 for menu
-#: ../src/preferences.c:113
-msgid "Disable F10 shortcut for menu:"
-msgstr "Lumpuhkan jalanpintas F10 untuk menu:"
-
-#. Hide menu bar
-#: ../src/preferences.c:121
-msgid "Hide menu bar:"
-msgstr ""
+#. Scrollback buffer
+#: ../src/preferences.c:141
+msgid "Scrollback lines:"
+msgstr "Baris-baris scrollback:"
 
 #. Hide scroll bar
-#: ../src/preferences.c:129
+#: ../src/preferences.c:149
 msgid "Hide scroll bar:"
 msgstr ""
 
+#. Hide menu bar
+#: ../src/preferences.c:157
+msgid "Hide menu bar:"
+msgstr ""
+
+#. Select-by-word
+#: ../src/preferences.c:181
+msgid "Select-by-word characters:"
+msgstr "karekter pilihan-dari-ayat"
+
+#. Disable F10 for menu
+#: ../src/preferences.c:189
+msgid "Disable F10 shortcut for menu:"
+msgstr "Lumpuhkan jalanpintas F10 untuk menu:"
+
 #. create window
-#: ../src/preferences.c:291
+#: ../src/preferences.c:378
 msgid "Preferences"
 msgstr "Kegemaran"
+
+#~ msgid "General"
+#~ msgstr "Am"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Kegemaran"

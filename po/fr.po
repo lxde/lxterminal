@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-17 18:33+0800\n"
-"PO-Revision-Date: 2009-06-07 21:39+0200\n"
-"Last-Translator: Cyprien Gay <cyprien.gay@aful.org>\n"
+"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"PO-Revision-Date: 2009-10-28 22:54+0100\n"
+"Last-Translator: Cilyan Olowen <gaknar@gmail.com>\n"
 "Language-Team: fr <gaknar@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -179,7 +179,7 @@ msgid "_Help"
 msgstr "_Aide"
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:924 ../src/lxterminal.c:952
+#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -197,14 +197,12 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Terminal virtuel pour le projet LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
 msgstr "_Nouvelle fenêtre"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
-msgstr "_Nouvel onglet"
+msgstr "Nouvel _onglet"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
 msgid "_Close Tab"
@@ -215,7 +213,6 @@ msgid "_Quit"
 msgstr "_Quitter"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
 msgstr "_Copier"
 
@@ -224,102 +221,115 @@ msgid "_Paste"
 msgstr "C_oller"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
 msgstr "Préférences"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "Onglet _précédent"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
 msgstr "Onglet _suivant"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Déplacer l'onglet à _gauche"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Déplacer l'onglet à _droite"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
 msgstr "À pr_opos"
 
-#: ../src/preferences.c:41
-msgid "General"
-msgstr "Général"
+#: ../src/preferences.c:47
+msgid "Style"
+msgstr "Apparence"
+
+#: ../src/preferences.c:54
+msgid "Display"
+msgstr "Affichage"
+
+#: ../src/preferences.c:61
+msgid "Misc"
+msgstr "Divers"
 
 #. terminal font
-#: ../src/preferences.c:62
+#: ../src/preferences.c:82
 msgid "Terminal Font:"
 msgstr "Police du terminal :"
 
-#. Select-by-word
-#: ../src/preferences.c:69
-msgid "Select-by-word characters:"
-msgstr "Caractères pour la sélection par mots :"
-
 #. Background color
-#: ../src/preferences.c:77
+#: ../src/preferences.c:89
 msgid "Background:"
 msgstr "Arrière-plan :"
 
 #. Foreground color
-#: ../src/preferences.c:86
+#: ../src/preferences.c:98
 msgid "Foreground:"
 msgstr "Premier plan :"
 
-#. Scrollback buffer
-#: ../src/preferences.c:93
-msgid "Scrollback lines:"
-msgstr "Lignes dans l'historique :"
+#. Cursor Blinks
+#: ../src/preferences.c:105
+msgid "Cursor Blinks:"
+msgstr "Clignotement du curseur :"
 
 #. tab-panel position
-#: ../src/preferences.c:101
+#: ../src/preferences.c:129
 msgid "Tab panel position:"
 msgstr "Position des onglets :"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:132
 msgid "Top"
 msgstr "Haut"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:133
 msgid "Bottom"
 msgstr "Bas"
 
-#: ../src/preferences.c:106
+#: ../src/preferences.c:134
 msgid "Left"
 msgstr "Gauche"
 
-#: ../src/preferences.c:107
+#: ../src/preferences.c:135
 msgid "Right"
 msgstr "Droite"
 
+#. Scrollback buffer
+#: ../src/preferences.c:141
+msgid "Scrollback lines:"
+msgstr "Lignes dans l'historique :"
+
+#. Hide scroll bar
+#: ../src/preferences.c:149
+msgid "Hide scroll bar:"
+msgstr "Masquer la barre de défilement :"
+
+#. Hide menu bar
+#: ../src/preferences.c:157
+msgid "Hide menu bar:"
+msgstr "Masquer le menu :"
+
+#. Select-by-word
+#: ../src/preferences.c:181
+msgid "Select-by-word characters:"
+msgstr "Caractères pour la sélection par mots :"
+
 #. Disable F10 for menu
-#: ../src/preferences.c:113
+#: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
 msgstr "Désactiver le raccourci F10 pour le menu :"
 
-#. Hide menu bar
-#: ../src/preferences.c:121
-msgid "Hide menu bar:"
-msgstr ""
-
-#. Hide scroll bar
-#: ../src/preferences.c:129
-msgid "Hide scroll bar:"
-msgstr ""
-
 #. create window
-#: ../src/preferences.c:291
+#: ../src/preferences.c:378
 msgid "Preferences"
 msgstr "Préférences"
+
+#~ msgid "General"
+#~ msgstr "Général"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Préférences"

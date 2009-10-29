@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-17 18:33+0800\n"
-"PO-Revision-Date: 2009-04-21 22:06+0200\n"
+"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"PO-Revision-Date: 2009-10-28 17:57+0100\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -179,7 +179,7 @@ msgid "_Help"
 msgstr "_Допомога"
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:924 ../src/lxterminal.c:952
+#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
 msgid "LXTerminal"
 msgstr "LX-термінал"
 
@@ -197,14 +197,12 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Емулятор терміналу для проекту LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
 msgstr "_Нове вікно"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
-msgstr "_Нова вкладка"
+msgstr "Н_ова вкладка"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
 msgid "_Close Tab"
@@ -215,7 +213,6 @@ msgid "_Quit"
 msgstr "_Вийти"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
 msgstr "_Копіювати"
 
@@ -224,102 +221,115 @@ msgid "_Paste"
 msgstr "_Вставити"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "Налаштування"
+msgstr "На_лаштування"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Попередня вкладка"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "_Наступна вкладка"
+msgstr "На_ступна вкладка"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Пересунути вкладку _ліворуч"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Пересунути вкладку _праворуч"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
 msgstr "_Про"
 
-#: ../src/preferences.c:41
-msgid "General"
-msgstr "Загальне"
+#: ../src/preferences.c:47
+msgid "Style"
+msgstr "Стиль"
+
+#: ../src/preferences.c:54
+msgid "Display"
+msgstr "Відображення"
+
+#: ../src/preferences.c:61
+msgid "Misc"
+msgstr "Різне"
 
 #. terminal font
-#: ../src/preferences.c:62
+#: ../src/preferences.c:82
 msgid "Terminal Font:"
 msgstr "Фонти терміналу:"
 
-#. Select-by-word
-#: ../src/preferences.c:69
-msgid "Select-by-word characters:"
-msgstr "Помітити-за-словом символи:"
-
 #. Background color
-#: ../src/preferences.c:77
+#: ../src/preferences.c:89
 msgid "Background:"
 msgstr "Тло:"
 
 #. Foreground color
-#: ../src/preferences.c:86
+#: ../src/preferences.c:98
 msgid "Foreground:"
 msgstr "Передній план:"
 
-#. Scrollback buffer
-#: ../src/preferences.c:93
-msgid "Scrollback lines:"
-msgstr "Лінії прокрутки:"
+#. Cursor Blinks
+#: ../src/preferences.c:105
+msgid "Cursor Blinks:"
+msgstr "Блимання курсору:"
 
 #. tab-panel position
-#: ../src/preferences.c:101
+#: ../src/preferences.c:129
 msgid "Tab panel position:"
 msgstr "Позиція панелі вкладок:"
 
-#: ../src/preferences.c:104
+#: ../src/preferences.c:132
 msgid "Top"
 msgstr "Вверху"
 
-#: ../src/preferences.c:105
+#: ../src/preferences.c:133
 msgid "Bottom"
 msgstr "Внизу"
 
-#: ../src/preferences.c:106
+#: ../src/preferences.c:134
 msgid "Left"
 msgstr "Зліва"
 
-#: ../src/preferences.c:107
+#: ../src/preferences.c:135
 msgid "Right"
 msgstr "Справа"
 
+#. Scrollback buffer
+#: ../src/preferences.c:141
+msgid "Scrollback lines:"
+msgstr "Лінії прокрутки:"
+
+#. Hide scroll bar
+#: ../src/preferences.c:149
+msgid "Hide scroll bar:"
+msgstr "Приховувати панель прокрутки:"
+
+#. Hide menu bar
+#: ../src/preferences.c:157
+msgid "Hide menu bar:"
+msgstr "Приховувати панель меню:"
+
+#. Select-by-word
+#: ../src/preferences.c:181
+msgid "Select-by-word characters:"
+msgstr "Помітити-за-словом символи:"
+
 #. Disable F10 for menu
-#: ../src/preferences.c:113
+#: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
 msgstr "Вимкнути скорочення F10 в меню:"
 
-#. Hide menu bar
-#: ../src/preferences.c:121
-msgid "Hide menu bar:"
-msgstr ""
-
-#. Hide scroll bar
-#: ../src/preferences.c:129
-msgid "Hide scroll bar:"
-msgstr ""
-
 #. create window
-#: ../src/preferences.c:291
+#: ../src/preferences.c:378
 msgid "Preferences"
 msgstr "Налаштування"
+
+#~ msgid "General"
+#~ msgstr "Загальне"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Налаштування"
