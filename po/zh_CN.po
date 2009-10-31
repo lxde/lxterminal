@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"POT-Creation-Date: 2009-10-31 23:10+0800\n"
 "PO-Revision-Date: 2008-08-05 15:28+0800\n"
 "Last-Translator: ideal Shang <05281253@bjtu.edu.cn>\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -20,43 +20,43 @@ msgstr ""
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "西欧"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "东欧"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "东亚"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "南亚"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "中东"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "西欧"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "中欧"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "南欧"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
@@ -70,11 +70,11 @@ msgstr ""
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "阿拉伯语"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "希腊语"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
@@ -88,7 +88,7 @@ msgstr ""
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "土耳其语"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
@@ -100,15 +100,15 @@ msgstr ""
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "罗马尼亚语"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "亚美尼亚语"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "繁体中文"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
@@ -116,17 +116,17 @@ msgstr ""
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "日语"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "韩语"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "简体中文"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
@@ -166,28 +166,24 @@ msgstr ""
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "泰语"
 
 #: ../src/lxterminal.c:81
-#, fuzzy
 msgid "_File"
-msgstr "/文件(_F)"
+msgstr "文件(_F)"
 
 #: ../src/lxterminal.c:82
-#, fuzzy
 msgid "_Edit"
-msgstr "/编辑(_E)"
+msgstr "编辑(_E)"
 
 #. { "View", NULL, N_("_View") },
 #: ../src/lxterminal.c:84
-#, fuzzy
 msgid "_Tabs"
-msgstr "/标签(_T)"
+msgstr "标签(_T)"
 
 #: ../src/lxterminal.c:85
-#, fuzzy
 msgid "_Help"
-msgstr "/帮助(_H)"
+msgstr "帮助(_H)"
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
 #: ../src/lxterminal.c:925 ../src/lxterminal.c:953
@@ -208,74 +204,65 @@ msgid "Terminal emulator for LXDE project"
 msgstr "LXDE 计划的终端模拟器"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
-msgstr "/新建窗口(_N)"
+msgstr "新建窗口(_W)"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
-msgstr "/新建标签(_N)"
+msgstr "新建标签(_T)"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
-#, fuzzy
 msgid "_Close Tab"
-msgstr "/关闭标签(_C)"
+msgstr "关闭标签(_C)"
 
 #: ../src/lxterminal.c:428
 msgid "_Quit"
-msgstr ""
+msgstr "退出(_Q)"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
-msgstr "/复制(_C)"
+msgstr "复制(_Y)"
 
 #: ../src/lxterminal.c:430 ../src/lxterminal.c:449
-#, fuzzy
 msgid "_Paste"
-msgstr "/粘贴(_P)"
+msgstr "粘贴(_P)"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "首选项"
+msgstr "首选项(_S)"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
-msgstr "/标签(_T)/上一标签(_P)"
+msgstr "上一标签(_V)"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "/新建标签(_N)"
+msgstr "下一标签(_X)"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "标签左移(_L)"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "标签右移(_R)"
 
 #: ../src/lxterminal.c:438
-#, fuzzy
 msgid "_About"
-msgstr "/帮助(_H)/关于(_A)"
+msgstr "关于(_A)"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "样式"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "显示"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "杂项"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -285,53 +272,53 @@ msgstr "终端字体："
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr ""
+msgstr "背景："
 
 #. Foreground color
 #: ../src/preferences.c:98
 msgid "Foreground:"
-msgstr ""
+msgstr "前景："
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "光标闪烁："
 
 #. tab-panel position
 #: ../src/preferences.c:129
 msgid "Tab panel position:"
-msgstr ""
+msgstr "标签面板位置："
 
 #: ../src/preferences.c:132
 msgid "Top"
-msgstr ""
+msgstr "上"
 
 #: ../src/preferences.c:133
 msgid "Bottom"
-msgstr ""
+msgstr "下"
 
 #: ../src/preferences.c:134
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 #: ../src/preferences.c:135
 msgid "Right"
-msgstr ""
+msgstr "右"
 
 #. Scrollback buffer
 #: ../src/preferences.c:141
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "回滚行数："
 
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "隐藏滚动条："
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "隐藏菜单栏："
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -341,58 +328,9 @@ msgstr "选取词时会选取以下的字符："
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "禁用菜单的 F10 快捷键："
 
 #. create window
 #: ../src/preferences.c:378
 msgid "Preferences"
 msgstr "首选项"
-
-#~ msgid "General"
-#~ msgstr "一般"
-
-#, fuzzy
-#~ msgid "_Preferences"
-#~ msgstr "首选项"
-
-#~ msgid "/_File/_New Window"
-#~ msgstr "/文件(_F)/新建窗口(_N)"
-
-#~ msgid "/_File/_New Tab"
-#~ msgstr "/文件(_F)/新建标签(_N)"
-
-#~ msgid "/_File/sep1"
-#~ msgstr "/文件(_F)/sep1"
-
-#~ msgid "/_File/_Close Tab"
-#~ msgstr "/文件(_F)/关闭标签(_C)"
-
-#~ msgid "/_File/_Quit"
-#~ msgstr "/文件(_F)/退出(_Q)"
-
-#~ msgid "/_Edit/_Copy"
-#~ msgstr "/编辑(_E)/复制(_C)"
-
-#~ msgid "/_Edit/_Paste"
-#~ msgstr "/编辑(_E)/粘贴(_P)"
-
-#~ msgid "/_Edit/sep1"
-#~ msgstr "/编辑(_E)/sep1"
-
-#~ msgid "/_Edit/_Preferences..."
-#~ msgstr "/编辑(_E)/首选项(_P)..."
-
-#~ msgid "/_Tabs/_Next Tab"
-#~ msgstr "/标签(_T)/下一标签(_N)"
-
-#~ msgid "/sep1"
-#~ msgstr "/sep1"
-
-#~ msgid "/sep2"
-#~ msgstr "/sep2"
-
-#~ msgid "/_Preferences..."
-#~ msgstr "/首选项(_P)..."
-
-#~ msgid "/sep3"
-#~ msgstr "/sep3"
