@@ -1,14 +1,15 @@
-# Swedish translation for lxterminal.
+# Swedish translation for LXTerminal.
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the lxterminal package.
-# Daniel Nylander <po@danielnylander.se>, 2009.
 #
+# Daniel Nylander <po@danielnylander.se>, 2009.
+# Martin Bagge <brother@bsnet.se>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-04-16 00:23+0200\n"
+"PO-Revision-Date: 2009-10-31 00:13+0100\n"
 "Last-Translator: Martin Bagge <brother@bsnet.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -193,25 +194,24 @@ msgstr "LXTerminal"
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
+"Martin Bagge <brother@bsnet.se>\n"
 "\n"
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>"
 
 #: ../src/lxterminal.c:411
 msgid "Copyright (C) 2008"
-msgstr "Copyright © 2008"
+msgstr "Copyright © 2008-2009"
 
 #: ../src/lxterminal.c:412
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminalemulator för LXDE-projektet"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
 msgstr "_Nytt fönster"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
 msgstr "Ny _flik"
 
@@ -224,7 +224,6 @@ msgid "_Quit"
 msgstr "A_vsluta"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
 msgstr "_Kopiera"
 
@@ -233,28 +232,25 @@ msgid "_Paste"
 msgstr "Klistra _in"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "Inställningar"
+msgstr "_Inställningar"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Föregående flik"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_Nästa flik"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Flytta flik _vänster"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Flytta flik _höger"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -262,15 +258,15 @@ msgstr "_Om"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Visning"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Övrigt"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -290,7 +286,7 @@ msgstr "Förgrund:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Markörblink:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -321,12 +317,12 @@ msgstr "Rader i rullningslist:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Göm rullist:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Göm menyer:"
 
 #. Select-by-word
 #: ../src/preferences.c:181

@@ -1,19 +1,19 @@
 # # lxterminal.po CATALAN TRANSLATION
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# FIRST AUTHOR <josep.sanchez@ubuntu.cat>, 2009
+# Josep Sanchez Mesegue <josep.sanchez@ubuntu.cat>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-09-14 00:51+0100\n"
-"Last-Translator: \n"
-"Language-Team: LXDE Catalan translators group\n"
+"PO-Revision-Date: 2009-10-29 20:38+0100\n"
+"Last-Translator: Josep Sanchez Mesegue <josep.sanchez@ubuntu.cat>\n"
+"Language-Team: Catalan <josep.sanchez@ubuntu.cat>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=utf8\n"
+"Content-Transfer-Encoding: s\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -33,7 +33,7 @@ msgstr "Asiàtic sud-oriental i sud-occidental "
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr "Mitjà orient"
+msgstr "Orient mitjà"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
@@ -49,11 +49,11 @@ msgstr "De l'oest"
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr "Europeu central"
+msgstr "Centre europeu"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Europeu del sud"
+msgstr "Sud europeu"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
@@ -105,7 +105,7 @@ msgstr "Armeni"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr "Xinés tradicional"
+msgstr "Xinès tradicional"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
@@ -123,7 +123,7 @@ msgstr "Koreà"
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr "Xinés simplificat"
+msgstr "Xinès simplificat"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
@@ -201,12 +201,10 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal del projecte LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
 msgstr "_Nova finestra"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
 msgstr "_Nova pestanya"
 
@@ -219,7 +217,6 @@ msgid "_Quit"
 msgstr "_Surt"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
 msgstr "_Copia"
 
@@ -228,28 +225,25 @@ msgid "_Paste"
 msgstr "_Enganxa"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "Preferències"
+msgstr "Preferèncie_s"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Pestanya anterior"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "Pesta_nya següe_nt"
+msgstr "Pestaya següe_nt"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Vés a _la pestanya esquerra"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Vés a la pestanya dreta"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -257,15 +251,15 @@ msgstr "Quant _a"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Estil"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Monitor"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Misc"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -285,7 +279,7 @@ msgstr "Primer pla:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Parpalleig del cursor:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -316,12 +310,12 @@ msgstr "Línies de desplaçament enrere:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Amaga la barra de desplaçament"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Amaga la barra de menú:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
