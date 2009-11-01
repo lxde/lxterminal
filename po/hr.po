@@ -350,3 +350,7 @@ msgstr "Postavke"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Kodiranje Znakova"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"

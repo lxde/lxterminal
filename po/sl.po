@@ -357,3 +357,7 @@ msgstr "Lastnosti"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Kodirni nabor"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"

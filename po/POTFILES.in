@@ -1,3 +1,5 @@
 src/encoding.c
 src/lxterminal.c
 src/preferences.c
+# files added by intltool-prepare
+data/lxterminal.desktop.in

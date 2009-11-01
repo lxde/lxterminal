@@ -351,3 +351,11 @@ msgstr "Nustatymai"
 
 #~ msgid "_View"
 #~ msgstr "_Rodymas"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminalas"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Naudoti komandų eilutę"

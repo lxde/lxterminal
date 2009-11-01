@@ -405,3 +405,11 @@ msgstr "Preferências"
 #~ msgid "/sep3"
 #~ msgstr "/sep3"
 
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Consola"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Utilizar a linha de comando"

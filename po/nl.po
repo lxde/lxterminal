@@ -346,3 +346,11 @@ msgstr "Voorkeuren"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Doorzichtige achtergrond:"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminalvenster"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Gebruik de opdrachtregel"

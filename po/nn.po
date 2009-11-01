@@ -348,3 +348,11 @@ msgstr "Innstillingar"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Gjennomsiktig bakgrunn:"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Bruk kommandolinja"

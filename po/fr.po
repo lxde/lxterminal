@@ -342,3 +342,11 @@ msgstr "Préférences"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Encodage des caractères"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Utiliser la ligne de commande"

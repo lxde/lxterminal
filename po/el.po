@@ -350,3 +350,11 @@ msgstr "Ρυθμίσεις"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Διαφανές φόντο:"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Τερματικό"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Χρήση γραμμής εντολών"

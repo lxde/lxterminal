@@ -358,3 +358,11 @@ msgstr "偏好設定"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "文字編碼(_C)"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "終端機"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "使用命令列"

@@ -332,3 +332,11 @@ msgstr ""
 #: ../src/preferences.c:378
 msgid "Preferences"
 msgstr ""
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Bruk kommandolinjen"

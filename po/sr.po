@@ -349,3 +349,11 @@ msgstr "Поставке"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Провидна позадина"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Терминал"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Користите линију наредби"

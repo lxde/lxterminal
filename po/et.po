@@ -353,3 +353,11 @@ msgstr "Eelistused"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Märkide kooditabel"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Käsurea kasutamine"

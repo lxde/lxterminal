@@ -377,3 +377,11 @@ msgstr "Настройки"
 #, fuzzy
 #~ msgid "Transparent Background:"
 #~ msgstr "Прозрачен фон"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Терминал"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Използване на команден ред"

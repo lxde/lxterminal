@@ -326,3 +326,11 @@ msgstr "禁用菜单的 F10 快捷键："
 #: ../src/preferences.c:378
 msgid "Preferences"
 msgstr "首选项"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "终端"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "使用命令行"

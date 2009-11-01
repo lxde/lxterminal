@@ -342,3 +342,11 @@ msgstr "設定"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "透過/背景色:"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "端末"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "コマンド・ライン端末です"

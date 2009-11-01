@@ -347,3 +347,7 @@ msgstr "تفضيلات"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_ترميز المحارف"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "شاشة طرفية"

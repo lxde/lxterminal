@@ -353,3 +353,11 @@ msgstr "Asetukset"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Merkkikoodaus"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Pääte"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Käytä komentoriviä"

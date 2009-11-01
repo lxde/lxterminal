@@ -353,3 +353,11 @@ msgstr "Předvolby"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Kódování znaků"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminál"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Používat příkazový řádek"

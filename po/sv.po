@@ -353,3 +353,11 @@ msgstr "Inställningar"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Teckenkodning"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Använd kommandoraden"

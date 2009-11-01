@@ -386,3 +386,11 @@ msgstr "Hobespenak"
 
 #~ msgid "/_Preferences..."
 #~ msgstr "/_Hobespenak..."
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminala"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Erabili komando-lerroa"

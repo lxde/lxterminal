@@ -417,3 +417,11 @@ msgstr "Налаштування"
 
 #~ msgid "/_Close Tab"
 #~ msgstr "/_Закрити вкладку"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Термінал"
+
+#: data/lxterminal.desktop.in:6
+msgid "Use the command line"
+msgstr "Командний рядок"

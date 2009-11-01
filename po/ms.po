@@ -350,3 +350,7 @@ msgstr "Kegemaran"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Latarbelakang Telus:"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"

@@ -347,3 +347,7 @@ msgstr "העדפות"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "רקע שקוף:"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "מסוף"

@@ -353,3 +353,7 @@ msgstr "Pengaturan"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "Penyandian _Karakter"
+
+#: data/lxterminal.desktop.in:5
+msgid "Terminal"
+msgstr "Terminal"
