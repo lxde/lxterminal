@@ -5,12 +5,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lxterminal 0.1.4\n"
+"Project-Id-Version: lxterminal 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-05-19 14:28-0000\n"
+"POT-Creation-Date: 2009-10-17 18:33+0800\n"
+"PO-Revision-Date: 2009-10-29 11:45+0100\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
-"Language-Team: Portuguese <alvarommorais@gmail.com>\n"
+"Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,18 +38,27 @@ msgstr "Ásia SE & SO"
 msgid "Middle Eastern"
 msgstr "Médio Oriente"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
 msgstr "Ocidental"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "Europeu Central"
@@ -58,21 +67,31 @@ msgstr "Europeu Central"
 msgid "South European"
 msgstr "Europeu do Sul"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
 msgstr "Báltico"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "Cirílico"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "Árabe"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
 msgstr "Grego"
 
@@ -80,12 +99,16 @@ msgstr "Grego"
 msgid "Hebrew Visual"
 msgstr "Visual Hebraico"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "Hebraico"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "Turco"
@@ -96,9 +119,10 @@ msgstr "Nórdico"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr "Céltico"
+msgstr "Celta"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
 msgstr "Romeno"
 
@@ -106,7 +130,9 @@ msgstr "Romeno"
 msgid "Armenian"
 msgstr "Arménio"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "Chinês Tradicional"
 
@@ -114,25 +140,32 @@ msgstr "Chinês Tradicional"
 msgid "Cyrillic/Russian"
 msgstr "Cirílico/Russo"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
 msgstr "Japonês"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "Coreano"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "Chinês Simplificado"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr "Geórgio"
+msgstr "Georgiano"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "Cirílico/Ucraniano"
 
@@ -160,13 +193,15 @@ msgstr "Gurmukhi"
 msgid "Icelandic"
 msgstr "Islandês"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr "Tailândes"
+msgstr "Tailandês"
 
 #: ../src/lxterminal.c:81
 msgid "_File"
@@ -185,8 +220,11 @@ msgstr "_Separadores"
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:360
+#: ../src/lxterminal.c:409
+#: ../src/lxterminal.c:474
+#: ../src/lxterminal.c:924
+#: ../src/lxterminal.c:952
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -195,7 +233,7 @@ msgstr "LXTerminal"
 msgid "translator-credits"
 msgstr ""
 "Álvaro Morais <alvarommorais@gmail.com>\n"
-"Sérgio Marques(smarquespt@gmail.com)"
+"Sérgio Marques<smarquespt@gmail.com>"
 
 #: ../src/lxterminal.c:411
 msgid "Copyright (C) 2008"
@@ -205,17 +243,18 @@ msgstr "Copyright (C) 2008"
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal para o projecto LXDE"
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
+#: ../src/lxterminal.c:424
+#: ../src/lxterminal.c:445
 msgid "New _Window"
-msgstr "_Nova Janela"
+msgstr "Nova _Janela"
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
+#: ../src/lxterminal.c:425
+#: ../src/lxterminal.c:446
 msgid "New _Tab"
-msgstr "N_ovo Separador"
+msgstr "Novo _Separador"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:427
+#: ../src/lxterminal.c:457
 msgid "_Close Tab"
 msgstr "F_echar Separador"
 
@@ -223,173 +262,146 @@ msgstr "F_echar Separador"
 msgid "_Quit"
 msgstr "S_air"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
+#: ../src/lxterminal.c:429
+#: ../src/lxterminal.c:448
 msgid "Cop_y"
-msgstr "_Copiar"
+msgstr "Cop_iar"
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:430
+#: ../src/lxterminal.c:449
 msgid "_Paste"
 msgstr "Co_lar"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
+#: ../src/lxterminal.c:432
+#: ../src/lxterminal.c:451
 msgid "Preference_s"
-msgstr "Preferências"
+msgstr "Preferência_s"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
+#: ../src/lxterminal.c:434
+#: ../src/lxterminal.c:453
 msgid "Pre_vious Tab"
-msgstr "Separador An_terior"
+msgstr "Separador _Anterior"
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
+#: ../src/lxterminal.c:435
+#: ../src/lxterminal.c:454
 msgid "Ne_xt Tab"
-msgstr "Separador Se_guinte"
+msgstr "Separador _Seguinte"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:436
+#: ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Mover Separador para _Esquerda"
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:437
+#: ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Mover Separador para _Direita"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
 msgstr "So_bre"
 
-#: ../src/preferences.c:47
-msgid "Style"
-msgstr ""
-
-#: ../src/preferences.c:54
-msgid "Display"
-msgstr ""
-
-#: ../src/preferences.c:61
-msgid "Misc"
-msgstr ""
+#: ../src/preferences.c:41
+msgid "General"
+msgstr "Geral"
 
 #. terminal font
-#: ../src/preferences.c:82
+#: ../src/preferences.c:62
 msgid "Terminal Font:"
 msgstr "Fonte do Terminal:"
 
+#. Select-by-word
+#: ../src/preferences.c:69
+msgid "Select-by-word characters:"
+msgstr "Caracteres que delimitam selecção por palavra:"
+
 #. Background color
-#: ../src/preferences.c:89
+#: ../src/preferences.c:77
 msgid "Background:"
 msgstr "Fundo:"
 
 #. Foreground color
-#: ../src/preferences.c:98
+#: ../src/preferences.c:86
 msgid "Foreground:"
 msgstr "Primeiro plano:"
 
-#. Cursor Blinks
-#: ../src/preferences.c:105
-msgid "Cursor Blinks:"
-msgstr ""
-
-#. tab-panel position
-#: ../src/preferences.c:129
-msgid "Tab panel position:"
-msgstr "Posição do separador:"
-
-#: ../src/preferences.c:132
-msgid "Top"
-msgstr "Superior"
-
-#: ../src/preferences.c:133
-msgid "Bottom"
-msgstr "Inferior"
-
-#: ../src/preferences.c:134
-msgid "Left"
-msgstr "Esquerda"
-
-#: ../src/preferences.c:135
-msgid "Right"
-msgstr "Direita"
-
 #. Scrollback buffer
-#: ../src/preferences.c:141
+#: ../src/preferences.c:93
 msgid "Scrollback lines:"
 msgstr "Linhas de posicionamento:"
 
-#. Hide scroll bar
-#: ../src/preferences.c:149
-msgid "Hide scroll bar:"
-msgstr ""
+#. tab-panel position
+#: ../src/preferences.c:101
+msgid "Tab panel position:"
+msgstr "Posição do separador:"
 
-#. Hide menu bar
-#: ../src/preferences.c:157
-msgid "Hide menu bar:"
-msgstr ""
+#: ../src/preferences.c:104
+msgid "Top"
+msgstr "Superior"
 
-#. Select-by-word
-#: ../src/preferences.c:181
-msgid "Select-by-word characters:"
-msgstr "Caracteres que delimitam selecção por palavra:"
+#: ../src/preferences.c:105
+msgid "Bottom"
+msgstr "Inferior"
+
+#: ../src/preferences.c:106
+msgid "Left"
+msgstr "Esquerda"
+
+#: ../src/preferences.c:107
+msgid "Right"
+msgstr "Direita"
 
 #. Disable F10 for menu
-#: ../src/preferences.c:189
+#: ../src/preferences.c:113
 msgid "Disable F10 shortcut for menu:"
 msgstr "Desactivar atalho F10 para o menu:"
 
+#. Hide menu bar
+#: ../src/preferences.c:121
+msgid "Hide menu bar:"
+msgstr "Ocultar barra de menus:"
+
+#. Hide scroll bar
+#: ../src/preferences.c:129
+msgid "Hide scroll bar:"
+msgstr "Ocultar barra de deslocação:"
+
 #. create window
-#: ../src/preferences.c:378
+#: ../src/preferences.c:291
 msgid "Preferences"
 msgstr "Preferências"
 
-#~ msgid "General"
-#~ msgstr "Geral"
-
 #~ msgid "_Preferences"
 #~ msgstr "_Preferências"
-
 #~ msgid "Transparent Background:"
 #~ msgstr "Fundo Transparente:"
-
 #~ msgid "/_File/_New Window"
 #~ msgstr "/_Ficheiro/Nova _Janela"
-
 #~ msgid "/_File/_New Tab"
 #~ msgstr "/_Ficheiro/_Novo Separador"
-
 #~ msgid "/_File/sep1"
 #~ msgstr "/_Ficheiro"
-
 #~ msgid "/_File/_Close Tab"
 #~ msgstr "/_Ficheiro/_Fechar Separador"
-
 #~ msgid "/_File/_Quit"
 #~ msgstr "/_Ficheiro/_Sair"
-
 #~ msgid "/_Edit/_Copy"
 #~ msgstr "/_Editar/_Copiar"
-
 #~ msgid "/_Edit/_Paste"
 #~ msgstr "/_Editar/Co_lar"
-
 #~ msgid "/_Edit/sep1"
 #~ msgstr "/_Editar"
-
 #~ msgid "/_Edit/_Preferences..."
 #~ msgstr "/_Editar/_Preferências..."
-
 #~ msgid "/_Tabs/_Next Tab"
 #~ msgstr "/_Separadores/_Próximo Separador"
-
 #~ msgid "/sep1"
 #~ msgstr "/sep1"
-
 #~ msgid "/sep2"
 #~ msgstr "/sep2"
-
 #~ msgid "/_Preferences..."
 #~ msgstr "/_Preferências"
-
 #~ msgid "/sep3"
 #~ msgstr "/sep3"
+
