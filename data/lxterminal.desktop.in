@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+_Name=LXTerminal
+_GenericName=Terminal
+_Comment=Use the command line
+TryExec=lxterminal
+Exec=lxterminal
+Icon=lxterminal
+Type=Application
+Categories=GTK;Utility;TerminalEmulator;
