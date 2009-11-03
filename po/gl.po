@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-10-27 15:11+0100\n"
+"PO-Revision-Date: 2009-11-03 08:52+0100\n"
 "Last-Translator: Indalecio Freiría Santos <ifreiria@gmail.com>\n"
 "Language-Team: Proxecto Trasno <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -205,14 +205,12 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal para o proxecto LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
-msgstr "_Nova xanela"
+msgstr "Nova _xanela"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
-msgstr "_Novo separador"
+msgstr "Novo _separador"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
 msgid "_Close Tab"
@@ -223,37 +221,33 @@ msgid "_Quit"
 msgstr "_Saír"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
-msgstr "_Copiar"
+msgstr "Cop_iar"
 
 #: ../src/lxterminal.c:430 ../src/lxterminal.c:449
 msgid "_Paste"
 msgstr "_Colar"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "Preferencias"
+msgstr "Preferencia_s"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
-msgstr "_Separador anterior"
+msgstr "Separador a_nterior"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "_Separador seguinte"
+msgstr "Separador s_eguinte"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Mover ao separador da _esquerda"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Mover ao separador da _dereita"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -261,15 +255,15 @@ msgstr "_Acerca de ..."
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Amosar"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Miscelánea"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -289,7 +283,7 @@ msgstr "Primeiro plano:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Intermitencia do cursor:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -320,12 +314,12 @@ msgstr "Liñas de desprazamento:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Ocultar a barra de desprazamento:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Ocultar a barra de menú"
 
 #. Select-by-word
 #: ../src/preferences.c:181
