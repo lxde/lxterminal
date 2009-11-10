@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-09-29 20:52+0900\n"
+"POT-Creation-Date: 2009-11-07 21:59+0900\n"
+"PO-Revision-Date: 2009-11-07 22:00+0900\n"
 "Last-Translator: Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -187,6 +187,7 @@ msgstr "ヘルプ(_H)"
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
 #: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -256,15 +257,15 @@ msgstr "情報(_A)"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "スタイル"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "ディスプレイ"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Misc"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -284,7 +285,7 @@ msgstr "前景色:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "カーソルの点滅:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -337,16 +338,16 @@ msgstr "メニューへのショートカット F10 の無効化:"
 msgid "Preferences"
 msgstr "設定"
 
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "端末"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr "コマンド・ライン端末です"
+
 #~ msgid "General"
 #~ msgstr "一般"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "透過/背景色:"
-
-#: data/lxterminal.desktop.in:5
-msgid "Terminal"
-msgstr "端末"
-
-#: data/lxterminal.desktop.in:6
-msgid "Use the command line"
-msgstr "コマンド・ライン端末です"
