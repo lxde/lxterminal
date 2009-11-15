@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-09-29 19:58+0200\n"
+"PO-Revision-Date: 2009-11-14 08:59+0100\n"
 "Last-Translator: Yaron Shahrbani <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -202,12 +202,10 @@ msgid "Terminal emulator for LXDE project"
 msgstr "תוכנית להדמיית מסוף עבור מיזם LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
 msgstr "חלון _חדש"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
 msgstr "ל_שונית חדשה"
 
@@ -220,7 +218,6 @@ msgid "_Quit"
 msgstr "י_ציאה"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
 msgstr "ה_עתק"
 
@@ -229,28 +226,25 @@ msgid "_Paste"
 msgstr "ה_דבק"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "העדפות"
+msgstr "ה_עדפות"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "הלשונית ה_קודמת"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
 msgstr "הלשונית ה_באה"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "העברת הלשונית _שמאלה"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "העברת הלשונית _ימינה"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -258,15 +252,15 @@ msgstr "על _אודות"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "סגנון"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "תצוגה"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "שונות"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -283,10 +277,11 @@ msgstr "רקע:"
 msgid "Foreground:"
 msgstr "קידמה:"
 
+# Does this indicate whether the cursor blinks or not or how many times will it blink? Please comment
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "הבהוב הסמן:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -317,12 +312,12 @@ msgstr "שורות לגלילה אחורנית:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "הסתרת סרגל הגלילה:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "הסתרת סרגל התפריטים:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
