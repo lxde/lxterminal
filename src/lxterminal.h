@@ -15,6 +15,10 @@
 #define MOVE_TAB_LEFT_ACCEL "<CTRL><SHIFT>Page_Up"
 #define MOVE_TAB_RIGHT_ACCEL "<CTRL><SHIFT>Page_Down"
 
+/* steal from tilda-0.09.6/src/tilda_terminal.c:36 */
+#define DINGUS1 "(((news|telnet|nttp|file|http|ftp|https)://)|(www|ftp)[-A-Za-z0-9]*\\.)[-A-Za-z0-9\\.]+(:[0-9]*)?"
+#define DINGUS2 "(((news|telnet|nttp|file|http|ftp|https)://)|(www|ftp)[-A-Za-z0-9]*\\.)[-A-Za-z0-9\\.]+(:[0-9]*)?/[-A-Za-z0-9_\\$\\.\\+\\!\\*\\(\\),;:@&=\\?/~\\#\\%]*[^]'\\.}>\\) ,\\\"]"
+
 typedef struct _lxtermwindow {
 	Setting   *setting;
 	GPtrArray *windows;

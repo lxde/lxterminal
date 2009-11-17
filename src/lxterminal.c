@@ -587,7 +587,44 @@ static gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *even
 		}
 
 		gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")), NULL, NULL, NULL, NULL, event->button, event->time);
+	} else if (event->button == 1) { /* left click */
+		/* steal from tilda-0.09.6/src/tilda_terminal.c:743 */
+		gint tag;
+		gint xpad, ypad;
+		gchar* match;
+		gchar* cmd;
+		gboolean ret = FALSE;
+
+		vte_terminal_get_padding(vte, &xpad, &ypad);
+		match = vte_terminal_match_check(vte,
+				(event->x - xpad) / vte->char_width,
+				(event->y - ypad) / vte->char_height,
+				&tag);
+
+		/* Check if we can launch a web browser, and do so if possible */
+		if ((event->state & GDK_CONTROL_MASK) && match != NULL) {
+#if DEBUG
+			g_print("Got a Ctrl+Left Click -- Matched: `%s' (%d)\n", match, tag);
+#endif
+			cmd = g_strdup_printf("%s %s", "xdg-open", match);
+#if DEBUG
+			g_print("Launching command: `%s'\n", cmd);
+#endif
+			ret = g_spawn_command_line_async(cmd, NULL);
+
+			/* Check that the command launched */
+			if (!ret) {
+				g_printerr(_("Failed to launch the web browser. The command was `%s'\n"), cmd);
+			}
+
+			g_free(cmd);
+		}
+
+		/* Always free match if it is non NULL */
+		if (match)
+			g_free(match);
 	}
+
 #if 0
 	GtkItemFactory *item_factory;
 
@@ -629,6 +666,8 @@ void terminal_term_setting_update(Term *term, LXTerminal *terminal){
 
 static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, gchar **env, const gchar *exec)
 {
+	gint ret;
+	GRegex *dingus1, *dingus2;
 	Term *term;
 
 	/* create terminal */
@@ -663,6 +702,17 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 		terminal->foreground = (GdkColor){ 0, 0xaaaa, 0xaaaa, 0xaaaa};
 		printf("Bad fgcolor string in config: %s\n", terminal->setting->fgcolor);
 	}
+
+	/* steal from tilda-0.09.6/src/tilda_terminal.c:145 */
+	/* Match URL's, etc */
+	dingus1 = g_regex_new(DINGUS1, G_REGEX_OPTIMIZE, 0, NULL);
+	dingus2 = g_regex_new(DINGUS2, G_REGEX_OPTIMIZE, 0, NULL);
+	ret = vte_terminal_match_add_gregex((VteTerminal *)term->vte, dingus1, 0);
+	vte_terminal_match_set_cursor_type((VteTerminal *)term->vte, ret, GDK_HAND2);
+	ret = vte_terminal_match_add_gregex((VteTerminal *)term->vte, dingus2, 0);
+	vte_terminal_match_set_cursor_type((VteTerminal *)term->vte, ret, GDK_HAND2);
+	g_regex_unref(dingus1);
+	g_regex_unref(dingus2);
 
 	/* create label for tab */
 	term->label = lxterminal_tab_label_new(label);
