@@ -640,20 +640,25 @@ static gboolean terminal_vte_button_press(VteTerminal *vte, GdkEventButton *even
 }
 
 void terminal_term_setting_update(Term *term, LXTerminal *terminal){
+	vte_terminal_reset((VteTerminal *)term->vte, FALSE, FALSE);
+
 	vte_terminal_set_font_from_string((VteTerminal *)term->vte, terminal->setting->fontname);
 	vte_terminal_set_word_chars((VteTerminal *)term->vte, terminal->setting->selchars);
 	vte_terminal_set_scrollback_lines((VteTerminal *)term->vte, terminal->setting->scrollback);
 
-	/* background transparent */
+	vte_terminal_set_cursor_blink_mode((VteTerminal *)term->vte, terminal->setting->cursorblinks?VTE_CURSOR_BLINK_ON:VTE_CURSOR_BLINK_OFF);
+
+	/* background transparency */
 	if( terminal->rgba ){
+		/* dirty hack - vte_terminal_queue_background_update
+		 * doesn't run without changing background */
+		vte_terminal_set_color_background((VteTerminal *)term->vte, &terminal->foreground);
 		vte_terminal_set_background_transparent((VteTerminal *)term->vte, FALSE);
 		vte_terminal_set_opacity((VteTerminal *)term->vte, terminal->setting->bgalpha);
 	} else {
 		vte_terminal_set_background_transparent((VteTerminal *)term->vte, terminal->setting->bgalpha == 65535 ? FALSE : TRUE);
 		vte_terminal_set_background_saturation((VteTerminal *)term->vte, 1-((double)terminal->setting->bgalpha/65535));
 	}
-
-	vte_terminal_set_cursor_blink_mode((VteTerminal *)term->vte, terminal->setting->cursorblinks?VTE_CURSOR_BLINK_ON:VTE_CURSOR_BLINK_OFF);
 
 	vte_terminal_set_colors((VteTerminal *)term->vte, &terminal->foreground, &terminal->background, &linux_color[0], 16);
 
@@ -892,6 +897,9 @@ void terminal_setting_update(LXTerminal *terminal)
 {
 	gint i;
 
+	/* know if it is composited */
+	terminal->rgba = gtk_widget_is_composited( GTK_WIDGET(terminal->mainw) );
+
 	/* update all of terminals */
 	for (i=0;i<terminal->terms->len;i++)
 		terminal_term_setting_update(g_ptr_array_index(terminal->terms, i), terminal);
@@ -962,15 +970,13 @@ LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Se
 	/* create window */
 	terminal->mainw = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-	/* know if it is composited */
-	terminal->rgba = gtk_widget_is_composited( GTK_WIDGET(terminal->mainw) );
+	/* colormap assign */
+	GdkColormap *colormap = gdk_screen_get_rgba_colormap( gtk_widget_get_screen( GTK_WIDGET(terminal->mainw) ) );
+	if (colormap) gtk_widget_set_colormap( GTK_WIDGET(terminal->mainw), colormap );
 
-	if (terminal->rgba){
-		GdkColormap *colormap = gdk_screen_get_rgba_colormap( gtk_widget_get_screen( GTK_WIDGET(terminal->mainw) ) );
-		if (colormap)
-			gtk_widget_set_colormap( GTK_WIDGET(terminal->mainw), colormap );
-	}
-
+	/* when composited changed, reload the terminal settings */
+	g_signal_connect_swapped(GTK_WIDGET(terminal->mainw), "composited-changed", G_CALLBACK(terminal_setting_update), terminal);
+	
 	if (!title)
 		gtk_window_set_title(GTK_WINDOW(terminal->mainw), _("LXTerminal"));
 	else
