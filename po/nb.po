@@ -3,62 +3,62 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2009-11-26 12:19+0100\n"
+"Last-Translator: Olav Andreas Lindekleiv <olalinde@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Vest-Europeisk"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Øst-Europeisk"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Øst-Asiatisk"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "Sørøst- & Sørvest-Asiatisk"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Midtøsten"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Vestlig"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Sentraleuropeisk"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Sør-Europeisk"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Baltisk"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
@@ -68,11 +68,11 @@ msgstr ""
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Arabisk"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Gresk"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
@@ -81,16 +81,16 @@ msgstr ""
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebraisk"
 
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Tyrkisk"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr ""
+msgstr "Nordisk"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Tradisjonell Kinesisk"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
@@ -114,17 +114,17 @@ msgstr ""
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Japansk"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Koreansk"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Forenklet Kinesisk"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Kroatisk"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Islandsk"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
@@ -164,99 +164,99 @@ msgstr ""
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Thai"
 
 #: ../src/lxterminal.c:81
 msgid "_File"
-msgstr ""
+msgstr "_Fil"
 
 #: ../src/lxterminal.c:82
 msgid "_Edit"
-msgstr ""
+msgstr "R_ediger"
 
 #. { "View", NULL, N_("_View") },
 #: ../src/lxterminal.c:84
 msgid "_Tabs"
-msgstr ""
+msgstr "_Faner"
 
 #: ../src/lxterminal.c:85
 msgid "_Help"
-msgstr ""
+msgstr "_Hjelp"
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
 #: ../src/lxterminal.c:925 ../src/lxterminal.c:953
 msgid "LXTerminal"
-msgstr ""
+msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:401
 msgid "translator-credits"
-msgstr ""
+msgstr "Olav Andreas Lindekleiv <olalinde@gmail.com>"
 
 #: ../src/lxterminal.c:411
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Copyright (C) 2008"
 
 #: ../src/lxterminal.c:412
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "Terminalemulator for LXDE-prosjektet"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
 msgid "New _Window"
-msgstr ""
+msgstr "Nytt _Vindu"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
 msgid "New _Tab"
-msgstr ""
+msgstr "Ny _Fane"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
 msgid "_Close Tab"
-msgstr ""
+msgstr "_Lukk Fane"
 
 #: ../src/lxterminal.c:428
 msgid "_Quit"
-msgstr ""
+msgstr "_Avslutt"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
 msgid "Cop_y"
-msgstr ""
+msgstr "Kop_ier"
 
 #: ../src/lxterminal.c:430 ../src/lxterminal.c:449
 msgid "_Paste"
-msgstr ""
+msgstr "_Lim inn"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
 msgid "Preference_s"
-msgstr ""
+msgstr "Brukerval_g"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
 msgid "Pre_vious Tab"
-msgstr ""
+msgstr "Forrig_e Fane"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
 msgid "Ne_xt Tab"
-msgstr ""
+msgstr "Ne_ste Fane"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "F_lytt Fane til Venstre"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "F_lytt Fane til Høyre"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
-msgstr ""
+msgstr "_Om"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Visning"
 
 #: ../src/preferences.c:61
 msgid "Misc"
@@ -265,58 +265,58 @@ msgstr ""
 #. terminal font
 #: ../src/preferences.c:82
 msgid "Terminal Font:"
-msgstr ""
+msgstr "Terminal-skrift:"
 
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr ""
+msgstr "Bakgrunn:"
 
 #. Foreground color
 #: ../src/preferences.c:98
 msgid "Foreground:"
-msgstr ""
+msgstr "Forgrunn:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Blinkende musepeker:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
 msgid "Tab panel position:"
-msgstr ""
+msgstr "Posisjonering av fanepanel:"
 
 #: ../src/preferences.c:132
 msgid "Top"
-msgstr ""
+msgstr "Topp"
 
 #: ../src/preferences.c:133
 msgid "Bottom"
-msgstr ""
+msgstr "Bunn"
 
 #: ../src/preferences.c:134
 msgid "Left"
-msgstr ""
+msgstr "Venstre"
 
 #: ../src/preferences.c:135
 msgid "Right"
-msgstr ""
+msgstr "Høyre"
 
 #. Scrollback buffer
 #: ../src/preferences.c:141
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Tilbakerulling (linjer)"
 
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Skjul scroll-linje:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Skjul menylinje:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -326,12 +326,12 @@ msgstr ""
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Slå av F10 hurtigtast for meny:"
 
 #. create window
 #: ../src/preferences.c:378
 msgid "Preferences"
-msgstr ""
+msgstr "Brukervalg"
 
 #: data/lxterminal.desktop.in:5
 msgid "Terminal"
