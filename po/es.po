@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-05-31 16:18+0200\n"
+"PO-Revision-Date: 2009-12-01 14:01+0100\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -211,14 +211,12 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal para el proyecto LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
-msgstr "_Nueva ventana"
+msgstr "Nueva _ventana"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
-msgstr "_Nueva pestaña"
+msgstr "Nueva pes_taña"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
 msgid "_Close Tab"
@@ -229,18 +227,16 @@ msgid "_Quit"
 msgstr "_Salir"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
-msgstr "_Copiar"
+msgstr "C_opiar"
 
 #: ../src/lxterminal.c:430 ../src/lxterminal.c:449
 msgid "_Paste"
 msgstr "_Pegar"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "Preferencias"
+msgstr "Pre_ferencias"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
@@ -254,12 +250,14 @@ msgid "Ne_xt Tab"
 msgstr "Pestaña _siguiente"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#, fuzzy
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Mover pestaña a la izquierda"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#, fuzzy
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Mover pestaña a la derecha"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -267,15 +265,16 @@ msgstr "_Acerca de ..."
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: ../src/preferences.c:54
+#, fuzzy
 msgid "Display"
-msgstr ""
+msgstr "Mostrar"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Misceláneas"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -294,8 +293,9 @@ msgstr "Primer plano:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
+#, fuzzy
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Parpadeo del cursor:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -326,12 +326,12 @@ msgstr "Líneas de desplazamiento:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Ocultar la barra de desplazamiento:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Ocultar la barra de menú"
 
 #. Select-by-word
 #: ../src/preferences.c:181
