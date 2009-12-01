@@ -245,11 +245,11 @@ msgstr "Volgende Tab"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Verplaats Tab links"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Verplaats Tab rechts"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -257,15 +257,15 @@ msgstr "Over"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Stijl"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Beeld"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Allerlei"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -285,7 +285,7 @@ msgstr "Voorgrond"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Cursor signaal:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -316,12 +316,12 @@ msgstr "Lijnen in de geschiedenis"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Verberg scroll bar"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Verberg menu bar"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -347,10 +347,10 @@ msgstr "Voorkeuren"
 #~ msgid "Transparent Background:"
 #~ msgstr "Doorzichtige achtergrond:"
 
-#: data/lxterminal.desktop.in:5
-msgid "Terminal"
-msgstr "Terminalvenster"
+#~ msgid "Terminal"
+#~ msgstr "Terminalvenster"
 
-#: data/lxterminal.desktop.in:6
-msgid "Use the command line"
-msgstr "Gebruik de opdrachtregel"
+#~ msgid "Use the command line"
+#~ msgstr "Gebruik de opdrachtregel"
+
+ 	  	 
