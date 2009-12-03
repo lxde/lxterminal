@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the lxterminal package.
 # Fábio Antunes <nospam@emal.com>, 2008.
 # Og Maciel <ogmaciel@gnome.org>, 2009.
+# Henrique P. Machado <zehrique@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-03-12 01:50-0300\n"
+"POT-Creation-Date: 2009-12-03 15:31-0500\n"
+"PO-Revision-Date: 2009-12-03 01:55-0300\n"
 "Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
@@ -186,7 +187,8 @@ msgid "_Help"
 msgstr "Aj_uda"
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:981 ../src/lxterminal.c:1009
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -207,14 +209,12 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de Terminal do projeto LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
-msgstr "_Nova janela"
+msgstr "N_ova janela"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
-msgstr "_Nova aba"
+msgstr "No_va aba"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
 msgid "_Close Tab"
@@ -225,7 +225,6 @@ msgid "_Quit"
 msgstr "_Sair"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
 msgstr "_Copiar"
 
@@ -234,44 +233,46 @@ msgid "_Paste"
 msgstr "C_olar"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "Preferências"
+msgstr "Preferência_s"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
-msgstr "_Aba anterior"
+msgstr "Aba a_nterior"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "P_róxima aba"
+msgstr "Pró_xima aba"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Mover aba à _esquerda"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Mover aba à _direita"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
 msgstr "_Sobre"
 
+#: ../src/lxterminal.c:617
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
+msgstr "Falhou ao lançar o navegador web. O comando foi \"%s\"\n"
+
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Exibir"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Misc."
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -291,7 +292,7 @@ msgstr "Frente:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Piscar cursor:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -322,12 +323,12 @@ msgstr "Linhas de histórico:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Esconder barra de rolagem:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Esconder barra de menu:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -343,6 +344,14 @@ msgstr "Desabilitar atalho de tecla F10 para menu:"
 #: ../src/preferences.c:378
 msgid "Preferences"
 msgstr "Preferências"
+
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr "Use a linha de comando"
 
 #~ msgid "General"
 #~ msgstr "Geral"
@@ -400,11 +409,3 @@ msgstr "Preferências"
 
 #~ msgid "/sep3"
 #~ msgstr "/sep3"
-
-#: data/lxterminal.desktop.in:5
-msgid "Terminal"
-msgstr "Terminal"
-
-#: data/lxterminal.desktop.in:6
-msgid "Use the command line"
-msgstr "Use a linha de comando"

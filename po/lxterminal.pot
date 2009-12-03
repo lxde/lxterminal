@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"POT-Creation-Date: 2009-12-03 15:31-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -184,7 +184,8 @@ msgid "_Help"
 msgstr ""
 
 #: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:981 ../src/lxterminal.c:1009
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr ""
 
@@ -248,6 +249,11 @@ msgstr ""
 
 #: ../src/lxterminal.c:438
 msgid "_About"
+msgstr ""
+
+#: ../src/lxterminal.c:617
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
 msgstr ""
 
 #: ../src/preferences.c:47
@@ -331,4 +337,12 @@ msgstr ""
 #. create window
 #: ../src/preferences.c:378
 msgid "Preferences"
+msgstr ""
+
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr ""
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
 msgstr ""
