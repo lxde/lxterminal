@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-12-01 14:01+0100\n"
+"PO-Revision-Date: 2009-12-03 21:43+0100\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -240,24 +240,20 @@ msgstr "Pre_ferencias"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
-msgstr "Pestaña _anterior"
+msgstr "Pestaña a_nterior"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "Pestaña _siguiente"
+msgstr "Pestaña s_iguiente"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
-#, fuzzy
 msgid "Move Tab _Left"
-msgstr "Mover pestaña a la izquierda"
+msgstr "Mo_ver pestaña a la izquierda"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
-#, fuzzy
 msgid "Move Tab _Right"
-msgstr "Mover pestaña a la derecha"
+msgstr "Mover pestaña a la _derecha"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -293,7 +289,6 @@ msgstr "Primer plano:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
-#, fuzzy
 msgid "Cursor Blinks:"
 msgstr "Parpadeo del cursor:"
 
@@ -331,7 +326,7 @@ msgstr "Ocultar la barra de desplazamiento:"
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr "Ocultar la barra de menú"
+msgstr "Ocultar la barra de menú:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -341,7 +336,7 @@ msgstr "Selección por palabra:"
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr "Desactivar el atajo de teclado F10 para el menu:"
+msgstr "Desactivar el atajo de teclado F10 para el menú:"
 
 #. create window
 #: ../src/preferences.c:378
