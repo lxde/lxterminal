@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-07-29 12:44+0100\n"
+"PO-Revision-Date: 2009-12-09 18:34+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -36,18 +36,27 @@ msgstr "jihovýchodní a jihozápadní Asie"
 msgid "Middle Eastern"
 msgstr "Střední Východ"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
 msgstr "západní"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "středoevropské"
@@ -56,21 +65,31 @@ msgstr "středoevropské"
 msgid "South European"
 msgstr "jihoevropské"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
 msgstr "pobaltské"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "cyrilice"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "arabské"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
 msgstr "řecké"
 
@@ -78,12 +97,16 @@ msgstr "řecké"
 msgid "Hebrew Visual"
 msgstr "hebrejské vizuální"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "hebrejské"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "turecké"
@@ -96,7 +119,8 @@ msgstr "skandinávské"
 msgid "Celtic"
 msgstr "keltské"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
 msgstr "rumunské"
 
@@ -104,7 +128,9 @@ msgstr "rumunské"
 msgid "Armenian"
 msgstr "arménské"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "tradiční čínské"
 
@@ -112,16 +138,22 @@ msgstr "tradiční čínské"
 msgid "Cyrillic/Russian"
 msgstr "ruská cyrilice"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
 msgstr "japonské"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "korejské"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "zjednodušená čínština"
@@ -130,7 +162,8 @@ msgstr "zjednodušená čínština"
 msgid "Georgian"
 msgstr "gruzínské"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "ukrajinská cyrilice"
 
@@ -158,7 +191,9 @@ msgstr "gurmuchština"
 msgid "Icelandic"
 msgstr "islandské"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "vietnamské"
 
@@ -183,8 +218,11 @@ msgstr "_Karty"
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:360
+#: ../src/lxterminal.c:409
+#: ../src/lxterminal.c:474
+#: ../src/lxterminal.c:925
+#: ../src/lxterminal.c:953
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
@@ -201,17 +239,18 @@ msgstr "Copyright (C) 2008"
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulátor terminálu pro projekt LXDE"
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
+#: ../src/lxterminal.c:424
+#: ../src/lxterminal.c:445
 msgid "New _Window"
 msgstr "_Nové okno"
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
+#: ../src/lxterminal.c:425
+#: ../src/lxterminal.c:446
 msgid "New _Tab"
-msgstr "_Nový panel"
+msgstr "Nový _panel"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:427
+#: ../src/lxterminal.c:457
 msgid "_Close Tab"
 msgstr "_Zavřít panel"
 
@@ -219,38 +258,41 @@ msgstr "_Zavřít panel"
 msgid "_Quit"
 msgstr "_Ukončit"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
+#: ../src/lxterminal.c:429
+#: ../src/lxterminal.c:448
 msgid "Cop_y"
 msgstr "_Kopírovat"
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:430
+#: ../src/lxterminal.c:449
 msgid "_Paste"
 msgstr "_Vložit"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
+#: ../src/lxterminal.c:432
+#: ../src/lxterminal.c:451
 msgid "Preference_s"
-msgstr "Předvolby"
+msgstr "_Předvolby"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
+#: ../src/lxterminal.c:434
+#: ../src/lxterminal.c:453
 msgid "Pre_vious Tab"
 msgstr "_Předchozí karta"
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
+#: ../src/lxterminal.c:435
+#: ../src/lxterminal.c:454
 msgid "Ne_xt Tab"
 msgstr "_Další karta"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:436
+#: ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Přesunout kartu v_levo"
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:437
+#: ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "_Přesunout kartu vpravo"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -258,15 +300,15 @@ msgstr "_O aplikaci"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Styl"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Displej"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Ostatní"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -286,7 +328,7 @@ msgstr "Popředí:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Blikání kurzoru:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -317,12 +359,12 @@ msgstr "Paměť řádků:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Skrýt posuvník:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Skrýt panel nabídky:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -339,21 +381,6 @@ msgstr "Zakázat klávesovou zkratku F10 pro nabídku:"
 msgid "Preferences"
 msgstr "Předvolby"
 
-#~ msgid "General"
-#~ msgstr "Obecné"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Předvolby"
-
-#~ msgid "Transparent Background:"
-#~ msgstr "Průhledné pozadí:"
-
-#~ msgid "_View"
-#~ msgstr "_Zobrazit"
-
-#~ msgid "_Character Encoding"
-#~ msgstr "_Kódování znaků"
-
 #: data/lxterminal.desktop.in:5
 msgid "Terminal"
 msgstr "Terminál"
@@ -361,3 +388,15 @@ msgstr "Terminál"
 #: data/lxterminal.desktop.in:6
 msgid "Use the command line"
 msgstr "Používat příkazový řádek"
+
+#~ msgid "General"
+#~ msgstr "Obecné"
+#~ msgid "_Preferences"
+#~ msgstr "_Předvolby"
+#~ msgid "Transparent Background:"
+#~ msgstr "Průhledné pozadí:"
+#~ msgid "_View"
+#~ msgstr "_Zobrazit"
+#~ msgid "_Character Encoding"
+#~ msgstr "_Kódování znaků"
+
