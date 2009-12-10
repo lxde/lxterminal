@@ -66,6 +66,7 @@ typedef struct _term {
 	GtkWidget *vte;
 	GtkWidget *scrollbar;
 	GtkWidget *box;
+    GClosure* closure;
 } Term;
 
 LXTerminal *lxterminal_init(LXTermWindow *lxtermwin, gint argc, gchar **argv, Setting *setting);

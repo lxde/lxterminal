@@ -61,6 +61,7 @@ static const GdkColor linux_color[16] =
 static void terminal_childexit(VteTerminal *vte, Term *term);
 
 static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar *pwd, gchar **env, const gchar *exec);
+static void terminal_free(Term* term);
 
 /* menu accel saved when the user disables it */
 static char *saved_menu_accel = NULL;
@@ -348,8 +349,9 @@ static void term_set_swicth_accel(Term *term)
 
 		sprintf(switch_tab_accel, "<ALT>%d", term->index + 1);
 		gtk_accelerator_parse(switch_tab_accel, &key, &mods);
+        term->closure = g_cclosure_new_swap(G_CALLBACK(term_switchtab), term, NULL);
 		gtk_accel_group_connect(accel_group, key, mods, GTK_ACCEL_LOCKED, 
-			g_cclosure_new_swap(G_CALLBACK(term_switchtab), term, NULL));
+                                term->closure);
 	}
 }
 
@@ -528,7 +530,7 @@ static void terminal_childexit(VteTerminal *vte, Term *term)
 
 		/* release */
 		gtk_notebook_remove_page(GTK_NOTEBOOK(terminal->notebook), term->index);
-		g_free(term);
+		terminal_free(term);
 
 		/* if only one page, hide tab */
 		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1) {
@@ -747,6 +749,13 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	terminal_term_setting_update(term, terminal);
 
 	return term;
+}
+
+void terminal_free(Term* term)
+{
+    GtkAccelGroup *accel_group = term->parent->menubar->accel_group;
+    gtk_accel_group_disconnect(accel_group, term->closure);
+    g_free(term);
 }
 
 static Menu *menubar_init(LXTerminal *terminal)
