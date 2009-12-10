@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-06-28 16:59+0100\n"
-"Last-Translator: Matej Gačnik <paxmanpwnz@gmail.com>\n"
+"PO-Revision-Date: 2009-12-10 14:13+0100\n"
+"Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
 "X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -203,28 +203,25 @@ msgstr "Vse pravice pridržane (C) 2008"
 
 #: ../src/lxterminal.c:412
 msgid "Terminal emulator for LXDE project"
-msgstr "Konzola za projekta LXDE"
+msgstr "Konzola projekta LXDE"
 
 #: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
 msgid "New _Window"
 msgstr "Novo _okno"
 
 #: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
 msgid "New _Tab"
-msgstr "_Nov zavihek"
+msgstr "Nov _zavihek"
 
 #: ../src/lxterminal.c:427 ../src/lxterminal.c:457
 msgid "_Close Tab"
-msgstr "_Zapri zavihek"
+msgstr "Z_apri zavihek"
 
 #: ../src/lxterminal.c:428
 msgid "_Quit"
 msgstr "_Izhod"
 
 #: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
 msgid "Cop_y"
 msgstr "_Kopiraj"
 
@@ -233,28 +230,25 @@ msgid "_Paste"
 msgstr "_Prilepi"
 
 #: ../src/lxterminal.c:432 ../src/lxterminal.c:451
-#, fuzzy
 msgid "Preference_s"
-msgstr "Lastnosti"
+msgstr "Nastavitve"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Prejšnji zavihek"
 
 #: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_Naslednji zavihek"
 
 #: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Premakni zavihek v _levo"
 
 #: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Premakni zavihek v _desno"
 
 #: ../src/lxterminal.c:438
 msgid "_About"
@@ -262,15 +256,15 @@ msgstr "_O programu"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Prikaz"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Razno"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -290,7 +284,7 @@ msgstr "Barva pisave:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Utripanje kazalca"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -321,12 +315,12 @@ msgstr "Število zapomnjenih vrstic pri drsenju:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Skrij drsni trak"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Skrij menijsko vrstico"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -360,4 +354,4 @@ msgstr "Lastnosti"
 
 #: data/lxterminal.desktop.in:5
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Konzola"
