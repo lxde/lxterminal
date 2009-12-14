@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-12-02 01:40+0100\n"
+"PO-Revision-Date: 2009-12-11 02:51+0100\n"
 "Last-Translator: Christoph Wickert <christoph.wickert@googlemail.com>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
@@ -286,13 +286,14 @@ msgstr "Vordergrund:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
+#, fuzzy
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Blinkender Cursor:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
 msgid "Tab panel position:"
-msgstr "Position des Reiterpanels:"
+msgstr "Position der Reiterleiste:"
 
 #: ../src/preferences.c:132
 msgid "Top"
