@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-12-03 21:43+0100\n"
+"PO-Revision-Date: 2009-12-19 18:32+0100\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -264,7 +264,6 @@ msgid "Style"
 msgstr "Estilo"
 
 #: ../src/preferences.c:54
-#, fuzzy
 msgid "Display"
 msgstr "Mostrar"
 
