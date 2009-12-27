@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-12-27 22:58+0100\n"
+"PO-Revision-Date: 2009-12-27 23:20+0100\n"
 "Last-Translator: George Vasilakos <forfolias@linuxteam.cs.teilar.gr>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -77,9 +77,8 @@ msgid "Greek"
 msgstr "Ελληνικά"
 
 #: ../src/encoding.c:142
-#, fuzzy
 msgid "Hebrew Visual"
-msgstr "Εβραϊκά οπτικά"
+msgstr "Εβραϊκή Visual"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
@@ -150,12 +149,10 @@ msgid "Farsi"
 msgstr "Περσικά"
 
 #: ../src/encoding.c:193
-#, fuzzy
 msgid "Gujarati"
 msgstr "Γκουτζαράτι"
 
 #: ../src/encoding.c:194
-#, fuzzy
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
@@ -262,7 +259,6 @@ msgid "Style"
 msgstr "Στυλ"
 
 #: ../src/preferences.c:54
-#, fuzzy
 msgid "Display"
 msgstr "Εμφάνιση"
 
