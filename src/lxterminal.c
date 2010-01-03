@@ -358,8 +358,39 @@ static void term_set_swicth_accel(Term *term)
 static void terminal_newtab(GtkWidget *widget, gpointer data)
 {
 	LXTerminal *terminal = (LXTerminal *)data;
+	Term *term;
 
-	Term *term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, NULL);
+#ifdef __linux
+	gchar cwd[PATH_MAX];
+
+	gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
+	if (current != -1) {
+		gchar proc_cwd_link[PATH_MAX];
+		gchar *proc_cwd;
+		gint i;
+		for (i=0;i<terminal->terms->len;i++) {
+			term = g_ptr_array_index(terminal->terms, i);
+			if (term->index == current)
+				break;
+		}
+
+		g_message("%d", term->pid);
+		g_snprintf(proc_cwd_link, PATH_MAX, "/proc/%d/cwd", term->pid);
+		proc_cwd = g_file_read_link(proc_cwd_link, NULL);
+		if (proc_cwd) {
+			g_strlcpy(cwd, proc_cwd, PATH_MAX);
+			g_free(proc_cwd);
+		} else {
+			g_strlcpy(cwd, g_get_current_dir(), PATH_MAX);
+		}
+	} else {
+		g_strlcpy(cwd, g_get_current_dir(), PATH_MAX);
+	}
+
+	term = terminal_new(terminal, _("LXTerminal"), cwd, NULL, NULL);
+#else
+	term = terminal_new(terminal, _("LXTerminal"), g_get_current_dir(), NULL, NULL);
+#endif
 
 	/* add page to notebook */
 	gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->label->main);
@@ -722,7 +753,11 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	g_regex_unref(dingus2);
 
 	/* create label for tab */
-	term->label = lxterminal_tab_label_new(label);
+	if (label)
+		term->label = lxterminal_tab_label_new(label);
+	else
+		term->label = lxterminal_tab_label_new(pwd);
+
 	lxterminal_tab_label_close_button_clicked(G_CALLBACK(terminal_childexit), term);
 
 	/* setting scrollbar */
@@ -732,10 +767,10 @@ static Term *terminal_new(LXTerminal *terminal, const gchar *label, const gchar 
 	if (exec) {
 		gchar **command;
 		g_shell_parse_argv(exec, NULL, &command, NULL);
-		vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(command), command, env, pwd, FALSE, TRUE, TRUE);
+		term->pid = vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *)*(command), command, env, "/tmp", FALSE, TRUE, TRUE);
 		g_strfreev(command);
 	} else {
-		vte_terminal_fork_command(VTE_TERMINAL(term->vte), NULL, NULL, env, pwd, FALSE, TRUE, TRUE);
+		term->pid = vte_terminal_fork_command(VTE_TERMINAL(term->vte), NULL, NULL, env, pwd, FALSE, TRUE, TRUE);
 	}
 
 	/* signal handler */
