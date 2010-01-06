@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-07-27 20:37+0200\n"
+"POT-Creation-Date: 2009-12-31 00:16+0100\n"
+"PO-Revision-Date: 2009-12-31 00:12+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -167,106 +167,107 @@ msgstr "Vietnamesisk"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:82
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:83
 msgid "_Edit"
 msgstr "_Rediger"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:85
 msgid "_Tabs"
 msgstr "F_aner"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:86
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:362 ../src/lxterminal.c:411 ../src/lxterminal.c:476
+#: ../src/lxterminal.c:990 ../src/lxterminal.c:1018
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:401
+#: ../src/lxterminal.c:403
 msgid "translator-credits"
 msgstr "Karl Ove Hufthammer"
 
-#: ../src/lxterminal.c:411
+#: ../src/lxterminal.c:413
 msgid "Copyright (C) 2008"
 msgstr "Copyright © 2008"
 
-#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:414
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminalemulator for LXDE"
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
-#, fuzzy
+#: ../src/lxterminal.c:426 ../src/lxterminal.c:447
 msgid "New _Window"
 msgstr "Nytt _vindauge"
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
-#, fuzzy
+#: ../src/lxterminal.c:427 ../src/lxterminal.c:448
 msgid "New _Tab"
 msgstr "Ny _fane"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:429 ../src/lxterminal.c:459
 msgid "_Close Tab"
 msgstr "_Lukk fane"
 
-#: ../src/lxterminal.c:428
+#: ../src/lxterminal.c:430
 msgid "_Quit"
 msgstr "_Avslutt"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
-#, fuzzy
+#: ../src/lxterminal.c:431 ../src/lxterminal.c:450
 msgid "Cop_y"
 msgstr "_Kopier"
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
 msgid "_Paste"
 msgstr "_Lim inn"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
 msgid "Preference_s"
 msgstr "_Innstillingar"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
-#, fuzzy
+#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
 msgid "Pre_vious Tab"
 msgstr "_Førre fane"
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
-#, fuzzy
+#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
 msgid "Ne_xt Tab"
 msgstr "_Neste fane"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:438 ../src/lxterminal.c:457
 msgid "Move Tab _Left"
 msgstr "Flytt fane til _venstre"
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:439 ../src/lxterminal.c:458
 msgid "Move Tab _Right"
 msgstr "Flytt fane til _høgre"
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:440
 msgid "_About"
 msgstr "_Om"
 
+#: ../src/lxterminal.c:619
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
+msgstr "Klarte ikkje starta nettlesaren. Kommandoen var «%s».\n"
+
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Skjerm"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Ymse"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -286,7 +287,7 @@ msgstr "Framgrunn:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Blink skrivemerket:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -317,12 +318,12 @@ msgstr "Linjer rulleminne:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Gøym rullefeltet:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Gøym menylinja:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -339,20 +340,16 @@ msgstr "Slå av F10-snarvegen til menyen:"
 msgid "Preferences"
 msgstr "Innstillingar"
 
-#~ msgid "General"
-#~ msgstr "Generelt"
-
-#, fuzzy
-#~ msgid "_Preferences"
-#~ msgstr "Innstillingar"
-
-#~ msgid "Transparent Background:"
-#~ msgstr "Gjennomsiktig bakgrunn:"
-
-#: data/lxterminal.desktop.in:5
+#: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
 msgstr "Terminal"
 
-#: data/lxterminal.desktop.in:6
+#: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Bruk kommandolinja"
+
+#~ msgid "General"
+#~ msgstr "Generelt"
+
+#~ msgid "Transparent Background:"
+#~ msgstr "Gjennomsiktig bakgrunn:"
