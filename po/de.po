@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-28 15:02+0100\n"
-"PO-Revision-Date: 2009-12-11 02:51+0100\n"
+"PO-Revision-Date: 2010-01-06 17:43+0100\n"
 "Last-Translator: Christoph Wickert <christoph.wickert@googlemail.com>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
@@ -334,7 +334,7 @@ msgstr "Zeichen für Auswahl nach Wort:"
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr "Unterbinde den Shortcut F10 für das Menu"
+msgstr "Tastenkürzel F10 für das Menü deaktivieren"
 
 #. create window
 #: ../src/preferences.c:378
