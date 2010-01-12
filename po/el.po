@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"POT-Creation-Date: 2010-01-12 00:58+0100\n"
 "PO-Revision-Date: 2009-12-27 23:20+0100\n"
 "Last-Translator: George Vasilakos <forfolias@linuxteam.cs.teilar.gr>\n"
 "Language-Team: Greek\n"
@@ -168,91 +168,97 @@ msgstr "Βιετναμέζικα"
 msgid "Thai"
 msgstr "Ταϋλανδέζικα"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:82
 msgid "_File"
 msgstr "_Αρχείο"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:83
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:85
 msgid "_Tabs"
 msgstr "_Καρτέλες"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:86
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
+#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:401
+#: ../src/lxterminal.c:434
 msgid "translator-credits"
 msgstr ""
 "Κούτσικος Γιώργος <oege89@hotmail.com>\n"
 "Βασιλάκος Γιώργος  <forfolias@linuxteam.cs.teilar.gr>"
 
-#: ../src/lxterminal.c:411
+#: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
 msgstr "Εξομοιωτής τερματικού για το project LXDE"
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Window"
 msgstr "Νέο _παράθυρο"
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 msgid "New _Tab"
 msgstr "Νέα _καρτέλα"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
 msgstr "_Κλέισιμο καρτέλας"
 
-#: ../src/lxterminal.c:428
+#: ../src/lxterminal.c:461
 msgid "_Quit"
 msgstr "_Έξοδος"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "Cop_y"
 msgstr "_Αντιγραφή"
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
 msgstr "_Επικόλληση"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 msgid "Preference_s"
 msgstr "Ρυθμίσεις"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
 msgstr "_Προηγούμενη καρτέλα"
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
 msgstr "_Επόμενη καρτέλα"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
 msgstr "Μετακίνηση καρτέλας αριστερά"
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
 msgstr "Μετακίνηση καρτέλας δεξιά"
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:471
 msgid "_About"
 msgstr "_Σχετικά"
+
+#: ../src/lxterminal.c:650
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
+msgstr ""
 
 #: ../src/preferences.c:47
 msgid "Style"
@@ -337,6 +343,14 @@ msgstr "Απενεργοποίηση της συντόμευσης F10 για τ
 msgid "Preferences"
 msgstr "Ρυθμίσεις"
 
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "Τερματικό"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr "Χρήση γραμμής εντολών"
+
 #~ msgid "General"
 #~ msgstr "Γενικά"
 
@@ -345,11 +359,3 @@ msgstr "Ρυθμίσεις"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Διαφανές φόντο:"
-
-#: data/lxterminal.desktop.in:5
-msgid "Terminal"
-msgstr "Τερματικό"
-
-#: data/lxterminal.desktop.in:6
-msgid "Use the command line"
-msgstr "Χρήση γραμμής εντολών"

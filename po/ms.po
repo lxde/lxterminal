@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"POT-Creation-Date: 2010-01-12 00:58+0100\n"
 "PO-Revision-Date: 2009-06-07 18:33+0200\n"
 "Last-Translator: Payne Samad Loh <sploh77@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,98 +166,104 @@ msgstr "Vietnam"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:82
 msgid "_File"
 msgstr "_Fail"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:83
 msgid "_Edit"
 msgstr "_Sunting"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:85
 msgid "_Tabs"
 msgstr "_Tab-Tab"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:86
 msgid "_Help"
 msgstr "_Bantuan"
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
+#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:401
+#: ../src/lxterminal.c:434
 msgid "translator-credits"
 msgstr ""
 "罗森柄 Payne Samad Loh <sploh77@yahoo.com>\n"
 "Phyz <phyz2010@gmail.com>\n"
 "Umarzuki Bin Mochlis Moktar <umarzuki@gmail.com>"
 
-#: ../src/lxterminal.c:411
+#: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
 msgstr "Hakcipta Terpelihara (C) 2009"
 
-#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator terminal untuk projek LXDE"
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 #, fuzzy
 msgid "New _Window"
 msgstr "_Tingkap Baru"
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 #, fuzzy
 msgid "New _Tab"
 msgstr "_Tab Baru"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
 msgstr "_Tutup Tab"
 
-#: ../src/lxterminal.c:428
+#: ../src/lxterminal.c:461
 msgid "_Quit"
 msgstr "_Berhenti"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 #, fuzzy
 msgid "Cop_y"
 msgstr "_Salin"
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
 msgstr "_Tampal"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 #, fuzzy
 msgid "Preference_s"
 msgstr "Kegemaran"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 #, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Tab Sebelumnya"
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 #, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_Tab Lain"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:471
 msgid "_About"
 msgstr "_About"
+
+#: ../src/lxterminal.c:650
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
+msgstr ""
 
 #: ../src/preferences.c:47
 msgid "Style"
@@ -342,6 +348,14 @@ msgstr "Lumpuhkan jalanpintas F10 untuk menu:"
 msgid "Preferences"
 msgstr "Kegemaran"
 
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr ""
+
 #~ msgid "General"
 #~ msgstr "Am"
 
@@ -350,7 +364,3 @@ msgstr "Kegemaran"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Latarbelakang Telus:"
-
-#: data/lxterminal.desktop.in:5
-msgid "Terminal"
-msgstr "Terminal"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"POT-Creation-Date: 2010-01-12 00:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,88 +166,94 @@ msgstr ""
 msgid "Thai"
 msgstr ""
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:82
 msgid "_File"
 msgstr ""
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:83
 msgid "_Edit"
 msgstr ""
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:85
 msgid "_Tabs"
 msgstr ""
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:86
 msgid "_Help"
 msgstr ""
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
+#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr ""
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:401
+#: ../src/lxterminal.c:434
 msgid "translator-credits"
 msgstr ""
 
-#: ../src/lxterminal.c:411
+#: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
 msgstr ""
 
-#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
 msgstr ""
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Window"
 msgstr ""
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 msgid "New _Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:428
+#: ../src/lxterminal.c:461
 msgid "_Quit"
 msgstr ""
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "Cop_y"
 msgstr ""
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
 msgstr ""
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 msgid "Preference_s"
 msgstr ""
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:471
 msgid "_About"
+msgstr ""
+
+#: ../src/lxterminal.c:650
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
 msgstr ""
 
 #: ../src/preferences.c:47
@@ -333,10 +339,10 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: data/lxterminal.desktop.in:5
+#: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
 msgstr "터미널"
 
-#: data/lxterminal.desktop.in:6
+#: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "명령 행을 사용합니다"

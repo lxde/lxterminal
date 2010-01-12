@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-31 00:16+0100\n"
+"POT-Creation-Date: 2010-01-12 00:58+0100\n"
 "PO-Revision-Date: 2009-12-31 00:12+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -184,75 +184,75 @@ msgstr "F_aner"
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../src/lxterminal.c:362 ../src/lxterminal.c:411 ../src/lxterminal.c:476
-#: ../src/lxterminal.c:990 ../src/lxterminal.c:1018
+#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
+#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:403
+#: ../src/lxterminal.c:434
 msgid "translator-credits"
 msgstr "Karl Ove Hufthammer"
 
-#: ../src/lxterminal.c:413
+#: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
 msgstr "Copyright © 2008"
 
-#: ../src/lxterminal.c:414
+#: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminalemulator for LXDE"
 
-#: ../src/lxterminal.c:426 ../src/lxterminal.c:447
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Window"
 msgstr "Nytt _vindauge"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:448
+#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 msgid "New _Tab"
 msgstr "Ny _fane"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:459
+#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
 msgstr "_Lukk fane"
 
-#: ../src/lxterminal.c:430
+#: ../src/lxterminal.c:461
 msgid "_Quit"
 msgstr "_Avslutt"
 
-#: ../src/lxterminal.c:431 ../src/lxterminal.c:450
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "Cop_y"
 msgstr "_Kopier"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
 msgstr "_Lim inn"
 
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 msgid "Preference_s"
 msgstr "_Innstillingar"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
 msgstr "_Førre fane"
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
 msgstr "_Neste fane"
 
-#: ../src/lxterminal.c:438 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
 msgstr "Flytt fane til _venstre"
 
-#: ../src/lxterminal.c:439 ../src/lxterminal.c:458
+#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
 msgstr "Flytt fane til _høgre"
 
-#: ../src/lxterminal.c:440
+#: ../src/lxterminal.c:471
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/lxterminal.c:619
+#: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
 msgstr "Klarte ikkje starta nettlesaren. Kommandoen var «%s».\n"

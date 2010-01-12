@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"POT-Creation-Date: 2010-01-12 00:58+0100\n"
 "PO-Revision-Date: 2009-08-31 12:59+0100\n"
 "Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
@@ -168,95 +168,101 @@ msgstr "Вијетнамски"
 msgid "Thai"
 msgstr "Тајландски"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:82
 msgid "_File"
 msgstr "_Датотека"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:83
 msgid "_Edit"
 msgstr "_Уређивање"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:85
 msgid "_Tabs"
 msgstr "_Листови"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:86
 msgid "_Help"
 msgstr "_Помоћ"
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
+#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:401
+#: ../src/lxterminal.c:434
 msgid "translator-credits"
 msgstr "Serbian (sr) — Jay A. Fleming <tito.nehru.naser@gmail.com>"
 
-#: ../src/lxterminal.c:411
+#: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
 msgstr "2008-2009. Сва права задржана."
 
-#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
 msgstr "Терминал за LXDE радно окружење"
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 #, fuzzy
 msgid "New _Window"
 msgstr "Нови _прозор"
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 #, fuzzy
 msgid "New _Tab"
 msgstr "Нови _лист"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
 msgstr "За_твори лист"
 
-#: ../src/lxterminal.c:428
+#: ../src/lxterminal.c:461
 msgid "_Quit"
 msgstr "_Затвори прозор"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 #, fuzzy
 msgid "Cop_y"
 msgstr "_Умножи"
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
 msgstr "У_баци"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 #, fuzzy
 msgid "Preference_s"
 msgstr "Поставке"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 #, fuzzy
 msgid "Pre_vious Tab"
 msgstr "Прет_ходни лист"
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 #, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_Следећи лист"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:471
 msgid "_About"
 msgstr "_О програму"
+
+#: ../src/lxterminal.c:650
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
+msgstr ""
 
 #: ../src/preferences.c:47
 msgid "Style"
@@ -341,6 +347,14 @@ msgstr "Искључи позив менија тастером F10"
 msgid "Preferences"
 msgstr "Поставке"
 
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "Терминал"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr "Користите линију наредби"
+
 #~ msgid "General"
 #~ msgstr "Опште"
 
@@ -349,11 +363,3 @@ msgstr "Поставке"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Провидна позадина"
-
-#: data/lxterminal.desktop.in:5
-msgid "Terminal"
-msgstr "Терминал"
-
-#: data/lxterminal.desktop.in:6
-msgid "Use the command line"
-msgstr "Користите линију наредби"

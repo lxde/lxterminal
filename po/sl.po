@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-28 15:02+0100\n"
+"POT-Creation-Date: 2010-01-12 00:58+0100\n"
 "PO-Revision-Date: 2009-12-10 14:13+0100\n"
 "Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
 "X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -170,89 +170,95 @@ msgstr "Vietnamščina"
 msgid "Thai"
 msgstr "Tajščina"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:82
 msgid "_File"
 msgstr "_Datoteka"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:83
 msgid "_Edit"
 msgstr "_Uredi"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:85
 msgid "_Tabs"
 msgstr "_Zavihki"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:86
 msgid "_Help"
 msgstr "_Pomoč"
 
-#: ../src/lxterminal.c:360 ../src/lxterminal.c:409 ../src/lxterminal.c:474
-#: ../src/lxterminal.c:925 ../src/lxterminal.c:953
+#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
+#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:401
+#: ../src/lxterminal.c:434
 msgid "translator-credits"
 msgstr "paxman <paxmanpwnz@gmail.com>"
 
-#: ../src/lxterminal.c:411
+#: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
 msgstr "Vse pravice pridržane (C) 2008"
 
-#: ../src/lxterminal.c:412
+#: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
 msgstr "Konzola projekta LXDE"
 
-#: ../src/lxterminal.c:424 ../src/lxterminal.c:445
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Window"
 msgstr "Novo _okno"
 
-#: ../src/lxterminal.c:425 ../src/lxterminal.c:446
+#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 msgid "New _Tab"
 msgstr "Nov _zavihek"
 
-#: ../src/lxterminal.c:427 ../src/lxterminal.c:457
+#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
 msgstr "Z_apri zavihek"
 
-#: ../src/lxterminal.c:428
+#: ../src/lxterminal.c:461
 msgid "_Quit"
 msgstr "_Izhod"
 
-#: ../src/lxterminal.c:429 ../src/lxterminal.c:448
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "Cop_y"
 msgstr "_Kopiraj"
 
-#: ../src/lxterminal.c:430 ../src/lxterminal.c:449
+#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
 msgstr "_Prilepi"
 
-#: ../src/lxterminal.c:432 ../src/lxterminal.c:451
+#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 msgid "Preference_s"
 msgstr "Nastavitve"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:434 ../src/lxterminal.c:453
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
 msgstr "_Prejšnji zavihek"
 
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:454
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
 msgstr "_Naslednji zavihek"
 
-#: ../src/lxterminal.c:436 ../src/lxterminal.c:455
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
 msgstr "Premakni zavihek v _levo"
 
-#: ../src/lxterminal.c:437 ../src/lxterminal.c:456
+#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
 msgstr "Premakni zavihek v _desno"
 
-#: ../src/lxterminal.c:438
+#: ../src/lxterminal.c:471
 msgid "_About"
 msgstr "_O programu"
+
+#: ../src/lxterminal.c:650
+#, c-format
+msgid "Failed to launch the web browser. The command was `%s'\n"
+msgstr ""
 
 #: ../src/preferences.c:47
 msgid "Style"
@@ -337,6 +343,14 @@ msgstr "Onemogoči menijsko bližnjico F10"
 msgid "Preferences"
 msgstr "Lastnosti"
 
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "Konzola"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr ""
+
 #~ msgid "General"
 #~ msgstr "Splošno"
 
@@ -351,7 +365,3 @@ msgstr "Lastnosti"
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Kodirni nabor"
-
-#: data/lxterminal.desktop.in:5
-msgid "Terminal"
-msgstr "Konzola"
