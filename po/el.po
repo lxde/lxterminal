@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2009-12-27 23:20+0100\n"
+"PO-Revision-Date: 2010-01-12 14:47+0100\n"
 "Last-Translator: George Vasilakos <forfolias@linuxteam.cs.teilar.gr>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -52,11 +52,11 @@ msgstr "Δυτικά"
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr "Κέντρο-Ευροπαικά"
+msgstr "Κέντρο-Ευρωπαικά"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Νοτιο-Ευροπαικά"
+msgstr "Νότιο-Ευρωπαικά"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
@@ -258,7 +258,7 @@ msgstr "_Σχετικά"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Αποτυχία έναρξης του περιηγητή ιστού. Η εντολή ήταν `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
