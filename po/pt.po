@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2009-10-29 11:45+0100\n"
+"PO-Revision-Date: 2010-01-12 14:52+0100\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: PORTUGAL\n"
 
@@ -258,19 +259,19 @@ msgstr "So_bre"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Falha ao iniciar o navegador web. O comando foi `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Estilo"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Ecrã"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Diversos"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -290,7 +291,7 @@ msgstr "Primeiro plano:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Intermitência do Cursor:"
 
 #. tab-panel position
 #: ../src/preferences.c:129

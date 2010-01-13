@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2009-10-28 17:57+0100\n"
+"PO-Revision-Date: 2010-01-12 23:29+0100\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -249,7 +249,7 @@ msgstr "_Про"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Не можу запустити веб-переглядач. Команда була: `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
