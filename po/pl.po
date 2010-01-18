@@ -13,15 +13,16 @@ msgstr ""
 "Project-Id-Version: pl_PL\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2009-12-24 20:27+0100\n"
-"Last-Translator: Grzegorz Gibas <amigib@gmail.com>\n"
+"PO-Revision-Date: 2010-01-13 23:20+0200\n"
+"Last-Translator: Artur <mazdac@gmail.com>\n"
 "Language-Team: Polish\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 1.1.0\n"
+"X-Generator: Pootle 2.0.0\n"
 "X-Poedit-Language: Spanish\n"
 
 #: ../src/encoding.c:124
@@ -200,7 +201,7 @@ msgstr "LXTerminal"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:434
 msgid "translator-credits"
-msgstr "Grzegorz Gibas <amigib@gmail.com>"
+msgstr "Grzegorz Gibas <amigib@gmail.com>\n"
 
 #: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
@@ -241,7 +242,7 @@ msgstr "Ustawienia"
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
-msgstr "_Poprzednia Karta"
+msgstr "_Poprzednia karta"
 
 #: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
@@ -284,7 +285,7 @@ msgstr "Czcionka Terminala:"
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr "Tło"
+msgstr "Tło:"
 
 #. Foreground color
 #: ../src/preferences.c:98
