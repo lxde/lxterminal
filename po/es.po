@@ -10,14 +10,15 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2009-12-19 18:32+0100\n"
+"PO-Revision-Date: 2010-01-20 14:38+0200\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.1.0\n"
+"X-Generator: Pootle 2.0.1\n"
 "X-Poedit-Language: Spanish\n"
 
 #: ../src/encoding.c:124
@@ -263,7 +264,7 @@ msgstr "_Acerca de ..."
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Fallo al lanzar el navegador web. El comando fué `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
