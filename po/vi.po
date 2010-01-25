@@ -18,270 +18,272 @@ msgstr ""
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Tây Âu"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Đông Âu"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Đông Á"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "Đông Nam Á & Tây Nam Á"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Trung Đông"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Tây Âu"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Trung Âu"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Nam Âu"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Ban-tích"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Ki-rin"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Ả Rập"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Hy Lạp"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Do Thái Trực quan"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Do Thái"
 
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Thổ Nhĩ Kỳ"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr ""
+msgstr "Bắc Âu"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Celtic"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Rô-man-ni"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Ác-mê-ni"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Trung Phổn thể"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Ki-rin/Nga"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Nhật Bản"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Hàn Quốc"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Trung Giản thể"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Gi-oa-gi-a"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Ki-rin/U-cợ-rainh"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Cợ-rô-a-ti-a"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Hin-di"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Pha-xi"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Gu-gia-ra-ti"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Băng Đảo"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Việt"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Thái"
 
 #: ../src/lxterminal.c:82
 msgid "_File"
-msgstr ""
+msgstr "_Tập tin"
 
 #: ../src/lxterminal.c:83
 msgid "_Edit"
-msgstr ""
+msgstr "_Sửa"
 
 #. { "View", NULL, N_("_View") },
 #: ../src/lxterminal.c:85
 msgid "_Tabs"
-msgstr ""
+msgstr "_Thẻ"
 
 #: ../src/lxterminal.c:86
 msgid "_Help"
-msgstr ""
+msgstr "Trợ _giúp"
 
 #: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
 #: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
-msgstr ""
+msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:434
 msgid "translator-credits"
 msgstr ""
+"Nhóm Việt hoá:\n"
+"Duy-Hieu Bui (scamemiv@gmail.com)"
 
 #: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Bản quyền (C) 2008"
 
 #: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "Chương trình mô phỏng cửa sổ dòng lệnh cho dự án LXDE"
 
 #: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Window"
-msgstr ""
+msgstr "Cửa _Sổ Mới"
 
 #: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 msgid "New _Tab"
-msgstr ""
+msgstr "_Thẻ mới"
 
 #: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
-msgstr ""
+msgstr "Đó_ng thẻ"
 
 #: ../src/lxterminal.c:461
 msgid "_Quit"
-msgstr ""
+msgstr "T_hoát"
 
 #: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "Cop_y"
-msgstr ""
+msgstr "_Sao chép"
 
 #: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
-msgstr ""
+msgstr "_Dán"
 
 #: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 msgid "Preference_s"
-msgstr ""
+msgstr "Tùy _chỉnh"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
-msgstr ""
+msgstr "Thẻ t_rước"
 
 #: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
-msgstr ""
+msgstr "Thẻ t_iếp"
 
 #: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Chu_yển thẻ sang trái"
 
 #: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Chuyển thẻ sang _phải"
 
 #: ../src/lxterminal.c:471
 msgid "_About"
-msgstr ""
+msgstr "_Giới thiệu"
 
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Không thể chạy trình duyệt web. Câu lệnh là `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Kiểu"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Hiển thị"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Hỗn hợp"
 
 #. terminal font
 #: ../src/preferences.c:82
 msgid "Terminal Font:"
-msgstr ""
+msgstr "Phông chữ cửa sổ dòng lệnh"
 
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr ""
+msgstr "Màu nền"
 
 #. Foreground color
 #: ../src/preferences.c:98
 msgid "Foreground:"
-msgstr ""
+msgstr "Màu tiền cảnh"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
@@ -291,38 +293,38 @@ msgstr ""
 #. tab-panel position
 #: ../src/preferences.c:129
 msgid "Tab panel position:"
-msgstr ""
+msgstr "Vị trí thanh chứa thẻ:"
 
 #: ../src/preferences.c:132
 msgid "Top"
-msgstr ""
+msgstr "Trên"
 
 #: ../src/preferences.c:133
 msgid "Bottom"
-msgstr ""
+msgstr "Dưới"
 
 #: ../src/preferences.c:134
 msgid "Left"
-msgstr ""
+msgstr "Trái"
 
 #: ../src/preferences.c:135
 msgid "Right"
-msgstr ""
+msgstr "Phải"
 
 #. Scrollback buffer
 #: ../src/preferences.c:141
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Số dòng cuộn lại:"
 
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Giấu thanh cuộn:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Giấu thanh trình đơn:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -332,12 +334,12 @@ msgstr ""
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Tắt phím tắt F10 hiển thị trình đơn"
 
 #. create window
 #: ../src/preferences.c:378
 msgid "Preferences"
-msgstr ""
+msgstr "Tùy chỉnh"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
