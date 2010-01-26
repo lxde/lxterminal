@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2010-01-25 16:13+0200\n"
+"PO-Revision-Date: 2010-01-26 10:48+0200\n"
 "Last-Translator: Hamidreza <n3gb0y@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fa\n"
@@ -138,7 +138,7 @@ msgstr "سرلیک اوکراینی"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "کرواتی"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
@@ -202,7 +202,7 @@ msgstr "کپی رایت ۲۰۰۸"
 
 #: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "شبیه ساز پایانه برای پروژه ی LXDE"
 
 #: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Window"
@@ -250,9 +250,8 @@ msgid "Move Tab _Right"
 msgstr "سربرگ را به راست ببر"
 
 #: ../src/lxterminal.c:471
-#, fuzzy
 msgid "_About"
-msgstr "پیرامون"
+msgstr "پیرامون(ما)"
 
 #: ../src/lxterminal.c:650
 #, c-format
@@ -268,8 +267,9 @@ msgid "Display"
 msgstr "تصویر"
 
 #: ../src/preferences.c:61
+#, fuzzy
 msgid "Misc"
-msgstr ""
+msgstr "متفرقه"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -279,7 +279,7 @@ msgstr "قلم پایانه"
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr "پس زمینه:"
+msgstr "(رنگ)پس زمینه:"
 
 #. Foreground color
 #: ../src/preferences.c:98
@@ -294,7 +294,7 @@ msgstr "سوسوی(سرعت) مکان نما"
 #. tab-panel position
 #: ../src/preferences.c:129
 msgid "Tab panel position:"
-msgstr ""
+msgstr "موقعیت بخش(نواری) سربرگ: "
 
 #: ../src/preferences.c:132
 msgid "Top"
@@ -317,30 +317,32 @@ msgstr "راست"
 msgid "Scrollback lines:"
 msgstr ""
 
+# scroll?
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "پنهان کردن نوار حرکت دهنده"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "پنهان کردن نوار منو:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
+#, fuzzy
 msgid "Select-by-word characters:"
-msgstr ""
+msgstr "انتخاب با کلمه:"
 
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "غیر فعال کردن میانبر F10 برای فهرست(منو):"
 
 #. create window
 #: ../src/preferences.c:378
 msgid "Preferences"
-msgstr ""
+msgstr "تنظیمات"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -348,4 +350,4 @@ msgstr "پایانه"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "استفاده از سطر فرمان"
+msgstr "استفاده از خط فرمان"

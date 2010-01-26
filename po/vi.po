@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2010-01-25 23:47+0700\n"
+"PO-Revision-Date: 2010-01-26 11:05+0200\n"
 "Last-Translator: Hiếu <scamemiv@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: vi\n"
@@ -275,17 +275,17 @@ msgstr "Hỗn hợp"
 #. terminal font
 #: ../src/preferences.c:82
 msgid "Terminal Font:"
-msgstr "Phông chữ cửa sổ lệnh"
+msgstr "Phông chữ cửa sổ lệnh:"
 
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr "Màu nền"
+msgstr "Màu nền:"
 
 #. Foreground color
 #: ../src/preferences.c:98
 msgid "Foreground:"
-msgstr "Màu tiền cảnh"
+msgstr "Màu tiền cảnh:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
