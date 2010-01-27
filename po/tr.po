@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2010-01-14 03:52+0200\n"
-"Last-Translator: Kılıç Köken <kilickoken@gmail.com>\n"
+"PO-Revision-Date: 2010-01-27 19:04+0200\n"
+"Last-Translator: Kılıç <kilickoken@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.0\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -70,246 +70,246 @@ msgstr "Kiril"
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr "Arap"
+msgstr "Arapça"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr "Yunan"
+msgstr "Yunanca"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr "İbrani Görsel"
+msgstr "İbranice Görsel"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr "İbrani"
+msgstr "İbranice"
 
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr "Türk"
+msgstr "Türkçe"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr "İskandinav"
+msgstr "İskandinavca"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr "Kelt"
+msgstr "Keltçe"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr "Romen"
+msgstr "Romence"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr "Ermeni"
+msgstr "Ermenice"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr "Geleneksel Çin"
+msgstr "Geleneksel Çince"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr "Kiril/Rus"
+msgstr "Kiril/Rusça"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr "Japon"
+msgstr "Japonca"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr "Kore"
+msgstr "Korece"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr "Basitleştirilmiş Çin"
+msgstr "Basitleştirilmiş Çince"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr "Gürcü"
+msgstr "Gürcüce"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr "Kiril/Ukrayna"
+msgstr "Kiril/Ukraynaca"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr "Hırvat"
+msgstr "Hırvatça"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr "Hint"
+msgstr "Hintçe"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr "Fars"
+msgstr "Farsça"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Gucaratça"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmuk"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "İzlandaca"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamca"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Tayca"
 
 #: ../src/lxterminal.c:82
 msgid "_File"
-msgstr ""
+msgstr "_Dosya"
 
 #: ../src/lxterminal.c:83
 msgid "_Edit"
-msgstr ""
+msgstr "_Düzen"
 
 #. { "View", NULL, N_("_View") },
 #: ../src/lxterminal.c:85
 msgid "_Tabs"
-msgstr ""
+msgstr "_Sekmeler"
 
 #: ../src/lxterminal.c:86
 msgid "_Help"
-msgstr ""
+msgstr "_Yardım"
 
 #: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
 #: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
-msgstr ""
+msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:434
 msgid "translator-credits"
-msgstr ""
+msgstr "Kılıç Köken (kilickoken@gmail.com)\n"
 
 #: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Yayım Hakkı (YH) 2008"
 
 #: ../src/lxterminal.c:445
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "LXDE girişimi için uçbirim öykünücü"
 
 #: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Window"
-msgstr ""
+msgstr "Yeni _Pencere"
 
 #: ../src/lxterminal.c:458 ../src/lxterminal.c:479
 msgid "New _Tab"
-msgstr ""
+msgstr "Yeni _Sekme"
 
 #: ../src/lxterminal.c:460 ../src/lxterminal.c:490
 msgid "_Close Tab"
-msgstr ""
+msgstr "Sekmeyi _Kapat"
 
 #: ../src/lxterminal.c:461
 msgid "_Quit"
-msgstr ""
+msgstr "_Çık"
 
 #: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "Cop_y"
-msgstr ""
+msgstr "Kop_yala"
 
 #: ../src/lxterminal.c:463 ../src/lxterminal.c:482
 msgid "_Paste"
-msgstr ""
+msgstr "Ya_pıştır"
 
 #: ../src/lxterminal.c:465 ../src/lxterminal.c:484
 msgid "Preference_s"
-msgstr ""
+msgstr "Yeğlenenle_r"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
-msgstr ""
+msgstr "Ön_ceki Sekme"
 
 #: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
-msgstr ""
+msgstr "Sonra_ki Sekme"
 
 #: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Sekmeyi So_la Taşı"
 
 #: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Sekmeyi Sa_ğa Taşı"
 
 #: ../src/lxterminal.c:471
 msgid "_About"
-msgstr ""
+msgstr "_Hakkında"
 
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Elbiz (web) gözatıcı açılamadı. Komut `%s' idi\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Biçem"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Görüntü"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Çeşitli"
 
 #. terminal font
 #: ../src/preferences.c:82
 msgid "Terminal Font:"
-msgstr ""
+msgstr "Uçbirim Yazıtipi:"
 
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr ""
+msgstr "Artalan:"
 
 #. Foreground color
 #: ../src/preferences.c:98
 msgid "Foreground:"
-msgstr ""
+msgstr "Önalan:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "İmleç Kıpılıyor:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
 msgid "Tab panel position:"
-msgstr ""
+msgstr "Sekme tablası konumu"
 
 #: ../src/preferences.c:132
 msgid "Top"
-msgstr ""
+msgstr "Üst"
 
 #: ../src/preferences.c:133
 msgid "Bottom"
-msgstr ""
+msgstr "Alt"
 
 #: ../src/preferences.c:134
 msgid "Left"
-msgstr ""
+msgstr "Sol"
 
 #: ../src/preferences.c:135
 msgid "Right"
-msgstr ""
+msgstr "Sağ"
 
 #. Scrollback buffer
 #: ../src/preferences.c:141
