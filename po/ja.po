@@ -10,13 +10,15 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2009-11-07 22:00+0900\n"
-"Last-Translator: Hironao Komatsu <hironao@users.sourceforge.net>\n"
+"PO-Revision-Date: 2010-01-27 21:12+0200\n"
+"Last-Translator:  <jugger90@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -258,7 +260,7 @@ msgstr "情報(_A)"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "ブラウザの起動に失敗しました。入力されたコマンド `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"

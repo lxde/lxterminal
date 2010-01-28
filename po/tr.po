@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2010-01-27 19:04+0200\n"
+"PO-Revision-Date: 2010-01-27 22:28+0200\n"
 "Last-Translator: Kılıç <kilickoken@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
@@ -314,17 +314,17 @@ msgstr "Sağ"
 #. Scrollback buffer
 #: ../src/preferences.c:141
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Geri kaydırma satırları:"
 
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Kaydırma çubuğunu gizle:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Menü çubuğunu gizle:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -334,12 +334,12 @@ msgstr ""
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Menü için F10 kısayolunu edilgenle:"
 
 #. create window
 #: ../src/preferences.c:378
 msgid "Preferences"
-msgstr ""
+msgstr "Yeğlenenler:"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
