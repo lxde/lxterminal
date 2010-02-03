@@ -256,7 +256,7 @@ msgstr "پیرامون(ما)"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr "شکست در اجرای مرورگر. دستور `%s  بود."
+msgstr "شکست در اجرای مرورگر. دستور `%s  بود.\n"
 
 #: ../src/preferences.c:47
 msgid "Style"

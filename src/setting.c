@@ -32,8 +32,11 @@ void setting_save_to_file(const char *path, const char *data)
 
 	/* open config file */
 	fp = fopen(path, "w");
-	fputs(data, fp);
-	fclose(fp);
+	if (fp != NULL)
+	{
+	    fputs(data, fp);
+	    fclose(fp);
+	}
 }
 
 void setting_save(Setting *setting)

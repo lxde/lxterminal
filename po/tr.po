@@ -194,7 +194,7 @@ msgstr "LXTerminal"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:434
 msgid "translator-credits"
-msgstr "Kılıç Köken (kilickoken@gmail.com)\n"
+msgstr "Kılıç Köken (kilickoken@gmail.com)"
 
 #: ../src/lxterminal.c:444
 msgid "Copyright (C) 2008"
