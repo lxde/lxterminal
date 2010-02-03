@@ -1,10 +1,10 @@
 default_config_DATA = lxterminal.conf
 default_configdir = $(datadir)/lxterminal
 
-lxterminal.desktop.in_in_files = lxterminal.desktop
-lxterminal_desktop_DATA = $(lxterminal_desktop_in_files:.desktop.in=.desktop)
+lxterminal.desktop_in_files = lxterminal.desktop.in
+lxterminal.desktop_DATA = $(lxterminal.desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
-lxterminal_desktopdir = $(datadir)/applications
+lxterminal.desktopdir = $(datadir)/applications
 
 lxterminal_images_DATA = lxterminal.png
 lxterminal_imagesdir = $(datadir)/pixmaps
