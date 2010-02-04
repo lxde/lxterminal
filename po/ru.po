@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# akdengi <kazancas@gmail.com>, 2009.
+# akdengi <kazancas@gmail.com>, 2009,2010
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
@@ -245,11 +245,11 @@ msgstr "Сле_дующая вкладка"
 
 #: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Переместить вкладку _влево"
 
 #: ../src/lxterminal.c:470 ../src/lxterminal.c:489
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Переместить вкладку _вправо"
 
 #: ../src/lxterminal.c:471
 msgid "_About"
@@ -258,19 +258,19 @@ msgstr "_О программе"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Ошибка запуска веб-браузера командой `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Стиль"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Отображение"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Разное"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -290,7 +290,7 @@ msgstr "Цвет текста:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Мигание курсора:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -321,12 +321,12 @@ msgstr "Прокручивать строк:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Скрыть полосу прокрутки"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Скрыть строку меню"
 
 #. Select-by-word
 #: ../src/preferences.c:181

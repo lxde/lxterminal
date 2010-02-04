@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-12 00:58+0100\n"
-"PO-Revision-Date: 2009-08-23 17:20+0300\n"
+"PO-Revision-Date: 2010-02-04 15:37+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "MIME-Version: 1.0\n"
@@ -36,18 +36,27 @@ msgstr "Kagu- ja Edela-Aasia"
 msgid "Middle Eastern"
 msgstr "Lähis-Ida"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
 msgstr "Lääne"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "Kesk-Euroopa"
@@ -56,21 +65,31 @@ msgstr "Kesk-Euroopa"
 msgid "South European"
 msgstr "Lõuna-Euroopa"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
 msgstr "Balti"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "Krillits"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "Araabia"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
 msgstr "Kreeka"
 
@@ -78,12 +97,16 @@ msgstr "Kreeka"
 msgid "Hebrew Visual"
 msgstr "Heebrea visuaalne"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "Heebrea"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "Türgi"
@@ -96,7 +119,8 @@ msgstr "Põhjamaad"
 msgid "Celtic"
 msgstr "Kelti"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
 msgstr "Rumeenia"
 
@@ -104,7 +128,9 @@ msgstr "Rumeenia"
 msgid "Armenian"
 msgstr "Armeenia"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "Hiina traditsiooniline"
 
@@ -112,16 +138,22 @@ msgstr "Hiina traditsiooniline"
 msgid "Cyrillic/Russian"
 msgstr "Kirillits/Venemaa"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
 msgstr "Jaapani"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "Korea"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "Hiina lihtsustatud"
@@ -130,7 +162,8 @@ msgstr "Hiina lihtsustatud"
 msgid "Georgian"
 msgstr "Gruusia"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "Kirillits/Ukraina"
 
@@ -158,7 +191,9 @@ msgstr "Gurmukhi"
 msgid "Icelandic"
 msgstr "Gröönimaa"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "Vietnami"
 
@@ -183,8 +218,12 @@ msgstr "_Sakid"
 msgid "_Help"
 msgstr "_Abi"
 
-#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
-#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../src/lxterminal.c:390
+#: ../src/lxterminal.c:392
+#: ../src/lxterminal.c:442
+#: ../src/lxterminal.c:507
+#: ../src/lxterminal.c:1025
+#: ../src/lxterminal.c:1053
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
@@ -202,17 +241,18 @@ msgstr "Copyright (C) 2009"
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE projekti terminaliemulaator"
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
-#, fuzzy
+#: ../src/lxterminal.c:457
+#: ../src/lxterminal.c:478
 msgid "New _Window"
-msgstr "_Uus aken"
+msgstr "Uus _aken"
 
-#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
-#, fuzzy
+#: ../src/lxterminal.c:458
+#: ../src/lxterminal.c:479
 msgid "New _Tab"
-msgstr "_Uus sakk"
+msgstr "Uus _sakk"
 
-#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
+#: ../src/lxterminal.c:460
+#: ../src/lxterminal.c:490
 msgid "_Close Tab"
 msgstr "_Sulge sakk"
 
@@ -220,38 +260,41 @@ msgstr "_Sulge sakk"
 msgid "_Quit"
 msgstr "_Lõpeta"
 
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
-#, fuzzy
+#: ../src/lxterminal.c:462
+#: ../src/lxterminal.c:481
 msgid "Cop_y"
 msgstr "_Kopeeri"
 
-#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
+#: ../src/lxterminal.c:463
+#: ../src/lxterminal.c:482
 msgid "_Paste"
 msgstr "_Aseta"
 
-#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
-#, fuzzy
+#: ../src/lxterminal.c:465
+#: ../src/lxterminal.c:484
 msgid "Preference_s"
-msgstr "Eelistused"
+msgstr "Eeli_stused"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
-#, fuzzy
+#: ../src/lxterminal.c:467
+#: ../src/lxterminal.c:486
 msgid "Pre_vious Tab"
 msgstr "_Eelmine sakk"
 
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
-#, fuzzy
+#: ../src/lxterminal.c:468
+#: ../src/lxterminal.c:487
 msgid "Ne_xt Tab"
 msgstr "_Järgmine sakk"
 
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
+#: ../src/lxterminal.c:469
+#: ../src/lxterminal.c:488
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Tõsta sakk _vasakule"
 
-#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
+#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:489
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Tõsta sakk _paremale"
 
 #: ../src/lxterminal.c:471
 msgid "_About"
@@ -260,19 +303,19 @@ msgstr "_Lähemalt"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Veebilehitseja käivitamine nurjus. Käsk oli '%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Stiil"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Kuva"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Muu"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -292,7 +335,7 @@ msgstr "Esiplaan:"
 #. Cursor Blinks
 #: ../src/preferences.c:105
 msgid "Cursor Blinks:"
-msgstr ""
+msgstr "Kursor vilgub:"
 
 #. tab-panel position
 #: ../src/preferences.c:129
@@ -323,12 +366,12 @@ msgstr "Tagasikerimise ridu:"
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Kerimisriba on peidetud:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Menüüriba on peidetud:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -355,15 +398,12 @@ msgstr "Käsurea kasutamine"
 
 #~ msgid "General"
 #~ msgstr "Üldine"
-
 #~ msgid "_Preferences"
 #~ msgstr "_Eelistused"
-
 #~ msgid "Transparent Background:"
 #~ msgstr "Läbipaistev taust:"
-
 #~ msgid "_View"
 #~ msgstr "_Vaade"
-
 #~ msgid "_Character Encoding"
 #~ msgstr "_Märkide kooditabel"
+

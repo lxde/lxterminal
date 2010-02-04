@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXDE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-12 00:58+0100\n"
+"POT-Creation-Date: 2010-02-04 11:36+0100\n"
 "PO-Revision-Date: 2010-01-24 11:10-0800\n"
 "Last-Translator: alexxed <alexxed@gmail.com>\n"
 "Language-Team: Romanian <LL@li.org>\n"
@@ -251,7 +251,8 @@ msgstr "_Despre"
 #: ../src/lxterminal.c:650
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr "Nu s-a reușit lansarea navigatorului de internet. Comanda a fost „%s”\n"
+msgstr ""
+"Nu s-a reușit lansarea navigatorului de internet. Comanda a fost „%s”\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
