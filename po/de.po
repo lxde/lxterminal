@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-07 04:36+0000\n"
+"POT-Creation-Date: 2010-02-28 04:08+0000\n"
 "PO-Revision-Date: 2010-01-13 00:26+0100\n"
 "Last-Translator: Christoph Wickert <christoph.wickert@googlemail.com>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
@@ -292,7 +292,6 @@ msgstr "Vordergrund:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
-#, fuzzy
 msgid "Cursor Blinks:"
 msgstr "Blinkender Cursor:"
 
