@@ -35,7 +35,6 @@
 #include "tab.h"
 #include "preferences.h"
 #include "unixsocket.h"
-#include "encoding.h"
 
 /* Linux color for palette */
 static const GdkColor linux_color[16] =

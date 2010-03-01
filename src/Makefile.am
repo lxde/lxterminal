@@ -21,8 +21,6 @@ lxterminal_SOURCES = \
 	lxterminal.c \
 	preferences.h \
 	preferences.c
-#	encoding.h \
-#	encoding.c
 
 lxterminal_LDADD = \
 		$(PACKAGE_LIBS) \
