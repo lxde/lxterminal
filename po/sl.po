@@ -349,7 +349,7 @@ msgstr "Konzola"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Uporabi ukazno vrstico"
+msgstr "Uporabi konzolo"
 
 #~ msgid "General"
 #~ msgstr "Splošno"
