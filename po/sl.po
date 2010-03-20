@@ -1,24 +1,23 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-04 11:36+0100\n"
+"POT-Creation-Date: 2010-03-20 04:11+0000\n"
 "PO-Revision-Date: 2009-12-10 14:13+0100\n"
 "Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
-"X-Generator: Pootle 1.1.0\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: SLOVENIA\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -170,95 +169,96 @@ msgstr "Vietnamščina"
 msgid "Thai"
 msgstr "Tajščina"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "_Datoteka"
 
-#: ../src/lxterminal.c:83
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "_Uredi"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "_Zavihki"
 
-#: ../src/lxterminal.c:86
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "_Pomoč"
 
-#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
-#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
+#: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:434
+#: ../src/lxterminal.c:433
 msgid "translator-credits"
 msgstr "paxman <paxmanpwnz@gmail.com>"
 
-#: ../src/lxterminal.c:444
+#: ../src/lxterminal.c:443
 msgid "Copyright (C) 2008"
 msgstr "Vse pravice pridržane (C) 2008"
 
-#: ../src/lxterminal.c:445
+#: ../src/lxterminal.c:444
 msgid "Terminal emulator for LXDE project"
 msgstr "Konzola projekta LXDE"
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
+#: ../src/lxterminal.c:456 ../src/lxterminal.c:477
 msgid "New _Window"
 msgstr "Novo _okno"
 
-#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Tab"
 msgstr "Nov _zavihek"
 
-#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
+#: ../src/lxterminal.c:459 ../src/lxterminal.c:489
 msgid "_Close Tab"
 msgstr "Z_apri zavihek"
 
-#: ../src/lxterminal.c:461
+#: ../src/lxterminal.c:460
 msgid "_Quit"
 msgstr "_Izhod"
 
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:461 ../src/lxterminal.c:480
 msgid "Cop_y"
 msgstr "_Kopiraj"
 
-#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "_Paste"
 msgstr "_Prilepi"
 
-#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
+#: ../src/lxterminal.c:464 ../src/lxterminal.c:483
 msgid "Preference_s"
 msgstr "Nastavitve"
 
-#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL,
+#. "Character Encoding", NULL},
+#: ../src/lxterminal.c:466 ../src/lxterminal.c:485
 msgid "Pre_vious Tab"
 msgstr "_Prejšnji zavihek"
 
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Ne_xt Tab"
 msgstr "_Naslednji zavihek"
 
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Move Tab _Left"
 msgstr "Premakni zavihek v _levo"
 
-#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Right"
 msgstr "Premakni zavihek v _desno"
 
-#: ../src/lxterminal.c:471
+#: ../src/lxterminal.c:470
 msgid "_About"
 msgstr "_O programu"
 
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:649
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Spletni brskalnik ni bil zagnan z ukazom `%s' \n"
 
 #: ../src/preferences.c:47
 msgid "Style"
@@ -349,7 +349,7 @@ msgstr "Konzola"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr ""
+msgstr "Uporabi ukazno vrstico"
 
 #~ msgid "General"
 #~ msgstr "Splošno"
