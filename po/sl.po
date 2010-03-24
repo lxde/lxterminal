@@ -1,20 +1,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-20 04:11+0000\n"
+"POT-Creation-Date: 2010-03-24 01:02+0100\n"
 "PO-Revision-Date: 2009-12-10 14:13+0100\n"
 "Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
-"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -234,8 +235,7 @@ msgstr "_Prilepi"
 msgid "Preference_s"
 msgstr "Nastavitve"
 
-#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL,
-#. "Character Encoding", NULL},
+#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:466 ../src/lxterminal.c:485
 msgid "Pre_vious Tab"
 msgstr "_Prejšnji zavihek"

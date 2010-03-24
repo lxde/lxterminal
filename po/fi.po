@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-04 11:36+0100\n"
+"POT-Creation-Date: 2010-03-24 01:02+0100\n"
 "PO-Revision-Date: 2009-01-29 19:54+0200\n"
 "Last-Translator: Elias Julkunen <elias.julkunen@gmail.com>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -165,98 +165,98 @@ msgstr ""
 msgid "Thai"
 msgstr ""
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "_Tiedosto"
 
-#: ../src/lxterminal.c:83
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "_Muokkaa"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "_Välilehdet"
 
-#: ../src/lxterminal.c:86
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "_Ohje"
 
-#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
-#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
+#: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:434
+#: ../src/lxterminal.c:433
 msgid "translator-credits"
 msgstr "Elias Julkunen <elias.julkunen@gmail.com>"
 
-#: ../src/lxterminal.c:444
+#: ../src/lxterminal.c:443
 msgid "Copyright (C) 2008"
 msgstr "Tekijänoikeudet (C) 2008"
 
-#: ../src/lxterminal.c:445
+#: ../src/lxterminal.c:444
 msgid "Terminal emulator for LXDE project"
 msgstr "Pääteohjelma LXDE-projektille"
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
+#: ../src/lxterminal.c:456 ../src/lxterminal.c:477
 #, fuzzy
 msgid "New _Window"
 msgstr "_Uusi ikkuna"
 
-#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 #, fuzzy
 msgid "New _Tab"
 msgstr "Uusi _välilehti"
 
-#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
+#: ../src/lxterminal.c:459 ../src/lxterminal.c:489
 msgid "_Close Tab"
 msgstr "_Sulje välilehti"
 
-#: ../src/lxterminal.c:461
+#: ../src/lxterminal.c:460
 msgid "_Quit"
 msgstr "_Poistu"
 
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:461 ../src/lxterminal.c:480
 #, fuzzy
 msgid "Cop_y"
 msgstr "_Kopioi"
 
-#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "_Paste"
 msgstr "_Liitä"
 
-#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
+#: ../src/lxterminal.c:464 ../src/lxterminal.c:483
 #, fuzzy
 msgid "Preference_s"
 msgstr "Asetukset"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
+#: ../src/lxterminal.c:466 ../src/lxterminal.c:485
 #, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Edellinen välilehti"
 
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 #, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_Seuraava välilehti"
 
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/lxterminal.c:471
+#: ../src/lxterminal.c:470
 msgid "_About"
 msgstr "_Tietoja"
 
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:649
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
 msgstr ""

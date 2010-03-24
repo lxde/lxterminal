@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-04 11:36+0100\n"
+"POT-Creation-Date: 2010-03-24 01:02+0100\n"
 "PO-Revision-Date: 2010-01-26 10:48+0200\n"
 "Last-Translator: Hamidreza <n3gb0y@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,92 +168,92 @@ msgstr "ویتنامی"
 msgid "Thai"
 msgstr "تایلندی"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "پرونده"
 
-#: ../src/lxterminal.c:83
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "ویرایش"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "تب ها"
 
-#: ../src/lxterminal.c:86
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "کمک"
 
-#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
-#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
+#: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "پایانه ی LX"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:434
+#: ../src/lxterminal.c:433
 msgid "translator-credits"
 msgstr "Hamidreza Davoodi"
 
-#: ../src/lxterminal.c:444
+#: ../src/lxterminal.c:443
 msgid "Copyright (C) 2008"
 msgstr "کپی رایت ۲۰۰۸"
 
-#: ../src/lxterminal.c:445
+#: ../src/lxterminal.c:444
 msgid "Terminal emulator for LXDE project"
 msgstr "شبیه ساز پایانه برای پروژه ی LXDE"
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
+#: ../src/lxterminal.c:456 ../src/lxterminal.c:477
 msgid "New _Window"
 msgstr "پنجره ی نو"
 
-#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Tab"
 msgstr "سربرگی تازه"
 
-#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
+#: ../src/lxterminal.c:459 ../src/lxterminal.c:489
 msgid "_Close Tab"
 msgstr "بستن سربرگ"
 
-#: ../src/lxterminal.c:461
+#: ../src/lxterminal.c:460
 msgid "_Quit"
 msgstr "خروج"
 
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:461 ../src/lxterminal.c:480
 msgid "Cop_y"
 msgstr "رونوشت(کپی)"
 
-#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "_Paste"
 msgstr "جای گذاری"
 
-#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
+#: ../src/lxterminal.c:464 ../src/lxterminal.c:483
 msgid "Preference_s"
 msgstr "تنظیمات"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
+#: ../src/lxterminal.c:466 ../src/lxterminal.c:485
 msgid "Pre_vious Tab"
 msgstr "سربرگ پیشین"
 
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Ne_xt Tab"
 msgstr "سربرگ پسین"
 
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Move Tab _Left"
 msgstr "سربرگ را به چب ببر"
 
-#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Right"
 msgstr "سربرگ را به راست ببر"
 
-#: ../src/lxterminal.c:471
+#: ../src/lxterminal.c:470
 msgid "_About"
 msgstr "پیرامون(ما)"
 
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:649
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
 msgstr "شکست در اجرای مرورگر. دستور `%s  بود.\n"

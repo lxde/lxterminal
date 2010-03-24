@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-04 11:36+0100\n"
+"POT-Creation-Date: 2010-03-24 01:02+0100\n"
 "PO-Revision-Date: 2010-01-27 21:12+0200\n"
 "Last-Translator:  <jugger90@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -170,94 +170,94 @@ msgstr "ベトナム語"
 msgid "Thai"
 msgstr "タイ語"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#: ../src/lxterminal.c:83
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "編集(_E)"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "タブ(_T)"
 
-#: ../src/lxterminal.c:86
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
-#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
+#: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:434
+#: ../src/lxterminal.c:433
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>"
 
-#: ../src/lxterminal.c:444
+#: ../src/lxterminal.c:443
 msgid "Copyright (C) 2008"
 msgstr "Copyright (C) 2008"
 
-#: ../src/lxterminal.c:445
+#: ../src/lxterminal.c:444
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDEプロジェクトのための端末エミュレータ"
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
+#: ../src/lxterminal.c:456 ../src/lxterminal.c:477
 msgid "New _Window"
 msgstr "新規ウィンドウ(_W)"
 
-#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Tab"
 msgstr "新規タブ(_T)"
 
-#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
+#: ../src/lxterminal.c:459 ../src/lxterminal.c:489
 msgid "_Close Tab"
 msgstr "タブを閉じる(_C)"
 
-#: ../src/lxterminal.c:461
+#: ../src/lxterminal.c:460
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:461 ../src/lxterminal.c:480
 msgid "Cop_y"
 msgstr "コピー(_Y)"
 
-#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
-#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
+#: ../src/lxterminal.c:464 ../src/lxterminal.c:483
 msgid "Preference_s"
 msgstr "設定(_S)"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
+#: ../src/lxterminal.c:466 ../src/lxterminal.c:485
 msgid "Pre_vious Tab"
 msgstr "前のタブ(_V)"
 
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Ne_xt Tab"
 msgstr "次のタブ(_X)"
 
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Move Tab _Left"
 msgstr "タブを左へ移動(_L)"
 
-#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Right"
 msgstr "タブを右へ移動(_R)"
 
-#: ../src/lxterminal.c:471
+#: ../src/lxterminal.c:470
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:649
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
 msgstr "ブラウザの起動に失敗しました。入力されたコマンド `%s'\n"

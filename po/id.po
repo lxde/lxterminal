@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-04 11:36+0100\n"
+"POT-Creation-Date: 2010-03-24 01:02+0100\n"
 "PO-Revision-Date: 2009-05-23 03:59+0200\n"
 "Last-Translator: Rahman Yusri Aftian <aftian@yahoo.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
@@ -166,98 +166,98 @@ msgstr "Vietnam"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:81
 msgid "_File"
 msgstr "_Berkas"
 
-#: ../src/lxterminal.c:83
+#: ../src/lxterminal.c:82
 msgid "_Edit"
 msgstr "_Sunting"
 
 #. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:84
 msgid "_Tabs"
 msgstr "T_ab"
 
-#: ../src/lxterminal.c:86
+#: ../src/lxterminal.c:85
 msgid "_Help"
 msgstr "Ba_ntuan"
 
-#: ../src/lxterminal.c:390 ../src/lxterminal.c:392 ../src/lxterminal.c:442
-#: ../src/lxterminal.c:507 ../src/lxterminal.c:1025 ../src/lxterminal.c:1053
+#: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
+#: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:434
+#: ../src/lxterminal.c:433
 msgid "translator-credits"
 msgstr "Andhika Padmawan <andhika.padmawan@gmail.com>, 2009."
 
-#: ../src/lxterminal.c:444
+#: ../src/lxterminal.c:443
 msgid "Copyright (C) 2008"
 msgstr "Hak Cipta (C) 2008"
 
-#: ../src/lxterminal.c:445
+#: ../src/lxterminal.c:444
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator terminal untuk proyek LXDE"
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
+#: ../src/lxterminal.c:456 ../src/lxterminal.c:477
 #, fuzzy
 msgid "New _Window"
 msgstr "_Jendela Baru"
 
-#: ../src/lxterminal.c:458 ../src/lxterminal.c:479
+#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 #, fuzzy
 msgid "New _Tab"
 msgstr "_Tab Baru"
 
-#: ../src/lxterminal.c:460 ../src/lxterminal.c:490
+#: ../src/lxterminal.c:459 ../src/lxterminal.c:489
 msgid "_Close Tab"
 msgstr "_Tutup Tab"
 
-#: ../src/lxterminal.c:461
+#: ../src/lxterminal.c:460
 msgid "_Quit"
 msgstr "_Keluar"
 
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:461 ../src/lxterminal.c:480
 #, fuzzy
 msgid "Cop_y"
 msgstr "S_alin"
 
-#: ../src/lxterminal.c:463 ../src/lxterminal.c:482
+#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "_Paste"
 msgstr "_Tempel"
 
-#: ../src/lxterminal.c:465 ../src/lxterminal.c:484
+#: ../src/lxterminal.c:464 ../src/lxterminal.c:483
 #, fuzzy
 msgid "Preference_s"
 msgstr "Pengaturan"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
+#: ../src/lxterminal.c:466 ../src/lxterminal.c:485
 #, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Tab Sebelumnya"
 
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
+#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 #, fuzzy
 msgid "Ne_xt Tab"
 msgstr "Ta_b Setelahnya"
 
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
+#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/lxterminal.c:470 ../src/lxterminal.c:489
+#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/lxterminal.c:471
+#: ../src/lxterminal.c:470
 msgid "_About"
 msgstr "_Tentang"
 
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:649
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
 msgstr ""
