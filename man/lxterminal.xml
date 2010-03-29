@@ -29,8 +29,7 @@
 
     <para><command>lxterminal</command> is a program that provides a terminal
     emulator
-    for the desktop, usually for LXDE. It is a lightweight GTK+ 2.x based desktop 
-    panel.
+    for the desktop, usually for LXDE.
     </para>
    
   </refsect1>
@@ -44,19 +43,11 @@
 
     <variablelist>      <varlistentry>        <term>	  <option>-e <replaceable>STRING</replaceable></option>
           <option>--command=<replaceable>STRING</replaceable></option>
+          <option>--command <replaceable>STRING</replaceable></option>
+
         </term>
-        <listitem>          <para>Execute the argument to this option inside the terminal.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>	<term>	  <option>-t <replaceable>STRING</replaceable></option>
-	  <option>--title=<replaceable>STRING</replaceable></option>
-	</term>
-	<listitem>	  <para>Set the terminal's title.</para>
-	</listitem>
-      </varlistentry>
-      <varlistentry>        <term>          <option>--working-directory=<replaceable>DIRECTORY</replaceable></option>
-        </term>
-        <listitem>          <para>Set the terminal's working directory.</para>
+        <listitem>          <para>This option specifies the program (and its command line arguments) to be run in the terminal.
+Except in the <option>--command=</option> form, this must be the last option on the command line.</para>
         </listitem>
       </varlistentry>
       <varlistentry>	<term>	  <option>--geometry=<replaceable>CHARACTERS</replaceable>x<replaceable>LINES</replaceable></option>
@@ -69,6 +60,17 @@
 	</term>
 	<listitem>	  <para>Executes login shell.</para>
 	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-t <replaceable>STRING</replaceable></option>
+	  <option>--title=<replaceable>STRING</replaceable></option>
+	</term>
+	<listitem>	  <para>Set the terminal's title.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>        <term>          <option>--working-directory=<replaceable>DIRECTORY</replaceable></option>
+        </term>
+        <listitem>          <para>Set the terminal's working directory.</para>
+        </listitem>
       </varlistentry>
     </variablelist>
   </refsect1>

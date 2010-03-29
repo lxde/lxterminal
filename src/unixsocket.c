@@ -1,5 +1,6 @@
-/*
+/**
  *      Copyright 2008 Fred Chien <cfsghost@gmail.com>
+ *      Copyright (c) 2010 LxDE Developers, see the file AUTHORS for details.
  *
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
@@ -17,7 +18,6 @@
  *      MA 02110-1301, USA.
  */
 
-#include <sys/time.h>
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <unistd.h>
@@ -25,172 +25,215 @@
 #include <errno.h>
 #include <glib.h>
 #include <gtk/gtk.h>
-#include <glib/gi18n.h>
 
 #include "lxterminal.h"
 #include "unixsocket.h"
 
-static gboolean
-lxterminal_socket_read_channel(GIOChannel *gio, GIOCondition condition, gpointer lxtermwin)
+static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition condition, LXTermWindow * lxtermwin);
+static gboolean lxterminal_socket_accept_client(GIOChannel * source, GIOCondition condition, LXTermWindow * lxtermwin);
+
+/* Handler for successful read on communication socket. */
+static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition condition, LXTermWindow * lxtermwin)
 {
-	GIOStatus ret;
-	GError *err = NULL;
-	gchar *msg;
-	gsize len;
-	gsize term;
+    /* Read message. */
+    gchar * msg = NULL;
+    gsize len = 0;
+    gsize term = 0;
+    GError * err = NULL;
+    GIOStatus ret = g_io_channel_read_line(gio, &msg, &len, &term, &err);
+    if (ret == G_IO_STATUS_ERROR)
+        g_warning("Error reading socket: %s\n", err->message);
 
-	/* read messages */
-	ret = g_io_channel_read_line(gio, &msg, &len, &term, &err);
-	if (ret == G_IO_STATUS_ERROR)
-		g_error("Error reading: %s\n", err->message);
+    /* Process message. */
+    if (len > 0)
+    {
+        /* Overwrite the line termination with a NUL. */
+        msg[term] = '\0';
 
-	if (len > 0) {
-		gchar **argv;
-		gint argc;
+        /* Parse arguments.
+         * Initialize a new LXTerminal and create a new window. */
+        gint argc;
+        gchar * * argv;
+        g_shell_parse_argv(msg, &argc, &argv, NULL);
+        CommandArguments arguments;
+        lxterminal_process_arguments(argc, argv, &arguments);
+        lxterminal_initialize(lxtermwin, &arguments, lxtermwin->setting);
+        g_strfreev(argv);
+    }
+    g_free(msg);
 
-		msg[term] = '\0';
-
-		/* generate args */
-		g_shell_parse_argv(msg, &argc, &argv, NULL);
-
-		/* initializing LXTerminal and create a new window */
-		lxterminal_init(lxtermwin, argc, argv, ((LXTermWindow *) lxtermwin)->setting);
-
-		/* release */
-		g_strfreev(argv);
-	}
-	g_free(msg);
-
-	if (condition & G_IO_HUP)
-		return FALSE;
-
-	return TRUE;
+    /* If there was a disconnect, discontinue read.  Otherwise, continue. */
+    if (condition & G_IO_HUP)
+        return FALSE;
+    return TRUE;
 }
 
-static gboolean
-lxterminal_socket_accept_client(GIOChannel *source, GIOCondition condition, gpointer lxtermwin)
+/* Handler for successful listen on communication socket. */
+static gboolean lxterminal_socket_accept_client(GIOChannel * source, GIOCondition condition, LXTermWindow * lxtermwin)
 {
-	if (condition & G_IO_IN) {
-		GIOChannel *gio;
-		int fd;
-		int flags;
+    if (condition & G_IO_IN)
+    {
+        /* Accept the new connection. */
+        int fd = accept(g_io_channel_unix_get_fd(source), NULL, NULL);
+        if (fd < 0)
+            g_warning("Accept failed: %s\n", g_strerror(errno));
 
-		/* new connection */
-		fd = accept(g_io_channel_unix_get_fd(source), NULL, NULL);
-		if (fd < 0)
-			g_error("Accept failed: %s\n", g_strerror(errno));
+        /* Add O_NONBLOCK to the flags. */
+        fcntl(fd, F_SETFL, fcntl(fd, F_GETFL, 0) | O_NONBLOCK);
 
-		flags = fcntl(fd, F_GETFL, 0);
-		fcntl(fd, F_SETFL, flags | O_NONBLOCK);
+        /* Create a glib I/O channel. */
+        GIOChannel * gio = g_io_channel_unix_new(fd);
+        if (gio == NULL)
+            g_warning("Cannot create new GIOChannel\n");
+        else
+        {
+            /* Set up the glib I/O channel and add it to the event loop. */
+            g_io_channel_set_encoding(gio, NULL, NULL);
+            g_io_add_watch(gio, G_IO_IN | G_IO_HUP, (GIOFunc) lxterminal_socket_read_channel, lxtermwin);
+            g_io_channel_unref(gio);
+        }
+    }
 
-		gio = g_io_channel_unix_new(fd);
-		if (!gio)
-			g_error("Cannot create new GIOChannel!\n");
+    /* Our listening socket hung up - we are dead. */
+    if (condition & G_IO_HUP)
+        g_error("Server listening socket closed unexpectedly\n");
 
-		g_io_channel_set_encoding(gio, NULL, NULL);
-
-		g_io_add_watch(gio, G_IO_IN | G_IO_HUP, lxterminal_socket_read_channel, lxtermwin);
-
-		g_io_channel_unref(gio);
-	}
-
-	/* our listener socket hung up - we are dead */
-	if (condition & G_IO_HUP)
-		g_error("Server listening socket died!\n");
-
-	return TRUE;
+    return TRUE;
 }
 
-gboolean
-lxterminal_socket_init(LXTermWindow *lxtermwin, int argc, char **argv)
+gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, CommandArguments * arguments)
 {
-	struct sockaddr_un skaddr;
-	GIOChannel *gio;
-	int skfd;
-	gchar *socket_path;
+    /* Normally, LXTerminal uses one process to control all of its windows.
+     * The first process to start will create a Unix domain socket in /tmp.
+     * It will then bind and listen on this socket.
+     * The subsequent processes will connect to the controller that owns the Unix domain socket.
+     * They will pass their command line over the socket and exit.
+     *
+     * If for any reason both the connect and bind fail, we will fall back to having that
+     * process be standalone; it will not be either the controller or a user of the controller.
+     * This behavior was introduced in response to a problem report (2973537).
+     *
+     * This function returns TRUE if this process should keep running and FALSE if it should exit. */
 
-	socket_path = g_strdup_printf("/tmp/.lxterminal-socket%s-%s", gdk_get_display(), g_get_user_name());
+    /* Formulate the path for the Unix domain socket. */
+    gchar * socket_path = g_strdup_printf("/tmp/.lxterminal-socket%s-%s", gdk_get_display(), g_get_user_name());
 
-	/* create socket */
-	skfd = socket(PF_UNIX, SOCK_STREAM, 0);
-	if (skfd < 0) {
-		if (g_file_test(socket_path, G_FILE_TEST_EXISTS)) {
-			unlink(socket_path);
-		}
+    /* Create socket. */
+    int fd = socket(PF_UNIX, SOCK_STREAM, 0);
+    if (fd < 0)
+    {
+        g_warning("Socket create failed: %s\n", g_strerror(errno));
+        g_free(socket_path);
+        return TRUE;
+    }
 
-		skfd = socket(PF_UNIX, SOCK_STREAM, 0);
-		if (skfd < 0)
-			g_error("Cannot create socket!");
-	}
+    /* Initialize socket address for Unix domain socket. */
+    struct sockaddr_un sock_addr;
+    memset(&sock_addr, 0, sizeof(sock_addr));
+    sock_addr.sun_family = AF_UNIX;
+    snprintf(sock_addr.sun_path, sizeof(sock_addr.sun_path), "%s", socket_path);
 
-	/* Initiate socket */
-	bzero(&skaddr, sizeof(skaddr));
+    /* Try to connect to an existing LXTerminal process. */
+    if (connect(fd, (struct sockaddr *) &sock_addr, sizeof(sock_addr)) < 0)
+    {
+        /* Connect failed.  We are the controller, unless something fails. */
+        unlink(socket_path);
+        g_free(socket_path);
 
-	/* setting UNIX socket */
-	skaddr.sun_family = AF_UNIX;
-	snprintf(skaddr.sun_path, sizeof(skaddr.sun_path), "%s", socket_path);
+        /* Bind to socket. */
+        if (bind(fd, (struct sockaddr *) &sock_addr, sizeof(sock_addr)) < 0)
+        {
+            g_warning("Bind on socket failed: %s\n", g_strerror(errno));
+            close(fd);
+            return TRUE;
+        }
 
-	/* try to connect to current LXTerminal */
-	if (connect(skfd, (struct sockaddr *)&skaddr, sizeof(skaddr)) < 0) {
-		unlink(socket_path);
+        /* Listen on socket. */
+        if (listen(fd, 5) < 0)
+        {
+            g_warning("Listen on socket failed: %s\n", g_strerror(errno));
+            close(fd);
+            return TRUE;
+        }
 
-		/* bind to socket */
-		if (bind(skfd, (struct sockaddr *)&skaddr, sizeof(skaddr)) < 0)
-			g_error("Bind on socket failed: %s\n", g_strerror(errno));
+        /* Create a glib I/O channel. */
+        GIOChannel * gio = g_io_channel_unix_new(fd);
+        if (gio == NULL)
+        {
+            g_warning("Cannot create GIOChannel\n");
+            close(fd);
+            return TRUE;
+        }
 
-		/* listen on socket */
-		if (listen(skfd, 5) < 0)
-			g_error("Listen on socket failed: %s\n", g_strerror(errno));
+        /* Set up GIOChannel. */
+        g_io_channel_set_encoding(gio, NULL, NULL);
+        g_io_channel_set_buffered(gio, FALSE);
+        g_io_channel_set_close_on_unref(gio, TRUE);
 
-		/* create I/O channel */
-		gio = g_io_channel_unix_new(skfd);
-		if (!gio)
-			g_error("Cannot create new GIOChannel!\n");
+        /* Add I/O channel to the main event loop. */
+        if ( ! g_io_add_watch(gio, G_IO_IN | G_IO_HUP, (GIOFunc) lxterminal_socket_accept_client, lxtermwin))
+        {
+            g_warning("Cannot add watch on GIOChannel\n");
+            close(fd);
+            g_io_channel_unref(gio);
+            return TRUE;
+        }
 
-		/* setting encoding */
-		g_io_channel_set_encoding(gio, NULL, NULL);
-		g_io_channel_set_buffered(gio, FALSE);
-		g_io_channel_set_close_on_unref(gio, TRUE);
+        /* Channel will automatically shut down when the watch returns FALSE. */
+        g_io_channel_set_close_on_unref(gio, TRUE);
+        g_io_channel_unref(gio);
+        return TRUE;
+    }
+    else
+    {
+        g_free(socket_path);
 
-		/* I/O channel into the main event loop */
-		if (!g_io_add_watch(gio, G_IO_IN | G_IO_HUP, lxterminal_socket_accept_client, lxtermwin))
-			g_error("Cannot add watch on GIOChannel\n");
+        /* Create a glib I/O channel. */
+        GIOChannel * gio = g_io_channel_unix_new(fd);
+        g_io_channel_set_encoding(gio, NULL, NULL);
 
-		/* channel will automatically shutdown when the watch returns FALSE */
-		g_io_channel_set_close_on_unref(gio, TRUE);
-		g_io_channel_unref(gio);
+        /* Reissue arguments to the socket.  Start with the name of the executable. */
+	g_io_channel_write_chars(gio, arguments->executable, -1, NULL, NULL);
 
-		g_free(socket_path);
-		return TRUE;
-	} else {
-		int i;
-		gboolean setworkdir = FALSE;
+        /* --command or -e. */
+        if (arguments->command != NULL)
+        {
+            gchar * command = g_shell_quote(arguments->command);
+            gchar * command_argument = g_strdup_printf(" --command=%s", command);
+            g_io_channel_write_chars(gio, command_argument, -1, NULL, NULL);
+            g_free(command);
+            g_free(command_argument);
+        }
 
-		gio = g_io_channel_unix_new(skfd);
-		g_io_channel_set_encoding(gio, NULL, NULL);
+        /* --geometry. */
+        if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0))
+        {
+            gchar * geometry = g_strdup_printf(" --geometry=%dx%d", arguments->geometry_columns, arguments->geometry_rows);
+            g_io_channel_write_chars(gio, geometry, -1, NULL, NULL);
+            g_free(geometry);
+        }
 
-		for (i=0;i<argc;i++) {
-			if (strncmp(argv[i],"--working-directory=", 20)==0) {
-				setworkdir = TRUE;
-			}
+        /* -t, -T, or --title. */
+        if (arguments->title != NULL)
+        {
+            gchar * title = g_shell_quote(arguments->title);
+            gchar * title_argument = g_strdup_printf(" --title=%s", title);
+            g_io_channel_write_chars(gio, title_argument, -1, NULL, NULL);
+            g_free(title);
+            g_free(title_argument);
+        }
 
-			g_io_channel_write_chars(gio, g_shell_quote(*(argv+i)), -1, NULL, NULL);
-			if (i+1!=argc) {
-				g_io_channel_write_chars(gio, " ", -1, NULL, NULL);
-			} else {
-				if (!setworkdir) {
-					gchar *workdir = g_get_current_dir();
-					g_io_channel_write_chars(gio, " --working-directory=", -1, NULL, NULL);
-					g_io_channel_write_chars(gio, workdir, -1, NULL, NULL);
-					g_free(workdir);
-				}
-			}
-		}
+        /* Always issue a --working-directory, either from the user's specification or the current directory. */
+        gchar * working_directory = ((arguments->working_directory != NULL) ? g_shell_quote(arguments->working_directory) : g_get_current_dir());
+        gchar * working_directory_argument = g_strdup_printf(" --working-directory=%s", working_directory);
+        g_io_channel_write_chars(gio, working_directory_argument, -1, NULL, NULL);
+        g_free(working_directory);
+        g_free(working_directory_argument);
 
-		g_io_channel_write_chars(gio, "\n", -1, NULL, NULL);
-		g_io_channel_flush(gio, NULL);
-		g_io_channel_unref(gio);
-		g_free(socket_path);
-		return FALSE;
-	}
+        /* Finish up the transaction on the Unix domain socket. */
+        g_io_channel_write_chars(gio, "\n", -1, NULL, NULL);
+        g_io_channel_flush(gio, NULL);
+        g_io_channel_unref(gio);
+        return FALSE;
+    }
 }
