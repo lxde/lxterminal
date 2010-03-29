@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-24 01:02+0100\n"
+"POT-Creation-Date: 2010-03-30 00:22+0200\n"
 "PO-Revision-Date: 2009-08-31 12:59+0100\n"
 "Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
@@ -168,184 +168,212 @@ msgstr "Вијетнамски"
 msgid "Thai"
 msgstr "Тајландски"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:131
 msgid "_File"
 msgstr "_Датотека"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:132
 msgid "_Edit"
 msgstr "_Уређивање"
 
-#. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:133
 msgid "_Tabs"
 msgstr "_Листови"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:134
 msgid "_Help"
 msgstr "_Помоћ"
 
-#: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
-#: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
-#: ../data/lxterminal.desktop.in.h:1
-msgid "LXTerminal"
-msgstr "LXTerminal"
-
-#. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:433
-msgid "translator-credits"
-msgstr "Serbian (sr) — Jay A. Fleming <tito.nehru.naser@gmail.com>"
-
-#: ../src/lxterminal.c:443
-msgid "Copyright (C) 2008"
-msgstr "2008-2009. Сва права задржана."
-
-#: ../src/lxterminal.c:444
-msgid "Terminal emulator for LXDE project"
-msgstr "Терминал за LXDE радно окружење"
-
-#: ../src/lxterminal.c:456 ../src/lxterminal.c:477
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:163
 #, fuzzy
 msgid "New _Window"
 msgstr "Нови _прозор"
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 #, fuzzy
 msgid "New _Tab"
 msgstr "Нови _лист"
 
-#: ../src/lxterminal.c:459 ../src/lxterminal.c:489
+#: ../src/lxterminal.c:144 ../src/lxterminal.c:176
 msgid "_Close Tab"
 msgstr "За_твори лист"
 
-#: ../src/lxterminal.c:460
+#: ../src/lxterminal.c:145
 msgid "_Quit"
 msgstr "_Затвори прозор"
 
-#: ../src/lxterminal.c:461 ../src/lxterminal.c:480
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:166
 #, fuzzy
 msgid "Cop_y"
 msgstr "_Умножи"
 
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "_Paste"
 msgstr "У_баци"
 
-#: ../src/lxterminal.c:464 ../src/lxterminal.c:483
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:169
 #, fuzzy
 msgid "Preference_s"
 msgstr "Поставке"
 
-#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:466 ../src/lxterminal.c:485
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:171
+#, fuzzy
+msgid "Na_me Tab"
+msgstr "Нови _лист"
+
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 #, fuzzy
 msgid "Pre_vious Tab"
 msgstr "Прет_ходни лист"
 
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 #, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_Следећи лист"
 
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:155
 msgid "_About"
 msgstr "_О програму"
 
-#: ../src/lxterminal.c:649
-#, c-format
-msgid "Failed to launch the web browser. The command was `%s'\n"
+#. Set window title.
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
+#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../data/lxterminal.desktop.in.h:1
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#: ../src/lxterminal.c:470
+#, fuzzy
+msgid "Name Tab"
+msgstr "Нови _лист"
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:583
+msgid "translator-credits"
+msgstr "Serbian (sr) — Jay A. Fleming <tito.nehru.naser@gmail.com>"
+
+#: ../src/lxterminal.c:592
+#, fuzzy
+msgid "Copyright (C) 2008-2010"
+msgstr "2008-2009. Сва права задржана."
+
+#: ../src/lxterminal.c:593
+msgid "Terminal emulator for LXDE project"
+msgstr "Терминал за LXDE радно окружење"
+
+#: ../data/lxterminal-preferences.glade.h:1
+msgid "Advanced"
 msgstr ""
 
-#: ../src/preferences.c:47
-msgid "Style"
+#: ../data/lxterminal-preferences.glade.h:2
+msgid "Allow bold font"
 msgstr ""
 
-#: ../src/preferences.c:54
-msgid "Display"
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Audible bell"
 msgstr ""
 
-#: ../src/preferences.c:61
-msgid "Misc"
-msgstr ""
-
-#. terminal font
-#: ../src/preferences.c:82
-msgid "Terminal Font:"
-msgstr "Фонт:"
-
-#. Background color
-#: ../src/preferences.c:89
-msgid "Background:"
+#: ../data/lxterminal-preferences.glade.h:4
+#, fuzzy
+msgid "Background"
 msgstr "Позадина"
 
-#. Foreground color
-#: ../src/preferences.c:98
-msgid "Foreground:"
-msgstr "Боја текста"
-
-#. Cursor Blinks
-#: ../src/preferences.c:105
-msgid "Cursor Blinks:"
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Block"
 msgstr ""
 
-#. tab-panel position
-#: ../src/preferences.c:129
-msgid "Tab panel position:"
-msgstr "Смештај траке са листовима:"
-
-#: ../src/preferences.c:132
-msgid "Top"
-msgstr "Горе"
-
-#: ../src/preferences.c:133
+#: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Доле"
 
-#: ../src/preferences.c:134
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Cursor blink"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Cursor style"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Display"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:11
+#, fuzzy
+msgid "Foreground"
+msgstr "Боја текста"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Hide Close buttons"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Hide menu bar"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Hide scroll bar"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
 msgstr "Лево"
 
-#: ../src/preferences.c:135
+#: ../data/lxterminal-preferences.glade.h:16
 msgid "Right"
 msgstr "Десно"
 
-#. Scrollback buffer
-#: ../src/preferences.c:141
-msgid "Scrollback lines:"
+#: ../data/lxterminal-preferences.glade.h:17
+#, fuzzy
+msgid "Scrollback lines"
 msgstr "Број линија историје"
 
-#. Hide scroll bar
-#: ../src/preferences.c:149
-msgid "Hide scroll bar:"
-msgstr ""
-
-#. Hide menu bar
-#: ../src/preferences.c:157
-msgid "Hide menu bar:"
-msgstr ""
-
-#. Select-by-word
-#: ../src/preferences.c:181
-msgid "Select-by-word characters:"
+#: ../data/lxterminal-preferences.glade.h:18
+#, fuzzy
+msgid "Select-by-word characters"
 msgstr "Знакови који образују речи"
 
-#. Disable F10 for menu
-#: ../src/preferences.c:189
-msgid "Disable F10 shortcut for menu:"
-msgstr "Искључи позив менија тастером F10"
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Style"
+msgstr ""
 
-#. create window
-#: ../src/preferences.c:378
-msgid "Preferences"
-msgstr "Поставке"
+#: ../data/lxterminal-preferences.glade.h:20
+#, fuzzy
+msgid "Tab panel position"
+msgstr "Смештај траке са листовима:"
+
+#: ../data/lxterminal-preferences.glade.h:21
+#, fuzzy
+msgid "Terminal font"
+msgstr "Фонт:"
+
+#: ../data/lxterminal-preferences.glade.h:22
+msgid "Top"
+msgstr "Горе"
+
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Underline"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "gtk-cancel"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:25
+msgid "gtk-ok"
+msgstr ""
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -354,6 +382,12 @@ msgstr "Терминал"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Користите линију наредби"
+
+#~ msgid "Disable F10 shortcut for menu:"
+#~ msgstr "Искључи позив менија тастером F10"
+
+#~ msgid "Preferences"
+#~ msgstr "Поставке"
 
 #~ msgid "General"
 #~ msgstr "Опште"

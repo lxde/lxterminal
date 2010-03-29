@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-24 01:02+0100\n"
+"POT-Creation-Date: 2010-03-30 00:22+0200\n"
 "PO-Revision-Date: 2010-01-26 11:05+0200\n"
 "Last-Translator: Hiếu <scamemiv@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,180 +168,212 @@ msgstr "Việt"
 msgid "Thai"
 msgstr "Thái"
 
-#: ../src/lxterminal.c:81
+#: ../src/lxterminal.c:131
 msgid "_File"
 msgstr "_Tập tin"
 
-#: ../src/lxterminal.c:82
+#: ../src/lxterminal.c:132
 msgid "_Edit"
 msgstr "_Sửa"
 
-#. { "View", NULL, N_("_View") },
-#: ../src/lxterminal.c:84
+#: ../src/lxterminal.c:133
 msgid "_Tabs"
 msgstr "_Thẻ"
 
-#: ../src/lxterminal.c:85
+#: ../src/lxterminal.c:134
 msgid "_Help"
 msgstr "Trợ _giúp"
 
-#: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
-#: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:163
+msgid "New _Window"
+msgstr "Cửa _Sổ Mới"
+
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+msgid "New _Tab"
+msgstr "_Thẻ mới"
+
+#: ../src/lxterminal.c:144 ../src/lxterminal.c:176
+msgid "_Close Tab"
+msgstr "Đó_ng thẻ"
+
+#: ../src/lxterminal.c:145
+msgid "_Quit"
+msgstr "T_hoát"
+
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:166
+msgid "Cop_y"
+msgstr "_Sao chép"
+
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+msgid "_Paste"
+msgstr "_Dán"
+
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:169
+msgid "Preference_s"
+msgstr "Tùy _chỉnh"
+
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:171
+#, fuzzy
+msgid "Na_me Tab"
+msgstr "_Thẻ mới"
+
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+msgid "Pre_vious Tab"
+msgstr "Thẻ t_rước"
+
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+msgid "Ne_xt Tab"
+msgstr "Thẻ t_iếp"
+
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+msgid "Move Tab _Left"
+msgstr "Chu_yển thẻ sang trái"
+
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+msgid "Move Tab _Right"
+msgstr "Chuyển thẻ sang _phải"
+
+#: ../src/lxterminal.c:155
+msgid "_About"
+msgstr "_Giới thiệu"
+
+#. Set window title.
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
+#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
+#: ../src/lxterminal.c:470
+#, fuzzy
+msgid "Name Tab"
+msgstr "_Thẻ mới"
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:433
+#: ../src/lxterminal.c:583
 msgid "translator-credits"
 msgstr ""
 "Nhóm Việt hoá:\n"
 "Duy-Hieu Bui (scamemiv@gmail.com)"
 
-#: ../src/lxterminal.c:443
-msgid "Copyright (C) 2008"
+#: ../src/lxterminal.c:592
+#, fuzzy
+msgid "Copyright (C) 2008-2010"
 msgstr "Bản quyền (C) 2008"
 
-#: ../src/lxterminal.c:444
+#: ../src/lxterminal.c:593
 msgid "Terminal emulator for LXDE project"
 msgstr "Chương trình cửa sổ lệnh cho dự án LXDE"
 
-#: ../src/lxterminal.c:456 ../src/lxterminal.c:477
-msgid "New _Window"
-msgstr "Cửa _Sổ Mới"
+#: ../data/lxterminal-preferences.glade.h:1
+msgid "Advanced"
+msgstr ""
 
-#: ../src/lxterminal.c:457 ../src/lxterminal.c:478
-msgid "New _Tab"
-msgstr "_Thẻ mới"
+#: ../data/lxterminal-preferences.glade.h:2
+msgid "Allow bold font"
+msgstr ""
 
-#: ../src/lxterminal.c:459 ../src/lxterminal.c:489
-msgid "_Close Tab"
-msgstr "Đó_ng thẻ"
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Audible bell"
+msgstr ""
 
-#: ../src/lxterminal.c:460
-msgid "_Quit"
-msgstr "T_hoát"
-
-#: ../src/lxterminal.c:461 ../src/lxterminal.c:480
-msgid "Cop_y"
-msgstr "_Sao chép"
-
-#: ../src/lxterminal.c:462 ../src/lxterminal.c:481
-msgid "_Paste"
-msgstr "_Dán"
-
-#: ../src/lxterminal.c:464 ../src/lxterminal.c:483
-msgid "Preference_s"
-msgstr "Tùy _chỉnh"
-
-#. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
-#: ../src/lxterminal.c:466 ../src/lxterminal.c:485
-msgid "Pre_vious Tab"
-msgstr "Thẻ t_rước"
-
-#: ../src/lxterminal.c:467 ../src/lxterminal.c:486
-msgid "Ne_xt Tab"
-msgstr "Thẻ t_iếp"
-
-#: ../src/lxterminal.c:468 ../src/lxterminal.c:487
-msgid "Move Tab _Left"
-msgstr "Chu_yển thẻ sang trái"
-
-#: ../src/lxterminal.c:469 ../src/lxterminal.c:488
-msgid "Move Tab _Right"
-msgstr "Chuyển thẻ sang _phải"
-
-#: ../src/lxterminal.c:470
-msgid "_About"
-msgstr "_Giới thiệu"
-
-#: ../src/lxterminal.c:649
-#, c-format
-msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr "Không thể chạy trình duyệt web. Câu lệnh là `%s'\n"
-
-#: ../src/preferences.c:47
-msgid "Style"
-msgstr "Kiểu"
-
-#: ../src/preferences.c:54
-msgid "Display"
-msgstr "Hiển thị"
-
-#: ../src/preferences.c:61
-msgid "Misc"
-msgstr "Hỗn hợp"
-
-#. terminal font
-#: ../src/preferences.c:82
-msgid "Terminal Font:"
-msgstr "Phông chữ cửa sổ lệnh:"
-
-#. Background color
-#: ../src/preferences.c:89
-msgid "Background:"
+#: ../data/lxterminal-preferences.glade.h:4
+#, fuzzy
+msgid "Background"
 msgstr "Màu nền:"
 
-#. Foreground color
-#: ../src/preferences.c:98
-msgid "Foreground:"
-msgstr "Màu tiền cảnh:"
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Block"
+msgstr ""
 
-#. Cursor Blinks
-#: ../src/preferences.c:105
-msgid "Cursor Blinks:"
-msgstr "Con trỏ Nhấp nháy:"
-
-#. tab-panel position
-#: ../src/preferences.c:129
-msgid "Tab panel position:"
-msgstr "Vị trí thanh chứa thẻ:"
-
-#: ../src/preferences.c:132
-msgid "Top"
-msgstr "Trên"
-
-#: ../src/preferences.c:133
+#: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Dưới"
 
-#: ../src/preferences.c:134
+#: ../data/lxterminal-preferences.glade.h:7
+#, fuzzy
+msgid "Cursor blink"
+msgstr "Con trỏ Nhấp nháy:"
+
+#: ../data/lxterminal-preferences.glade.h:8
+#, fuzzy
+msgid "Cursor style"
+msgstr "Con trỏ Nhấp nháy:"
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Display"
+msgstr "Hiển thị"
+
+#: ../data/lxterminal-preferences.glade.h:11
+#, fuzzy
+msgid "Foreground"
+msgstr "Màu tiền cảnh:"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Hide Close buttons"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:13
+#, fuzzy
+msgid "Hide menu bar"
+msgstr "Giấu thanh trình đơn:"
+
+#: ../data/lxterminal-preferences.glade.h:14
+#, fuzzy
+msgid "Hide scroll bar"
+msgstr "Giấu thanh cuộn:"
+
+#: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
 msgstr "Trái"
 
-#: ../src/preferences.c:135
+#: ../data/lxterminal-preferences.glade.h:16
 msgid "Right"
 msgstr "Phải"
 
-#. Scrollback buffer
-#: ../src/preferences.c:141
-msgid "Scrollback lines:"
+#: ../data/lxterminal-preferences.glade.h:17
+#, fuzzy
+msgid "Scrollback lines"
 msgstr "Số dòng cuộn lại:"
 
-#. Hide scroll bar
-#: ../src/preferences.c:149
-msgid "Hide scroll bar:"
-msgstr "Giấu thanh cuộn:"
-
-#. Hide menu bar
-#: ../src/preferences.c:157
-msgid "Hide menu bar:"
-msgstr "Giấu thanh trình đơn:"
-
-#. Select-by-word
-#: ../src/preferences.c:181
-msgid "Select-by-word characters:"
+#: ../data/lxterminal-preferences.glade.h:18
+#, fuzzy
+msgid "Select-by-word characters"
 msgstr "Các kí tự cấu thành từ:"
 
-#. Disable F10 for menu
-#: ../src/preferences.c:189
-msgid "Disable F10 shortcut for menu:"
-msgstr "Tắt phím tắt F10 hiển thị trình đơn"
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Style"
+msgstr "Kiểu"
 
-#. create window
-#: ../src/preferences.c:378
-msgid "Preferences"
-msgstr "Tùy chỉnh"
+#: ../data/lxterminal-preferences.glade.h:20
+#, fuzzy
+msgid "Tab panel position"
+msgstr "Vị trí thanh chứa thẻ:"
+
+#: ../data/lxterminal-preferences.glade.h:21
+#, fuzzy
+msgid "Terminal font"
+msgstr "Phông chữ cửa sổ lệnh:"
+
+#: ../data/lxterminal-preferences.glade.h:22
+msgid "Top"
+msgstr "Trên"
+
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Underline"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "gtk-cancel"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:25
+msgid "gtk-ok"
+msgstr ""
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -350,3 +382,15 @@ msgstr "Cửa sổ lệnh"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Dùng dòng lệnh"
+
+#~ msgid "Failed to launch the web browser. The command was `%s'\n"
+#~ msgstr "Không thể chạy trình duyệt web. Câu lệnh là `%s'\n"
+
+#~ msgid "Misc"
+#~ msgstr "Hỗn hợp"
+
+#~ msgid "Disable F10 shortcut for menu:"
+#~ msgstr "Tắt phím tắt F10 hiển thị trình đơn"
+
+#~ msgid "Preferences"
+#~ msgstr "Tùy chỉnh"
