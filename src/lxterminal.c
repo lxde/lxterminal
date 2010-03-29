@@ -62,7 +62,7 @@ static const GdkColor linux_color[16] =
 static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geometry, GdkWindowHints * geometry_mask);
 
 /* Utilities. */
-static void terminal_get_padding(Term * term, GtkBorder * border);
+static GtkBorder * terminal_get_border(Term * term);
 static void terminal_geometry_restore(Term * term);
 static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
 
