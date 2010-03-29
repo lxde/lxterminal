@@ -3,270 +3,272 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-24 01:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: F Wolff <friedel@translate.org.za>\n"
+"PO-Revision-Date: 2010-03-24 16:24+0200\n"
+"Last-Translator: F <friedel@translate.org.za>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: af\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Wes-Europees"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Oos-Europees"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Oos-Asies"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "SO- en SW-Asies"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Middel-Oosters"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Westers"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Sentraal-Europees"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Suid-Europees"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Balties"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Cyrillies"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Arabies"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Grieks"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Hebreeus visueel"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebreeus"
 
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Turks"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr ""
+msgstr "Noors"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Kelties"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Roemeens"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Armeens"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Sjinees tradisioneel"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Cyrillies/Russies"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Japannees"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Koreaans"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Sjinees vereenvoudig"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Georgies"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Cyrillies/Oekraïens"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Kroaties"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Persies"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Goedjarati"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Goermukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Yslands"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Viëtnamees"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Thai"
 
 #: ../src/lxterminal.c:81
 msgid "_File"
-msgstr ""
+msgstr "_Lêer"
 
 #: ../src/lxterminal.c:82
 msgid "_Edit"
-msgstr ""
+msgstr "R_edigeer"
 
 #. { "View", NULL, N_("_View") },
 #: ../src/lxterminal.c:84
 msgid "_Tabs"
-msgstr ""
+msgstr "Oor_tjies"
 
 #: ../src/lxterminal.c:85
 msgid "_Help"
-msgstr ""
+msgstr "_Hulp"
 
 #: ../src/lxterminal.c:389 ../src/lxterminal.c:391 ../src/lxterminal.c:441
 #: ../src/lxterminal.c:506 ../src/lxterminal.c:1024 ../src/lxterminal.c:1052
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
-msgstr ""
+msgstr "LXTerminal"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:433
 msgid "translator-credits"
-msgstr ""
+msgstr "Friedel Wolff"
 
 #: ../src/lxterminal.c:443
 msgid "Copyright (C) 2008"
-msgstr ""
+msgstr "Kopiereg (C) 2008"
 
 #: ../src/lxterminal.c:444
 msgid "Terminal emulator for LXDE project"
-msgstr ""
+msgstr "Terminaalemuleerder vir die LXDE-projek"
 
 #: ../src/lxterminal.c:456 ../src/lxterminal.c:477
 msgid "New _Window"
-msgstr ""
+msgstr "Nuwe _venster"
 
 #: ../src/lxterminal.c:457 ../src/lxterminal.c:478
 msgid "New _Tab"
-msgstr ""
+msgstr "Nuwe oor_tjie"
 
 #: ../src/lxterminal.c:459 ../src/lxterminal.c:489
 msgid "_Close Tab"
-msgstr ""
+msgstr "_Sluit oortjie"
 
 #: ../src/lxterminal.c:460
 msgid "_Quit"
-msgstr ""
+msgstr "_Sluit af"
 
 #: ../src/lxterminal.c:461 ../src/lxterminal.c:480
 msgid "Cop_y"
-msgstr ""
+msgstr "_Kopieer"
 
 #: ../src/lxterminal.c:462 ../src/lxterminal.c:481
 msgid "_Paste"
-msgstr ""
+msgstr "_Plak"
 
 #: ../src/lxterminal.c:464 ../src/lxterminal.c:483
 msgid "Preference_s"
-msgstr ""
+msgstr "_Voorkeure"
 
 #. { "View_CharacterEncoding", NULL, N_("_Character Encoding"), NULL, "Character Encoding", NULL},
 #: ../src/lxterminal.c:466 ../src/lxterminal.c:485
 msgid "Pre_vious Tab"
-msgstr ""
+msgstr "Vo_rige oortjie"
 
 #: ../src/lxterminal.c:467 ../src/lxterminal.c:486
 msgid "Ne_xt Tab"
-msgstr ""
+msgstr "Vo_lgende oortjie"
 
 #: ../src/lxterminal.c:468 ../src/lxterminal.c:487
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Skuif oortjie _links"
 
 #: ../src/lxterminal.c:469 ../src/lxterminal.c:488
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Skuif oortjie _regs"
 
 #: ../src/lxterminal.c:470
 msgid "_About"
-msgstr ""
+msgstr "_Aangaande"
 
 #: ../src/lxterminal.c:649
 #, c-format
 msgid "Failed to launch the web browser. The command was `%s'\n"
-msgstr ""
+msgstr "Kon nie die webblaaier begin nie. Die opdrag was `%s'\n"
 
 #: ../src/preferences.c:47
 msgid "Style"
-msgstr ""
+msgstr "Styl"
 
 #: ../src/preferences.c:54
 msgid "Display"
-msgstr ""
+msgstr "Vertoon"
 
 #: ../src/preferences.c:61
 msgid "Misc"
-msgstr ""
+msgstr "Allerlei"
 
 #. terminal font
 #: ../src/preferences.c:82
@@ -276,12 +278,12 @@ msgstr ""
 #. Background color
 #: ../src/preferences.c:89
 msgid "Background:"
-msgstr ""
+msgstr "Agtergrond:"
 
 #. Foreground color
 #: ../src/preferences.c:98
 msgid "Foreground:"
-msgstr ""
+msgstr "Voorgrond:"
 
 #. Cursor Blinks
 #: ../src/preferences.c:105
@@ -291,38 +293,38 @@ msgstr ""
 #. tab-panel position
 #: ../src/preferences.c:129
 msgid "Tab panel position:"
-msgstr ""
+msgstr "Posisie van die oortjiepaneel:"
 
 #: ../src/preferences.c:132
 msgid "Top"
-msgstr ""
+msgstr "Bo"
 
 #: ../src/preferences.c:133
 msgid "Bottom"
-msgstr ""
+msgstr "Onder"
 
 #: ../src/preferences.c:134
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: ../src/preferences.c:135
 msgid "Right"
-msgstr ""
+msgstr "Regs"
 
 #. Scrollback buffer
 #: ../src/preferences.c:141
 msgid "Scrollback lines:"
-msgstr ""
+msgstr "Terugrollyne:"
 
 #. Hide scroll bar
 #: ../src/preferences.c:149
 msgid "Hide scroll bar:"
-msgstr ""
+msgstr "Versteek rolbalk:"
 
 #. Hide menu bar
 #: ../src/preferences.c:157
 msgid "Hide menu bar:"
-msgstr ""
+msgstr "Versteek kieslys:"
 
 #. Select-by-word
 #: ../src/preferences.c:181
@@ -332,17 +334,17 @@ msgstr ""
 #. Disable F10 for menu
 #: ../src/preferences.c:189
 msgid "Disable F10 shortcut for menu:"
-msgstr ""
+msgstr "Deaktiveer die F10-kortpad vir kieslys:"
 
 #. create window
 #: ../src/preferences.c:378
 msgid "Preferences"
-msgstr ""
+msgstr "Voorkeure"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
-msgstr ""
+msgstr "Terminaal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr ""
+msgstr "Gebruik die opdraglyn"
