@@ -20,13 +20,11 @@ AC_ARG_ENABLE(man,
        [enable_man=no]
 )
 # Checks for libraries.
-pkg_modules="glib-2.0 >= 2.6.0 \
-             gthread-2.0 \
-             vte"
-
-PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
-AC_SUBST(PACKAGE_CFLAGS)
-AC_SUBST(PACKAGE_LIBS)
+PKG_CHECK_MODULES(glib, [glib-2.0 >= 2.6.0])
+PKG_CHECK_MODULES(gtk, [gtk+-2.0 >= 2.12.0])
+PKG_CHECK_MODULES(vte, [vte >= 0.17.1])
+CFLAGS="$CFLAGS $glib_CFLAGS $gtk_CFLAGS $vte_CFLAGS"
+LIBS="$LIBS $glib_LIBS $gtk_LIBS $vte_LIBS"
 
 GETTEXT_PACKAGE=lxterminal
 AC_SUBST(GETTEXT_PACKAGE)

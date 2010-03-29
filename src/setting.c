@@ -1,5 +1,6 @@
-/*
+/**
  *      Copyright 2008 Fred Chien <cfsghost@gmail.com>
+ *      Copyright (c) 2010 LxDE Developers, see the file AUTHORS for details.
  *
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
@@ -20,121 +21,106 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
+#include <glib/gstdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 #include "setting.h"
 
-void setting_save_to_file(const char *path, const char *data)
+/* Save settings to configuration file. */
+void setting_save(Setting * setting)
 {
-	FILE *fp;
+    /* Push settings to GKeyFile. */
+    g_key_file_set_string(setting->keyfile, "general", "fontname", setting->font_name);
+    gchar * p = gdk_color_to_string(&setting->background_color);
+    if (p != NULL)
+        g_key_file_set_string(setting->keyfile, "general", "bgcolor", p);
+    g_free(p);
+    g_key_file_set_integer(setting->keyfile, "general", "bgalpha", setting->background_alpha);
+    p = gdk_color_to_string(&setting->foreground_color);
+    if (p != NULL)
+        g_key_file_set_string(setting->keyfile, "general", "fgcolor", p);
+    g_free(p);
+    g_key_file_set_boolean(setting->keyfile, "general", "disallowbold", setting->disallow_bold);
+    g_key_file_set_boolean(setting->keyfile, "general", "cursorblinks", setting->cursor_blink);
+    g_key_file_set_boolean(setting->keyfile, "general", "cursorunderline", setting->cursor_underline);
+    g_key_file_set_boolean(setting->keyfile, "general", "audiblebell", setting->audible_bell);
+    g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tab_position);
+    g_key_file_set_integer(setting->keyfile, "general", "scrollback", setting->scrollback);
+    g_key_file_set_boolean(setting->keyfile, "general", "hidescrollbar", setting->hide_scroll_bar);
+    g_key_file_set_boolean(setting->keyfile, "general", "hidemenubar", setting->hide_menu_bar);
+    g_key_file_set_boolean(setting->keyfile, "general", "hideclosebutton", setting->hide_close_button);
+    g_key_file_set_string(setting->keyfile, "general", "selchars", setting->word_selection_characters);
+    g_key_file_set_boolean(setting->keyfile, "general", "disablef10", setting->disable_f10);
 
-	if (!g_file_test(path, G_FILE_TEST_EXISTS))
-		g_creat(path, 0700);
+    /* Convert GKeyFile to text and build path to configuration file. */
+    gchar * file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
+    gchar * path = g_build_filename(g_get_user_config_dir(), "lxterminal/lxterminal.conf", NULL);
 
-	/* open config file */
-	fp = fopen(path, "w");
-	if (fp != NULL)
-	{
-	    fputs(data, fp);
-	    fclose(fp);
-	}
+    if ((file_data != NULL) && (path != NULL))
+    {
+        /* Create the file if necessary. */
+        int fd = open(path, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
+        if (fd < 0)
+            g_warning("Configuration file create failed: %s\n", g_strerror(errno));
+        else
+        {
+            write(fd, file_data, strlen(file_data));
+            close(fd);
+        }
+    }
+
+    /* Deallocate memory. */
+    g_free(file_data);
+    g_free(path);
 }
 
-void setting_save(Setting *setting)
+/* Load settings from configuration file. */
+Setting * load_setting_from_file(const char * filename)
 {
-	gchar *path;
-	gchar *file_data;
+    /* Allocate structure. */
+    Setting * setting = g_new0(Setting, 1);
 
-	/* build config path */
-	path = g_build_filename(g_get_user_config_dir(), "lxterminal/lxterminal.conf", NULL);
+    /* Initialize nonzero integer values to defaults. */
+    setting->background_alpha = 65535;
+    setting->foreground_color.red = setting->foreground_color.green = setting->foreground_color.blue = 0xaaaa;
 
-	/* push settings to GKeyFile */
-	g_key_file_set_string(setting->keyfile, "general", "fontname", setting->fontname);
-	g_key_file_set_string(setting->keyfile, "general", "selchars", setting->selchars);
-	g_key_file_set_string(setting->keyfile, "general", "bgcolor", setting->bgcolor);
-	g_key_file_set_integer(setting->keyfile, "general", "bgalpha", setting->bgalpha);
-	g_key_file_set_string(setting->keyfile, "general", "fgcolor", setting->fgcolor);
-	g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tabpos);
-	g_key_file_set_integer(setting->keyfile, "general", "scrollback", (gint)setting->scrollback);
-	g_key_file_set_boolean(setting->keyfile, "general", "disablef10", setting->disablef10);
-	g_key_file_set_boolean(setting->keyfile, "general", "hidemenubar", setting->hidemenubar);
-	g_key_file_set_boolean(setting->keyfile, "general", "hidescrollbar", setting->hidescrollbar);
-	g_key_file_set_boolean(setting->keyfile, "general", "cursorblinks", setting->cursorblinks);
+    /* Load configuration. */
+    setting->keyfile = g_key_file_new();
+    GError * error = NULL;
+    if ((g_file_test(filename, G_FILE_TEST_EXISTS))
+    && (g_key_file_load_from_file(setting->keyfile, filename, G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS, &error)))
+    {
+        setting->font_name = g_key_file_get_string(setting->keyfile, "general", "fontname", NULL);
+        char * p = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
+        if (p != NULL)
+            gdk_color_parse(p, &setting->background_color);
+        setting->background_alpha = g_key_file_get_integer(setting->keyfile, "general", "bgalpha", NULL);
+        p = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
+        if (p != NULL)
+            gdk_color_parse(p, &setting->foreground_color);
+        setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, "general", "disallowbold", NULL);
+        setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, "general", "cursorblinks", NULL);
+        setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, "general", "cursorunderline", NULL);
+        setting->audible_bell = g_key_file_get_boolean(setting->keyfile, "general", "audiblebell", NULL);
+        setting->tab_position = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
+        setting->scrollback = g_key_file_get_integer(setting->keyfile, "general", "scrollback", NULL);
+        setting->hide_scroll_bar = g_key_file_get_boolean(setting->keyfile, "general", "hidescrollbar", NULL);
+        setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, "general", "hidemenubar", NULL);
+        setting->hide_close_button = g_key_file_get_boolean(setting->keyfile, "general", "hideclosebutton", NULL);
+        setting->word_selection_characters = g_key_file_get_string(setting->keyfile, "general", "selchars", NULL);
+        setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, "general", "disablef10", NULL);
+    }
 
-	/* generate config data */
-	file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
-
-	/* save to config file */
-	setting_save_to_file(path, file_data);
-
-	/* release */
-	g_free(file_data);
-}
-
-Setting *load_setting_from_file(const char *filename)
-{
-	GKeyFileFlags flags;
-	GError *error = NULL;
-	Setting *setting;
-
-	setting = (Setting *)malloc(sizeof(Setting));
-
-	/* initiate key_file */
-	setting->keyfile = g_key_file_new();
-	flags = G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS;
-
-	/* Load config */
-	if (g_file_test(filename, G_FILE_TEST_EXISTS)) {
-		if (!g_key_file_load_from_file(setting->keyfile, filename, flags, &error))
-			goto setting_default;
-
-		/* general setting */
-		setting->fontname = g_key_file_get_string(setting->keyfile, "general", "fontname", NULL);
-		setting->selchars = g_key_file_get_string(setting->keyfile, "general", "selchars", NULL);
-		setting->bgcolor = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
-		setting->bgalpha = g_key_file_get_integer(setting->keyfile, "general", "bgalpha", NULL);
-		setting->fgcolor = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
-		setting->tabpos = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
-		setting->scrollback = (glong)g_key_file_get_integer(setting->keyfile, "general", "scrollback", NULL);
-		setting->disablef10 = g_key_file_get_boolean(setting->keyfile, "general", "disablef10", NULL);
-		setting->hidemenubar = g_key_file_get_boolean(setting->keyfile, "general", "hidemenubar", NULL);
-		setting->hidescrollbar = g_key_file_get_boolean(setting->keyfile, "general", "hidescrollbar", NULL);
-		setting->cursorblinks = g_key_file_get_boolean(setting->keyfile, "general", "cursorblinks", NULL);
-	}
-
-setting_default:
-
-	if (!setting->fontname)
-		setting->fontname = g_strdup("monospace 10");
-
-	if (!setting->selchars)
-		setting->selchars = g_strdup("-A-Za-z0-9,./?%&#:_");
-
-	if (!setting->bgcolor)
-		setting->bgcolor = g_strdup("#000000");
-	
-	if (!setting->bgalpha)
-		setting->bgalpha = (guint16) 0xFFFF;
-
-	if (!setting->fgcolor)
-		setting->fgcolor = g_strdup("#aaaaaa");
-
-	if (!setting->tabpos)
-		setting->tabpos = g_strdup("top");
-
-	if (!setting->scrollback)
-		setting->scrollback = (glong)1000;
-
-	if (!setting->disablef10)
-		setting->disablef10 = FALSE;
-
-	if (!setting->hidemenubar)
-		setting->hidemenubar = FALSE;
-
-	if (!setting->hidescrollbar)
-		setting->hidescrollbar = FALSE;
-
-	if (!setting->cursorblinks)
-		setting->cursorblinks = FALSE;
-
-	return setting;
+    /* Default configuration strings. */
+    if (setting->font_name == NULL)
+        setting->font_name = g_strdup("monospace 10");
+    if (setting->tab_position == NULL)
+        setting->tab_position = g_strdup("top");
+    if (setting->word_selection_characters == NULL)
+        setting->word_selection_characters = g_strdup("-A-Za-z0-9,./?%&#:_");
+    return setting;
 }
