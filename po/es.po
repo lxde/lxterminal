@@ -1,15 +1,15 @@
 # Spanish translation of lxterminal
 # Copyright (C) 2008 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-#
+# 
 # Daniel Pacheco <daniel@tunki.org>, 2008.
 # Julio Napurí Carlos <julionc@gmail.com>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-03-30 04:12+0000\n"
 "PO-Revision-Date: 2010-01-20 14:38+0200\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Spanish\n"
 
 #: ../src/encoding.c:124
@@ -217,9 +217,8 @@ msgid "Preference_s"
 msgstr "Pre_ferencias"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Nueva pes_taña"
+msgstr "Nombrar pes_taña"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -249,9 +248,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:470
-#, fuzzy
 msgid "Name Tab"
-msgstr "Nueva pes_taña"
+msgstr "Nombrar pestaña"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
@@ -263,9 +261,8 @@ msgstr ""
 "Hugo Florentino <sysadmin@cips.cu>, 2009"
 
 #: ../src/lxterminal.c:592
-#, fuzzy
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
 #: ../src/lxterminal.c:593
 msgid "Terminal emulator for LXDE project"
@@ -273,65 +270,59 @@ msgstr "Emulador de terminal para el proyecto LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Avanzado"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Permitir tipografía en negritas"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Señal audible"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Fondo:"
+msgstr "Fondo"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Bloque"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Inferior"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Parpadeo del cursor:"
+msgstr "Parpadeo del cursor"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Parpadeo del cursor:"
+msgstr "Estilo del cursor"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Deshabilitar tecla de atajo (F10 por defecto)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "Mostrar"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Primer plano:"
+msgstr "Primer plano"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Ocultar botón de cierre"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Ocultar la barra de menú:"
+msgstr "Ocultar la barra de menú"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Ocultar la barra de desplazamiento:"
+msgstr "Ocultar la barra de desplazamiento"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -342,28 +333,24 @@ msgid "Right"
 msgstr "Derecha"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Líneas de desplazamiento:"
+msgstr "Líneas de desplazamiento"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Selección por palabra:"
+msgstr "Caracteres de selección por palabra"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Estilo"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Posición del panel de pestañas:"
+msgstr "Posición del panel de pestañas"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Tipo de letra:"
+msgstr "Tipografía de la terminal"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -371,15 +358,15 @@ msgstr "Superior"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Subrayado"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
