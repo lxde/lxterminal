@@ -2,21 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-03-30 04:12+0000\n"
 "PO-Revision-Date: 2010-01-12 14:47+0100\n"
 "Last-Translator: George Vasilakos <forfolias@linuxteam.cs.teilar.gr>\n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
+"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -213,9 +213,8 @@ msgid "Preference_s"
 msgstr "Ρυθμίσεις"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Νέα _καρτέλα"
+msgstr "Ονο_μασία καρτέλας"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -245,9 +244,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:470
-#, fuzzy
 msgid "Name Tab"
-msgstr "Νέα _καρτέλα"
+msgstr "Ονομασία καρτέλας"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
@@ -257,9 +255,8 @@ msgstr ""
 "Βασιλάκος Γιώργος  <forfolias@linuxteam.cs.teilar.gr>"
 
 #: ../src/lxterminal.c:592
-#, fuzzy
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
 #: ../src/lxterminal.c:593
 msgid "Terminal emulator for LXDE project"
@@ -267,65 +264,61 @@ msgstr "Εξομοιωτής τερματικού για το project LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Για προχωρημένους"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Να επιτρέπεται έντονη γραμματοσειρά"
 
 #: ../data/lxterminal-preferences.glade.h:3
+#, fuzzy
 msgid "Audible bell"
-msgstr ""
+msgstr "Ακουστική καμπάνα"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
 msgstr "Φόντο:"
 
 #: ../data/lxterminal-preferences.glade.h:5
+#, fuzzy
 msgid "Block"
-msgstr ""
+msgstr "Block"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Κάτω"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Αναβόσβημα δρομέα:"
+msgstr "Αναβόσβημα δρομέα"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Αναβόσβημα δρομέα:"
+msgstr "Στυλ δρομέα"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Απενεργοποίηση πλήκτρου συντόμευσης μενού (F10 από προεπιλογή)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "Εμφάνιση"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Πρώτο πλάνο:"
+msgstr "Πρώτο πλάνο"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Απόκρυψη κουμπιών κλεισίματος "
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Απόκρυψη μπάρας μενού:"
+msgstr "Απόκρυψη μπάρας μενού"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Απόκρυψη μπάρας κύλισης:"
+msgstr "Απόκρυψη μπάρας κύλισης"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -336,28 +329,24 @@ msgid "Right"
 msgstr "Δεξιά"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Κύλιση γραμμών:"
+msgstr "Κύλιση γραμμών"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Χαρακτήρες επιλογής-ανά-λέξη:"
+msgstr "Χαρακτήρες επιλογής ανά λέξη"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Στυλ"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Θέση πλαισίου καρτελών:"
+msgstr "Θέση πλαισίου καρτελών"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Γραμματοσειρά τερματικού:"
+msgstr "Γραμματοσειρά τερματικού"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -365,15 +354,17 @@ msgstr "Πάνω"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Υπογράμμιση"
 
 #: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
