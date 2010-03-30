@@ -370,9 +370,6 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
 
-    /* Redraw the terminal. */
-    gtk_widget_queue_draw(term->vte);
-
     /* Make the new terminal's tab current and, if we went from one to more than one tab,
      * turn the tab display on. */
     gtk_notebook_set_current_page(GTK_NOTEBOOK(term->parent->notebook), term->index);
