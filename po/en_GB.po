@@ -10,8 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\\n\\nX-Poedit-Language: English\n"
-"X-Poedit-Country: UNITED KINGDOM\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\\n\\nX-Poedit-Language: English\\nX-Poedit-Country: UNITED KINGDOM\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -239,7 +238,6 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:470
-#, fuzzy
 msgid "Name Tab"
 msgstr "Name Tab"
 
