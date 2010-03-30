@@ -271,18 +271,16 @@ msgid "Allow bold font"
 msgstr "Να επιτρέπεται έντονη γραμματοσειρά"
 
 #: ../data/lxterminal-preferences.glade.h:3
-#, fuzzy
 msgid "Audible bell"
-msgstr "Ακουστική καμπάνα"
+msgstr "Ακουστική ειδοποίηση"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
 msgstr "Φόντο:"
 
 #: ../data/lxterminal-preferences.glade.h:5
-#, fuzzy
 msgid "Block"
-msgstr "Block"
+msgstr "Μπλοκ"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
