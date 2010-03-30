@@ -357,12 +357,10 @@ msgid "Underline"
 msgstr "Υπογράμμιση"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "gtk-ok"
 msgstr "gtk-ok"
 
