@@ -1,8 +1,9 @@
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-03-31 04:12+0000\n"
 "PO-Revision-Date: 2010-01-12 23:29+0100\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
@@ -206,9 +207,8 @@ msgid "Preference_s"
 msgstr "На_лаштування"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Н_ова вкладка"
+msgstr "Н_азвати вкладку"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -231,92 +231,84 @@ msgid "_About"
 msgstr "_Про"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LX-термінал"
 
-#: ../src/lxterminal.c:470
-#, fuzzy
+#: ../src/lxterminal.c:467
 msgid "Name Tab"
-msgstr "Н_ова вкладка"
+msgstr "Назвати вкладку"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "Yarema aka Knedlyk <yupadmin@gmail.com>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "Емулятор терміналу для проекту LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Додатково"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Дозволити жирні шрифти"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Звуковий дзвінок"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Тло:"
+msgstr "Тло"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Блок"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Внизу"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Блимання курсору:"
+msgstr "Блимання курсору"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Блимання курсору:"
+msgstr "Стиль курсору"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Виключити скорочення клавіатури для меню (F10 по замовчуванню)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "Відображення"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Передній план:"
+msgstr "Передній план"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Приховати кнопки закриття"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Приховувати панель меню:"
+msgstr "Приховати панель меню"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Приховувати панель прокрутки:"
+msgstr "Приховати панель прокрутки"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -327,28 +319,24 @@ msgid "Right"
 msgstr "Справа"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Лінії прокрутки:"
+msgstr "Лінії прокрутки"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Помітити-за-словом символи:"
+msgstr "Помітити-за-словом символи"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Стиль"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Позиція панелі вкладок:"
+msgstr "Позиція панелі вкладок"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Фонти терміналу:"
+msgstr "Шрифти терміналу"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -356,15 +344,15 @@ msgstr "Вверху"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Підкреслення"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
