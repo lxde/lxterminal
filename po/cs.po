@@ -2,21 +2,21 @@
 # Copyright (C) 2009 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
 # Michal Várady <miko.vaji@gmail.com>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-04-01 04:12+0000\n"
 "PO-Revision-Date: 2010-03-29 22:52+0200\n"
-"Last-Translator:  <miko.vaji@gmail.com>\n"
+"Last-Translator: <miko.vaji@gmail.com>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.0.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -238,34 +238,33 @@ msgid "_About"
 msgstr "_O aplikaci"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:467
 #, fuzzy
 msgid "Name Tab"
 msgstr "Nový _panel"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "Michal Várady <miko.vaji@gmail.com>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulátor terminálu pro projekt LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Rozšířené"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
@@ -276,9 +275,8 @@ msgid "Audible bell"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Pozadí:"
+msgstr "Pozadí"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -289,14 +287,12 @@ msgid "Bottom"
 msgstr "Dole"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Blikání kurzoru:"
+msgstr "Blikání kurzoru"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Blikání kurzoru:"
+msgstr "Styl kurzoru"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
@@ -307,23 +303,20 @@ msgid "Display"
 msgstr "Displej"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Popředí:"
+msgstr "Popředí"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Skrýt panel nabídky:"
+msgstr "Skrýt panel nabídky"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Skrýt posuvník:"
+msgstr "Skrýt posuvník"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -339,23 +332,20 @@ msgid "Scrollback lines"
 msgstr "Paměť řádků:"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Znaky pro výběr po slovech:"
+msgstr "Znaky pro výběr po slovech"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Styl"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Pozice panelu karet:"
+msgstr "Pozice panelu karet"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Písmo terminálu:"
+msgstr "Písmo terminálu"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
