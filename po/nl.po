@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: 2010-02-26 14:56+0200\n"
-"Last-Translator: Sander <celettu@gmail.com>\n"
+"PO-Revision-Date: 2010-04-05 15:07+0200\n"
+"Last-Translator: Horatio <hosoka@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.1\n"
 
@@ -265,20 +265,19 @@ msgstr "Terminal Emulator voor het LXDE project"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Gevorderd"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Toepassen vet lettertype"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Achtergrond:"
+msgstr "Achtergrond"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -294,9 +293,8 @@ msgid "Cursor blink"
 msgstr "Cursor signaal:"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Cursor signaal:"
+msgstr "Cursor stijl"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
@@ -313,7 +311,7 @@ msgstr "Voorgrond"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Verberg Sluit toetsen"
 
 #: ../data/lxterminal-preferences.glade.h:13
 #, fuzzy
@@ -348,12 +346,10 @@ msgid "Style"
 msgstr "Stijl"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Plaatsing van tabpaneel:"
+msgstr "Tabpaneel positie"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
 msgstr "Terminal Lettertype"
 
@@ -367,11 +363,11 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-annuleren"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
