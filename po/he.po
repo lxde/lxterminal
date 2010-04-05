@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-04-05 04:12+0000\n"
 "PO-Revision-Date: 2010-01-13 23:25+0200\n"
 "Last-Translator: Yaron Shahrbani <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -213,9 +213,8 @@ msgid "Preference_s"
 msgstr "ה_עדפות"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "ל_שונית חדשה"
+msgstr "ל_שונית שם"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -238,94 +237,88 @@ msgid "_About"
 msgstr "על _אודות"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "תוכנית הדמיית המסוף LXTerminal"
 
-#: ../src/lxterminal.c:470
-#, fuzzy
+#: ../src/lxterminal.c:467
 msgid "Name Tab"
-msgstr "ל_שונית חדשה"
+msgstr "לשונית שם"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "ירון שהרבני <sh.yaron@gmail.com>ליאל פרידמן <lielft@gmail.com>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "כל הזכויות שמורות (C) ‏2008"
+msgstr "כל הזכויות שמורות (C)‏ 2010-2008"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "תוכנית להדמיית מסוף עבור מיזם LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "מתקדם"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "התרת גופן מודגש"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "פעמון צליל"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "רקע:"
+msgstr "רקע"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "מקטע"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "מלמטה"
 
-# Does this indicate whether the cursor blinks or not or how many times will it blink? Please comment
+# Does this indicate whether the cursor blinks or not or how many times will
+# it blink? Please comment
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "הבהוב הסמן:"
+msgstr "הבהוב הסמן"
 
-# Does this indicate whether the cursor blinks or not or how many times will it blink? Please comment
+# Does this indicate whether the cursor blinks or not or how many times will
+# it blink? Please comment
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "הבהוב הסמן:"
+msgstr "סגנון הסמן"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "ביטול מקש הקיצור לתפריט (F10 כברירת מחדל)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "תצוגה"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "קידמה:"
+msgstr "קידמה"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "הסתרת לחצני הסגירה"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "הסתרת סרגל התפריטים:"
+msgstr "הסתרת סרגל התפריטים"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "הסתרת סרגל הגלילה:"
+msgstr "הסתרת סרגל הגלילה"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -336,28 +329,24 @@ msgid "Right"
 msgstr "מימין"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "שורות לגלילה אחורנית:"
+msgstr "שורות לגלילה אחורנית"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "תווים לבחירה לפי מילה:"
+msgstr "תווים לבחירה לפי מילה"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "סגנון"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "מיקום פאנל הלשוניות:"
+msgstr "מיקום פאנל הלשוניות"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "גופן המסוף:"
+msgstr "גופן המסוף"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -365,15 +354,17 @@ msgstr "מלמעלה"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "קו תחתי"
 
 #: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
