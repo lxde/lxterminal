@@ -20,9 +20,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"X-Generator: Pootle 2.0.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Spanish\n"
+"X-Generator: Pootle 2.0.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -272,7 +272,7 @@ msgstr "Zaawansowane"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Dopuść pogrubioną czcionkę"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
