@@ -13,16 +13,16 @@ msgstr ""
 "Project-Id-Version: pl_PL\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: 2010-01-13 23:20+0200\n"
+"PO-Revision-Date: 2010-04-06 18:41+0200\n"
 "Last-Translator: Artur <mazdac@gmail.com>\n"
 "Language-Team: Polish\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.0.0\n"
+"X-Generator: Pootle 2.0.1\n"
 "X-Poedit-Language: Spanish\n"
 
 #: ../src/encoding.c:124
@@ -220,9 +220,8 @@ msgid "Preference_s"
 msgstr "Ustawienia"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Nowa _Karta"
+msgstr "Nazwij _kartę"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -252,9 +251,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:470
-#, fuzzy
 msgid "Name Tab"
-msgstr "Nowa _Karta"
+msgstr "Nazwij _kartę"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
@@ -262,9 +260,8 @@ msgid "translator-credits"
 msgstr "Grzegorz Gibas <amigib@gmail.com>"
 
 #: ../src/lxterminal.c:592
-#, fuzzy
 msgid "Copyright (C) 2008-2010"
-msgstr "Prawa zatrzeżone (C) 2008"
+msgstr "Wszystkie prawa zastrzeżone (C) 2008-2010"
 
 #: ../src/lxterminal.c:593
 msgid "Terminal emulator for LXDE project"
@@ -272,65 +269,60 @@ msgstr "Emulator terminala dla projektu LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Zaawansowane"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Zezwól na pogrubioną czcionkę"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Dzwonek dźwiękowy"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Tło:"
+msgstr "Tło"
 
 #: ../data/lxterminal-preferences.glade.h:5
+#, fuzzy
 msgid "Block"
-msgstr ""
+msgstr "Blok"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Na dole"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Miganie kursora:"
+msgstr "Miganie kursora"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Miganie kursora:"
+msgstr "Styl kursora"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Wyłącz klawisz skrótu menu (domyślnie F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "Wyświetlanie"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Kolor czcionki:"
+msgstr "Kolor czcionki"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Ukryj przyciski zamykania"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Ukryj pasek menu:"
+msgstr "Ukryj pasek menu"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Ukryj pasek przewijania:"
+msgstr "Ukryj pasek przewijania"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -341,28 +333,24 @@ msgid "Right"
 msgstr "Po prawej"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Liczba wierszy:"
+msgstr "Liczba wierszy"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Zaznaczenie przez słowo:"
+msgstr "Zaznaczenie przez słowo"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Wygląd"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Umiejscowienie kart:"
+msgstr "Umiejscowienie paska kart"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Czcionka Terminala:"
+msgstr "Czcionka terminala"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -370,15 +358,15 @@ msgstr "Na górze"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Podkreślenie"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
