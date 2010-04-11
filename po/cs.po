@@ -2,12 +2,12 @@
 # Copyright (C) 2009 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
 # Michal Várady <miko.vaji@gmail.com>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-01 04:12+0000\n"
+"POT-Creation-Date: 2010-04-11 04:12+0000\n"
 "PO-Revision-Date: 2010-04-02 01:16+0100\n"
 "Last-Translator: Radek Tříška <radek@fastlinux.eu>\n"
 "Language-Team: Czech\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"X-Generator: Pootle 2.0.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -38,27 +38,18 @@ msgstr "jihovýchodní a jihozápadní Asie"
 msgid "Middle Eastern"
 msgstr "Střední Východ"
 
-#: ../src/encoding.c:129
-#: ../src/encoding.c:151
-#: ../src/encoding.c:152
-#: ../src/encoding.c:153
-#: ../src/encoding.c:154
-#: ../src/encoding.c:155
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135
-#: ../src/encoding.c:148
-#: ../src/encoding.c:172
-#: ../src/encoding.c:197
-#: ../src/encoding.c:210
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
 msgstr "západní"
 
-#: ../src/encoding.c:136
-#: ../src/encoding.c:173
-#: ../src/encoding.c:187
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "středoevropské"
@@ -67,31 +58,21 @@ msgstr "středoevropské"
 msgid "South European"
 msgstr "jihoevropské"
 
-#: ../src/encoding.c:138
-#: ../src/encoding.c:146
-#: ../src/encoding.c:215
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
 msgstr "pobaltské"
 
-#: ../src/encoding.c:139
-#: ../src/encoding.c:174
-#: ../src/encoding.c:181
-#: ../src/encoding.c:183
-#: ../src/encoding.c:189
-#: ../src/encoding.c:209
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "cyrilice"
 
-#: ../src/encoding.c:140
-#: ../src/encoding.c:177
-#: ../src/encoding.c:186
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "arabské"
 
-#: ../src/encoding.c:141
-#: ../src/encoding.c:192
-#: ../src/encoding.c:211
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
 msgstr "řecké"
 
@@ -99,16 +80,12 @@ msgstr "řecké"
 msgid "Hebrew Visual"
 msgstr "hebrejské vizuální"
 
-#: ../src/encoding.c:143
-#: ../src/encoding.c:176
-#: ../src/encoding.c:195
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "hebrejské"
 
-#: ../src/encoding.c:144
-#: ../src/encoding.c:175
-#: ../src/encoding.c:199
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "turecké"
@@ -121,8 +98,7 @@ msgstr "skandinávské"
 msgid "Celtic"
 msgstr "keltské"
 
-#: ../src/encoding.c:149
-#: ../src/encoding.c:198
+#: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
 msgstr "rumunské"
 
@@ -130,9 +106,7 @@ msgstr "rumunské"
 msgid "Armenian"
 msgstr "arménské"
 
-#: ../src/encoding.c:158
-#: ../src/encoding.c:159
-#: ../src/encoding.c:164
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "tradiční čínské"
 
@@ -140,22 +114,16 @@ msgstr "tradiční čínské"
 msgid "Cyrillic/Russian"
 msgstr "ruská cyrilice"
 
-#: ../src/encoding.c:162
-#: ../src/encoding.c:179
-#: ../src/encoding.c:202
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
 msgstr "japonské"
 
-#: ../src/encoding.c:163
-#: ../src/encoding.c:180
-#: ../src/encoding.c:182
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "korejské"
 
-#: ../src/encoding.c:166
-#: ../src/encoding.c:167
-#: ../src/encoding.c:168
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "zjednodušená čínština"
@@ -164,8 +132,7 @@ msgstr "zjednodušená čínština"
 msgid "Georgian"
 msgstr "gruzínské"
 
-#: ../src/encoding.c:184
-#: ../src/encoding.c:200
+#: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "ukrajinská cyrilice"
 
@@ -193,9 +160,7 @@ msgstr "gurmuchština"
 msgid "Icelandic"
 msgstr "islandské"
 
-#: ../src/encoding.c:203
-#: ../src/encoding.c:206
-#: ../src/encoding.c:216
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "vietnamské"
 
@@ -219,18 +184,15 @@ msgstr "_Karty"
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/lxterminal.c:141
-#: ../src/lxterminal.c:163
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:163
 msgid "New _Window"
 msgstr "_Nové okno"
 
-#: ../src/lxterminal.c:142
-#: ../src/lxterminal.c:164
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Tab"
 msgstr "Nový _panel"
 
-#: ../src/lxterminal.c:144
-#: ../src/lxterminal.c:176
+#: ../src/lxterminal.c:144 ../src/lxterminal.c:176
 msgid "_Close Tab"
 msgstr "_Zavřít panel"
 
@@ -238,44 +200,36 @@ msgstr "_Zavřít panel"
 msgid "_Quit"
 msgstr "_Ukončit"
 
-#: ../src/lxterminal.c:146
-#: ../src/lxterminal.c:166
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:166
 msgid "Cop_y"
 msgstr "_Kopírovat"
 
-#: ../src/lxterminal.c:147
-#: ../src/lxterminal.c:167
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "_Paste"
 msgstr "_Vložit"
 
-#: ../src/lxterminal.c:149
-#: ../src/lxterminal.c:169
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:169
 msgid "Preference_s"
 msgstr "_Předvolby"
 
-#: ../src/lxterminal.c:150
-#: ../src/lxterminal.c:171
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:171
 #, fuzzy
 msgid "Na_me Tab"
 msgstr "Nový _panel"
 
-#: ../src/lxterminal.c:151
-#: ../src/lxterminal.c:172
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
 msgstr "_Předchozí karta"
 
-#: ../src/lxterminal.c:152
-#: ../src/lxterminal.c:173
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Ne_xt Tab"
 msgstr "_Další karta"
 
-#: ../src/lxterminal.c:153
-#: ../src/lxterminal.c:174
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
 msgstr "Přesunout kartu v_levo"
 
-#: ../src/lxterminal.c:154
-#: ../src/lxterminal.c:175
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
 msgstr "_Přesunout kartu vpravo"
 
@@ -284,12 +238,8 @@ msgid "_About"
 msgstr "_O aplikaci"
 
 #. Set window title.
-#: ../src/lxterminal.c:365
-#: ../src/lxterminal.c:587
-#: ../src/lxterminal.c:662
-#: ../src/lxterminal.c:1175
-#: ../src/lxterminal.c:1209
-#: ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
@@ -297,7 +247,7 @@ msgstr "LXTerminal"
 #: ../src/lxterminal.c:467
 #, fuzzy
 msgid "Name Tab"
-msgstr "Nový _panel"
+msgstr "Nový panel"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:580
@@ -322,15 +272,16 @@ msgstr "Povolit tučný font"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Akustický zvonek"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
 msgstr "Pozadí"
 
 #: ../data/lxterminal-preferences.glade.h:5
+#, fuzzy
 msgid "Block"
-msgstr ""
+msgstr "Blok"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -402,7 +353,7 @@ msgstr "Nahoře"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Podtržené"
 
 #: ../data/lxterminal-preferences.glade.h:24
 #, fuzzy
