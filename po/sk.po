@@ -275,7 +275,7 @@ msgstr "Pozadie:"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blok"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -351,11 +351,11 @@ msgstr "Podčiarknutie"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
