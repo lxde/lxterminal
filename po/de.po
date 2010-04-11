@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 04:12+0000\n"
-"PO-Revision-Date: 2010-03-30 18:59+0100\n"
+"POT-Creation-Date: 2010-04-11 04:12+0000\n"
+"PO-Revision-Date: 2010-04-11 13:40+0100\n"
 "Last-Translator: Lutz Thuns <lOtz1009@opensuse.org>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
@@ -287,39 +287,37 @@ msgstr "_Info"
 
 #. Set window title.
 #: ../src/lxterminal.c:365
-#: ../src/lxterminal.c:590
-#: ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178
-#: ../src/lxterminal.c:1212
+#: ../src/lxterminal.c:587
+#: ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175
+#: ../src/lxterminal.c:1209
 #: ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:467
 #, fuzzy
 msgid "Name Tab"
 msgstr "Neuer _Reiter"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr ""
 "Christoph Wickert <christoph.wickert@googlemail.de>\n"
 "Mario Blättermann <mario.blaettermann@t-online.de>\n"
 "Lutz Thuns <lthuns@opensuse.org>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal-Emulator für das LXDE Projekt"
 
 #: ../data/lxterminal-preferences.glade.h:1
-#, fuzzy
 msgid "Advanced"
 msgstr "Erweitert"
 
@@ -375,12 +373,10 @@ msgid "Hide Close buttons"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
 msgstr "Menüleiste verbergen"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
 msgstr "Bildlaufleiste verbergen"
 
@@ -412,7 +408,6 @@ msgid "Tab panel position"
 msgstr "Position der Reiterleiste:"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
 msgstr "Terminal-Schriftart:"
 
