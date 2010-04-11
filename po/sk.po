@@ -2,12 +2,12 @@
 # Copyright (C) 2006 lxde team
 # This file is distributed under the same license as the lxterminal package.
 # Ivan MasÃ¡r <helix84@centrum.sk>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-04-11 04:12+0000\n"
 "PO-Revision-Date: 2010-01-16 19:21+0100\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -210,9 +210,8 @@ msgid "Preference_s"
 msgstr "Na_stavenia"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Nová _karta"
+msgstr "Po_menovať kartu"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -235,45 +234,42 @@ msgid "_About"
 msgstr "O _aplikácii"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
-#, fuzzy
+#: ../src/lxterminal.c:467
 msgid "Name Tab"
-msgstr "Nová _karta"
+msgstr "Pomenovať kartu"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "Ivan Masár <helix84@centrum.sk>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulátor terminálu pre projekt LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Pokročilé"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Povoliť hrubé písmo"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Prehrať znak pípnutie"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
 msgstr "Pozadie:"
 
@@ -286,39 +282,34 @@ msgid "Bottom"
 msgstr "Dolu"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Blikanie kurzora:"
+msgstr "Blikanie kurzora"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Blikanie kurzora:"
+msgstr "Štýl kurzora"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Vypnúť klávesovú skratku menu (štandardne F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "Displej"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
 msgstr "Popredie:"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Skryť tlačidlá Zatvoriť"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
 msgstr "Skryť menu:"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
 msgstr "Skryť posuvník:"
 
@@ -331,28 +322,24 @@ msgid "Right"
 msgstr "Vpravo"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
 msgstr "Pamäť riadkov:"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Znaky na výber po slovách:"
+msgstr "Znaky na výber po slovách"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Štýl"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Umiestnenie panelu kariet:"
+msgstr "Umiestnenie panelu kariet"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Písmo terminálu:"
+msgstr "Písmo terminálu"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -360,7 +347,7 @@ msgstr "Hore"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Podčiarknutie"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
