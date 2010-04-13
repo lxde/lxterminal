@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-11 04:12+0000\n"
-"PO-Revision-Date: 2010-04-11 13:40+0100\n"
+"PO-Revision-Date: 2010-04-13 20:10+0100\n"
 "Last-Translator: Lutz Thuns <lOtz1009@opensuse.org>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
@@ -319,7 +319,7 @@ msgstr "Terminal-Emulator für das LXDE Projekt"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr "Erweitert"
+msgstr "Verschiedenes"
 
 #: ../data/lxterminal-preferences.glade.h:2
 #, fuzzy
@@ -353,11 +353,9 @@ msgstr "Blinkender Cursor:"
 msgid "Cursor style"
 msgstr "Blinkender Cursor:"
 
-# irgendwie zu lang...
 #: ../data/lxterminal-preferences.glade.h:9
-#, fuzzy
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Tastenkürzel für das Menü deaktivieren (üblicher Weise F10)"
+msgstr "Tastenkürzel F10 für das Menü deaktivieren"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
@@ -369,8 +367,9 @@ msgid "Foreground"
 msgstr "Vordergrund:"
 
 #: ../data/lxterminal-preferences.glade.h:12
+#, fuzzy
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Schaltflächen zum Schließen verbergen"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide menu bar"
@@ -403,11 +402,11 @@ msgid "Style"
 msgstr "Stil"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
 msgstr "Position der Reiterleiste:"
 
 #: ../data/lxterminal-preferences.glade.h:21
+#, fuzzy
 msgid "Terminal font"
 msgstr "Terminal-Schriftart:"
 
