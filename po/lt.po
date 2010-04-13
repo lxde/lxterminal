@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-04-13 04:14+0000\n"
 "PO-Revision-Date: 2010-01-14 10:55+0200\n"
 "Last-Translator: Julius Vitkauskas <zadintuvas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,9 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
-"100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.0.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: lt_LT\n"
 
 #: ../src/encoding.c:124
@@ -215,9 +214,8 @@ msgid "Preference_s"
 msgstr "Nu_statymai"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "_Nauja kortelė"
+msgstr "Pava_dinti kortelę"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -240,34 +238,32 @@ msgid "_About"
 msgstr "_Apie"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
-#, fuzzy
+#: ../src/lxterminal.c:467
 msgid "Name Tab"
-msgstr "_Nauja kortelė"
+msgstr "Pavadinti kortelę"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "Julius Vitkauskas <zadintuvas@gmail.com>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Autorinės teisės (C) 2008"
+msgstr "Autorinės teisės (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE projekto terminalo emuliatorius"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Sudėtingesni"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
@@ -275,12 +271,11 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Garsinis skambutis"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Fonas:"
+msgstr "Fonas"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -291,14 +286,12 @@ msgid "Bottom"
 msgstr "Apačioje"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Kursoriaus mirksėjimai:"
+msgstr "Kursoriaus mirksėjimas"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Kursoriaus mirksėjimai:"
+msgstr "Kursoriaus stilius"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
@@ -309,23 +302,20 @@ msgid "Display"
 msgstr "Ekranas"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Priekis:"
+msgstr "Priekis"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Paslėpti uždarymo mygtukus"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Paslėpti meniu juostą:"
+msgstr "Paslėpti meniu juostą"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Paslėpti slinkimo juostą:"
+msgstr "Paslėpti slinkimo juostą"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -336,28 +326,24 @@ msgid "Right"
 msgstr "Dešinėje"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Įsiminti eilučių:"
+msgstr "Įsiminti eilučių"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "„Pasirinkti po žodį“ simboliai:"
+msgstr "„Pasirinkti po žodį“ simboliai"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Stilius"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Kortelių juosta:"
+msgstr "Kortelių juostos vieta"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Terminalo šriftas:"
+msgstr "Terminalo šriftas"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
