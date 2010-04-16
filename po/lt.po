@@ -199,7 +199,7 @@ msgstr "_Uždaryti kortelę"
 
 #: ../src/lxterminal.c:145
 msgid "_Quit"
-msgstr "_Baigti"
+msgstr "_Išeiti"
 
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:166
 msgid "Cop_y"
