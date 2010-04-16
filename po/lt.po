@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-13 04:14+0000\n"
+"POT-Creation-Date: 2010-04-16 04:13+0000\n"
 "PO-Revision-Date: 2010-01-14 10:55+0200\n"
 "Last-Translator: Julius Vitkauskas <zadintuvas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,9 +15,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt\n"
-"X-Generator: Pootle 2.0.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: lt_LT\n"
+"X-Generator: Pootle 2.0.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -267,7 +267,7 @@ msgstr "Sudėtingesni"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Leisti paryškintą šriftą"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
@@ -279,7 +279,7 @@ msgstr "Fonas"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blokas"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -295,7 +295,7 @@ msgstr "Kursoriaus stilius"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Išjungti spartųjį meniu klavišą (F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
@@ -351,15 +351,15 @@ msgstr "Viršuje"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Pabraukti"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "Atšaukti"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "Gerai"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
