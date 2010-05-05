@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-07 04:12+0000\n"
+"POT-Creation-Date: 2010-05-05 04:13+0000\n"
 "PO-Revision-Date: 2009-12-03 01:55-0300\n"
 "Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
@@ -332,7 +332,6 @@ msgid "Scrollback lines"
 msgstr "Linhas de histórico"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
 msgstr "Selecionar caracteres por palavra"
 
