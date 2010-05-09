@@ -1,16 +1,16 @@
 # Japanese translations for lxterminal package
 # lxterminal パッケージに対する日本語訳.
-# Copyright (C) 2008, 2009 THE lxterminal'S COPYRIGHT HOLDER
+# Copyright (C) 2008-2010 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-# Hironao Komatsu <hironao@users.sourceforge.net>, 2008, 2009.
+# Hironao Komatsu <hironao@users.sourceforge.net>, 2008-2010.
 # IWAI, Masaharu <iwai@alib.jp>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lxterminal 0.1.6\n"
+"Project-Id-Version: lxterminal 0.1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: 2010-01-27 21:12+0200\n"
+"POT-Creation-Date: 2010-05-05 15:03+0900\n"
+"PO-Revision-Date: 2010-05-05 15:19+0900\n"
 "Last-Translator:  <jugger90@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -215,9 +215,8 @@ msgid "Preference_s"
 msgstr "設定(_S)"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "新規タブ(_T)"
+msgstr "タブの名前変更(_M)"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -240,94 +239,86 @@ msgid "_About"
 msgstr "情報(_A)"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
-#, fuzzy
+#: ../src/lxterminal.c:467
 msgid "Name Tab"
-msgstr "新規タブ(_T)"
+msgstr "タブの名前変更"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDEプロジェクトのための端末エミュレータ"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "高度な設定"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "太字フォントを許可する"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "音声のベル"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "背景色:"
+msgstr "背景色"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "四角"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "下"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "カーソルの点滅:"
+msgstr "カーソルの点滅"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "カーソルの点滅:"
+msgstr "カーソルのスタイル"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "メニューを開くショートカットを無効にする (標準で F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "ディスプレイ"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "前景色:"
+msgstr "前景色"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "閉じるボタンを隠す"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "メニューバーを隠す:"
+msgstr "メニューバーを隠す"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "スクロールバーを隠す:"
+msgstr "スクロールバーを隠す"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -338,28 +329,24 @@ msgid "Right"
 msgstr "右"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "履歴の行数:"
+msgstr "履歴の行数"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "選択時に語に含まれる文字:"
+msgstr "選択時に語に含まれる文字"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "スタイル"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "タブの位置:"
+msgstr "タブの位置"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "端末のフォント:"
+msgstr "端末のフォント"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -367,15 +354,15 @@ msgstr "上"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "下線"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -384,21 +371,3 @@ msgstr "端末"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "コマンド・ライン端末です"
-
-#~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr "ブラウザの起動に失敗しました。入力されたコマンド `%s'\n"
-
-#~ msgid "Misc"
-#~ msgstr "Misc"
-
-#~ msgid "Disable F10 shortcut for menu:"
-#~ msgstr "メニューへのショートカット F10 の無効化:"
-
-#~ msgid "Preferences"
-#~ msgstr "設定"
-
-#~ msgid "General"
-#~ msgstr "一般"
-
-#~ msgid "Transparent Background:"
-#~ msgstr "透過/背景色:"
