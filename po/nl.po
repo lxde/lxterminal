@@ -296,7 +296,7 @@ msgstr "Cursor stijl"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Menu sneltoets uitschakelen (Standaard F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
