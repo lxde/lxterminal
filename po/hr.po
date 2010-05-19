@@ -2,12 +2,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal_hr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Boljsa <asjlob AT vip.hr>\n"
+"POT-Creation-Date: 2010-05-19 04:51+0000\n"
+"PO-Revision-Date: 2010-05-20 01:18+0200\n"
+"Last-Translator: Ivica Koliƒá <ikoli@yahoo.comr>\n"
 "Language-Team:  <asjlob AT vip.hr>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Croatian\n"
 "X-Poedit-Country: CROATIA\n"
@@ -18,11 +18,11 @@ msgstr "Zapadno europski"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr "IstoËno europski"
+msgstr "Istoƒçno europski"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr "IstoËno azijski"
+msgstr "Istoƒçno azijski"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
@@ -50,16 +50,16 @@ msgstr "Centralno europski"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Juæno europski"
+msgstr "Ju≈æno europski"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr "BaltiËki"
+msgstr "Baltiƒçki"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr "»iriliÊni"
+msgstr "ƒÜiriliƒáni"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
@@ -68,7 +68,7 @@ msgstr "Arapski"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr "GrËki"
+msgstr "Grƒçki"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
@@ -106,7 +106,7 @@ msgstr "Tradicionalni kineski"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr "»iriliËno/Ruski"
+msgstr "ƒÜiriliƒáno/Ruski"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
@@ -128,7 +128,7 @@ msgstr "Gruzijski"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr "»iriliËno/Ukrajinski"
+msgstr "ƒÜiriliƒáno/ukrajinski"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
@@ -176,17 +176,15 @@ msgstr "_Tabovi"
 
 #: ../src/lxterminal.c:134
 msgid "_Help"
-msgstr "_PomoÊ"
+msgstr "_Pomoƒá"
 
 #: ../src/lxterminal.c:141 ../src/lxterminal.c:163
-#, fuzzy
 msgid "New _Window"
-msgstr "_Novi Prozor"
+msgstr "Novi _Prozor"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
-#, fuzzy
 msgid "New _Tab"
-msgstr "_Novi Tab"
+msgstr "Novi _Tab"
 
 #: ../src/lxterminal.c:144 ../src/lxterminal.c:176
 msgid "_Close Tab"
@@ -197,18 +195,16 @@ msgid "_Quit"
 msgstr "_Izlaz"
 
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:166
-#, fuzzy
 msgid "Cop_y"
-msgstr "_Kopiraj"
+msgstr "Kopira_j"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "_Paste"
 msgstr "_Zalijepi"
 
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:169
-#, fuzzy
 msgid "Preference_s"
-msgstr "Postavke"
+msgstr "Postavk_e"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
 #, fuzzy
@@ -216,73 +212,69 @@ msgid "Na_me Tab"
 msgstr "_Novi Tab"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Pre_vious Tab"
-msgstr "_Prethodni Tab"
+msgstr "Pret_hodna kartica"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "_SljedeÊi Tab"
+msgstr "Sli_jedeƒáa kartica"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Pomakni karticu _lijevo"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Pomakni karticu _desno"
 
 #: ../src/lxterminal.c:155
 msgid "_About"
-msgstr "_O"
+msgstr "_O programu"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:467
 #, fuzzy
 msgid "Name Tab"
 msgstr "_Novi Tab"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "Boljsa"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator terminala za LXDE projekt"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Napredno"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Dopusti podebljani font"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Pozadina:"
+msgstr "Pozadina"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blokiraj"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -294,7 +286,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr ""
+msgstr "Stil pokazivaƒça"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
@@ -305,9 +297,8 @@ msgid "Display"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Prednji plan:"
+msgstr "Prednji plan"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
@@ -315,11 +306,11 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Sakrij traku izbornika"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide scroll bar"
-msgstr ""
+msgstr "Ssakrij kliznu traku"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -330,28 +321,24 @@ msgid "Right"
 msgstr "Desno"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Povratne linije:"
+msgstr "Povratne linije"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Odabrano po znakovima rijeËi:"
+msgstr "Odabrano po znakovima rijeƒçi"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
-msgstr ""
+msgstr "Stil"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Pozicija tab panela:"
+msgstr "Pozicija tab panela"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Font Terminala:"
+msgstr "Font Terminala"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -359,15 +346,15 @@ msgstr "Vrh"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Podcrtano"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-odustani"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-u redu"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -375,7 +362,7 @@ msgstr "Terminal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr ""
+msgstr "Koristi naredbeni redak"
 
 #~ msgid "Preferences"
 #~ msgstr "Postavke"
