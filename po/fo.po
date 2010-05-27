@@ -253,7 +253,7 @@ msgstr "Nýggur _teigi"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
 msgid "translator-credits"
-msgstr "Gunleif Joensen, 2010\n"
+msgstr "Gunleif Joensen, 2010"
 
 #: ../src/lxterminal.c:592
 #, fuzzy
