@@ -1,11 +1,12 @@
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal_hr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-19 04:51+0000\n"
+"POT-Creation-Date: 2010-05-30 04:51+0000\n"
 "PO-Revision-Date: 2010-05-20 01:18+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.comr>\n"
-"Language-Team:  <asjlob AT vip.hr>\n"
+"Language-Team: <asjlob AT vip.hr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -207,9 +208,8 @@ msgid "Preference_s"
 msgstr "Postavk_e"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "_Novi Tab"
+msgstr "I_mekartice"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -239,9 +239,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:467
-#, fuzzy
 msgid "Name Tab"
-msgstr "_Novi Tab"
+msgstr "Ime kartice"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:580
@@ -294,7 +293,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
-msgstr ""
+msgstr "Zaslon"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Foreground"
@@ -373,7 +372,6 @@ msgstr "Koristi naredbeni redak"
 #~ msgid "_Preferences"
 #~ msgstr "_Postavke"
 
-#, fuzzy
 #~ msgid "Transparent Background:"
 #~ msgstr "Pozadina:"
 
