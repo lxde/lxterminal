@@ -211,10 +211,10 @@ msgstr "প্রতিস্থাপন (_P)"
 msgid "Preference_s"
 msgstr "পছন্দসমূহ (_s)"
 
+# snigdha
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "নতুন ট্যাব (_T)"
+msgstr "নাম ট্যাব (_m)"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -243,10 +243,10 @@ msgstr "পরিচিতি (_A)"
 msgid "LXTerminal"
 msgstr "LXটার্মিনাল"
 
+# snigdha
 #: ../src/lxterminal.c:470
-#, fuzzy
 msgid "Name Tab"
-msgstr "নতুন ট্যাব (_T)"
+msgstr "নাম ট্যাব"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
@@ -255,76 +255,82 @@ msgstr ""
 "সঙ্কর্ষণ মুখোপাধ্যায় (sankarshan@randomink.org) \n"
 "লোবা ইয়াসমীন <loba@ankur.org.bd>"
 
+# snigdha
 #: ../src/lxterminal.c:592
-#, fuzzy
 msgid "Copyright (C) 2008-2010"
-msgstr "স্বত্বাধিকার (C) ২০০৮"
+msgstr "স্বত্বাধিকার (C) ২০০৮-২০১০"
 
 #: ../src/lxterminal.c:593
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE প্রকল্পের জন্য টার্মিনাল ইম্যুলেটর"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "উচ্চ পর্যায়ের"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "গাঢ় ফন্ট অনুমোদন করুন"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "শ্রুতিগোচর ঘন্টা"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "পটভূমি:"
+msgstr "পটভূমি"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "আবদ্ধ"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "নিচে"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "কার্সার মিটিমিটি জ্বলছে"
+msgstr "কারসারের মিটিমিটি জ্বলা"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "কার্সার মিটিমিটি জ্বলছে"
+msgstr "কারসারের শৈলী"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "মেনু শর্টকাট কী (F10 ডিফল্ট হিসাবে) নিস্ক্রিয় করুন"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "প্রদর্শনী"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "পুরোভূমি:"
+msgstr "পুরোভূমি"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "\"বন্ধ করুন\" বোতাম আড়াল করুন"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "মেনুবার গোপন করা হবে:"
+msgstr "মেনুবার আড়াল করুন"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "স্ক্রলবার গোপন করা হবে:"
+msgstr "স্ক্রলবার আড়াল করুন"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -334,45 +340,48 @@ msgstr "বামদিক"
 msgid "Right"
 msgstr "ডানদিক"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "স্ক্রোলব্যাক লাইন:"
+msgstr "স্ক্রলব্যাক লাইন"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "শব্দের অক্ষর অনুসারে নির্বাচন করুন:"
+msgstr "শব্দের অক্ষর অনুসারে নির্বাচন করুন"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "শৈলী"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "ট্যাব প্যানেলের অবস্থান:"
+msgstr "ট্যাব প্যানেলের অবস্থান"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "টার্মিনালের ফন্ট:"
+msgstr "টার্মিনালের ফন্ট"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
 msgstr "শীর্ষ"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "নিম্নরেখাঙ্কিত করা"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-বাতিল"
 
+# snigdha
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ঠিক আছে"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
