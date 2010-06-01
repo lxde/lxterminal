@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-31 04:12+0000\n"
+"POT-Creation-Date: 2010-06-01 04:51+0000\n"
 "PO-Revision-Date: 2010-01-12 23:29+0100\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
@@ -86,7 +86,7 @@ msgstr "Турецьке"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr "Скандінавське"
+msgstr "Скандинавське"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
@@ -152,7 +152,7 @@ msgstr "Гурмухі"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr "Ісладське"
+msgstr "Ісландське"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
@@ -220,11 +220,11 @@ msgstr "На_ступна вкладка"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
-msgstr "Пересунути вкладку _ліворуч"
+msgstr "Перемістити вкладку _ліворуч"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
-msgstr "Пересунути вкладку _праворуч"
+msgstr "Перемістити вкладку _праворуч"
 
 #: ../src/lxterminal.c:155
 msgid "_About"
@@ -292,7 +292,7 @@ msgstr "Виключити скорочення клавіатури для ме
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
-msgstr "Відображення"
+msgstr "Вигляд"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Foreground"
@@ -340,7 +340,7 @@ msgstr "Шрифти терміналу"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
-msgstr "Вверху"
+msgstr "Зверху"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
