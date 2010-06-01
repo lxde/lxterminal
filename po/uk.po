@@ -360,7 +360,7 @@ msgstr "Термінал"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Командний рядок"
+msgstr "Використати командну стрічку"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Не можу запустити веб-переглядач. Команда була: `%s'\n"
