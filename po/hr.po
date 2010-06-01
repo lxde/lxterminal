@@ -1,12 +1,16 @@
-# 
+# Croatian translations for LXterminal package
+# Copyright (C) 2009 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the LXterminal package.
+# Boljsa <asjlob AT vip.hr>
+#Ivica Kolić<ikoli@yahoo.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: lxterminal_hr\n"
+"Project-Id-Version: LXterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-30 04:51+0000\n"
-"PO-Revision-Date: 2010-05-20 01:18+0200\n"
+"POT-Creation-Date: 2010-05-31 04:51+0000\n"
+"PO-Revision-Date: 2010-06-01 02:44+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.comr>\n"
-"Language-Team: <asjlob AT vip.hr>\n"
+"Language-Team: <asjlob AT vip.hr> <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -153,7 +157,7 @@ msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr "Icelandic"
+msgstr "Islandski"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
@@ -173,7 +177,7 @@ msgstr "_Uredi"
 
 #: ../src/lxterminal.c:133
 msgid "_Tabs"
-msgstr "_Tabovi"
+msgstr "_Kartice"
 
 #: ../src/lxterminal.c:134
 msgid "_Help"
@@ -185,11 +189,11 @@ msgstr "Novi _Prozor"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Tab"
-msgstr "Novi _Tab"
+msgstr "Nova _kartica"
 
 #: ../src/lxterminal.c:144 ../src/lxterminal.c:176
 msgid "_Close Tab"
-msgstr "_Zatvori Tab"
+msgstr "_Zatvori karticu"
 
 #: ../src/lxterminal.c:145
 msgid "_Quit"
@@ -205,11 +209,11 @@ msgstr "_Zalijepi"
 
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:169
 msgid "Preference_s"
-msgstr "Postavk_e"
+msgstr "Osobitost_i"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
 msgid "Na_me Tab"
-msgstr "I_mekartice"
+msgstr "I_me kartice"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
@@ -245,7 +249,9 @@ msgstr "Ime kartice"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:580
 msgid "translator-credits"
-msgstr "Boljsa"
+msgstr ""
+"Boljsa\n"
+"Ivica Kolić ikoli@yahoo.com"
 
 #: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
@@ -289,7 +295,7 @@ msgstr "Stil pokazivača"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Onemogući tipku prečaca izbornika  (F10 zadano)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
@@ -333,7 +339,7 @@ msgstr "Stil"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Tab panel position"
-msgstr "Pozicija tab panela"
+msgstr "Pozicija kartične ploče"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Terminal font"
@@ -364,7 +370,7 @@ msgid "Use the command line"
 msgstr "Koristi naredbeni redak"
 
 #~ msgid "Preferences"
-#~ msgstr "Postavke"
+#~ msgstr "Osobitosti"
 
 #~ msgid "General"
 #~ msgstr "Osnovno"
@@ -373,7 +379,7 @@ msgstr "Koristi naredbeni redak"
 #~ msgstr "_Postavke"
 
 #~ msgid "Transparent Background:"
-#~ msgstr "Pozadina:"
+#~ msgstr "Prozirna pozadina:"
 
 #~ msgid "_View"
 #~ msgstr "_Izgled"
