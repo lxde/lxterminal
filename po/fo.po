@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: 2010-06-04 00:12+0200\n"
+"PO-Revision-Date: 2010-06-07 16:07+0200\n"
 "Last-Translator: Gunleif <gunleif@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fo\n"
@@ -78,7 +78,7 @@ msgstr "Grikst"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Hebraiskt sýniligt"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
@@ -202,7 +202,7 @@ msgstr "_Sløkk"
 
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:166
 msgid "Cop_y"
-msgstr "_Avrita"
+msgstr "A_vrita"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "_Paste"
@@ -214,11 +214,11 @@ msgstr "Ser_tokkar"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
 msgid "Na_me Tab"
-msgstr "_Navngev teigin"
+msgstr "Nav_ngev teigin"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
-msgstr "_Fyrra spjaldur"
+msgstr "Fyr_ra spjaldur"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Ne_xt Tab"
@@ -254,7 +254,7 @@ msgstr "Gunleif Joensen, 2010"
 
 #: ../src/lxterminal.c:592
 msgid "Copyright (C) 2008-2010"
-msgstr "Upphavsrættindi 2008-2010"
+msgstr "Upphavsrættindi (C) 2008-2010"
 
 #: ../src/lxterminal.c:593
 msgid "Terminal emulator for LXDE project"
@@ -287,7 +287,7 @@ msgstr "Botnur"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor blink"
-msgstr "Vísiblunk:"
+msgstr "Vísiblunk"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
