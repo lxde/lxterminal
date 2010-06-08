@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: 2010-06-07 16:07+0200\n"
+"PO-Revision-Date: 2010-06-08 18:12+0200\n"
 "Last-Translator: Gunleif <gunleif@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fo\n"
@@ -250,7 +250,11 @@ msgstr "Nýggur teigur"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
 msgid "translator-credits"
-msgstr "Gunleif Joensen, 2010"
+msgstr ""
+"Gunleif Joensen\n"
+"\n"
+"Sjónarmið viðvíkjandi týðingini kunnu sendast til:\n"
+"<fo.umseting@gmail.com>"
 
 #: ../src/lxterminal.c:592
 msgid "Copyright (C) 2008-2010"
@@ -269,7 +273,6 @@ msgid "Allow bold font"
 msgstr "Loyv feitskrift"
 
 #: ../data/lxterminal-preferences.glade.h:3
-#, fuzzy
 msgid "Audible bell"
 msgstr "Hoyrbar klokka"
 
