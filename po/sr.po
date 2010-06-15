@@ -272,7 +272,6 @@ msgid "Audible bell"
 msgstr "Звук звона"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
 msgstr "Позадина"
 
