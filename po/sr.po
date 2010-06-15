@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-28 04:57+0000\n"
+"POT-Creation-Date: 2010-06-15 05:35+0000\n"
 "PO-Revision-Date: 2009-08-31 12:59+0100\n"
 "Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
@@ -212,9 +212,8 @@ msgid "Preference_s"
 msgstr "По_ставке"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "На_ме Картица"
+msgstr "И_меновани језичак"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 #, fuzzy
@@ -246,7 +245,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:467
 msgid "Name Tab"
-msgstr ""
+msgstr "Именовани језичак"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:580
@@ -271,7 +270,7 @@ msgstr "Дозволи задеблјан фонт"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Звук звона"
 
 #: ../data/lxterminal-preferences.glade.h:4
 #, fuzzy
@@ -280,7 +279,7 @@ msgstr "Позадина"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Блок"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -296,14 +295,13 @@ msgstr "Изглед показивача"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Искључи пречице за мени (F10 подразумевано)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "Приказ"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
 msgstr "Боја текста"
 
@@ -316,7 +314,6 @@ msgid "Hide menu bar"
 msgstr "Сакриј траку са менијем"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
 msgstr "Сакриј дугмад за клизање"
 
@@ -333,8 +330,9 @@ msgid "Scrollback lines"
 msgstr "Број линија историје"
 
 #: ../data/lxterminal-preferences.glade.h:18
+#, fuzzy
 msgid "Select-by-word characters"
-msgstr ""
+msgstr "Select-by-word characters"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
@@ -357,12 +355,14 @@ msgid "Underline"
 msgstr "Подвучено"
 
 #: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
