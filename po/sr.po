@@ -216,7 +216,6 @@ msgid "Na_me Tab"
 msgstr "И_меновани језичак"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "Прет_ходни лист"
 
