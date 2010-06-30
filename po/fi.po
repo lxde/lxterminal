@@ -2,12 +2,12 @@
 # Copyright (C) 2008
 # This file is distributed under the same license as the PACKAGE package.
 # Elias Julkunen <elias.julkunen@gmail.com>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-06-30 05:31+0000\n"
 "PO-Revision-Date: 2009-01-29 19:54+0200\n"
 "Last-Translator: Elias Julkunen <elias.julkunen@gmail.com>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -182,12 +182,10 @@ msgid "_Help"
 msgstr "_Ohje"
 
 #: ../src/lxterminal.c:141 ../src/lxterminal.c:163
-#, fuzzy
 msgid "New _Window"
 msgstr "_Uusi ikkuna"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
-#, fuzzy
 msgid "New _Tab"
 msgstr "Uusi _välilehti"
 
@@ -200,7 +198,6 @@ msgid "_Quit"
 msgstr "_Poistu"
 
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:166
-#, fuzzy
 msgid "Cop_y"
 msgstr "_Kopioi"
 
@@ -209,79 +206,72 @@ msgid "_Paste"
 msgstr "_Liitä"
 
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:169
-#, fuzzy
 msgid "Preference_s"
-msgstr "Asetukset"
+msgstr "_Asetukset"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Uusi _välilehti"
+msgstr ""
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Edellinen välilehti"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
-#, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_Seuraava välilehti"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Siirrä välilehti _vasemmalle"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Siirrä välilehti _oikealle"
 
 #: ../src/lxterminal.c:155
 msgid "_About"
 msgstr "_Tietoja"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
-#, fuzzy
+#: ../src/lxterminal.c:467
 msgid "Name Tab"
-msgstr "Uusi _välilehti"
+msgstr ""
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "Elias Julkunen <elias.julkunen@gmail.com>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Tekijänoikeudet (C) 2008"
+msgstr "Tekijänoikeudet (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "Pääteohjelma LXDE-projektille"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Lisäasetukset"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Salli lihavointi"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Päätteen äänimerkki"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Taustaväri:"
+msgstr "Taustaväri"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -308,21 +298,20 @@ msgid "Display"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Edustaväri:"
+msgstr "Edustaväri"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Piilota sulkemispainikkeet"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Piilota valikkopalkki"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide scroll bar"
-msgstr ""
+msgstr "Piilota vierityspalkki"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -333,28 +322,24 @@ msgid "Right"
 msgstr "Oikealla"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Takaisinvieritys (riviä):"
+msgstr "Takaisinvieritys"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Sanoina valittavat merkit:"
+msgstr "Sanoina valittavat merkit"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
-msgstr ""
+msgstr "Tyyli"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Välilehtipalkin sijainti:"
+msgstr "Välilehtipalkin sijainti"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Päätteen kirjasin:"
+msgstr "Päätteen kirjasin"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -362,7 +347,7 @@ msgstr "Ylhäällä"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "Alleviivaus"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
@@ -389,7 +374,6 @@ msgstr "Käytä komentoriviä"
 #~ msgid "_Preferences"
 #~ msgstr "_Asetukset"
 
-#, fuzzy
 #~ msgid "Transparent Background:"
 #~ msgstr "Taustaväri:"
 
