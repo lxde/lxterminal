@@ -1,25 +1,24 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-07-03 07:42+0000\n"
 "PO-Revision-Date: 2009-12-10 14:13+0100\n"
 "Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: SLOVENIA\n"
 "Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"X-Generator: Pootle 1.1.0\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Country: SLOVENIA\n"
-"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -241,51 +240,50 @@ msgid "_About"
 msgstr "_O programu"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365 ../src/lxterminal.c:587 ../src/lxterminal.c:662
+#: ../src/lxterminal.c:1175 ../src/lxterminal.c:1209 ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:467
 #, fuzzy
 msgid "Name Tab"
 msgstr "Nov _zavihek"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:580
 msgid "translator-credits"
 msgstr "paxman <paxmanpwnz@gmail.com>"
 
-#: ../src/lxterminal.c:592
-#, fuzzy
+#: ../src/lxterminal.c:589
 msgid "Copyright (C) 2008-2010"
-msgstr "Vse pravice pridržane (C) 2008"
+msgstr "Vse pravice pridržane (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:590
 msgid "Terminal emulator for LXDE project"
 msgstr "Konzola projekta LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Napredno"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Dovoli krepko pisavo"
 
 #: ../data/lxterminal-preferences.glade.h:3
+#, fuzzy
 msgid "Audible bell"
-msgstr ""
+msgstr "Zvočno opozorilo"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Ozadje:"
+msgstr "Ozadje"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blok"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -297,26 +295,26 @@ msgid "Cursor blink"
 msgstr "Utripanje kazalca"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Utripanje kazalca"
+msgstr "Stil kazalca"
 
 #: ../data/lxterminal-preferences.glade.h:9
+#, fuzzy
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Onemogoči menijsko bližnjico (privzeto F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "Prikaz"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "Barva pisave:"
+msgstr "Barva pisave"
 
 #: ../data/lxterminal-preferences.glade.h:12
+#, fuzzy
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Skrij gumbe za izhod"
 
 #: ../data/lxterminal-preferences.glade.h:13
 #, fuzzy
@@ -344,37 +342,36 @@ msgstr "Število zapomnjenih vrstic pri drsenju:"
 #: ../data/lxterminal-preferences.glade.h:18
 #, fuzzy
 msgid "Select-by-word characters"
-msgstr "Dovoljeni znaki za izbiranje z dvoklikom: "
+msgstr "Dovoljeni znaki za izbiranje z dvoklikom"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "Stil"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Položaj vrstice z zavihki:"
+msgstr "Položaj vrstice z zavihki"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
-msgstr "Pisava:"
+msgstr "Pisava terminala"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
 msgstr "Vrh"
 
 #: ../data/lxterminal-preferences.glade.h:23
+#, fuzzy
 msgid "Underline"
-msgstr ""
+msgstr "Podčrtano"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "gtk-cancel"
-msgstr ""
+msgstr "Prekliči"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-ok"
-msgstr ""
+msgstr "V redu"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
