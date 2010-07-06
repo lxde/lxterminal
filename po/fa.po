@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: 2010-01-26 10:48+0200\n"
-"Last-Translator: Hamidreza <n3gb0y@gmail.com>\n"
+"PO-Revision-Date: 2010-07-06 14:15+0330\n"
+"Last-Translator: Hamidreza Davoodi <hrdavodi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fa\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.0.1\n"
 
@@ -38,18 +38,27 @@ msgstr "جنوب شرقی و جنوبی غربی آسیا"
 msgid "Middle Eastern"
 msgstr "خاورمیانه"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
 msgstr "استاندارد یونیکد"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
 msgstr "غربی"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "اروپای میانه"
@@ -58,21 +67,31 @@ msgstr "اروپای میانه"
 msgid "South European"
 msgstr "جنوب اروپا"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
 msgstr "بالتیکی"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "سرلیک"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "تازی(عربي)"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
 msgstr "یونانی"
 
@@ -80,12 +99,16 @@ msgstr "یونانی"
 msgid "Hebrew Visual"
 msgstr "عبری بصری"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "عبری"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "ترکی"
@@ -98,7 +121,8 @@ msgstr "نوردیکی(شمال اروپا)"
 msgid "Celtic"
 msgstr "سیلتیکی"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
 msgstr "رومانیایی"
 
@@ -106,7 +130,9 @@ msgstr "رومانیایی"
 msgid "Armenian"
 msgstr "ارمنی"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "چینی باستانی"
 
@@ -114,16 +140,22 @@ msgstr "چینی باستانی"
 msgid "Cyrillic/Russian"
 msgstr "سرلیک روسی"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
 msgstr "ژاپنی"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "کره ای"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "چینی ساده"
@@ -132,7 +164,8 @@ msgstr "چینی ساده"
 msgid "Georgian"
 msgstr "گرجی"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "سرلیک اوکراینی"
 
@@ -160,7 +193,9 @@ msgstr "پنجابی"
 msgid "Icelandic"
 msgstr "ایسلندی"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "ویتنامی"
 
@@ -184,15 +219,18 @@ msgstr "تب ها"
 msgid "_Help"
 msgstr "کمک"
 
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:141
+#: ../src/lxterminal.c:163
 msgid "New _Window"
 msgstr "پنجره ی نو"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:142
+#: ../src/lxterminal.c:164
 msgid "New _Tab"
 msgstr "سربرگی تازه"
 
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:176
 msgid "_Close Tab"
 msgstr "بستن سربرگ"
 
@@ -200,36 +238,43 @@ msgstr "بستن سربرگ"
 msgid "_Quit"
 msgstr "خروج"
 
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:146
+#: ../src/lxterminal.c:166
 msgid "Cop_y"
 msgstr "رونوشت(کپی)"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:147
+#: ../src/lxterminal.c:167
 msgid "_Paste"
 msgstr "جای گذاری"
 
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:149
+#: ../src/lxterminal.c:169
 msgid "Preference_s"
 msgstr "تنظیمات"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:171
-#, fuzzy
+#: ../src/lxterminal.c:150
+#: ../src/lxterminal.c:171
 msgid "Na_me Tab"
-msgstr "سربرگی تازه"
+msgstr "سربرگی _تازه"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:151
+#: ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
 msgstr "سربرگ پیشین"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:173
 msgid "Ne_xt Tab"
 msgstr "سربرگ پسین"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:174
 msgid "Move Tab _Left"
 msgstr "سربرگ را به چب ببر"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:154
+#: ../src/lxterminal.c:175
 msgid "Move Tab _Right"
 msgstr "سربرگ را به راست ببر"
 
@@ -238,26 +283,29 @@ msgid "_About"
 msgstr "پیرامون(ما)"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:365
+#: ../src/lxterminal.c:590
+#: ../src/lxterminal.c:665
+#: ../src/lxterminal.c:1178
+#: ../src/lxterminal.c:1212
+#: ../src/preferences.c:200
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "پایانه ی LX"
 
 #: ../src/lxterminal.c:470
-#, fuzzy
 msgid "Name Tab"
 msgstr "سربرگی تازه"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
+#, fuzzy
 msgid "translator-credits"
-msgstr "Hamidreza Davoodi"
+msgstr "مترجم ها"
 
 #: ../src/lxterminal.c:592
-#, fuzzy
 msgid "Copyright (C) 2008-2010"
-msgstr "کپی رایت ۲۰۰۸"
+msgstr "کپی رایت 2008"
 
 #: ../src/lxterminal.c:593
 msgid "Terminal emulator for LXDE project"
@@ -265,66 +313,60 @@ msgstr "شبیه ساز پایانه برای پروژه ی LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "پیشرفته"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "اجازه ی قلم درشت "
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "زنگ شنیداری"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "(رنگ)پس زمینه:"
+msgstr "پس زمینه"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "قطعه"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "پایین"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "سوسوی(سرعت) مکان نما"
+msgstr "سوسوی مکان نما"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "سوسوی(سرعت) مکان نما"
+msgstr "حالت سوسوی مکان نما"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "غیر فعال کردن منو کلید میانبر (F10 به صورت پیش فرض)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Display"
 msgstr "تصویر"
 
 #: ../data/lxterminal-preferences.glade.h:11
-#, fuzzy
 msgid "Foreground"
-msgstr "رنگ قلم:"
+msgstr "پیش نما"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "دکمه های بسته را مخفی کن"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "پنهان کردن نوار منو:"
+msgstr "پنهان کردن نوار منو"
 
 # scroll?
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "پنهان کردن نوار حرکت دهنده"
+msgstr "پنهان کردن نوار محرک"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Left"
@@ -339,21 +381,18 @@ msgid "Scrollback lines"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "انتخاب با کلمه:"
+msgstr "انتخاب با کلمه"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Style"
 msgstr "سبک و روش"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Tab panel position"
-msgstr "موقعیت بخش(نواری) سربرگ: "
+msgstr "موقعیت پنل سربرگ"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Terminal font"
 msgstr "قلم پایانه"
 
@@ -363,15 +402,17 @@ msgstr "بالا"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Underline"
-msgstr ""
+msgstr "زیر خط"
 
 #: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
 msgid "gtk-cancel"
-msgstr ""
+msgstr "جی‌تی‌کی-انصراف"
 
 #: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
 msgid "gtk-ok"
-msgstr ""
+msgstr "جی‌تی‌کی-باشه"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -387,9 +428,8 @@ msgstr "استفاده از خط فرمان"
 #, fuzzy
 #~ msgid "Misc"
 #~ msgstr "متفرقه"
-
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "غیر فعال کردن میانبر F10 برای فهرست(منو):"
-
 #~ msgid "Preferences"
 #~ msgstr "تنظیمات"
+
