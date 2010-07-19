@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-09 04:14+0000\n"
+"POT-Creation-Date: 2010-07-19 05:31+0000\n"
 "PO-Revision-Date: 2010-04-13 20:10+0100\n"
 "Last-Translator: Lutz Thuns <lOtz1009@opensuse.org>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -196,7 +196,7 @@ msgstr "Neuer _Reiter"
 
 #: ../src/lxterminal.c:144 ../src/lxterminal.c:176
 msgid "_Close Tab"
-msgstr "Reiter _schließen"
+msgstr "Reiter s_chließen"
 
 #: ../src/lxterminal.c:145
 msgid "_Quit"
@@ -274,9 +274,8 @@ msgid "Allow bold font"
 msgstr "Fett gedruckte Schrift erlauben"
 
 #: ../data/lxterminal-preferences.glade.h:3
-#, fuzzy
 msgid "Audible bell"
-msgstr "Hörbares Signal"
+msgstr "Akkutisches Signal"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
@@ -284,7 +283,7 @@ msgstr "Hintergrund:"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Block"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -295,9 +294,8 @@ msgid "Cursor blink"
 msgstr "Blinkender Cursor:"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Art des Cursors:"
+msgstr "Art des Mauszeigers:"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
