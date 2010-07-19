@@ -42,6 +42,7 @@ typedef struct _setting {
     gboolean hide_close_button;		/* True if close buttons are NOT visible */
     char * word_selection_characters;	/* Characters that act as word breaks during selection by word */
     gboolean disable_f10;		/* True if F10 will be passed to program; false if it brings up File menu */
+    gboolean disable_alt;		/* True if Alt-n is passed to shell; false if it is used to switch between tabs */
 
     gboolean geometry_change;		/* True if there is a geometry change, until it has been acted on */
 

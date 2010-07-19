@@ -55,6 +55,7 @@ void setting_save(Setting * setting)
     g_key_file_set_boolean(setting->keyfile, "general", "hideclosebutton", setting->hide_close_button);
     g_key_file_set_string(setting->keyfile, "general", "selchars", setting->word_selection_characters);
     g_key_file_set_boolean(setting->keyfile, "general", "disablef10", setting->disable_f10);
+    g_key_file_set_boolean(setting->keyfile, "general", "disablealt", setting->disable_alt);
 
     /* Convert GKeyFile to text and build path to configuration file. */
     gchar * file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
@@ -113,6 +114,7 @@ Setting * load_setting_from_file(const char * filename)
         setting->hide_close_button = g_key_file_get_boolean(setting->keyfile, "general", "hideclosebutton", NULL);
         setting->word_selection_characters = g_key_file_get_string(setting->keyfile, "general", "selchars", NULL);
         setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, "general", "disablef10", NULL);
+        setting->disable_alt = g_key_file_get_boolean(setting->keyfile, "general", "disablealt", NULL);
     }
 
     /* Default configuration strings. */
