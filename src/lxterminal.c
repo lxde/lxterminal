@@ -68,6 +68,7 @@ static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
 
 /* Menu and accelerator event handlers. */
 static void terminal_initialize_switch_tab_accelerator(Term * term);
+static void terminal_set_disable_alt(Term *term, gboolean disable_alt);
 static void terminal_switch_tab_accelerator(Term * term);
 static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
@@ -300,7 +301,23 @@ static void terminal_initialize_switch_tab_accelerator(Term * term)
 
         /* Define the accelerator. */
         term->closure = g_cclosure_new_swap(G_CALLBACK(terminal_switch_tab_accelerator), term, NULL);
-        gtk_accel_group_connect(term->parent->accel_group, key, mods, GTK_ACCEL_LOCKED, term->closure);
+        if (gtk_accel_group_from_accel_closure(term->closure) == NULL)
+            gtk_accel_group_connect(term->parent->accel_group, key, mods, GTK_ACCEL_LOCKED, term->closure);
+    }
+}
+
+/* whether disable alt-n to switch tabs or not. */
+void terminal_set_disable_alt(Term * term, gboolean disable_alt)
+{
+    if (GTK_IS_ACCEL_GROUP(term->parent->accel_group))
+    {
+        if (disable_alt)
+        {
+            if (term->closure != NULL)
+                gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
+        }
+        else
+            terminal_initialize_switch_tab_accelerator(term);
     }
 }
 
@@ -378,7 +395,9 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
         terminal_window_set_fixed_size(terminal);
         gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), TRUE);
     }
-    terminal_initialize_switch_tab_accelerator(term);
+
+    /* Disable Alt-n switch tabs or not. */
+    terminal_set_disable_alt(term, terminal->setting->disable_alt);
 }
 
 /* Handler for accelerator <SHIFT><CTRL> T.  Open a new tab. */
@@ -936,7 +955,8 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 /* Deallocate a Term structure. */
 static void terminal_free(Term * term)
 {
-    gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
+    if ((GTK_IS_ACCEL_GROUP(term->parent->accel_group)) && (term->closure != NULL))
+        gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
     g_free(term);
 }
 
@@ -945,11 +965,11 @@ static void terminal_menubar_initialize(LXTerminal * terminal)
 {
     /* Initialize UI manager. */
     GtkUIManager * manager = gtk_ui_manager_new();
-    GtkActionGroup * action_group = gtk_action_group_new("MenuBar");
-    gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
-    gtk_action_group_add_actions(action_group, menus, MENUBAR_MENU_COUNT, terminal);
-    gtk_action_group_add_actions(action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
-    gtk_ui_manager_insert_action_group(manager, action_group, 0);
+    terminal->action_group = gtk_action_group_new("MenuBar");
+    gtk_action_group_set_translation_domain(terminal->action_group, GETTEXT_PACKAGE);
+    gtk_action_group_add_actions(terminal->action_group, menus, MENUBAR_MENU_COUNT, terminal);
+    gtk_action_group_add_actions(terminal->action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
+    gtk_ui_manager_insert_action_group(manager, terminal->action_group, 0);
 
     guint merge_id = gtk_ui_manager_new_merge_id(manager);
     gtk_ui_manager_add_ui(manager, merge_id, "/", "MenuBar", NULL, GTK_UI_MANAGER_MENUBAR, FALSE);
@@ -1223,7 +1243,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 
     /* Initialize accelerators. */
     terminal_accelerator_initialize(terminal);
-    terminal_initialize_switch_tab_accelerator(term);
 
     /* Update terminal settings. */
     terminal_settings_apply(terminal);
@@ -1248,7 +1267,10 @@ static void terminal_settings_apply(LXTerminal * terminal)
     /* Apply settings to all windows. */
     int i;
     for (i = 0; i < terminal->terms->len; i += 1)
+    {
         terminal_settings_apply_to_term(terminal, g_ptr_array_index(terminal->terms, i));
+        terminal_set_disable_alt(g_ptr_array_index(terminal->terms, i), terminal->setting->disable_alt);
+    }
 
     /* Update tab position. */
     terminal->tab_position = terminal_tab_get_position_id(terminal->setting->tab_position);

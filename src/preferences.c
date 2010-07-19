@@ -41,6 +41,7 @@ static void preferences_dialog_hide_menu_bar_toggled_event(GtkToggleButton * wid
 static void preferences_dialog_hide_close_button_toggled_event(GtkToggleButton * widget, LXTerminal * terminal);
 static gboolean preferences_dialog_selection_focus_out_event(GtkWidget * widget, GdkEventFocus * event, LXTerminal * terminal);
 static void preferences_dialog_disable_f10_toggled_event(GtkToggleButton * widget, LXTerminal * terminal);
+static void preferences_dialog_disable_alt_toggled_event(GtkToggleButton * widget, LXTerminal * terminal);
 
 /* Handler for "response" signal on preferences dialog. */
 static void preferences_dialog_response_event(GtkWidget * dialog, gint response, LXTerminal * terminal)
@@ -170,6 +171,13 @@ static void preferences_dialog_disable_f10_toggled_event(GtkToggleButton * widge
     terminal_settings_apply_to_all(terminal);
 }
 
+/* Handler for "toggled" signal on Disable Alt toggle button. */
+static void preferences_dialog_disable_alt_toggled_event(GtkToggleButton * widget, LXTerminal * terminal)
+{
+    terminal->setting->disable_alt = gtk_toggle_button_get_active(widget);
+    terminal_settings_apply_to_all(terminal);
+}
+
 /* Convert the user preference on tab position, expressed as a string, to the internal representation.
  * These have to match the order in the .glade file. */
 gint terminal_tab_get_position_id(gchar * position)
@@ -260,6 +268,10 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     w = GTK_WIDGET(gtk_builder_get_object(builder, "disable_f10"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->disable_f10);
     g_signal_connect(G_OBJECT(w), "toggled", G_CALLBACK(preferences_dialog_disable_f10_toggled_event), terminal);
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "disable_alt"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->disable_alt);
+    g_signal_connect(G_OBJECT(w), "toggled", G_CALLBACK(preferences_dialog_disable_alt_toggled_event), terminal);
 
     gtk_widget_show_all(dialog);
     g_object_unref(builder);

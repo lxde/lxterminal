@@ -52,6 +52,7 @@ typedef struct _lxterminal {
     GtkWidget * window;				/* Toplevel window */
     GtkWidget * box;				/* Vertical box, child of toplevel window */
     GtkWidget * menu;				/* Menu bar, child of vertical box */
+    GtkActionGroup *action_group;   /* Action group on this window */
     GtkAccelGroup * accel_group;		/* Accelerator group for accelerators on this window */
     GtkWidget * notebook;			/* Notebook, child of vertical box */
     GPtrArray * terms;				/* Array of pointers to Term structures */
