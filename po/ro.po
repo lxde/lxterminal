@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXDE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-07-20 09:51+0200\n"
 "PO-Revision-Date: 2010-01-24 11:10-0800\n"
 "Last-Translator: alexxed <alexxed@gmail.com>\n"
 "Language-Team: Romanian <LL@li.org>\n"
@@ -163,98 +163,98 @@ msgstr "Vietnameză"
 msgid "Thai"
 msgstr "Tailandeză"
 
-#: ../src/lxterminal.c:131
+#: ../src/lxterminal.c:132
 msgid "_File"
 msgstr "_Fișier"
 
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:133
 msgid "_Edit"
 msgstr "_Editare"
 
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:134
 msgid "_Tabs"
 msgstr "_File"
 
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:135
 msgid "_Help"
 msgstr "_Ajutor"
 
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
 msgstr "_Fereastră nouă"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
 msgstr "_Filă nouă"
 
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
 msgstr "În_chide fila"
 
-#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:146
 msgid "_Quit"
 msgstr "_Ieșire"
 
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
 msgstr "_Copiază"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
 msgstr "Li_pește"
 
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
 msgstr "_Preferințe"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 #, fuzzy
 msgid "Na_me Tab"
 msgstr "_Filă nouă"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
 msgstr "_Fila precedentă"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
 msgstr "_Fila următoare"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
 msgstr "Mută fi_la spre stânga"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
 msgstr "Mută fila sp_re dreapta"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:156
 msgid "_About"
 msgstr "_Despre"
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
+#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:486
 #, fuzzy
 msgid "Name Tab"
 msgstr "_Filă nouă"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:599
 msgid "translator-credits"
 msgstr "Comunitatea de traducători de pe tradu.softwareliber.ro"
 
-#: ../src/lxterminal.c:592
+#: ../src/lxterminal.c:608
 #, fuzzy
 msgid "Copyright (C) 2008-2010"
 msgstr "Drepturi de autor pe 2008"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:609
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator de terminal pentru proiectul LXDE"
 
@@ -298,73 +298,77 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:10
+msgid "Disable using Alt-n to switch tabs"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Afișare"
 
-#: ../data/lxterminal-preferences.glade.h:11
+#: ../data/lxterminal-preferences.glade.h:12
 #, fuzzy
 msgid "Foreground"
 msgstr "Prim plan:"
 
-#: ../data/lxterminal-preferences.glade.h:12
+#: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:13
+#: ../data/lxterminal-preferences.glade.h:14
 #, fuzzy
 msgid "Hide menu bar"
 msgstr "Ascunde bara de meniu:"
 
-#: ../data/lxterminal-preferences.glade.h:14
+#: ../data/lxterminal-preferences.glade.h:15
 #, fuzzy
 msgid "Hide scroll bar"
 msgstr "Ascunde bara de derulare:"
 
-#: ../data/lxterminal-preferences.glade.h:15
+#: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
 msgstr "Stânga"
 
-#: ../data/lxterminal-preferences.glade.h:16
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Right"
 msgstr "Dreapta"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 #, fuzzy
 msgid "Scrollback lines"
 msgstr "Linii de derulat înapoi:"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 #, fuzzy
 msgid "Select-by-word characters"
 msgstr "Selectare caractere după cuvânt:"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
 msgstr "Stil"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 #, fuzzy
 msgid "Tab panel position"
 msgstr "Poziția capetelor de filă:"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 #, fuzzy
 msgid "Terminal font"
 msgstr "Font pentru terminal:"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
 msgstr "Sus"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
 msgstr ""
 

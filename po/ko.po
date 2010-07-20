@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 00:22+0200\n"
+"POT-Creation-Date: 2010-07-20 09:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,95 +166,95 @@ msgstr ""
 msgid "Thai"
 msgstr ""
 
-#: ../src/lxterminal.c:131
+#: ../src/lxterminal.c:132
 msgid "_File"
 msgstr ""
 
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:133
 msgid "_Edit"
 msgstr ""
 
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:134
 msgid "_Tabs"
 msgstr ""
 
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:135
 msgid "_Help"
 msgstr ""
 
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
 msgstr ""
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:146
 msgid "_Quit"
 msgstr ""
 
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
 msgstr ""
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
 msgstr ""
 
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
 msgstr ""
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
 msgstr ""
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
 msgstr ""
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
 msgstr ""
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:156
 msgid "_About"
 msgstr ""
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
+#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr ""
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:486
 msgid "Name Tab"
 msgstr ""
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:599
 msgid "translator-credits"
 msgstr ""
 
-#: ../src/lxterminal.c:592
+#: ../src/lxterminal.c:608
 msgid "Copyright (C) 2008-2010"
 msgstr ""
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:609
 msgid "Terminal emulator for LXDE project"
 msgstr ""
 
@@ -295,67 +295,71 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Display"
+msgid "Disable using Alt-n to switch tabs"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
-msgid "Foreground"
+msgid "Display"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:12
-msgid "Hide Close buttons"
+msgid "Foreground"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:13
-msgid "Hide menu bar"
+msgid "Hide Close buttons"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:14
-msgid "Hide scroll bar"
+msgid "Hide menu bar"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:15
-msgid "Left"
+msgid "Hide scroll bar"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:16
-msgid "Right"
+msgid "Left"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:17
-msgid "Scrollback lines"
+msgid "Right"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:18
-msgid "Select-by-word characters"
+msgid "Scrollback lines"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:19
-msgid "Style"
+msgid "Select-by-word characters"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:20
-msgid "Tab panel position"
+msgid "Style"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:21
+msgid "Tab panel position"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:22
 #, fuzzy
 msgid "Terminal font"
 msgstr "터미널"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
 msgstr ""
 

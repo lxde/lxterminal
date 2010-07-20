@@ -1,15 +1,15 @@
 # Spanish translation of lxterminal
 # Copyright (C) 2008 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-# 
+#
 # Daniel Pacheco <daniel@tunki.org>, 2008.
 # Julio Napurí Carlos <julionc@gmail.com>, 2008.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-30 04:12+0000\n"
+"POT-Creation-Date: 2010-07-20 09:51+0200\n"
 "PO-Revision-Date: 2010-01-20 14:38+0200\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -171,88 +171,88 @@ msgstr "Vietnamita"
 msgid "Thai"
 msgstr "Tailandés"
 
-#: ../src/lxterminal.c:131
+#: ../src/lxterminal.c:132
 msgid "_File"
 msgstr "_Archivo"
 
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:133
 msgid "_Edit"
 msgstr "_Edición"
 
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:134
 msgid "_Tabs"
 msgstr "_Pestañas"
 
 # subrayar la y puede resultar confuso en ciertas tipografías
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:135
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
 msgstr "Nueva _ventana"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
 msgstr "Nueva pes_taña"
 
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
 msgstr "_Cerrar pestaña"
 
-#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:146
 msgid "_Quit"
 msgstr "_Salir"
 
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
 msgstr "C_opiar"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
 msgstr "_Pegar"
 
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
 msgstr "Pre_ferencias"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
 msgstr "Nombrar pes_taña"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
 msgstr "Pestaña a_nterior"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
 msgstr "Pestaña s_iguiente"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
 msgstr "Mo_ver pestaña a la izquierda"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
 msgstr "Mover pestaña a la _derecha"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:156
 msgid "_About"
 msgstr "_Acerca de ..."
 
 #. Set window title.
-#: ../src/lxterminal.c:365 ../src/lxterminal.c:590 ../src/lxterminal.c:665
-#: ../src/lxterminal.c:1178 ../src/lxterminal.c:1212 ../src/preferences.c:200
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
+#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:470
+#: ../src/lxterminal.c:486
 msgid "Name Tab"
 msgstr "Nombrar pestaña"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:583
+#: ../src/lxterminal.c:599
 msgid "translator-credits"
 msgstr ""
 "Daniel Pacheco <daniel@tunki.org>, 2008\n"
@@ -260,11 +260,11 @@ msgstr ""
 "Guillermo Iguarán <tronador@cuteam.org>, 2009\n"
 "Hugo Florentino <sysadmin@cips.cu>, 2009"
 
-#: ../src/lxterminal.c:592
+#: ../src/lxterminal.c:608
 msgid "Copyright (C) 2008-2010"
 msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:593
+#: ../src/lxterminal.c:609
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal para el proyecto LXDE"
 
@@ -305,66 +305,70 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Deshabilitar tecla de atajo (F10 por defecto)"
 
 #: ../data/lxterminal-preferences.glade.h:10
+msgid "Disable using Alt-n to switch tabs"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Mostrar"
 
-#: ../data/lxterminal-preferences.glade.h:11
+#: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
 msgstr "Primer plano"
 
-#: ../data/lxterminal-preferences.glade.h:12
+#: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
 msgstr "Ocultar botón de cierre"
 
-#: ../data/lxterminal-preferences.glade.h:13
+#: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
 msgstr "Ocultar la barra de menú"
 
-#: ../data/lxterminal-preferences.glade.h:14
+#: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide scroll bar"
 msgstr "Ocultar la barra de desplazamiento"
 
-#: ../data/lxterminal-preferences.glade.h:15
+#: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
 msgstr "Izquierda"
 
-#: ../data/lxterminal-preferences.glade.h:16
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Right"
 msgstr "Derecha"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Scrollback lines"
 msgstr "Líneas de desplazamiento"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
 msgstr "Caracteres de selección por palabra"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
 msgstr "Estilo"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Tab panel position"
 msgstr "Posición del panel de pestañas"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Terminal font"
 msgstr "Tipografía de la terminal"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
 msgstr "Superior"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
 msgstr "Subrayado"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
 msgstr "gtk-ok"
 
