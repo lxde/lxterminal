@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
-"PO-Revision-Date: 2010-04-01 10:38+0100\n"
+"POT-Creation-Date: 2010-07-20 05:33+0000\n"
+"PO-Revision-Date: 2010-07-20 10:38+0100\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -299,7 +299,7 @@ msgstr "Deaktiver menugenvejstast (F10 som standard)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Deaktiver brug af Alt-n til skift mellem faneblade"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -373,14 +373,4 @@ msgstr "Terminal"
 msgid "Use the command line"
 msgstr "Brug kommandolinjen"
 
-#~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr "Kunne ikke starte internetbrowseren. Kommandoen var »%s«\n"
 
-#~ msgid "Misc"
-#~ msgstr "Andet"
-
-#~ msgid "Disable F10 shortcut for menu:"
-#~ msgstr "Slå F10-tasten for menuer fra:"
-
-#~ msgid "Preferences"
-#~ msgstr "Indstillinger"
