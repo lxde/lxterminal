@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-30 00:22+0200\n"
-"PO-Revision-Date: 2010-03-30 00:25+0100\n"
+"PO-Revision-Date: 2010-07-20 09:46+0100\n"
 "Last-Translator: Andrea Florio <andrea@opensuse.org>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -303,7 +303,10 @@ msgstr "Nome Scheda"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:583
 msgid "translator-credits"
-msgstr "Fabio Barone<phonky@gmx.net>Alessandro Pellizzari <alex@amiran.it>"
+msgstr ""
+"Andrea Florio <andrea@opensuse.org>\n"
+"Alessandro Pellizzari <alex@amiran.it>\n"
+"Fabio Barone<phonky@gmx.net>"
 
 #: ../src/lxterminal.c:592
 msgid "Copyright (C) 2008-2010"
@@ -423,18 +426,25 @@ msgstr "Usa la riga di comando"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Errore nell'avviare il browser web. Il comando era `%s'\n"
+
 #~ msgid "Misc"
 #~ msgstr "Varie"
+
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Disabilita tasto scorciatoia F10 per i menù:"
+
 #~ msgid "Preferences"
 #~ msgstr "Impostazioni"
+
 #~ msgid "General"
 #~ msgstr "Generale"
+
 #~ msgid "_Preferences"
 #~ msgstr "Impostazioni"
+
 #~ msgid "Transparent Background:"
 #~ msgstr "Sfondo trasparente:"
+
 #~ msgid "_View"
 #~ msgstr "_Visualizzare"
 
@@ -445,30 +455,42 @@ msgstr "Usa la riga di comando"
 #, fuzzy
 #~ msgid "/_File/_New Window"
 #~ msgstr "Caratteri per scelta tramite parola:"
+
 #~ msgid "/_File/_New Tab"
 #~ msgstr "/_File/Nuova _Scheda"
+
 #~ msgid "/_File/sep1"
 #~ msgstr "/_File/sep1"
+
 #~ msgid "/_File/_Close Tab"
 #~ msgstr "/_File/_Chiudere scheda"
+
 #~ msgid "/_File/_Quit"
 #~ msgstr "/_File/_Escere"
+
 #~ msgid "/_Edit/_Copy"
 #~ msgstr "/_Modificare/_Copiare"
+
 #~ msgid "/_Edit/_Paste"
 #~ msgstr "/_Modificare/_Inserire"
+
 #~ msgid "/_Edit/sep1"
 #~ msgstr "/_Bearbeiten/sep1"
+
 #~ msgid "/_Edit/_Preferences..."
 #~ msgstr "/_Modificare/_Inserire"
+
 #~ msgid "/_Tabs/_Next Tab"
 #~ msgstr "/_Schede/Scheda _successiva"
+
 #~ msgid "/sep1"
 #~ msgstr "/sep1"
+
 #~ msgid "/sep2"
 #~ msgstr "/sep2"
+
 #~ msgid "/_Preferences..."
 #~ msgstr "/Im_postazioni..."
+
 #~ msgid "/sep3"
 #~ msgstr "/sep3"
-
