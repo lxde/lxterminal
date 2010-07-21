@@ -1244,11 +1244,11 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     /* Initialize accelerators. */
     terminal_accelerator_initialize(terminal);
 
-    /* Update terminal settings. */
-    terminal_settings_apply(terminal);
-
     /* Show the widget, so it is realized and has a window. */
     gtk_widget_show_all(terminal->window);
+
+    /* Update terminal settings. */
+    terminal_settings_apply(terminal);
 
     /* Initialize the geometry hints. */
     gdk_window_get_geometry_hints(GTK_WIDGET(term->vte)->window, &terminal->geometry, &terminal->geometry_mask);
