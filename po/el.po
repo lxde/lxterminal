@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-07-21 05:31+0000\n"
 "PO-Revision-Date: 2010-01-12 14:47+0100\n"
 "Last-Translator: George Vasilakos <forfolias@linuxteam.cs.teilar.gr>\n"
 "Language-Team: Greek\n"
@@ -300,7 +300,7 @@ msgstr "Απενεργοποίηση πλήκτρου συντόμευσης μ�
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Απενεργοποίηση με χρήση του Alt-n για αλλαγή μεταξύ των καρτελών"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
