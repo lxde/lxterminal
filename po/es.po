@@ -1,15 +1,15 @@
 # Spanish translation of lxterminal
 # Copyright (C) 2008 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-#
+# 
 # Daniel Pacheco <daniel@tunki.org>, 2008.
 # Julio Napurí Carlos <julionc@gmail.com>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-07-22 05:42+0000\n"
 "PO-Revision-Date: 2010-01-20 14:38+0200\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -17,9 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"X-Generator: Pootle 2.0.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Spanish\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -306,7 +306,7 @@ msgstr "Deshabilitar tecla de atajo (F10 por defecto)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Deshabilitar el uso de Alt-n para cambiar de pestañas"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
