@@ -1,9 +1,9 @@
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-07-24 05:40+0000\n"
 "PO-Revision-Date: 2010-01-12 23:29+0100\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
@@ -292,7 +292,7 @@ msgstr "Виключити скорочення клавіатури для ме
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Заборонити використання Alt-n для перемикання між вкладками"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
