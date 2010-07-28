@@ -737,6 +737,9 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
         {
             Term * t = g_ptr_array_index(terminal->terms, i);
             t->index -= 1;
+            if ((GTK_IS_ACCEL_GROUP(t->parent->accel_group)) && (t->closure != NULL))
+                gtk_accel_group_disconnect(t->parent->accel_group, t->closure);
+            terminal_set_disable_alt(t, t->parent->setting->disable_alt);
         }
 
         /* Delete the tab and free the Term structure. */
