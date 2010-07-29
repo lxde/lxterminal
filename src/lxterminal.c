@@ -532,7 +532,8 @@ static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal 
 /* Handler for accelerator <CTRL><PAGE UP>.  Cycle through tabs in the reverse direction. */
 static void terminal_previous_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
-    terminal_previous_tab_activate_event(NULL, terminal);
+    GtkAction *_action = gtk_action_group_get_action(terminal->action_group, "Tabs_PreviousTab");
+    gtk_action_activate(_action);
 }
 
 /* Handler for "activate" signal on Tabs/Next Tab menu item.
@@ -549,7 +550,8 @@ static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * te
 /* Handler for accelerator <CTRL><PAGE DOWN>.  Cycle through tabs in the forward direction. */
 static void terminal_next_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
-    terminal_next_tab_activate_event(NULL, terminal);
+    GtkAction *_action = gtk_action_group_get_action(terminal->action_group, "Tabs_NextTab");
+    gtk_action_activate(_action);
 }
 
 /* Helper for move tab left and right. */
