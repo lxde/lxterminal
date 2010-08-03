@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-20 09:51+0200\n"
-"PO-Revision-Date: 2008-08-05 15:28+0800\n"
-"Last-Translator: ideal Shang <05281253@bjtu.edu.cn>\n"
+"PO-Revision-Date: 2010-07-21 22:28+0800\n"
+"Last-Translator: ideal Shang <idealities@gmail.com>\n"
 "Language-Team: zh_CN <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -205,9 +205,8 @@ msgid "Preference_s"
 msgstr "首选项(_S)"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "新建标签(_T)"
+msgstr "标签名称(_M)"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -237,19 +236,17 @@ msgid "LXTerminal"
 msgstr "LX 终端"
 
 #: ../src/lxterminal.c:486
-#, fuzzy
 msgid "Name Tab"
-msgstr "新建标签(_T)"
+msgstr "标签名称"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:599
 msgid "translator-credits"
-msgstr "商源纯 <05281253@bjtu.edu.cn>"
+msgstr "商源纯 <idealities@gmail.com>"
 
 #: ../src/lxterminal.c:608
-#, fuzzy
 msgid "Copyright (C) 2008-2010"
-msgstr "版权所有 (C) 2008"
+msgstr "版权所有 (C) 2008-2010"
 
 #: ../src/lxterminal.c:609
 msgid "Terminal emulator for LXDE project"
@@ -257,69 +254,63 @@ msgstr "LXDE 计划的终端模拟器"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "高级"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "允许粗体字"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "可闻响铃"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "背景："
+msgstr "背景"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "块"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "下"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "光标闪烁："
+msgstr "光标闪烁"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "光标闪烁："
+msgstr "光标样式"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "禁止菜单快捷键(默认为F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "禁止使用 Alt-n 快捷键切换标签"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "显示"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "前景："
+msgstr "前景"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "隐藏关闭按钮"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "隐藏菜单栏："
+msgstr "隐藏菜单栏"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "隐藏滚动条："
+msgstr "隐藏滚动条"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -330,28 +321,24 @@ msgid "Right"
 msgstr "右"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "回滚行数："
+msgstr "回滚行数"
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "选取词时会选取以下的字符："
+msgstr "选取词时会选取以下的字符"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
 msgstr "样式"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Tab panel position"
-msgstr "标签面板位置："
+msgstr "标签面板位置"
 
 #: ../data/lxterminal-preferences.glade.h:22
-#, fuzzy
 msgid "Terminal font"
-msgstr "终端字体："
+msgstr "终端字体"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
@@ -359,15 +346,15 @@ msgstr "上"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr ""
+msgstr "下划线"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr ""
+msgstr "取消"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
-msgstr ""
+msgstr "确定"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
