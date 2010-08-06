@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-24 05:40+0000\n"
+"POT-Creation-Date: 2010-08-06 05:42+0000\n"
 "PO-Revision-Date: 2010-01-12 23:29+0100\n"
 "Last-Translator: Y P <yupadmin@gmail.com>\n"
 "Language-Team: Ukrainian\n"
@@ -94,7 +94,7 @@ msgstr "Кельтське"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr "Південноєвропейське"
+msgstr "Румунське"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
@@ -231,8 +231,8 @@ msgid "_About"
 msgstr "_Про"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LX-термінал"
@@ -242,15 +242,15 @@ msgid "Name Tab"
 msgstr "Назвати вкладку"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr "Yarema aka Knedlyk <yupadmin@gmail.com>"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
 msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "Емулятор терміналу для проекту LXDE"
 
