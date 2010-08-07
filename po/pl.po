@@ -2,8 +2,8 @@
 # Spanish translation of lxterminal
 # Copyright (C) 2008 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-#
-#
+# 
+# 
 # Daniel Pacheco <daniel@tunki.org>, 2008.
 # Julio Napurí Carlos <julionc@gmail.com>, 2008.
 # Grzegorz Gibas <amigib@gmail.com>, 2008, 2009.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl_PL\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-08-07 05:44+0000\n"
 "PO-Revision-Date: 2010-04-06 21:21+0100\n"
 "Last-Translator: Grzegorz Gibas <amigib@gmail.com>\n"
 "Language-Team: Polish\n"
@@ -20,8 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Spanish\n"
 "X-Generator: Pootle 2.0.0\n"
 
@@ -244,8 +243,8 @@ msgid "_About"
 msgstr "_O programie"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
@@ -255,15 +254,15 @@ msgid "Name Tab"
 msgstr "Nazwa Karty"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr "Grzegorz Gibas <amigib@gmail.com>"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
 msgstr "Prawa zastrzeżone (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator terminala dla projektu LXDE"
 
@@ -305,7 +304,7 @@ msgstr "Wyłącz skrót klawiszowy dla menu (F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Wyłącz używanie Alt-n do przełączania kart"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -380,8 +379,7 @@ msgid "Use the command line"
 msgstr "Wiersz poleceń"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr ""
-#~ "Nie udało się uruchomić przeglądarki. Polecenie startujące to `%s'\n"
+#~ msgstr "Nie udało się uruchomić przeglądarki. Polecenie startujące to `%s'\n"
 
 #~ msgid "Misc"
 #~ msgstr "Inne"
