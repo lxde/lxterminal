@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-08-07 05:44+0000\n"
 "PO-Revision-Date: 2010-04-05 15:07+0200\n"
 "Last-Translator: Horatio <hosoka@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -213,9 +213,8 @@ msgid "Preference_s"
 msgstr "Voorkeuren"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Nieuw Tabblad"
+msgstr ""
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -238,27 +237,26 @@ msgid "_About"
 msgstr "Over"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
-#, fuzzy
 msgid "Name Tab"
-msgstr "Nieuw Tabblad"
+msgstr ""
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr "Sander De Voogdt <celettu@gmail.com>"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
 msgstr "Copyright (C) 2008-"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal Emulator voor het LXDE project"
 
@@ -280,7 +278,7 @@ msgstr "Achtergrond"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blokkeer"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -300,25 +298,23 @@ msgstr "Menu sneltoets uitschakelen (Standaard F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Schakel Alt-n uit voor het wisselen van tabbladen"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Beeld"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "Voorgrond"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
 msgstr "Verberg Sluit toetsen"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Verberg menu bar"
+msgstr "Verberg menubalk"
 
 #: ../data/lxterminal-preferences.glade.h:15
 #, fuzzy
@@ -334,14 +330,12 @@ msgid "Right"
 msgstr "Rechts"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Lijnen in de geschiedenis"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Tekens om per woord te selecteren"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
