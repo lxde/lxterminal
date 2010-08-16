@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-08-16 05:45+0000\n"
 "PO-Revision-Date: 2010-07-06 13:25+0200\n"
 "Last-Translator: Hamidreza <n3gb0y@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,8 +237,8 @@ msgid "_About"
 msgstr "_درباره"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "پایانه ی LX"
@@ -248,15 +248,15 @@ msgid "Name Tab"
 msgstr "سربرگی تازه"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr "Hamidreza DavoodiAli Yousefi Sabzevar"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
 msgstr "حق نشر(-2010c) 2008"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "شبیه ساز پایانه برای پروژه ی LXDE"
 
@@ -298,7 +298,7 @@ msgstr "غیر فعال کردن منو کلید میانبر (F10 به صورت
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "غیرفعال سازی Alt-n برای جابه جایی زبانه ها"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -376,7 +376,6 @@ msgstr "استفاده از خط فرمان"
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "شکست در اجرای مرورگر. دستور `%s  بود.\n"
 
-#, fuzzy
 #~ msgid "Misc"
 #~ msgstr "متفرقه"
 
