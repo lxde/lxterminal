@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-08-25 05:44+0000\n"
 "PO-Revision-Date: 2009-05-23 03:59+0200\n"
 "Last-Translator: Rahman Yusri Aftian <aftian@yahoo.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
@@ -183,12 +183,10 @@ msgid "_Help"
 msgstr "Ba_ntuan"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
-#, fuzzy
 msgid "New _Window"
 msgstr "_Jendela Baru"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
-#, fuzzy
 msgid "New _Tab"
 msgstr "_Tab Baru"
 
@@ -201,7 +199,6 @@ msgid "_Quit"
 msgstr "_Keluar"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
-#, fuzzy
 msgid "Cop_y"
 msgstr "S_alin"
 
@@ -210,83 +207,76 @@ msgid "_Paste"
 msgstr "_Tempel"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
-#, fuzzy
 msgid "Preference_s"
-msgstr "Pengaturan"
+msgstr "_Pengaturan"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "_Tab Baru"
+msgstr "Tab Na_ma"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
-#, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_Tab Sebelumnya"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
-#, fuzzy
 msgid "Ne_xt Tab"
 msgstr "Ta_b Setelahnya"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Pindahkan Tab ke Ki_ri"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Pindahkan Tab ke Ka_nan"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
 msgstr "_Tentang"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
-#, fuzzy
 msgid "Name Tab"
-msgstr "_Tab Baru"
+msgstr "Tab Nama"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr "Andhika Padmawan <andhika.padmawan@gmail.com>, 2009."
 
-#: ../src/lxterminal.c:608
-#, fuzzy
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
-msgstr "Hak Cipta (C) 2008"
+msgstr "Hak Cipta (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator terminal untuk proyek LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Tingkat lanjut"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Ijinkan fonta tebal"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Bel bersuara"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Latar belakang:"
+msgstr "Latar belakang"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blok"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -294,40 +284,39 @@ msgstr "Bawah"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor blink"
-msgstr ""
+msgstr "Kursor berkedip"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr ""
+msgstr "Gaya kursor"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Nonaktifkan kunci pintas menu (bawaan adalah F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Nonaktifkan penggunaan Alt-n untuk bertukar tab"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
-msgstr ""
+msgstr "Tampilan"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "Latar depan:"
+msgstr "Latar depan"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Sembunyikan tombol Tutup"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Sembunyikan bilah menu"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide scroll bar"
-msgstr ""
+msgstr "Sembunyikan bilah penggulung"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -338,28 +327,24 @@ msgid "Right"
 msgstr "Kanan"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Baris gulung balik:"
+msgstr "Baris gulung balik"
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Karakter pilih-berdasarkan-kata:"
+msgstr "Karakter pilih-berdasarkan-kata"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
-msgstr ""
+msgstr "Gaya"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Posisi panel tab:"
+msgstr "Posisi panel tab"
 
 #: ../data/lxterminal-preferences.glade.h:22
-#, fuzzy
 msgid "Terminal font"
-msgstr "Fonta Terminal:"
+msgstr "Fonta terminal"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
@@ -367,15 +352,17 @@ msgstr "Atas"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr ""
+msgstr "Garis bawah"
 
 #: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:26
+#, fuzzy
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -383,7 +370,7 @@ msgstr "Terminal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr ""
+msgstr "Gunakan perintah baris"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "F10 Tidak digunakan jalan cepat untuk menu:"
