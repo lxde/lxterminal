@@ -355,12 +355,10 @@ msgid "Underline"
 msgstr "Garis bawah"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "gtk-ok"
 msgstr "gtk-ok"
 
