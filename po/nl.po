@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-08-07 05:44+0000\n"
-"PO-Revision-Date: 2010-04-05 15:07+0200\n"
-"Last-Translator: Horatio <hosoka@hotmail.com>\n"
+"PO-Revision-Date: 2010-08-30 11:16+0200\n"
+"Last-Translator: Sander <celettu@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -214,7 +214,7 @@ msgstr "Voorkeuren"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr ""
+msgstr "Tab Naam"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -245,7 +245,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
 msgid "Name Tab"
-msgstr ""
+msgstr "Tab naam"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:601
@@ -270,7 +270,7 @@ msgstr "Toepassen vet lettertype"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Hoorbare systeembel"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
@@ -306,7 +306,7 @@ msgstr "Beeld"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
-msgstr ""
+msgstr "Voorgrond"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
@@ -317,7 +317,6 @@ msgid "Hide menu bar"
 msgstr "Verberg menubalk"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
 msgstr "Verberg scroll bar"
 
@@ -331,11 +330,11 @@ msgstr "Rechts"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Scrollback lines"
-msgstr ""
+msgstr "Scrollback verbergen"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
-msgstr ""
+msgstr "Selecteer-volgens-woord-karakters"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
