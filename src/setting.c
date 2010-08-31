@@ -64,7 +64,7 @@ void setting_save(Setting * setting)
     if ((file_data != NULL) && (path != NULL))
     {
         /* Create the file if necessary. */
-        int fd = open(path, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
+        int fd = open(path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
         if (fd < 0)
             g_warning("Configuration file create failed: %s\n", g_strerror(errno));
         else
