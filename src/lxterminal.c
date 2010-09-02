@@ -259,8 +259,8 @@ static void terminal_geometry_restore(Term * term)
         vte_terminal_get_column_count(VTE_TERMINAL(term->vte)),
         vte_terminal_get_row_count(VTE_TERMINAL(term->vte)));
     gtk_window_resize(GTK_WINDOW(term->parent->window),
-        border->left + VTE_TERMINAL(term->vte)->char_width,
-        border->top + VTE_TERMINAL(term->vte)->char_height);
+        border->left + vte_terminal_get_char_width(VTE_TERMINAL(term->vte)),  
+        border->top + vte_terminal_get_char_height(VTE_TERMINAL(term->vte)));
     gtk_border_free(border);
 }
 
@@ -632,8 +632,8 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
         Term * term = g_ptr_array_index(terminal->terms, 0);
         GtkBorder * border = terminal_get_border(term);
         GdkGeometry hints;
-        hints.width_inc = VTE_TERMINAL(term->vte)->char_width;
-        hints.height_inc = VTE_TERMINAL(term->vte)->char_height;
+        hints.width_inc = vte_terminal_get_char_width(VTE_TERMINAL(term->vte));  
+        hints.height_inc = vte_terminal_get_char_height(VTE_TERMINAL(term->vte));
         hints.base_width = border->left;
         hints.base_height = border->top;
         hints.min_width = hints.base_width + hints.width_inc * 4;
@@ -803,8 +803,8 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
         GtkBorder * border = terminal_get_border(term);
         gint tag;
         gchar * match = vte_terminal_match_check(vte,
-            (event->x - border->left) / vte->char_width,
-            (event->y - border->top) / vte->char_height,
+            (event->x - border->left) / vte_terminal_get_char_width(vte),
+            (event->y - border->top) / vte_terminal_get_char_height(vte),
             &tag);
         gtk_border_free(border);
 
@@ -929,7 +929,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     gtk_widget_show_all(term->tab);
 
     /* Set up scrollbar. */
-    gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), VTE_TERMINAL(term->vte)->adjustment);
+    gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), vte_terminal_get_adjustment(VTE_TERMINAL(term->vte)));
 
     /* Fork the process that will have the VTE as its controlling terminal. */
     if (exec != NULL)
