@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-09-03 05:47+0000\n"
 "PO-Revision-Date: 2010-06-08 18:12+0200\n"
 "Last-Translator: Gunleif <gunleif@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr "Eystur asiatiskt"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "Landsynnings- og útsynningsasiatiskt"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
@@ -237,8 +237,8 @@ msgid "_About"
 msgstr "_Um"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
@@ -248,7 +248,7 @@ msgid "Name Tab"
 msgstr "Nýggur teigur"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr ""
 "Gunleif Joensen\n"
@@ -256,11 +256,11 @@ msgstr ""
 "Sjónarmið viðvíkjandi týðingini kunnu sendast til:\n"
 "<fo.umseting@gmail.com>"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
 msgstr "Upphavsrættindi (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "Útstøðarhermari hjá LXDE verkætlaninni"
 
@@ -302,7 +302,7 @@ msgstr "Ógilda snarvegsknapp hjá valmyndini (F10 er forsett)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Ógilda nýtsluna av Alt+n tila skifta ímillum teigar"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -338,7 +338,7 @@ msgstr "Afturskrullu linjur"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
-msgstr ""
+msgstr "Velja-eftir-orð stavir"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
