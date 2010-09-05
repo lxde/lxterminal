@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-09-05 05:47+0000\n"
-"PO-Revision-Date: 2010-09-05 21:07+0200\n"
+"PO-Revision-Date: 2010-09-06 00:51+0200\n"
 "Last-Translator: Mehmet Gülmen <memetgulmen@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -412,11 +412,11 @@ msgstr "Altını çiz"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr "gtk-iptal"
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
-msgstr "gtk-tamam"
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
