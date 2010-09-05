@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-09-05 05:47+0000\n"
-"PO-Revision-Date: 2010-02-22 18:41+0200\n"
-"Last-Translator: Kılıç <kilickoken@gmail.com>\n"
+"PO-Revision-Date: 2010-09-05 21:07+0200\n"
+"Last-Translator: Mehmet Gülmen <memetgulmen@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -38,18 +38,27 @@ msgstr "GD ve GB Asya"
 msgid "Middle Eastern"
 msgstr "Ortadoğu"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Evrensel Kod"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
 msgstr "Batı"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "Orta Avrupa"
@@ -58,21 +67,31 @@ msgstr "Orta Avrupa"
 msgid "South European"
 msgstr "Güney Avrupa"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
 msgstr "Baltık"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "Kiril"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "Arapça"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
 msgstr "Yunanca"
 
@@ -80,12 +99,16 @@ msgstr "Yunanca"
 msgid "Hebrew Visual"
 msgstr "İbranice Görsel"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "İbranice"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "Türkçe"
@@ -98,7 +121,8 @@ msgstr "İskandinavca"
 msgid "Celtic"
 msgstr "Keltçe"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
 msgstr "Romence"
 
@@ -106,7 +130,9 @@ msgstr "Romence"
 msgid "Armenian"
 msgstr "Ermenice"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "Geleneksel Çince"
 
@@ -114,16 +140,22 @@ msgstr "Geleneksel Çince"
 msgid "Cyrillic/Russian"
 msgstr "Kiril/Rusça"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
 msgstr "Japonca"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "Korece"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "Basitleştirilmiş Çince"
@@ -132,7 +164,8 @@ msgstr "Basitleştirilmiş Çince"
 msgid "Georgian"
 msgstr "Gürcüce"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "Kiril/Ukraynaca"
 
@@ -160,7 +193,9 @@ msgstr "Gurmuk"
 msgid "Icelandic"
 msgstr "İzlandaca"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "Vietnamca"
 
@@ -184,15 +219,18 @@ msgstr "_Sekmeler"
 msgid "_Help"
 msgstr "_Yardım"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:142
+#: ../src/lxterminal.c:164
 msgid "New _Window"
 msgstr "Yeni _Pencere"
 
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:143
+#: ../src/lxterminal.c:165
 msgid "New _Tab"
 msgstr "Yeni _Sekme"
 
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
+#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:177
 msgid "_Close Tab"
 msgstr "Sekmeyi _Kapat"
 
@@ -200,35 +238,43 @@ msgstr "Sekmeyi _Kapat"
 msgid "_Quit"
 msgstr "_Çık"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:147
+#: ../src/lxterminal.c:167
 msgid "Cop_y"
 msgstr "Kop_yala"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:168
 msgid "_Paste"
 msgstr "Ya_pıştır"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:150
+#: ../src/lxterminal.c:170
 msgid "Preference_s"
 msgstr "_Tercihler"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:151
+#: ../src/lxterminal.c:172
 msgid "Na_me Tab"
 msgstr "Sek_meyi İsimlendir"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
 msgstr "Ön_ceki Sekme"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
 msgstr "Sonra_ki Sekme"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:154
+#: ../src/lxterminal.c:175
 msgid "Move Tab _Left"
 msgstr "Sekmeyi So_la Taşı"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:176
 msgid "Move Tab _Right"
 msgstr "Sekmeyi S_ağa Taşı"
 
@@ -237,8 +283,12 @@ msgid "_About"
 msgstr "_Hakkında"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
-#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
+#: ../src/lxterminal.c:382
+#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200
+#: ../src/lxterminal.c:1234
+#: ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
@@ -331,15 +381,14 @@ msgid "Right"
 msgstr "Sağ"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Geri kaydırma satırları:"
+msgstr "Geri kaydırılacak satır sayısı:"
 
-# birem: karakter
+# "birem: karakter"
+# ise Türkçe'de yerleşmiş olan karakteri kullanmak lazım ki öz-Türkçecilerden başkası da anlasın. Ayrıca "sözcükle-seç biremler" türkçe değil Tarzanca. Select-by-word characters=Character Classes=Regular Expressions=regex=regexp=Düzenli ifade karakterleri
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Sözcükle-seç biremler:"
+msgstr "Düzenli ifade karakterleri"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
@@ -379,12 +428,10 @@ msgstr "Komut satırını kullan"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Elbiz (web) gözatıcı açılamadı. Komut `%s' idi\n"
-
 #~ msgid "Misc"
 #~ msgstr "Çeşitli"
-
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Menü için F10 kısayolunu edilgenle:"
-
 #~ msgid "Preferences"
 #~ msgstr "Yeğlenenler:"
+
