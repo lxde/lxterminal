@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-09-05 05:47+0000\n"
 "PO-Revision-Date: 2010-02-22 18:41+0200\n"
 "Last-Translator: Kılıç <kilickoken@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.0.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -210,12 +210,11 @@ msgstr "Ya_pıştır"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "Yeğlenenle_r"
+msgstr "_Tercihler"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Yeni _Sekme"
+msgstr "Sek_meyi İsimlendir"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -231,101 +230,95 @@ msgstr "Sekmeyi So_la Taşı"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Sekmeyi Sa_ğa Taşı"
+msgstr "Sekmeyi S_ağa Taşı"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
 msgstr "_Hakkında"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
-#, fuzzy
 msgid "Name Tab"
-msgstr "Yeni _Sekme"
+msgstr "Sekmeyi İsimlendir"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
-msgstr "Kılıç Köken (kilickoken@gmail.com)"
+msgstr ""
+"Mehmet Gülmen (memetgulmen@gmail.com)\r\n"
+"Kılıç Köken (kilickoken@gmail.com)"
 
-#: ../src/lxterminal.c:608
-#, fuzzy
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
-msgstr "Yayım Hakkı (YH) 2008"
+msgstr "Telif Hakkı (C) 2008"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
-msgstr "LXDE girişimi için uçbirim öykünücü"
+msgstr "LXDE girişimi için uçbirim öykünücüsü"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Gelişmiş"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Kalın yazıtipine izin ver"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Duyulabilir zil"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Artalan:"
+msgstr "Arkaplan:"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blok"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Alt"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "İmleç Kıpılıyor:"
+msgstr "İmleç yanıp sönmesi"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "İmleç Kıpılıyor:"
+msgstr "İmleç Stili"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Menü kısayol tuşunu (varsayılan F10) devre dışı bırak "
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Sekme değiştirmek için Alt-n kullanımını devre dışı bırak"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Görüntü"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "Önalan:"
+msgstr "Ön plan:"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Kapat düğmelerini gizle"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
 msgstr "Menü çubuğunu gizle:"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
 msgstr "Kaydırma çubuğunu gizle:"
 
@@ -353,14 +346,12 @@ msgid "Style"
 msgstr "Biçem"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Sekme tablası konumu"
+msgstr "Sekme panel konumu"
 
 #: ../data/lxterminal-preferences.glade.h:22
-#, fuzzy
 msgid "Terminal font"
-msgstr "Uçbirim Yazıtipi:"
+msgstr "Uçbirim yazıtipi:"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
@@ -368,15 +359,15 @@ msgstr "Üst"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr ""
+msgstr "Altını çiz"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-iptal"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-tamam"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
