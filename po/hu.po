@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-09-06 05:46+0000\n"
 "PO-Revision-Date: 2010-01-17 18:40+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -237,8 +237,8 @@ msgid "_About"
 msgstr "_Névjegy"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
@@ -249,35 +249,33 @@ msgid "Name Tab"
 msgstr "Új _lap"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr "SZERVÁC Attila"
 
-#: ../src/lxterminal.c:608
-#, fuzzy
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminál emulátor az LXDE projekthez"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Haladó"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Félkövér betű engedélyezése"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Hallható csengő"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Háttér:"
+msgstr "Háttér"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -288,45 +286,40 @@ msgid "Bottom"
 msgstr "Lent"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Kurzor villantások:"
+msgstr "Kurzor villanás"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Kurzor villantások:"
+msgstr "Kurzor stílus"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Menü-gyorsbillentyű ki (alapértelmezetten F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Alt-n lapváltó ki"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Kijelző"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "Előtér:"
+msgstr "Előtér"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Bezáró gombok rejtése"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Menüsáv elrejtése:"
+msgstr "Menüsáv rejtése"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Görgetősáv elrejtése:"
+msgstr "Görgetősáv rejtése"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -337,28 +330,24 @@ msgid "Right"
 msgstr "Jobbra"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Visszagördítő sorok:"
+msgstr "Visszagördítő sorok"
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Szó-alapú-választás karakterek:"
+msgstr "Szó-alapú-választás karakterek"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
 msgstr "Stílus"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Lap panel helyzete:"
+msgstr "Lap panel helyzete"
 
 #: ../data/lxterminal-preferences.glade.h:22
-#, fuzzy
 msgid "Terminal font"
-msgstr "Terminál betű:"
+msgstr "Terminál betű"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
@@ -366,15 +355,15 @@ msgstr "Fent"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr ""
+msgstr "Aláhúzás"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr ""
+msgstr "Mégsem"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
-msgstr ""
+msgstr "Mehet"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
