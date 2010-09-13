@@ -224,7 +224,7 @@ gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, CommandArguments
         }
 
         /* Always issue a --working-directory, either from the user's specification or the current directory. */
-        gchar * working_directory = ((arguments->working_directory != NULL) ? g_shell_quote(arguments->working_directory) : g_get_current_dir());
+        gchar * working_directory = g_shell_quote((arguments->working_directory != NULL) ? arguments->working_directory : g_get_current_dir());
         gchar * working_directory_argument = g_strdup_printf(" --working-directory=%s", working_directory);
         g_io_channel_write_chars(gio, working_directory_argument, -1, NULL, NULL);
         g_free(working_directory);
