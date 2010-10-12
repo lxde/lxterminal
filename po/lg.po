@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"PO-Revision-Date: 2010-10-12 22:05+0200\n"
+"Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
+"Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
+"Language: lg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
+
+#: ../src/encoding.c:124
+msgid "West European"
+msgstr "Ey'eBulaaya ya mu bugwanjuba"
+
+#: ../src/encoding.c:125
+msgid "East European"
+msgstr "Ey'eBulaaya ya mu buvanjuba"
+
+#: ../src/encoding.c:126
+msgid "East Asian"
+msgstr "Eya Ezya ya mu buvanjuba"
+
+#: ../src/encoding.c:127
+msgid "SE & SW Asian"
+msgstr "Eya Ezya bukiika ddyo ey'omu bugvanjuba ne buvanjuba"
+
+#: ../src/encoding.c:128
+msgid "Middle Eastern"
+msgstr "Ey'omu bitundu by'eBuwarabu"
+
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+msgid "Unicode"
+msgstr "Unicode"
+
+#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
+msgid "Western"
+msgstr "Ey'eBulaaya ey'omu bugwanjuba"
+
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:208
+msgid "Central European"
+msgstr "Ey'eBulaaya owa wakati"
+
+#: ../src/encoding.c:137
+msgid "South European"
+msgstr "Ey'eBulaaya ey'omu bukiika ddyo"
+
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+msgid "Baltic"
+msgstr "Eya Balitici"
+
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+msgid "Cyrillic"
+msgstr "Ey'ekisiiriri"
+
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:214
+msgid "Arabic"
+msgstr "Ey'ekiwarabu"
+
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+msgid "Greek"
+msgstr "Eya kigereeki/kiyonaani"
+
+#: ../src/encoding.c:142
+msgid "Hebrew Visual"
+msgstr "Eya kiyudaaya eyesigama ku ndabika"
+
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:213
+msgid "Hebrew"
+msgstr "Eya kiyudaaya"
+
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:212
+msgid "Turkish"
+msgstr "Ey'omu Take"
+
+#: ../src/encoding.c:145
+msgid "Nordic"
+msgstr "Ey'ab'omu bukiika bwa kkono"
+
+#: ../src/encoding.c:147
+msgid "Celtic"
+msgstr "Ey'aba Keliti"
+
+#: ../src/encoding.c:149 ../src/encoding.c:198
+msgid "Romanian"
+msgstr "Ey'abaromani"
+
+#: ../src/encoding.c:157
+msgid "Armenian"
+msgstr "Eya ki-arimeniya"
+
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+msgid "Chinese Traditional"
+msgstr "Eya kicayina ey'ennono"
+
+#: ../src/encoding.c:160
+msgid "Cyrillic/Russian"
+msgstr "Eya kisiriiri/kirasa"
+
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+msgid "Japanese"
+msgstr "Eya kijapani"
+
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:205
+msgid "Korean"
+msgstr "Eya kikoreya"
+
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:170
+msgid "Chinese Simplified"
+msgstr "Eya kicayini engonze"
+
+#: ../src/encoding.c:169
+msgid "Georgian"
+msgstr "Eya kigyogiya"
+
+#: ../src/encoding.c:184 ../src/encoding.c:200
+msgid "Cyrillic/Ukrainian"
+msgstr "Eya kisiriiri/kiyukurayini"
+
+#: ../src/encoding.c:188
+msgid "Croatian"
+msgstr "Eya kikurowati"
+
+#: ../src/encoding.c:190
+msgid "Hindi"
+msgstr "Eya ki-hindi"
+
+#: ../src/encoding.c:191
+msgid "Farsi"
+msgstr "Eya kifarisi"
+
+#: ../src/encoding.c:193
+msgid "Gujarati"
+msgstr "Eya kigujurati"
+
+#: ../src/encoding.c:194
+msgid "Gurmukhi"
+msgstr "Eya kigurumuki"
+
+#: ../src/encoding.c:196
+msgid "Icelandic"
+msgstr "Eya ki-ayisirandi"
+
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+msgid "Vietnamese"
+msgstr "Eya kiviyetinamu"
+
+#: ../src/encoding.c:204
+msgid "Thai"
+msgstr "Eya kitaayi"
+
+#: ../src/lxterminal.c:132
+msgid "_File"
+msgstr "_Fayiro"
+
+#: ../src/lxterminal.c:133
+msgid "_Edit"
+msgstr "_Kyusa"
+
+#: ../src/lxterminal.c:134
+msgid "_Tabs"
+msgstr "Olu_dda"
+
+#: ../src/lxterminal.c:135
+msgid "_Help"
+msgstr "_Nyamba"
+
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+msgid "New _Window"
+msgstr "_Leeta ddirisa eddala"
+
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
+msgid "New _Tab"
+msgstr "_Yongerawo oludda"
+
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
+msgid "_Close Tab"
+msgstr "_Gyawo oludda"
+
+#: ../src/lxterminal.c:146
+msgid "_Quit"
+msgstr "_Mala"
+
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+msgid "Cop_y"
+msgstr "_Koppa"
+
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
+msgid "_Paste"
+msgstr "_Paatiika"
+
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
+msgid "Preference_s"
+msgstr "_Enteekateeka"
+
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+msgid "Na_me Tab"
+msgstr "Oludda lu_w'erinnya"
+
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+msgid "Pre_vious Tab"
+msgstr "_Dda ku ludda olukulembera"
+
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+msgid "Ne_xt Tab"
+msgstr "Dd_a ku ludda oluddako"
+
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+msgid "Move Tab _Left"
+msgstr "_Oludda lujjululire ku kkono"
+
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+msgid "Move Tab _Right"
+msgstr "Ol_udda lujjululire ku ddyo"
+
+#: ../src/lxterminal.c:156
+msgid "_About"
+msgstr "Ebifa ku _puloguramu eno"
+
+#. Set window title.
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
+#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../data/lxterminal.desktop.in.h:1
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#: ../src/lxterminal.c:486
+msgid "Name Tab"
+msgstr "Oludda luw'erinnya"
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:599
+msgid "translator-credits"
+msgstr "Kizito Birabwa <kbirabwa@yahoo.co.uk>"
+
+#: ../src/lxterminal.c:608
+msgid "Copyright (C) 2008-2010"
+msgstr "Copyright (C) 2008-2010"
+
+#: ../src/lxterminal.c:609
+msgid "Terminal emulator for LXDE project"
+msgstr "Puloguramu eya LXDE egeegeenya ekiwandikiro"
+
+#: ../data/lxterminal-preferences.glade.h:1
+msgid "Advanced"
+msgstr "Ebyetaagisa bumanyirivu"
+
+#: ../data/lxterminal-preferences.glade.h:2
+msgid "Allow bold font"
+msgstr "Kkiriza ennukuta enziggumivu"
+
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Audible bell"
+msgstr "Ekide kiwulirike"
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Background"
+msgstr "Bwaliriro"
+
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Block"
+msgstr "Omulimu gukwatenga kimukimu"
+
+#: ../data/lxterminal-preferences.glade.h:6
+msgid "Bottom"
+msgstr "Wansi"
+
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Cursor blink"
+msgstr "Akalagakifo katemye"
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Cursor style"
+msgstr "Musono gw'akalagakifo"
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr "Eppeesa erya F10 lireme okuleeta menyu"
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Disable using Alt-n to switch tabs"
+msgstr "Okunyigir'okumu eppeesa erya Alt n'erya namba kireme okukyusanga oludda"
+
+#: ../data/lxterminal-preferences.glade.h:11
+msgid "Display"
+msgstr "Eby'olutimbe"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Foreground"
+msgstr "Obwanjo"
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Hide Close buttons"
+msgstr "Kisa amapeesa agaggala ddirisa"
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Hide menu bar"
+msgstr "Kisa olubaawo lwa menyu"
+
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Hide scroll bar"
+msgstr "Kisa akaseesa"
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "Left"
+msgstr "Kono"
+
+#: ../data/lxterminal-preferences.glade.h:17
+msgid "Right"
+msgstr "Ddyo"
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Scrollback lines"
+msgstr "Obungi bw'ennyiriri ezisobola okuseesebwa"
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Select-by-word characters"
+msgstr "Obubonero obubalibwa ng'ekitundu ky'ekigambo"
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Style"
+msgstr "Musono"
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Tab panel position"
+msgstr "Akakonda ak'okuludda gye kanaalabikira"
+
+#: ../data/lxterminal-preferences.glade.h:22
+msgid "Terminal font"
+msgstr "Enkula y'ennukuta ezinaalabikira mu kiwandikiro"
+
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Top"
+msgstr "Waggulu"
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Underline"
+msgstr "Teekangawo olukoloboze wansi w'ebiwandikibwa"
+
+#: ../data/lxterminal-preferences.glade.h:25
+msgid "gtk-cancel"
+msgstr "gtk-cancel"
+
+#: ../data/lxterminal-preferences.glade.h:26
+msgid "gtk-ok"
+msgstr "gtk-ok"
+
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "Kiwandikiro"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr "Kolera mu kiwandikiro"
