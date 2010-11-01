@@ -2,12 +2,12 @@
 # Copyright (C) 2009 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
 # Michal Várady <miko.vaji@gmail.com>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2010-11-01 10:45+0000\n"
 "PO-Revision-Date: 2010-04-02 01:16+0100\n"
 "Last-Translator: Radek Tříška <radek@fastlinux.eu>\n"
 "Language-Team: Czech\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.0.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -190,11 +190,11 @@ msgstr "_Nové okno"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "Nový _panel"
+msgstr "Nová kar_ta"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
-msgstr "_Zavřít panel"
+msgstr "_Zavřít kartu"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
@@ -210,12 +210,11 @@ msgstr "_Vložit"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "_Předvolby"
+msgstr "Na_stavení"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Nový _panel"
+msgstr "Poj_menovat kartu"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -231,34 +230,33 @@ msgstr "Přesunout kartu v_levo"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "_Přesunout kartu vpravo"
+msgstr "Přesunout kartu vp_ravo"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
 msgstr "_O aplikaci"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
+#: ../src/lxterminal.c:1200 ../src/lxterminal.c:1234 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
-#, fuzzy
 msgid "Name Tab"
-msgstr "Nový panel"
+msgstr "Pojmenovat kartu"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:601
 msgid "translator-credits"
 msgstr "Michal Várady <miko.vaji@gmail.com>Radek Tříška (radek@fastlinux.eu)"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
 msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulátor terminálu pro projekt LXDE"
 
@@ -297,11 +295,11 @@ msgstr "Styl kurzoru"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Zakázat klávesovou zkratku pro zobrazení menu (F10 )"
+msgstr "Zakázat klávesovou zkratku pro zobrazení menu (F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Zakázat použití Alt-n pro přepínání karet"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
