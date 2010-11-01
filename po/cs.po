@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"X-Generator: Pootle 2.0.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -277,9 +277,8 @@ msgid "Background"
 msgstr "Pozadí"
 
 #: ../data/lxterminal-preferences.glade.h:5
-#, fuzzy
 msgid "Block"
-msgstr "Blok"
+msgstr "Blokovat"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -358,12 +357,10 @@ msgid "Underline"
 msgstr "Podtržené"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "gtk-cancel"
 msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "gtk-ok"
 msgstr "gtk-ok"
 
