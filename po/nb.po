@@ -8,13 +8,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-20 09:51+0200\n"
-"PO-Revision-Date: 2009-11-26 12:19+0100\n"
-"Last-Translator: Olav Andreas Lindekleiv <olalinde@gmail.com>\n"
+"PO-Revision-Date: 2010-11-04 08:59+0200\n"
+"Last-Translator: Sam <wilsonsamm@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -63,7 +65,7 @@ msgstr "Baltisk"
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Kyrillisk"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
@@ -94,15 +96,15 @@ msgstr "Nordisk"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Keltisk"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Rumensk"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Armensk"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
@@ -110,7 +112,7 @@ msgstr "Tradisjonell Kinesisk"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Kyrillisk/russisk"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
@@ -121,18 +123,19 @@ msgstr "Japansk"
 msgid "Korean"
 msgstr "Koreansk"
 
+# Språk skrives ikke med stor forbokstav
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr "Forenklet Kinesisk"
+msgstr "Forenklet kinesisk"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Georgisk"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Kyrillisk/ukrainsk"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
@@ -140,7 +143,7 @@ msgstr "Kroatisk"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
@@ -148,11 +151,11 @@ msgstr "Farsi"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
@@ -160,7 +163,7 @@ msgstr "Islandsk"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamesisk"
 
 #: ../src/encoding.c:204
 msgid "Thai"
@@ -211,25 +214,24 @@ msgid "Preference_s"
 msgstr "Brukerval_g"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Ny _Fane"
+msgstr "Navngi _fane"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "Forrig_e Fane"
+msgstr "Forrig_e fane"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
-msgstr "Ne_ste Fane"
+msgstr "Ne_ste fane"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "F_lytt Fane til Venstre"
+msgstr "F_lytt fane til venstre"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "F_lytt Fane til Høyre"
+msgstr "F_lytt fane til høyre"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
@@ -243,19 +245,19 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
-#, fuzzy
 msgid "Name Tab"
-msgstr "Ny _Fane"
+msgstr "Navngi _fane"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:599
 msgid "translator-credits"
-msgstr "Olav Andreas Lindekleiv <olalinde@gmail.com>"
+msgstr ""
+"Olav Andreas Lindekleiv <olalinde@gmail.com>Sam Magnus Wilson "
+"<wilsonsamm@hotmail.com>"
 
 #: ../src/lxterminal.c:608
-#, fuzzy
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgstr "Copyright (C) 2008-2010"
 
 #: ../src/lxterminal.c:609
 msgid "Terminal emulator for LXDE project"
@@ -263,28 +265,28 @@ msgstr "Terminalemulator for LXDE-prosjektet"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Avansert"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Tillat fet skrift"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Lydsignal"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Bakgrunn:"
+msgstr "Bakgrunn"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
 msgstr ""
 
+# Synes "nede" passer her bedre enn "bunn", det er plasseringen til menyene det er snakk om
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
-msgstr "Bunn"
+msgstr "Nede"
 
 #: ../data/lxterminal-preferences.glade.h:7
 #, fuzzy
