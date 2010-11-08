@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# The Luganda translation for lxterminal.
+# Copyright (C) 2008 - 2010
+# This file is distributed under the same license as the lxterminal package.
+# FIRST Kizito Birabwa <kbirabwa@yahoo.co.u>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-20 09:51+0200\n"
-"PO-Revision-Date: 2010-10-12 22:05+0200\n"
+"PO-Revision-Date: 2010-11-08 22:46+0000\n"
 "Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
 "Language: lg\n"
@@ -226,11 +226,11 @@ msgstr "Dd_a ku ludda oluddako"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "_Oludda lujjululire ku kkono"
+msgstr "Omukonda gusembeze ku _kkono"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Ol_udda lujjululire ku ddyo"
+msgstr "Omukonda gusembeze ku _ddyo"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
