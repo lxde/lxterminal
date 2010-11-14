@@ -1,26 +1,25 @@
-# translation of pl_PL.po to Polish
-# Spanish translation of lxterminal
+# Polish translation of lxterminal package
 # Copyright (C) 2008 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-# 
-# 
-# Daniel Pacheco <daniel@tunki.org>, 2008.
-# Julio Napurí Carlos <julionc@gmail.com>, 2008.
+#
 # Grzegorz Gibas <amigib@gmail.com>, 2008, 2009.
 # Artur Kruszewski <mazdac@gmail.com>, 2009.
+# Piotr Sokół <psokol@jabster.pl>, 2010.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: pl_PL\n"
+"Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-07 05:44+0000\n"
-"PO-Revision-Date: 2010-04-06 21:21+0100\n"
-"Last-Translator: Grzegorz Gibas <amigib@gmail.com>\n"
-"Language-Team: Polish\n"
+"POT-Creation-Date: 2010-11-14 06:21+0000\n"
+"PO-Revision-Date: 2010-11-14 16:15+0100\n"
+"Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
+"Language-Team: Polish <>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : ((n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20)) ? 1 : 2));\n"
 "X-Poedit-Language: Spanish\n"
 "X-Generator: Pootle 2.0.0\n"
 
@@ -188,27 +187,27 @@ msgstr "_Karty"
 
 #: ../src/lxterminal.c:135
 msgid "_Help"
-msgstr "_Pomoc"
+msgstr "Pomo_c"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
-msgstr "Nowe _Okno"
+msgstr "Nowe _okno"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "Nowa _Karta"
+msgstr "Nowa _karta"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
-msgstr "_Zamknij kartę"
+msgstr "Za_mknij kartę"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
-msgstr "_Zakończ"
+msgstr "Za_kończ"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
-msgstr "_Kopiuj"
+msgstr "_Skopiuj"
 
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
@@ -216,27 +215,27 @@ msgstr "_Wklej"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "Ustawienia"
+msgstr "P_referencje"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr "Nazwa _Karty"
+msgstr "Zmień _nazwę"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "_Poprzednia karta"
+msgstr "_Poprzednia"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
-msgstr "Następna _Karta"
+msgstr "_Następna"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Przesuń kartę w lewo"
+msgstr "Przemieść w _lewo"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Przesuń kartę w prawo"
+msgstr "Przemieść w _prawo"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
@@ -251,12 +250,14 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
 msgid "Name Tab"
-msgstr "Nazwa Karty"
+msgstr "Zmiana nazwy"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:601
 msgid "translator-credits"
-msgstr "Grzegorz Gibas <amigib@gmail.com>"
+msgstr ""
+"Grzegorz Gibas <amigib@gmail.com>\n"
+"Piotr Sokół <psokol@jabster.pl>, 2010"
 
 #: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
@@ -272,7 +273,7 @@ msgstr "Zaawansowane"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr "Dopuść pogrubioną czcionkę"
+msgstr "Zezwalanie na pogrubioną czcionkę"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
@@ -280,7 +281,7 @@ msgstr "Dzwonek systemowy"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
-msgstr "Tło"
+msgstr "Kolor drugoplanowy:"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -296,15 +297,15 @@ msgstr "Miganie kursora"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Kształt kursora:"
+msgstr "Styl kursora:"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Wyłącz skrót klawiszowy dla menu (F10)"
+msgstr "Wyłączenie skrótu klawiszowego menu (domyślnie F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr "Wyłącz używanie Alt-n do przełączania kart"
+msgstr "Wyłączenie skrótu klawiszowego przełączania kart (Alt-n)"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -312,19 +313,19 @@ msgstr "Wyświetlanie"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
-msgstr "Kolor czcionki"
+msgstr "Kolor pierwszoplanowy:"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr "Ukryj przyciski zamykania"
+msgstr "Ukrycie przycisków zamykania kart"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
-msgstr "Ukryj pasek menu"
+msgstr "Ukrycie paska menu"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide scroll bar"
-msgstr "Ukryj pasek przewijania"
+msgstr "Ukrycie paska przewijania"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -336,11 +337,11 @@ msgstr "Po prawej"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Scrollback lines"
-msgstr "Liczba wierszy przewijania:"
+msgstr "Ilość buforowanych wierszy:"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
-msgstr "Zaznaczenie przez słowo"
+msgstr "Znaki zaznaczanych słów:"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
@@ -348,11 +349,11 @@ msgstr "Wygląd"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Tab panel position"
-msgstr "Umiejscowienie paska kart"
+msgstr "Położenie paska kart:"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Terminal font"
-msgstr "Czcionka terminala"
+msgstr "Czcionka:"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
@@ -376,10 +377,11 @@ msgstr "Terminal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Wiersz poleceń"
+msgstr "Emulator terminala"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr "Nie udało się uruchomić przeglądarki. Polecenie startujące to `%s'\n"
+#~ msgstr ""
+#~ "Nie udało się uruchomić przeglądarki. Polecenie startujące to `%s'\n"
 
 #~ msgid "Misc"
 #~ msgstr "Inne"
