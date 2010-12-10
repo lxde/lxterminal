@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-20 09:51+0200\n"
-"PO-Revision-Date: 2010-11-04 08:59+0200\n"
+"PO-Revision-Date: 2010-12-10 06:47+0200\n"
 "Last-Translator: Sam <wilsonsamm@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nb\n"
@@ -78,7 +78,7 @@ msgstr "Gresk"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Hebraisk – visuell"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
@@ -289,45 +289,40 @@ msgid "Bottom"
 msgstr "Nede"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Blinkende musepeker:"
+msgstr "Markørblink"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Blinkende musepeker:"
+msgstr "Markørstil"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Deaktiver menysnarvei (F10 some standard)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Deaktiver bruk av Alt-n for å skifte mellom faneblad"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Visning"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "Forgrunn:"
+msgstr "Forgrunn"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Skjul lukkeknapp"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Skjul menylinje:"
+msgstr "Skjul menylinje"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Skjul scroll-linje:"
+msgstr "Skjul rullefelt"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -337,44 +332,42 @@ msgstr "Venstre"
 msgid "Right"
 msgstr "Høyre"
 
+# før stod det "rulleminne" som passer litt bedre synes jeg, men ifølge fellesordlista heter det ikke det...
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Tilbakerulling (linjer)"
+msgstr "Rulleminne"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
-msgstr ""
+msgstr "Tegn for velging etter ord"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
 msgstr "Stil"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Posisjonering av fanepanel:"
+msgstr "Plassering av fanepanelet"
 
 #: ../data/lxterminal-preferences.glade.h:22
-#, fuzzy
 msgid "Terminal font"
-msgstr "Terminal-skrift:"
+msgstr "Skrifttype i terminalen"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
-msgstr "Topp"
+msgstr "Oppe"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr ""
+msgstr "Understrek"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
