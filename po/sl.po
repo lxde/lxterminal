@@ -7,18 +7,19 @@ msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-08-31 05:48+0000\n"
-"PO-Revision-Date: 2009-12-10 14:13+0100\n"
-"Last-Translator: Matej <paxmanpwnz@gmail.com>\n"
+"PO-Revision-Date: 2011-02-05 00:27+0200\n"
+"Last-Translator: Klemen <klemen913@gmail.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
+"X-Generator: Pootle 2.0.5\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: SLOVENIA\n"
-"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -192,7 +193,7 @@ msgstr "Novo _okno"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "Nov _zavihek"
+msgstr "Nov za_vihek"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
@@ -200,7 +201,7 @@ msgstr "Z_apri zavihek"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
-msgstr "_Izhod"
+msgstr "_Končaj"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
@@ -212,12 +213,11 @@ msgstr "_Prilepi"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "Nastavitve"
+msgstr "Možno_sti"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Nov _zavihek"
+msgstr "Poi_menuj zavihek"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -229,11 +229,11 @@ msgstr "_Naslednji zavihek"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Premakni zavihek v _levo"
+msgstr "Premakni zavihek _levo"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Premakni zavihek v _desno"
+msgstr "Premakni zavihek _desno"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
@@ -247,14 +247,15 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
-#, fuzzy
 msgid "Name Tab"
-msgstr "Nov _zavihek"
+msgstr "Poimenuj zavihek"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:601
 msgid "translator-credits"
-msgstr "paxman <paxmanpwnz@gmail.com>"
+msgstr ""
+"Klemen Košir <https://launchpad.net/~klemen913>\n"
+"paxman <paxmanpwnz@gmail.com>"
 
 #: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
@@ -262,7 +263,7 @@ msgstr "Vse pravice pridržane (C) 2008-2010"
 
 #: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
-msgstr "Konzola projekta LXDE"
+msgstr "Posnemovalnik terminala za projekt LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
@@ -273,9 +274,8 @@ msgid "Allow bold font"
 msgstr "Dovoli krepko pisavo"
 
 #: ../data/lxterminal-preferences.glade.h:3
-#, fuzzy
 msgid "Audible bell"
-msgstr "Zvočno opozorilo"
+msgstr "Zvonec terminala"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
@@ -290,17 +290,16 @@ msgid "Bottom"
 msgstr "Dno"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Utripanje kazalca"
+msgstr "Utripanje kazalke"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Stil kazalca"
+msgstr "Slog kazalke"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Onemogoči menijsko bližnjico (privzeto F10)"
+msgstr "Onemogoči bližnjico do menija (privzeto F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
@@ -315,19 +314,16 @@ msgid "Foreground"
 msgstr "Barva pisave"
 
 #: ../data/lxterminal-preferences.glade.h:13
-#, fuzzy
 msgid "Hide Close buttons"
-msgstr "Skrij gumbe za izhod"
+msgstr "Skrij gumbe za zaprtje terminala"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
 msgstr "Skrij menijsko vrstico"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Skrij drsni trak"
+msgstr "Skrij drsnik"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -338,22 +334,20 @@ msgid "Right"
 msgstr "Desno"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Število zapomnjenih vrstic pri drsenju:"
+msgstr "Število ohranjenih vrstic"
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Dovoljeni znaki za izbiranje z dvoklikom"
+msgstr "Znaki, bi se štejejo za del besed (pri izbiranju):"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
-msgstr "Stil"
+msgstr "Slog"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Tab panel position"
-msgstr "Položaj vrstice z zavihki"
+msgstr "Položaj pulta z zavihki"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Terminal font"
@@ -364,7 +358,6 @@ msgid "Top"
 msgstr "Vrh"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "Underline"
 msgstr "Podčrtano"
 
@@ -378,11 +371,11 @@ msgstr "V redu"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
-msgstr "Konzola"
+msgstr "Terminal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Uporabi konzolo"
+msgstr "Uporabi ukazno vrstico"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Zagon spletnega brskalnika ni bil uspešen. Ukaz je bil `%s'\n"
