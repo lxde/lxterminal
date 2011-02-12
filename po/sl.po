@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-08-31 05:48+0000\n"
-"PO-Revision-Date: 2011-02-05 00:44+0200\n"
-"Last-Translator: Klemen <klemen913@gmail.com>\n"
+"PO-Revision-Date: 2011-02-12 17:59+0200\n"
+"Last-Translator: Klemen <klemen.kosir@gmx.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "Zahodni"
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr "Centralnoevropski"
+msgstr "Srednjeevropski"
 
 #: ../src/encoding.c:137
 msgid "South European"
@@ -63,7 +63,7 @@ msgstr "Južnoevropski"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr "Baltščina"
+msgstr "Baltski"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
@@ -133,7 +133,7 @@ msgstr "Kitajščina - poenostavljena"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr "Gruzijščina"
+msgstr "Gruzijski"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
@@ -161,7 +161,7 @@ msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr "Islandsčina"
+msgstr "Islandščina"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
@@ -259,7 +259,7 @@ msgstr ""
 
 #: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
-msgstr "Vse pravice pridržane (C) 2008-2010"
+msgstr "Avtorske pravice (C) 2008-2010"
 
 #: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
