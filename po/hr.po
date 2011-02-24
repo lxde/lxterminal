@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: LXterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-20 09:51+0200\n"
-"PO-Revision-Date: 2011-01-20 19:28+0200\n"
+"PO-Revision-Date: 2011-02-25 01:41+0200\n"
 "Last-Translator: zvacet <ikoli@yahoo.com>\n"
 "Language-Team: <asjlob AT vip.hr> <>\n"
 "Language: hr\n"
@@ -351,7 +351,7 @@ msgstr "Pozicija kartične ploče"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Terminal font"
-msgstr "Font Terminala"
+msgstr "Font terminala"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
