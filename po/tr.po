@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-09-05 05:47+0000\n"
-"PO-Revision-Date: 2010-09-06 00:51+0200\n"
-"Last-Translator: Mehmet Gülmen <memetgulmen@gmail.com>\n"
+"PO-Revision-Date: 2011-03-13 14:13+0200\n"
+"Last-Translator: mulucam <mulucam@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
-"X-Generator: Pootle 2.0.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -306,7 +306,7 @@ msgstr ""
 
 #: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
-msgstr "Telif Hakkı (C) 2008"
+msgstr "Telif Hakkı (C) 2008-2010"
 
 #: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
@@ -326,7 +326,7 @@ msgstr "Duyulabilir zil"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
-msgstr "Arkaplan:"
+msgstr "Arkaplan"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -346,7 +346,7 @@ msgstr "İmleç Stili"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Menü kısayol tuşunu (varsayılan F10) devre dışı bırak "
+msgstr "Menü kısayol tuşunu (varsayılan F10) devre dışı bırak"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
@@ -358,7 +358,7 @@ msgstr "Görüntü"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
-msgstr "Ön plan:"
+msgstr "Ön plan"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
@@ -366,11 +366,11 @@ msgstr "Kapat düğmelerini gizle"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
-msgstr "Menü çubuğunu gizle:"
+msgstr "Menü çubuğunu gizle"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide scroll bar"
-msgstr "Kaydırma çubuğunu gizle:"
+msgstr "Kaydırma çubuğunu gizle"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -382,7 +382,7 @@ msgstr "Sağ"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Scrollback lines"
-msgstr "Geri kaydırılacak satır sayısı:"
+msgstr "Geri kaydırılacak satır sayısı"
 
 # "birem: karakter"
 # ise Türkçe'de yerleşmiş olan karakteri kullanmak lazım ki öz-Türkçecilerden başkası da anlasın. Ayrıca "sözcükle-seç biremler" türkçe değil Tarzanca. Select-by-word characters=Character Classes=Regular Expressions=regex=regexp=Düzenli ifade karakterleri
@@ -400,7 +400,7 @@ msgstr "Sekme panel konumu"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Terminal font"
-msgstr "Uçbirim yazıtipi:"
+msgstr "Uçbirim yazıtipi"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
@@ -412,11 +412,11 @@ msgstr "Altını çiz"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr "gtk-cancel"
+msgstr "gtk-vazgeç"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
-msgstr "gtk-ok"
+msgstr "gtk-tamam"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -428,10 +428,12 @@ msgstr "Komut satırını kullan"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Elbiz (web) gözatıcı açılamadı. Komut `%s' idi\n"
+
 #~ msgid "Misc"
 #~ msgstr "Çeşitli"
+
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Menü için F10 kısayolunu edilgenle:"
+
 #~ msgid "Preferences"
 #~ msgstr "Yeğlenenler:"
-
