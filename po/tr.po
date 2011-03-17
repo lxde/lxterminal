@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-09-05 05:47+0000\n"
-"PO-Revision-Date: 2011-03-13 14:13+0200\n"
-"Last-Translator: mulucam <mulucam@gmail.com>\n"
+"PO-Revision-Date: 2011-03-17 21:01+0200\n"
+"Last-Translator: enginmanap <enginmanap@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -209,7 +209,7 @@ msgstr "_Dosya"
 
 #: ../src/lxterminal.c:133
 msgid "_Edit"
-msgstr "_Düzen"
+msgstr "_Düzenle"
 
 #: ../src/lxterminal.c:134
 msgid "_Tabs"
