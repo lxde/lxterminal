@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-20 09:51+0200\n"
-"PO-Revision-Date: 2010-12-10 06:47+0200\n"
+"PO-Revision-Date: 2011-03-28 11:55+0200\n"
 "Last-Translator: Sam <wilsonsamm@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nb\n"
@@ -281,7 +281,7 @@ msgstr "Bakgrunn"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Firkant"
 
 # Synes "nede" passer her bedre enn "bunn", det er plasseringen til menyene det er snakk om
 #: ../data/lxterminal-preferences.glade.h:6
