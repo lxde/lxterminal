@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-08-07 05:44+0000\n"
-"PO-Revision-Date: 2010-08-30 11:16+0200\n"
-"Last-Translator: Sander <celettu@gmail.com>\n"
+"PO-Revision-Date: 2011-05-19 12:21+0200\n"
+"Last-Translator: Pjotr <pliniusminor@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "ZO- en ZW-Aziatisch"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr "Midden-Oosten"
+msgstr "Midden-Oosters"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
@@ -96,7 +96,7 @@ msgstr "Noors"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr "Celtisch"
+msgstr "Keltisch"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
@@ -134,7 +134,7 @@ msgstr "Georgisch"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr "Cyrillisch/Oekraïns"
+msgstr "Cyrillisch/Oekraïens"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
@@ -166,75 +166,75 @@ msgstr "Vietnamees"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr "Thai"
+msgstr "Thais"
 
 #: ../src/lxterminal.c:132
 msgid "_File"
-msgstr "Bestand"
+msgstr "_Bestand"
 
 #: ../src/lxterminal.c:133
 msgid "_Edit"
-msgstr "Bewerken"
+msgstr "Be_werken"
 
 #: ../src/lxterminal.c:134
 msgid "_Tabs"
-msgstr "Tabs"
+msgstr "_Tabbladen"
 
 #: ../src/lxterminal.c:135
 msgid "_Help"
-msgstr "Help"
+msgstr "_Hulp"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
-msgstr "Nieuw Venster"
+msgstr "Nieuw _Venster"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "Nieuw Tabblad"
+msgstr "Nieuw _Tabblad"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
-msgstr "Tab sluiten"
+msgstr "Tabblad _sluiten"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
-msgstr "Afsluiten"
+msgstr "_Afsluiten"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
-msgstr "Kopiëren"
+msgstr "Kop_iëren"
 
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
-msgstr "Plakken"
+msgstr "_Plakken"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "Voorkeuren"
+msgstr "_Voorkeuren"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr "Tab Naam"
+msgstr "Tabblad _Naam"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "Vorig tabblad"
+msgstr "V_orig Tabblad"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
-msgstr "Volgend tabblad"
+msgstr "Vol_gend Tabblad"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Verplaats Tab links"
+msgstr "Verplaats Tabblad naar _Links"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Verplaats Tab rechts"
+msgstr "Verplaats Tabblad naar _Rechts"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
-msgstr "Over"
+msgstr "_Over"
 
 #. Set window title.
 #: ../src/lxterminal.c:382 ../src/lxterminal.c:608 ../src/lxterminal.c:683
@@ -245,20 +245,20 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
 msgid "Name Tab"
-msgstr "Tab naam"
+msgstr "Tabblad-naam"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:601
 msgid "translator-credits"
-msgstr "Sander De Voogdt <celettu@gmail.com>"
+msgstr "Sander De Voogdt <celettu@gmail.com>Pjotr"
 
 #: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008-"
+msgstr "Auteursrecht (C) 2008-2010"
 
 #: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
-msgstr "Terminal Emulator voor het LXDE project"
+msgstr "Terminal-emulator voor het LXDE project"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
@@ -266,11 +266,11 @@ msgstr "Gevorderd"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr "Toepassen vet lettertype"
+msgstr "Vet lettertype toestaan"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr "Hoorbare systeembel"
+msgstr "Hoorbare klok"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
@@ -282,19 +282,19 @@ msgstr "Blokkeer"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
-msgstr "Onder"
+msgstr "Onderaan"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor blink"
-msgstr "Cursor signaal"
+msgstr "Knippering van muispijl"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Cursor stijl"
+msgstr "Stijl van muispijl"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Menu sneltoets uitschakelen (Standaard F10)"
+msgstr "Menu-sneltoets uitschakelen (standaard is F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
@@ -302,7 +302,7 @@ msgstr "Schakel Alt-n uit voor het wisselen van tabbladen"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
-msgstr "Beeld"
+msgstr "Scherm"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
@@ -310,7 +310,7 @@ msgstr "Voorgrond"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr "Verberg Sluit toetsen"
+msgstr "Verberg Sluitknoppen"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
@@ -318,7 +318,7 @@ msgstr "Verberg menubalk"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide scroll bar"
-msgstr "Verberg scroll bar"
+msgstr "Verberg bladerbalk"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -330,11 +330,11 @@ msgstr "Rechts"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Scrollback lines"
-msgstr "Scrollback verbergen"
+msgstr "Regels terugbladeren"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
-msgstr "Selecteer-volgens-woord-karakters"
+msgstr "Tekens voor op-woord-selecteren"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
@@ -342,15 +342,15 @@ msgstr "Stijl"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Tab panel position"
-msgstr "Tabpaneel positie"
+msgstr "Positie van tabbalk"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Terminal font"
-msgstr "Terminal Lettertype"
+msgstr "Terminal-lettertype"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
-msgstr "Boven"
+msgstr "Bovenaan"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
@@ -358,7 +358,7 @@ msgstr "Onderstreep"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr "gtk-annuleren"
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
