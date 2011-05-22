@@ -31,6 +31,18 @@ PKG_CHECK_MODULES(vte, [vte >= 0.20.0])
 CFLAGS="$CFLAGS $glib_CFLAGS $gtk_CFLAGS $vte_CFLAGS"
 LIBS="$LIBS $glib_LIBS $gtk_LIBS $vte_LIBS"
 
+AC_ARG_ENABLE(more_warnings,
+       [AC_HELP_STRING([--enable-more-warnings],
+               [Add more warnings @<:@default=no@:>@])],
+       [enable_more_warnings="${enableval}"],
+       [enable_more_warnings=no]
+)
+
+if test x"$enable_man" = x"yes"; then
+  ADDITIONAL_FLAGS="-Wall -Werror=all -Werror=format -Werror=implicit-function-declaration -Werror=implicit-int -Werror=missing-braces -Werror=parentheses -Werror=return-type -Werror=strict-aliasing -Werror=switch -Wuninitialized -Werror=unused-label -Werror=unused-value -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-declarations -Wredundant-decls -Wmissing-noreturn -Wpointer-arith -Wcast-align -Wwrite-strings -Werror=inline -Werror=format-nonliteral -Wformat-nonliteral -Werror=format-security -Wformat-security -Winit-self -Werror=missing-include-dirs -Werror=undef -Werror=aggregate-return -Wmissing-format-attribute -Werror=nested-externs -fno-strict-aliasing -fmessage-length=0 -Wp,-D_FORTIFY_SOURCE=2 -DG_DISABLE_DEPRECATED -DG_DISABLE_SINGLE_INCLUDES -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_SINGLE_INCLUDES -DGTK_DISABLE_DEPRECATED -DGTK_DISABLE_SINGLE_INCLUDES"
+fi
+AC_SUBST(ADDITIONAL_FLAGS)
+
 # Generate po/LINGUAS on the fly rather than relying on translators
 # to maintain it manually. This also overcome the problem that Transifex
 # cannot add a language to po/LINGUAS if a new po file is submitted.

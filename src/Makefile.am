@@ -8,6 +8,7 @@ INCLUDES = \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
 	$(PACKAGE_CFLAGS) \
+	$(ADDITIONAL_FLAGS) \
 	$(G_CAST_CHECKS)
 
 lxterminal_SOURCES = \
