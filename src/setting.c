@@ -124,5 +124,7 @@ Setting * load_setting_from_file(const char * filename)
         setting->tab_position = g_strdup("top");
     if (setting->word_selection_characters == NULL)
         setting->word_selection_characters = g_strdup("-A-Za-z0-9,./?%&#:_");
+    if (setting->background_alpha == NULL)
+        setting->background_alpha = 65535;
     return setting;
 }
