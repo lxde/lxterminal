@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-20 05:33+0000\n"
-"PO-Revision-Date: 2010-09-27 14:22-0000\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2011-05-14 02:22+0200\n"
+"Last-Translator: Sérgio <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: PORTUGAL\n"
-"X-Generator: Pootle 1.1.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -303,7 +304,7 @@ msgstr "Nomear separador"
 msgid "translator-credits"
 msgstr ""
 "Álvaro Morais <alvarommorais@gmail.com>\n"
-"Sérgio Marques<smarquespt@gmail.com>"
+"Sérgio Marques <smarquespt@gmail.com>"
 
 #: ../src/lxterminal.c:608
 msgid "Copyright (C) 2008-2010"
@@ -343,7 +344,7 @@ msgstr "Intermitência do cursor"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Estilo do cursor:"
+msgstr "Estilo do cursor"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
@@ -424,4 +425,3 @@ msgstr "Terminal"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Utilizar a linha de comando"
-
