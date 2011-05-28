@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-08-07 05:44+0000\n"
-"PO-Revision-Date: 2011-05-19 12:21+0200\n"
+"PO-Revision-Date: 2011-05-28 18:18+0200\n"
 "Last-Translator: Pjotr <pliniusminor@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
@@ -108,7 +108,7 @@ msgstr "Armeens"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr "Traditioneel Chinees"
+msgstr "Chinees Traditioneel"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
@@ -126,7 +126,7 @@ msgstr "Koreaans"
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr "Vereenvoudigd Chinees"
+msgstr "Chinees Vereenvoudigd"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
@@ -214,7 +214,7 @@ msgstr "_Voorkeuren"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr "Tabblad _Naam"
+msgstr "Naa_m Tabblad"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -245,7 +245,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:486
 msgid "Name Tab"
-msgstr "Tabblad-naam"
+msgstr "Naam Tabblad"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:601
@@ -258,7 +258,7 @@ msgstr "Auteursrecht (C) 2008-2010"
 
 #: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
-msgstr "Terminal-emulator voor het LXDE project"
+msgstr "Terminalvenster voor het LXDE project"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
@@ -286,11 +286,11 @@ msgstr "Onderaan"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor blink"
-msgstr "Knippering van muispijl"
+msgstr "Knippering van aanwijzer"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Stijl van muispijl"
+msgstr "Stijl van aanwijzer"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
