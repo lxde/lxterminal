@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-08-07 05:44+0000\n"
-"PO-Revision-Date: 2011-05-28 18:18+0200\n"
-"Last-Translator: Pjotr <pliniusminor@gmail.com>\n"
+"PO-Revision-Date: 2011-06-03 00:00+0200\n"
+"Last-Translator: Pjotr <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -146,7 +146,7 @@ msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr "Farsi"
+msgstr "Perzisch"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
@@ -250,7 +250,7 @@ msgstr "Naam Tabblad"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:601
 msgid "translator-credits"
-msgstr "Sander De Voogdt <celettu@gmail.com>Pjotr"
+msgstr "Sander De Voogdt <celettu@gmail.com>, Pjotr"
 
 #: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
@@ -258,7 +258,7 @@ msgstr "Auteursrecht (C) 2008-2010"
 
 #: ../src/lxterminal.c:611
 msgid "Terminal emulator for LXDE project"
-msgstr "Terminalvenster voor het LXDE project"
+msgstr "Terminalvenster voor het LXDE-project"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
@@ -354,7 +354,7 @@ msgstr "Bovenaan"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr "Onderstreep"
+msgstr "Onderstrepen"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
