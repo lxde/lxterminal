@@ -602,7 +602,6 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
 
     /* Create and initialize the dialog. */
     GtkWidget * about_dlg = gtk_about_dialog_new();
-    gtk_about_dialog_set_url_hook(NULL, NULL, NULL);
     gtk_container_set_border_width(GTK_CONTAINER(about_dlg), 2);
     gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(about_dlg), VERSION);
     gtk_about_dialog_set_name (GTK_ABOUT_DIALOG(about_dlg), _("LXTerminal"));
