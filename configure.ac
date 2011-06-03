@@ -24,12 +24,6 @@ AC_ARG_ENABLE(man,
        [enable_man="${enableval}"],
        [enable_man=no]
 )
-# Checks for libraries.
-PKG_CHECK_MODULES(glib, [glib-2.0 >= 2.6.0])
-PKG_CHECK_MODULES(gtk, [gtk+-2.0 >= 2.12.0])
-PKG_CHECK_MODULES(vte, [vte >= 0.20.0])
-CFLAGS="$CFLAGS $glib_CFLAGS $gtk_CFLAGS $vte_CFLAGS"
-LIBS="$LIBS $glib_LIBS $gtk_LIBS $vte_LIBS"
 
 AC_ARG_ENABLE(more_warnings,
        [AC_HELP_STRING([--enable-more-warnings],
@@ -37,6 +31,30 @@ AC_ARG_ENABLE(more_warnings,
        [enable_more_warnings="${enableval}"],
        [enable_more_warnings=no]
 )
+
+AC_ARG_ENABLE(gtk3,
+AC_HELP_STRING([--enable-gtk3],[enable to use gtk-3.0 instead of gtk-2.0]),
+[case "${enableval}" in
+  yes)  enable_gtk3=yes ;;
+  no)   enable_gtk3=no ;;
+  *) AC_MSG_ERROR([bad value "${enableval}" for --enable-gtk3, use "yes" (default) or "no".]) ;;
+esac],[])
+
+# Checks for libraries.
+if test "x$enable_gtk3" = "xyes" ; then
+  CFLAGS="$CFLAGS -DENABLE_GTK3"
+  gtk_modules="gtk+-3.0 >= 3.0.0"
+else
+  gtk_modules="gtk+-2.0 >= 2.12.0"
+fi
+PKG_CHECK_MODULES(gtk, [$gtk_modules])
+AC_SUBST(GTK_CFLAGS)
+AC_SUBST(GTK_LIBS)
+
+PKG_CHECK_MODULES(glib, [glib-2.0 >= 2.6.0])
+PKG_CHECK_MODULES(vte, [vte >= 0.20.0])
+CFLAGS="$CFLAGS $glib_CFLAGS $gtk_CFLAGS $vte_CFLAGS"
+LIBS="$LIBS $glib_LIBS $gtk_LIBS $vte_LIBS"
 
 if test x"$enable_more_warnings" = x"yes"; then
   ADDITIONAL_FLAGS="-Wall -Werror=all -Werror=format -Werror=implicit-function-declaration -Werror=implicit-int -Werror=missing-braces -Werror=parentheses -Werror=return-type -Werror=strict-aliasing -Werror=switch -Wuninitialized -Werror=unused-label -Werror=unused-value -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-declarations -Wredundant-decls -Wmissing-noreturn -Wpointer-arith -Wcast-align -Wwrite-strings -Werror=inline -Werror=format-nonliteral -Wformat-nonliteral -Werror=format-security -Wformat-security -Winit-self -Werror=missing-include-dirs -Werror=undef -Werror=aggregate-return -Wmissing-format-attribute -Werror=nested-externs -fno-strict-aliasing -fmessage-length=0 -Wp,-D_FORTIFY_SOURCE=2 -DG_DISABLE_DEPRECATED -DG_DISABLE_SINGLE_INCLUDES -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_SINGLE_INCLUDES -DGTK_DISABLE_DEPRECATED -DGTK_DISABLE_SINGLE_INCLUDES"
