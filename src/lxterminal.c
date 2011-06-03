@@ -604,7 +604,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
     GtkWidget * about_dlg = gtk_about_dialog_new();
     gtk_container_set_border_width(GTK_CONTAINER(about_dlg), 2);
     gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(about_dlg), VERSION);
-    gtk_about_dialog_set_name (GTK_ABOUT_DIALOG(about_dlg), _("LXTerminal"));
+    gtk_about_dialog_set_program_name (GTK_ABOUT_DIALOG(about_dlg), _("LXTerminal"));
     gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG(about_dlg), gdk_pixbuf_new_from_file(PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL));
     gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(about_dlg), _("Copyright (C) 2008-2010"));
     gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(about_dlg), _("Terminal emulator for LXDE project"));
