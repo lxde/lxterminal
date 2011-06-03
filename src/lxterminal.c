@@ -97,7 +97,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
 /* Window creation, destruction, and control. */
 static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequisition * requisition, LXTerminal * terminal);
 static void terminal_window_set_fixed_size(LXTerminal * terminal);
-static void terminal_switch_page_event(GtkNotebook * notebook, GtkNotebookPage * page, guint num, LXTerminal * terminal);
+static void terminal_switch_page_event(GtkNotebook * notebook, guint num, LXTerminal * terminal);
 static void terminal_window_title_changed_event(GtkWidget * vte, Term * term);
 static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_object_was);
 static void terminal_child_exited_event(VteTerminal * vte, Term * term);
@@ -673,7 +673,7 @@ static void terminal_window_set_fixed_size(LXTerminal * terminal)
 }
 
 /* Handler for "switch-page" event on the tab notebook. */
-static void terminal_switch_page_event(GtkNotebook * notebook, GtkNotebookPage * page, guint num, LXTerminal * terminal)
+static void terminal_switch_page_event(GtkNotebook * notebook, guint num, LXTerminal * terminal)
 {
     if (terminal->terms->len > num)
     {
