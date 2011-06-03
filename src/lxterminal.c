@@ -188,7 +188,11 @@ static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geom
 
     *geometry_mask = 0;
 
+#if GTK_CHECK_VERSION(2, 18, 0)
+    if (gdk_window_is_destroyed(window))
+#else
     if (GDK_WINDOW_DESTROYED(window))
+#endif
         return;
 
     XSizeHints size_hints;
