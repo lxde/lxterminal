@@ -913,7 +913,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     GtkRcStyle * rcstyle = gtk_rc_style_new();
     rcstyle->xthickness = rcstyle->ythickness = 0;
     gtk_widget_modify_style(term->close_button, rcstyle);
-    gtk_rc_style_unref(rcstyle),
+    g_object_ref(rcstyle);
 
     /* Create the label. */
     term->label = gtk_label_new((label != NULL) ? label : pwd);
