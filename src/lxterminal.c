@@ -1259,7 +1259,11 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     terminal_settings_apply(terminal);
 
     /* Initialize the geometry hints. */
+#if GTK_CHECK_VERSION(2, 14, 0)
+    gdk_window_get_geometry_hints(gtk_widget_get_window(GTK_WIDGET(term->vte)), &terminal->geometry, &terminal->geometry_mask);
+#else
     gdk_window_get_geometry_hints(GTK_WIDGET(term->vte)->window, &terminal->geometry, &terminal->geometry_mask);
+#endif
 
     /* Connect signals. */
     g_signal_connect(G_OBJECT(terminal->window), "size-request", G_CALLBACK(terminal_window_size_request_event), terminal);
