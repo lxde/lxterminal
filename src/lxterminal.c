@@ -1194,10 +1194,10 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     /* Create toplevel window. */
     terminal->window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
-    /* Try to get an RGBA colormap and assign it to the new window. */
-    GdkColormap * colormap = gdk_screen_get_rgba_colormap(gtk_widget_get_screen(GTK_WIDGET(terminal->window)));
-    if (colormap != NULL)
-        gtk_widget_set_colormap(terminal->window, colormap);
+    /* Try to get an RGBA visual (colormap) and assign it to the new window. */
+    GdkVisual *visual = gdk_screen_get_rgba_visual(gtk_widget_get_screen(GTK_WIDGET(terminal->window)));
+    if (visual != NULL)
+        gtk_widget_set_visual(terminal->window, visual);
 
     /* Set window title. */
     gtk_window_set_title(GTK_WINDOW(terminal->window), ((arguments->title != NULL) ? arguments->title : _("LXTerminal")));
