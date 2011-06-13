@@ -1,22 +1,22 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Dutch translation of the lxterminal package.
+# Copyright (C) the author of the lxterminal package.
+# This file is distributed under the same license as the 
+# lxterminal package.
+# Pjotr, 2011.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-07 05:44+0000\n"
-"PO-Revision-Date: 2011-06-03 00:00+0200\n"
-"Last-Translator: Pjotr <>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: nl\n"
+"POT-Creation-Date: 2011-05-27 04:04+0000\n"
+"PO-Revision-Date: 2011-06-13 11:34+0200\n"
+"Last-Translator: Pjotr\n"
+"Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -146,7 +146,7 @@ msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr "Perzisch"
+msgstr "Farsi"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
@@ -250,7 +250,8 @@ msgstr "Naam Tabblad"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:601
 msgid "translator-credits"
-msgstr "Sander De Voogdt <celettu@gmail.com>, Pjotr"
+msgstr "Sander De Voogdt\n"
+"Pjotr"
 
 #: ../src/lxterminal.c:610
 msgid "Copyright (C) 2008-2010"
@@ -354,7 +355,7 @@ msgstr "Bovenaan"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr "Onderstrepen"
+msgstr "Onderstreep"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
@@ -373,13 +374,13 @@ msgid "Use the command line"
 msgstr "Gebruik de opdrachtregel"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr "De web browser kon niet gestart worden met commando `%s'\n"
+#~ msgstr "De webbrowser kon niet gestart worden met de opdracht `%s'\n"
 
 #~ msgid "Misc"
 #~ msgstr "Allerlei"
 
 #~ msgid "Disable F10 shortcut for menu:"
-#~ msgstr "F10 shortcut voor menu uitschakelen:"
+#~ msgstr "F10-sneltoets voor menu uitschakelen:"
 
 #~ msgid "Preferences"
 #~ msgstr "Voorkeuren"
