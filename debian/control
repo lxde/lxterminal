@@ -3,7 +3,18 @@ Section: x11
 Priority: extra
 Maintainer: Debian LXDE Packaging Team <pkg-lxde-maintainers@lists.alioth.debian.org>
 Uploaders: Andrew Lee (李健秋) <ajqlee@debian.org>, Yao Wei (魏銘廷) <mwei@lxde.org>
-Build-Depends: debhelper (>= 6), autotools-dev, libvte-dev (>= 0.17.1), libglib2.0-dev (>= 2.6.0), libgtk2.0-dev (>= 2.12.0), intltool, docbook-xsl
+Build-Depends: debhelper (>= 6), 
+# needed by autogen.sh
+               autotools-dev,
+               intltool,
+               libtool,
+# real build-depends
+               libvte-dev (>= 0.17.1),
+               libglib2.0-dev (>= 2.6.0),
+               libgtk2.0-dev (>= 2.12.0),
+               docbook-xsl,
+               xsltproc,
+               docbook-xml,
 Standards-Version: 3.9.2
 Homepage: http://lxde.org
 Vcs-Git: git://git.debian.org/git/collab-maint/lxterminal.git
