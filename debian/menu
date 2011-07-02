@@ -1,3 +1,6 @@
 ?package(lxterminal):needs="X11"\
   section="Applications/Terminal Emulators"\
-  title="lxterminal" command="/usr/bin/lxterminal"
+  command="/usr/bin/lxterminal"\
+  title="Terminal"\
+  longtitle="Lightweight X11 Terminal Emulator"\
+  icon="/usr/share/pixmaps/lxterminal.xpm"
