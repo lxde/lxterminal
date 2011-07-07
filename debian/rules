@@ -31,19 +31,21 @@ endif
 ifneq "$(wildcard /usr/share/misc/config.guess)" ""
 	cp -f /usr/share/misc/config.guess config.guess
 endif
-	./configure $(CROSS) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"
+	./autogen.sh
+	./configure $(CROSS) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --enable-man CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs -lX11"
 
+build: build-arch build-indep
 
-build: build-stamp
-
-build-stamp:  config.status 
+build-arch:  config.status 
 	dh_testdir
 
 	# Add here commands to compile the package.
 	$(MAKE)
 	#docbook-to-man debian/lxterminal.sgml > lxterminal.1
 
-	touch $@
+	touch build-stamp
+
+build-indep: 
 
 clean: 
 	dh_testdir
@@ -53,6 +55,7 @@ clean:
 	# Add here commands to clean up after the build process.
 	[ ! -f Makefile ] || $(MAKE) distclean
 	rm -f config.sub config.guess config.log
+	rm -f intltool-extract intltool-merge intltool-update
 
 	dh_clean 
 
@@ -64,21 +67,22 @@ install: build
 
 	# Add here commands to install the package into debian/lxterminal.
 	$(MAKE) DESTDIR=$(CURDIR)/debian/lxterminal install
+	install -D -m644 debian/lxterminal.xpm debian/lxterminal/usr/share/pixmaps/
 
 
 # Build architecture-independent files here.
-binary-indep: build install
+binary-indep: build-indep install
 # We have nothing to do by default.
 
 # Build architecture-dependent files here.
-binary-arch: build install
+binary-arch: build-arch install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs
 	dh_installdocs
 	dh_installexamples
 #	dh_install
-#	dh_installmenu
+	dh_installmenu
 #	dh_installdebconf	
 #	dh_installlogrotate
 #	dh_installemacsen
