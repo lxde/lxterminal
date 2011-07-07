@@ -641,8 +641,8 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
         GdkGeometry hints;
         hints.width_inc = vte_terminal_get_char_width(VTE_TERMINAL(term->vte));  
         hints.height_inc = vte_terminal_get_char_height(VTE_TERMINAL(term->vte));
-        hints.base_width = border->left;
-        hints.base_height = border->top;
+        hints.base_width = border->right + 1;
+        hints.base_height = border->bottom + 1;
         hints.min_width = hints.base_width + hints.width_inc * 4;
         hints.min_height = hints.base_height + hints.height_inc * 2;
         gtk_border_free(border);
