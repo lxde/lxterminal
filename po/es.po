@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-22 05:42+0000\n"
-"PO-Revision-Date: 2010-01-20 14:38+0200\n"
-"Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
+"PO-Revision-Date: 2011-07-08 13:22+0200\n"
+"Last-Translator: Hugo <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
 "X-Poedit-Language: Spanish\n"
-"X-Generator: Pootle 2.0.1\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -35,7 +35,7 @@ msgstr "Asiático oriental"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr "Asiático suroriental y suroccidental"
+msgstr "Asiático sudoriental y sudoccidental"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
@@ -59,7 +59,7 @@ msgstr "Centroeuropeo"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Sureuropeo"
+msgstr "Sudeuropeo"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
@@ -258,7 +258,7 @@ msgstr ""
 "Daniel Pacheco <daniel@tunki.org>, 2008\n"
 "Julio Napurí Carlos <julionc@gmail.com>, 2008\n"
 "Guillermo Iguarán <tronador@cuteam.org>, 2009\n"
-"Hugo Florentino <sysadmin@cips.cu>, 2009"
+"Hugo Florentino <sysadmin@cips.cu>, 2009-2010"
 
 #: ../src/lxterminal.c:608
 msgid "Copyright (C) 2008-2010"
@@ -318,7 +318,7 @@ msgstr "Primer plano"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr "Ocultar botón de cierre"
+msgstr "Ocultar el botón de cierre"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
