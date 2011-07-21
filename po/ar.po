@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2011-07-21 23:41+0200\n"
 "PO-Revision-Date: 2010-04-20 23:55+0300\n"
 "Last-Translator: Tareq Al Jurf <taljurf@fedoraproject.org>\n"
 "Language-Team: Arabic <trans-ar@lists.fedoraproject.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -236,26 +237,26 @@ msgid "_About"
 msgstr "_عن"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
+#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:486
+#: ../src/lxterminal.c:490
 msgid "Name Tab"
 msgstr "لسان الاسم"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:609
 msgid "translator-credits"
 msgstr "أحمد فرغل <ahmad.farghal@gmail.com>"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:617
 msgid "Copyright (C) 2008-2010"
 msgstr "حقوق النشر محفوظة (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"
 msgstr "محاكي طرفية لمشروع LXDE"
 

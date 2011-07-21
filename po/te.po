@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2011-07-21 23:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -235,26 +236,26 @@ msgid "_About"
 msgstr "గురించి (_A)"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
+#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXటెర్మినల్"
 
-#: ../src/lxterminal.c:486
+#: ../src/lxterminal.c:490
 msgid "Name Tab"
 msgstr "ట్యాబ్ పేరుపెట్టు"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:609
 msgid "translator-credits"
 msgstr "Praveen Illa <mail2ipn@gmail.com>, 2011."
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:617
 msgid "Copyright (C) 2008-2010"
 msgstr "నకలుహక్కు (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE ప్రోజెక్టు కొరకు టెర్మినల్ ఎమ్యులేటర్"
 

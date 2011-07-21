@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2011-07-21 23:41+0200\n"
 "PO-Revision-Date: 2011-03-10 20:29+0200\n"
 "Last-Translator: Jesse <jesse.jaara@gmail.com>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -237,26 +237,26 @@ msgid "_About"
 msgstr "_Tietoja"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
+#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:486
+#: ../src/lxterminal.c:490
 msgid "Name Tab"
 msgstr "Nimeä välilehti"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:609
 msgid "translator-credits"
 msgstr "Elias Julkunen <elias.julkunen@gmail.com>"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:617
 msgid "Copyright (C) 2008-2010"
 msgstr "Tekijänoikeudet (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"
 msgstr "Pääteohjelma LXDE-projektille"
 

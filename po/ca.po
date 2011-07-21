@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2011-07-21 23:41+0200\n"
 "PO-Revision-Date: 2010-08-26 23:47+0200\n"
 "Last-Translator: Josep <papapep@gmail.com>\n"
 "Language-Team: Catalan <josep.sanchez@ubuntu.cat>\n"
@@ -237,26 +237,26 @@ msgid "_About"
 msgstr "Quant _a"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
+#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:486
+#: ../src/lxterminal.c:490
 msgid "Name Tab"
 msgstr "Anomena pestanya"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:609
 msgid "translator-credits"
 msgstr "Crèdits dels traductors"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:617
 msgid "Copyright (C) 2008-2010"
 msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal del projecte LXDE"
 
@@ -374,8 +374,8 @@ msgstr "Utilitza la línia d'ordres"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr ""
-#~ "S'ha produït un error en arrencar el navegador web. La ordre ha estat `%"
-#~ "s'\n"
+#~ "S'ha produït un error en arrencar el navegador web. La ordre ha estat `"
+#~ "%s'\n"
 
 #~ msgid "Misc"
 #~ msgstr "Misc"

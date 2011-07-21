@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 09:51+0200\n"
+"POT-Creation-Date: 2011-07-21 23:41+0200\n"
 "PO-Revision-Date: 2010-11-08 22:46+0000\n"
 "Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
@@ -237,26 +237,26 @@ msgid "_About"
 msgstr "Ebifa ku _puloguramu eno"
 
 #. Set window title.
-#: ../src/lxterminal.c:382 ../src/lxterminal.c:606 ../src/lxterminal.c:681
-#: ../src/lxterminal.c:1195 ../src/lxterminal.c:1229 ../src/preferences.c:208
+#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
+#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:486
+#: ../src/lxterminal.c:490
 msgid "Name Tab"
 msgstr "Oludda luw'erinnya"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:599
+#: ../src/lxterminal.c:609
 msgid "translator-credits"
 msgstr "Kizito Birabwa <kbirabwa@yahoo.co.uk>"
 
-#: ../src/lxterminal.c:608
+#: ../src/lxterminal.c:617
 msgid "Copyright (C) 2008-2010"
 msgstr "Copyright (C) 2008-2010"
 
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"
 msgstr "Puloguramu eya LXDE egeegeenya ekiwandikiro"
 
@@ -298,7 +298,8 @@ msgstr "Eppeesa erya F10 lireme okuleeta menyu"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr "Okunyigir'okumu eppeesa erya Alt n'erya namba kireme okukyusanga oludda"
+msgstr ""
+"Okunyigir'okumu eppeesa erya Alt n'erya namba kireme okukyusanga oludda"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
