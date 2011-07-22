@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2009-05-10 04:11+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -269,9 +269,8 @@ msgstr ""
 "http://makki.urducoder.com"
 
 #: ../src/lxterminal.c:617
-#, fuzzy
-msgid "Copyright (C) 2008-2010"
-msgstr "کاپی رائٹ (C) 2008"
+msgid "Copyright (C) 2008-2011"
+msgstr "کاپی رائٹ (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

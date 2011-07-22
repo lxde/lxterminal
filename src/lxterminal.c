@@ -614,7 +614,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
     gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(about_dlg), VERSION);
     gtk_about_dialog_set_program_name (GTK_ABOUT_DIALOG(about_dlg), _("LXTerminal"));
     gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG(about_dlg), gdk_pixbuf_new_from_file(PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL));
-    gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(about_dlg), _("Copyright (C) 2008-2010"));
+    gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(about_dlg), _("Copyright (C) 2008-2011"));
     gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(about_dlg), _("Terminal emulator for LXDE project"));
     gtk_about_dialog_set_license(GTK_ABOUT_DIALOG(about_dlg), "This program is free software; you can redistribute it and/or\nmodify it under the terms of the GNU General Public License\nas published by the Free Software Foundation; either version 2\nof the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program; if not, write to the Free Software\nFoundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.");
     gtk_about_dialog_set_website(GTK_ABOUT_DIALOG(about_dlg), "http://lxde.org/");

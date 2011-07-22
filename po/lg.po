@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2010-11-08 22:46+0000\n"
 "Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
@@ -253,8 +253,8 @@ msgid "translator-credits"
 msgstr "Kizito Birabwa <kbirabwa@yahoo.co.uk>"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Copyright (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

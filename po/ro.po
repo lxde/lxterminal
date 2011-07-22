@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXDE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2010-01-24 11:10-0800\n"
 "Last-Translator: alexxed <alexxed@gmail.com>\n"
 "Language-Team: Romanian <LL@li.org>\n"
@@ -251,9 +251,8 @@ msgid "translator-credits"
 msgstr "Comunitatea de traducători de pe tradu.softwareliber.ro"
 
 #: ../src/lxterminal.c:617
-#, fuzzy
-msgid "Copyright (C) 2008-2010"
-msgstr "Drepturi de autor pe 2008"
+msgid "Copyright (C) 2008-2011"
+msgstr "Drepturi de autor pe 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

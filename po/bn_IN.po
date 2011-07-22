@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2009-07-31 12:42+0200\n"
 "Last-Translator: Sankarshan <sankarshan.mukhopadhyay@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -261,7 +261,7 @@ msgstr "সঙ্কর্ষণ মুখোপাধ্যায় (sankarshan@r
 
 #: ../src/lxterminal.c:617
 #, fuzzy
-msgid "Copyright (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
 msgstr "স্বত্বাধিকার (C) ২০০৮"
 
 #: ../src/lxterminal.c:618

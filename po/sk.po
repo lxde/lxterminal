@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2010-08-08 11:31+0100\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -251,8 +251,8 @@ msgid "translator-credits"
 msgstr "Ivan Masár <helix84@centrum.sk>"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Copyright (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

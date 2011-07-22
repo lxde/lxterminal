@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2009-05-23 03:59+0200\n"
 "Last-Translator: Rahman Yusri Aftian <aftian@yahoo.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
@@ -252,8 +252,8 @@ msgid "translator-credits"
 msgstr "Andhika Padmawan <andhika.padmawan@gmail.com>, 2009."
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Hak Cipta (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Hak Cipta (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

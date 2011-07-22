@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2011-03-10 20:29+0200\n"
 "Last-Translator: Jesse <jesse.jaara@gmail.com>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -253,8 +253,8 @@ msgid "translator-credits"
 msgstr "Elias Julkunen <elias.julkunen@gmail.com>"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Tekijänoikeudet (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Tekijänoikeudet (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

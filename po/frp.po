@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2009-09-26 17:14+0200\n"
 "Last-Translator: alexandre raymond <alekcxjo@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -266,9 +266,8 @@ msgid "translator-credits"
 msgstr "Alexandre Raymond <Alexandre.Raymond@univ-lyon2.fr>"
 
 #: ../src/lxterminal.c:617
-#, fuzzy
-msgid "Copyright (C) 2008-2010"
-msgstr "Drét de Copie / Copyright (C) 2008"
+msgid "Copyright (C) 2008-2011"
+msgstr "Drét de Copie / Copyright (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

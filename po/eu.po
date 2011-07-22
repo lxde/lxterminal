@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2008-11-21 15:36+0100\n"
 "Last-Translator: Alain Mendizabal <alainmendi@gmail.com>\n"
 "Language-Team: Basque <alainmendi@gmail.com>\n"
@@ -268,7 +268,7 @@ msgid "translator-credits"
 msgstr "Alain Mendizabal <alainmendi@gmail.com>"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
 msgstr ""
 
 #: ../src/lxterminal.c:618

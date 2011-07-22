@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2009-08-31 12:59+0100\n"
 "Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
@@ -254,8 +254,8 @@ msgid "translator-credits"
 msgstr "Serbian (sr) — Jay A. Fleming <tito.nehru.naser@gmail.com>"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "2008-2010. Сва права задржана."
+msgid "Copyright (C) 2008-2011"
+msgstr "2008-2011. Сва права задржана."
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2011-02-18 16:51+0200\n"
 "Last-Translator: Klemen <klemen.kosir@gmx.com>\n"
 "Language-Team: Slovenian <paxmanpwnz@gmail.com>\n"
@@ -258,8 +258,8 @@ msgstr ""
 "paxman <paxmanpwnz@gmail.com>"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Avtorske pravice (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Avtorske pravice (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

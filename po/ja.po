@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2010-07-31 17:47+0900\n"
 "Last-Translator: Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -257,8 +257,8 @@ msgstr ""
 "IWAI, Masaharu <iwai@alib.jp>"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Copyright (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

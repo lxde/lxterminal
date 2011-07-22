@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2009-12-19 18:32+0100\n"
 "Last-Translator: Hugo Florentino <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -263,9 +263,8 @@ msgstr ""
 "Hugo Florentino <sysadmin@cips.cu>, 2009"
 
 #: ../src/lxterminal.c:617
-#, fuzzy
-msgid "Copyright (C) 2008-2010"
-msgstr "Copyright (C) 2008"
+msgid "Copyright (C) 2008-2011"
+msgstr "Copyright (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

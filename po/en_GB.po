@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LxTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Steve Cook (Yorvyk) <yorvik.ubunto@googlemail.com>\n"
 "Language-Team: English UK en_GB <yorvik.ubunto@gmail.com>\n"
@@ -250,8 +250,8 @@ msgid "translator-credits"
 msgstr "translator-credits"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Copyright © 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Copyright © 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

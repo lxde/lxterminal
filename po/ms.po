@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2009-06-07 18:33+0200\n"
 "Last-Translator: Payne Samad Loh <sploh77@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -263,9 +263,8 @@ msgstr ""
 "Umarzuki Bin Mochlis Moktar <umarzuki@gmail.com>"
 
 #: ../src/lxterminal.c:617
-#, fuzzy
-msgid "Copyright (C) 2008-2010"
-msgstr "Hakcipta Terpelihara (C) 2009"
+msgid "Copyright (C) 2008-2011"
+msgstr "Hakcipta Terpelihara (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

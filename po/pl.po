@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2010-11-14 16:15+0100\n"
 "Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
 "Language-Team: Polish <>\n"
@@ -260,8 +260,8 @@ msgstr ""
 "Piotr Sokół <psokol@jabster.pl>, 2010"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Prawa zastrzeżone (C) 2008-2010"
+msgid "Copyright (C) 2008-2011"
+msgstr "Prawa zastrzeżone (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"

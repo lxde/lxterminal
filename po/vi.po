@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-21 23:41+0200\n"
+"POT-Creation-Date: 2011-07-22 16:16+0200\n"
 "PO-Revision-Date: 2010-08-03 19:31+0200\n"
 "Last-Translator: Duy Hung <nguyentieuhau@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -255,8 +255,8 @@ msgstr ""
 "Duy-Hieu Bui (scamemiv@gmail.com)"
 
 #: ../src/lxterminal.c:617
-msgid "Copyright (C) 2008-2010"
-msgstr "Bản quyền (C) 2008"
+msgid "Copyright (C) 2008-2011"
+msgstr "Bản quyền (C) 2008-2011"
 
 #: ../src/lxterminal.c:618
 msgid "Terminal emulator for LXDE project"
