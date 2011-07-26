@@ -567,6 +567,22 @@ static void terminal_move_tab_execute(LXTerminal * terminal, gint direction)
 {
     GtkNotebook * notebook = GTK_NOTEBOOK(terminal->notebook);
     gint current_page_number = gtk_notebook_get_current_page(notebook);
+    gint target_page_number = current_page_number + direction;
+
+    /* prevent out of index */
+    if (target_page_number < 0 || target_page_number >= terminal->terms->len)
+    {
+	    return;
+    }
+    
+    /* swap index in terms array and its id */
+    Term * term_current = g_ptr_array_index(terminal->terms, current_page_number);
+    Term * term_target = g_ptr_array_index(terminal->terms, target_page_number);
+    g_ptr_array_index(terminal->terms, target_page_number) = term_current;
+    g_ptr_array_index(terminal->terms, current_page_number) = term_target;
+    term_current->index = target_page_number;
+    term_target->index = current_page_number;
+
     gtk_notebook_reorder_child(notebook, gtk_notebook_get_nth_page(notebook, current_page_number), current_page_number + direction);
 }
 
