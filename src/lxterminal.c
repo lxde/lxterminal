@@ -583,7 +583,7 @@ static void terminal_move_tab_execute(LXTerminal * terminal, gint direction)
     term_current->index = target_page_number;
     term_target->index = current_page_number;
 
-    gtk_notebook_reorder_child(notebook, gtk_notebook_get_nth_page(notebook, current_page_number), current_page_number + direction);
+    gtk_notebook_reorder_child(notebook, gtk_notebook_get_nth_page(notebook, current_page_number), target_page_number);
 }
 
 /* Handler for "activate" signal on Tabs/Move Tab Left menu item.
