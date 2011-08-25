@@ -1,3 +1,14 @@
+lxterminal (0.1.11-1) unstable; urgency=low
+
+  [ Andrea Florio ]
+  * New upstream release
+    - gtk3 ready
+    - Translations update
+    - fixed upstream bug 3372388 and 3376800
+    - fixed failures because of deprecated vte API
+
+ -- Andrea Florio <andrea@opensuse.org>  Thu, 25 Aug 2011 18:12:52 +0800
+
 lxterminal (0.1.9-1) unstable; urgency=low
 
   [ Yao Wei (魏銘廷) ]
