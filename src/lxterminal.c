@@ -321,7 +321,11 @@ void terminal_set_disable_alt(Term * term, gboolean disable_alt)
                 gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
         }
         else
+        {
             terminal_initialize_switch_tab_accelerator(term);
+        }
+
+        g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !disable_alt, NULL);
     }
 }
 
