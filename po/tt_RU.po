@@ -1,30 +1,29 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Ainur Shakirov <ainur.shakirov.tt@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-22 16:16+0200\n"
-"PO-Revision-Date: 2011-07-26 13:40+0200\n"
-"Last-Translator: Ainur <ainur.shakirov.tt@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2011-08-18 01:27+0400\n"
+"Last-Translator: Ainur Shakirov <ainur.shakirov.tt@gmail.com>\n"
+"Language-Team: Tatar <>\n"
 "Language: tt_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Lokalize 1.2\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr "Көнбатыш Европа"
+msgstr "Көнбатыш Аурупа"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr "Көнчыгыш Европа"
+msgstr "Көнчыгыш Аурупа"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
@@ -52,11 +51,11 @@ msgstr "Көнбатыш"
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr "Үзәк Европа"
+msgstr "Үзәк Аурупа"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Көньяк Европа"
+msgstr "Көньяк Аурупа"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
@@ -218,7 +217,7 @@ msgstr "Өстәмә бит ис_еме"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "Мон_нан элекке өстәмә бит"
+msgstr "Алд_ынгы өстәмә бит"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
@@ -294,11 +293,11 @@ msgstr "Курсор төре"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Меню өчен эссе төймәне өзү (үрнәк буенча F10)"
+msgstr "Меню өчен эссе төймәне сүндерү (үрнәк буенча F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr "Икенче өстәмә биткә күчү өчен Alt-n эссе төймәсен өзү"
+msgstr "Икенче өстәмә биткә күчү өчен Alt-n эссе төймәсен сүндерә"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -371,3 +370,4 @@ msgstr "Терминал"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Команда юлын куллану"
+
