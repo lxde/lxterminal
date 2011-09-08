@@ -1,4 +1,4 @@
-# Dutch translation for the lxterminal package.
+# Dutch translation of the lxterminal package.
 # Copyright (C) the author of the lxterminal package.
 # This file is distributed under the same license as the 
 # lxterminal package.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-22 16:16+0200\n"
-"PO-Revision-Date: 2011-06-13 11:34+0200\n"
+"PO-Revision-Date: 2011-09-08 11:34+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch\n"
 "Language: nl (Dutch)\n"
@@ -186,11 +186,11 @@ msgstr "_Hulp"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
-msgstr "Nieuw _Venster"
+msgstr "Nieuw _venster"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "Nieuw _Tabblad"
+msgstr "Nieuw _tabblad"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
@@ -214,23 +214,23 @@ msgstr "_Voorkeuren"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr "Naa_m Tabblad"
+msgstr "Naa_m tabblad"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "V_orig Tabblad"
+msgstr "V_orig tabblad"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
-msgstr "Vol_gend Tabblad"
+msgstr "Vol_gend tabblad"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Verplaats Tabblad naar _Links"
+msgstr "Verplaats tabblad naar _links"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Verplaats Tabblad naar _Rechts"
+msgstr "Verplaats tabblad naar _rechts"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
@@ -245,7 +245,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:490
 msgid "Name Tab"
-msgstr "Naam Tabblad"
+msgstr "Naam tabblad"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:609
@@ -312,7 +312,7 @@ msgstr "Voorgrond"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr "Verberg Sluitknoppen"
+msgstr "Verberg sluitknoppen"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
