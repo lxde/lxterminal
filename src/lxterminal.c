@@ -68,7 +68,7 @@ static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
 
 /* Menu and accelerator event handlers. */
 static void terminal_initialize_switch_tab_accelerator(Term * term);
-static void terminal_set_disable_alt(Term *term, gboolean disable_alt);
+static void terminal_update_alt(LXTerminal *terminal);
 static void terminal_switch_tab_accelerator(Term * term);
 static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
@@ -310,19 +310,39 @@ static void terminal_initialize_switch_tab_accelerator(Term * term)
     }
 }
 
-/* whether disable alt-n to switch tabs or not. */
-void terminal_set_disable_alt(Term * term, gboolean disable_alt)
+/* update <ALT>n status. */
+void terminal_update_alt(LXTerminal *terminal)
 {
-    if (GTK_IS_ACCEL_GROUP(term->parent->accel_group))
+    int i;
+    Term * term;
+
+    /* disable alt when the option is switched on or terminal has no other tabs */
+    if (terminal->setting->disable_alt || terminal->terms->len <= 1)
     {
-        if (disable_alt)
+        for (i = 0; i < terminal->terms->len; i++)
         {
+            term = g_ptr_array_index(terminal->terms, i);
+
             if (term->closure != NULL)
+            {
                 gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
+            }
         }
-        else
+    }
+    else
+    {
+        for (i = 0; i < terminal->terms->len; i++)
         {
-            terminal_initialize_switch_tab_accelerator(term);
+            term = g_ptr_array_index(terminal->terms, i);
+
+            if (GTK_IS_ACCEL_GROUP(term->parent->accel_group))
+            {
+                if (term->closure != NULL)
+                {
+                    gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
+                }
+                terminal_initialize_switch_tab_accelerator(term);
+            }
         }
     }
 }
@@ -403,7 +423,7 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
     }
 
     /* Disable Alt-n switch tabs or not. */
-    terminal_set_disable_alt(term, terminal->setting->disable_alt);
+    terminal_update_alt(terminal);
 }
 
 /* Handler for accelerator <SHIFT><CTRL> T.  Open a new tab. */
@@ -764,9 +784,6 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
         {
             Term * t = g_ptr_array_index(terminal->terms, i);
             t->index -= 1;
-            if ((GTK_IS_ACCEL_GROUP(t->parent->accel_group)) && (t->closure != NULL))
-                gtk_accel_group_disconnect(t->parent->accel_group, t->closure);
-            terminal_set_disable_alt(t, t->parent->setting->disable_alt);
         }
 
         /* Delete the tab and free the Term structure. */
@@ -779,6 +796,9 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
             gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
             terminal_geometry_restore(g_ptr_array_index(terminal->terms, 0));
         }
+
+        /* update <ALT>n status */
+        terminal_update_alt(terminal);
     }
 }
 
@@ -1310,7 +1330,6 @@ static void terminal_settings_apply(LXTerminal * terminal)
     for (i = 0; i < terminal->terms->len; i += 1)
     {
         terminal_settings_apply_to_term(terminal, g_ptr_array_index(terminal->terms, i));
-        terminal_set_disable_alt(g_ptr_array_index(terminal->terms, i), terminal->setting->disable_alt);
     }
 
     /* Update tab position. */
@@ -1327,6 +1346,9 @@ static void terminal_settings_apply(LXTerminal * terminal)
     if (terminal->setting->hide_menu_bar)
         gtk_widget_hide(terminal->menu);
         else gtk_widget_show(terminal->menu);
+
+    /* update <ALT>n status */
+    terminal_update_alt(terminal);
 }
 
 /* Apply terminal settings to all tabs in all terminals. */
