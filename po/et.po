@@ -9,13 +9,15 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-22 16:16+0200\n"
-"PO-Revision-Date: 2010-02-04 15:37+0300\n"
-"Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
+"PO-Revision-Date: 2011-09-08 12:26+0200\n"
+"Last-Translator: Anari <anari.jalakas@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
-"Language: \n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -212,7 +214,6 @@ msgid "Preference_s"
 msgstr "Eeli_stused"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
 msgstr "Uus _sakk"
 
@@ -244,9 +245,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:490
-#, fuzzy
 msgid "Name Tab"
-msgstr "Uus _sakk"
+msgstr "Saki nimetamine"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:609
@@ -263,69 +263,63 @@ msgstr "LXDE projekti terminaliemulaator"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Laiendatud"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Paksu kirja lubamine"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Helisignaal"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Taust:"
+msgstr "Taust"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Blokeerimine"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "All"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Kursor vilgub:"
+msgstr "Kursori vilkumine"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Kursor vilgub:"
+msgstr "Kursori stiil"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Keela menüü kiirklahv (F10 vaikimisi)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr ""
+msgstr "Keela Alt-n kasutamine sakkide vahetamiseks"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Kuva"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "Esiplaan:"
+msgstr "Esiplaan"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Sulgemise nuppude peitmine"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Menüüriba on peidetud:"
+msgstr "Menüüriba peitmine"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Kerimisriba on peidetud:"
+msgstr "Kerimisriba peitmine"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Left"
@@ -336,28 +330,24 @@ msgid "Right"
 msgstr "Paremal"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Tagasikerimise ridu:"
+msgstr "Tagasikerimise ridu"
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Vali-sõnahaaval märgid:"
+msgstr "Sõnumoodustavad märgid"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Style"
 msgstr "Stiil"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Sakipaneeli asukoht:"
+msgstr "Sakipaneeli asukoht"
 
 #: ../data/lxterminal-preferences.glade.h:22
-#, fuzzy
 msgid "Terminal font"
-msgstr "Terminali kirjatüüp:"
+msgstr "Terminali kirjatüüp"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Top"
@@ -365,15 +355,15 @@ msgstr "Üleval"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Underline"
-msgstr ""
+msgstr "Alakriips"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "gtk-cancel"
-msgstr ""
+msgstr "gtk-cancel"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "gtk-ok"
-msgstr ""
+msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
