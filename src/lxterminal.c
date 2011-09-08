@@ -1344,8 +1344,13 @@ static void terminal_settings_apply(LXTerminal * terminal)
 
     /* Hide or show menubar. */
     if (terminal->setting->hide_menu_bar)
+    {
         gtk_widget_hide(terminal->menu);
-        else gtk_widget_show(terminal->menu);
+    }
+    else 
+    {
+        gtk_widget_show(terminal->menu);
+    }
 
     /* update <ALT>n status */
     terminal_update_alt(terminal);
