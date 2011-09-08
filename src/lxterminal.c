@@ -324,8 +324,6 @@ void terminal_set_disable_alt(Term * term, gboolean disable_alt)
         {
             terminal_initialize_switch_tab_accelerator(term);
         }
-
-        g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !disable_alt, NULL);
     }
 }
 
@@ -1321,6 +1319,9 @@ static void terminal_settings_apply(LXTerminal * terminal)
 
     /* Update menu accelerators. */
     terminal_menu_accelerator_update(terminal);
+    
+    /* disable mnemonics if <ALT>n is diabled */
+    g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !terminal->setting->disable_alt, NULL);
 
     /* Hide or show menubar. */
     if (terminal->setting->hide_menu_bar)
