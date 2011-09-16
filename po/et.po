@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-22 16:16+0200\n"
-"PO-Revision-Date: 2011-09-08 12:26+0200\n"
+"PO-Revision-Date: 2011-09-16 14:52+0200\n"
 "Last-Translator: Anari <anari.jalakas@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "Language: et\n"
@@ -195,7 +195,7 @@ msgstr "Uus _sakk"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
-msgstr "_Sulge sakk"
+msgstr "_Sulge kaart"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
@@ -215,23 +215,23 @@ msgstr "Eeli_stused"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr "Uus _sakk"
+msgstr "Uus _kaart"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "_Eelmine sakk"
+msgstr "_Eelmine kaart"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
-msgstr "_Järgmine sakk"
+msgstr "_Järgmine kaart"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Tõsta sakk _vasakule"
+msgstr "Tõsta kaart _vasakule"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Tõsta sakk _paremale"
+msgstr "Tõsta kaart _paremale"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
@@ -246,7 +246,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:490
 msgid "Name Tab"
-msgstr "Saki nimetamine"
+msgstr "Kaardi nimetamine"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:609
@@ -299,7 +299,7 @@ msgstr "Keela menüü kiirklahv (F10 vaikimisi)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n to switch tabs"
-msgstr "Keela Alt-n kasutamine sakkide vahetamiseks"
+msgstr "Keela Alt-n kasutamine kaartide vahetamiseks"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
