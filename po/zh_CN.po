@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2010-07-21 22:28+0800\n"
 "Last-Translator: ideal Shang <idealities@gmail.com>\n"
 "Language-Team: zh_CN <LL@li.org>\n"
@@ -230,26 +230,26 @@ msgid "_About"
 msgstr "关于(_A)"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LX 终端"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "标签名称"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr "商源纯 <idealities@gmail.com>"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "版权所有 (C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE 计划的终端模拟器"
 
@@ -290,7 +290,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "禁止菜单快捷键(默认为F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
 msgstr "禁止使用 Alt-n 快捷键切换标签"
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -314,48 +315,45 @@ msgid "Hide scroll bar"
 msgstr "隐藏滚动条"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "首选项"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "左"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "右"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "回滚行数"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "选取词时会选取以下的字符"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "样式"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "标签面板位置"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "终端字体"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "上"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "下划线"
-
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "取消"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "确定"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -365,11 +363,14 @@ msgstr "终端"
 msgid "Use the command line"
 msgstr "使用命令行"
 
+#~ msgid "gtk-cancel"
+#~ msgstr "取消"
+
+#~ msgid "gtk-ok"
+#~ msgstr "确定"
+
 #~ msgid "Misc"
 #~ msgstr "杂项"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "禁用菜单的 F10 快捷键："
-
-#~ msgid "Preferences"
-#~ msgstr "首选项"

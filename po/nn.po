@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2009-12-31 00:12+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -238,27 +238,27 @@ msgid "_About"
 msgstr "_Om"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 #, fuzzy
 msgid "Name Tab"
 msgstr "Ny _fane"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr "Karl Ove Hufthammer"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright © 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminalemulator for LXDE"
 
@@ -302,7 +302,7 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+msgid "Disable using Alt-n for tabs and menu"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -329,51 +329,48 @@ msgid "Hide scroll bar"
 msgstr "Gøym rullefeltet:"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "Innstillingar"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "Til venstre"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "Til høgre"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 #, fuzzy
 msgid "Scrollback lines"
 msgstr "Linjer rulleminne:"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 #, fuzzy
 msgid "Select-by-word characters"
 msgstr "Merk-etter-ord-teikn:"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "Stil"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 #, fuzzy
 msgid "Tab panel position"
 msgstr "Plassering til fanepanel:"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 #, fuzzy
 msgid "Terminal font"
 msgstr "Terminalskrift:"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "Oppe"
 
-#: ../data/lxterminal-preferences.glade.h:24
-msgid "Underline"
-msgstr ""
-
 #: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr ""
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
+msgid "Underline"
 msgstr ""
 
 #: ../data/lxterminal.desktop.in.h:2
@@ -392,9 +389,6 @@ msgstr "Bruk kommandolinja"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Slå av F10-snarvegen til menyen:"
-
-#~ msgid "Preferences"
-#~ msgstr "Innstillingar"
 
 #~ msgid "General"
 #~ msgstr "Generelt"

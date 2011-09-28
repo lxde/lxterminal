@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2009-08-31 12:59+0100\n"
 "Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
@@ -238,26 +238,26 @@ msgid "_About"
 msgstr "_О програму"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "Именовани језичак"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr "Serbian (sr) — Jay A. Fleming <tito.nehru.naser@gmail.com>"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "2008-2011. Сва права задржана."
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "Терминал за LXDE радно окружење"
 
@@ -298,7 +298,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Искључи пречице за мени (F10 подразумевано)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
 msgstr "Искључи употребу Alt-n тастера за пребацивање између листова"
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -322,50 +323,45 @@ msgid "Hide scroll bar"
 msgstr "Сакриј дугмад за клизање"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "Поставке"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "Лево"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "Десно"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "Број линија историје"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "Знакови који образују речи"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "Стил"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "Смештај траке са листовима:"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "Фонт:"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "Горе"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "Подвучено"
-
-#: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
-msgid "gtk-ok"
-msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -375,11 +371,16 @@ msgstr "Терминал"
 msgid "Use the command line"
 msgstr "Користите линију наредби"
 
+#, fuzzy
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#, fuzzy
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Искључи позив менија тастером F10"
-
-#~ msgid "Preferences"
-#~ msgstr "Поставке"
 
 #~ msgid "General"
 #~ msgstr "Опште"

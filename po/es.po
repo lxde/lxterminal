@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2011-07-08 13:22+0200\n"
 "Last-Translator: Hugo <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -241,18 +241,18 @@ msgid "_About"
 msgstr "_Acerca de ..."
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "Nombrar pestaña"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr ""
 "Daniel Pacheco <daniel@tunki.org>, 2008\n"
@@ -260,11 +260,11 @@ msgstr ""
 "Guillermo Iguarán <tronador@cuteam.org>, 2009\n"
 "Hugo Florentino <sysadmin@cips.cu>, 2009-2010"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright (C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal para el proyecto LXDE"
 
@@ -305,7 +305,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Deshabilitar tecla de atajo (F10 por defecto)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
 msgstr "Deshabilitar el uso de Alt-n para cambiar de pestañas"
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -329,48 +330,45 @@ msgid "Hide scroll bar"
 msgstr "Ocultar la barra de desplazamiento"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "Preferencias"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "Izquierda"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "Derecha"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "Líneas de desplazamiento"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "Caracteres de selección por palabra"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "Estilo"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "Posición del panel de pestañas"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "Tipografía de la terminal"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "Superior"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "Subrayado"
-
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -380,6 +378,12 @@ msgstr "Terminal"
 msgid "Use the command line"
 msgstr "Usar la línea de comandos"
 
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Fallo al lanzar el navegador web. El comando fué `%s'\n"
 
@@ -388,9 +392,6 @@ msgstr "Usar la línea de comandos"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Desactivar el atajo de teclado F10 para el menú:"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencias"
 
 #~ msgid "General"
 #~ msgstr "General"

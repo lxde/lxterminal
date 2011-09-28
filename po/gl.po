@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2010-04-07 10:15+0200\n"
 "Last-Translator: Indalecio <ifreiria@gmail.com>\n"
 "Language-Team: Proxecto Trasno <proxecto@trasno.net>\n"
@@ -237,29 +237,29 @@ msgid "_About"
 msgstr "_Acerca de ..."
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "Novo _separador"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr ""
 "Miguel Anxo Bouzada <mbouzada@gmail.com>, 2009 \n"
 "Indalecio Freiría <ifreiria@gmail.com>, 2009 \n"
 "Proxecto Trasno <proxecto@trasno.net>"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright (C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal para o proxecto LXDE"
 
@@ -300,7 +300,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Desactivar a tecla de atallo (F10 predeterminada)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
 msgstr "Desactivar o uso de Alt-N para cambiar de lapela"
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -324,48 +325,45 @@ msgid "Hide scroll bar"
 msgstr "Ocultar a barra de desprazamento:"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "Preferencias"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "Esquerda"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "Dereita"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "Liñas de desprazamento:"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "Selección por palabra:"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "Estilo"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "Posición do panel de separadores:"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "Tipografía do terminal:"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "Superior"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "Subliñado"
-
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "gtk-cancel"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "gtk-ok"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -375,6 +373,12 @@ msgstr "Terminal"
 msgid "Use the command line"
 msgstr "Usar a liña de ordes"
 
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-cancel"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-ok"
+
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Non se puido iniciar o navegador web. A orde foi `%s'\n"
 
@@ -383,9 +387,6 @@ msgstr "Usar a liña de ordes"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Desactivar o atallo de teclado F10 para o menú:"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencias"
 
 #~ msgid "General"
 #~ msgstr "Xeral"

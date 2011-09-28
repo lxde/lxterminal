@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2010-08-03 19:31+0200\n"
 "Last-Translator: Duy Hung <nguyentieuhau@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,28 +237,28 @@ msgid "_About"
 msgstr "_Giới thiệu"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "Dải tên"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr ""
 "Nhóm Việt hoá:\n"
 "Duy-Hieu Bui (scamemiv@gmail.com)"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "Bản quyền (C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "Chương trình cửa sổ lệnh cho dự án LXDE"
 
@@ -299,7 +299,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Vô hiệu hóa danh sách phím tắt (10 theo mặc định)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
 msgstr "Tắt chế độ chuyển thẻ bằng Alt-n"
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -323,49 +324,45 @@ msgid "Hide scroll bar"
 msgstr "Ẩn thanh cuộn:"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "Tùy chỉnh"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "Trái"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "Phải"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "Những dòng cuộn trở lại"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "Chọn bằng chữ kí tự"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "Kiểu"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "Vị trí nhãn bảng điều khiển"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "Phông chữ giới hạn:"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "Trên"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "Đường gạch dưới"
-
-# r bỏ
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "gtk-hủy bỏ"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "gtk-chấp nhận"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -375,6 +372,13 @@ msgstr "Cửa sổ lệnh"
 msgid "Use the command line"
 msgstr "Dùng dòng lệnh"
 
+# r bỏ
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-hủy bỏ"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-chấp nhận"
+
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Không thể chạy trình duyệt web. Câu lệnh là `%s'\n"
 
@@ -383,6 +387,3 @@ msgstr "Dùng dòng lệnh"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "Tắt phím tắt F10 hiển thị trình đơn"
-
-#~ msgid "Preferences"
-#~ msgstr "Tùy chỉnh"

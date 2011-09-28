@@ -1,22 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Hungarian translation of lxterminal.
+# Copyright (C) 2010-2011 The LXDE Team
+# This file is distributed under the same license as the lxterminal package.
+# Attila Szervac <sas@321.hu>, 2010.
+# Laszlo Dvornik <rezuri@zoho.com>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lxterminal 0.1\n"
+"Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
-"PO-Revision-Date: 2010-01-17 18:40+0100\n"
-"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
-"Language-Team: Hungarian <hu@li.org>\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"PO-Revision-Date: 2011-09-03 15:39+0200\n"
+"Last-Translator: Laszlo Dvornik <rezuri@zoho.com>\n"
+"Language-Team: Hungarian\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Hungarian\n"
-"X-Poedit-Country: HUNGARY\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -32,7 +31,7 @@ msgstr "Kelet-ázsiai"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr "DK.- és DNy.-ázsiai"
+msgstr "DK- és DNy-ázsiai"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
@@ -92,7 +91,7 @@ msgstr "Török"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr "Nord"
+msgstr "Skandináv"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
@@ -154,7 +153,7 @@ msgstr "Gudzsaráti"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr "Gurmuki"
+msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
@@ -162,7 +161,7 @@ msgstr "Izlandi"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr "Vietnámi"
+msgstr "Vietnami"
 
 #: ../src/encoding.c:204
 msgid "Thai"
@@ -174,7 +173,7 @@ msgstr "_Fájl"
 
 #: ../src/lxterminal.c:133
 msgid "_Edit"
-msgstr "Sz_erkeszt"
+msgstr "Sz_erkesztés"
 
 #: ../src/lxterminal.c:134
 msgid "_Tabs"
@@ -198,24 +197,23 @@ msgstr "Lap be_zárása"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
-msgstr "_Kilép"
+msgstr "_Kilépés"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
-msgstr "_Másol"
+msgstr "_Másolás"
 
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
-msgstr "Be_illeszt"
+msgstr "Be_illesztés"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "_Jellemzők"
+msgstr "_Beállítások"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "Új _lap"
+msgstr "Lap_név"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
@@ -238,29 +236,30 @@ msgid "_About"
 msgstr "_Névjegy"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:490
-#, fuzzy
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
-msgstr "Új _lap"
+msgstr "Lapnév"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
-msgstr "SZERVÁC Attila"
+msgstr ""
+"Dvornik László <rezuri@zoho.com>\n"
+"Szervác Attila <sas@321.hu>"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright (C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
-msgstr "Terminál emulátor az LXDE projekthez"
+msgstr "Terminálemulátor az LXDE projekthez"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
@@ -280,7 +279,7 @@ msgstr "Háttér"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Téglalap"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
@@ -288,19 +287,20 @@ msgstr "Lent"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor blink"
-msgstr "Kurzor villanás"
+msgstr "Villogó kurzor"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Kurzor stílus"
+msgstr "Kurzorstílus"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Menü-gyorsbillentyű ki (alapértelmezetten F10)"
+msgstr "Menü-gyorsbillentyű tiltása (alapértelmezetten F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
-msgstr "Alt-n lapváltó ki"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "Alt-n lapváltó tiltása"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -312,59 +312,56 @@ msgstr "Előtér"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr "Bezáró gombok rejtése"
+msgstr "Bezáró gombok elrejtése"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
-msgstr "Menüsáv rejtése"
+msgstr "Menüsáv elrejtése"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide scroll bar"
-msgstr "Görgetősáv rejtése"
+msgstr "Gördítősáv elrejtése"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "_Beállítások"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "Balra"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "Jobbra"
 
-#: ../data/lxterminal-preferences.glade.h:18
-msgid "Scrollback lines"
-msgstr "Visszagördítő sorok"
-
 #: ../data/lxterminal-preferences.glade.h:19
+msgid "Scrollback lines"
+msgstr "Visszagörgetendő sorok"
+
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "Szó-alapú-választás karakterek"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "Stílus"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "Lap panel helyzete"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "Terminál betű"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "Fent"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "Aláhúzás"
-
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "Mégsem"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "Mehet"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -374,53 +371,8 @@ msgstr "Terminál"
 msgid "Use the command line"
 msgstr "Parancssor használata"
 
-#~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr "A webböngésző indítása meghiúsult. Ez volt a parancs: `%s'\n"
+#~ msgid "gtk-cancel"
+#~ msgstr "Mégsem"
 
-#~ msgid "Misc"
-#~ msgstr "Egyebek"
-
-#~ msgid "Disable F10 shortcut for menu:"
-#~ msgstr "F10 gyorsbillentyű kikapcsolása a menühöz:"
-
-#~ msgid "Preferences"
-#~ msgstr "Beállítások"
-
-#~ msgid "General"
-#~ msgstr "Általános"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Beállítások"
-
-#~ msgid "Transparent Background:"
-#~ msgstr "Átlátszó háttér:"
-
-#~ msgid "/_File/_New Tab"
-#~ msgstr "/_Fájl/Ú_j lap"
-
-#~ msgid "/_File/_Close Tab"
-#~ msgstr "/_Fájl/Lap be_zárása"
-
-#~ msgid "/_File/sep1"
-#~ msgstr "/_Fájl/sep1"
-
-#~ msgid "/_File/_Quit"
-#~ msgstr "/_Fájl/_Kilép"
-
-#~ msgid "/_Edit/_Copy"
-#~ msgstr "/Sz_erkeszt/_Másol"
-
-#~ msgid "/_Edit/_Paste"
-#~ msgstr "/Sz_erkeszt/Be_illeszt"
-
-#~ msgid "/_Edit/sep1"
-#~ msgstr "/Sz_erkeszt/sep1"
-
-#~ msgid "/_Edit/_Preferences..."
-#~ msgstr "/Sz_erkeszt/_Beállítások..."
-
-#~ msgid "/_Tabs/_Next Tab"
-#~ msgstr "/_Lapok/_Következő lap"
-
-#~ msgid "/_Preferences..."
-#~ msgstr "/_Beállítások"
+#~ msgid "gtk-ok"
+#~ msgstr "OK"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2010-04-20 23:55+0300\n"
 "Last-Translator: Tareq Al Jurf <taljurf@fedoraproject.org>\n"
 "Language-Team: Arabic <trans-ar@lists.fedoraproject.org>\n"
@@ -237,26 +237,26 @@ msgid "_About"
 msgstr "_عن"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "لسان الاسم"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr "أحمد فرغل <ahmad.farghal@gmail.com>"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "حقوق النشر محفوظة (C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "محاكي طرفية لمشروع LXDE"
 
@@ -297,7 +297,7 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "عطِّل مفتاح اختصار القائمة (F10 في الوضع الافتراضي)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+msgid "Disable using Alt-n for tabs and menu"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -321,48 +321,45 @@ msgid "Hide scroll bar"
 msgstr "اخفِ شريط التمرير"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "تفضيلات"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "اليسار"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "اليمين"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "سطور التمرير الخلفي"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "اختر باعتبار محارف الكلمات"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "الشكل"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "موقع شريط الألسنة"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "خط الطرفية"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "الأعلى"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "تسطير"
-
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "gtk-إلغاء"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "gtk-موافق"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -372,14 +369,17 @@ msgstr "شاشة طرفية"
 msgid "Use the command line"
 msgstr "استخدِم سطر الأوامر"
 
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-إلغاء"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-موافق"
+
 #~ msgid "Misc"
 #~ msgstr "خيارات متنوعة"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "عطّل الاختصار F10 للقائمة:"
-
-#~ msgid "Preferences"
-#~ msgstr "تفضيلات"
 
 #~ msgid "General"
 #~ msgstr "عام"

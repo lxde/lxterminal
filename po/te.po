@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -236,26 +236,26 @@ msgid "_About"
 msgstr "గురించి (_A)"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXటెర్మినల్"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "ట్యాబ్ పేరుపెట్టు"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr "Praveen Illa <mail2ipn@gmail.com>, 2011."
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "నకలుహక్కు (C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE ప్రోజెక్టు కొరకు టెర్మినల్ ఎమ్యులేటర్"
 
@@ -296,7 +296,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "మెనూ లఘు కీ లను అచేతనంచేయి (F10 అప్రమేయముగా)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
 msgstr "Alt-nను వాడి ట్యాబ్‌లను మార్చుటను అచేతనంచేయి"
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -320,48 +321,45 @@ msgid "Hide scroll bar"
 msgstr "స్క్రోల్ పట్టీని దాయి"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "ప్రాధాన్యతలు (_s)"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "ఎడమ"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "కుడి"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "స్క్రోల్‌బాక్ లైన్స్"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "పద అక్షరాలను బట్టి ఎంచుకొను"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "శైలి"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "ట్యాబ్ ప్యానల్ స్థానము"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "టెర్మినల్ ఫాంటు"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "ఉత్తమ"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "కిందిగీత"
-
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "gtk-రద్దు"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "gtk-సరే"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -370,3 +368,9 @@ msgstr "టెర్మినల్"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "కమాండు లైనును వాడు"
+
+#~ msgid "gtk-cancel"
+#~ msgstr "gtk-రద్దు"
+
+#~ msgid "gtk-ok"
+#~ msgstr "gtk-సరే"

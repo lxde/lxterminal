@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2010-07-06 13:25+0200\n"
 "Last-Translator: Hamidreza <n3gb0y@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,26 +237,26 @@ msgid "_About"
 msgstr "_درباره"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "پایانه ی LX"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 msgid "Name Tab"
 msgstr "سربرگی تازه"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr "Hamidreza DavoodiAli Yousefi Sabzevar"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "حق نشر(-2010c) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "شبیه ساز پایانه برای پروژه ی LXDE"
 
@@ -297,7 +297,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "غیر فعال کردن منو کلید میانبر (F10 به صورت پیش فرض)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
 msgstr "غیرفعال سازی Alt-n برای جابه جایی زبانه ها"
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -322,48 +323,45 @@ msgid "Hide scroll bar"
 msgstr "پنهان کردن نوار محرک"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "تنظیمات"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "چپ"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "راست"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
 msgstr "خطوط عقبلغز"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
 msgstr "انتخاب با کلمه"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "سبک و روش"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
 msgstr "موقعیت پنل سربرگ"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
 msgstr "قلم پایانه"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "بالا"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
 msgstr "زیر خط"
-
-#: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr "جی‌تی‌کی-انصراف"
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
-msgstr "جی‌تی‌کی-بسیار‌خوب"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -373,6 +371,12 @@ msgstr "پایانه"
 msgid "Use the command line"
 msgstr "استفاده از خط فرمان"
 
+#~ msgid "gtk-cancel"
+#~ msgstr "جی‌تی‌کی-انصراف"
+
+#~ msgid "gtk-ok"
+#~ msgstr "جی‌تی‌کی-بسیار‌خوب"
+
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "شکست در اجرای مرورگر. دستور `%s  بود.\n"
 
@@ -381,6 +385,3 @@ msgstr "استفاده از خط فرمان"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "غیر فعال کردن میانبر F10 برای فهرست(منو):"
-
-#~ msgid "Preferences"
-#~ msgstr "تنظیمات"

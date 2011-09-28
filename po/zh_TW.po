@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-22 16:16+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
 "PO-Revision-Date: 2009-07-26 09:42+0200\n"
 "Last-Translator: 羅廷中 <timloo0710@gmail.com>\n"
 "Language-Team: zh_TW <LL@li.org>\n"
@@ -246,29 +246,29 @@ msgid "_About"
 msgstr "關於(_A)"
 
 #. Set window title.
-#: ../src/lxterminal.c:386 ../src/lxterminal.c:615 ../src/lxterminal.c:690
-#: ../src/lxterminal.c:1207 ../src/lxterminal.c:1241 ../src/preferences.c:208
+#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LX 終端機"
 
-#: ../src/lxterminal.c:490
+#: ../src/lxterminal.c:512
 #, fuzzy
 msgid "Name Tab"
 msgstr "開新分頁(_N)"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:609
+#: ../src/lxterminal.c:650
 msgid "translator-credits"
 msgstr ""
 "Fred Chien <cfsghost@gmail.com>\n"
 "Ming-Ting Wei <medicalwei@gmail.com>"
 
-#: ../src/lxterminal.c:617
+#: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
 msgstr "版權(C) 2008-2011"
 
-#: ../src/lxterminal.c:618
+#: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE 專案的終端機模擬器"
 
@@ -312,7 +312,7 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n to switch tabs"
+msgid "Disable using Alt-n for tabs and menu"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
@@ -339,51 +339,48 @@ msgid "Hide scroll bar"
 msgstr "隱藏捲動列："
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "偏好設定"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
 msgstr "左側"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Right"
 msgstr "右側"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 #, fuzzy
 msgid "Scrollback lines"
 msgstr "保留行數："
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 #, fuzzy
 msgid "Select-by-word characters"
 msgstr "選取字詞時會選取以下的字元："
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "樣式"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 #, fuzzy
 msgid "Tab panel position"
 msgstr "分頁顯示位置："
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
 #, fuzzy
 msgid "Terminal font"
 msgstr "終端機字型："
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
 msgstr "頂部"
 
-#: ../data/lxterminal-preferences.glade.h:24
-msgid "Underline"
-msgstr ""
-
 #: ../data/lxterminal-preferences.glade.h:25
-msgid "gtk-cancel"
-msgstr ""
-
-#: ../data/lxterminal-preferences.glade.h:26
-msgid "gtk-ok"
+msgid "Underline"
 msgstr ""
 
 #: ../data/lxterminal.desktop.in.h:2
@@ -399,9 +396,6 @@ msgstr "使用命令列"
 
 #~ msgid "Disable F10 shortcut for menu:"
 #~ msgstr "取消 F10 目錄快捷鍵："
-
-#~ msgid "Preferences"
-#~ msgstr "偏好設定"
 
 #~ msgid "General"
 #~ msgstr "一般"
