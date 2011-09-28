@@ -303,9 +303,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Avaktivera tangentbordskomando för meny (F10 som standard)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Avaktivera användningen av Alt-n för att växla mellan flikar"
+msgstr "Avaktivera användningen av Alt-n förflikar och meny"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -328,9 +327,8 @@ msgid "Hide scroll bar"
 msgstr "Göm rullist"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Inställningar"
+msgstr "Inställningar för LXTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
