@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-09-03 15:39+0200\n"
+"PO-Revision-Date: 2011-10-02 09:23+0200\n"
 "Last-Translator: Laszlo Dvornik <rezuri@zoho.com>\n"
 "Language-Team: Hungarian\n"
 "Language: hu\n"
@@ -298,9 +298,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Menü-gyorsbillentyű tiltása (alapértelmezetten F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Alt-n lapváltó tiltása"
+msgstr "Alt-n használatának tiltása lapokhoz és menühöz"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -323,9 +322,8 @@ msgid "Hide scroll bar"
 msgstr "Gördítősáv elrejtése"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "_Beállítások"
+msgstr "LXTerminal beállításai"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
@@ -370,9 +368,3 @@ msgstr "Terminál"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Parancssor használata"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "Mégsem"
-
-#~ msgid "gtk-ok"
-#~ msgstr "OK"
