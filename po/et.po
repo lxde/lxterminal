@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-09-16 14:52+0200\n"
+"PO-Revision-Date: 2011-10-07 07:18+0200\n"
 "Last-Translator: Anari <anari.jalakas@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "Language: et\n"
@@ -298,9 +298,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Keela menüü kiirklahv (F10 vaikimisi)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Keela Alt-n kasutamine kaartide vahetamiseks"
+msgstr "Keela Alt-n kasutamine kaartides ja menüüs"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -323,9 +322,8 @@ msgid "Hide scroll bar"
 msgstr "Kerimisriba peitmine"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Eelistused"
+msgstr "LXTerminali eelistused"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
