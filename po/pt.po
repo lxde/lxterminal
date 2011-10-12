@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-05-14 02:22+0200\n"
+"PO-Revision-Date: 2011-10-12 12:16+0200\n"
 "Last-Translator: Sérgio <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -301,9 +301,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Desativar tecla de atalho de menu (F10 por omissão)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Desativar a utilização de Alt-n para trocar separadores"
+msgstr "Desativar a utilização de Alt-n para separadores e menus"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -326,9 +325,8 @@ msgid "Hide scroll bar"
 msgstr "Ocultar barra de deslocação"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Preferência_s"
+msgstr "Preferências do LxTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
