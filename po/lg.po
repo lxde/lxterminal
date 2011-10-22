@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2010-11-08 22:46+0000\n"
+"PO-Revision-Date: 2011-10-23 00:26+0200\n"
 "Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
 "Language: lg\n"
@@ -297,10 +297,10 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Eppeesa erya F10 lireme okuleeta menyu"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
 msgstr ""
-"Okunyigir'okumu eppeesa erya Alt n'erya namba kireme okukyusanga oludda"
+"Okunyigir'okumu eppeesa erya Alt n'erya namba kireme okukyusanga oludda "
+"n'okukola ku menyu"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -323,9 +323,8 @@ msgid "Hide scroll bar"
 msgstr "Kisa akaseesa"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "_Enteekateeka"
+msgstr " Enteekateeka ya LXTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
