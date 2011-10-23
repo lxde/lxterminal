@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2010-08-10 22:03+0200\n"
+"PO-Revision-Date: 2011-10-23 12:31+0200\n"
 "Last-Translator: Радослав <Rec.ku@hotmail.com>\n"
 "Language-Team: MIME-Version: 1.0\n"
 "Language: bg\n"
@@ -38,12 +38,12 @@ msgstr "Югоизточна и Югозападна Азия"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr "Близкият изток"
+msgstr "Близък Изток"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr "Уникод"
+msgstr "Унифицирана кодировка"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
@@ -140,7 +140,7 @@ msgstr "Кирилица (Украинска)"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr "Хърватско"
+msgstr "Хърватски"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
@@ -160,15 +160,15 @@ msgstr "Гурмуки"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr "Исландско"
+msgstr "Исландски"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr "Виетнамско"
+msgstr "Виетнамски"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr "Таи"
+msgstr "Тайландски"
 
 #: ../src/lxterminal.c:132
 msgid "_File"
@@ -176,7 +176,7 @@ msgstr "_Файл"
 
 #: ../src/lxterminal.c:133
 msgid "_Edit"
-msgstr "_Редактиране"
+msgstr "Р_едактиране"
 
 #: ../src/lxterminal.c:134
 msgid "_Tabs"
@@ -184,7 +184,7 @@ msgstr "_Раздели"
 
 #: ../src/lxterminal.c:135
 msgid "_Help"
-msgstr "_Помощ"
+msgstr "Помо_щ"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
@@ -192,7 +192,7 @@ msgstr "_Нов прозорец"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "_Нов раздел"
+msgstr "Н_ов раздел"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
@@ -212,15 +212,15 @@ msgstr "_Поставяне"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "Предпочитания"
+msgstr "Предпо_читания"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr "_Име на раздела"
+msgstr "Име _на раздела"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "_Предишен раздел"
+msgstr "Пре_дишен раздел"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
@@ -228,11 +228,11 @@ msgstr "_Следващ раздел"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "_Премести раздела отляво"
+msgstr "Премести раздела от_ляво"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "_Премести раздела отдясно"
+msgstr "Премести раздела от_дясно"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
@@ -264,7 +264,7 @@ msgstr "Терминален емулатор за LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr "За напреднали"
+msgstr "Допълнителни"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
@@ -296,12 +296,11 @@ msgstr "Вид на курсора"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Деактирай бърз клавиш за менюто (по подразбиране: F10)"
+msgstr "Деактивирай бърз клавиш за менюто (по подразбиране: F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Деактивирай Alt-а за превключване на разделите"
+msgstr "Деактивирай Alt-а за бързите клавиши в менюто и разделите"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -309,7 +308,7 @@ msgstr "Екран"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
-msgstr "Отпред"
+msgstr "На преден план"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
@@ -324,9 +323,8 @@ msgid "Hide scroll bar"
 msgstr "Скрий плъзгача"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Настройки"
+msgstr "Предпочитания"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
@@ -342,7 +340,7 @@ msgstr "Щрихи"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
-msgstr "Маркирай побуквено"
+msgstr "Маркирай по думи"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
