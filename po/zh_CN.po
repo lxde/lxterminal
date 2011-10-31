@@ -3,13 +3,15 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2010-07-21 22:28+0800\n"
-"Last-Translator: ideal Shang <idealities@gmail.com>\n"
+"PO-Revision-Date: 2011-10-31 10:08+0200\n"
+"Last-Translator: Yinghua_Wang <wantinghard@gmail.com>\n"
 "Language-Team: zh_CN <LL@li.org>\n"
-"Language: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -290,9 +292,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "禁止菜单快捷键(默认为F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "禁止使用 Alt-n 快捷键切换标签"
+msgstr "禁止使用 Alt-n 快捷键切换标签和菜单"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -315,9 +316,8 @@ msgid "Hide scroll bar"
 msgstr "隐藏滚动条"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "首选项"
+msgstr "LXTerminal 首选项"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
