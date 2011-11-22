@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-10-12 12:16+0200\n"
+"PO-Revision-Date: 2011-11-22 14:50+0200\n"
 "Last-Translator: Sérgio <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -298,7 +298,7 @@ msgstr "Estilo do cursor"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Desativar tecla de atalho de menu (F10 por omissão)"
+msgstr "Desativar tecla de atalho de menu (padrão é F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n for tabs and menu"
