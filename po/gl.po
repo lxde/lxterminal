@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-09-30 08:43+0200\n"
+"PO-Revision-Date: 2011-12-02 15:21+0200\n"
 "Last-Translator: mbouzada <mbouzada@gmail.com>\n"
 "Language-Team: Proxecto Trasno <proxecto@trasno.net>\n"
 "Language: gl\n"
@@ -174,11 +174,11 @@ msgstr "_Ficheiro"
 
 #: ../src/lxterminal.c:133
 msgid "_Edit"
-msgstr "_Edición"
+msgstr "_Editar"
 
 #: ../src/lxterminal.c:134
 msgid "_Tabs"
-msgstr "_Separadores"
+msgstr "_Lapelas"
 
 #: ../src/lxterminal.c:135
 msgid "_Help"
@@ -190,11 +190,11 @@ msgstr "Nova _xanela"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "Novo _separador"
+msgstr "_Novo separador"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
-msgstr "_Pechar separador"
+msgstr "Pechar a _lapela"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
@@ -202,39 +202,39 @@ msgstr "_Saír"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:167
 msgid "Cop_y"
-msgstr "Cop_iar"
+msgstr "_Copiar"
 
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
-msgstr "_Colar"
+msgstr "_Pegar"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
-msgstr "Preferencia_s"
+msgstr "Pre_ferencias"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Na_me Tab"
-msgstr "Novo _separador"
+msgstr "No_me da lapela"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "Separador a_nterior"
+msgstr "Lapela _anterior"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
-msgstr "Separador s_eguinte"
+msgstr "Lapela _seguinte"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Mover ao separador da _esquerda"
+msgstr "Mover á lapela da _esquerda"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Mover ao separador da _dereita"
+msgstr "Mover á lapela da _dereita"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
-msgstr "_Acerca de ..."
+msgstr "_Sobre."
 
 #. Set window title.
 #: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
@@ -245,7 +245,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:512
 msgid "Name Tab"
-msgstr "Novo _separador"
+msgstr "Nome da lapela"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:650
@@ -257,7 +257,7 @@ msgstr ""
 
 #: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
-msgstr "Copyright (C) 2008-2011"
+msgstr "Dereitos de autoría (C) 2008-2011"
 
 #: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
@@ -269,7 +269,7 @@ msgstr "Avanzado"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr "Permitir tipografía en negras"
+msgstr "Permitir letras en negriña"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
@@ -277,7 +277,7 @@ msgstr "Sinal audíbel"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Background"
-msgstr "Fondo:"
+msgstr "Fondo"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
@@ -289,11 +289,11 @@ msgstr "Inferior"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor blink"
-msgstr "Intermitencia do cursor:"
+msgstr "Intermitencia do cursor"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Intermitencia do cursor:"
+msgstr "Estilo do cursor"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
@@ -309,19 +309,19 @@ msgstr "Amosar"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
-msgstr "Primeiro plano:"
+msgstr "Primeiro plano"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr "Ocultar botón de peche"
+msgstr "Agochar botón de peche"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
-msgstr "Ocultar a barra de menú"
+msgstr "Agochar a barra de menú"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide scroll bar"
-msgstr "Ocultar a barra de desprazamento:"
+msgstr "Agochar a barra de desprazamento:"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "LXTerminal Preferences"
@@ -341,7 +341,7 @@ msgstr "Liñas de desprazamento:"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
-msgstr "Selección por palabra:"
+msgstr "Selección por palabra"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
@@ -349,11 +349,11 @@ msgstr "Estilo"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Tab panel position"
-msgstr "Posición do panel de separadores:"
+msgstr "Posición do panel de lapelas"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Terminal font"
-msgstr "Tipografía do terminal:"
+msgstr "Tipo de letra do terminal"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
