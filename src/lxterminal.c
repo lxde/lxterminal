@@ -1341,7 +1341,7 @@ static void terminal_settings_apply(LXTerminal * terminal)
 
     /* Update menu accelerators. */
     terminal_menu_accelerator_update(terminal);
-    
+
     /* disable mnemonics if <ALT>n is diabled */
     g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !terminal->setting->disable_alt, NULL);
 
@@ -1350,7 +1350,7 @@ static void terminal_settings_apply(LXTerminal * terminal)
     {
         gtk_widget_hide(terminal->menu);
     }
-    else 
+    else
     {
         gtk_widget_show(terminal->menu);
     }
