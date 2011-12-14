@@ -980,15 +980,26 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), vte_terminal_get_adjustment(VTE_TERMINAL(term->vte)));
 
     /* Fork the process that will have the VTE as its controlling terminal. */
-    if (exec != NULL)
+    if (exec == NULL)
     {
-        gchar * * command;
-        g_shell_parse_argv(exec, NULL, &command, NULL);
-        term->pid = vte_terminal_fork_command(VTE_TERMINAL(term->vte), (const char *) command[0], command, env, pwd, FALSE, TRUE, TRUE);
-        g_strfreev(command);
+            exec = g_getenv("SHELL");
     }
-    else
-        term->pid = vte_terminal_fork_command(VTE_TERMINAL(term->vte), NULL, NULL, env, pwd, FALSE, TRUE, TRUE);
+
+    gchar ** command;
+    g_shell_parse_argv(exec, NULL, &command, NULL);
+
+    term->pid = vte_terminal_fork_command_full(
+                    VTE_TERMINAL(term->vte),
+                    VTE_PTY_NO_LASTLOG | VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP,
+                    pwd,
+                    command,
+                    env,
+                    G_SPAWN_FILE_AND_ARGV_ZERO | G_SPAWN_SEARCH_PATH,
+                    NULL,
+                    NULL,
+                    NULL,
+                    NULL);
+    g_strfreev(command);
 
     /* Connect signals. */
     g_signal_connect(G_OBJECT(term->tab), "button-press-event", G_CALLBACK(terminal_tab_button_press_event), term);
