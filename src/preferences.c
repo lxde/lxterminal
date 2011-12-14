@@ -67,6 +67,11 @@ static void preferences_dialog_background_color_set_event(GtkColorButton * widge
 {
     gtk_color_button_get_color(widget, &terminal->setting->background_color);
     terminal->setting->background_alpha = gtk_color_button_get_alpha(widget);
+
+    if (terminal->setting->background_alpha == 0) {
+        terminal->setting->background_alpha = 1;
+    }
+
     terminal_settings_apply_to_all(terminal);
 }
 
