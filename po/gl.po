@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-12-02 15:21+0200\n"
+"PO-Revision-Date: 2012-01-06 16:52+0200\n"
 "Last-Translator: mbouzada <mbouzada@gmail.com>\n"
 "Language-Team: Proxecto Trasno <proxecto@trasno.net>\n"
 "Language: gl\n"
@@ -190,7 +190,7 @@ msgstr "Nova _xanela"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "_Novo separador"
+msgstr "_Nova lapela"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
@@ -313,7 +313,7 @@ msgstr "Primeiro plano"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr "Agochar botón de peche"
+msgstr "Agochar o botón de peche"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide menu bar"
@@ -337,7 +337,7 @@ msgstr "Dereita"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
-msgstr "Liñas de desprazamento:"
+msgstr "Liñas de desprazamento"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
