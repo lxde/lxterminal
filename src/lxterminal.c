@@ -644,6 +644,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
     {
         "Fred Chien <cfsghost@gmail.com>",
         "Marty Jack <martyj19@comcast.net>",
+        "Yao Wei <mwei@lxde.org>",
         NULL
     };
     /* TRANSLATORS: Replace this string with your names, one name per line. */
