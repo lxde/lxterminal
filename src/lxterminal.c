@@ -875,7 +875,6 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     Setting * setting = terminal->setting;
 
     /* Terminal properties. */
-    vte_terminal_reset(VTE_TERMINAL(term->vte), FALSE, FALSE);
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
     vte_terminal_set_word_chars(VTE_TERMINAL(term->vte), setting->word_selection_characters);
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
