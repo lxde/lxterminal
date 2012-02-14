@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
-  <object class="GtkAdjustment" id="adjustment1">
+  <object class="GtkAdjustment" id="scrollback_lines_adjustment">
     <property name="upper">100000</property>
     <property name="value">1000</property>
     <property name="step_increment">100</property>
@@ -392,7 +392,7 @@
                             <property name="can_focus">True</property>
                             <property name="invisible_char">•</property>
                             <property name="invisible_char_set">True</property>
-                            <property name="adjustment">adjustment1</property>
+                            <property name="adjustment">scrollback_lines_adjustment</property>
                             <property name="numeric">True</property>
                           </object>
                           <packing>

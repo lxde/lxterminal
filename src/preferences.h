@@ -23,5 +23,6 @@
 
 extern void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal);
 extern gint terminal_tab_get_position_id(gchar * position);
+extern gint terminal_cursor_get_shape_id(gchar * shape);
 
 #endif

@@ -33,7 +33,7 @@ typedef struct _setting {
     GdkColor foreground_color;		/* Foreground color */
     gboolean disallow_bold;		/* Disallow bolding by VTE */
     gboolean cursor_blink;		/* True if cursor blinks */
-    gboolean cursor_underline;		/* True if underline cursor; false if block cursor */
+    char * cursor_shape;		/* True if underline cursor; false if block cursor */
     gboolean audible_bell;		/* True if audible bell */
     char * tab_position;		/* Position of tabs on main window (top, bottom, left, right) */
     gint scrollback;			/* Scrollback buffer size in lines */

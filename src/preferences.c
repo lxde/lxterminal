@@ -31,8 +31,7 @@ static void preferences_dialog_font_set_event(GtkFontButton * widget, LXTerminal
 static void preferences_dialog_background_color_set_event(GtkColorButton * widget, LXTerminal * terminal);
 static void preferences_dialog_foreground_color_set_event(GtkColorButton * widget, LXTerminal * terminal);
 static void preferences_dialog_allow_bold_toggled_event(GtkToggleButton * widget, LXTerminal * terminal);
-static void preferences_dialog_cursor_blink_toggled_event(GtkToggleButton * widget, LXTerminal * terminal);
-static void preferences_dialog_cursor_underline_toggled_event(GtkToggleButton * widget, LXTerminal * terminal);
+static void preferences_dialog_cursor_shape_changed_event(GtkComboBox * widget, LXTerminal * terminal);
 static void preferences_dialog_audible_bell_toggled_event(GtkToggleButton * widget, LXTerminal * terminal);
 static void preferences_dialog_tab_position_changed_event(GtkComboBox * widget, LXTerminal * terminal);
 static void preferences_dialog_scrollback_value_changed_event(GtkSpinButton * widget, LXTerminal * terminal);
@@ -46,8 +45,7 @@ static void preferences_dialog_disable_alt_toggled_event(GtkToggleButton * widge
 /* Handler for "response" signal on preferences dialog. */
 static void preferences_dialog_response_event(GtkWidget * dialog, gint response, LXTerminal * terminal)
 {
-    if (response == GTK_RESPONSE_OK)
-        setting_save(terminal->setting);
+    setting_save(terminal->setting);
 
     /* Dismiss dialog. */
     gtk_widget_destroy(dialog);
@@ -90,17 +88,22 @@ static void preferences_dialog_allow_bold_toggled_event(GtkToggleButton * widget
     terminal_settings_apply_to_all(terminal);
 }
 
-/* Handler for "toggled" signal on Cursor Blink toggle button. */
-static void preferences_dialog_cursor_blink_toggled_event(GtkToggleButton * widget, LXTerminal * terminal)
+/* Handler for "changed" signal on Tab Position combo box. */
+static void preferences_dialog_cursor_shape_changed_event(GtkComboBox * widget, LXTerminal * terminal)
 {
-    terminal->setting->cursor_blink = gtk_toggle_button_get_active(widget);
-    terminal_settings_apply_to_all(terminal);
-}
-
-/* Handler for "toggled" signal on Cursor Underline radio button. */
-static void preferences_dialog_cursor_underline_toggled_event(GtkToggleButton * widget, LXTerminal * terminal)
-{
-    terminal->setting->cursor_underline = gtk_toggle_button_get_active(widget);
+    /* Convert the index into a string, which is what we put in the configuration file. */
+    char * p = NULL;
+    switch (gtk_combo_box_get_active(widget))
+    {
+        case 0:		p = "block";		break;
+        case 1:		p = "ibeam";		break;
+        case 2:		p = "underline";	break;
+    }
+    if (p != NULL)
+    {
+        g_free(terminal->setting->cursor_shape);
+        terminal->setting->cursor_shape = g_strdup(p);
+    }
     terminal_settings_apply_to_all(terminal);
 }
 
@@ -197,6 +200,17 @@ gint terminal_tab_get_position_id(gchar * position)
         return 0;
 }
 
+/* These have to match the order in the .glade file. */
+gint terminal_cursor_get_shape_id(gchar * shape)
+{
+    if (strcmp(shape, "ibeam") == 0)
+        return 1;
+    else if (strcmp(shape, "underline") == 0)
+        return 2;
+    else
+        return 0;
+}
+
 /* Initialize and display the preferences dialog. */
 void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
 {
@@ -231,16 +245,9 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), ! setting->disallow_bold);
     g_signal_connect(G_OBJECT(w), "toggled", G_CALLBACK(preferences_dialog_allow_bold_toggled_event), terminal);
 
-    w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_blink"));
-    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->cursor_blink);
-    g_signal_connect(G_OBJECT(w), "toggled", G_CALLBACK(preferences_dialog_cursor_blink_toggled_event), terminal);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_style_block"));
-    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), ! setting->cursor_underline);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_style_underline"));
-    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->cursor_underline);
-    g_signal_connect(G_OBJECT(w), "toggled", G_CALLBACK(preferences_dialog_cursor_underline_toggled_event), terminal);
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_shape"));
+    gtk_combo_box_set_active(GTK_COMBO_BOX(w), terminal_cursor_get_shape_id(setting->cursor_shape));
+    g_signal_connect(G_OBJECT(w), "changed", G_CALLBACK(preferences_dialog_cursor_shape_changed_event), terminal);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "audible_bell"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->audible_bell);

@@ -45,8 +45,8 @@ void setting_save(Setting * setting)
         g_key_file_set_string(setting->keyfile, "general", "fgcolor", p);
     g_free(p);
     g_key_file_set_boolean(setting->keyfile, "general", "disallowbold", setting->disallow_bold);
-    g_key_file_set_boolean(setting->keyfile, "general", "cursorblinks", setting->cursor_blink);
-    g_key_file_set_boolean(setting->keyfile, "general", "cursorunderline", setting->cursor_underline);
+    g_key_file_set_boolean(setting->keyfile, "general", "cursorblink", setting->cursor_blink);
+    g_key_file_set_string(setting->keyfile, "general", "cursorshape", setting->cursor_shape);
     g_key_file_set_boolean(setting->keyfile, "general", "audiblebell", setting->audible_bell);
     g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tab_position);
     g_key_file_set_integer(setting->keyfile, "general", "scrollback", setting->scrollback);
@@ -104,8 +104,7 @@ Setting * load_setting_from_file(const char * filename)
         if (p != NULL)
             gdk_color_parse(p, &setting->foreground_color);
         setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, "general", "disallowbold", NULL);
-        setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, "general", "cursorblinks", NULL);
-        setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, "general", "cursorunderline", NULL);
+        setting->cursor_shape = g_key_file_get_string(setting->keyfile, "general", "cursorshape", NULL);
         setting->audible_bell = g_key_file_get_boolean(setting->keyfile, "general", "audiblebell", NULL);
         setting->tab_position = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
         setting->scrollback = g_key_file_get_integer(setting->keyfile, "general", "scrollback", NULL);
@@ -122,6 +121,8 @@ Setting * load_setting_from_file(const char * filename)
         setting->font_name = g_strdup("monospace 10");
     if (setting->tab_position == NULL)
         setting->tab_position = g_strdup("top");
+    if (setting->cursor_shape == NULL)
+        setting->cursor_shape = g_strdup("block");
     if (setting->word_selection_characters == NULL)
         setting->word_selection_characters = g_strdup("-A-Za-z0-9,./?%&#:_~");
     if (setting->background_alpha == 0)

@@ -875,13 +875,15 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 {
     Setting * setting = terminal->setting;
 
+    int cursor_styles[] = {VTE_CURSOR_SHAPE_BLOCK, VTE_CURSOR_SHAPE_IBEAM, VTE_CURSOR_SHAPE_UNDERLINE};
+
     /* Terminal properties. */
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
     vte_terminal_set_word_chars(VTE_TERMINAL(term->vte), setting->word_selection_characters);
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
     vte_terminal_set_allow_bold(VTE_TERMINAL(term->vte), ! setting->disallow_bold);
     vte_terminal_set_cursor_blink_mode(VTE_TERMINAL(term->vte), ((setting->cursor_blink) ? VTE_CURSOR_BLINK_ON : VTE_CURSOR_BLINK_OFF));
-    vte_terminal_set_cursor_shape(VTE_TERMINAL(term->vte), ((setting->cursor_underline) ? VTE_CURSOR_SHAPE_UNDERLINE : VTE_CURSOR_SHAPE_BLOCK));
+    vte_terminal_set_cursor_shape(VTE_TERMINAL(term->vte), cursor_styles[terminal_cursor_get_shape_id(setting->cursor_shape)]);
     vte_terminal_set_audible_bell(VTE_TERMINAL(term->vte), setting->audible_bell);
 
     /* Background and foreground colors. */
