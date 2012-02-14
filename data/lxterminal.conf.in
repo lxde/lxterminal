@@ -1,4 +1,22 @@
-[general]
-fontname=Monospace 10
-selchars=-A-Za-z0-9,./?%&#:_
-scrollback=1000
+[General]
+Font=Monospace 12
+SelectChars=-A-Za-z0-9,./?%&#:_~
+ScrollBack=1000
+AllowBold=true
+CursorBlinks=false
+CursorUnderline=false
+AudibleBell=false
+TabPosition=top
+HideScrollbar=true
+HideMenubar=true
+HideCloseButton=false
+DisableF10=true
+DisableAlt=false
+
+[Palette]
+PaletteName=Linux
+BackgroundColor=#333333333333
+BackgroundAlpha=65535
+ForegroundColor=#cccccccccccc
+Palette=#000000000000;#0aaaa00000000;#00000aaaa0000;#0aaaa55550000;#000000000aaaa;#0aaaa0000aaaa;#00000aaaaaaaa;#0aaaaaaaaaaaa;#0555555555555;#0ffff55555555;#05555ffff5555;#0ffffffff5555;#055555555ffff;#0ffff5555ffff;#05555ffffffff;#0ffffffffffff
+
