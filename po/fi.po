@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-03-10 20:29+0200\n"
-"Last-Translator: Jesse <jesse.jaara@gmail.com>\n"
+"PO-Revision-Date: 2012-02-16 18:36+0200\n"
+"Last-Translator: GoaHead <b7701050@nwldx.com>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -297,9 +297,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Älä käytä valikon pikanäppäintä (oletuksena F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Äläkäytä Alt-n pikanäppäintä välilehden vaihtamiseen."
+msgstr "Älä käytä Alt-n pikanäppäintä välilehden vaihtamiseen."
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -322,9 +321,8 @@ msgid "Hide scroll bar"
 msgstr "Piilota vierityspalkki"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Asetukset"
+msgstr "LXTerminal:in Asetukset"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
