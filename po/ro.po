@@ -3,32 +3,32 @@ msgstr ""
 "Project-Id-Version: LXDE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2010-01-24 11:10-0800\n"
-"Last-Translator: alexxed <alexxed@gmail.com>\n"
+"PO-Revision-Date: 2012-03-07 15:33+0200\n"
+"Last-Translator: Mișu <dumol@l10n.ro>\n"
 "Language-Team: Romanian <LL@li.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Narro 0.9.4 on http://tradu.softwareliber.ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr "Occidentale"
+msgstr "Europa de Vest"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr "Est-europene"
+msgstr "Europa de Est"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr "Asia estică"
+msgstr "Asia de Est"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr "Asia de SE și SV"
+msgstr "Asia de Sud"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
@@ -43,16 +43,16 @@ msgstr "Unicode"
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr "Vestice"
+msgstr "Occidentală"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr "Central Europeană"
+msgstr "Central-Europeană"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Sud Europeană"
+msgstr "Sud-Europeană"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
@@ -74,7 +74,7 @@ msgstr "Greacă"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr "Ebraică vizuală"
+msgstr "Ebraică Vizuală"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
@@ -88,7 +88,7 @@ msgstr "Turcă"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr "Nordică"
+msgstr "Nord-Europeană"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
@@ -104,7 +104,7 @@ msgstr "Armeană"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr "Chineză tradițională"
+msgstr "Chineză Tradițională"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
@@ -122,7 +122,7 @@ msgstr "Coreeană"
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr "Chineză simplificată"
+msgstr "Chineză Simplificată"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
@@ -138,7 +138,7 @@ msgstr "Croată"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr "Hindusă"
+msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
@@ -162,7 +162,7 @@ msgstr "Vietnameză"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr "Tailandeză"
+msgstr "Thailandeză"
 
 #: ../src/lxterminal.c:132
 msgid "_File"
@@ -174,7 +174,7 @@ msgstr "_Editare"
 
 #: ../src/lxterminal.c:134
 msgid "_Tabs"
-msgstr "_File"
+msgstr "_Taburi"
 
 #: ../src/lxterminal.c:135
 msgid "_Help"
@@ -182,15 +182,15 @@ msgstr "_Ajutor"
 
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "New _Window"
-msgstr "_Fereastră nouă"
+msgstr "Fereastră _nouă"
 
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:165
 msgid "New _Tab"
-msgstr "_Filă nouă"
+msgstr "_Tab nou"
 
 #: ../src/lxterminal.c:145 ../src/lxterminal.c:177
 msgid "_Close Tab"
-msgstr "În_chide fila"
+msgstr "În_chide tabul"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
@@ -202,32 +202,31 @@ msgstr "_Copiază"
 
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
-msgstr "Li_pește"
+msgstr "_Lipește"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
 msgstr "_Preferințe"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "_Filă nouă"
+msgstr "_Redenumire tab"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
-msgstr "_Fila precedentă"
+msgstr "Tabul _anterior"
 
 #: ../src/lxterminal.c:153 ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
-msgstr "_Fila următoare"
+msgstr "Tabul _următor"
 
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Mută fi_la spre stânga"
+msgstr "Mută tabul spre _stânga"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Mută fila sp_re dreapta"
+msgstr "Mută tabul spre _dreapta"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
@@ -241,93 +240,87 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:512
-#, fuzzy
 msgid "Name Tab"
-msgstr "_Filă nouă"
+msgstr "Redenumire tab"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:650
 msgid "translator-credits"
-msgstr "Comunitatea de traducători de pe tradu.softwareliber.ro"
+msgstr ""
+"Comunitatea tradu.softwareliber.ro\n"
+"Mișu Moldovan <dumol@l10n.ro>"
 
 #: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
-msgstr "Drepturi de autor pe 2008-2011"
+msgstr "Drepturi de autor (C) 2008-2011"
 
 #: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
-msgstr "Emulator de terminal pentru proiectul LXDE"
+msgstr "Emulator de terminal al proiectului LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Advanced"
-msgstr ""
+msgstr "Avansate"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Allow bold font"
-msgstr ""
+msgstr "Permite caractere îngroșate"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Audible bell"
-msgstr ""
+msgstr "Permite bipuri audio"
 
 #: ../data/lxterminal-preferences.glade.h:4
-#, fuzzy
 msgid "Background"
-msgstr "Fundal:"
+msgstr "Fundal"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Block"
-msgstr ""
+msgstr "Dreptunghi"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Bottom"
 msgstr "Jos"
 
 #: ../data/lxterminal-preferences.glade.h:7
-#, fuzzy
 msgid "Cursor blink"
-msgstr "Clipirea cursorului:"
+msgstr "Permite clipirea cursorului"
 
 #: ../data/lxterminal-preferences.glade.h:8
-#, fuzzy
 msgid "Cursor style"
-msgstr "Clipirea cursorului:"
+msgstr "Stilul cursorului"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Fără scurtătură pentru meniu (implicit F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Disable using Alt-n for tabs and menu"
-msgstr ""
+msgstr "Fără scurtături Alt-n pentru taburi și meniu"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
 msgstr "Afișare"
 
 #: ../data/lxterminal-preferences.glade.h:12
-#, fuzzy
 msgid "Foreground"
-msgstr "Prim plan:"
+msgstr "Prim plan"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Ascunde butoanele de închidere"
 
 #: ../data/lxterminal-preferences.glade.h:14
-#, fuzzy
 msgid "Hide menu bar"
-msgstr "Ascunde bara de meniu:"
+msgstr "Ascunde bara de meniu"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Hide scroll bar"
-msgstr "Ascunde bara de derulare:"
+msgstr "Ascunde bara de derulare"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Preferințe"
+msgstr "Preferințe LXTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
@@ -338,28 +331,24 @@ msgid "Right"
 msgstr "Dreapta"
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Scrollback lines"
-msgstr "Linii de derulat înapoi:"
+msgstr "Linii de derulat înapoi"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Select-by-word characters"
-msgstr "Selectare caractere după cuvânt:"
+msgstr "Caractere pentru selectarea per cuvânt"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Style"
 msgstr "Stil"
 
 #: ../data/lxterminal-preferences.glade.h:22
-#, fuzzy
 msgid "Tab panel position"
-msgstr "Poziția capetelor de filă:"
+msgstr "Poziția taburilor"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "Terminal font"
-msgstr "Font pentru terminal:"
+msgstr "Font pentru terminal"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Top"
@@ -367,7 +356,7 @@ msgstr "Sus"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
-msgstr ""
+msgstr "Linie de subliniere"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -375,7 +364,7 @@ msgstr "Terminal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Folosește linia de comandă"
+msgstr "Utilizează linia de comandă"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr ""
