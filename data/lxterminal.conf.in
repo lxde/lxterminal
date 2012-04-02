@@ -2,7 +2,7 @@
 Font=Monospace 12
 AllowBold=true
 CursorBlinks=false
-CursorUnderline=false
+CursorShape=block
 AudibleBell=false
 
 [Display]
@@ -14,10 +14,10 @@ HideCloseButton=false
 
 [Palette]
 PaletteName=Linux
-BackgroundColor=#333333333333
+BackgroundColor=#000000000000
 BackgroundAlpha=65535
-ForegroundColor=#cccccccccccc
-Palette=#000000000000;#0aaaa00000000;#00000aaaa0000;#0aaaa55550000;#000000000aaaa;#0aaaa0000aaaa;#00000aaaaaaaa;#0aaaaaaaaaaaa;#0555555555555;#0ffff55555555;#05555ffff5555;#0ffffffff5555;#055555555ffff;#0ffff5555ffff;#05555ffffffff;#0ffffffffffff
+ForegroundColor=#aaaaaaaaaaaa
+Palette=#00000000000;#aaaa00000000;#0000aaaa0000;#aaaa55550000;#00000000aaaa;#aaaa0000aaaa;#0000aaaaaaaa;#aaaaaaaaaaaa;#555555555555;#ffff55555555;#5555ffff5555;#ffffffff5555;#55555555ffff;#ffff5555ffff;#5555ffffffff;#ffffffffffff
 
 [Advanced]
 SelectChars=-A-Za-z0-9,./?%&#:_~

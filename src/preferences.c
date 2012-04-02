@@ -84,7 +84,7 @@ static void preferences_dialog_foreground_color_set_event(GtkColorButton * widge
  * Use the complement so the default is FALSE. */
 static void preferences_dialog_allow_bold_toggled_event(GtkToggleButton * widget, LXTerminal * terminal)
 {
-    terminal->setting->disallow_bold = ! gtk_toggle_button_get_active(widget);
+    terminal->setting->allow_bold = gtk_toggle_button_get_active(widget);
     terminal_settings_apply_to_all(terminal);
 }
 
@@ -242,7 +242,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "color-set", G_CALLBACK(preferences_dialog_foreground_color_set_event), terminal);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "allow_bold"));
-    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), ! setting->disallow_bold);
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->allow_bold);
     g_signal_connect(G_OBJECT(w), "toggled", G_CALLBACK(preferences_dialog_allow_bold_toggled_event), terminal);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_shape"));

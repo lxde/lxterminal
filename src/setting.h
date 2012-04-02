@@ -31,7 +31,7 @@ typedef struct _setting {
     GdkColor background_color;		/* Background color */
     guint16 background_alpha;		/* Alpha value to go with background color */
     GdkColor foreground_color;		/* Foreground color */
-    gboolean disallow_bold;		/* Disallow bolding by VTE */
+    gboolean allow_bold;		/* Disallow bolding by VTE */
     gboolean cursor_blink;		/* True if cursor blinks */
     char * cursor_shape;		/* True if underline cursor; false if block cursor */
     gboolean audible_bell;		/* True if audible bell */

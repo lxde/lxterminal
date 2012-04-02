@@ -34,28 +34,46 @@
 void setting_save(Setting * setting)
 {
     /* Push settings to GKeyFile. */
-    g_key_file_set_string(setting->keyfile, "general", "fontname", setting->font_name);
+    g_key_file_set_string(setting->keyfile, "Style", "Font", setting->font_name);
+
+    g_key_file_set_boolean(setting->keyfile, "Style", "AllowBold", setting->allow_bold);
+
+    g_key_file_set_boolean(setting->keyfile, "Style", "CursorBlinks", setting->cursor_blink);
+
+    g_key_file_set_string(setting->keyfile, "Style", "CursorShape", setting->cursor_shape);
+
+    g_key_file_set_boolean(setting->keyfile, "Style", "AudibleBell", setting->audible_bell);
+
     gchar * p = gdk_color_to_string(&setting->background_color);
-    if (p != NULL)
-        g_key_file_set_string(setting->keyfile, "general", "bgcolor", p);
-    g_free(p);
-    g_key_file_set_integer(setting->keyfile, "general", "bgalpha", setting->background_alpha);
+
+    if (p != NULL) {
+        g_key_file_set_string(setting->keyfile, "Palette", "BackgroundColor", p);
+        g_free(p);
+    }
+
+    g_key_file_set_integer(setting->keyfile, "Palette", "BackgroundAlpha", setting->background_alpha);
+
     p = gdk_color_to_string(&setting->foreground_color);
-    if (p != NULL)
-        g_key_file_set_string(setting->keyfile, "general", "fgcolor", p);
-    g_free(p);
-    g_key_file_set_boolean(setting->keyfile, "general", "disallowbold", setting->disallow_bold);
-    g_key_file_set_boolean(setting->keyfile, "general", "cursorblink", setting->cursor_blink);
-    g_key_file_set_string(setting->keyfile, "general", "cursorshape", setting->cursor_shape);
-    g_key_file_set_boolean(setting->keyfile, "general", "audiblebell", setting->audible_bell);
-    g_key_file_set_string(setting->keyfile, "general", "tabpos", setting->tab_position);
-    g_key_file_set_integer(setting->keyfile, "general", "scrollback", setting->scrollback);
-    g_key_file_set_boolean(setting->keyfile, "general", "hidescrollbar", setting->hide_scroll_bar);
-    g_key_file_set_boolean(setting->keyfile, "general", "hidemenubar", setting->hide_menu_bar);
-    g_key_file_set_boolean(setting->keyfile, "general", "hideclosebutton", setting->hide_close_button);
-    g_key_file_set_string(setting->keyfile, "general", "selchars", setting->word_selection_characters);
-    g_key_file_set_boolean(setting->keyfile, "general", "disablef10", setting->disable_f10);
-    g_key_file_set_boolean(setting->keyfile, "general", "disablealt", setting->disable_alt);
+    if (p != NULL) {
+        g_key_file_set_string(setting->keyfile, "Palette", "ForegroundColor", p);
+        g_free(p);
+    }
+
+    g_key_file_set_string(setting->keyfile, "Display", "TabPosition", setting->tab_position);
+
+    g_key_file_set_integer(setting->keyfile, "Display", "ScrollBack", setting->scrollback);
+
+    g_key_file_set_boolean(setting->keyfile, "Display", "HideScrollbar", setting->hide_scroll_bar);
+
+    g_key_file_set_boolean(setting->keyfile, "Display", "HideMenubar", setting->hide_menu_bar);
+
+    g_key_file_set_boolean(setting->keyfile, "Display", "HideCloseButton", setting->hide_close_button);
+
+    g_key_file_set_string(setting->keyfile, "Advanced", "SelectChars", setting->word_selection_characters);
+
+    g_key_file_set_boolean(setting->keyfile, "Advanced", "DisableF10", setting->disable_f10);
+
+    g_key_file_set_boolean(setting->keyfile, "Advanced", "DisableAlt", setting->disable_alt);
 
     /* Convert GKeyFile to text and build path to configuration file. */
     gchar * file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
@@ -82,50 +100,123 @@ void setting_save(Setting * setting)
 /* Load settings from configuration file. */
 Setting * load_setting_from_file(const char * filename)
 {
+    gboolean hasError = FALSE;
+
     /* Allocate structure. */
     Setting * setting = g_new0(Setting, 1);
-
-    /* Initialize nonzero integer values to defaults. */
-    setting->background_alpha = 65535;
-    setting->foreground_color.red = setting->foreground_color.green = setting->foreground_color.blue = 0xaaaa;
 
     /* Load configuration. */
     setting->keyfile = g_key_file_new();
     GError * error = NULL;
-    if ((g_file_test(filename, G_FILE_TEST_EXISTS))
-    && (g_key_file_load_from_file(setting->keyfile, filename, G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS, &error)))
-    {
-        setting->font_name = g_key_file_get_string(setting->keyfile, "general", "fontname", NULL);
-        char * p = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
-        if (p != NULL)
+    g_key_file_load_from_file(setting->keyfile, filename, G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS, &error);
+    if (error != NULL) hasError = TRUE;
+    g_clear_error(&error);
+
+    if (hasError == FALSE) {
+        char * p;
+
+        if (setting->font_name != NULL) {
+            g_free(setting->font_name);
+        }
+        setting->font_name = g_key_file_get_string(setting->keyfile, "Style", "Font", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->allow_bold = g_key_file_get_boolean(setting->keyfile, "Style", "AllowBold", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, "Style", "CursorBlinks", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        if (setting->cursor_shape != NULL) {
+            g_free(setting->cursor_shape);
+        }
+        setting->cursor_shape = g_key_file_get_string(setting->keyfile, "Style", "CursorShape", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->audible_bell = g_key_file_get_boolean(setting->keyfile, "Style", "AudibleBell", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        p = g_key_file_get_string(setting->keyfile, "Palette", "BackgroundColor", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+        if (p != NULL) {
             gdk_color_parse(p, &setting->background_color);
-        setting->background_alpha = g_key_file_get_integer(setting->keyfile, "general", "bgalpha", NULL);
-        p = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
-        if (p != NULL)
+            g_free(p);
+        }
+
+        setting->background_alpha = g_key_file_get_integer(setting->keyfile, "Palette", "BackgroundAlpha", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        p = g_key_file_get_string(setting->keyfile, "Palette", "ForegroundColor", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+        if (p != NULL) {
             gdk_color_parse(p, &setting->foreground_color);
-        setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, "general", "disallowbold", NULL);
-        setting->cursor_shape = g_key_file_get_string(setting->keyfile, "general", "cursorshape", NULL);
-        setting->audible_bell = g_key_file_get_boolean(setting->keyfile, "general", "audiblebell", NULL);
-        setting->tab_position = g_key_file_get_string(setting->keyfile, "general", "tabpos", NULL);
-        setting->scrollback = g_key_file_get_integer(setting->keyfile, "general", "scrollback", NULL);
-        setting->hide_scroll_bar = g_key_file_get_boolean(setting->keyfile, "general", "hidescrollbar", NULL);
-        setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, "general", "hidemenubar", NULL);
-        setting->hide_close_button = g_key_file_get_boolean(setting->keyfile, "general", "hideclosebutton", NULL);
-        setting->word_selection_characters = g_key_file_get_string(setting->keyfile, "general", "selchars", NULL);
-        setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, "general", "disablef10", NULL);
-        setting->disable_alt = g_key_file_get_boolean(setting->keyfile, "general", "disablealt", NULL);
+            g_free(p);
+        }
+
+        if (setting->tab_position != NULL) {
+            g_free(setting->tab_position);
+        }
+        setting->tab_position = g_key_file_get_string(setting->keyfile, "Display", "TabPosition", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->scrollback = g_key_file_get_integer(setting->keyfile, "Display", "ScrollBack", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->hide_scroll_bar = g_key_file_get_boolean(setting->keyfile, "Display", "HideScrollbar", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, "Display", "HideMenubar", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->hide_close_button = g_key_file_get_boolean(setting->keyfile, "Display", "HideCloseButton", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        if (setting->word_selection_characters != NULL) {
+            g_free(setting->word_selection_characters);
+        }
+        setting->word_selection_characters = g_key_file_get_string(setting->keyfile, "Advanced", "SelectChars", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+        
+        setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, "Advanced", "DisableF10", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
+
+        setting->disable_alt = g_key_file_get_boolean(setting->keyfile, "Advanced", "DisableAlt", &error);
+        if (error != NULL) hasError = TRUE;
+        g_clear_error(&error);
     }
 
-    /* Default configuration strings. */
-    if (setting->font_name == NULL)
-        setting->font_name = g_strdup("monospace 10");
-    if (setting->tab_position == NULL)
-        setting->tab_position = g_strdup("top");
-    if (setting->cursor_shape == NULL)
+    if (hasError == TRUE) {
+        setting->font_name = g_strdup("Monospace 12");
+        setting->allow_bold = TRUE;
+        setting->cursor_blink = TRUE;
         setting->cursor_shape = g_strdup("block");
-    if (setting->word_selection_characters == NULL)
-        setting->word_selection_characters = g_strdup("-A-Za-z0-9,./?%&#:_~");
-    if (setting->background_alpha == 0)
+        setting->audible_bell = FALSE;
+        setting->background_color.red = setting->background_color.green = setting->background_color.blue = 0x0000;
         setting->background_alpha = 65535;
+        setting->foreground_color.red = setting->foreground_color.green = setting->foreground_color.blue = 0xaaaa;
+        setting->tab_position = g_strdup("top");
+        setting->scrollback = 1000;
+        setting->hide_scroll_bar = FALSE;
+        setting->hide_menu_bar = FALSE;
+        setting->hide_close_button = FALSE;
+        setting->word_selection_characters = g_strdup("-A-Za-z0-9,./?%&#:_~");
+        setting->disable_f10 = FALSE;
+        setting->disable_alt = FALSE;
+    }
     return setting;
 }
