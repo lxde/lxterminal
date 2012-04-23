@@ -764,6 +764,9 @@ static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_obje
             LXTerminal * t = g_ptr_array_index(terminal->parent->windows, i);
             t->index -= 1;
         }
+
+		/* Release */
+		g_slice_free(LXTerminal, terminal);
     }
 }
 
