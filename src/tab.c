@@ -46,7 +46,7 @@ void lxterminal_tab_label_set_tooltip_text(LXTab * tab, const gchar * str)
 LXTab * lxterminal_tab_label_new(const gchar * str)
 {
     /* Allocate LXTab structure. */
-    LXTab * tab = g_new0(LXTab, 1);
+    LXTab * tab = g_slice_new0(LXTab);
 
     /* Create a horizontal box as the toplevel. */
     tab->main = gtk_hbox_new(FALSE, 4);

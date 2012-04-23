@@ -83,7 +83,7 @@ void setting_save(Setting * setting)
 Setting * load_setting_from_file(const char * filename)
 {
     /* Allocate structure. */
-    Setting * setting = g_new0(Setting, 1);
+    Setting * setting = g_slice_new0(Setting);
 
     /* Initialize nonzero integer values to defaults. */
     setting->background_alpha = 65535;

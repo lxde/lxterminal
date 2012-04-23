@@ -940,7 +940,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, const gchar * exec)
 {
     /* Create and initialize Term structure for new terminal. */
-    Term * term = g_new0(Term, 1);
+    Term * term = g_slice_new0(Term);
     term->parent = terminal;
 
     /* Create a VTE and a vertical scrollbar, and place them inside a horizontal box. */
@@ -1044,7 +1044,7 @@ static void terminal_free(Term * term)
 {
     if ((GTK_IS_ACCEL_GROUP(term->parent->accel_group)) && (term->closure != NULL))
         gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
-    g_free(term);
+    g_slice_free(Term, term);
 }
 
 /* Initialize the menu bar. */
@@ -1262,7 +1262,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
 LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * arguments, Setting * setting)
 {
     /* Allocate and initialize the LXTerminal structure. */
-    LXTerminal * terminal = g_new0(LXTerminal, 1);
+    LXTerminal * terminal = g_slice_new0(LXTerminal);
     terminal->parent = lxtermwin;
     terminal->terms = g_ptr_array_new();
     terminal->fixed_size = TRUE;
@@ -1422,7 +1422,7 @@ int main(gint argc, gchar * * argv)
     }
 
     /* Initialize impure storage. */
-    LXTermWindow * lxtermwin = g_new0(LXTermWindow, 1);
+    LXTermWindow * lxtermwin = g_slice_new0(LXTermWindow);
 
     /* Initialize socket.  If we were able to get another LXTerminal to manage the window, exit. */
     if ( ! lxterminal_socket_initialize(lxtermwin, &arguments))
