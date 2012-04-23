@@ -875,7 +875,10 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
 /* drop <SHIFT><CTRL> keys on vte */
 static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * event, Term * term)
 {
-    /* FIXME: is there a better logic on this? */
+	/* This is workaround to fix a bug that using Ctrl+Shift+C and Ctrl+Shift+V
+	 * cause VTE get one more character. We capture and drop these events, to avoid
+	 * to pass VTE them.
+	 */
     if (event->state & GDK_MODIFIER_MASK == GDK_CONTROL_MASK | GDK_SHIFT_MASK) {
         switch (event->keyval) {
             case GDK_KEY_C:
