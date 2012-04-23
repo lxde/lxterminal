@@ -882,7 +882,7 @@ static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * ev
 	 * cause VTE get one more character. We capture and drop these events, to avoid
 	 * to pass VTE them.
 	 */
-    if (event->state & GDK_MODIFIER_MASK == GDK_CONTROL_MASK | GDK_SHIFT_MASK) {
+    if ((event->state & GDK_MODIFIER_MASK) == (GDK_CONTROL_MASK | GDK_SHIFT_MASK)) {
         switch (event->keyval) {
             case GDK_KEY_C:
             case GDK_KEY_V:
@@ -890,6 +890,8 @@ static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * ev
             case GDK_KEY_N:
             case GDK_KEY_T:
                 return TRUE;
+            default:
+                return FALSE;
         }
     }
     return FALSE;
