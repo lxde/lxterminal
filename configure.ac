@@ -1,5 +1,5 @@
 AC_PREREQ(2.57)
-AC_INIT(lxterminal, 0.1.11, http://lxde.org/)
+AC_INIT(lxterminal, 0.1.12, http://lxde.org/)
 AM_CONFIG_HEADER(config.h)
 # Support silent build rules. Disable by either passing --disable-silent-rules
 # to configure or passing V=1 to make
