@@ -26,6 +26,7 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
+#include <gdk/gdkkeysyms.h>
 #include <glib/gi18n.h>
 #include <vte/vte.h>
 #include <langinfo.h>
@@ -103,6 +104,7 @@ static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_obje
 static void terminal_child_exited_event(VteTerminal * vte, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
+static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, const gchar * exec);
 static void terminal_free(Term * term);
@@ -870,6 +872,23 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
     return FALSE;
 }
 
+/* drop <SHIFT><CTRL> keys on vte */
+static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * event, Term * term)
+{
+    /* FIXME: is there a better logic on this? */
+    if (event->state & GDK_MODIFIER_MASK == GDK_CONTROL_MASK | GDK_SHIFT_MASK) {
+        switch (event->keyval) {
+            case GDK_KEY_C:
+            case GDK_KEY_V:
+            case GDK_KEY_W:
+            case GDK_KEY_N:
+            case GDK_KEY_T:
+                return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 /* Apply new settings in an LXTerminal to its tab Term. */
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 {
@@ -1005,6 +1024,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     g_signal_connect(G_OBJECT(term->tab), "button-press-event", G_CALLBACK(terminal_tab_button_press_event), term);
     g_signal_connect(G_OBJECT(term->close_button), "clicked", G_CALLBACK(terminal_child_exited_event), term);
     g_signal_connect(G_OBJECT(term->vte), "button-press-event", G_CALLBACK(terminal_vte_button_press_event), term);
+    g_signal_connect(G_OBJECT(term->vte), "key-press-event", G_CALLBACK(terminal_vte_key_press_event), term);
     g_signal_connect(G_OBJECT(term->vte), "child-exited", G_CALLBACK(terminal_child_exited_event), term);
     g_signal_connect(G_OBJECT(term->vte), "window-title-changed", G_CALLBACK(terminal_window_title_changed_event), term);
 
