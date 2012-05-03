@@ -1,0 +1,421 @@
+# Kazakh translation for lxterminal.
+# Copyright (C) 2012 The LXDE team
+# This file is distributed under the same license as the LXDE package.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"PO-Revision-Date: 2012-05-01 17:38+0600\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Language: Kazakh\n"
+"X-Poedit-Country: KAZAKHSTAN\n"
+
+#: ../src/encoding.c:124
+msgid "West European"
+msgstr "Батыс Еуропалық"
+
+#: ../src/encoding.c:125
+msgid "East European"
+msgstr "Шығыс Еуропалық"
+
+#: ../src/encoding.c:126
+msgid "East Asian"
+msgstr "Шығыс Азиялық"
+
+#: ../src/encoding.c:127
+msgid "SE & SW Asian"
+msgstr "ОШ және ОБ Азиялық"
+
+#: ../src/encoding.c:128
+msgid "Middle Eastern"
+msgstr "Орта шығыс"
+
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
+msgid "Unicode"
+msgstr "Юникод"
+
+#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
+msgid "Western"
+msgstr "Батыс"
+
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
+#: ../src/encoding.c:208
+msgid "Central European"
+msgstr "Орталық Еуропалық"
+
+#: ../src/encoding.c:137
+msgid "South European"
+msgstr "Оңтүстік Еуропалық"
+
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
+msgid "Baltic"
+msgstr "Балтық"
+
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
+msgid "Cyrillic"
+msgstr "Кириллица"
+
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
+#: ../src/encoding.c:214
+msgid "Arabic"
+msgstr "Араб"
+
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
+msgid "Greek"
+msgstr "Грек"
+
+#: ../src/encoding.c:142
+msgid "Hebrew Visual"
+msgstr "Иврит визуалды"
+
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
+#: ../src/encoding.c:213
+msgid "Hebrew"
+msgstr "Иврит"
+
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
+#: ../src/encoding.c:212
+msgid "Turkish"
+msgstr "Түрік"
+
+#: ../src/encoding.c:145
+msgid "Nordic"
+msgstr "Норд"
+
+#: ../src/encoding.c:147
+msgid "Celtic"
+msgstr "Кельт"
+
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
+msgid "Romanian"
+msgstr "Румын"
+
+#: ../src/encoding.c:157
+msgid "Armenian"
+msgstr "Армян"
+
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
+msgid "Chinese Traditional"
+msgstr "Қытайша дәстүрлі"
+
+#: ../src/encoding.c:160
+msgid "Cyrillic/Russian"
+msgstr "Кириллица/Орыс"
+
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
+msgid "Japanese"
+msgstr "Жапон"
+
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
+#: ../src/encoding.c:205
+msgid "Korean"
+msgstr "Кәріс"
+
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
+#: ../src/encoding.c:170
+msgid "Chinese Simplified"
+msgstr "Қытайша оңайлатылған"
+
+#: ../src/encoding.c:169
+msgid "Georgian"
+msgstr "Грузин"
+
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
+msgid "Cyrillic/Ukrainian"
+msgstr "Кириллица/Украин"
+
+#: ../src/encoding.c:188
+msgid "Croatian"
+msgstr "Хорватиялық"
+
+#: ../src/encoding.c:190
+msgid "Hindi"
+msgstr "Хинди"
+
+#: ../src/encoding.c:191
+msgid "Farsi"
+msgstr "Парсы"
+
+#: ../src/encoding.c:193
+msgid "Gujarati"
+msgstr "Гуджарати"
+
+#: ../src/encoding.c:194
+msgid "Gurmukhi"
+msgstr "Гурмукхи"
+
+#: ../src/encoding.c:196
+msgid "Icelandic"
+msgstr "Исландиялық"
+
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
+msgid "Vietnamese"
+msgstr "Вьетнам"
+
+#: ../src/encoding.c:204
+msgid "Thai"
+msgstr "Тай"
+
+#: ../src/lxterminal.c:132
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/lxterminal.c:133
+msgid "_Edit"
+msgstr "Тү_зету"
+
+#: ../src/lxterminal.c:134
+msgid "_Tabs"
+msgstr "Б_еттер"
+
+#: ../src/lxterminal.c:135
+msgid "_Help"
+msgstr "_Көмек"
+
+#: ../src/lxterminal.c:142
+#: ../src/lxterminal.c:164
+msgid "New _Window"
+msgstr "Жаңа _терезе"
+
+#: ../src/lxterminal.c:143
+#: ../src/lxterminal.c:165
+msgid "New _Tab"
+msgstr "Жаңа _бет"
+
+#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:177
+msgid "_Close Tab"
+msgstr "Бетті _жабу"
+
+#: ../src/lxterminal.c:146
+msgid "_Quit"
+msgstr "_Шығу"
+
+#: ../src/lxterminal.c:147
+#: ../src/lxterminal.c:167
+msgid "Cop_y"
+msgstr "Кө_шіру"
+
+#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:168
+msgid "_Paste"
+msgstr "Кірі_стіру"
+
+#: ../src/lxterminal.c:150
+#: ../src/lxterminal.c:170
+msgid "Preference_s"
+msgstr "Ба_птаулар"
+
+#: ../src/lxterminal.c:151
+#: ../src/lxterminal.c:172
+msgid "Na_me Tab"
+msgstr "Бетті а_тау"
+
+#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:173
+msgid "Pre_vious Tab"
+msgstr "Ал_дыңғы бет"
+
+#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:174
+msgid "Ne_xt Tab"
+msgstr "Ке_лесі бет"
+
+#: ../src/lxterminal.c:154
+#: ../src/lxterminal.c:175
+msgid "Move Tab _Left"
+msgstr "Бетті _солға жылжыту"
+
+#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:176
+msgid "Move Tab _Right"
+msgstr "Бетті _оңға жылжыту"
+
+#: ../src/lxterminal.c:156
+msgid "_About"
+msgstr "О_сы туралы"
+
+#. Set window title.
+#: ../src/lxterminal.c:408
+#: ../src/lxterminal.c:656
+#: ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255
+#: ../src/lxterminal.c:1289
+#: ../src/preferences.c:208
+#: ../data/lxterminal.desktop.in.h:1
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#: ../src/lxterminal.c:512
+msgid "Name Tab"
+msgstr "Бетті атау"
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:650
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com> 2012"
+
+#: ../src/lxterminal.c:658
+msgid "Copyright (C) 2008-2011"
+msgstr "Copyright (C) 2008-2011"
+
+#: ../src/lxterminal.c:659
+msgid "Terminal emulator for LXDE project"
+msgstr "LXDE жобасы үшін терминал эмуляторы"
+
+#: ../data/lxterminal-preferences.glade.h:1
+msgid "Advanced"
+msgstr "Кеңейтілген"
+
+#: ../data/lxterminal-preferences.glade.h:2
+msgid "Allow bold font"
+msgstr "Жуан қаріпке рұқсат ету"
+
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Audible bell"
+msgstr "Дыбыс беру"
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Background"
+msgstr "Фон"
+
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Block"
+msgstr "Блоктық"
+
+#: ../data/lxterminal-preferences.glade.h:6
+msgid "Bottom"
+msgstr "Төмен"
+
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Cursor blink"
+msgstr "Курсор жыпылықтауы"
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Cursor style"
+msgstr "Курсор стилі"
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr "Мәзірге қатынау жарлық пернесін сөндіру (F10 бастапқы)"
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "Беттер мен мәзірлер үшін Alt-n қолдануды сөндіру"
+
+#: ../data/lxterminal-preferences.glade.h:11
+msgid "Display"
+msgstr "Көрініс"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Foreground"
+msgstr "Алдыңғы көрінісі"
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Hide Close buttons"
+msgstr "Жабу батырмаларын жасыру"
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Hide menu bar"
+msgstr "Мәзір жолағын жасыру"
+
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Hide scroll bar"
+msgstr "Айналдыру жолағын жасыру"
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "LXTerminal Preferences"
+msgstr "LXTerminal баптаулары"
+
+#: ../data/lxterminal-preferences.glade.h:17
+msgid "Left"
+msgstr "Сол жақ"
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Right"
+msgstr "Оң жақ"
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Scrollback lines"
+msgstr "Айналдыру жолдар саны"
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Select-by-word characters"
+msgstr "Сөзді таңдау таңбалары"
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Style"
+msgstr "Стилі"
+
+#: ../data/lxterminal-preferences.glade.h:22
+msgid "Tab panel position"
+msgstr "Беттер панелінің орналасуы"
+
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Terminal font"
+msgstr "Терминал қарібі"
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Top"
+msgstr "Жоғары"
+
+#: ../data/lxterminal-preferences.glade.h:25
+msgid "Underline"
+msgstr "Асты сызылған"
+
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "Терминал"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr "Командалық жолды қолдану"
+
