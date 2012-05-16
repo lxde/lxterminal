@@ -299,9 +299,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Išjungti spartųjį meniu klavišą (F10)"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Nenaudoti Alt+N perjungti kortelėms"
+msgstr "Neleisti naudoti Alt-n kortelėms ir meniu"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Display"
@@ -324,9 +323,8 @@ msgid "Hide scroll bar"
 msgstr "Paslėpti slinkimo juostą"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Nustatymai"
+msgstr "LXTerminal nustatymai"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Left"
