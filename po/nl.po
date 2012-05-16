@@ -337,7 +337,7 @@ msgstr "Rechts"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
-msgstr "Regels terugbladeren"
+msgstr "Regels terugschuiven"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
@@ -361,7 +361,7 @@ msgstr "Bovenaan"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Underline"
-msgstr "Onderstreep"
+msgstr "Onderstrepen"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
