@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-01-04 23:21+0200\n"
-"Last-Translator: Julius <zadintuvas@gmail.com>\n"
+"PO-Revision-Date: 2012-05-17 09:17+0200\n"
+"Last-Translator: Algimantas <margevicius.algimantas@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
+"100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.0.5\n"
 "X-Language: lt_LT\n"
 
@@ -208,7 +208,7 @@ msgstr "_Kopijuoti"
 
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:168
 msgid "_Paste"
-msgstr "_Padėti"
+msgstr "_Įdėti"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:170
 msgid "Preference_s"
@@ -252,7 +252,9 @@ msgstr "Pavadinti kortelę"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:650
 msgid "translator-credits"
-msgstr "Julius Vitkauskas <zadintuvas@gmail.com>"
+msgstr ""
+"Julius Vitkauskas <zadintuvas@gmail.com>\n"
+"Algimantas Margevičius <margevicius.algimantas@gmail.com>"
 
 #: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
@@ -288,11 +290,11 @@ msgstr "Apačioje"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor blink"
-msgstr "Kursoriaus mirksėjimas"
+msgstr "Žymeklio mirksėjimas"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Cursor style"
-msgstr "Kursoriaus stilius"
+msgstr "Žymeklio stilius"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Disable menu shortcut key (F10 by default)"
@@ -308,7 +310,7 @@ msgstr "Ekranas"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
-msgstr "Priekis"
+msgstr "Priekinis planas"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
@@ -336,7 +338,7 @@ msgstr "Dešinėje"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
-msgstr "Įsiminti eilučių"
+msgstr "Slinkti eilutes"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
