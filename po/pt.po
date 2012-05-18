@@ -1,15 +1,15 @@
 # Portuguese translations for lxterminal package.
 # Copyright (C) 2009 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-#  <alvarommorais@gmail.com>, 2009.
-#
+# <alvarommorais@gmail.com>, 2009.
+# Sérgio Marques <smarquespt@gmail.com> 2010-2012
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-28 09:12+0200\n"
-"PO-Revision-Date: 2011-11-22 14:50+0200\n"
-"Last-Translator: Sérgio <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2012-05-18 15:33-0000\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr "Europeu Ocidental"
+msgstr "Europa Ocidental"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr "Europeu Oriental"
+msgstr "Europa Oriental"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
@@ -34,47 +34,66 @@ msgstr "Ásia Oriental"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr "Ásia SE & SW"
+msgstr "Ásia SE e SO"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
 msgstr "Médio Oriente"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
 msgstr "Ocidental"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr "Europeu Central"
+msgstr "Europa Central"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr "Europeu do Sul"
+msgstr "Europa do Sul"
 
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
 msgstr "Báltico"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "Cirílico"
 
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "Árabe"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
 msgstr "Grego"
 
@@ -82,12 +101,16 @@ msgstr "Grego"
 msgid "Hebrew Visual"
 msgstr "Visual Hebraico"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "Hebraico"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "Turco"
@@ -100,7 +123,8 @@ msgstr "Nórdico"
 msgid "Celtic"
 msgstr "Celta"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
 msgstr "Romeno"
 
@@ -108,33 +132,42 @@ msgstr "Romeno"
 msgid "Armenian"
 msgstr "Arménio"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr "Chinês Tradicional"
+msgstr "Mandarim Tradicional"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
 msgstr "Cirílico/Russo"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
 msgstr "Japonês"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "Coreano"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr "Chinês Simplificado"
+msgstr "Mandarim Simplificado"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr "Georgiano"
+msgstr "Geórgio"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "Cirílico/Ucraniano"
 
@@ -148,7 +181,7 @@ msgstr "Hindi"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr "Farsi"
+msgstr "Persa"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
@@ -162,7 +195,9 @@ msgstr "Gurmukhi"
 msgid "Icelandic"
 msgstr "Islandês"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "Vietnamita"
 
@@ -186,61 +221,76 @@ msgstr "_Separadores"
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:142
+#: ../src/lxterminal.c:164
 msgid "New _Window"
 msgstr "Nova _janela"
 
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:143
+#: ../src/lxterminal.c:165
 msgid "New _Tab"
 msgstr "Novo _separador"
 
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
+#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:177
 msgid "_Close Tab"
-msgstr "F_echar separador"
+msgstr "Fe_char separador"
 
 #: ../src/lxterminal.c:146
 msgid "_Quit"
-msgstr "S_air"
+msgstr "_Sair"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:147
+#: ../src/lxterminal.c:167
 msgid "Cop_y"
 msgstr "Cop_iar"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:168
 msgid "_Paste"
 msgstr "Co_lar"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:150
+#: ../src/lxterminal.c:170
 msgid "Preference_s"
 msgstr "Preferência_s"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:151
+#: ../src/lxterminal.c:172
 msgid "Na_me Tab"
 msgstr "No_mear separador"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:173
 msgid "Pre_vious Tab"
 msgstr "Separador _anterior"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:174
 msgid "Ne_xt Tab"
 msgstr "Separador _seguinte"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:154
+#: ../src/lxterminal.c:175
 msgid "Move Tab _Left"
-msgstr "Mover separador para _esquerda"
+msgstr "Mover separador para a _esquerda"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:176
 msgid "Move Tab _Right"
-msgstr "Mover separador para _direita"
+msgstr "Mover separador para a _direita"
 
 #: ../src/lxterminal.c:156
 msgid "_About"
 msgstr "So_bre"
 
 #. Set window title.
-#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
-#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
+#: ../src/lxterminal.c:408
+#: ../src/lxterminal.c:656
+#: ../src/lxterminal.c:731
+#: ../src/lxterminal.c:1255
+#: ../src/lxterminal.c:1289
+#: ../src/preferences.c:208
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
@@ -258,7 +308,7 @@ msgstr ""
 
 #: ../src/lxterminal.c:658
 msgid "Copyright (C) 2008-2011"
-msgstr "Copyright (C) 2008-2011"
+msgstr "Direitos de autor (C) 2008-2011"
 
 #: ../src/lxterminal.c:659
 msgid "Terminal emulator for LXDE project"
@@ -310,7 +360,7 @@ msgstr "Ecrã"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Foreground"
-msgstr "Primeiro plano"
+msgstr "Principal"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Hide Close buttons"
@@ -338,7 +388,7 @@ msgstr "Direita"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Scrollback lines"
-msgstr "Linhas de posicionamento"
+msgstr "Linhas de deslocação"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Select-by-word characters"
@@ -370,10 +420,5 @@ msgstr "Terminal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Utilizar a linha de comando"
+msgstr "Utilizar a linha de comandos"
 
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
