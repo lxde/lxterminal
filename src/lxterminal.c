@@ -893,7 +893,25 @@ static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * ev
             default:
                 return FALSE;
         }
-    }
+    } else if ((event->state & GDK_MODIFIER_MASK) == GDK_MOD1_MASK) {
+		if (!term->parent->setting->disable_alt && term->parent->terms->len > 1) {
+			switch (event->keyval) {
+				case GDK_KEY_1:
+				case GDK_KEY_2:
+				case GDK_KEY_3:
+				case GDK_KEY_4:
+				case GDK_KEY_5:
+				case GDK_KEY_6:
+				case GDK_KEY_7:
+				case GDK_KEY_8:
+				case GDK_KEY_9:
+				case GDK_KEY_0:
+					return TRUE;
+				default:
+					return FALSE;
+			}
+		}
+	}
     return FALSE;
 }
 
