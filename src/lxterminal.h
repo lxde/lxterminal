@@ -87,7 +87,7 @@ typedef struct _command_arguments {
     gchar * command;				/* Value of -e, --command; memory allocated by glib */
     int geometry_columns;			/* Value of --geometry */
     int geometry_rows;
-    char * title;				/* Value of -t, -T, --title; points into argument vector */
+    char * tabs; 				/* Value of -t, -T, --title, --tab; points into argument vector */
     char * working_directory;			/* Value of --working-directory; points into argument vector */
 } CommandArguments;
 

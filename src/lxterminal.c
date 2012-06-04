@@ -118,65 +118,66 @@ static char * saved_menu_accelerator = NULL;
 
 /* Help when user enters an invalid command. */
 static gchar usage_display[] = {
-	"Usage:\n"
-	"  lxterminal [Options...] - LXTerminal is a terminal emulator\n\n"
-	"Options:\n"
-	"  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
-	"  --geometry=COLUMNSxROWS          Set the terminal's size\n"
-	"  -l, --loginshell                 Execute login shell\n"
-	"  -t, -T, --title=STRING           Set the terminal's title\n"
-	"  --working-directory=DIRECTORY    Set the terminal's working directory\n"
+    "Usage:\n"
+    "  lxterminal [Options...] - LXTerminal is a terminal emulator\n\n"
+    "Options:\n"
+    "  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
+    "  --geometry=COLUMNSxROWS          Set the terminal's size\n"
+    "  -l, --loginshell                 Execute login shell\n"
+    "  -t, -T, --title=,\n"
+    "    --tabs=NAME[,NAME[,NAME[...]]] Set the terminal's title\n"
+    "  --working-directory=DIRECTORY    Set the terminal's working directory\n"
 };
 
 /* Descriptors for menu top level. */
 static GtkActionEntry menus[] =
 {
-	{ "File", NULL, N_("_File") },
-	{ "Edit", NULL, N_("_Edit") },
-	{ "Tabs", NULL, N_("_Tabs") },
-	{ "Help", NULL, N_("_Help") }
+    { "File", NULL, N_("_File") },
+    { "Edit", NULL, N_("_Edit") },
+    { "Tabs", NULL, N_("_Tabs") },
+    { "Help", NULL, N_("_Help") }
 };
 #define MENUBAR_MENU_COUNT G_N_ELEMENTS(menus)
 
 /* Descriptors for menu bar items. */
 static GtkActionEntry menu_items[] =
 {
-	{ "File_NewWindow", GTK_STOCK_ADD, N_("New _Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
-	{ "File_NewTab", GTK_STOCK_ADD, N_("New _Tab"), NEW_TAB_ACCEL, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
-	{ "File_Sep1", NULL, "Sep" },
-	{ "File_CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), CLOSE_TAB_ACCEL, "Close Tab", G_CALLBACK(terminal_close_tab_activate_event) },
-	{ "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL, "Quit", G_CALLBACK(gtk_main_quit) },
-	{ "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
-	{ "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
-	{ "Edit_Sep1", NULL, "Sep" },
-	{ "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
-	{ "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
-	{ "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
-	{ "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
-	{ "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
-	{ "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
-	{ "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) }
+    { "File_NewWindow", GTK_STOCK_ADD, N_("New _Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
+    { "File_NewTab", GTK_STOCK_ADD, N_("New _Tab"), NEW_TAB_ACCEL, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
+    { "File_Sep1", NULL, "Sep" },
+    { "File_CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), CLOSE_TAB_ACCEL, "Close Tab", G_CALLBACK(terminal_close_tab_activate_event) },
+    { "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL, "Quit", G_CALLBACK(gtk_main_quit) },
+    { "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
+    { "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
+    { "Edit_Sep1", NULL, "Sep" },
+    { "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
+    { "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
+    { "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
+    { "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
+    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
+    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
+    { "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) }
 };
 #define MENUBAR_MENUITEM_COUNT G_N_ELEMENTS(menu_items)
 
 /* Descriptors for popup menu items, accessed via right click on the terminal. */
 static GtkActionEntry vte_menu_items[] =
 {
-	{ "VTEMenu", NULL, "VTEMenu" },
-	{ "NewWindow", GTK_STOCK_ADD, N_("New _Window"), NULL, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
-	{ "NewTab", GTK_STOCK_ADD, N_("New _Tab"), NULL, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
-	{ "Sep1", NULL, "Sep" },
-	{ "Copy", GTK_STOCK_COPY, N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
-	{ "Paste", GTK_STOCK_PASTE, N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
-	{ "Sep2", NULL, "Sep" },
-	{ "Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
-	{ "Sep3", NULL, "Sep" },
-	{ "NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NULL, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
-	{ "PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), NULL, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
-	{ "NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NULL, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
-	{ "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), NULL, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
-	{ "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), NULL, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
-	{ "CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), NULL, "Close Tab", G_CALLBACK(terminal_close_tab_activate_event) }
+    { "VTEMenu", NULL, "VTEMenu" },
+    { "NewWindow", GTK_STOCK_ADD, N_("New _Window"), NULL, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
+    { "NewTab", GTK_STOCK_ADD, N_("New _Tab"), NULL, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
+    { "Sep1", NULL, "Sep" },
+    { "Copy", GTK_STOCK_COPY, N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
+    { "Paste", GTK_STOCK_PASTE, N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
+    { "Sep2", NULL, "Sep" },
+    { "Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
+    { "Sep3", NULL, "Sep" },
+    { "NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NULL, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
+    { "PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), NULL, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
+    { "NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NULL, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
+    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), NULL, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
+    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), NULL, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
+    { "CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), NULL, "Close Tab", G_CALLBACK(terminal_close_tab_activate_event) }
 };
 #define VTE_MENUITEM_COUNT G_N_ELEMENTS(vte_menu_items)
 
@@ -596,7 +597,7 @@ static void terminal_move_tab_execute(LXTerminal * terminal, gint direction)
     /* prevent out of index */
     if (target_page_number < 0 || target_page_number >= terminal->terms->len)
     {
-	    return;
+        return;
     }
     
     /* swap index in terms array and its id */
@@ -697,8 +698,8 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
         {
             Term * term = g_ptr_array_index(terminal->terms, i);
             gtk_window_set_geometry_hints(GTK_WINDOW(terminal->window),
-	        term->vte,
-	        &hints,
+            term->vte,
+            &hints,
                 GDK_HINT_RESIZE_INC | GDK_HINT_MIN_SIZE | GDK_HINT_BASE_SIZE);
         }
 
@@ -729,8 +730,8 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
     if (terminal->terms->len > num)
     {
         /* Propagate the title to the toplevel window. */
-	Term * term = g_ptr_array_index(terminal->terms, num);
-	const gchar * title = vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
+    Term * term = g_ptr_array_index(terminal->terms, num);
+    const gchar * title = vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
     }
 }
@@ -758,15 +759,15 @@ static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_obje
     {
         /* Remove the element and decrease the index number of each succeeding element. */
         g_ptr_array_remove_index(terminal->parent->windows, terminal->index);
-	int i;
+    int i;
         for (i = terminal->index; i < terminal->parent->windows->len; i += 1)
         {
             LXTerminal * t = g_ptr_array_index(terminal->parent->windows, i);
             t->index -= 1;
         }
 
-		/* Release */
-		g_slice_free(LXTerminal, terminal);
+        /* Release */
+        g_slice_free(LXTerminal, terminal);
     }
 }
 
@@ -878,10 +879,10 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
 /* drop <SHIFT><CTRL> keys on vte */
 static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * event, Term * term)
 {
-	/* This is workaround to fix a bug that using Ctrl+Shift+C and Ctrl+Shift+V
-	 * cause VTE get one more character. We capture and drop these events, to avoid
-	 * to pass VTE them.
-	 */
+    /* This is workaround to fix a bug that using Ctrl+Shift+C and Ctrl+Shift+V
+     * cause VTE get one more character. We capture and drop these events, to avoid
+     * to pass VTE them.
+     */
     if ((event->state & GDK_MODIFIER_MASK) == (GDK_CONTROL_MASK | GDK_SHIFT_MASK)) {
         switch (event->keyval) {
             case GDK_KEY_C:
@@ -894,24 +895,24 @@ static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * ev
                 return FALSE;
         }
     } else if ((event->state & GDK_MODIFIER_MASK) == GDK_MOD1_MASK) {
-		if (!term->parent->setting->disable_alt && term->parent->terms->len > 1) {
-			switch (event->keyval) {
-				case GDK_KEY_1:
-				case GDK_KEY_2:
-				case GDK_KEY_3:
-				case GDK_KEY_4:
-				case GDK_KEY_5:
-				case GDK_KEY_6:
-				case GDK_KEY_7:
-				case GDK_KEY_8:
-				case GDK_KEY_9:
-				case GDK_KEY_0:
-					return TRUE;
-				default:
-					return FALSE;
-			}
-		}
-	}
+        if (!term->parent->setting->disable_alt && term->parent->terms->len > 1) {
+            switch (event->keyval) {
+                case GDK_KEY_1:
+                case GDK_KEY_2:
+                case GDK_KEY_3:
+                case GDK_KEY_4:
+                case GDK_KEY_5:
+                case GDK_KEY_6:
+                case GDK_KEY_7:
+                case GDK_KEY_8:
+                case GDK_KEY_9:
+                case GDK_KEY_0:
+                    return TRUE;
+                default:
+                    return FALSE;
+            }
+        }
+    }
     return FALSE;
 }
 
@@ -1238,17 +1239,23 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             login_shell = TRUE;
 
         /* --title=<title> */
-	else if (strncmp(argument, "--title=", 8) == 0)
-	    arguments->title = &argument[8];
+    else if (strncmp(argument, "--title=", 8) == 0)
+        arguments->tabs = &argument[8];
+
+    /* --tabs=<names> */
+    else if (strncmp(argument, "--tabs=", 7) == 0)
+    {
+        arguments->tabs = &argument[7];
+    }
 
         /* -t <title>, -T <title>, --title <title>
          * The -T form is demanded by distros who insist on this xterm feature. */
-        else if (((strcmp(argument, "--title") == 0) || (strcmp(argument, "-t") == 0) || (strcmp(argument, "-T") == 0))
+        else if (((strcmp(argument, "--title") == 0) || (strcmp(argument, "-t") == 0) || (strcmp(argument, "-T") == 0) || (strcmp(argument, "--tabs") == 0))
         && (argc > 1))
         {
             argc -= 1;
             argv_cursor += 1;
-            arguments->title = *argv_cursor;
+            arguments->tabs = *argv_cursor;
         }
 
         /* --working-directory=<working directory> */
@@ -1306,10 +1313,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
         if (colormap != NULL)
             gtk_widget_set_colormap(terminal->window, colormap);
     #endif
-
-
-    /* Set window title. */
-    gtk_window_set_title(GTK_WINDOW(terminal->window), ((arguments->title != NULL) ? arguments->title : _("LXTerminal")));
 
     /* Set window icon. */
     gtk_window_set_icon_from_file(GTK_WINDOW(terminal->window), PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL);
@@ -1373,6 +1376,33 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 #else
     gdk_window_get_geometry_hints(GTK_WIDGET(term->vte)->window, &terminal->geometry, &terminal->geometry_mask);
 #endif
+
+    if (arguments->tabs != NULL)
+    {
+        int tab_index = 0;
+        int character_position;
+        char * strings = g_strdup(arguments->tabs);
+        /* use token to slice strings to different tab names */
+        char * token = strtok(strings, ",");
+
+        while (token != NULL && token[0] != '\0')
+        {
+            if (tab_index > 0)
+            {
+                terminal_new_tab_activate_event(0, terminal);
+            }
+
+            /* set the name */
+            Term * term = g_ptr_array_index(terminal->terms, tab_index);
+            term->user_specified_label = TRUE;
+            gtk_label_set_text(GTK_LABEL(term->label), g_strdup(token));
+
+            token = strtok(NULL, ",");
+            tab_index ++;
+        }
+
+	g_free(strings);
+    }
 
     /* Connect signals. */
     g_signal_connect(G_OBJECT(terminal->window), "size-request", G_CALLBACK(terminal_window_size_request_event), terminal);

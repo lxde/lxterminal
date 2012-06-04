@@ -213,14 +213,14 @@ gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, CommandArguments
             g_free(geometry);
         }
 
-        /* -t, -T, or --title. */
-        if (arguments->title != NULL)
+        /* -t, -T, --title or --tabs. */
+        if (arguments->tabs != NULL)
         {
-            gchar * title = g_shell_quote(arguments->title);
-            gchar * title_argument = g_strdup_printf(" --title=%s", title);
-            g_io_channel_write_chars(gio, title_argument, -1, NULL, NULL);
-            g_free(title);
-            g_free(title_argument);
+            gchar * tabs = g_shell_quote(arguments->tabs);
+            gchar * tabs_argument = g_strdup_printf(" --tabs=%s", tabs);
+            g_io_channel_write_chars(gio, tabs_argument, -1, NULL, NULL);
+            g_free(tabs);
+            g_free(tabs_argument);
         }
 
         /* Always issue a --working-directory, either from the user's specification or the current directory. */
