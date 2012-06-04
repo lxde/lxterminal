@@ -1033,7 +1033,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     gchar ** command;
     g_shell_parse_argv(exec, NULL, &command, NULL);
 
-    term->pid = vte_terminal_fork_command_full(
+    vte_terminal_fork_command_full(
                     VTE_TERMINAL(term->vte),
                     VTE_PTY_NO_LASTLOG | VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP,
                     pwd,
@@ -1042,7 +1042,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
                     G_SPAWN_SEARCH_PATH,
                     NULL,
                     NULL,
-                    NULL,
+                    &term->pid,
                     NULL);
     g_strfreev(command);
 

@@ -77,7 +77,7 @@ typedef struct _term {
     GtkWidget * box;				/* Horizontal box, child of notebook */
     GtkWidget * vte;				/* VteTerminal, child of horizontal box */
     GtkWidget * scrollbar;			/* Scroll bar, child of horizontal box */
-    pid_t pid;					/* Process ID of the process that has this as its terminal */
+    GPid pid;                                   /* Process ID of the process that has this as its terminal */
     GClosure * closure;				/* Accelerator structure */
 } Term;
 
