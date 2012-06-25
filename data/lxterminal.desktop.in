@@ -7,4 +7,4 @@ TryExec=lxterminal
 Exec=lxterminal
 Icon=lxterminal
 Type=Application
-Categories=GTK;Utility;TerminalEmulator;
+Categories=GTK;System;TerminalEmulator;
