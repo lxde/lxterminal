@@ -80,6 +80,7 @@ static void terminal_close_tab_accelerator(LXTerminal * terminal, guint action, 
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal);
+static void terminal_clear_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, LXTerminal * terminal);
 static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * terminal);
@@ -149,6 +150,7 @@ static GtkActionEntry menu_items[] =
     { "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL, "Quit", G_CALLBACK(gtk_main_quit) },
     { "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
     { "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
+	{ "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
     { "Edit_Sep1", NULL, "Sep" },
     { "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
     { "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
@@ -169,6 +171,7 @@ static GtkActionEntry vte_menu_items[] =
     { "Sep1", NULL, "Sep" },
     { "Copy", GTK_STOCK_COPY, N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
     { "Paste", GTK_STOCK_PASTE, N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
+	{ "Clear", NULL, N_("Cl_ear scrollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
     { "Sep2", NULL, "Sep" },
     { "Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
     { "Sep3", NULL, "Sep" },
@@ -469,6 +472,16 @@ static void terminal_paste_activate_event(GtkAction * action, LXTerminal * termi
 {
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
     vte_terminal_paste_clipboard(VTE_TERMINAL(term->vte));
+}
+
+/* Handler for "clear scrollback" signal on Edit/Paste menu item.
+ * Clear scrollback. */
+static void terminal_clear_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+    Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
+    Setting * setting = terminal->setting;
+    vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), 0);
+    vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
 }
 
 /* Handler for accelerator <CTRL><SHIFT> V.  Paste from the clipboard. */
