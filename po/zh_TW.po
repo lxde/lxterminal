@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-25 10:40+0800\n"
-"PO-Revision-Date: 2012-04-14 11:07+0200\n"
-"Last-Translator: Walter <wwycheuk@gmail.com>\n"
+"PO-Revision-Date: 2012-06-25 10:54+0800\n"
+"Last-Translator: Yao Wei (魏銘廷) <mwei@lxde.org>\n"
 "Language-Team: zh_TW <LL@li.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -41,18 +41,27 @@ msgstr "東南與西南亞"
 msgid "Middle Eastern"
 msgstr "中東語系"
 
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+#: ../src/encoding.c:129
+#: ../src/encoding.c:151
+#: ../src/encoding.c:152
+#: ../src/encoding.c:153
+#: ../src/encoding.c:154
+#: ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Unicode 萬國碼"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
+#: ../src/encoding.c:135
+#: ../src/encoding.c:148
+#: ../src/encoding.c:172
+#: ../src/encoding.c:197
+#: ../src/encoding.c:210
 msgid "Western"
 msgstr "西方語系"
 
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:136
+#: ../src/encoding.c:173
+#: ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "中歐語系"
@@ -62,22 +71,32 @@ msgid "South European"
 msgstr "南歐語系"
 
 # google翻譯
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+#: ../src/encoding.c:138
+#: ../src/encoding.c:146
+#: ../src/encoding.c:215
 msgid "Baltic"
 msgstr "波羅的海語系"
 
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+#: ../src/encoding.c:139
+#: ../src/encoding.c:174
+#: ../src/encoding.c:181
+#: ../src/encoding.c:183
+#: ../src/encoding.c:189
+#: ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "西里爾(斯拉夫)字母"
 
 # tim
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:140
+#: ../src/encoding.c:177
+#: ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "阿拉伯語系"
 
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+#: ../src/encoding.c:141
+#: ../src/encoding.c:192
+#: ../src/encoding.c:211
 msgid "Greek"
 msgstr "希臘文"
 
@@ -86,12 +105,16 @@ msgstr "希臘文"
 msgid "Hebrew Visual"
 msgstr "希伯來語系Visual"
 
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:143
+#: ../src/encoding.c:176
+#: ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "希伯來語系"
 
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:144
+#: ../src/encoding.c:175
+#: ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "土耳其語系"
@@ -104,7 +127,8 @@ msgstr "日耳曼北歐語系"
 msgid "Celtic"
 msgstr "塞爾特語系"
 
-#: ../src/encoding.c:149 ../src/encoding.c:198
+#: ../src/encoding.c:149
+#: ../src/encoding.c:198
 msgid "Romanian"
 msgstr "羅馬尼亞語系"
 
@@ -112,7 +136,9 @@ msgstr "羅馬尼亞語系"
 msgid "Armenian"
 msgstr "亞美尼亞語系"
 
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+#: ../src/encoding.c:158
+#: ../src/encoding.c:159
+#: ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "正（繁）體中文"
 
@@ -120,16 +146,22 @@ msgstr "正（繁）體中文"
 msgid "Cyrillic/Russian"
 msgstr "西里爾/俄語系"
 
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+#: ../src/encoding.c:162
+#: ../src/encoding.c:179
+#: ../src/encoding.c:202
 msgid "Japanese"
 msgstr "日文"
 
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:163
+#: ../src/encoding.c:180
+#: ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "韓文"
 
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:166
+#: ../src/encoding.c:167
+#: ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "簡體中文"
@@ -138,7 +170,8 @@ msgstr "簡體中文"
 msgid "Georgian"
 msgstr "喬治亞語系"
 
-#: ../src/encoding.c:184 ../src/encoding.c:200
+#: ../src/encoding.c:184
+#: ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "西里爾/烏克蘭語系"
 
@@ -168,7 +201,9 @@ msgstr "古爾穆希語"
 msgid "Icelandic"
 msgstr "冰島語系"
 
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+#: ../src/encoding.c:203
+#: ../src/encoding.c:206
+#: ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "越南文"
 
@@ -192,15 +227,18 @@ msgstr "分頁(_T)"
 msgid "_Help"
 msgstr "說明(_H)"
 
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:146
+#: ../src/lxterminal.c:169
 msgid "New _Window"
 msgstr "開新視窗(_W)"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:147
+#: ../src/lxterminal.c:170
 msgid "New _Tab"
 msgstr "開新分頁(_T)"
 
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:183
+#: ../src/lxterminal.c:149
+#: ../src/lxterminal.c:183
 msgid "_Close Tab"
 msgstr "關閉分頁(_C)"
 
@@ -208,40 +246,47 @@ msgstr "關閉分頁(_C)"
 msgid "_Quit"
 msgstr "離開(_Q)"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:151
+#: ../src/lxterminal.c:172
 msgid "Cop_y"
 msgstr "複製(_Y)"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:173
 msgid "_Paste"
 msgstr "貼上(_P)"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "隱藏捲動列"
+msgstr "清除捲動列(_O)"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:176
 msgid "Preference_s"
 msgstr "偏好設定(_S)"
 
-#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
+#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:178
 msgid "Na_me Tab"
 msgstr "命名分頁(_M)"
 
-#: ../src/lxterminal.c:157 ../src/lxterminal.c:179
+#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:179
 msgid "Pre_vious Tab"
 msgstr "上一個分頁(_V)"
 
-#: ../src/lxterminal.c:158 ../src/lxterminal.c:180
+#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:180
 msgid "Ne_xt Tab"
 msgstr "下一個分頁(_X)"
 
-#: ../src/lxterminal.c:159 ../src/lxterminal.c:181
+#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:181
 msgid "Move Tab _Left"
 msgstr "將分頁左移(_L)"
 
-#: ../src/lxterminal.c:160 ../src/lxterminal.c:182
+#: ../src/lxterminal.c:160
+#: ../src/lxterminal.c:182
 msgid "Move Tab _Right"
 msgstr "將分頁右移(_R)"
 
@@ -250,12 +295,14 @@ msgid "_About"
 msgstr "關於(_A)"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "隱藏捲動列"
+msgstr "清除捲動列(_E)"
 
-#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
-#: ../src/lxterminal.c:1364 ../src/preferences.c:213
+#: ../src/lxterminal.c:414
+#: ../src/lxterminal.c:675
+#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:1364
+#: ../src/preferences.c:213
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LX 終端機"
