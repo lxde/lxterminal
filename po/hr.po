@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"POT-Creation-Date: 2012-06-25 10:40+0800\n"
 "PO-Revision-Date: 2011-12-06 12:04+0200\n"
 "Last-Translator: zvacet <ikoli@yahoo.com>\n"
 "Language-Team: <asjlob AT vip.hr> <>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.0.5\n"
 "X-Poedit-Language: Croatian\n"
 "X-Poedit-Country: CROATIA\n"
@@ -171,199 +171,208 @@ msgstr "Vijetnamski"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:136
 msgid "_File"
 msgstr "_Datoteka"
 
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:137
 msgid "_Edit"
 msgstr "_Uredi"
 
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:138
 msgid "_Tabs"
 msgstr "_Kartice"
 
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:139
 msgid "_Help"
 msgstr "_Pomoć"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "New _Window"
 msgstr "Novi _Prozor"
 
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Tab"
 msgstr "Nova _kartica"
 
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:183
 msgid "_Close Tab"
 msgstr "_Zatvori karticu"
 
-#: ../src/lxterminal.c:146
+#: ../src/lxterminal.c:150
 msgid "_Quit"
 msgstr "_Izlaz"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Cop_y"
 msgstr "Kopira_j"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "_Paste"
 msgstr "_Zalijepi"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:153
+#, fuzzy
+msgid "Clear scr_ollback"
+msgstr "Sakrij kliznu traku"
+
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
 msgstr "Osobitost_i"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Na_me Tab"
 msgstr "I_me kartice"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:179
 msgid "Pre_vious Tab"
 msgstr "Pret_hodna kartica"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:180
 msgid "Ne_xt Tab"
 msgstr "Sli_jedeća kartica"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:181
 msgid "Move Tab _Left"
 msgstr "Pomakni karticu _lijevo"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:182
 msgid "Move Tab _Right"
 msgstr "Pomakni karticu _desno"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:161
 msgid "_About"
 msgstr "_O programu"
 
-#. Set window title.
-#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
-#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
+#: ../src/lxterminal.c:174
+#, fuzzy
+msgid "Cl_ear scrollback"
+msgstr "Sakrij kliznu traku"
+
+#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
+#: ../src/lxterminal.c:1364 ../src/preferences.c:213
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXterminal"
 
-#: ../src/lxterminal.c:512
+#: ../src/lxterminal.c:528
 msgid "Name Tab"
 msgstr "Ime kartice"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:669
 msgid "translator-credits"
 msgstr ""
 "Boljsa\n"
 "Ivica Kolić <ikoli@yahoo.com>"
 
-#: ../src/lxterminal.c:658
+#: ../src/lxterminal.c:677
 msgid "Copyright (C) 2008-2011"
 msgstr "Autorska prava (C) 2008-2011"
 
-#: ../src/lxterminal.c:659
+#: ../src/lxterminal.c:678
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator terminala za LXDE projekt"
 
 #: ../data/lxterminal-preferences.glade.h:1
-msgid "Advanced"
-msgstr "Napredno"
-
-#: ../data/lxterminal-preferences.glade.h:2
-msgid "Allow bold font"
-msgstr "Dopusti podebljani font"
-
-#: ../data/lxterminal-preferences.glade.h:3
-msgid "Audible bell"
-msgstr ""
-
-#: ../data/lxterminal-preferences.glade.h:4
-msgid "Background"
-msgstr "Pozadina"
-
-#: ../data/lxterminal-preferences.glade.h:5
-msgid "Block"
-msgstr "Blokiraj"
-
-#: ../data/lxterminal-preferences.glade.h:6
-msgid "Bottom"
-msgstr "Dno"
-
-#: ../data/lxterminal-preferences.glade.h:7
-msgid "Cursor blink"
-msgstr ""
-
-#: ../data/lxterminal-preferences.glade.h:8
-msgid "Cursor style"
-msgstr "Stil pokazivača"
-
-#: ../data/lxterminal-preferences.glade.h:9
-msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Onemogući tipku prečaca izbornika (F10 zadano)"
-
-#: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n for tabs and menu"
-msgstr "Onemogući koristeći Alt-n za kartice i izbornik"
-
-#: ../data/lxterminal-preferences.glade.h:11
-msgid "Display"
-msgstr "Zaslon"
-
-#: ../data/lxterminal-preferences.glade.h:12
-msgid "Foreground"
-msgstr "Prednji plan"
-
-#: ../data/lxterminal-preferences.glade.h:13
-msgid "Hide Close buttons"
-msgstr ""
-
-#: ../data/lxterminal-preferences.glade.h:14
-msgid "Hide menu bar"
-msgstr "Sakrij traku izbornika"
-
-#: ../data/lxterminal-preferences.glade.h:15
-msgid "Hide scroll bar"
-msgstr "Sakrij kliznu traku"
-
-#: ../data/lxterminal-preferences.glade.h:16
 msgid "LXTerminal Preferences"
 msgstr "LXTerminal osobitosti"
 
-#: ../data/lxterminal-preferences.glade.h:17
-msgid "Left"
-msgstr "Lijevo"
-
-#: ../data/lxterminal-preferences.glade.h:18
-msgid "Right"
-msgstr "Desno"
-
-#: ../data/lxterminal-preferences.glade.h:19
-msgid "Scrollback lines"
-msgstr "Povratne linije"
-
-#: ../data/lxterminal-preferences.glade.h:20
-msgid "Select-by-word characters"
-msgstr "Odabrano po znakovima riječi"
-
-#: ../data/lxterminal-preferences.glade.h:21
-msgid "Style"
-msgstr "Stil"
-
-#: ../data/lxterminal-preferences.glade.h:22
-msgid "Tab panel position"
-msgstr "Pozicija kartične ploče"
-
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
 msgstr "Font terminala"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Background"
+msgstr "Pozadina"
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Foreground"
+msgstr "Prednji plan"
+
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Allow bold font"
+msgstr "Dopusti podebljani font"
+
+#: ../data/lxterminal-preferences.glade.h:6
+msgid "Cursor blink"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Cursor style"
+msgstr "Stil pokazivača"
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Block"
+msgstr "Blokiraj"
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Underline"
+msgstr "Podcrtano"
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Audible bell"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:11
+msgid "Style"
+msgstr "Stil"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Tab panel position"
+msgstr "Pozicija kartične ploče"
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Scrollback lines"
+msgstr "Povratne linije"
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Hide scroll bar"
+msgstr "Sakrij kliznu traku"
+
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Hide menu bar"
+msgstr "Sakrij traku izbornika"
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "Hide Close buttons"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:17
+msgid "Display"
+msgstr "Zaslon"
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Select-by-word characters"
+msgstr "Odabrano po znakovima riječi"
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr "Onemogući tipku prečaca izbornika (F10 zadano)"
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "Onemogući koristeći Alt-n za kartice i izbornik"
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Advanced"
+msgstr "Napredno"
+
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
 msgstr "Vrh"
 
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Bottom"
+msgstr "Dno"
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Left"
+msgstr "Lijevo"
+
 #: ../data/lxterminal-preferences.glade.h:25
-msgid "Underline"
-msgstr "Podcrtano"
+msgid "Right"
+msgstr "Desno"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"

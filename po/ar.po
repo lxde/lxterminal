@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"POT-Creation-Date: 2012-06-25 10:40+0800\n"
 "PO-Revision-Date: 2010-04-20 23:55+0300\n"
 "Last-Translator: Tareq Al Jurf <taljurf@fedoraproject.org>\n"
 "Language-Team: Arabic <trans-ar@lists.fedoraproject.org>\n"
@@ -168,198 +168,207 @@ msgstr "فيتنامي"
 msgid "Thai"
 msgstr "تايلندي"
 
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:136
 msgid "_File"
 msgstr "_ملف"
 
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:137
 msgid "_Edit"
 msgstr "ت_حرير"
 
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:138
 msgid "_Tabs"
 msgstr "أ_لسنة"
 
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:139
 msgid "_Help"
 msgstr "م_ساعدة"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "New _Window"
 msgstr "_نافذة جديدة"
 
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Tab"
 msgstr "_لسان جديد"
 
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:183
 msgid "_Close Tab"
 msgstr "أ_غلق اللسان"
 
-#: ../src/lxterminal.c:146
+#: ../src/lxterminal.c:150
 msgid "_Quit"
 msgstr "أ_نه"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Cop_y"
 msgstr "ان_سخ"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "_Paste"
 msgstr "ا_لصق"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:153
+#, fuzzy
+msgid "Clear scr_ollback"
+msgstr "اخفِ شريط التمرير"
+
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
 msgstr "تف_ضيلات"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Na_me Tab"
 msgstr "_لسان الاسم"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:179
 msgid "Pre_vious Tab"
 msgstr "اللسان ال_سابق"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:180
 msgid "Ne_xt Tab"
 msgstr "اللسان ال_تالي"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:181
 msgid "Move Tab _Left"
 msgstr "انقل اللسان إلى ال_يسار"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:182
 msgid "Move Tab _Right"
 msgstr "انقل اللسان إلى اليمي_ن"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:161
 msgid "_About"
 msgstr "_عن"
 
-#. Set window title.
-#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
-#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
+#: ../src/lxterminal.c:174
+#, fuzzy
+msgid "Cl_ear scrollback"
+msgstr "اخفِ شريط التمرير"
+
+#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
+#: ../src/lxterminal.c:1364 ../src/preferences.c:213
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:512
+#: ../src/lxterminal.c:528
 msgid "Name Tab"
 msgstr "لسان الاسم"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:669
 msgid "translator-credits"
 msgstr "أحمد فرغل <ahmad.farghal@gmail.com>"
 
-#: ../src/lxterminal.c:658
+#: ../src/lxterminal.c:677
 msgid "Copyright (C) 2008-2011"
 msgstr "حقوق النشر محفوظة (C) 2008-2011"
 
-#: ../src/lxterminal.c:659
+#: ../src/lxterminal.c:678
 msgid "Terminal emulator for LXDE project"
 msgstr "محاكي طرفية لمشروع LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
-msgid "Advanced"
-msgstr "الوضع المتقدم"
-
-#: ../data/lxterminal-preferences.glade.h:2
-msgid "Allow bold font"
-msgstr "اسمَح بالخط العريض"
-
-#: ../data/lxterminal-preferences.glade.h:3
-msgid "Audible bell"
-msgstr "جرس مسموع"
-
-#: ../data/lxterminal-preferences.glade.h:4
-msgid "Background"
-msgstr "الخلفية"
-
-#: ../data/lxterminal-preferences.glade.h:5
-msgid "Block"
-msgstr "كتلة"
-
-#: ../data/lxterminal-preferences.glade.h:6
-msgid "Bottom"
-msgstr "الأسفل"
-
-#: ../data/lxterminal-preferences.glade.h:7
-msgid "Cursor blink"
-msgstr "ومضات المؤشر"
-
-#: ../data/lxterminal-preferences.glade.h:8
-msgid "Cursor style"
-msgstr "شكل المؤشر"
-
-#: ../data/lxterminal-preferences.glade.h:9
-msgid "Disable menu shortcut key (F10 by default)"
-msgstr "عطِّل مفتاح اختصار القائمة (F10 في الوضع الافتراضي)"
-
-#: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n for tabs and menu"
-msgstr ""
-
-#: ../data/lxterminal-preferences.glade.h:11
-msgid "Display"
-msgstr "العرض"
-
-#: ../data/lxterminal-preferences.glade.h:12
-msgid "Foreground"
-msgstr "النص"
-
-#: ../data/lxterminal-preferences.glade.h:13
-msgid "Hide Close buttons"
-msgstr "أخفِ زر الإغلاق"
-
-#: ../data/lxterminal-preferences.glade.h:14
-msgid "Hide menu bar"
-msgstr "اخفِ شريط القوائم"
-
-#: ../data/lxterminal-preferences.glade.h:15
-msgid "Hide scroll bar"
-msgstr "اخفِ شريط التمرير"
-
-#: ../data/lxterminal-preferences.glade.h:16
 #, fuzzy
 msgid "LXTerminal Preferences"
 msgstr "تفضيلات"
 
-#: ../data/lxterminal-preferences.glade.h:17
-msgid "Left"
-msgstr "اليسار"
-
-#: ../data/lxterminal-preferences.glade.h:18
-msgid "Right"
-msgstr "اليمين"
-
-#: ../data/lxterminal-preferences.glade.h:19
-msgid "Scrollback lines"
-msgstr "سطور التمرير الخلفي"
-
-#: ../data/lxterminal-preferences.glade.h:20
-msgid "Select-by-word characters"
-msgstr "اختر باعتبار محارف الكلمات"
-
-#: ../data/lxterminal-preferences.glade.h:21
-msgid "Style"
-msgstr "الشكل"
-
-#: ../data/lxterminal-preferences.glade.h:22
-msgid "Tab panel position"
-msgstr "موقع شريط الألسنة"
-
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
 msgstr "خط الطرفية"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Background"
+msgstr "الخلفية"
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Foreground"
+msgstr "النص"
+
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Allow bold font"
+msgstr "اسمَح بالخط العريض"
+
+#: ../data/lxterminal-preferences.glade.h:6
+msgid "Cursor blink"
+msgstr "ومضات المؤشر"
+
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Cursor style"
+msgstr "شكل المؤشر"
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Block"
+msgstr "كتلة"
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Underline"
+msgstr "تسطير"
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Audible bell"
+msgstr "جرس مسموع"
+
+#: ../data/lxterminal-preferences.glade.h:11
+msgid "Style"
+msgstr "الشكل"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Tab panel position"
+msgstr "موقع شريط الألسنة"
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Scrollback lines"
+msgstr "سطور التمرير الخلفي"
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Hide scroll bar"
+msgstr "اخفِ شريط التمرير"
+
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Hide menu bar"
+msgstr "اخفِ شريط القوائم"
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "Hide Close buttons"
+msgstr "أخفِ زر الإغلاق"
+
+#: ../data/lxterminal-preferences.glade.h:17
+msgid "Display"
+msgstr "العرض"
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Select-by-word characters"
+msgstr "اختر باعتبار محارف الكلمات"
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr "عطِّل مفتاح اختصار القائمة (F10 في الوضع الافتراضي)"
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Disable using Alt-n for tabs and menu"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Advanced"
+msgstr "الوضع المتقدم"
+
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
 msgstr "الأعلى"
 
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Bottom"
+msgstr "الأسفل"
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Left"
+msgstr "اليسار"
+
 #: ../data/lxterminal-preferences.glade.h:25
-msgid "Underline"
-msgstr "تسطير"
+msgid "Right"
+msgstr "اليمين"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"

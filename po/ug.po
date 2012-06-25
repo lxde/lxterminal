@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"POT-Creation-Date: 2012-06-25 10:40+0800\n"
 "PO-Revision-Date: 2011-11-09 16:10+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -166,197 +166,206 @@ msgstr "ۋىيېتنامچە"
 msgid "Thai"
 msgstr "تايلاندچە"
 
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:136
 msgid "_File"
 msgstr "ھۆججەت(_F)"
 
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:137
 msgid "_Edit"
 msgstr "تەھرىر(_E)"
 
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:138
 msgid "_Tabs"
 msgstr "بەتكۈچلەر(_T)"
 
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:139
 msgid "_Help"
 msgstr "ياردەم(_H)"
 
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "New _Window"
 msgstr "يېڭى كۆزنەك(_W)"
 
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Tab"
 msgstr "يېڭى بەتكۈچ(_T)"
 
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:177
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:183
 msgid "_Close Tab"
 msgstr "بەتكۈچ ياپ(_C)"
 
-#: ../src/lxterminal.c:146
+#: ../src/lxterminal.c:150
 msgid "_Quit"
 msgstr "چېكىن(_Q)"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
 msgid "Cop_y"
 msgstr "كۆچۈر(_Y)"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
 msgid "_Paste"
 msgstr "چاپلا(_P)"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:153
+#, fuzzy
+msgid "Clear scr_ollback"
+msgstr "سىيرىغۇچ بالداقنى يوشۇر"
+
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
 msgstr "مايىللىقلار(_S)"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Na_me Tab"
 msgstr "ئات بەتكۈچى(_M)"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:179
 msgid "Pre_vious Tab"
 msgstr "ئالدىنقى بەتكۈچ(_V)"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:174
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:180
 msgid "Ne_xt Tab"
 msgstr "كېيىنكى بەتكۈچ(_X)"
 
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:181
 msgid "Move Tab _Left"
 msgstr "بەتكۈچنى سولغا يۆتكە(_L)"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:182
 msgid "Move Tab _Right"
 msgstr "بەتكۈچنى ئوڭغا يۆتكە(_R)"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:161
 msgid "_About"
 msgstr "ھەققىدە(_A)"
 
-#. Set window title.
-#: ../src/lxterminal.c:408 ../src/lxterminal.c:656 ../src/lxterminal.c:731
-#: ../src/lxterminal.c:1255 ../src/lxterminal.c:1289 ../src/preferences.c:208
+#: ../src/lxterminal.c:174
+#, fuzzy
+msgid "Cl_ear scrollback"
+msgstr "سىيرىغۇچ بالداقنى يوشۇر"
+
+#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
+#: ../src/lxterminal.c:1364 ../src/preferences.c:213
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:512
+#: ../src/lxterminal.c:528
 msgid "Name Tab"
 msgstr "ئات بەتكۈچى"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:650
+#: ../src/lxterminal.c:669
 msgid "translator-credits"
 msgstr "Gheyret Kenji <gheyret@gmail.com>"
 
-#: ../src/lxterminal.c:658
+#: ../src/lxterminal.c:677
 msgid "Copyright (C) 2008-2011"
 msgstr "نەشر ھوقۇقى (C) 2008-2011"
 
-#: ../src/lxterminal.c:659
+#: ../src/lxterminal.c:678
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE قۇرۇلۇشىدىكى تېرمىنال تەقلىدلىگۈچى"
 
 #: ../data/lxterminal-preferences.glade.h:1
-msgid "Advanced"
-msgstr "ئالىي"
-
-#: ../data/lxterminal-preferences.glade.h:2
-msgid "Allow bold font"
-msgstr "توم خەت نۇسخىسىغا ئىجازەت"
-
-#: ../data/lxterminal-preferences.glade.h:3
-msgid "Audible bell"
-msgstr "ياڭراق قوڭغۇراق"
-
-#: ../data/lxterminal-preferences.glade.h:4
-msgid "Background"
-msgstr "تەگلىك"
-
-#: ../data/lxterminal-preferences.glade.h:5
-msgid "Block"
-msgstr "بۆلەك"
-
-#: ../data/lxterminal-preferences.glade.h:6
-msgid "Bottom"
-msgstr "ئاستى"
-
-#: ../data/lxterminal-preferences.glade.h:7
-msgid "Cursor blink"
-msgstr "نۇربەلگىنىڭ لىپىلدىشى"
-
-#: ../data/lxterminal-preferences.glade.h:8
-msgid "Cursor style"
-msgstr "نۇربەلگە ئۇسلۇبى"
-
-#: ../data/lxterminal-preferences.glade.h:9
-msgid "Disable menu shortcut key (F10 by default)"
-msgstr "تىزىملىك تېزلەتمىسىنى ئىناۋەتسىز قىلىش (كۆڭۈلدە F10 ئارقىلىق)"
-
-#: ../data/lxterminal-preferences.glade.h:10
-msgid "Disable using Alt-n for tabs and menu"
-msgstr "بەتكۈچ ۋە تىزىملىك ئۈچۈن Alt-n نى ئىناۋەتسىز قىلىش"
-
-#: ../data/lxterminal-preferences.glade.h:11
-msgid "Display"
-msgstr "كۆرسەت"
-
-#: ../data/lxterminal-preferences.glade.h:12
-msgid "Foreground"
-msgstr "ئالدى كۆرۈنۈش"
-
-#: ../data/lxterminal-preferences.glade.h:13
-msgid "Hide Close buttons"
-msgstr "‹ياپ› توپچىسىنى يوشۇر"
-
-#: ../data/lxterminal-preferences.glade.h:14
-msgid "Hide menu bar"
-msgstr "تىزىملىك بالدىقىنى يوشۇر"
-
-#: ../data/lxterminal-preferences.glade.h:15
-msgid "Hide scroll bar"
-msgstr "سىيرىغۇچ بالداقنى يوشۇر"
-
-#: ../data/lxterminal-preferences.glade.h:16
 msgid "LXTerminal Preferences"
 msgstr "LXTerminal مايىللىقى"
 
-#: ../data/lxterminal-preferences.glade.h:17
-msgid "Left"
-msgstr "سول"
-
-#: ../data/lxterminal-preferences.glade.h:18
-msgid "Right"
-msgstr "ئوڭ"
-
-#: ../data/lxterminal-preferences.glade.h:19
-msgid "Scrollback lines"
-msgstr "ئۆتۈپ كەتكەن قۇرلارنى كۆرسىتىش"
-
-#: ../data/lxterminal-preferences.glade.h:20
-msgid "Select-by-word characters"
-msgstr "تاللىغاندا سوز تەركىبىگە كىرىدىغان سۆزلەر"
-
-#: ../data/lxterminal-preferences.glade.h:21
-msgid "Style"
-msgstr "ئۇسلۇب"
-
-#: ../data/lxterminal-preferences.glade.h:22
-msgid "Tab panel position"
-msgstr "بەتكۈچ كۆزنىكىنىڭ ئورنى"
-
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
 msgstr "تېرمىنال خەت نۇسخىسى"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Background"
+msgstr "تەگلىك"
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Foreground"
+msgstr "ئالدى كۆرۈنۈش"
+
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Allow bold font"
+msgstr "توم خەت نۇسخىسىغا ئىجازەت"
+
+#: ../data/lxterminal-preferences.glade.h:6
+msgid "Cursor blink"
+msgstr "نۇربەلگىنىڭ لىپىلدىشى"
+
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Cursor style"
+msgstr "نۇربەلگە ئۇسلۇبى"
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Block"
+msgstr "بۆلەك"
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Underline"
+msgstr "ئاستى سىزىق"
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Audible bell"
+msgstr "ياڭراق قوڭغۇراق"
+
+#: ../data/lxterminal-preferences.glade.h:11
+msgid "Style"
+msgstr "ئۇسلۇب"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Tab panel position"
+msgstr "بەتكۈچ كۆزنىكىنىڭ ئورنى"
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Scrollback lines"
+msgstr "ئۆتۈپ كەتكەن قۇرلارنى كۆرسىتىش"
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Hide scroll bar"
+msgstr "سىيرىغۇچ بالداقنى يوشۇر"
+
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Hide menu bar"
+msgstr "تىزىملىك بالدىقىنى يوشۇر"
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "Hide Close buttons"
+msgstr "‹ياپ› توپچىسىنى يوشۇر"
+
+#: ../data/lxterminal-preferences.glade.h:17
+msgid "Display"
+msgstr "كۆرسەت"
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Select-by-word characters"
+msgstr "تاللىغاندا سوز تەركىبىگە كىرىدىغان سۆزلەر"
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr "تىزىملىك تېزلەتمىسىنى ئىناۋەتسىز قىلىش (كۆڭۈلدە F10 ئارقىلىق)"
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "بەتكۈچ ۋە تىزىملىك ئۈچۈن Alt-n نى ئىناۋەتسىز قىلىش"
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Advanced"
+msgstr "ئالىي"
+
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
 msgstr "ئۈستى"
 
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Bottom"
+msgstr "ئاستى"
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Left"
+msgstr "سول"
+
 #: ../data/lxterminal-preferences.glade.h:25
-msgid "Underline"
-msgstr "ئاستى سىزىق"
+msgid "Right"
+msgstr "ئوڭ"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
