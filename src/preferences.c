@@ -58,7 +58,7 @@ static void preferences_dialog_font_set_event(GtkFontButton * widget, LXTerminal
 {
     g_free(terminal->setting->font_name);
     terminal->setting->font_name = g_strdup(gtk_font_button_get_font_name(widget));
-    terminal->setting->geometry_change = TRUE;		/* Force the terminals to resize */
+    terminal->setting->geometry_change = TRUE;        /* Force the terminals to resize */
     terminal_settings_apply_to_all(terminal);
 }
 
@@ -68,7 +68,8 @@ static void preferences_dialog_background_color_set_event(GtkColorButton * widge
     gtk_color_button_get_color(widget, &terminal->setting->background_color);
     terminal->setting->background_alpha = gtk_color_button_get_alpha(widget);
 
-    if (terminal->setting->background_alpha == 0) {
+    if (terminal->setting->background_alpha == 0)
+    {
         terminal->setting->background_alpha = 1;
     }
 
@@ -118,10 +119,18 @@ static void preferences_dialog_tab_position_changed_event(GtkComboBox * widget, 
     char * p = NULL;
     switch (gtk_combo_box_get_active(widget))
     {
-        case 0:		p = "top";		break;
-        case 1:		p = "bottom";		break;
-        case 2:		p = "left";		break;
-        case 3:		p = "right";		break;
+        case 0:
+            p = "top";
+            break;
+        case 1:
+            p = "bottom";
+            break;
+        case 2:
+            p = "left";
+            break;
+        case 3:
+            p = "right";
+            break;
     }
     if (p != NULL)
     {
@@ -188,13 +197,21 @@ static void preferences_dialog_disable_alt_toggled_event(GtkToggleButton * widge
 gint terminal_tab_get_position_id(gchar * position)
 {
     if (strcmp(position, "bottom") == 0)
+    {
         return 1;
+    }
     else if (strcmp(position, "left") == 0)
+    {
         return 2;
+    }
     else if (strcmp(position, "right") == 0)
+    {
         return 3;
+    }
     else
+    {
         return 0;
+    }
 }
 
 /* Initialize and display the preferences dialog. */

@@ -42,7 +42,9 @@ static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition co
     GError * err = NULL;
     GIOStatus ret = g_io_channel_read_line(gio, &msg, &len, &term, &err);
     if (ret == G_IO_STATUS_ERROR)
+    {
         g_warning("Error reading socket: %s\n", err->message);
+    }
 
     /* Process message. */
     if (len > 0)
@@ -64,7 +66,9 @@ static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition co
 
     /* If there was a disconnect, discontinue read.  Otherwise, continue. */
     if (condition & G_IO_HUP)
+    {
         return FALSE;
+    }
     return TRUE;
 }
 
@@ -193,7 +197,7 @@ gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, CommandArguments
         g_io_channel_set_encoding(gio, NULL, NULL);
 
         /* Reissue arguments to the socket.  Start with the name of the executable. */
-	g_io_channel_write_chars(gio, arguments->executable, -1, NULL, NULL);
+        g_io_channel_write_chars(gio, arguments->executable, -1, NULL, NULL);
 
         /* --command or -e. */
         if (arguments->command != NULL)

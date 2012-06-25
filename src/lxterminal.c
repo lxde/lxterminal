@@ -41,22 +41,22 @@
 /* Linux color for palette. */
 static const GdkColor linux_color[16] =
 {
-  { 0, 0x0000, 0x0000, 0x0000 },
-  { 0, 0xaaaa, 0x0000, 0x0000 },
-  { 0, 0x0000, 0xaaaa, 0x0000 },
-  { 0, 0xaaaa, 0x5555, 0x0000 },
-  { 0, 0x0000, 0x0000, 0xaaaa },
-  { 0, 0xaaaa, 0x0000, 0xaaaa },
-  { 0, 0x0000, 0xaaaa, 0xaaaa },
-  { 0, 0xaaaa, 0xaaaa, 0xaaaa },
-  { 0, 0x5555, 0x5555, 0x5555 },
-  { 0, 0xffff, 0x5555, 0x5555 },
-  { 0, 0x5555, 0xffff, 0x5555 },
-  { 0, 0xffff, 0xffff, 0x5555 },
-  { 0, 0x5555, 0x5555, 0xffff },
-  { 0, 0xffff, 0x5555, 0xffff },
-  { 0, 0x5555, 0xffff, 0xffff },
-  { 0, 0xffff, 0xffff, 0xffff }
+    { 0, 0x0000, 0x0000, 0x0000 },
+    { 0, 0xaaaa, 0x0000, 0x0000 },
+    { 0, 0x0000, 0xaaaa, 0x0000 },
+    { 0, 0xaaaa, 0x5555, 0x0000 },
+    { 0, 0x0000, 0x0000, 0xaaaa },
+    { 0, 0xaaaa, 0x0000, 0xaaaa },
+    { 0, 0x0000, 0xaaaa, 0xaaaa },
+    { 0, 0xaaaa, 0xaaaa, 0xaaaa },
+    { 0, 0x5555, 0x5555, 0x5555 },
+    { 0, 0xffff, 0x5555, 0x5555 },
+    { 0, 0x5555, 0xffff, 0x5555 },
+    { 0, 0xffff, 0xffff, 0x5555 },
+    { 0, 0x5555, 0x5555, 0xffff },
+    { 0, 0xffff, 0x5555, 0xffff },
+    { 0, 0x5555, 0xffff, 0xffff },
+    { 0, 0xffff, 0xffff, 0xffff }
 };
 
 /* X accessor. */
@@ -150,7 +150,7 @@ static GtkActionEntry menu_items[] =
     { "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL, "Quit", G_CALLBACK(gtk_main_quit) },
     { "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
     { "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
-	{ "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
+    { "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
     { "Edit_Sep1", NULL, "Sep" },
     { "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
     { "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
@@ -171,7 +171,7 @@ static GtkActionEntry vte_menu_items[] =
     { "Sep1", NULL, "Sep" },
     { "Copy", GTK_STOCK_COPY, N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
     { "Paste", GTK_STOCK_PASTE, N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
-	{ "Clear", NULL, N_("Cl_ear scrollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
+    { "Clear", NULL, N_("Cl_ear scrollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
     { "Sep2", NULL, "Sep" },
     { "Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
     { "Sep3", NULL, "Sep" },
@@ -269,7 +269,7 @@ static void terminal_geometry_restore(Term * term)
         vte_terminal_get_column_count(VTE_TERMINAL(term->vte)),
         vte_terminal_get_row_count(VTE_TERMINAL(term->vte)));
     gtk_window_resize(GTK_WINDOW(term->parent->window),
-        border->left + vte_terminal_get_char_width(VTE_TERMINAL(term->vte)),  
+        border->left + vte_terminal_get_char_width(VTE_TERMINAL(term->vte)),
         border->top + vte_terminal_get_char_height(VTE_TERMINAL(term->vte)));
     gtk_border_free(border);
 }
@@ -312,7 +312,9 @@ static void terminal_initialize_switch_tab_accelerator(Term * term)
         /* Define the accelerator. */
         term->closure = g_cclosure_new_swap(G_CALLBACK(terminal_switch_tab_accelerator), term, NULL);
         if (gtk_accel_group_from_accel_closure(term->closure) == NULL)
+        {
             gtk_accel_group_connect(term->parent->accel_group, key, mods, GTK_ACCEL_LOCKED, term->closure);
+        }
     }
 }
 
@@ -410,7 +412,9 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
      * If the working directory was determined above, use it; otherwise default to the working directory of the process.
      * Create the new terminal. */
     if (proc_cwd == NULL)
+    {
         proc_cwd = g_get_current_dir();
+    }
     Term * term = terminal_new(terminal, _("LXTerminal"), proc_cwd, NULL, NULL);
     g_free(proc_cwd);
 
@@ -555,7 +559,7 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
                 break;
             }
         }
-    }        
+    }
     gtk_entry_set_activates_default(GTK_ENTRY(dialog_item), TRUE);
     gtk_widget_show_all(dialog);
 }
@@ -572,9 +576,13 @@ static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal 
 {
     /* Cycle through tabs. */
     if (gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)) == 0)
+    {
         gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), -1);
+    }
     else
+    {
         gtk_notebook_prev_page(GTK_NOTEBOOK(terminal->notebook));
+    }
 }
 
 /* Handler for accelerator <CTRL><PAGE UP>.  Cycle through tabs in the reverse direction. */
@@ -590,9 +598,13 @@ static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * te
 {
     /* Cycle through tabs. */
     if (gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)) == gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1)
+    {
         gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), 0);
+    }
     else
+    {
         gtk_notebook_next_page(GTK_NOTEBOOK(terminal->notebook));
+    }
 }
 
 /* Handler for accelerator <CTRL><PAGE DOWN>.  Cycle through tabs in the forward direction. */
@@ -614,7 +626,7 @@ static void terminal_move_tab_execute(LXTerminal * terminal, gint direction)
     {
         return;
     }
-    
+
     /* swap index in terms array and its id */
     Term * term_current = g_ptr_array_index(terminal->terms, current_page_number);
     Term * term_target = g_ptr_array_index(terminal->terms, target_page_number);
@@ -655,7 +667,7 @@ static void terminal_move_tab_right_accelerator(LXTerminal * terminal, guint act
     terminal_move_tab_execute(terminal, 1);
 }
 
-/* Handler for "activate" signal on Help/About menu item. */ 
+/* Handler for "activate" signal on Help/About menu item. */
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     const gchar * authors[] =
@@ -699,7 +711,7 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
         Term * term = g_ptr_array_index(terminal->terms, 0);
         GtkBorder * border = terminal_get_border(term);
         GdkGeometry hints;
-        hints.width_inc = vte_terminal_get_char_width(VTE_TERMINAL(term->vte));  
+        hints.width_inc = vte_terminal_get_char_width(VTE_TERMINAL(term->vte));
         hints.height_inc = vte_terminal_get_char_height(VTE_TERMINAL(term->vte));
         hints.base_width = border->right + 1;
         hints.base_height = border->bottom + 1;
@@ -745,8 +757,8 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
     if (terminal->terms->len > num)
     {
         /* Propagate the title to the toplevel window. */
-    Term * term = g_ptr_array_index(terminal->terms, num);
-    const gchar * title = vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
+        Term * term = g_ptr_array_index(terminal->terms, num);
+        const gchar * title = vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
     }
 }
@@ -774,7 +786,7 @@ static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_obje
     {
         /* Remove the element and decrease the index number of each succeeding element. */
         g_ptr_array_remove_index(terminal->parent->windows, terminal->index);
-    int i;
+        int i;
         for (i = terminal->index; i < terminal->parent->windows->len; i += 1)
         {
             LXTerminal * t = g_ptr_array_index(terminal->parent->windows, i);
@@ -797,7 +809,7 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
     {
         g_ptr_array_free(terminal->terms, TRUE);
         gtk_widget_destroy(terminal->window);
-    } 
+    }
 
     /* Not last tab being deleted. */
     else
@@ -898,8 +910,10 @@ static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * ev
      * cause VTE get one more character. We capture and drop these events, to avoid
      * to pass VTE them.
      */
-    if ((event->state & GDK_MODIFIER_MASK) == (GDK_CONTROL_MASK | GDK_SHIFT_MASK)) {
-        switch (event->keyval) {
+    if ((event->state & GDK_MODIFIER_MASK) == (GDK_CONTROL_MASK | GDK_SHIFT_MASK))
+    {
+        switch (event->keyval)
+        {
             case GDK_KEY_C:
             case GDK_KEY_V:
             case GDK_KEY_W:
@@ -909,9 +923,13 @@ static gboolean terminal_vte_key_press_event(VteTerminal * vte, GdkEventKey * ev
             default:
                 return FALSE;
         }
-    } else if ((event->state & GDK_MODIFIER_MASK) == GDK_MOD1_MASK) {
-        if (!term->parent->setting->disable_alt && term->parent->terms->len > 1) {
-            switch (event->keyval) {
+    }
+    else if ((event->state & GDK_MODIFIER_MASK) == GDK_MOD1_MASK)
+    {
+        if (!term->parent->setting->disable_alt && term->parent->terms->len > 1)
+        {
+            switch (event->keyval)
+            {
                 case GDK_KEY_1:
                 case GDK_KEY_2:
                 case GDK_KEY_3:
@@ -962,17 +980,29 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 
     /* Hide or show scrollbar. */
     if (setting->hide_scroll_bar)
+    {
         gtk_widget_hide(term->scrollbar);
-        else gtk_widget_show(term->scrollbar);
+    }
+    else
+    {
+        gtk_widget_show(term->scrollbar);
+    }
 
     /* Hide or show Close button. */
     if (setting->hide_close_button)
+    {
         gtk_widget_hide(term->close_button);
-        else gtk_widget_show(term->close_button);
+    }
+    else
+    {
+        gtk_widget_show(term->close_button);
+    }
 
     /* If terminal geometry changed, react to it. */
     if (setting->geometry_change)
+    {
         terminal_geometry_restore(term);
+    }
 }
 
 /* Create a new terminal. */
@@ -1082,7 +1112,9 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 static void terminal_free(Term * term)
 {
     if ((GTK_IS_ACCEL_GROUP(term->parent->accel_group)) && (term->closure != NULL))
+    {
         gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
+    }
     g_slice_free(Term, term);
 }
 
@@ -1109,7 +1141,9 @@ static void terminal_menubar_initialize(LXTerminal * terminal)
         for (path_ptr = path; *path_ptr != '\0'; path_ptr += 1)
         {
             if (*path_ptr == '_')
+            {
                 *path_ptr = '/';
+            }
         }
         path_ptr = g_path_get_dirname(path);
         gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menus[i].name, menus[i].name, GTK_UI_MANAGER_MENU, FALSE);
@@ -1125,12 +1159,19 @@ static void terminal_menubar_initialize(LXTerminal * terminal)
         for (path_ptr = path; *path_ptr != '\0'; path_ptr += 1)
         {
             if (*path_ptr == '_')
+            {
                 *path_ptr = '/';
+            }
         }
         path_ptr = g_path_get_dirname(path);
         if (strcmp(menu_items[i].label, "Sep") == 0)
+        {
             gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
-            else gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+        }
+        else
+        {
+            gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+        }
 
         g_free(path);
         g_free(path_ptr);
@@ -1190,7 +1231,9 @@ static void terminal_menu_accelerator_update(LXTerminal * terminal)
 {
     /* Ensure that saved_menu_accelerator is initialized. */
     if (saved_menu_accelerator == NULL)
+    {
         g_object_get(G_OBJECT(gtk_settings_get_default()), "gtk-menu-bar-accel", &saved_menu_accelerator, NULL);
+    }
 
     /* If F10 is disabled, set the accelerator to a key combination that is not F10 and unguessable. */
     gtk_settings_set_string_property(
@@ -1231,7 +1274,9 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
                 argc -= 1;
                 argv_cursor += 1;
                 if (arguments->command == NULL)
+                {
                     arguments->command = g_strdup(*argv_cursor);
+                }
                 else
                 {
                     gchar * new_command = g_strconcat(arguments->command, " ", *argv_cursor, NULL);
@@ -1246,22 +1291,28 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         {
             int result = sscanf(&argument[11], "%dx%d", &arguments->geometry_columns, &arguments->geometry_rows);
             if (result != 2)
+            {
                 return FALSE;
+            }
         }
 
         /* -l, --loginshell */
         else if ((strcmp(argument, "--loginshell") == 0) || (strcmp(argument, "-l") == 0))
+        {
             login_shell = TRUE;
+        }
 
         /* --title=<title> */
-    else if (strncmp(argument, "--title=", 8) == 0)
-        arguments->tabs = &argument[8];
+        else if (strncmp(argument, "--title=", 8) == 0)
+        {
+            arguments->tabs = &argument[8];
+        }
 
-    /* --tabs=<names> */
-    else if (strncmp(argument, "--tabs=", 7) == 0)
-    {
-        arguments->tabs = &argument[7];
-    }
+        /* --tabs=<names> */
+        else if (strncmp(argument, "--tabs=", 7) == 0)
+        {
+            arguments->tabs = &argument[7];
+        }
 
         /* -t <title>, -T <title>, --title <title>
          * The -T form is demanded by distros who insist on this xterm feature. */
@@ -1275,7 +1326,9 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
 
         /* --working-directory=<working directory> */
         else if (strncmp(argument, "--working-directory=", 20) == 0)
+        {
             arguments->working_directory = &argument[20];
+        }
 
         /* Undefined argument. */
         else
@@ -1289,15 +1342,17 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
     if (login_shell)
     {
         if (arguments->command == NULL)
+        {
             arguments->command = g_strdup("sh -l");
+        }
         else
-            {
+        {
             gchar * escaped_command = g_shell_quote(arguments->command);
             gchar * new_command = g_strdup_printf("sh -l -c %s", escaped_command);
             g_free(escaped_command);
             g_free(arguments->command);
             arguments->command = new_command;
-            }
+        }
     }
     return TRUE;
 }
@@ -1322,11 +1377,15 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     #if GTK_CHECK_VERSION (2, 90, 8)
         GdkVisual *visual = gdk_screen_get_rgba_visual(gtk_widget_get_screen(GTK_WIDGET(terminal->window)));
         if (visual != NULL)
+        {
             gtk_widget_set_visual(terminal->window, visual);
+        }
     #else
         GdkColormap *colormap = gdk_screen_get_rgba_colormap(gtk_widget_get_screen(GTK_WIDGET(terminal->window)));
         if (colormap != NULL)
+        {
             gtk_widget_set_colormap(terminal->window, colormap);
+        }
     #endif
 
     /* Set window icon. */
@@ -1358,7 +1417,9 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     /* Create the first terminal. */
     gchar * local_working_directory = NULL;
     if (arguments->working_directory == NULL)
+    {
         local_working_directory = g_get_current_dir();
+    }
     Term * term = terminal_new(
         terminal,
         _("LXTerminal"),
@@ -1369,7 +1430,9 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 
     /* Set the terminal geometry. */
     if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0))
+    {
         vte_terminal_set_size(VTE_TERMINAL(term->vte), arguments->geometry_columns, arguments->geometry_rows);
+    }
 
     /* Add the first terminal to the notebook and the data structures. */
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->tab);
@@ -1416,7 +1479,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
             tab_index ++;
         }
 
-	g_free(strings);
+        g_free(strings);
     }
 
     /* Connect signals. */
@@ -1509,7 +1572,9 @@ int main(gint argc, gchar * * argv)
         setting_save(lxtermwin->setting);
     }
     else
+    {
         lxtermwin->setting = load_setting_from_file(path);
+    }
 
     g_free(path);
 

@@ -66,7 +66,9 @@ void setting_save(Setting * setting)
         /* Create the file if necessary. */
         int fd = open(path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
         if (fd < 0)
+	{
             g_warning("Configuration file create failed: %s\n", g_strerror(errno));
+	}
         else
         {
             write(fd, file_data, strlen(file_data));
@@ -98,11 +100,15 @@ Setting * load_setting_from_file(const char * filename)
         setting->font_name = g_key_file_get_string(setting->keyfile, "general", "fontname", NULL);
         char * p = g_key_file_get_string(setting->keyfile, "general", "bgcolor", NULL);
         if (p != NULL)
+	{
             gdk_color_parse(p, &setting->background_color);
+	}
         setting->background_alpha = g_key_file_get_integer(setting->keyfile, "general", "bgalpha", NULL);
         p = g_key_file_get_string(setting->keyfile, "general", "fgcolor", NULL);
         if (p != NULL)
+	{
             gdk_color_parse(p, &setting->foreground_color);
+	}
         setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, "general", "disallowbold", NULL);
         setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, "general", "cursorblinks", NULL);
         setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, "general", "cursorunderline", NULL);
@@ -119,12 +125,20 @@ Setting * load_setting_from_file(const char * filename)
 
     /* Default configuration strings. */
     if (setting->font_name == NULL)
+    {
         setting->font_name = g_strdup("monospace 10");
+    }
     if (setting->tab_position == NULL)
+    {
         setting->tab_position = g_strdup("top");
+    }
     if (setting->word_selection_characters == NULL)
+    {
         setting->word_selection_characters = g_strdup("-A-Za-z0-9,./?%&#:_~");
+    }
     if (setting->background_alpha == 0)
+    {
         setting->background_alpha = 65535;
+    }
     return setting;
 }
