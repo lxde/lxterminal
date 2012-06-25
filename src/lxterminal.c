@@ -518,6 +518,7 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
         GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
         GTK_STOCK_OK, GTK_RESPONSE_OK,
         NULL);
+    gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
     gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL);
     g_signal_connect(G_OBJECT(dialog), "response", G_CALLBACK(terminal_name_tab_response_event), terminal);
     GtkWidget * dialog_item = gtk_entry_new();
@@ -542,6 +543,7 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
             }
         }
     }        
+    gtk_entry_set_activates_default(GTK_ENTRY(dialog_item), TRUE);
     gtk_widget_show_all(dialog);
 }
 
