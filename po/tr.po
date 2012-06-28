@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"POT-Creation-Date: 2012-06-28 21:29+0200\n"
 "PO-Revision-Date: 2012-05-06 11:42+0200\n"
 "Last-Translator: Necdet <necdetyucel@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -246,30 +246,34 @@ msgstr "_Hakkında"
 msgid "Cl_ear scrollback"
 msgstr "Kaydırma çubuğunu gizle"
 
-#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
-#: ../src/lxterminal.c:1364 ../src/preferences.c:213
+#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
+#: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:528
+#: ../src/lxterminal.c:532
 msgid "Name Tab"
 msgstr "Sekmeyi İsimlendir"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:669
+#: ../src/lxterminal.c:681
 msgid "translator-credits"
 msgstr ""
 "Mehmet Gülmen (memetgulmen@gmail.com)\n"
 "Kılıç Köken (kilickoken@gmail.com)"
 
-#: ../src/lxterminal.c:677
+#: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
 msgstr "Telif Hakkı (C) 2008-2011"
 
-#: ../src/lxterminal.c:678
+#: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE girişimi için uçbirim öykünücüsü"
+
+#: ../data/lxterminal-preferences.glade.h:1
+msgid "LXTerminal Preferences"
+msgstr "LXTerminal Tercihleri"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
@@ -304,9 +308,8 @@ msgid "Underline"
 msgstr "Altını çiz"
 
 #: ../data/lxterminal-preferences.glade.h:10
-#, fuzzy
-msgid "Disable using Alt-n for tabs and menu"
-msgstr "Sekme ve menü değiştirmek için Alt-n kullanımını devre dışı bırak"
+msgid "Audible bell"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Style"
@@ -329,8 +332,8 @@ msgid "Hide menu bar"
 msgstr "Menü çubuğunu gizle"
 
 #: ../data/lxterminal-preferences.glade.h:16
-msgid "LXTerminal Preferences"
-msgstr "LXTerminal Tercihleri"
+msgid "Hide Close buttons"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"
@@ -345,6 +348,11 @@ msgstr "Düzenli ifade karakterleri"
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Menü kısayol tuşunu (varsayılan F10) devre dışı bırak"
+
+#: ../data/lxterminal-preferences.glade.h:20
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "Sekme ve menü değiştirmek için Alt-n kullanımını devre dışı bırak"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"

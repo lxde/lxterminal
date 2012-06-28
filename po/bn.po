@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 10:40+0800\n"
+"POT-Creation-Date: 2012-06-28 21:29+0200\n"
 "PO-Revision-Date: 2010-02-01 13:00+0600\n"
 "Last-Translator: Loba Yeasmeen <loba@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -249,31 +249,31 @@ msgstr "পরিচিতি (_A)"
 msgid "Cl_ear scrollback"
 msgstr "স্ক্রলবার আড়াল করুন"
 
-#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
-#: ../src/lxterminal.c:1364 ../src/preferences.c:213
+#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
+#: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXটার্মিনাল"
 
 # snigdha
-#: ../src/lxterminal.c:528
+#: ../src/lxterminal.c:532
 msgid "Name Tab"
 msgstr "নাম ট্যাব"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:669
+#: ../src/lxterminal.c:681
 msgid "translator-credits"
 msgstr ""
 "সঙ্কর্ষণ মুখোপাধ্যায় (sankarshan@randomink.org) \n"
 "লোবা ইয়াসমীন <loba@ankur.org.bd>"
 
 # snigdha
-#: ../src/lxterminal.c:677
+#: ../src/lxterminal.c:689
 #, fuzzy
 msgid "Copyright (C) 2008-2011"
 msgstr "স্বত্বাধিকার (C) ২০০৮-২০১০"
 
-#: ../src/lxterminal.c:678
+#: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE প্রকল্পের জন্য টার্মিনাল ইম্যুলেটর"
 

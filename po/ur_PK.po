@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 10:40+0800\n"
+"POT-Creation-Date: 2012-06-28 21:29+0200\n"
 "PO-Revision-Date: 2009-05-10 04:11+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -253,19 +253,19 @@ msgstr "_بابت"
 msgid "Cl_ear scrollback"
 msgstr ""
 
-#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
-#: ../src/lxterminal.c:1364 ../src/preferences.c:213
+#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
+#: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "ایل ایکس ٹرمنل"
 
-#: ../src/lxterminal.c:528
+#: ../src/lxterminal.c:532
 #, fuzzy
 msgid "Name Tab"
 msgstr "نیا _ٹیب"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:669
+#: ../src/lxterminal.c:681
 msgid "translator-credits"
 msgstr ""
 "محمد علی مکی\n"
@@ -275,11 +275,11 @@ msgstr ""
 "مکی کا بلاگ\n"
 "http://makki.urducoder.com"
 
-#: ../src/lxterminal.c:677
+#: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
 msgstr "کاپی رائٹ (C) 2008-2011"
 
-#: ../src/lxterminal.c:678
+#: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
 msgstr "ٹرمنل ایمولیٹر برائے ایل ایکس ڈی ای پراجیکٹ"
 

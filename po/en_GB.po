@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LxTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 10:40+0800\n"
+"POT-Creation-Date: 2012-06-28 21:29+0200\n"
 "PO-Revision-Date: 2012-01-24 22:57+0200\n"
 "Last-Translator: Steve <yorvik.ubunto@gmail.com>\n"
 "Language-Team: English UK en_GB <yorvik.ubunto@gmail.com>\n"
@@ -244,26 +244,26 @@ msgstr "_About"
 msgid "Cl_ear scrollback"
 msgstr "Hide scroll bar:"
 
-#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
-#: ../src/lxterminal.c:1364 ../src/preferences.c:213
+#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
+#: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:528
+#: ../src/lxterminal.c:532
 msgid "Name Tab"
 msgstr "Name Tab"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:669
+#: ../src/lxterminal.c:681
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: ../src/lxterminal.c:677
+#: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright © 2008-2011"
 
-#: ../src/lxterminal.c:678
+#: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal emulator for LXDE project"
 

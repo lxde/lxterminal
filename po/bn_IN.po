@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 10:40+0800\n"
+"POT-Creation-Date: 2012-06-28 21:29+0200\n"
 "PO-Revision-Date: 2009-07-31 12:42+0200\n"
 "Last-Translator: Sankarshan <sankarshan.mukhopadhyay@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -250,28 +250,28 @@ msgstr "পরিচিতি(_A)"
 msgid "Cl_ear scrollback"
 msgstr ""
 
-#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
-#: ../src/lxterminal.c:1364 ../src/preferences.c:213
+#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
+#: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:528
+#: ../src/lxterminal.c:532
 #, fuzzy
 msgid "Name Tab"
 msgstr "নতুন ট্যাব(_N)"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:669
+#: ../src/lxterminal.c:681
 msgid "translator-credits"
 msgstr "সঙ্কর্ষণ মুখোপাধ্যায় (sankarshan@randomink.org)"
 
-#: ../src/lxterminal.c:677
+#: ../src/lxterminal.c:689
 #, fuzzy
 msgid "Copyright (C) 2008-2011"
 msgstr "স্বত্বাধিকার (C) ২০০৮"
 
-#: ../src/lxterminal.c:678
+#: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE প্রকল্পের জন্য টার্মিনাল এমুলেটার"
 
