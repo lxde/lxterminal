@@ -307,8 +307,9 @@ msgid "Underline"
 msgstr "تسطير"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Audible bell"
-msgstr "جرس مسموع"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "تعطيل إستعمال Alt-n للألسنة و القائمة"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Style"
@@ -331,8 +332,9 @@ msgid "Hide menu bar"
 msgstr "اخفِ شريط القوائم"
 
 #: ../data/lxterminal-preferences.glade.h:16
-msgid "Hide Close buttons"
-msgstr "أخفِ زر الإغلاق"
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "تفضيلات LXTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"

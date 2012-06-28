@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 10:40+0800\n"
-"PO-Revision-Date: 2011-03-17 21:01+0200\n"
-"Last-Translator: enginmanap <enginmanap@gmail.com>\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"PO-Revision-Date: 2012-05-06 11:42+0200\n"
+"Last-Translator: Necdet <necdetyucel@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -309,8 +309,9 @@ msgid "Underline"
 msgstr "Altını çiz"
 
 #: ../data/lxterminal-preferences.glade.h:10
-msgid "Audible bell"
-msgstr "Duyulabilir zil"
+#, fuzzy
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "Sekme ve menü değiştirmek için Alt-n kullanımını devre dışı bırak"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Style"
@@ -333,8 +334,9 @@ msgid "Hide menu bar"
 msgstr "Menü çubuğunu gizle"
 
 #: ../data/lxterminal-preferences.glade.h:16
-msgid "Hide Close buttons"
-msgstr "Kapat düğmelerini gizle"
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "LXTerminal Tercihleri"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"

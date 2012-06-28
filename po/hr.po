@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 10:40+0800\n"
-"PO-Revision-Date: 2011-12-06 12:04+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"PO-Revision-Date: 2012-06-03 18:57+0200\n"
 "Last-Translator: zvacet <ikoli@yahoo.com>\n"
 "Language-Team: <asjlob AT vip.hr> <>\n"
 "Language: hr\n"
@@ -296,7 +296,7 @@ msgstr "Dopusti podebljani font"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Cursor blink"
-msgstr ""
+msgstr "Treptanje pokazivača"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor style"

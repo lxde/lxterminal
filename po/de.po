@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 10:40+0800\n"
-"PO-Revision-Date: 2011-10-10 11:22+0200\n"
+"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"PO-Revision-Date: 2012-03-05 01:21+0200\n"
 "Last-Translator: Christoph <christoph.wickert@googlemail.com>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "Language: de\n"
@@ -338,8 +338,9 @@ msgid "Hide menu bar"
 msgstr "Menüleiste verbergen"
 
 #: ../data/lxterminal-preferences.glade.h:16
-msgid "Hide Close buttons"
-msgstr "Schaltflächen zum Schließen verbergen"
+#, fuzzy
+msgid "LXTerminal Preferences"
+msgstr "Einstellungen"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"
