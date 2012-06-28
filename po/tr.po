@@ -271,11 +271,6 @@ msgstr "Telif Hakkı (C) 2008-2011"
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE girişimi için uçbirim öykünücüsü"
 
-#: ../data/lxterminal-preferences.glade.h:1
-#, fuzzy
-msgid "LXTerminal Preferences"
-msgstr "Yeğlenenler:"
-
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
 msgstr "Uçbirim yazıtipi"
@@ -334,7 +329,6 @@ msgid "Hide menu bar"
 msgstr "Menü çubuğunu gizle"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "LXTerminal Preferences"
 msgstr "LXTerminal Tercihleri"
 
@@ -351,11 +345,6 @@ msgstr "Düzenli ifade karakterleri"
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Menü kısayol tuşunu (varsayılan F10) devre dışı bırak"
-
-#: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
-msgid "Disable using Alt-n for tabs and menu"
-msgstr "Sekme değiştirmek için Alt-n kullanımını devre dışı bırak"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"

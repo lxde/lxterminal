@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-28 09:12+0200\n"
+"POT-Creation-Date: 2012-06-28 21:17+0200\n"
 "PO-Revision-Date: 2012-03-05 01:21+0200\n"
 "Last-Translator: Christoph <christoph.wickert@googlemail.com>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
@@ -250,29 +250,29 @@ msgstr "_Info"
 msgid "Cl_ear scrollback"
 msgstr "Bildlaufleiste verbergen"
 
-#: ../src/lxterminal.c:414 ../src/lxterminal.c:675 ../src/lxterminal.c:750
-#: ../src/lxterminal.c:1364 ../src/preferences.c:213
+#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
+#: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:528
+#: ../src/lxterminal.c:532
 msgid "Name Tab"
 msgstr "Titel festlegen"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:669
+#: ../src/lxterminal.c:681
 msgid "translator-credits"
 msgstr ""
 "Christoph Wickert <cwickert@fedoraproject.org>\n"
 "Mario Blättermann <mario.blaettermann@t-online.de>\n"
 "Lutz Thuns <lthuns@opensuse.org>"
 
-#: ../src/lxterminal.c:677
+#: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright (C) 2008-2011"
 
-#: ../src/lxterminal.c:678
+#: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal-Emulator für das LXDE Projekt"
 
@@ -338,9 +338,8 @@ msgid "Hide menu bar"
 msgstr "Menüleiste verbergen"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
-msgid "LXTerminal Preferences"
-msgstr "Einstellungen"
+msgid "Hide Close buttons"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"
@@ -385,75 +384,3 @@ msgstr "Terminal"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Befehlszeile verwenden"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-
-#~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr "Fehler beim Starten des Webbrowers: Befehl war »%s«\n"
-
-#~ msgid "Misc"
-#~ msgstr "Verschiedenes"
-
-#~ msgid "Disable F10 shortcut for menu:"
-#~ msgstr "Tastenkürzel F10 für das Menü deaktivieren"
-
-#~ msgid "General"
-#~ msgstr "Allgemein"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Einstellungen"
-
-#~ msgid "Transparent Background:"
-#~ msgstr "Transparenter Hintergrund:"
-
-#~ msgid "_View"
-#~ msgstr "_Ansicht"
-
-#~ msgid "_Character Encoding"
-#~ msgstr "_Zeichenkodierung"
-
-#~ msgid "/_File/_New Window"
-#~ msgstr "/_Datei/Neues _Fenster"
-
-#~ msgid "/_File/_New Tab"
-#~ msgstr "/_Datei/Neuer _Reiter"
-
-#~ msgid "/_File/sep1"
-#~ msgstr "/_Datei/sep1"
-
-#~ msgid "/_File/_Close Tab"
-#~ msgstr "/_Datei/Reiter s_chließen"
-
-#~ msgid "/_File/_Quit"
-#~ msgstr "/_Datei/_Beenden"
-
-#~ msgid "/_Edit/_Copy"
-#~ msgstr "/_Bearbeiten/_Kopieren"
-
-#~ msgid "/_Edit/_Paste"
-#~ msgstr "/_Bearbeiten/E_infügen"
-
-#~ msgid "/_Edit/sep1"
-#~ msgstr "/_Bearbeiten/sep1"
-
-#~ msgid "/_Edit/_Preferences..."
-#~ msgstr "/_Bearbeiten/_Einstellungen ..."
-
-#~ msgid "/_Tabs/_Next Tab"
-#~ msgstr "/_Reiter/_Nächster Reiter"
-
-#~ msgid "/sep1"
-#~ msgstr "/sep1"
-
-#~ msgid "/sep2"
-#~ msgstr "/sep2"
-
-#~ msgid "/_Preferences..."
-#~ msgstr "/_Einstellungen ..."
-
-#~ msgid "/sep3"
-#~ msgstr "/sep3"
