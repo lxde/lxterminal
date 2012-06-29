@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Algimantas <margevicius.algimantas@mail.ru>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-05-17 09:17+0200\n"
+"PO-Revision-Date: 2012-06-29 08:35+0300\n"
 "Last-Translator: Algimantas <margevicius.algimantas@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: lt\n"
@@ -210,10 +211,10 @@ msgstr "_Kopijuoti"
 msgid "_Paste"
 msgstr "_Įdėti"
 
+# nesupratau ką ji daro, logiškai mąstant turėtų išvalyt matomą terminalo langą arba įvestų komandų istoriją, bet praktiškai tai paspaudus tą mygtuką nieko nevyksta. reik išbandyt su vėlesne versija.
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Paslėpti slinkimo juostą"
+msgstr "Išvalyti _slinkimo istoriją"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -244,9 +245,8 @@ msgid "_About"
 msgstr "_Apie"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Paslėpti slinkimo juostą"
+msgstr "_Išvalyti slinkimo istoriją"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
@@ -380,30 +380,3 @@ msgstr "Terminalas"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Naudoti komandų eilutę"
-
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-
-#~ msgid "Failed to launch the web browser. The command was `%s'\n"
-#~ msgstr "Nepavyko paleisti naršyklės. Buvo įvykdyta `%s' komanda\n"
-
-#~ msgid "Misc"
-#~ msgstr "Kita"
-
-#~ msgid "Disable F10 shortcut for menu:"
-#~ msgstr "Nenaudoti F10 klavišo atidaryti meniu:"
-
-#~ msgid "General"
-#~ msgstr "Bendri"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Nustatymai"
-
-#~ msgid "Transparent Background:"
-#~ msgstr "Permatomas fonas:"
-
-#~ msgid "_View"
-#~ msgstr "_Rodymas"
