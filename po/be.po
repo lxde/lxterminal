@@ -210,9 +210,8 @@ msgid "_Paste"
 msgstr "_Уставіць"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Схаваць стужку прагорткі"
+msgstr "Ачысціць гісторыю выва_ду"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -243,9 +242,8 @@ msgid "_About"
 msgstr "_Пра праграму"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Схаваць стужку прагорткі"
+msgstr "С_кінуць гісторыю вываду"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
