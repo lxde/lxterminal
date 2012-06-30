@@ -211,9 +211,8 @@ msgid "_Paste"
 msgstr "貼り付け(_P)"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "スクロールバーを隠す"
+msgstr "バックログの消去(_O)"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -244,9 +243,8 @@ msgid "_About"
 msgstr "情報(_A)"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "スクロールバーを隠す"
+msgstr "バックログを消去(_E)"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
