@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2011-10-23 00:26+0200\n"
+"PO-Revision-Date: 2012-07-07 21:23+0200\n"
 "Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
 "Language: lg\n"
@@ -209,9 +209,8 @@ msgid "_Paste"
 msgstr "_Paatiika"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Kisa akaseesa"
+msgstr "Gyawo ebiri mu ggwanika ly'ekiwandikiro"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -242,9 +241,8 @@ msgid "_About"
 msgstr "Ebifa ku _puloguramu eno"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Kisa akaseesa"
+msgstr "_Gyawo ebiri mu ggwanika ly'ekiwandikiro"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
@@ -271,7 +269,7 @@ msgstr "Puloguramu eya LXDE egeegeenya ekiwandikiro"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "LXTerminal Preferences"
-msgstr " Enteekateeka ya LXTerminal"
+msgstr "Enteekateeka ya LXTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
