@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-04-08 12:46+0200\n"
+"PO-Revision-Date: 2012-07-09 07:59+0200\n"
 "Last-Translator: George <forfolias@gmail.com>\n"
 "Language-Team: Greek\n"
 "Language: el\n"
@@ -211,17 +211,16 @@ msgid "_Paste"
 msgstr "_Επικόλληση"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Απόκρυψη μπάρας κύλισης"
+msgstr "Καθαρισμός _μπάρας κύλισης"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
-msgstr "Ρυθμίσεις"
+msgstr "_Ρυθμίσεις"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Na_me Tab"
-msgstr "Ονο_μασία καρτέλας"
+msgstr "_Ονομασία καρτέλας"
 
 #: ../src/lxterminal.c:157 ../src/lxterminal.c:179
 msgid "Pre_vious Tab"
@@ -233,20 +232,19 @@ msgstr "_Επόμενη καρτέλα"
 
 #: ../src/lxterminal.c:159 ../src/lxterminal.c:181
 msgid "Move Tab _Left"
-msgstr "Μετακίνηση καρτέλας αριστερά"
+msgstr "Μετακίνηση καρτέλας _αριστερά"
 
 #: ../src/lxterminal.c:160 ../src/lxterminal.c:182
 msgid "Move Tab _Right"
-msgstr "Μετακίνηση καρτέλας δεξιά"
+msgstr "Μετακίνηση καρτέλας _δεξιά"
 
 #: ../src/lxterminal.c:161
 msgid "_About"
 msgstr "_Σχετικά"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Απόκρυψη μπάρας κύλισης"
+msgstr "Καθαρισμός _μπάρας κύλισης"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
