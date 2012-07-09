@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-03-05 01:21+0200\n"
-"Last-Translator: Christoph <christoph.wickert@googlemail.com>\n"
+"PO-Revision-Date: 2012-07-09 19:15+0200\n"
+"Last-Translator: Daniel <d@winzen4.de>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -266,7 +266,8 @@ msgid "translator-credits"
 msgstr ""
 "Christoph Wickert <cwickert@fedoraproject.org>\n"
 "Mario Blättermann <mario.blaettermann@t-online.de>\n"
-"Lutz Thuns <lthuns@opensuse.org>"
+"Lutz Thuns <lthuns@opensuse.org>\n"
+"Daniel Winzen <d@winzen4.de>"
 
 #: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
@@ -277,9 +278,8 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Terminal-Emulator für das LXDE Projekt"
 
 #: ../data/lxterminal-preferences.glade.h:1
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Einstellungen"
+msgstr "LXTerminal Einstellungen"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
@@ -339,7 +339,7 @@ msgstr "Menüleiste verbergen"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Schließen-Knöpfe verbergen"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"
