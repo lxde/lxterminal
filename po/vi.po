@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2011-12-13 07:25+0200\n"
+"PO-Revision-Date: 2012-07-09 05:10+0200\n"
 "Last-Translator: Duy Hung <nguyentieuhau@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: vi\n"
@@ -209,9 +209,8 @@ msgid "_Paste"
 msgstr "_Dán"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Ẩn thanh cuộn:"
+msgstr "Ẩn thanh c_uộn:"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -242,9 +241,8 @@ msgid "_About"
 msgstr "_Giới thiệu"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Ẩn thanh cuộn:"
+msgstr "Ẩn thanh c_uộn:"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
@@ -261,7 +259,8 @@ msgstr "Dải tên"
 msgid "translator-credits"
 msgstr ""
 "Nhóm Việt hoá:\n"
-"Duy-Hieu Bui (scamemiv@gmail.com)"
+"Duy-Hieu Bui (scamemiv@gmail.com)\n"
+"Tran Duy Hung (nguyentieuhau@gmail.com)"
 
 #: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
