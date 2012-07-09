@@ -8,223 +8,215 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2008-11-21 15:36+0100\n"
-"Last-Translator: Alain Mendizabal <alainmendi@gmail.com>\n"
+"PO-Revision-Date: 2012-07-09 17:03+0200\n"
+"Last-Translator: Asier_Iturralde_Sarasola <asier.iturralde@gmail.com>\n"
 "Language-Team: Basque <alainmendi@gmail.com>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
 "X-Poedit-Language: Basque\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
-msgstr ""
+msgstr "Mendebaldeko Europa"
 
 #: ../src/encoding.c:125
 msgid "East European"
-msgstr ""
+msgstr "Ekialdeko Europa"
 
 #: ../src/encoding.c:126
 msgid "East Asian"
-msgstr ""
+msgstr "Ekialdeko Asia"
 
 #: ../src/encoding.c:127
 msgid "SE & SW Asian"
-msgstr ""
+msgstr "Asia HE eta HM"
 
 #: ../src/encoding.c:128
 msgid "Middle Eastern"
-msgstr ""
+msgstr "Ekialde Hurbila"
 
 #: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
 #: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
 #: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
 #: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
-msgstr ""
+msgstr "Mendebaldea"
 
 #: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
-msgstr ""
+msgstr "Erdialdeko Europa"
 
 #: ../src/encoding.c:137
 msgid "South European"
-msgstr ""
+msgstr "Hegoaldeko Europa"
 
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
-msgstr ""
+msgstr "Baltikoa"
 
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr ""
+msgstr "Zirilikoa"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
-msgstr ""
+msgstr "Arabiera"
 
 #: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
-msgstr ""
+msgstr "Greziera"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr ""
+msgstr "Hebreera bisuala"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebreera"
 
 #: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
-msgstr ""
+msgstr "Turkiera"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr ""
+msgstr "Nordikoa"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
-msgstr ""
+msgstr "Zelta"
 
 #: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
-msgstr ""
+msgstr "Errumaniera"
 
 #: ../src/encoding.c:157
 msgid "Armenian"
-msgstr ""
+msgstr "Armeniera"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr ""
+msgstr "Txinera tradizionala"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr ""
+msgstr "Zirilikoa/Errusiera"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
-msgstr ""
+msgstr "Japoniera"
 
 #: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
-msgstr ""
+msgstr "Koreera"
 
 #: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "Txinera sinplifikatua"
 
 #: ../src/encoding.c:169
 msgid "Georgian"
-msgstr ""
+msgstr "Georgiera"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr ""
+msgstr "Zirilikoa/Ukrainera"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
-msgstr ""
+msgstr "Kroaziera"
 
 #: ../src/encoding.c:190
 msgid "Hindi"
-msgstr ""
+msgstr "Hindia"
 
 #: ../src/encoding.c:191
 msgid "Farsi"
-msgstr ""
+msgstr "Persiera"
 
 #: ../src/encoding.c:193
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujaratera"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
-msgstr ""
+msgstr "Islandiera"
 
 #: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamera"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr ""
+msgstr "Thailandiera"
 
 #: ../src/lxterminal.c:136
-#, fuzzy
 msgid "_File"
-msgstr "/_Fitxategia"
+msgstr "_Fitxategia"
 
 #: ../src/lxterminal.c:137
-#, fuzzy
 msgid "_Edit"
-msgstr "/_Editatu"
+msgstr "_Editatu"
 
 #: ../src/lxterminal.c:138
-#, fuzzy
 msgid "_Tabs"
-msgstr "/Fi_txak"
+msgstr "Fi_txak"
 
 #: ../src/lxterminal.c:139
-#, fuzzy
 msgid "_Help"
-msgstr "/_Laguntza"
+msgstr "_Laguntza"
 
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:169
-#, fuzzy
 msgid "New _Window"
-msgstr "/_Leiho berria"
+msgstr "_Leiho berria"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:170
-#, fuzzy
 msgid "New _Tab"
-msgstr "/_Fitxa berria"
+msgstr "_Fitxa berria"
 
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:183
-#, fuzzy
 msgid "_Close Tab"
-msgstr "/_Itxi fitxa"
+msgstr "_Itxi fitxa"
 
 #: ../src/lxterminal.c:150
 msgid "_Quit"
-msgstr ""
+msgstr "I_rten"
 
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:172
-#, fuzzy
 msgid "Cop_y"
-msgstr "/_Kopiatu"
+msgstr "_Kopiatu"
 
 #: ../src/lxterminal.c:152 ../src/lxterminal.c:173
-#, fuzzy
 msgid "_Paste"
-msgstr "/_Itsatsi"
+msgstr "_Itsatsi"
 
 #: ../src/lxterminal.c:153
 msgid "Clear scr_ollback"
 msgstr ""
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
-#, fuzzy
 msgid "Preference_s"
-msgstr "Hobespenak"
+msgstr "_Hobespenak"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 #, fuzzy
@@ -232,14 +224,12 @@ msgid "Na_me Tab"
 msgstr "/_Fitxa berria"
 
 #: ../src/lxterminal.c:157 ../src/lxterminal.c:179
-#, fuzzy
 msgid "Pre_vious Tab"
-msgstr "/Fi_txak/_Aurreko fitxa"
+msgstr "_Aurreko fitxa"
 
 #: ../src/lxterminal.c:158 ../src/lxterminal.c:180
-#, fuzzy
 msgid "Ne_xt Tab"
-msgstr "/_Fitxa berria"
+msgstr "_Hurrengo fitxa"
 
 #: ../src/lxterminal.c:159 ../src/lxterminal.c:181
 msgid "Move Tab _Left"
@@ -250,9 +240,8 @@ msgid "Move Tab _Right"
 msgstr ""
 
 #: ../src/lxterminal.c:161
-#, fuzzy
 msgid "_About"
-msgstr "/_Laguntza/Honi _buruz"
+msgstr "Honi _buruz"
 
 #: ../src/lxterminal.c:174
 msgid "Cl_ear scrollback"
@@ -262,7 +251,7 @@ msgstr ""
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
-msgstr "LXTerminal"
+msgstr "LXTerminala"
 
 #: ../src/lxterminal.c:532
 #, fuzzy
@@ -272,37 +261,37 @@ msgstr "/_Fitxa berria"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:681
 msgid "translator-credits"
-msgstr "Alain Mendizabal <alainmendi@gmail.com>"
+msgstr ""
+"Alain Mendizabal <alainmendi@gmail.com>,\n"
+"Asier Iturralde Sarasola <asier.iturralde@gmail.com>"
 
 #: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
-msgstr ""
+msgstr "Copyright-a (C) 2008-2011"
 
 #: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
-msgstr "LXDE proiekturako terminal emulatzailea"
+msgstr "LXDE proiekturako terminal-emuladorea"
 
 #: ../data/lxterminal-preferences.glade.h:1
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Hobespenak"
+msgstr "LXTerminalaren hobespenak"
 
 #: ../data/lxterminal-preferences.glade.h:2
-#, fuzzy
 msgid "Terminal font"
-msgstr "Terminaleko letra-tipoa:"
+msgstr "Terminaleko letra-tipoa"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Background"
-msgstr ""
+msgstr "Atzeko planoa"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Foreground"
-msgstr ""
+msgstr "Aurreko planoa"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Allow bold font"
-msgstr ""
+msgstr "Baimendu letra-tipo lodia"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Cursor blink"
@@ -318,7 +307,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Underline"
-msgstr ""
+msgstr "Azpimarra"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Audible bell"
@@ -326,11 +315,11 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Style"
-msgstr ""
+msgstr "Estiloa"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Tab panel position"
-msgstr ""
+msgstr "Fitxa-panelaren posizioa"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Scrollback lines"
@@ -338,15 +327,15 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide scroll bar"
-msgstr ""
+msgstr "Ezkutatu korritze-barra"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide menu bar"
-msgstr ""
+msgstr "Ezkutatu menu-barra"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "Ezkutatu Itxi botoiak"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"
@@ -358,7 +347,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr ""
+msgstr "Desgaitu menuaren laster-tekla (lehenetsia F10 da)"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable using Alt-n for tabs and menu"
@@ -366,23 +355,23 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"
-msgstr ""
+msgstr "Aurreratua"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
-msgstr ""
+msgstr "Goia"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Bottom"
-msgstr ""
+msgstr "Behea"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Left"
-msgstr ""
+msgstr "Ezkerra"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Right"
-msgstr ""
+msgstr "Eskuina"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
