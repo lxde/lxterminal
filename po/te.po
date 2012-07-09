@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2011-11-17 20:37+0200\n"
+"PO-Revision-Date: 2012-07-09 18:52+0200\n"
 "Last-Translator: PraveenIlla <mail2ipn@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: te\n"
@@ -209,9 +209,8 @@ msgid "_Paste"
 msgstr "అతికించు (_P)"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "స్క్రోల్ పట్టీని దాయి"
+msgstr "స్క్రోల్ బ్యాక్ తుడిచివేయి (_+o)"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -242,9 +241,8 @@ msgid "_About"
 msgstr "గురించి (_A)"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "స్క్రోల్ పట్టీని దాయి"
+msgstr "స్క్రోల్ బ్యాక్ శుభ్రపరచు (_e)"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
