@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-07-09 17:03+0200\n"
+"PO-Revision-Date: 2012-07-13 14:53+0200\n"
 "Last-Translator: Asier_Iturralde_Sarasola <asier.iturralde@gmail.com>\n"
 "Language-Team: Basque <alainmendi@gmail.com>\n"
 "Language: eu\n"
@@ -219,9 +219,8 @@ msgid "Preference_s"
 msgstr "_Hobespenak"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
-#, fuzzy
 msgid "Na_me Tab"
-msgstr "/_Fitxa berria"
+msgstr "_Izendatu fitxa"
 
 #: ../src/lxterminal.c:157 ../src/lxterminal.c:179
 msgid "Pre_vious Tab"
@@ -233,11 +232,11 @@ msgstr "_Hurrengo fitxa"
 
 #: ../src/lxterminal.c:159 ../src/lxterminal.c:181
 msgid "Move Tab _Left"
-msgstr ""
+msgstr "Mugitu fitxa e_zkerrera"
 
 #: ../src/lxterminal.c:160 ../src/lxterminal.c:182
 msgid "Move Tab _Right"
-msgstr ""
+msgstr "Mugitu fitxa e_skuinera"
 
 #: ../src/lxterminal.c:161
 msgid "_About"
@@ -254,9 +253,8 @@ msgid "LXTerminal"
 msgstr "LXTerminala"
 
 #: ../src/lxterminal.c:532
-#, fuzzy
 msgid "Name Tab"
-msgstr "/_Fitxa berria"
+msgstr "Izendatu fitxa"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:681
@@ -295,15 +293,15 @@ msgstr "Baimendu letra-tipo lodia"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Cursor blink"
-msgstr ""
+msgstr "Kurtsorearen keinua"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Cursor style"
-msgstr ""
+msgstr "Kurtsorearen estiloa"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Block"
-msgstr ""
+msgstr "Blokea"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Underline"
@@ -311,7 +309,7 @@ msgstr "Azpimarra"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Audible bell"
-msgstr ""
+msgstr "Seinale entzungarria"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Style"
@@ -339,7 +337,7 @@ msgstr "Ezkutatu Itxi botoiak"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"
-msgstr ""
+msgstr "Bistaratu"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Select-by-word characters"
@@ -351,7 +349,7 @@ msgstr "Desgaitu menuaren laster-tekla (lehenetsia F10 da)"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable using Alt-n for tabs and menu"
-msgstr ""
+msgstr "Desgaitu Alt-n erabiltzea fitxa eta menuentzat"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"
