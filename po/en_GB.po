@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: LxTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-01-24 22:57+0200\n"
+"PO-Revision-Date: 2012-07-14 11:30+0200\n"
 "Last-Translator: Steve <yorvik.ubunto@gmail.com>\n"
 "Language-Team: English UK en_GB <yorvik.ubunto@gmail.com>\n"
 "Language: en_GB\n"
@@ -207,9 +207,8 @@ msgid "_Paste"
 msgstr "_Paste"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Hide scroll bar:"
+msgstr "Clear scr_ollback"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -240,9 +239,8 @@ msgid "_About"
 msgstr "_About"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Hide scroll bar:"
+msgstr "Cl_ear scrollback"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
