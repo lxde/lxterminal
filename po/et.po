@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-01-22 18:38+0200\n"
+"PO-Revision-Date: 2012-07-14 14:28+0200\n"
 "Last-Translator: Anari <anari.jalakas@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "Language: et\n"
@@ -210,9 +210,8 @@ msgid "_Paste"
 msgstr "_Aseta"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Kerimisriba peitmine"
+msgstr "_Kerimisriba peitmine"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -243,7 +242,6 @@ msgid "_About"
 msgstr "_Lähemalt"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
 msgstr "Kerimisriba peitmine"
 
@@ -260,7 +258,9 @@ msgstr "Kaardi nimetamine"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:681
 msgid "translator-credits"
-msgstr "Mattias Põldaru"
+msgstr ""
+"Mattias Põldaru\n"
+"Anari Jalakas"
 
 #: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
