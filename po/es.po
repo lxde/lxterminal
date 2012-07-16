@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2011-11-08 09:38+0200\n"
+"PO-Revision-Date: 2012-07-16 20:34+0200\n"
 "Last-Translator: Hugo <sysadmin@cips.cu>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "Language: es\n"
@@ -213,9 +213,8 @@ msgid "_Paste"
 msgstr "_Pegar"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Ocultar la barra de desplazamiento"
+msgstr "Limpiar el historial"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -246,9 +245,8 @@ msgid "_About"
 msgstr "_Acerca de ..."
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Ocultar la barra de desplazamiento"
+msgstr "Limpiar el historial"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
@@ -267,7 +265,7 @@ msgstr ""
 "Daniel Pacheco <daniel@tunki.org>, 2008\n"
 "Julio Napurí Carlos <julionc@gmail.com>, 2008\n"
 "Guillermo Iguarán <tronador@cuteam.org>, 2009\n"
-"Hugo Florentino <sysadmin@cips.cu>, 2009-2010"
+"Hugo Florentino <sysadmin@cips.cu>, 2009-2011"
 
 #: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
