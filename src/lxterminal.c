@@ -66,6 +66,7 @@ static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geom
 static GtkBorder * terminal_get_border(Term * term);
 static void terminal_geometry_restore(Term * term);
 static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
+static gchar * terminal_get_current_dir(LXTerminal * terminal);
 
 /* Menu and accelerator event handlers. */
 static void terminal_initialize_switch_tab_accelerator(Term * term);
@@ -294,6 +295,41 @@ static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position)
     }
 }
 
+static gchar * terminal_get_current_dir(LXTerminal * terminal)
+{
+    gchar * proc_cwd = NULL;
+
+#ifdef __linux
+    /* Try to get the working directory from /proc. */
+    gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
+    if (current != -1)
+    {
+        /* Search for the Term structure corresponding to the current tab. */
+        int i;
+        for (i = 0; i < terminal->terms->len; i += 1)
+        {
+            Term * term = g_ptr_array_index(terminal->terms, i);
+            if (term->index == current)
+            {
+                /* Get the working directory corresponding to the process ID. */
+                gchar proc_cwd_link[PATH_MAX];
+                g_snprintf(proc_cwd_link, PATH_MAX, "/proc/%d/cwd", term->pid);
+                proc_cwd = g_file_read_link(proc_cwd_link, NULL);
+                break;
+            }
+        }
+
+    }
+#endif
+
+    if (proc_cwd == NULL)
+    {
+        proc_cwd = g_get_current_dir();
+    }
+
+    return proc_cwd;
+}
+
 /* Initialize the <ALT> n accelerators, where n is a digit.
  * These switch to the tab selected by the digit, if it exists. */
 static void terminal_initialize_switch_tab_accelerator(Term * term)
@@ -370,7 +406,9 @@ static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * 
 {
     CommandArguments arguments;
     memset(&arguments, 0, sizeof(arguments));
+    arguments.working_directory = terminal_get_current_dir(terminal);
     lxterminal_initialize(terminal->parent, &arguments, terminal->setting);
+    g_free(arguments.working_directory);
 }
 
 /* Handler for accelerator <SHIFT><CTRL> N.  Open a new window. */
@@ -383,38 +421,12 @@ static void terminal_new_window_accelerator(LXTerminal * terminal, guint action,
  * Open a new tab. */
 static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-    gchar * proc_cwd = NULL;
-
-#ifdef __linux
-    /* Try to get the working directory from /proc. */
-    gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
-    if (current != -1)
-    {
-        /* Search for the Term structure corresponding to the current tab. */
-        int i;
-        for (i = 0; i < terminal->terms->len; i += 1)
-        {
-            Term * term = g_ptr_array_index(terminal->terms, i);
-            if (term->index == current)
-            {
-                /* Get the working directory corresponding to the process ID. */
-                gchar proc_cwd_link[PATH_MAX];
-                g_snprintf(proc_cwd_link, PATH_MAX, "/proc/%d/cwd", term->pid);
-                proc_cwd = g_file_read_link(proc_cwd_link, NULL);
-                break;
-            }
-        }
-
-    }
-#endif
+    gchar * proc_cwd = terminal_get_current_dir(terminal);
 
     /* Propagate the working directory of the current tab to the new tab.
      * If the working directory was determined above, use it; otherwise default to the working directory of the process.
      * Create the new terminal. */
-    if (proc_cwd == NULL)
-    {
-        proc_cwd = g_get_current_dir();
-    }
+
     Term * term = terminal_new(terminal, _("LXTerminal"), proc_cwd, NULL, NULL);
     g_free(proc_cwd);
 
