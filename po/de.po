@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-07-09 19:25+0200\n"
-"Last-Translator: Daniel <d@winzen4.de>\n"
+"PO-Revision-Date: 2012-07-27 18:30+0200\n"
+"Last-Translator: Lutz <lthuns@opensuse.org>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -213,7 +213,6 @@ msgid "_Paste"
 msgstr "E_infügen"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
 msgstr "Bildlaufleiste verbergen"
 
@@ -246,7 +245,6 @@ msgid "_About"
 msgstr "_Info"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
 msgstr "Bildlaufleiste verbergen"
 
