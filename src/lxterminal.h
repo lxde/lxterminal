@@ -80,6 +80,7 @@ typedef struct _term {
     GPid pid;                                   /* Process ID of the process that has this as its terminal */
     GClosure * closure;				/* Accelerator structure */
     gchar * matched_url;
+    gboolean open_menu_on_button_release;
 } Term;
 
 /* Output of lxterminal_process_arguments. */

@@ -890,43 +890,58 @@ static gchar * terminal_get_match_at(VteTerminal * vte, Term * term, int x, int 
     return match;
 }
 
+static void terminal_show_popup_menu(VteTerminal * vte, GdkEventButton * event, Term * term)
+{
+    /* Generate popup menu. */
+    GtkUIManager * manager = gtk_ui_manager_new();
+    GtkActionGroup * action_group = gtk_action_group_new("VTEMenu");
+    gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
+    gtk_action_group_add_actions(action_group, vte_menu_items, VTE_MENUITEM_COUNT, term->parent);
+    gtk_ui_manager_insert_action_group(manager, action_group, 0);
+
+    guint merge_id = gtk_ui_manager_new_merge_id(manager);
+    gtk_ui_manager_add_ui(manager, merge_id, "/", "VTEMenu", NULL, GTK_UI_MANAGER_POPUP, FALSE);
+
+    int i;
+    for (i = 1; i < VTE_MENUITEM_COUNT; i += 1)
+    {
+        if (strcmp(vte_menu_items[i].label, "Sep") == 0)
+            gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu",
+                vte_menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
+        else
+            gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu",
+                vte_menu_items[i].name, vte_menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+    }
+
+    g_free(term->matched_url);
+    term->matched_url = terminal_get_match_at(vte, term, event->x, event->y);
+
+    GtkAction * action_copy_url = gtk_ui_manager_get_action(manager, "/VTEMenu/CopyURL");
+    if (action_copy_url)
+        gtk_action_set_visible(action_copy_url, term->matched_url != NULL);
+
+    gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")),
+        NULL, NULL, NULL, NULL, event->button, event->time);
+}
+
 /* Handler for "button-press-event" signal on VTE. */
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term)
 {
+    if (event->type != GDK_BUTTON_PRESS) /* skip GDK_2BUTTON_PRESS and GDK_3BUTTON_PRESS */
+        return FALSE;
+
+    //g_print("press\n");
+
     /* Right-click. */
     if (event->button == 3)
     {
-        /* Generate popup menu. */
-        GtkUIManager * manager = gtk_ui_manager_new();
-        GtkActionGroup * action_group = gtk_action_group_new("VTEMenu");
-        gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
-        gtk_action_group_add_actions(action_group, vte_menu_items, VTE_MENUITEM_COUNT, term->parent);
-        gtk_ui_manager_insert_action_group(manager, action_group, 0);
-
-        guint merge_id = gtk_ui_manager_new_merge_id(manager);
-        gtk_ui_manager_add_ui(manager, merge_id, "/", "VTEMenu", NULL, GTK_UI_MANAGER_POPUP, FALSE);
-
-        int i;
-        for (i = 1; i < VTE_MENUITEM_COUNT; i += 1)
+        if (event->state & GDK_CONTROL_MASK)
         {
-            if (strcmp(vte_menu_items[i].label, "Sep") == 0)
-                gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu",
-                    vte_menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
-            else
-                gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu",
-                    vte_menu_items[i].name, vte_menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+            terminal_show_popup_menu(vte, event, term);
+            return TRUE;
         }
-
-        g_free(term->matched_url);
-        term->matched_url = terminal_get_match_at(vte, term, event->x, event->y);
-
-        GtkAction * action_copy_url = gtk_ui_manager_get_action(manager, "/VTEMenu/CopyURL");
-        if (action_copy_url)
-            gtk_action_set_visible(action_copy_url, term->matched_url != NULL);
-
-        gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")), NULL, NULL, NULL, NULL, event->button, event->time);
-
-        return TRUE;
+        else
+            term->open_menu_on_button_release = TRUE;
     }
 
     /* Control left click. */
@@ -943,6 +958,26 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
         }
     }
     return FALSE;
+}
+
+static gboolean terminal_vte_button_release_event(VteTerminal * vte, GdkEventButton * event, Term * term)
+{
+    //g_print("release\n");
+
+    if (event->button == 3 && term->open_menu_on_button_release)
+    {
+        terminal_show_popup_menu(vte, event, term);
+    }
+
+    term->open_menu_on_button_release = FALSE;
+
+    return FALSE;
+}
+
+static void terminal_vte_commit(VteTerminal * vte, gchar * text, guint size, Term * term)
+{
+    //g_print("commit\n");
+    term->open_menu_on_button_release = FALSE;
 }
 
 /* drop <SHIFT><CTRL> keys on vte */
@@ -1138,6 +1173,8 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     g_signal_connect(G_OBJECT(term->tab), "button-press-event", G_CALLBACK(terminal_tab_button_press_event), term);
     g_signal_connect(G_OBJECT(term->close_button), "clicked", G_CALLBACK(terminal_child_exited_event), term);
     g_signal_connect(G_OBJECT(term->vte), "button-press-event", G_CALLBACK(terminal_vte_button_press_event), term);
+    g_signal_connect(G_OBJECT(term->vte), "button-release-event", G_CALLBACK(terminal_vte_button_release_event), term);
+    g_signal_connect(G_OBJECT(term->vte), "commit", G_CALLBACK(terminal_vte_commit), term);
     g_signal_connect(G_OBJECT(term->vte), "key-press-event", G_CALLBACK(terminal_vte_key_press_event), term);
     g_signal_connect(G_OBJECT(term->vte), "child-exited", G_CALLBACK(terminal_child_exited_event), term);
     g_signal_connect(G_OBJECT(term->vte), "window-title-changed", G_CALLBACK(terminal_window_title_changed_event), term);
