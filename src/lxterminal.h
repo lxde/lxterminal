@@ -79,6 +79,7 @@ typedef struct _term {
     GtkWidget * scrollbar;			/* Scroll bar, child of horizontal box */
     GPid pid;                                   /* Process ID of the process that has this as its terminal */
     GClosure * closure;				/* Accelerator structure */
+    gchar * matched_url;
 } Term;
 
 /* Output of lxterminal_process_arguments. */

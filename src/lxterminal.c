@@ -78,6 +78,7 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
 static void terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal);
@@ -170,6 +171,7 @@ static GtkActionEntry vte_menu_items[] =
     { "NewWindow", GTK_STOCK_ADD, N_("New _Window"), NULL, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
     { "NewTab", GTK_STOCK_ADD, N_("New _Tab"), NULL, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
     { "Sep1", NULL, "Sep" },
+    { "CopyURL", NULL, N_("Copy _Url"), NULL, "Copy URL", G_CALLBACK(terminal_copy_url_activate_event) },
     { "Copy", GTK_STOCK_COPY, N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
     { "Paste", GTK_STOCK_PASTE, N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
     { "Clear", NULL, N_("Cl_ear scrollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
@@ -466,6 +468,16 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
 static void terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_close_tab_activate_event(NULL, terminal);
+}
+
+static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+    Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
+    if (term->matched_url)
+    {
+        GtkClipboard* clipboard = gtk_clipboard_get(gdk_atom_intern("CLIPBOARD", FALSE));
+        gtk_clipboard_set_text(clipboard, term->matched_url, -1);
+    }
 }
 
 /* Handler for "activate" signal on Edit/Copy menu item.
@@ -863,6 +875,21 @@ static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButt
     return FALSE;
 }
 
+static gchar * terminal_get_match_at(VteTerminal * vte, Term * term, int x, int y)
+{
+    /* steal from tilda-0.09.6/src/tilda_terminal.c:743
+     * See if the terminal has matched the regular expression. */
+    GtkBorder * border = terminal_get_border(term);
+    gint tag;
+    gchar * match = vte_terminal_match_check(vte,
+        (x - border->left) / vte_terminal_get_char_width(vte),
+        (y - border->top) / vte_terminal_get_char_height(vte),
+        &tag);
+    gtk_border_free(border);
+
+    return match;
+}
+
 /* Handler for "button-press-event" signal on VTE. */
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term)
 {
@@ -883,9 +910,20 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
         for (i = 1; i < VTE_MENUITEM_COUNT; i += 1)
         {
             if (strcmp(vte_menu_items[i].label, "Sep") == 0)
-                gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu", vte_menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
-                else gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu", vte_menu_items[i].name, vte_menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
+                gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu",
+                    vte_menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
+            else
+                gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu",
+                    vte_menu_items[i].name, vte_menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
         }
+
+        g_free(term->matched_url);
+        term->matched_url = terminal_get_match_at(vte, term, event->x, event->y);
+
+        GtkAction * action_copy_url = gtk_ui_manager_get_action(manager, "/VTEMenu/CopyURL");
+        if (action_copy_url)
+            gtk_action_set_visible(action_copy_url, term->matched_url != NULL);
+
         gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")), NULL, NULL, NULL, NULL, event->button, event->time);
 
         return TRUE;
@@ -894,17 +932,7 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
     /* Control left click. */
     else if ((event->button == 1) && (event->state & GDK_CONTROL_MASK))
     {
-        /* steal from tilda-0.09.6/src/tilda_terminal.c:743
-         * See if the terminal has matched the regular expression. */
-        GtkBorder * border = terminal_get_border(term);
-        gint tag;
-        gchar * match = vte_terminal_match_check(vte,
-            (event->x - border->left) / vte_terminal_get_char_width(vte),
-            (event->y - border->top) / vte_terminal_get_char_height(vte),
-            &tag);
-        gtk_border_free(border);
-
-        /* Launch xdg-open with the match string. */
+        gchar * match = terminal_get_match_at(vte, term, event->x, event->y);
         if (match != NULL)
         {
             gchar * cmd = g_strdup_printf("xdg-open %s", match);
@@ -1125,6 +1153,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 /* Deallocate a Term structure. */
 static void terminal_free(Term * term)
 {
+    g_free(term->matched_url);
     if ((GTK_IS_ACCEL_GROUP(term->parent->accel_group)) && (term->closure != NULL))
     {
         gtk_accel_group_disconnect(term->parent->accel_group, term->closure);
