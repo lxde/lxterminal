@@ -887,6 +887,8 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
                 else gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu", vte_menu_items[i].name, vte_menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
         }
         gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")), NULL, NULL, NULL, NULL, event->button, event->time);
+
+        return TRUE;
     }
 
     /* Control left click. */
