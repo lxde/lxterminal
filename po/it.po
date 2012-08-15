@@ -2,15 +2,16 @@
 # Copyright (C) 2009 Fabio Barone <phonky at gmx.net>
 # This file is distributed under the same license as the lxterminal package
 # Fabio Barone <phonky at gmx.net>, 2009
-#
+# Andrea Florio <andrea@opensuse.org>, 2010.
+# Daniele Forsi <daniele@forsi.it>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2010-07-20 09:51+0100\n"
-"Last-Translator: Andrea Florio <andrea@opensuse.org>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2012-08-15 22:21+0200\n"
+"Last-Translator: Daniele Forsi <daniele@forsi.it>\n"
+"Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -185,19 +186,19 @@ msgstr "_Schede"
 
 #: ../src/lxterminal.c:139
 msgid "_Help"
-msgstr "_Aiuto"
+msgstr "A_iuto"
 
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "New _Window"
-msgstr "_Nuova Finestra"
+msgstr "_Nuova finestra"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Tab"
-msgstr "Nuova _Scheda"
+msgstr "Nuova _scheda"
 
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:183
 msgid "_Close Tab"
-msgstr "Chiudi Scheda"
+msgstr "_Chiudi scheda"
 
 #: ../src/lxterminal.c:150
 msgid "_Quit"
@@ -212,17 +213,16 @@ msgid "_Paste"
 msgstr "_Incolla"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Nascondi barra scorrimento"
+msgstr "Pulisci sc_orrimento all'indietro"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
-msgstr "Impostazioni"
+msgstr "Preferen_ze"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Na_me Tab"
-msgstr "No_me Scheda"
+msgstr "Rino_mina scheda"
 
 #: ../src/lxterminal.c:157 ../src/lxterminal.c:179
 msgid "Pre_vious Tab"
@@ -234,20 +234,19 @@ msgstr "Scheda _successiva"
 
 #: ../src/lxterminal.c:159 ../src/lxterminal.c:181
 msgid "Move Tab _Left"
-msgstr "Muovi scheda a sinistra"
+msgstr "Sposta scheda a sinistra"
 
 #: ../src/lxterminal.c:160 ../src/lxterminal.c:182
 msgid "Move Tab _Right"
-msgstr "Muovi scheda a destra"
+msgstr "Sposta scheda a destra"
 
 #: ../src/lxterminal.c:161
 msgid "_About"
 msgstr "I_nformazioni"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Nascondi barra scorrimento"
+msgstr "Pu_lisci scorrimento all'indietro"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
@@ -257,28 +256,29 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:532
 msgid "Name Tab"
-msgstr "Nome Scheda"
+msgstr "Rinomina scheda"
 
+# I nomi sembrano in ordine dall'ultimo al primo
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:681
 msgid "translator-credits"
 msgstr ""
+"Daniele Forsi <daniele@forsi.it>\n"
 "Andrea Florio <andrea@opensuse.org>\n"
 "Alessandro Pellizzari <alex@amiran.it>\n"
 "Fabio Barone<phonky@gmx.net>"
 
 #: ../src/lxterminal.c:689
 msgid "Copyright (C) 2008-2011"
-msgstr "Copyright (C) 2008-2011"
+msgstr "Copyright © 2008-2011"
 
 #: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulatore di terminale per il progetto LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Impostazioni"
+msgstr "Preferenze di LXTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
@@ -290,7 +290,7 @@ msgstr "Sfondo"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Foreground"
-msgstr "Fronte"
+msgstr "Primo piano"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Allow bold font"
@@ -306,15 +306,17 @@ msgstr "Stile cursore"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Block"
-msgstr "Blocca"
+msgstr "Blocco"
 
+# gnome-terminal traduce Underline->Trattino basso
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Underline"
-msgstr "Sottolinea"
+msgstr "Trattino basso"
 
+# gnome-terminal traduce Terminal bell->Avviso acustico
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Audible bell"
-msgstr "Campanello acustico"
+msgstr "Avviso acustico"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Style"
@@ -326,7 +328,7 @@ msgstr "Posizione pannello schede"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Scrollback lines"
-msgstr "Linee di scrollback"
+msgstr "Righe di scorrimento all'indietro"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide scroll bar"
@@ -338,28 +340,29 @@ msgstr "Nascondi barra menu"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Hide Close buttons"
-msgstr "Nascondi i bottoni di chiusura"
+msgstr "Nascondi pulsanti di chiusura"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Display"
-msgstr "Display"
+msgstr "Visualizzazione"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Select-by-word characters"
-msgstr "Caratteri per scelta tramite parola"
+msgstr "Caratteri per selezionare parole"
 
+# Vado a capo altrimenti la finestra si allarga troppo
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Disabilita il tasto scorciatoia per il menu (F10 predefinito)"
+msgstr "Disabilita il tasto scorciatoia per i menu\n(predefinito F10)"
 
+# Accorcio altrimenti la finestra si allarga troppo
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Disabilita l'utilizzo di Alt-n per cambiare schede"
+msgstr "Disabilita l'uso di Alt-n per schede e menu"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"
-msgstr "Avanzato"
+msgstr "Avanzate"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Top"
@@ -385,12 +388,6 @@ msgstr "Terminale"
 msgid "Use the command line"
 msgstr "Usa la riga di comando"
 
-#~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
-
-#~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
-
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr "Errore nell'avviare il browser web. Il comando era `%s'\n"
 
@@ -408,53 +405,3 @@ msgstr "Usa la riga di comando"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Sfondo trasparente:"
-
-#~ msgid "_View"
-#~ msgstr "_Visualizzare"
-
-#, fuzzy
-#~ msgid "_Character Encoding"
-#~ msgstr "_Codificazione caratteri"
-
-#, fuzzy
-#~ msgid "/_File/_New Window"
-#~ msgstr "Caratteri per scelta tramite parola:"
-
-#~ msgid "/_File/_New Tab"
-#~ msgstr "/_File/Nuova _Scheda"
-
-#~ msgid "/_File/sep1"
-#~ msgstr "/_File/sep1"
-
-#~ msgid "/_File/_Close Tab"
-#~ msgstr "/_File/_Chiudere scheda"
-
-#~ msgid "/_File/_Quit"
-#~ msgstr "/_File/_Escere"
-
-#~ msgid "/_Edit/_Copy"
-#~ msgstr "/_Modificare/_Copiare"
-
-#~ msgid "/_Edit/_Paste"
-#~ msgstr "/_Modificare/_Inserire"
-
-#~ msgid "/_Edit/sep1"
-#~ msgstr "/_Bearbeiten/sep1"
-
-#~ msgid "/_Edit/_Preferences..."
-#~ msgstr "/_Modificare/_Inserire"
-
-#~ msgid "/_Tabs/_Next Tab"
-#~ msgstr "/_Schede/Scheda _successiva"
-
-#~ msgid "/sep1"
-#~ msgstr "/sep1"
-
-#~ msgid "/sep2"
-#~ msgstr "/sep2"
-
-#~ msgid "/_Preferences..."
-#~ msgstr "/Im_postazioni..."
-
-#~ msgid "/sep3"
-#~ msgstr "/sep3"
