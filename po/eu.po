@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-07-13 14:53+0200\n"
+"PO-Revision-Date: 2012-08-17 02:43+0200\n"
 "Last-Translator: Asier_Iturralde_Sarasola <asier.iturralde@gmail.com>\n"
 "Language-Team: Basque <alainmendi@gmail.com>\n"
 "Language: eu\n"
@@ -212,7 +212,7 @@ msgstr "_Itsatsi"
 
 #: ../src/lxterminal.c:153
 msgid "Clear scr_ollback"
-msgstr ""
+msgstr "Garbitu _atzera_korritzea"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -244,7 +244,7 @@ msgstr "Honi _buruz"
 
 #: ../src/lxterminal.c:174
 msgid "Cl_ear scrollback"
-msgstr ""
+msgstr "_Garbitu atzera-korritzea"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
@@ -321,7 +321,7 @@ msgstr "Fitxa-panelaren posizioa"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Scrollback lines"
-msgstr ""
+msgstr "Atzera-korritze lerroak"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide scroll bar"
@@ -341,7 +341,7 @@ msgstr "Bistaratu"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Select-by-word characters"
-msgstr ""
+msgstr "Hitzak hautatzeko karaktereak"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Disable menu shortcut key (F10 by default)"
