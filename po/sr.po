@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2009-08-31 12:59+0100\n"
-"Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
+"PO-Revision-Date: 2012-08-30 15:08+0200\n"
+"Last-Translator: Jay A. <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -210,9 +211,8 @@ msgid "_Paste"
 msgstr "У_баци"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Сакриј дугмад за клизање"
+msgstr "Обриши „scr_ollback“ оставу"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -243,9 +243,8 @@ msgid "_About"
 msgstr "_О програму"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Сакриј дугмад за клизање"
+msgstr "О_бриши „scrollback“ оставу"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
@@ -271,13 +270,12 @@ msgid "Terminal emulator for LXDE project"
 msgstr "Терминал за LXDE радно окружење"
 
 #: ../data/lxterminal-preferences.glade.h:1
-#, fuzzy
 msgid "LXTerminal Preferences"
-msgstr "Поставке"
+msgstr "Подешавања"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
-msgstr "Фонт:"
+msgstr "Словни лик за терминал:"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Background"
@@ -289,7 +287,7 @@ msgstr "Боја текста"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Allow bold font"
-msgstr "Дозволи задеблјан фонт"
+msgstr "Дозволи задебљан словни лик"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Cursor blink"
@@ -348,9 +346,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Искључи пречице за мени (F10 подразумевано)"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Искључи употребу Alt-n тастера за пребацивање између листова"
+msgstr "Искључи употребу „Alt-n“ тастера у листовима и менију"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"
