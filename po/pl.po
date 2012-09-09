@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-05-19 17:38+0200\n"
+"PO-Revision-Date: 2012-09-09 10:29+0200\n"
 "Last-Translator: Piotr <psokol@jabster.pl>\n"
 "Language-Team: Polish <>\n"
 "Language: pl\n"
@@ -214,9 +214,8 @@ msgid "_Paste"
 msgstr "_Wklej"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Ukrycie paska przewijania"
+msgstr "Wy_czyść bufor przewijania"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -247,9 +246,8 @@ msgid "_About"
 msgstr "_O programie"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Ukrycie paska przewijania"
+msgstr "Wy_czyść bufor przewijania"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
