@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-28 21:29+0200\n"
+"POT-Creation-Date: 2012-09-23 15:34+0200\n"
 "PO-Revision-Date: 2012-07-27 18:30+0200\n"
 "Last-Translator: Lutz <lthuns@opensuse.org>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
@@ -172,94 +172,101 @@ msgstr "Vietnamesisch"
 msgid "Thai"
 msgstr "Thailändisch"
 
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:137
 msgid "_File"
 msgstr "_Datei"
 
-#: ../src/lxterminal.c:137
+#: ../src/lxterminal.c:138
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:139
 msgid "_Tabs"
 msgstr "_Reiter"
 
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:140
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Window"
 msgstr "Neues _Fenster"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
 msgid "New _Tab"
 msgstr "Neuer _Reiter"
 
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:183
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
 msgid "_Close Tab"
 msgstr "Reiter s_chließen"
 
-#: ../src/lxterminal.c:150
+#: ../src/lxterminal.c:151
 msgid "_Quit"
 msgstr "_Beenden"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
 msgid "Cop_y"
 msgstr "_Kopieren"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
 msgid "_Paste"
 msgstr "E_infügen"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:154
 msgid "Clear scr_ollback"
 msgstr "Bildlaufleiste verbergen"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
 msgstr "_Einstellungen"
 
-#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Na_me Tab"
 msgstr "_Titel festlegen…"
 
-#: ../src/lxterminal.c:157 ../src/lxterminal.c:179
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Pre_vious Tab"
 msgstr "_Vorheriger Reiter"
 
-#: ../src/lxterminal.c:158 ../src/lxterminal.c:180
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
 msgid "Ne_xt Tab"
 msgstr "_Nächster Reiter"
 
-#: ../src/lxterminal.c:159 ../src/lxterminal.c:181
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
 msgid "Move Tab _Left"
 msgstr "Reiter nach _links verschieben"
 
-#: ../src/lxterminal.c:160 ../src/lxterminal.c:182
+#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
 msgid "Move Tab _Right"
 msgstr "Reiter nach _rechts verschieben"
 
-#: ../src/lxterminal.c:161
+#: ../src/lxterminal.c:162
 msgid "_About"
 msgstr "_Info"
 
-#: ../src/lxterminal.c:174
+#: ../src/lxterminal.c:173
+msgid "Copy _URL"
+msgstr ""
+
+#: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
 msgstr "Bildlaufleiste verbergen"
 
-#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
-#: ../src/lxterminal.c:1425 ../src/preferences.c:230
+#. Propagate the working directory of the current tab to the new tab.
+#. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
+#. * Create the new terminal.
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
+#: ../src/lxterminal.c:1470 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:532
+#: ../src/lxterminal.c:563
 msgid "Name Tab"
 msgstr "Titel festlegen"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:681
+#: ../src/lxterminal.c:717
 msgid "translator-credits"
 msgstr ""
 "Christoph Wickert <cwickert@fedoraproject.org>\n"
@@ -267,11 +274,11 @@ msgstr ""
 "Lutz Thuns <lthuns@opensuse.org>\n"
 "Daniel Winzen <d@winzen4.de>"
 
-#: ../src/lxterminal.c:689
+#: ../src/lxterminal.c:725
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright (C) 2008-2011"
 
-#: ../src/lxterminal.c:690
+#: ../src/lxterminal.c:726
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal-Emulator für das LXDE Projekt"
 

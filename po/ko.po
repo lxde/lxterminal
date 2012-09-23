@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-28 21:29+0200\n"
+"POT-Creation-Date: 2012-09-23 15:34+0200\n"
 "PO-Revision-Date: 2012-07-03 03:44+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: \n"
@@ -39,27 +39,18 @@ msgstr "남동 남서 아시아어"
 msgid "Middle Eastern"
 msgstr "중동"
 
-#: ../src/encoding.c:129
-#: ../src/encoding.c:151
-#: ../src/encoding.c:152
-#: ../src/encoding.c:153
-#: ../src/encoding.c:154
-#: ../src/encoding.c:155
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
 msgstr "유니코드"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135
-#: ../src/encoding.c:148
-#: ../src/encoding.c:172
-#: ../src/encoding.c:197
-#: ../src/encoding.c:210
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
 msgstr "서유럽어"
 
-#: ../src/encoding.c:136
-#: ../src/encoding.c:173
-#: ../src/encoding.c:187
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "중앙유럽어"
@@ -68,31 +59,21 @@ msgstr "중앙유럽어"
 msgid "South European"
 msgstr "남유럽어"
 
-#: ../src/encoding.c:138
-#: ../src/encoding.c:146
-#: ../src/encoding.c:215
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
 msgstr "발트어"
 
-#: ../src/encoding.c:139
-#: ../src/encoding.c:174
-#: ../src/encoding.c:181
-#: ../src/encoding.c:183
-#: ../src/encoding.c:189
-#: ../src/encoding.c:209
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "키릴어"
 
-#: ../src/encoding.c:140
-#: ../src/encoding.c:177
-#: ../src/encoding.c:186
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "아라비아어"
 
-#: ../src/encoding.c:141
-#: ../src/encoding.c:192
-#: ../src/encoding.c:211
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
 msgstr "그리스어"
 
@@ -100,16 +81,12 @@ msgstr "그리스어"
 msgid "Hebrew Visual"
 msgstr "히브리 상형문자"
 
-#: ../src/encoding.c:143
-#: ../src/encoding.c:176
-#: ../src/encoding.c:195
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "히브리어"
 
-#: ../src/encoding.c:144
-#: ../src/encoding.c:175
-#: ../src/encoding.c:199
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "터키어"
@@ -122,8 +99,7 @@ msgstr "노르웨이어"
 msgid "Celtic"
 msgstr "켈트어"
 
-#: ../src/encoding.c:149
-#: ../src/encoding.c:198
+#: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
 msgstr "루마니아어"
 
@@ -131,9 +107,7 @@ msgstr "루마니아어"
 msgid "Armenian"
 msgstr "아르메니아어"
 
-#: ../src/encoding.c:158
-#: ../src/encoding.c:159
-#: ../src/encoding.c:164
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "중국어 번체"
 
@@ -141,22 +115,16 @@ msgstr "중국어 번체"
 msgid "Cyrillic/Russian"
 msgstr "키릴/러시아어"
 
-#: ../src/encoding.c:162
-#: ../src/encoding.c:179
-#: ../src/encoding.c:202
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
 msgstr "일본어"
 
-#: ../src/encoding.c:163
-#: ../src/encoding.c:180
-#: ../src/encoding.c:182
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "한국어"
 
-#: ../src/encoding.c:166
-#: ../src/encoding.c:167
-#: ../src/encoding.c:168
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "중국어 간체"
@@ -165,8 +133,7 @@ msgstr "중국어 간체"
 msgid "Georgian"
 msgstr "조지아어"
 
-#: ../src/encoding.c:184
-#: ../src/encoding.c:200
+#: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "키릴/우크라이나어"
 
@@ -194,9 +161,7 @@ msgstr "구르무키어"
 msgid "Icelandic"
 msgstr "아이슬란드어"
 
-#: ../src/encoding.c:203
-#: ../src/encoding.c:206
-#: ../src/encoding.c:216
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "베트남어"
 
@@ -204,118 +169,111 @@ msgstr "베트남어"
 msgid "Thai"
 msgstr "타이어"
 
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:137
 msgid "_File"
 msgstr "파일(_F)"
 
-#: ../src/lxterminal.c:137
+#: ../src/lxterminal.c:138
 msgid "_Edit"
 msgstr "편집(_E)"
 
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:139
 msgid "_Tabs"
 msgstr "탭(_T)"
 
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:140
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../src/lxterminal.c:146
-#: ../src/lxterminal.c:169
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Window"
 msgstr "새 창(_W)"
 
-#: ../src/lxterminal.c:147
-#: ../src/lxterminal.c:170
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
 msgid "New _Tab"
 msgstr "새 탭(_T)"
 
-#: ../src/lxterminal.c:149
-#: ../src/lxterminal.c:183
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
 msgid "_Close Tab"
 msgstr "탭 닫기(_C)"
 
-#: ../src/lxterminal.c:150
+#: ../src/lxterminal.c:151
 msgid "_Quit"
 msgstr "끝내기(_Q)"
 
-#: ../src/lxterminal.c:151
-#: ../src/lxterminal.c:172
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
 msgid "Cop_y"
 msgstr "복사(_Y)"
 
-#: ../src/lxterminal.c:152
-#: ../src/lxterminal.c:173
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
 msgid "_Paste"
 msgstr "붙여넣기(_P)"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:154
 msgid "Clear scr_ollback"
 msgstr "이전 스크롤 지우기(_O)"
 
-#: ../src/lxterminal.c:155
-#: ../src/lxterminal.c:176
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
 msgstr "기본 설정(_S)"
 
-#: ../src/lxterminal.c:156
-#: ../src/lxterminal.c:178
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Na_me Tab"
 msgstr "탭 이름(_M)"
 
-#: ../src/lxterminal.c:157
-#: ../src/lxterminal.c:179
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Pre_vious Tab"
 msgstr "이전 탭(_V)"
 
-#: ../src/lxterminal.c:158
-#: ../src/lxterminal.c:180
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
 msgid "Ne_xt Tab"
 msgstr "다음 탭(_X)"
 
-#: ../src/lxterminal.c:159
-#: ../src/lxterminal.c:181
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
 msgid "Move Tab _Left"
 msgstr "탭 왼쪽으로 옮기기(_L)"
 
-#: ../src/lxterminal.c:160
-#: ../src/lxterminal.c:182
+#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
 msgid "Move Tab _Right"
 msgstr "탭 오른쪽으로 옮기기(_R)"
 
-#: ../src/lxterminal.c:161
+#: ../src/lxterminal.c:162
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../src/lxterminal.c:174
+#: ../src/lxterminal.c:173
+msgid "Copy _URL"
+msgstr ""
+
+#: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
 msgstr "이전 스크롤 지우기(_E)"
 
-#: ../src/lxterminal.c:418
-#: ../src/lxterminal.c:687
-#: ../src/lxterminal.c:762
-#: ../src/lxterminal.c:1425
-#: ../src/preferences.c:230
+#. Propagate the working directory of the current tab to the new tab.
+#. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
+#. * Create the new terminal.
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
+#: ../src/lxterminal.c:1470 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:532
+#: ../src/lxterminal.c:563
 msgid "Name Tab"
 msgstr "제목 설정"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:681
+#: ../src/lxterminal.c:717
 msgid "translator-credits"
 msgstr ""
 "Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Seong-ho Cho <darkcircle.0426@gmail.com>"
 
-#: ../src/lxterminal.c:689
+#: ../src/lxterminal.c:725
 msgid "Copyright (C) 2008-2011"
 msgstr "Copyright (C) 2008-2011"
 
-#: ../src/lxterminal.c:690
+#: ../src/lxterminal.c:726
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE 프로젝트의 터미널 에뮬레이터"
 
@@ -426,4 +384,3 @@ msgstr "터미널"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "명령 행을 사용합니다"
-

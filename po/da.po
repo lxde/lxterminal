@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-28 21:29+0200\n"
+"POT-Creation-Date: 2012-09-23 15:34+0200\n"
 "PO-Revision-Date: 2011-12-27 10:09+0200\n"
 "Last-Translator: mjjzf <mjjzf@syntaktisk.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -168,107 +168,114 @@ msgstr "Vietnamesisk"
 msgid "Thai"
 msgstr "Thai"
 
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:137
 msgid "_File"
 msgstr "_Fil"
 
-#: ../src/lxterminal.c:137
+#: ../src/lxterminal.c:138
 msgid "_Edit"
 msgstr "_Rediger"
 
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:139
 msgid "_Tabs"
 msgstr "_Faneblade"
 
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:140
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Window"
 msgstr "Nyt _vindue"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
 msgid "New _Tab"
 msgstr "Nyt _faneblad"
 
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:183
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
 msgid "_Close Tab"
 msgstr "_Luk faneblad"
 
-#: ../src/lxterminal.c:150
+#: ../src/lxterminal.c:151
 msgid "_Quit"
 msgstr "_Afslut"
 
-#: ../src/lxterminal.c:151 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
 msgid "Cop_y"
 msgstr "_Kopier"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:173
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
 msgid "_Paste"
 msgstr "_Indsæt"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:154
 #, fuzzy
 msgid "Clear scr_ollback"
 msgstr "Skjul rullebjælken"
 
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:176
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
 msgstr "Indstillin_ger"
 
-#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Na_me Tab"
 msgstr "_Navngiv faneblad"
 
-#: ../src/lxterminal.c:157 ../src/lxterminal.c:179
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Pre_vious Tab"
 msgstr "F_orrige faneblad"
 
-#: ../src/lxterminal.c:158 ../src/lxterminal.c:180
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
 msgid "Ne_xt Tab"
 msgstr "N_æste faneblad"
 
-#: ../src/lxterminal.c:159 ../src/lxterminal.c:181
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
 msgid "Move Tab _Left"
 msgstr "Flyt faneblad til _venstre"
 
-#: ../src/lxterminal.c:160 ../src/lxterminal.c:182
+#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
 msgid "Move Tab _Right"
 msgstr "Flyt faneblad til _højre"
 
-#: ../src/lxterminal.c:161
+#: ../src/lxterminal.c:162
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/lxterminal.c:174
+#: ../src/lxterminal.c:173
+msgid "Copy _URL"
+msgstr ""
+
+#: ../src/lxterminal.c:176
 #, fuzzy
 msgid "Cl_ear scrollback"
 msgstr "Skjul rullebjælken"
 
-#: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
-#: ../src/lxterminal.c:1425 ../src/preferences.c:230
+#. Propagate the working directory of the current tab to the new tab.
+#. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
+#. * Create the new terminal.
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
+#: ../src/lxterminal.c:1470 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:532
+#: ../src/lxterminal.c:563
 msgid "Name Tab"
 msgstr "Navngiv faneblad"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:681
+#: ../src/lxterminal.c:717
 msgid "translator-credits"
 msgstr ""
 "Joe Hansen, 2010\n"
 "Vidar Jon Bauge\n"
 "Charlie Tyrrestrup"
 
-#: ../src/lxterminal.c:689
+#: ../src/lxterminal.c:725
 msgid "Copyright (C) 2008-2011"
 msgstr "Ophavsret 2008-2011"
 
-#: ../src/lxterminal.c:690
+#: ../src/lxterminal.c:726
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminalemulator for LXDE-projektet"
 
