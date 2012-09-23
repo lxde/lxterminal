@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2012-01-06 02:06+0200\n"
-"Last-Translator: Henrique P. <zehrique@gmail.com>\n"
+"PO-Revision-Date: 2012-06-30 04:39+0200\n"
+"Last-Translator: Adriano <adrianoh2@gmail.com>\n"
 "Language-Team: Portuguese (Brazilian) <translation@mailinglist.lxde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -212,7 +212,6 @@ msgid "_Paste"
 msgstr "C_olar"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
 msgstr "Ocultar barra de rolagem"
 
@@ -245,9 +244,8 @@ msgid "_About"
 msgstr "_Sobre"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Ocultar barra de rolagem"
+msgstr "Ocultar _barra de rolagem"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230

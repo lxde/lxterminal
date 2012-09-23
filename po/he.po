@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-28 21:29+0200\n"
-"PO-Revision-Date: 2011-11-13 15:26+0200\n"
+"PO-Revision-Date: 2012-07-04 10:34+0200\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: he\n"
@@ -209,9 +209,8 @@ msgid "_Paste"
 msgstr "ה_דבק"
 
 #: ../src/lxterminal.c:153
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "הסתרת סרגל הגלילה"
+msgstr "מחיקת ה_גלילה לאחור"
 
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:176
 msgid "Preference_s"
@@ -242,15 +241,14 @@ msgid "_About"
 msgstr "על _אודות"
 
 #: ../src/lxterminal.c:174
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "הסתרת סרגל הגלילה"
+msgstr "מחיקת ה_גלילה לאחור"
 
 #: ../src/lxterminal.c:418 ../src/lxterminal.c:687 ../src/lxterminal.c:762
 #: ../src/lxterminal.c:1425 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
-msgstr "תוכנית הדמיית המסוף LXTerminal"
+msgstr "תכנית המסוף LXTerminal"
 
 #: ../src/lxterminal.c:532
 msgid "Name Tab"
@@ -269,7 +267,7 @@ msgstr "כל הזכויות שמורות (C)‏ 2011-2008"
 
 #: ../src/lxterminal.c:690
 msgid "Terminal emulator for LXDE project"
-msgstr "תוכנית להדמיית מסוף עבור מיזם LXDE"
+msgstr "תכנית להדמיית מסוף עבור מיזם LXDE"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "LXTerminal Preferences"
