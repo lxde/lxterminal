@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-23 15:34+0200\n"
-"PO-Revision-Date: 2012-06-29 14:38+0200\n"
+"PO-Revision-Date: 2012-09-25 23:16+0200\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -243,7 +243,7 @@ msgstr "_Over"
 
 #: ../src/lxterminal.c:173
 msgid "Copy _URL"
-msgstr ""
+msgstr "Webadres (URL) kopiëren"
 
 #: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
