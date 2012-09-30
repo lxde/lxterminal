@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-23 15:34+0200\n"
-"PO-Revision-Date: 2011-10-23 12:31+0200\n"
-"Last-Translator: Радослав <Rec.ku@hotmail.com>\n"
+"PO-Revision-Date: 2012-09-30 08:34+0200\n"
+"Last-Translator: Радослав <reckku@gmail.com>\n"
 "Language-Team: MIME-Version: 1.0\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
@@ -211,9 +211,8 @@ msgid "_Paste"
 msgstr "_Поставяне"
 
 #: ../src/lxterminal.c:154
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Скрий плъзгача"
+msgstr "Върни п_ревъртяното"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
@@ -245,12 +244,11 @@ msgstr "_Относно"
 
 #: ../src/lxterminal.c:173
 msgid "Copy _URL"
-msgstr ""
+msgstr "Копирай _адреса"
 
 #: ../src/lxterminal.c:176
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Скрий плъзгача"
+msgstr "_Връщане на превъртяното"
 
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
