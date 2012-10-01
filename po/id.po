@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-23 15:34+0200\n"
-"PO-Revision-Date: 2012-07-07 16:09+0200\n"
+"PO-Revision-Date: 2012-10-01 02:22+0200\n"
 "Last-Translator: Andika <andika@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
 "Language: id\n"
@@ -242,7 +242,7 @@ msgstr "_Tentang"
 
 #: ../src/lxterminal.c:173
 msgid "Copy _URL"
-msgstr ""
+msgstr "Salin _URL"
 
 #: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
