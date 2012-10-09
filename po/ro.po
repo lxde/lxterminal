@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: LXDE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-23 15:34+0200\n"
-"PO-Revision-Date: 2012-07-09 16:47+0200\n"
+"PO-Revision-Date: 2012-10-09 11:35+0200\n"
 "Last-Translator: Mișu <dumol@l10n.ro>\n"
 "Language-Team: Romanian <LL@li.org>\n"
 "Language: ro\n"
@@ -238,7 +238,7 @@ msgstr "_Despre"
 
 #: ../src/lxterminal.c:173
 msgid "Copy _URL"
-msgstr ""
+msgstr "Copia_ză linkul"
 
 #: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
