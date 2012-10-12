@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-23 15:34+0200\n"
-"PO-Revision-Date: 2012-07-09 05:10+0200\n"
+"PO-Revision-Date: 2012-10-12 06:37+0200\n"
 "Last-Translator: Duy Hung <nguyentieuhau@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: vi\n"
@@ -242,7 +242,7 @@ msgstr "_Giới thiệu"
 
 #: ../src/lxterminal.c:173
 msgid "Copy _URL"
-msgstr ""
+msgstr "Chép _URL"
 
 #: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
