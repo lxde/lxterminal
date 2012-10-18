@@ -244,7 +244,7 @@ msgstr "情報(_A)"
 
 #: ../src/lxterminal.c:173
 msgid "Copy _URL"
-msgstr ""
+msgstr "URLをコピー(_U)"
 
 #: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
