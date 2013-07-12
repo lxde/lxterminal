@@ -2,7 +2,7 @@
 
 bin_PROGRAMS = lxterminal
 
-INCLUDES = \
+lxterminal_CPPFLAGS = \
 	-I$(top_srcdir) \
 	-DPACKAGE_BIN_DIR=\""$(bindir)"\" \
 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
