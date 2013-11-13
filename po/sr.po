@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-23 15:34+0200\n"
+"POT-Creation-Date: 2013-11-13 23:00+0100\n"
 "PO-Revision-Date: 2013-09-06 09:45+0100\n"
 "Last-Translator: Jay A.Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
@@ -16,7 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.0.5\n"
 
 #: ../src/encoding.c:124
@@ -39,27 +40,18 @@ msgstr "Југоисточно/југозападно азијски"
 msgid "Middle Eastern"
 msgstr "Блискоисточни"
 
-#: ../src/encoding.c:129
-#: ../src/encoding.c:151
-#: ../src/encoding.c:152
-#: ../src/encoding.c:153
-#: ../src/encoding.c:154
-#: ../src/encoding.c:155
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
 msgid "Unicode"
 msgstr "Уникод"
 
 #. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135
-#: ../src/encoding.c:148
-#: ../src/encoding.c:172
-#: ../src/encoding.c:197
-#: ../src/encoding.c:210
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
 msgid "Western"
 msgstr "Западни"
 
-#: ../src/encoding.c:136
-#: ../src/encoding.c:173
-#: ../src/encoding.c:187
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
 #: ../src/encoding.c:208
 msgid "Central European"
 msgstr "Централноевропски"
@@ -68,31 +60,21 @@ msgstr "Централноевропски"
 msgid "South European"
 msgstr "Јужноевропски"
 
-#: ../src/encoding.c:138
-#: ../src/encoding.c:146
-#: ../src/encoding.c:215
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
 msgstr "Балтички"
 
-#: ../src/encoding.c:139
-#: ../src/encoding.c:174
-#: ../src/encoding.c:181
-#: ../src/encoding.c:183
-#: ../src/encoding.c:189
-#: ../src/encoding.c:209
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
 msgstr "Ћирилични"
 
-#: ../src/encoding.c:140
-#: ../src/encoding.c:177
-#: ../src/encoding.c:186
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
 msgid "Arabic"
 msgstr "Арапски"
 
-#: ../src/encoding.c:141
-#: ../src/encoding.c:192
-#: ../src/encoding.c:211
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
 msgid "Greek"
 msgstr "Грчки"
 
@@ -100,16 +82,12 @@ msgstr "Грчки"
 msgid "Hebrew Visual"
 msgstr "Хебрејски визуелни"
 
-#: ../src/encoding.c:143
-#: ../src/encoding.c:176
-#: ../src/encoding.c:195
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
 msgid "Hebrew"
 msgstr "Хебрејски"
 
-#: ../src/encoding.c:144
-#: ../src/encoding.c:175
-#: ../src/encoding.c:199
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
 #: ../src/encoding.c:212
 msgid "Turkish"
 msgstr "Турски"
@@ -122,8 +100,7 @@ msgstr "Норвешки"
 msgid "Celtic"
 msgstr "Келтски"
 
-#: ../src/encoding.c:149
-#: ../src/encoding.c:198
+#: ../src/encoding.c:149 ../src/encoding.c:198
 msgid "Romanian"
 msgstr "Румунски"
 
@@ -131,9 +108,7 @@ msgstr "Румунски"
 msgid "Armenian"
 msgstr "Арменски"
 
-#: ../src/encoding.c:158
-#: ../src/encoding.c:159
-#: ../src/encoding.c:164
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
 msgstr "Традиционални Кинески"
 
@@ -141,22 +116,16 @@ msgstr "Традиционални Кинески"
 msgid "Cyrillic/Russian"
 msgstr "Ћирилични/руски"
 
-#: ../src/encoding.c:162
-#: ../src/encoding.c:179
-#: ../src/encoding.c:202
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
 msgstr "Јапански"
 
-#: ../src/encoding.c:163
-#: ../src/encoding.c:180
-#: ../src/encoding.c:182
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
 #: ../src/encoding.c:205
 msgid "Korean"
 msgstr "Корејски"
 
-#: ../src/encoding.c:166
-#: ../src/encoding.c:167
-#: ../src/encoding.c:168
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
 #: ../src/encoding.c:170
 msgid "Chinese Simplified"
 msgstr "Кинески поједностављени"
@@ -165,8 +134,7 @@ msgstr "Кинески поједностављени"
 msgid "Georgian"
 msgstr "Грузијски"
 
-#: ../src/encoding.c:184
-#: ../src/encoding.c:200
+#: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
 msgstr "Ћирилични/украјински"
 
@@ -194,9 +162,7 @@ msgstr "Гурмуки "
 msgid "Icelandic"
 msgstr "Исландски"
 
-#: ../src/encoding.c:203
-#: ../src/encoding.c:206
-#: ../src/encoding.c:216
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
 msgid "Vietnamese"
 msgstr "Вијетнамски"
 
@@ -220,18 +186,15 @@ msgstr "_Листови"
 msgid "_Help"
 msgstr "_Помоћ"
 
-#: ../src/lxterminal.c:147
-#: ../src/lxterminal.c:170
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Window"
 msgstr "Нови _прозор"
 
-#: ../src/lxterminal.c:148
-#: ../src/lxterminal.c:171
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
 msgid "New _Tab"
 msgstr "Нови _лист"
 
-#: ../src/lxterminal.c:150
-#: ../src/lxterminal.c:185
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
 msgid "_Close Tab"
 msgstr "За_твори лист"
 
@@ -239,13 +202,11 @@ msgstr "За_твори лист"
 msgid "_Quit"
 msgstr "_Затвори прозор"
 
-#: ../src/lxterminal.c:152
-#: ../src/lxterminal.c:174
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
 msgid "Cop_y"
 msgstr "_Умножи"
 
-#: ../src/lxterminal.c:153
-#: ../src/lxterminal.c:175
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
 msgid "_Paste"
 msgstr "У_баци"
 
@@ -253,33 +214,27 @@ msgstr "У_баци"
 msgid "Clear scr_ollback"
 msgstr "Обриши „scr_ollback“ оставу"
 
-#: ../src/lxterminal.c:156
-#: ../src/lxterminal.c:178
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
 msgstr "По_ставке"
 
-#: ../src/lxterminal.c:157
-#: ../src/lxterminal.c:180
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Na_me Tab"
 msgstr "_Име листа"
 
-#: ../src/lxterminal.c:158
-#: ../src/lxterminal.c:181
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Pre_vious Tab"
 msgstr "_Претходни лист"
 
-#: ../src/lxterminal.c:159
-#: ../src/lxterminal.c:182
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
 msgid "Ne_xt Tab"
 msgstr "_Следећи лист"
 
-#: ../src/lxterminal.c:160
-#: ../src/lxterminal.c:183
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
 msgid "Move Tab _Left"
 msgstr "Премести лист _лево"
 
-#: ../src/lxterminal.c:161
-#: ../src/lxterminal.c:184
+#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
 msgid "Move Tab _Right"
 msgstr "Премести лист _десно"
 
@@ -298,11 +253,8 @@ msgstr "О_бриши „scrollback“ оставу"
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
 #. * Create the new terminal.
-#: ../src/lxterminal.c:435
-#: ../src/lxterminal.c:723
-#: ../src/lxterminal.c:798
-#: ../src/lxterminal.c:1470
-#: ../src/preferences.c:230
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
+#: ../src/lxterminal.c:1470 ../src/preferences.c:230
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "ЛИкс-Терминал"
