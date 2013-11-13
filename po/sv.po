@@ -1,7 +1,6 @@
 # Swedish translation for LXTerminal.
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the lxterminal package.
-#
 # Daniel Nylander <po@danielnylander.se>, 2009.
 # Martin Bagge <brother@bsnet.se>, 2009
 msgid ""
