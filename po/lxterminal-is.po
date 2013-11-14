@@ -1,0 +1,382 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-13 23:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.10.0\n"
+
+#: ../src/encoding.c:124
+msgid "West European"
+msgstr ""
+
+#: ../src/encoding.c:125
+msgid "East European"
+msgstr ""
+
+#: ../src/encoding.c:126
+msgid "East Asian"
+msgstr ""
+
+#: ../src/encoding.c:127
+msgid "SE & SW Asian"
+msgstr ""
+
+#: ../src/encoding.c:128
+msgid "Middle Eastern"
+msgstr ""
+
+#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
+#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
+msgid "Unicode"
+msgstr ""
+
+#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
+#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
+#: ../src/encoding.c:197 ../src/encoding.c:210
+msgid "Western"
+msgstr ""
+
+#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
+#: ../src/encoding.c:208
+msgid "Central European"
+msgstr ""
+
+#: ../src/encoding.c:137
+msgid "South European"
+msgstr ""
+
+#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
+msgid "Baltic"
+msgstr ""
+
+#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
+#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
+msgid "Cyrillic"
+msgstr ""
+
+#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
+#: ../src/encoding.c:214
+msgid "Arabic"
+msgstr ""
+
+#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
+msgid "Greek"
+msgstr ""
+
+#: ../src/encoding.c:142
+msgid "Hebrew Visual"
+msgstr ""
+
+#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
+#: ../src/encoding.c:213
+msgid "Hebrew"
+msgstr ""
+
+#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
+#: ../src/encoding.c:212
+msgid "Turkish"
+msgstr ""
+
+#: ../src/encoding.c:145
+msgid "Nordic"
+msgstr ""
+
+#: ../src/encoding.c:147
+msgid "Celtic"
+msgstr ""
+
+#: ../src/encoding.c:149 ../src/encoding.c:198
+msgid "Romanian"
+msgstr ""
+
+#: ../src/encoding.c:157
+msgid "Armenian"
+msgstr ""
+
+#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
+msgid "Chinese Traditional"
+msgstr ""
+
+#: ../src/encoding.c:160
+msgid "Cyrillic/Russian"
+msgstr ""
+
+#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
+msgid "Japanese"
+msgstr ""
+
+#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
+#: ../src/encoding.c:205
+msgid "Korean"
+msgstr ""
+
+#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
+#: ../src/encoding.c:170
+msgid "Chinese Simplified"
+msgstr ""
+
+#: ../src/encoding.c:169
+msgid "Georgian"
+msgstr ""
+
+#: ../src/encoding.c:184 ../src/encoding.c:200
+msgid "Cyrillic/Ukrainian"
+msgstr ""
+
+#: ../src/encoding.c:188
+msgid "Croatian"
+msgstr ""
+
+#: ../src/encoding.c:190
+msgid "Hindi"
+msgstr ""
+
+#: ../src/encoding.c:191
+msgid "Farsi"
+msgstr ""
+
+#: ../src/encoding.c:193
+msgid "Gujarati"
+msgstr ""
+
+#: ../src/encoding.c:194
+msgid "Gurmukhi"
+msgstr ""
+
+#: ../src/encoding.c:196
+msgid "Icelandic"
+msgstr ""
+
+#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
+msgid "Vietnamese"
+msgstr ""
+
+#: ../src/encoding.c:204
+msgid "Thai"
+msgstr ""
+
+#: ../src/lxterminal.c:137
+msgid "_File"
+msgstr ""
+
+#: ../src/lxterminal.c:138
+msgid "_Edit"
+msgstr ""
+
+#: ../src/lxterminal.c:139
+msgid "_Tabs"
+msgstr ""
+
+#: ../src/lxterminal.c:140
+msgid "_Help"
+msgstr ""
+
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+msgid "New _Window"
+msgstr ""
+
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
+msgid "New _Tab"
+msgstr ""
+
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
+msgid "_Close Tab"
+msgstr ""
+
+#: ../src/lxterminal.c:151
+msgid "_Quit"
+msgstr ""
+
+#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
+msgid "Cop_y"
+msgstr ""
+
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
+msgid "_Paste"
+msgstr ""
+
+#: ../src/lxterminal.c:154
+msgid "Clear scr_ollback"
+msgstr ""
+
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
+msgid "Preference_s"
+msgstr ""
+
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
+msgid "Na_me Tab"
+msgstr ""
+
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
+msgid "Pre_vious Tab"
+msgstr ""
+
+#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
+msgid "Ne_xt Tab"
+msgstr ""
+
+#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
+msgid "Move Tab _Left"
+msgstr ""
+
+#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
+msgid "Move Tab _Right"
+msgstr ""
+
+#: ../src/lxterminal.c:162
+msgid "_About"
+msgstr ""
+
+#: ../src/lxterminal.c:173
+msgid "Copy _URL"
+msgstr ""
+
+#: ../src/lxterminal.c:176
+msgid "Cl_ear scrollback"
+msgstr ""
+
+#. Propagate the working directory of the current tab to the new tab.
+#. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
+#. * Create the new terminal.
+#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
+#: ../src/lxterminal.c:1470 ../src/preferences.c:230
+#: ../data/lxterminal.desktop.in.h:1
+msgid "LXTerminal"
+msgstr ""
+
+#: ../src/lxterminal.c:563
+msgid "Name Tab"
+msgstr ""
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:717
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/lxterminal.c:725
+msgid "Copyright (C) 2008-2011"
+msgstr ""
+
+#: ../src/lxterminal.c:726
+msgid "Terminal emulator for LXDE project"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:1
+msgid "LXTerminal Preferences"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:2
+msgid "Terminal font"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Background"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Foreground"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "Allow bold font"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:6
+msgid "Cursor blink"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Cursor style"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Block"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Underline"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Audible bell"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:11
+msgid "Style"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Tab panel position"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Scrollback lines"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Hide scroll bar"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Hide menu bar"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "Hide Close buttons"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:17
+msgid "Display"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Select-by-word characters"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Disable using Alt-n for tabs and menu"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Advanced"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:22
+msgid "Top"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Bottom"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Left"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:25
+msgid "Right"
+msgstr ""
+
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr ""
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr ""
