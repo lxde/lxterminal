@@ -567,7 +567,14 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
         GTK_STOCK_OK, GTK_RESPONSE_OK,
         NULL);
     gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
-    gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL);
+    if (gtk_icon_theme_has_icon(gtk_icon_theme_get_default(), "lxterminal"))
+    {
+        gtk_window_set_icon_name(GTK_WINDOW(dialog), "lxterminal");
+    }
+    else
+    {
+        gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
+    }
     g_signal_connect(G_OBJECT(dialog), "response", G_CALLBACK(terminal_name_tab_response_event), terminal);
     GtkWidget * dialog_item = gtk_entry_new();
     g_object_set_data(G_OBJECT(dialog), "entry", (gpointer) dialog_item);
@@ -1434,7 +1441,14 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     #endif
 
     /* Set window icon. */
-    gtk_window_set_icon_from_file(GTK_WINDOW(terminal->window), PACKAGE_DATA_DIR "/pixmaps/lxterminal.png", NULL);
+    if (gtk_icon_theme_has_icon(gtk_icon_theme_get_default(), "lxterminal"))
+    {
+        gtk_window_set_icon_name(GTK_WINDOW(terminal->window), "lxterminal");
+    }
+    else
+    {
+        gtk_window_set_icon_from_file(GTK_WINDOW(terminal->window), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
+    }
     g_object_weak_ref(G_OBJECT(terminal->window), (GWeakNotify) terminal_window_exit, terminal);
 
     /* Create a vertical box as the child of the toplevel window. */

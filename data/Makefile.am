@@ -21,7 +21,7 @@ lxterminal.desktop.in_DATA = $(lxterminal.desktop_in_files:.desktop.in=.desktop)
 lxterminal.desktop.indir = $(datadir)/applications
 
 lxterminal_images_DATA = lxterminal.png
-lxterminal_imagesdir = $(datadir)/pixmaps
+lxterminal_imagesdir = $(datadir)/icons/hicolor/128x128/apps
 
 EXTRA_DIST = \
 	lxterminal.conf.in \
