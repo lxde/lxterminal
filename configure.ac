@@ -5,7 +5,7 @@ AM_CONFIG_HEADER(config.h)
 # to configure or passing V=1 to make
 AM_SILENT_RULES([yes])
 
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign no-dist-gzip dist-xz])
 
 AC_PROG_INTLTOOL
 AM_MAINTAINER_MODE
