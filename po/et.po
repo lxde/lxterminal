@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 23:00+0100\n"
-"PO-Revision-Date: 2012-09-24 21:09+0200\n"
-"Last-Translator: Anari <anari.jalakas@gmail.com>\n"
+"PO-Revision-Date: 2013-12-18 11:21+0000\n"
+"Last-Translator: mahfiaz <mahfiaz@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1387365705.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -66,7 +67,7 @@ msgstr "Balti"
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr "Krillits"
+msgstr "Krillitsa"
 
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
 #: ../src/encoding.c:214
@@ -113,7 +114,7 @@ msgstr "Hiina traditsiooniline"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
-msgstr "Kirillits/Venemaa"
+msgstr "Kirillitsa/Venemaa"
 
 #: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
 msgid "Japanese"
@@ -135,7 +136,7 @@ msgstr "Gruusia"
 
 #: ../src/encoding.c:184 ../src/encoding.c:200
 msgid "Cyrillic/Ukrainian"
-msgstr "Kirillits/Ukraina"
+msgstr "Kirillitsa/Ukraina"
 
 #: ../src/encoding.c:188
 msgid "Croatian"
@@ -179,11 +180,11 @@ msgstr "_Redigeerimine"
 
 #: ../src/lxterminal.c:139
 msgid "_Tabs"
-msgstr "_Sakid"
+msgstr "_Kaardid"
 
 #: ../src/lxterminal.c:140
 msgid "_Help"
-msgstr "_Abi"
+msgstr "A_bi"
 
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "New _Window"
@@ -191,7 +192,7 @@ msgstr "Uus _aken"
 
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:171
 msgid "New _Tab"
-msgstr "Uus _sakk"
+msgstr "Uus _kaart"
 
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:185
 msgid "_Close Tab"
@@ -211,7 +212,7 @@ msgstr "_Aseta"
 
 #: ../src/lxterminal.c:154
 msgid "Clear scr_ollback"
-msgstr "_Kerimisriba peitmine"
+msgstr "_Peida kerimisriba"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
@@ -219,7 +220,7 @@ msgstr "Eeli_stused"
 
 #: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Na_me Tab"
-msgstr "Uus _kaart"
+msgstr "_Kaardi nimi"
 
 #: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Pre_vious Tab"
@@ -247,7 +248,7 @@ msgstr "Kopeeri _URL"
 
 #: ../src/lxterminal.c:176
 msgid "Cl_ear scrollback"
-msgstr "Kerimisriba peitmine"
+msgstr "Kerimisriba _peitmine"
 
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
@@ -260,7 +261,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:563
 msgid "Name Tab"
-msgstr "Kaardi nimetamine"
+msgstr "Kaardi nimi"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:717
@@ -291,7 +292,7 @@ msgstr "Taust"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Foreground"
-msgstr "Esiplaan"
+msgstr "Tekst"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Allow bold font"
@@ -351,11 +352,11 @@ msgstr "Sõnumoodustavad märgid"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Keela menüü kiirklahv (F10 vaikimisi)"
+msgstr "Menüü kiirklahvi keelamine (F10 vaikimisi)"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Keela Alt-n kasutamine kaartides ja menüüs"
+msgstr "Alt-n kasutamise keelamine kaartides ja menüüs"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"
