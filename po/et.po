@@ -3,13 +3,12 @@
 # Copyright (C) 2009 LXDE
 # This file is distributed under the same license as the lxterminal package.
 # Mattias Põldaru <mahfiaz gmail com>, 2009.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 23:00+0100\n"
-"PO-Revision-Date: 2013-12-18 11:21+0000\n"
+"PO-Revision-Date: 2013-12-20 11:18+0000\n"
 "Last-Translator: mahfiaz <mahfiaz@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "Language: et\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1387365705.0\n"
+"X-POOTLE-MTIME: 1387538298.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -308,7 +307,7 @@ msgstr "Kursori stiil"
 
 #: ../data/lxterminal-preferences.glade.h:8
 msgid "Block"
-msgstr "Blokeerimine"
+msgstr "Blokk"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Underline"
@@ -324,7 +323,7 @@ msgstr "Stiil"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Tab panel position"
-msgstr "Sakipaneeli asukoht"
+msgstr "Sakiriba asukoht"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Scrollback lines"
