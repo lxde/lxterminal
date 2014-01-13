@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 23:00+0100\n"
-"PO-Revision-Date: 2014-01-12 02:36+0000\n"
+"PO-Revision-Date: 2014-01-13 01:03+0000\n"
 "Last-Translator: vgezer <volkangezer@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1389494188.0\n"
+"X-POOTLE-MTIME: 1389574999.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -283,7 +283,7 @@ msgstr "LXTerminal Tercihleri"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
-msgstr "Uçbirim yazıtipi"
+msgstr "Uçbirim yazı tipi"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Background"
@@ -295,7 +295,7 @@ msgstr "Ön plan"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Allow bold font"
-msgstr "Kalın yazıtipine izin ver"
+msgstr "Kalın yazı tipine izin ver"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Cursor blink"
