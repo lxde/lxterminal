@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 23:00+0100\n"
-"PO-Revision-Date: 2013-12-20 11:18+0000\n"
+"PO-Revision-Date: 2014-01-17 09:25+0000\n"
 "Last-Translator: mahfiaz <mahfiaz@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "Language: et\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1387538298.0\n"
+"X-POOTLE-MTIME: 1389950743.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -347,7 +347,7 @@ msgstr "Kuva"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Select-by-word characters"
-msgstr "Sõnumoodustavad märgid"
+msgstr "Sõnu moodustavad märgid"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Disable menu shortcut key (F10 by default)"
@@ -355,7 +355,7 @@ msgstr "Menüü kiirklahvi keelamine (F10 vaikimisi)"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Alt-n kasutamise keelamine kaartides ja menüüs"
+msgstr "Alt-n on keelatud kaartide ja menüü jaoks"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Advanced"
