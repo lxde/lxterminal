@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 23:00+0100\n"
-"PO-Revision-Date: 2012-09-25 23:16+0200\n"
+"PO-Revision-Date: 2014-01-28 09:42+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1390902131.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -79,7 +80,7 @@ msgstr "Grieks"
 
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr "Hebreeuws Visueel"
+msgstr "Hebreeuws visueel"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
@@ -93,7 +94,7 @@ msgstr "Turks"
 
 #: ../src/encoding.c:145
 msgid "Nordic"
-msgstr "Noors"
+msgstr "Noord-Europees"
 
 #: ../src/encoding.c:147
 msgid "Celtic"
@@ -267,7 +268,7 @@ msgstr "Naam tabblad"
 msgid "translator-credits"
 msgstr ""
 "Sander De Voogdt\n"
-"Pjotr"
+"Pjotr <pjotrvertaalt@gmail.com>"
 
 #: ../src/lxterminal.c:725
 msgid "Copyright (C) 2008-2011"
