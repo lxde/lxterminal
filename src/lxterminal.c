@@ -1357,7 +1357,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         /* --title=<title> */
         else if (strncmp(argument, "--title=", 8) == 0)
         {
-            arguments->tabs = &argument[8];
+            arguments->title = &argument[8];
         }
 
         /* --tabs=<names> */
@@ -1368,12 +1368,12 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
 
         /* -t <title>, -T <title>, --title <title>
          * The -T form is demanded by distros who insist on this xterm feature. */
-        else if (((strcmp(argument, "--title") == 0) || (strcmp(argument, "-t") == 0) || (strcmp(argument, "-T") == 0) || (strcmp(argument, "--tabs") == 0))
+        else if (((strcmp(argument, "--title") == 0) || (strcmp(argument, "-t") == 0) || (strcmp(argument, "-T") == 0))
         && (argc > 1))
         {
             argc -= 1;
             argv_cursor += 1;
-            arguments->tabs = *argv_cursor;
+            arguments->title = *argv_cursor;
         }
 
         /* --working-directory=<working directory> */
@@ -1439,6 +1439,9 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
             gtk_widget_set_colormap(terminal->window, colormap);
         }
     #endif
+
+    /* Set window title. */
+    gtk_window_set_title(GTK_WINDOW(terminal->window), ((arguments->title != NULL) ? arguments->title : _("LXTerminal")));
 
     /* Set window icon. */
     if (gtk_icon_theme_has_icon(gtk_icon_theme_get_default(), "lxterminal"))
