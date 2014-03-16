@@ -1,0 +1,28 @@
+<ui>
+  <menubar name="MenuBar">
+    <menu name="File" action="File">
+      <menuitem name="File_NewWindow" action="File_NewWindow"/>
+      <menuitem name="File_NewTab" action="File_NewTab"/>
+      <separator/>
+      <menuitem name="File_CloseTab" action="File_CloseTab"/>
+      <menuitem name="File_Quit" action="File_Quit"/>
+    </menu>
+    <menu name="Edit" action="Edit">
+      <menuitem name="Edit_Copy" action="Edit_Copy"/>
+      <menuitem name="Edit_Paste" action="Edit_Paste"/>
+      <menuitem name="Edit_Clear" action="Edit_Clear"/>
+      <separator/>
+      <menuitem name="Edit_Preferences" action="Edit_Preferences"/>
+    </menu>
+    <menu name="Tabs" action="Tabs">
+      <menuitem name="Tabs_NameTab" action="Tabs_NameTab"/>
+      <menuitem name="Tabs_PreviousTab" action="Tabs_PreviousTab"/>
+      <menuitem name="Tabs_NextTab" action="Tabs_NextTab"/>
+      <menuitem name="Tabs_MoveTabLeft" action="Tabs_MoveTabLeft"/>
+      <menuitem name="Tabs_MoveTabRight" action="Tabs_MoveTabRight"/>
+    </menu>
+    <menu name="Help" action="Help">
+      <menuitem name="Help_About" action="Help_About"/>
+    </menu>
+  </menubar>
+</ui>

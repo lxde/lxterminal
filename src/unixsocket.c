@@ -59,7 +59,7 @@ static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition co
         g_shell_parse_argv(msg, &argc, &argv, NULL);
         CommandArguments arguments;
         lxterminal_process_arguments(argc, argv, &arguments);
-        lxterminal_initialize(lxtermwin, &arguments, lxtermwin->setting);
+        lxterminal_initialize(lxtermwin, &arguments);
         g_strfreev(argv);
     }
     g_free(msg);

@@ -114,6 +114,7 @@ static void terminal_menubar_initialize(LXTerminal * terminal);
 static void terminal_accelerator_initialize(LXTerminal * terminal);
 static void terminal_menu_accelerator_update(LXTerminal * terminal);
 static void terminal_settings_apply(LXTerminal * terminal);
+static void terminal_update_menu_shortcuts(Setting * setting);
 
 /* Menu accelerator saved when the user disables it. */
 static char * saved_menu_accelerator = NULL;
@@ -131,35 +132,29 @@ static gchar usage_display[] = {
     "  --working-directory=DIRECTORY    Set the terminal's working directory\n"
 };
 
-/* Descriptors for menu top level. */
-static GtkActionEntry menus[] =
-{
-    { "File", NULL, N_("_File") },
-    { "Edit", NULL, N_("_Edit") },
-    { "Tabs", NULL, N_("_Tabs") },
-    { "Help", NULL, N_("_Help") }
-};
-#define MENUBAR_MENU_COUNT G_N_ELEMENTS(menus)
-
-/* Descriptors for menu bar items. */
+/* Actions for menu bar items. */
 static GtkActionEntry menu_items[] =
 {
-    { "File_NewWindow", GTK_STOCK_ADD, N_("New _Window"), NEW_WINDOW_ACCEL, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
-    { "File_NewTab", GTK_STOCK_ADD, N_("New _Tab"), NEW_TAB_ACCEL, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
-    { "File_Sep1", NULL, "Sep" },
-    { "File_CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), CLOSE_TAB_ACCEL, "Close Tab", G_CALLBACK(terminal_close_tab_activate_event) },
-    { "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL, "Quit", G_CALLBACK(gtk_main_quit) },
-    { "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
-    { "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
-    { "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
-    { "Edit_Sep1", NULL, "Sep" },
-    { "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
-    { "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
-    { "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
-    { "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NEXT_TAB_ACCEL, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
-    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
-    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
-    { "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) }
+/* 0 */    { "File", NULL, N_("_File"), NULL, NULL, NULL },
+/* 1 */    { "Edit", NULL, N_("_Edit"), NULL, NULL, NULL },
+/* 2 */    { "Tabs", NULL, N_("_Tabs"), NULL, NULL, NULL },
+/* 3 */    { "Help", NULL, N_("_Help"), NULL, NULL, NULL },
+/* 4 */    { "File_NewWindow", GTK_STOCK_ADD, N_("New _Window"), NEW_WINDOW_ACCEL_DEF, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
+/* 5 */    { "File_NewTab", GTK_STOCK_ADD, N_("New _Tab"), NEW_TAB_ACCEL_DEF, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
+/* 6 */    { "File_Sep1", NULL, "Sep" },
+/* 7 */    { "File_CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), CLOSE_TAB_ACCEL_DEF, "Close Tab", G_CALLBACK(terminal_close_tab_activate_event) },
+/* 8 */    { "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL_DEF, "Quit", G_CALLBACK(gtk_main_quit) },
+/* 9 */    { "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL_DEF, "Copy", G_CALLBACK(terminal_copy_activate_event) },
+/* 10 */    { "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL_DEF, "Paste", G_CALLBACK(terminal_paste_activate_event) },
+/* 11 */    { "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
+/* 12 */    { "Edit_Sep1", NULL, "Sep" },
+/* 13 */    { "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
+/* 14 */    { "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL_DEF, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
+/* 15 */    { "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL_DEF, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
+/* 16 */    { "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NEXT_TAB_ACCEL_DEF, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
+/* 17 */    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL_DEF, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
+/* 18 */    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL_DEF, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
+/* 19 */    { "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) },
 };
 #define MENUBAR_MENUITEM_COUNT G_N_ELEMENTS(menu_items)
 
@@ -362,7 +357,7 @@ void terminal_update_alt(LXTerminal *terminal)
     Term * term;
 
     /* disable alt when the option is switched on or terminal has no other tabs */
-    if (terminal->setting->disable_alt || terminal->terms->len <= 1)
+    if (get_setting()->disable_alt || terminal->terms->len <= 1)
     {
         for (i = 0; i < terminal->terms->len; i++)
         {
@@ -399,7 +394,7 @@ static gboolean terminal_switch_tab_accelerator(Term * term)
     LXTerminal * terminal = term->parent;
     if (term->index < gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook))) {
         gtk_notebook_set_current_page(GTK_NOTEBOOK(terminal->notebook), term->index);
-    	return TRUE;
+        return TRUE;
     }
     return FALSE;
 }
@@ -411,7 +406,7 @@ static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * 
     CommandArguments arguments;
     memset(&arguments, 0, sizeof(arguments));
     arguments.working_directory = terminal_get_current_dir(terminal);
-    lxterminal_initialize(terminal->parent, &arguments, terminal->setting);
+    lxterminal_initialize(terminal->parent, &arguments);
     g_free(arguments.working_directory);
 }
 
@@ -496,8 +491,18 @@ static void terminal_copy_activate_event(GtkAction * action, LXTerminal * termin
 /* Handler for accelerator <CTRL><SHIFT> C.  Copy to the clipboard. */
 static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
-    terminal_copy_activate_event(NULL, terminal);
-    return TRUE;
+    /* fire event only if text selected */
+    Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
+    if (vte_terminal_get_has_selection(VTE_TERMINAL(term->vte)))
+    {
+        terminal_copy_activate_event(NULL, terminal);
+        return TRUE;
+    }
+    else
+    {   
+        /* if not selected send keys to terminal */
+        return FALSE;
+    }
 }
 
 /* Handler for "activate" signal on Edit/Paste menu item.
@@ -513,9 +518,8 @@ static void terminal_paste_activate_event(GtkAction * action, LXTerminal * termi
 static void terminal_clear_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
-    Setting * setting = terminal->setting;
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), 0);
-    vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
+    vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), get_setting()->scrollback);
 }
 
 /* Handler for accelerator <CTRL><SHIFT> V.  Paste from the clipboard. */
@@ -1002,7 +1006,7 @@ static void terminal_vte_commit(VteTerminal * vte, gchar * text, guint size, Ter
 /* Apply new settings in an LXTerminal to its tab Term. */
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 {
-    Setting * setting = terminal->setting;
+    Setting * setting = get_setting();
 
     /* Terminal properties. */
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
@@ -1177,101 +1181,79 @@ static void terminal_menubar_initialize(LXTerminal * terminal)
     GtkUIManager * manager = gtk_ui_manager_new();
     terminal->action_group = gtk_action_group_new("MenuBar");
     gtk_action_group_set_translation_domain(terminal->action_group, GETTEXT_PACKAGE);
-    gtk_action_group_add_actions(terminal->action_group, menus, MENUBAR_MENU_COUNT, terminal);
+    /* modify accelerators by setting */
+    terminal_update_menu_shortcuts(get_setting());
     gtk_action_group_add_actions(terminal->action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
     gtk_ui_manager_insert_action_group(manager, terminal->action_group, 0);
-
-    guint merge_id = gtk_ui_manager_new_merge_id(manager);
-    gtk_ui_manager_add_ui(manager, merge_id, "/", "MenuBar", NULL, GTK_UI_MANAGER_MENUBAR, FALSE);
-
-    /* Menus. */
-    int i;
-    for (i = 0; i < MENUBAR_MENU_COUNT; i += 1)
-    {
-        gchar * path = g_strdup_printf("/MenuBar/%s", menus[i].name);
-        gchar * path_ptr;
-        for (path_ptr = path; *path_ptr != '\0'; path_ptr += 1)
-        {
-            if (*path_ptr == '_')
-            {
-                *path_ptr = '/';
-            }
-        }
-        path_ptr = g_path_get_dirname(path);
-        gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menus[i].name, menus[i].name, GTK_UI_MANAGER_MENU, FALSE);
-        g_free(path);
-        g_free(path_ptr);
-    }
-
-    /* Items. */
-    for (i = 0; i < MENUBAR_MENUITEM_COUNT; i += 1)
-    {
-        gchar * path = g_strdup_printf("/MenuBar/%s", menu_items[i].name);
-        gchar * path_ptr;
-        for (path_ptr = path; *path_ptr != '\0'; path_ptr += 1)
-        {
-            if (*path_ptr == '_')
-            {
-                *path_ptr = '/';
-            }
-        }
-        path_ptr = g_path_get_dirname(path);
-        if (strcmp(menu_items[i].label, "Sep") == 0)
-        {
-            gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, NULL, GTK_UI_MANAGER_SEPARATOR, FALSE);
-        }
-        else
-        {
-            gtk_ui_manager_add_ui(manager, merge_id, path_ptr, menu_items[i].name, menu_items[i].name, GTK_UI_MANAGER_MENUITEM, FALSE);
-        }
-
-        g_free(path);
-        g_free(path_ptr);
-    }
-
+    
+    guint id = gtk_ui_manager_add_ui_from_file (manager, PACKAGE_DATA_DIR "/lxterminal/menu.ui", NULL);
+    
     terminal->menu = gtk_ui_manager_get_widget(manager, "/MenuBar");
+    
+    /* Extract accelerators from manager and add it to top level window. */
+    terminal->accel_group = gtk_ui_manager_get_accel_group(manager);
+    
+    gtk_window_add_accel_group(GTK_WINDOW(terminal->window), terminal->accel_group);
 }
 
 /* Allocate, initialize, and connect up an accelerator group for the accelerators on a new terminal. */
+/* !! now unused, may be used for online change accelerators after changing preferences */
 static void terminal_accelerator_initialize(LXTerminal * terminal)
 {
+    /* Free if exists. */
+    if (terminal->accel_group)
+    {
+        gtk_window_remove_accel_group(GTK_WINDOW(terminal->window), terminal->accel_group);
+    }
     guint key;
     GdkModifierType mods;
-
+    
+    Setting * setting = get_setting();
     terminal->accel_group = gtk_accel_group_new();
 
-    gtk_accelerator_parse(NEW_WINDOW_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_new_window_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->new_window_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_new_window_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(QUIT_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(gtk_main_quit), NULL, NULL));
+    gtk_accelerator_parse(setting->quit_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(gtk_main_quit), NULL, NULL));
 
-    gtk_accelerator_parse(NEW_TAB_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_new_tab_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->new_tab_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_new_tab_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(CLOSE_TAB_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_close_tab_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->close_tab_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_close_tab_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(COPY_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_copy_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->copy_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_copy_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(PASTE_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_paste_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->paste_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_paste_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(NAME_TAB_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_name_tab_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->name_tab_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_name_tab_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(PREVIOUS_TAB_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_previous_tab_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->previous_tab_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_previous_tab_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(NEXT_TAB_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_next_tab_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->next_tab_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_next_tab_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(MOVE_TAB_LEFT_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_move_tab_left_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->move_tab_left_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_move_tab_left_accelerator), terminal, NULL));
 
-    gtk_accelerator_parse(MOVE_TAB_RIGHT_ACCEL, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, g_cclosure_new_swap(G_CALLBACK(terminal_move_tab_right_accelerator), terminal, NULL));
+    gtk_accelerator_parse(setting->move_tab_right_accel, &key, &mods);
+    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
+        g_cclosure_new_swap(G_CALLBACK(terminal_move_tab_right_accelerator), terminal, NULL));
 
     gtk_window_add_accel_group(GTK_WINDOW(terminal->window), terminal->accel_group);
 }
@@ -1291,7 +1273,7 @@ static void terminal_menu_accelerator_update(LXTerminal * terminal)
     gtk_settings_set_string_property(
         gtk_settings_get_default(),
         "gtk-menu-bar-accel",
-        ((terminal->setting->disable_f10) ? "<Shift><Control><Mod1><Mod2><Mod3><Mod4><Mod5>F10" : saved_menu_accelerator),
+        ((get_setting()->disable_f10) ? "<Shift><Control><Mod1><Mod2><Mod3><Mod4><Mod5>F10" : saved_menu_accelerator),
         "lxterminal");
 }
 
@@ -1411,7 +1393,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
 
 /* Initialize a new LXTerminal.
  * This is a toplevel window that may contain tabs, each of which will contain a VTE controlled by a process. */
-LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * arguments, Setting * setting)
+LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * arguments)
 {
     /* Allocate and initialize the LXTerminal structure. */
     LXTerminal * terminal = g_slice_new0(LXTerminal);
@@ -1420,7 +1402,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     terminal->fixed_size = TRUE;
     g_ptr_array_add(lxtermwin->windows, terminal);
     terminal->index = terminal->parent->windows->len - 1;
-    terminal->setting = setting;
+    Setting * setting = get_setting();
 
     /* Create toplevel window. */
     terminal->window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
@@ -1441,7 +1423,8 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     #endif
 
     /* Set window title. */
-    gtk_window_set_title(GTK_WINDOW(terminal->window), ((arguments->title != NULL) ? arguments->title : _("LXTerminal")));
+    gtk_window_set_title(GTK_WINDOW(terminal->window), 
+        ((arguments->title != NULL) ? arguments->title : _("LXTerminal")));
 
     /* Set window icon. */
     if (gtk_icon_theme_has_icon(gtk_icon_theme_get_default(), "lxterminal"))
@@ -1450,7 +1433,8 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     }
     else
     {
-        gtk_window_set_icon_from_file(GTK_WINDOW(terminal->window), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
+        gtk_window_set_icon_from_file(GTK_WINDOW(terminal->window), 
+            PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
     }
     g_object_weak_ref(G_OBJECT(terminal->window), (GWeakNotify) terminal_window_exit, terminal);
 
@@ -1470,11 +1454,13 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     gtk_box_pack_start(GTK_BOX(terminal->box), terminal->notebook, TRUE, TRUE, 0);
 
     /* Initialize tab position. */
-    terminal->tab_position = terminal_tab_get_position_id(terminal->setting->tab_position);
+    terminal->tab_position = terminal_tab_get_position_id(setting->tab_position);
 
     /* Connect signals. */
-    g_signal_connect_swapped(G_OBJECT(terminal->window), "composited-changed", G_CALLBACK(terminal_settings_apply), terminal);
-    g_signal_connect(G_OBJECT(terminal->notebook), "switch-page", G_CALLBACK(terminal_switch_page_event), terminal);
+    g_signal_connect_swapped(G_OBJECT(terminal->window), "composited-changed", 
+        G_CALLBACK(terminal_settings_apply), terminal);
+    g_signal_connect(G_OBJECT(terminal->notebook), "switch-page", 
+        G_CALLBACK(terminal_switch_page_event), terminal);
 
     /* Create the first terminal. */
     gchar * local_working_directory = NULL;
@@ -1502,7 +1488,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     g_ptr_array_add(terminal->terms, term);
 
     /* Initialize accelerators. */
-    terminal_accelerator_initialize(terminal);
+    //terminal_accelerator_initialize(terminal);
 
     /* Show the widget, so it is realized and has a window. */
     gtk_widget_show_all(terminal->window);
@@ -1563,17 +1549,17 @@ static void terminal_settings_apply(LXTerminal * terminal)
     }
 
     /* Update tab position. */
-    terminal->tab_position = terminal_tab_get_position_id(terminal->setting->tab_position);
+    terminal->tab_position = terminal_tab_get_position_id(get_setting()->tab_position);
     terminal_tab_set_position(terminal->notebook, terminal->tab_position);
 
     /* Update menu accelerators. */
     terminal_menu_accelerator_update(terminal);
 
     /* disable mnemonics if <ALT>n is diabled */
-    g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !terminal->setting->disable_alt, NULL);
+    g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !get_setting()->disable_alt, NULL);
 
     /* Hide or show menubar. */
-    if (terminal->setting->hide_menu_bar)
+    if (get_setting()->hide_menu_bar)
     {
         gtk_widget_hide(terminal->menu);
     }
@@ -1589,9 +1575,28 @@ static void terminal_settings_apply(LXTerminal * terminal)
 /* Apply terminal settings to all tabs in all terminals. */
 void terminal_settings_apply_to_all(LXTerminal * terminal)
 {
+    /* Recreate accelerators, may be changed. */
+    //g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_accelerator_initialize, terminal);
     /* Apply settings to all open windows. */
-    g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_settings_apply, terminal->setting);
-    terminal->setting->geometry_change = FALSE;
+    g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_settings_apply, get_setting());
+    get_setting()->geometry_change = FALSE;
+}
+
+/* Update terminal shortcuts. */
+void terminal_update_menu_shortcuts(Setting * setting)
+{
+    /* Update static array by index. */
+    menu_items[4].accelerator = setting->new_window_accel;
+    menu_items[5].accelerator = setting->new_tab_accel;
+    menu_items[7].accelerator = setting->close_tab_accel;
+    menu_items[8].accelerator = setting->quit_accel;
+    menu_items[9].accelerator = setting->copy_accel;
+    menu_items[10].accelerator = setting->paste_accel;
+    menu_items[14].accelerator = setting->name_tab_accel;
+    menu_items[15].accelerator = setting->previous_tab_accel;
+    menu_items[16].accelerator = setting->next_tab_accel;
+    menu_items[17].accelerator = setting->move_tab_left_accel;
+    menu_items[18].accelerator = setting->move_tab_right_accel;
 }
 
 /* Main entry point. */
@@ -1622,27 +1627,11 @@ int main(gint argc, gchar * * argv)
         return 0;
 
     /* Load user preferences. */
-    gchar * dir = g_build_filename(g_get_user_config_dir(), "lxterminal" , NULL);
-    g_mkdir_with_parents(dir, S_IRUSR | S_IWUSR | S_IXUSR);
-    gchar * path = g_build_filename(dir, "lxterminal.conf", NULL);
-    g_free(dir);
-
-    if ( ! g_file_test(path, G_FILE_TEST_EXISTS))
-    {
-        /* Copy the system-wide settings to the user's configuration. */
-        lxtermwin->setting = load_setting_from_file(PACKAGE_DATA_DIR "/lxterminal/lxterminal.conf");
-        setting_save(lxtermwin->setting);
-    }
-    else
-    {
-        lxtermwin->setting = load_setting_from_file(path);
-    }
-
-    g_free(path);
-
+    load_setting();
+    
     /* Finish initializing the impure area and start the first LXTerminal. */
     lxtermwin->windows = g_ptr_array_new();
-    lxterminal_initialize(lxtermwin, &arguments, lxtermwin->setting);
+    lxterminal_initialize(lxtermwin, &arguments);
 
     /* Run the main loop. */
     gtk_main();

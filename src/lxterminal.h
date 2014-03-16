@@ -23,25 +23,13 @@
 
 #include "setting.h"
 
-#define NEW_WINDOW_ACCEL "<CTRL><SHIFT>N"
-#define NEW_TAB_ACCEL "<CTRL><SHIFT>T"
-#define CLOSE_TAB_ACCEL "<CTRL><SHIFT>W"
-#define QUIT_ACCEL "<CTRL><SHIFT>Q"
-#define COPY_ACCEL "<CTRL><SHIFT>C"
-#define PASTE_ACCEL "<CTRL><SHIFT>V"
-#define NAME_TAB_ACCEL "<CTRL><SHIFT>I"
-#define PREVIOUS_TAB_ACCEL "<CTRL>Page_Up"
-#define NEXT_TAB_ACCEL "<CTRL>Page_Down"
-#define MOVE_TAB_LEFT_ACCEL "<CTRL><SHIFT>Page_Up"
-#define MOVE_TAB_RIGHT_ACCEL "<CTRL><SHIFT>Page_Down"
-
 /* steal from tilda-0.09.6/src/tilda_terminal.c:36 */
 #define DINGUS1 "(((news|telnet|nttp|file|http|ftp|https)://)|(www|ftp)[-A-Za-z0-9]*\\.)[-A-Za-z0-9\\.]+(:[0-9]*)?"
 #define DINGUS2 "(((news|telnet|nttp|file|http|ftp|https)://)|(www|ftp)[-A-Za-z0-9]*\\.)[-A-Za-z0-9\\.]+(:[0-9]*)?/[-A-Za-z0-9_\\$\\.\\+\\!\\*\\(\\),;:@&=\\?/~\\#\\%]*[^]'\\.}>\\) ,\\\"]"
 
 /* Top level application context. */
 typedef struct _lxtermwindow {
-    Setting * setting;				/* Pointer to current user preferences */
+//    Setting * setting;				/* Pointer to current user preferences */
     GPtrArray * windows;			/* Array of pointers to LXTerminal structures */
 } LXTermWindow;
 
@@ -56,7 +44,7 @@ typedef struct _lxterminal {
     GtkAccelGroup * accel_group;		/* Accelerator group for accelerators on this window */
     GtkWidget * notebook;			/* Notebook, child of vertical box */
     GPtrArray * terms;				/* Array of pointers to Term structures */
-    Setting * setting;				/* A copy of parent->setting */
+//    Setting * setting;				/* A copy of parent->setting */
     GdkGeometry geometry;			/* Geometry hints (see XGetWMNormalHints) */
     GdkWindowHints geometry_mask;		/* Mask of valid data in geometry hints */
     gboolean fixed_size;			/* True if the terminal is fixed size */
@@ -95,7 +83,7 @@ typedef struct _command_arguments {
 } CommandArguments;
 
 extern gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArguments * arguments);
-extern LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * arguments, Setting * setting);
+extern LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * arguments);
 extern void terminal_settings_apply_to_all(LXTerminal * terminal);
 
 #endif

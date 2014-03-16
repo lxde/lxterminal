@@ -3,7 +3,8 @@ default_configdir = $(datadir)/lxterminal
 
 uidir=$(datadir)/lxterminal
 ui_in_files= \
-	lxterminal-preferences.glade
+	lxterminal-preferences.glade \
+	menu.ui
 
 ui_DATA = $(ui_in_files:.glade=.ui)
 
@@ -13,7 +14,7 @@ ui_DATA = $(ui_in_files:.glade=.ui)
 	$(top_builddir)/src/xml-purge $@
 
 CLEANFILES = \
-        $(ui_DATA)
+        lxterminal-preferences.ui
 
 lxterminal.desktop_in_files = lxterminal.desktop.in
 lxterminal.desktop.in_DATA = $(lxterminal.desktop_in_files:.desktop.in=.desktop)
