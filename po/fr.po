@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 23:00+0100\n"
-"PO-Revision-Date: 2013-08-13 09:25+0000\n"
-"Last-Translator: Julien <Julius22@laposte.net>\n"
+"PO-Revision-Date: 2014-03-25 17:44+0000\n"
+"Last-Translator: Pierre <lubuntu@pierregobin.fr>\n"
 "Language-Team: fr <gaknar@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1376385924.0\n"
+"X-POOTLE-MTIME: 1395769451.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -206,9 +206,8 @@ msgid "_Paste"
 msgstr "C_oller"
 
 #: ../src/lxterminal.c:154
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Masquer la barre de défilement"
+msgstr "Supprimer les anciennes _lignes"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
@@ -243,9 +242,8 @@ msgid "Copy _URL"
 msgstr "Copier l'_URL"
 
 #: ../src/lxterminal.c:176
-#, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Masquer la barre de défilement"
+msgstr "Supprimer les anciennes _lignes"
 
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
