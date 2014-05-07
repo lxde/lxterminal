@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 23:00+0100\n"
-"PO-Revision-Date: 2014-01-09 20:18+0000\n"
+"PO-Revision-Date: 2014-05-07 16:35+0000\n"
 "Last-Translator: Peter <flywheel@illogical.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1389298696.0\n"
+"X-POOTLE-MTIME: 1399480539.0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -210,9 +210,8 @@ msgid "_Paste"
 msgstr "_Indsæt"
 
 #: ../src/lxterminal.c:154
-#, fuzzy
 msgid "Clear scr_ollback"
-msgstr "Skjul rullebjælken"
+msgstr "Skjul r_ullebjælken"
 
 #: ../src/lxterminal.c:156 ../src/lxterminal.c:178
 msgid "Preference_s"
@@ -249,7 +248,7 @@ msgstr "Kopier _URL"
 #: ../src/lxterminal.c:176
 #, fuzzy
 msgid "Cl_ear scrollback"
-msgstr "Skjul rullebjælken"
+msgstr "Skjul rull_ebjælken"
 
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
@@ -268,9 +267,11 @@ msgstr "Navngiv faneblad"
 #: ../src/lxterminal.c:717
 msgid "translator-credits"
 msgstr ""
+"Dansk-gruppen <dansk@dansk-gruppen.dk\n"
 "Joe Hansen, 2010\n"
 "Vidar Jon Bauge\n"
-"Charlie Tyrrestrup"
+"Charlie Tyrrestrup\n"
+"Peter Jespersen"
 
 #: ../src/lxterminal.c:725
 msgid "Copyright (C) 2008-2011"
