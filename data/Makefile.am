@@ -3,18 +3,18 @@ default_configdir = $(datadir)/lxterminal
 
 uidir=$(datadir)/lxterminal
 ui_in_files= \
-	lxterminal-preferences.glade \
-	menu.ui
+	lxterminal-preferences.glade
 
-ui_DATA = $(ui_in_files:.glade=.ui)
+ui_files = $(ui_in_files:.glade=.ui)
+
+ui_DATA = $(ui_files) menu.ui
 
 # Generate GtkBuilder UI files from Glade files
 %.ui: %.glade
 	cp $< $@
 	$(top_builddir)/src/xml-purge $@
 
-CLEANFILES = \
-        lxterminal-preferences.ui
+CLEANFILES = $(ui_files)
 
 lxterminal.desktop_in_files = lxterminal.desktop.in
 lxterminal.desktop.in_DATA = $(lxterminal.desktop_in_files:.desktop.in=.desktop)
@@ -27,6 +27,8 @@ lxterminal_imagesdir = $(datadir)/icons/hicolor/128x128/apps
 EXTRA_DIST = \
 	lxterminal.conf.in \
 	$(lxterminal_images_DATA) \
+	$(lxterminal.desktop_in_files) \
 	$(lxterminal.desktop.in_DATA) \
 	$(ui_DATA) \
+	$(ui_in_files) \
 	$(default_config_DATA)
