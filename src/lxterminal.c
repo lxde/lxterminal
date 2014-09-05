@@ -191,11 +191,7 @@ static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geom
 
     *geometry_mask = 0;
 
-#if GTK_CHECK_VERSION(2, 18, 0)
     if (gdk_window_is_destroyed(window))
-#else
-    if (GDK_WINDOW_DESTROYED(window))
-#endif
         return;
 
     XSizeHints size_hints;
@@ -582,11 +578,7 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
     g_signal_connect(G_OBJECT(dialog), "response", G_CALLBACK(terminal_name_tab_response_event), terminal);
     GtkWidget * dialog_item = gtk_entry_new();
     g_object_set_data(G_OBJECT(dialog), "entry", (gpointer) dialog_item);
-#if GTK_CHECK_VERSION(2, 14, 0)
     gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dialog))), dialog_item, FALSE, FALSE, 2);
-#else
-    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(dialog)->vbox), dialog_item, FALSE, FALSE, 2);
-#endif
     gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
     if (current != -1)
     {
@@ -1497,11 +1489,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     terminal_settings_apply(terminal);
 
     /* Initialize the geometry hints. */
-#if GTK_CHECK_VERSION(2, 14, 0)
     gdk_window_get_geometry_hints(gtk_widget_get_window(GTK_WIDGET(term->vte)), &terminal->geometry, &terminal->geometry_mask);
-#else
-    gdk_window_get_geometry_hints(GTK_WIDGET(term->vte)->window, &terminal->geometry, &terminal->geometry_mask);
-#endif
 
     if (arguments->tabs != NULL)
     {
