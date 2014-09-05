@@ -24,8 +24,3 @@ lxterminal_SOURCES = \
 lxterminal_LDADD = \
 		$(PACKAGE_LIBS) \
 		$(INTLLIBS)
-
-noinst_PROGRAMS=xml-purge
-xml_purge_SOURCES=xml-purge.c
-xml_purge_CFLAGS=@CFLAGS@
-xml_purge_LDADD=@LIBS@

@@ -48,7 +48,6 @@ Makefile
 intltool-extract.in
 intltool-merge.in
 intltool-update.in
-src/xml-purge
 data/lxterminal-preferences.ui
 data/lxterminal.conf
 data/lxterminal.desktop

@@ -9,10 +9,9 @@ ui_files = $(ui_in_files:.glade=.ui)
 
 ui_DATA = $(ui_files) menu.ui
 
-# Generate GtkBuilder UI files from Glade files
-%.ui: %.glade
-	cp $< $@
-	$(top_builddir)/src/xml-purge $@
+# Purge GtkBuilder UI files
+.glade.ui:
+	sed 's/<!--.*-->//' < $< | sed ':a;N;$$!ba;s/ *\n *</</g' > $@
 
 CLEANFILES = $(ui_files)
 
