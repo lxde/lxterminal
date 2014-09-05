@@ -301,7 +301,7 @@ void show_need_restart_message_dialog(LXTerminal * terminal)
                                   GTK_MESSAGE_WARNING,
                                   GTK_BUTTONS_CLOSE,
                                   _("Accelerator changed need restart!"));
-    gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/pixmaps/lxterminal.xpm", NULL);
+    gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
     gtk_window_set_title(GTK_WINDOW(dialog), _("LXTerminal"));
     gtk_dialog_run (GTK_DIALOG (dialog));
     gtk_widget_destroy (dialog);
@@ -321,7 +321,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
 
     GtkDialog * dialog = GTK_DIALOG(gtk_builder_get_object(builder, "lxterminal_preferences"));
     gtk_window_set_title(GTK_WINDOW(dialog), _("LXTerminal"));
-    gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/pixmaps/lxterminal.xpm", NULL);
+    gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
 
     GtkWidget * w = GTK_WIDGET(gtk_builder_get_object(builder, "terminal_font"));
     gtk_font_button_set_font_name(GTK_FONT_BUTTON(w), setting->font_name);
