@@ -8,3 +8,4 @@ Exec=lxterminal
 Icon=lxterminal
 Type=Application
 Categories=GTK;System;TerminalEmulator;
+_Keywords=console;command line;execute;
