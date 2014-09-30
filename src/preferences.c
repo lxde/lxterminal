@@ -285,7 +285,6 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     gtk_window_set_transient_for(GTK_WINDOW(GTK_DIALOG(dialog)), 
         GTK_WINDOW(terminal->window));
 
-    setting->accel_changed = FALSE;
     int result = gtk_dialog_run(dialog);
     /* Dismiss dialog. */
     gtk_widget_destroy(GTK_WIDGET(dialog));
