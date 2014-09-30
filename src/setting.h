@@ -102,7 +102,6 @@ typedef struct _setting {
     char * move_tab_left_accel;     /* MOVE_TAB_LEFT_ACCEL */
     char * move_tab_right_accel;    /* MOVE_TAB_RIGHT_ACCEL */
 
-    gboolean accel_changed;       /* Accelerator changed - show need restart message */
 } Setting;
 
 extern Setting * get_setting();

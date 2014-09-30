@@ -1480,7 +1480,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     g_ptr_array_add(terminal->terms, term);
 
     /* Initialize accelerators. */
-    //terminal_accelerator_initialize(terminal);
+    terminal_accelerator_initialize(terminal);
 
     /* Show the widget, so it is realized and has a window. */
     gtk_widget_show_all(terminal->window);
@@ -1564,7 +1564,7 @@ static void terminal_settings_apply(LXTerminal * terminal)
 void terminal_settings_apply_to_all(LXTerminal * terminal)
 {
     /* Recreate accelerators, may be changed. */
-    //g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_accelerator_initialize, terminal);
+    g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_accelerator_initialize, terminal);
     /* Apply settings to all open windows. */
     g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_settings_apply, get_setting());
     get_setting()->geometry_change = FALSE;

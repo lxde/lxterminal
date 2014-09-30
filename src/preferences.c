@@ -59,24 +59,6 @@ static void preferences_dialog_allow_bold_toggled_event(GtkToggleButton * widget
     setting->disallow_bold = ! gtk_toggle_button_get_active(widget);
 }
 
-/* Handler for "toggled" signal on Cursor Blink toggle button. */
-static void preferences_dialog_cursor_blink_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->cursor_blink = gtk_toggle_button_get_active(widget);
-}
-
-/* Handler for "toggled" signal on Cursor Underline radio button. */
-static void preferences_dialog_cursor_underline_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->cursor_underline = gtk_toggle_button_get_active(widget);
-}
-
-/* Handler for "toggled" signal on Audible Bell radio button. */
-static void preferences_dialog_audible_bell_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->audible_bell = gtk_toggle_button_get_active(widget);
-}
-
 /* Handler for "changed" signal on Tab Position combo box. */
 static void preferences_dialog_tab_position_changed_event(GtkComboBox * widget, Setting * setting)
 {
@@ -111,46 +93,6 @@ static void preferences_dialog_scrollback_value_changed_event(GtkSpinButton * wi
     setting->scrollback = gtk_spin_button_get_value_as_int(widget);
 }
 
-/* Handler for "toggled" signal on Hide Scroll Bar toggle button. */
-static void preferences_dialog_hide_scroll_bar_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->hide_scroll_bar = gtk_toggle_button_get_active(widget);
-}
-
-/* Handler for "toggled" signal on Hide Menu Bar toggle button. */
-static void preferences_dialog_hide_menu_bar_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->hide_menu_bar = gtk_toggle_button_get_active(widget);
-}
-
-/* Handler for "toggled" signal on Hide Close Button toggle button. */
-static void preferences_dialog_hide_close_button_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->hide_close_button = gtk_toggle_button_get_active(widget);
-}
-
-/* Handler for "focus-out-event" on Selection Characters entry. */
-static gboolean preferences_dialog_selection_focus_out_event(GtkWidget * widget, GdkEventFocus * event, 
-    Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->word_selection_characters);
-    setting->word_selection_characters = g_strdup(new_text);
-    return FALSE;
-}
-
-/* Handler for "toggled" signal on Disable F10 toggle button. */
-static void preferences_dialog_disable_f10_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->disable_f10 = gtk_toggle_button_get_active(widget);
-}
-
-/* Handler for "toggled" signal on Disable Alt toggle button. */
-static void preferences_dialog_disable_alt_toggled_event(GtkToggleButton * widget, Setting * setting)
-{
-    setting->disable_alt = gtk_toggle_button_get_active(widget);
-}
-
 /* Convert the user preference on tab position, expressed as a string, to the internal representation.
  * These have to match the order in the .glade file. */
 gint terminal_tab_get_position_id(gchar * position)
@@ -173,138 +115,18 @@ gint terminal_tab_get_position_id(gchar * position)
     }
 }
 
-/* Handler for "focus-out-event" on new_window_accel entry. */
-static gboolean preferences_dialog_new_window_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
+/* Generic "toggled" handler for GtkToggleButton events */
+static void preferences_dialog_generic_toggled_event(GtkToggleButton * widget, gboolean * s)
 {
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->new_window_accel);
-    setting->new_window_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
+    *s = gtk_toggle_button_get_active(widget);
 }
 
-/* Handler for "focus-out-event" on new_tab_accel entry. */
-static gboolean preferences_dialog_new_tab_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
+/* Generic "focus-out-event" handler for GtkEntry events */
+static gboolean preferences_dialog_generic_focus_out_event(GtkWidget * widget, GdkEventFocus * event, gchar * s)
 {
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->new_tab_accel);
-    setting->new_tab_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
+    g_free(s);
+    s = g_strdup(gtk_entry_get_text(GTK_ENTRY(widget)));
     return FALSE;
-}
-
-/* Handler for "focus-out-event" on close_tab_accel entry. */
-static gboolean preferences_dialog_close_tab_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->close_tab_accel);
-    setting->close_tab_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on quit_accel entry. */
-static gboolean preferences_dialog_quit_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->quit_accel);
-    setting->quit_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on copy_accel entry. */
-static gboolean preferences_dialog_copy_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->copy_accel);
-    setting->copy_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on paste_accel entry. */
-static gboolean preferences_dialog_paste_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->paste_accel);
-    setting->paste_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on name_tab_accel entry. */
-static gboolean preferences_dialog_name_tab_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->name_tab_accel);
-    setting->name_tab_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on previous_tab_accel entry. */
-static gboolean preferences_dialog_previous_tab_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->previous_tab_accel);
-    setting->previous_tab_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on next_tab_accel entry. */
-static gboolean preferences_dialog_next_tab_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->next_tab_accel);
-    setting->next_tab_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on move_tab_left_accel entry. */
-static gboolean preferences_dialog_move_tab_left_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->move_tab_left_accel);
-    setting->move_tab_left_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-/* Handler for "focus-out-event" on move_tab_right_accel entry. */
-static gboolean preferences_dialog_move_tab_right_accel_focus_out_event(GtkWidget * widget, 
-    GdkEventFocus * event, Setting * setting)
-{
-    const gchar * new_text = gtk_entry_get_text(GTK_ENTRY(widget));
-    g_free(setting->move_tab_right_accel);
-    setting->move_tab_right_accel = g_strdup(new_text);
-    setting->accel_changed = TRUE;
-    return FALSE;
-}
-
-void show_need_restart_message_dialog(LXTerminal * terminal)
-{
-    GtkWidget * dialog = gtk_message_dialog_new (GTK_WINDOW(terminal->window),
-                                  GTK_DIALOG_DESTROY_WITH_PARENT,
-                                  GTK_MESSAGE_WARNING,
-                                  GTK_BUTTONS_CLOSE,
-                                  _("Accelerator changed need restart!"));
-    gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
-    gtk_window_set_title(GTK_WINDOW(dialog), _("LXTerminal"));
-    gtk_dialog_run (GTK_DIALOG (dialog));
-    gtk_widget_destroy (dialog);
 }
 
 /* Initialize and display the preferences dialog. */
@@ -346,7 +168,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_blink"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->cursor_blink);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_cursor_blink_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->cursor_blink);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_style_block"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), ! setting->cursor_underline);
@@ -354,12 +176,12 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_style_underline"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->cursor_underline);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_cursor_underline_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->cursor_underline);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "audible_bell"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->audible_bell);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_audible_bell_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->audible_bell);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "tab_position"));
     gtk_combo_box_set_active(GTK_COMBO_BOX(w), terminal_tab_get_position_id(setting->tab_position));
@@ -374,113 +196,107 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     w = GTK_WIDGET(gtk_builder_get_object(builder, "hide_scroll_bar"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->hide_scroll_bar);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_hide_scroll_bar_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->hide_scroll_bar);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "hide_menu_bar"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->hide_menu_bar);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_hide_menu_bar_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->hide_menu_bar);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "hide_close_button"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->hide_close_button);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_hide_close_button_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->hide_close_button);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "select_by_word"));
     gtk_entry_set_text(GTK_ENTRY(w), setting->word_selection_characters);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_selection_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->word_selection_characters);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "disable_f10"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->disable_f10);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_disable_f10_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->disable_f10);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "disable_alt"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->disable_alt);
     g_signal_connect(G_OBJECT(w), "toggled", 
-        G_CALLBACK(preferences_dialog_disable_alt_toggled_event), setting);
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->disable_alt);
     
     /* Shortcuts */
     w = GTK_WIDGET(gtk_builder_get_object(builder, NEW_WINDOW_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->new_window_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_new_window_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->new_window_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, NEW_TAB_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->new_tab_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_new_tab_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->new_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, CLOSE_TAB_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->close_tab_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_close_tab_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->close_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, QUIT_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->quit_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_quit_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->quit_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, COPY_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->copy_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_copy_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->copy_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, PASTE_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->paste_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_paste_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->paste_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, NAME_TAB_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->name_tab_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_name_tab_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->name_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, PREVIOUS_TAB_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->previous_tab_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_previous_tab_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->previous_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, NEXT_TAB_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->next_tab_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_next_tab_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->next_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, MOVE_TAB_LEFT_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->move_tab_left_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_move_tab_left_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->move_tab_left_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, MOVE_TAB_RIGHT_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->move_tab_right_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_move_tab_right_accel_focus_out_event), setting);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->move_tab_right_accel);
 
     g_object_unref(builder);
 
     gtk_window_set_modal(GTK_WINDOW(GTK_DIALOG(dialog)), TRUE);
     gtk_window_set_transient_for(GTK_WINDOW(GTK_DIALOG(dialog)), 
         GTK_WINDOW(terminal->window));
-    //gtk_widget_show_all(dialog);
+
     setting->accel_changed = FALSE;
     int result = gtk_dialog_run(dialog);
+    /* Dismiss dialog. */
+    gtk_widget_destroy(GTK_WIDGET(dialog));
     if (result == GTK_RESPONSE_OK)
     {
         set_setting(setting);
         save_setting();
         terminal_settings_apply_to_all(terminal);
-        if (setting->accel_changed)
-        {
-            printf("Accelerator changed need restart\n");
-            show_need_restart_message_dialog(terminal);
-        }
-        printf("Saved result OK\n");
     }
     else
     {
         free_setting(setting);
     }
-    /* Dismiss dialog. */
-    gtk_widget_destroy(GTK_WIDGET(dialog));
 }
