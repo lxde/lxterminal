@@ -770,7 +770,8 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
         }
 
         /* Resize the window. */
-        gtk_window_resize(GTK_WINDOW(terminal->window), requisition->width, requisition->height);
+	if (requisition->width > 0 && requisition->height > 0)
+            gtk_window_resize(GTK_WINDOW(terminal->window), requisition->width, requisition->height);
     }
     return FALSE;
 }
@@ -1455,7 +1456,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     }
 
     /* Connect signals. */
-    g_signal_connect(G_OBJECT(terminal->window), "size-request", G_CALLBACK(terminal_window_size_request_event), terminal);
+    g_signal_connect(G_OBJECT(terminal->window), "size-allocate", G_CALLBACK(terminal_window_size_request_event), terminal);
     return terminal;
 }
 
