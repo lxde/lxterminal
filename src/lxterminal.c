@@ -111,10 +111,10 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, const gchar * exec);
 static void terminal_free(Term * term);
 static void terminal_menubar_initialize(LXTerminal * terminal);
-static void terminal_accelerator_initialize(LXTerminal * terminal);
 static void terminal_menu_accelerator_update(LXTerminal * terminal);
 static void terminal_settings_apply(LXTerminal * terminal);
 static void terminal_update_menu_shortcuts(Setting * setting);
+static void terminal_initialize_menu_shortcuts(Setting * setting);
 
 /* Menu accelerator saved when the user disables it. */
 static char * saved_menu_accelerator = NULL;
@@ -1174,7 +1174,7 @@ static void terminal_menubar_initialize(LXTerminal * terminal)
     terminal->action_group = gtk_action_group_new("MenuBar");
     gtk_action_group_set_translation_domain(terminal->action_group, GETTEXT_PACKAGE);
     /* modify accelerators by setting */
-    terminal_update_menu_shortcuts(get_setting());
+    terminal_initialize_menu_shortcuts(get_setting());
     gtk_action_group_add_actions(terminal->action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
     gtk_ui_manager_insert_action_group(manager, terminal->action_group, 0);
     
@@ -1185,68 +1185,6 @@ static void terminal_menubar_initialize(LXTerminal * terminal)
     /* Extract accelerators from manager and add it to top level window. */
     terminal->accel_group = gtk_ui_manager_get_accel_group(manager);
     
-    gtk_window_add_accel_group(GTK_WINDOW(terminal->window), terminal->accel_group);
-}
-
-/* Allocate, initialize, and connect up an accelerator group for the accelerators on a new terminal. */
-/* !! now unused, may be used for online change accelerators after changing preferences */
-static void terminal_accelerator_initialize(LXTerminal * terminal)
-{
-    /* Free if exists. */
-    if (terminal->accel_group)
-    {
-        gtk_window_remove_accel_group(GTK_WINDOW(terminal->window), terminal->accel_group);
-    }
-    guint key;
-    GdkModifierType mods;
-    
-    Setting * setting = get_setting();
-    terminal->accel_group = gtk_accel_group_new();
-
-    gtk_accelerator_parse(setting->new_window_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_new_window_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->quit_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(gtk_main_quit), NULL, NULL));
-
-    gtk_accelerator_parse(setting->new_tab_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_new_tab_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->close_tab_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_close_tab_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->copy_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_copy_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->paste_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_paste_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->name_tab_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_name_tab_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->previous_tab_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_previous_tab_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->next_tab_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_next_tab_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->move_tab_left_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_move_tab_left_accelerator), terminal, NULL));
-
-    gtk_accelerator_parse(setting->move_tab_right_accel, &key, &mods);
-    gtk_accel_group_connect(terminal->accel_group, key, mods, GTK_ACCEL_LOCKED, 
-        g_cclosure_new_swap(G_CALLBACK(terminal_move_tab_right_accelerator), terminal, NULL));
-
     gtk_window_add_accel_group(GTK_WINDOW(terminal->window), terminal->accel_group);
 }
 
@@ -1479,9 +1417,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
 
-    /* Initialize accelerators. */
-    terminal_accelerator_initialize(terminal);
-
     /* Show the widget, so it is realized and has a window. */
     gtk_widget_show_all(terminal->window);
 
@@ -1564,14 +1499,44 @@ static void terminal_settings_apply(LXTerminal * terminal)
 void terminal_settings_apply_to_all(LXTerminal * terminal)
 {
     /* Recreate accelerators, may be changed. */
-    g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_accelerator_initialize, terminal);
+    terminal_update_menu_shortcuts(get_setting());
     /* Apply settings to all open windows. */
     g_ptr_array_foreach(terminal->parent->windows, (GFunc) terminal_settings_apply, get_setting());
     get_setting()->geometry_change = FALSE;
 }
 
-/* Update terminal shortcuts. */
+/* Update terminal menu shortcuts. */
 void terminal_update_menu_shortcuts(Setting * setting)
+{
+    guint key;
+    GdkModifierType mods;
+
+    gtk_accelerator_parse(setting->new_window_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/File_NewWindow", key, mods, FALSE);
+    gtk_accelerator_parse(setting->new_tab_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/File_NewTab", key, mods, FALSE);
+    gtk_accelerator_parse(setting->close_tab_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/File_CloseTab", key, mods, FALSE);
+    gtk_accelerator_parse(setting->quit_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/File_Quit", key, mods, FALSE);
+    gtk_accelerator_parse(setting->copy_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_Copy", key, mods, FALSE);
+    gtk_accelerator_parse(setting->paste_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_Paste", key, mods, FALSE);
+    gtk_accelerator_parse(setting->name_tab_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Tabs_NameTab", key, mods, FALSE);
+    gtk_accelerator_parse(setting->previous_tab_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Tabs_PreviousTab", key, mods, FALSE);
+    gtk_accelerator_parse(setting->next_tab_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Tabs_NextTab", key, mods, FALSE);
+    gtk_accelerator_parse(setting->move_tab_left_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Tabs_MoveTabLeft", key, mods, FALSE);
+    gtk_accelerator_parse(setting->move_tab_right_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Tabs_MoveTabRight", key, mods, FALSE);
+}
+
+/* Initialize terminal menu shortcuts. */
+void terminal_initialize_menu_shortcuts(Setting * setting)
 {
     /* Update static array by index. */
     menu_items[4].accelerator = setting->new_window_accel;
