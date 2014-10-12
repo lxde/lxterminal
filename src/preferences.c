@@ -241,6 +241,11 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "toggled", 
         G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->hide_close_button);
 
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "hide_pointer"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->hide_pointer);
+    g_signal_connect(G_OBJECT(w), "toggled", 
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->hide_pointer);
+
     w = GTK_WIDGET(gtk_builder_get_object(builder, "select_by_word"));
     gtk_entry_set_text(GTK_ENTRY(w), setting->word_selection_characters);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 

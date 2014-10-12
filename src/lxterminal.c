@@ -1008,6 +1008,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     vte_terminal_set_cursor_blink_mode(VTE_TERMINAL(term->vte), ((setting->cursor_blink) ? VTE_CURSOR_BLINK_ON : VTE_CURSOR_BLINK_OFF));
     vte_terminal_set_cursor_shape(VTE_TERMINAL(term->vte), ((setting->cursor_underline) ? VTE_CURSOR_SHAPE_UNDERLINE : VTE_CURSOR_SHAPE_BLOCK));
     vte_terminal_set_audible_bell(VTE_TERMINAL(term->vte), setting->audible_bell);
+    vte_terminal_set_mouse_autohide(VTE_TERMINAL(term->vte), setting->hide_pointer);
 
     /* Background and foreground colors. */
     if (terminal->rgba)

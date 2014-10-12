@@ -56,6 +56,7 @@ void print_setting()
     printf("Hide scrollbar: %i\n", setting->hide_scroll_bar);
     printf("Hide menubar: %i\n", setting->hide_menu_bar);
     printf("Hide Close Button: %i\n", setting->hide_close_button);
+    printf("Hide mouse pointer: %i\n", setting->hide_pointer);
     printf("Word selection characters: %s\n", setting->word_selection_characters);
     printf("Disable F10: %i\n", setting->disable_f10);
     printf("Disable Alt: %i\n", setting->disable_alt);
@@ -115,6 +116,7 @@ void save_setting()
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_SCROLLBAR, setting->hide_scroll_bar);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, setting->hide_menu_bar);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, setting->hide_close_button);
+    g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_POINTER, setting->hide_pointer);
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, setting->word_selection_characters);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_F10, setting->disable_f10);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_ALT, setting->disable_alt);
@@ -274,6 +276,8 @@ Setting * load_setting()
         setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, NULL);
         setting->hide_close_button = 
             g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, NULL);
+        setting->hide_pointer = 
+            g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_POINTER, NULL);
         setting->word_selection_characters = 
             g_strdup(g_key_file_get_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, NULL));
         setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_F10, NULL);
