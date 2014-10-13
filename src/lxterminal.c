@@ -1245,7 +1245,9 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
                 }
                 else
                 {
-                    gchar * new_command = g_strconcat(arguments->command, " ", *argv_cursor, NULL);
+                    gchar * quoted_arg = g_shell_quote(*argv_cursor);
+                    gchar * new_command = g_strconcat(arguments->command, " ", quoted_arg, NULL);
+                    g_free(quoted_arg);
                     g_free(arguments->command);
                     arguments->command = new_command;
                 }
