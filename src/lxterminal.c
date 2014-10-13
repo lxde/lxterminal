@@ -73,31 +73,31 @@ static void terminal_initialize_switch_tab_accelerator(Term * term);
 static void terminal_update_alt(LXTerminal *terminal);
 static gboolean terminal_switch_tab_accelerator(Term * term);
 static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_clear_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, LXTerminal * terminal);
 static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_name_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_name_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_previous_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_previous_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_next_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_next_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_move_tab_execute(LXTerminal * terminal, gint direction);
 static void terminal_move_tab_left_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_move_tab_left_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_move_tab_left_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_move_tab_right_activate_event(GtkAction * action, LXTerminal * terminal);
-static gboolean terminal_move_tab_right_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+//static gboolean terminal_move_tab_right_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal);
 
 /* Window creation, destruction, and control. */
@@ -299,8 +299,8 @@ static gchar * terminal_get_current_dir(LXTerminal * terminal)
     if (current != -1)
     {
         /* Search for the Term structure corresponding to the current tab. */
-        int i;
-        for (i = 0; i < terminal->terms->len; i += 1)
+        guint i;
+        for (i = 0; i < terminal->terms->len; i++)
         {
             Term * term = g_ptr_array_index(terminal->terms, i);
             if (term->index == current)
@@ -351,7 +351,7 @@ static void terminal_initialize_switch_tab_accelerator(Term * term)
 /* update <ALT>n status. */
 void terminal_update_alt(LXTerminal *terminal)
 {
-    int i;
+    guint i;
     Term * term;
 
     /* disable alt when the option is switched on or terminal has no other tabs */
@@ -409,11 +409,11 @@ static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * 
 }
 
 /* Handler for accelerator <SHIFT><CTRL> N.  Open a new window. */
-static gboolean terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_new_window_activate_event(NULL, terminal);
     return TRUE;
-}
+}*/
 
 /* Handler for "activate" signal on File/New Tab menu item.
  * Open a new tab. */
@@ -447,11 +447,11 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
 }
 
 /* Handler for accelerator <SHIFT><CTRL> T.  Open a new tab. */
-static gboolean terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_new_tab_activate_event(NULL, terminal);
     return TRUE;
-}
+}*/
 
 /* Handler for "activate" signal on File/Close Tab menu item.
  * Close the current tab. */
@@ -462,11 +462,11 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
 }
 
 /* Handler for accelerator <SHIFT><CTRL> W.  Close the current tab. */
-static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_close_tab_activate_event(NULL, terminal);
     return TRUE;
-}
+}*/
 
 /* Handler for "activate" signal on File/Close Window menu item.
  * Close the current window. */
@@ -480,11 +480,11 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
 }
 
 /* Handler for accelerator <SHIFT><CTRL> Q.  Close the current window. */
-static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_close_window_activate_event(NULL, terminal);
     return TRUE;
-}
+}*/
 
 static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal)
 {
@@ -505,9 +505,9 @@ static void terminal_copy_activate_event(GtkAction * action, LXTerminal * termin
 }
 
 /* Handler for accelerator <CTRL><SHIFT> C.  Copy to the clipboard. */
-static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
-    /* fire event only if text selected */
+    // fire event only if text selected
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
     if (vte_terminal_get_has_selection(VTE_TERMINAL(term->vte)))
     {
@@ -516,10 +516,10 @@ static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, G
     }
     else
     {   
-        /* if not selected send keys to terminal */
+        // if not selected send keys to terminal
         return FALSE;
     }
-}
+}*/
 
 /* Handler for "activate" signal on Edit/Paste menu item.
  * Paste from the clipboard. */
@@ -539,11 +539,11 @@ static void terminal_clear_activate_event(GtkAction * action, LXTerminal * termi
 }
 
 /* Handler for accelerator <CTRL><SHIFT> V.  Paste from the clipboard. */
-static gboolean terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_paste_activate_event(NULL, terminal);
     return TRUE;
-}
+}*/
 
 /* Handler for "response" signal on Name Tab dialog. */
 static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, LXTerminal * terminal)
@@ -556,8 +556,8 @@ static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, 
         if (current != -1)
         {
             /* Search for the Term structure corresponding to the current tab. */
-            int i;
-            for (i = 0; i < terminal->terms->len; i += 1)
+            guint i;
+            for (i = 0; i < terminal->terms->len; i++)
             {
                 Term * term = g_ptr_array_index(terminal->terms, i);
                 if (term->index == current)
@@ -603,8 +603,8 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
     if (current != -1)
     {
         /* Search for the Term structure corresponding to the current tab. */
-        int i;
-        for (i = 0; i < terminal->terms->len; i += 1)
+        guint i;
+        for (i = 0; i < terminal->terms->len; i++)
         {
             Term * term = g_ptr_array_index(terminal->terms, i);
             if (term->index == current)
@@ -619,11 +619,11 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
 }
 
 /* Handler for accelerator <CTRL><SHIFT> R.  Name the tab. */
-static gboolean terminal_name_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_name_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_name_tab_activate_event(NULL, terminal);
     return TRUE;
-}
+}*/
 
 /* Handler for "activate" signal on Tabs/Previous Tab menu item.
  * Cycle through tabs in the reverse direction. */
@@ -641,12 +641,12 @@ static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal 
 }
 
 /* Handler for accelerator <CTRL><PAGE UP>.  Cycle through tabs in the reverse direction. */
-static gboolean terminal_previous_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_previous_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     GtkAction *_action = gtk_action_group_get_action(terminal->action_group, "Tabs_PreviousTab");
     gtk_action_activate(_action);
     return TRUE;
-}
+}*/
 
 /* Handler for "activate" signal on Tabs/Next Tab menu item.
  * Cycle through tabs in the forward direction. */
@@ -664,12 +664,12 @@ static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * te
 }
 
 /* Handler for accelerator <CTRL><PAGE DOWN>.  Cycle through tabs in the forward direction. */
-static gboolean terminal_next_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_next_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     GtkAction *_action = gtk_action_group_get_action(terminal->action_group, "Tabs_NextTab");
     gtk_action_activate(_action);
     return TRUE;
-}
+}*/
 
 /* Helper for move tab left and right. */
 static void terminal_move_tab_execute(LXTerminal * terminal, gint direction)
@@ -678,8 +678,8 @@ static void terminal_move_tab_execute(LXTerminal * terminal, gint direction)
     gint current_page_number = gtk_notebook_get_current_page(notebook);
     gint target_page_number = current_page_number + direction;
 
-    /* prevent out of index */
-    if (target_page_number < 0 || target_page_number >= terminal->terms->len)
+    /* prevent out of index, cast should be safe as we catch negatives prior */
+    if (target_page_number < 0 || (guint) target_page_number >= terminal->terms->len)
     {
         return;
     }
@@ -706,11 +706,11 @@ static void terminal_move_tab_left_activate_event(GtkAction * action, LXTerminal
 }
 
 /* Handler for accelerator <SHIFT><CTRL><PAGE UP>.  Move the tab one position in the reverse direction. */
-static gboolean terminal_move_tab_left_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_move_tab_left_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_move_tab_execute(terminal, -1);
     return TRUE;
-}
+}*/
 
 /* Handler for "activate" signal on Tabs/Move Tab Right menu item.
  * Move the tab one position in the forward direction. */
@@ -720,11 +720,11 @@ static void terminal_move_tab_right_activate_event(GtkAction * action, LXTermina
 }
 
 /* Handler for accelerator <SHIFT><CTRL><PAGE DOWN>.  Move the tab one position in the forward direction. */
-static gboolean terminal_move_tab_right_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+/*static gboolean terminal_move_tab_right_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_move_tab_execute(terminal, 1);
     return TRUE;
-}
+}*/
 
 /* Handler for "activate" signal on Help/About menu item. */
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal)
@@ -779,8 +779,8 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
         gtk_border_free(border);
 
         /* Set hints into all terminals.  This makes sure we resize on character cell boundaries. */
-        int i;
-        for (i = 0; i < terminal->terms->len; i += 1)
+        guint i;
+        for (i = 0; i < terminal->terms->len; i++)
         {
             Term * term = g_ptr_array_index(terminal->terms, i);
             gtk_window_set_geometry_hints(GTK_WINDOW(terminal->window),
@@ -800,8 +800,8 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
 static void terminal_window_set_fixed_size(LXTerminal * terminal)
 {
     terminal->fixed_size = TRUE;
-    int i;
-    for (i = 0; i < terminal->terms->len; i += 1)
+    guint i;
+    for (i = 0; i < terminal->terms->len; i++)
     {
         Term * term = g_ptr_array_index(terminal->terms, i);
         gtk_window_set_geometry_hints(GTK_WINDOW(terminal->window),
@@ -846,11 +846,11 @@ static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_obje
     {
         /* Remove the element and decrease the index number of each succeeding element. */
         g_ptr_array_remove_index(terminal->parent->windows, terminal->index);
-        int i;
-        for (i = terminal->index; i < terminal->parent->windows->len; i += 1)
+        guint i;
+        for (i = terminal->index; i < terminal->parent->windows->len; i++)
         {
             LXTerminal * t = g_ptr_array_index(terminal->parent->windows, i);
-            t->index -= 1;
+            t->index --;
         }
 
         /* Release */
@@ -876,11 +876,11 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
     {
         /* Remove the element and decrease the index number of each succeeding element. */
         g_ptr_array_remove_index(terminal->terms, term->index);
-        int i;
+        guint i;
         for (i = term->index; i < terminal->terms->len; i++)
         {
             Term * t = g_ptr_array_index(terminal->terms, i);
-            t->index -= 1;
+            t->index --;
         }
 
         /* Delete the tab and free the Term structure. */
@@ -938,8 +938,8 @@ static void terminal_show_popup_menu(VteTerminal * vte, GdkEventButton * event, 
     guint merge_id = gtk_ui_manager_new_merge_id(manager);
     gtk_ui_manager_add_ui(manager, merge_id, "/", "VTEMenu", NULL, GTK_UI_MANAGER_POPUP, FALSE);
 
-    int i;
-    for (i = 1; i < VTE_MENUITEM_COUNT; i += 1)
+    size_t i;
+    for (i = 1; i < VTE_MENUITEM_COUNT; i++)
     {
         if (strcmp(vte_menu_items[i].label, "Sep") == 0)
             gtk_ui_manager_add_ui(manager, merge_id, "/VTEMenu",
@@ -1200,7 +1200,7 @@ static void terminal_menubar_initialize(LXTerminal * terminal)
     gtk_action_group_add_actions(terminal->action_group, menu_items, MENUBAR_MENUITEM_COUNT, terminal);
     gtk_ui_manager_insert_action_group(manager, terminal->action_group, 0);
     
-    guint id = gtk_ui_manager_add_ui_from_file (manager, PACKAGE_DATA_DIR "/lxterminal/menu.ui", NULL);
+    gtk_ui_manager_add_ui_from_file (manager, PACKAGE_DATA_DIR "/lxterminal/menu.ui", NULL);
     
     terminal->menu = gtk_ui_manager_get_widget(manager, "/MenuBar");
     
@@ -1239,7 +1239,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
 
     gboolean login_shell = FALSE;
     char * * argv_cursor = argv + 1;
-    argc -= 1;
+    argc --;
     while (argc > 0)
     {
         char * argument = *argv_cursor;
@@ -1257,8 +1257,8 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         {
             while (argc > 1)
             {
-                argc -= 1;
-                argv_cursor += 1;
+                argc --;
+                argv_cursor ++;
                 if (arguments->command == NULL)
                 {
                     arguments->command = g_strdup(*argv_cursor);
@@ -1307,8 +1307,8 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         else if (((strcmp(argument, "--title") == 0) || (strcmp(argument, "-t") == 0) || (strcmp(argument, "-T") == 0))
         && (argc > 1))
         {
-            argc -= 1;
-            argv_cursor += 1;
+            argc --;
+            argv_cursor ++;
             arguments->title = *argv_cursor;
         }
 
@@ -1322,8 +1322,8 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         else
             return FALSE;
 
-        argc -= 1;
-        argv_cursor += 1;
+        argc --;
+        argv_cursor ++;
     }
 
     /* Handle --loginshell. */
@@ -1453,7 +1453,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     if (arguments->tabs != NULL)
     {
         int tab_index = 0;
-        int character_position;
         char * strings = g_strdup(arguments->tabs);
         /* use token to slice strings to different tab names */
         char * token = strtok(strings, ",");
@@ -1489,8 +1488,8 @@ static void terminal_settings_apply(LXTerminal * terminal)
     terminal->rgba = gtk_widget_is_composited(terminal->window);
 
     /* Apply settings to all windows. */
-    int i;
-    for (i = 0; i < terminal->terms->len; i += 1)
+    guint i;
+    for (i = 0; i < terminal->terms->len; i++)
     {
         terminal_settings_apply_to_term(terminal, g_ptr_array_index(terminal->terms, i));
     }
