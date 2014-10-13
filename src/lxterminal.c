@@ -101,7 +101,7 @@ static void terminal_move_tab_right_activate_event(GtkAction * action, LXTermina
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal);
 
 /* Window creation, destruction, and control. */
-static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequisition * requisition, LXTerminal * terminal);
+static gboolean terminal_window_size_allocate_event(GtkWidget * widget, GtkAllocation * allocation, LXTerminal * terminal);
 static void terminal_window_set_fixed_size(LXTerminal * terminal);
 static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal);
 static void terminal_window_title_changed_event(GtkWidget * vte, Term * term);
@@ -758,7 +758,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
 }
 
 /* Handler for "size-request" signal on the top level window. */
-static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequisition * requisition, LXTerminal * terminal)
+static gboolean terminal_window_size_allocate_event(GtkWidget * widget, GtkAllocation * allocation, LXTerminal * terminal)
 {
     /* Only do this once. */
     if (terminal->fixed_size)
@@ -790,8 +790,8 @@ static gboolean terminal_window_size_request_event(GtkWidget * widget, GtkRequis
         }
 
         /* Resize the window. */
-	if (requisition->width > 0 && requisition->height > 0)
-            gtk_window_resize(GTK_WINDOW(terminal->window), requisition->width, requisition->height);
+	if (allocation->width > 0 && allocation->height > 0)
+            gtk_window_resize(GTK_WINDOW(terminal->window), allocation->width, allocation->height);
     }
     return FALSE;
 }
@@ -887,12 +887,12 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
         gtk_notebook_remove_page(GTK_NOTEBOOK(terminal->notebook), term->index);
         terminal_free(term);
 
-        /* If only one page is left, hide the tab and correct the geometry. */
+        /* If only one page is left, hide the tab. */
         if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
-        {
             gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
-            terminal_geometry_restore(g_ptr_array_index(terminal->terms, 0));
-        }
+
+        /* Restore geometry regardless. */
+        terminal_geometry_restore(g_ptr_array_index(terminal->terms, 0));
 
         /* update <ALT>n status */
         terminal_update_alt(terminal);
@@ -1477,7 +1477,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     }
 
     /* Connect signals. */
-    g_signal_connect(G_OBJECT(terminal->window), "size-allocate", G_CALLBACK(terminal_window_size_request_event), terminal);
+    g_signal_connect(G_OBJECT(terminal->window), "size-allocate", G_CALLBACK(terminal_window_size_allocate_event), terminal);
     return terminal;
 }
 
