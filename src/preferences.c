@@ -142,7 +142,7 @@ static gboolean preferences_dialog_shortcut_focus_out_event(GtkWidget * widget, 
         return FALSE;
 
     /* Look for dupplicate accelerator. */
-    for(sib = gtk_container_get_children(GTK_CONTAINER(widget->parent)); sib; sib = sib->next)
+    for(sib = gtk_container_get_children(GTK_CONTAINER(gtk_widget_get_parent(widget))); sib; sib = sib->next)
 	if(GTK_IS_ENTRY(sib->data) && GTK_WIDGET(sib->data) != widget && !g_strcmp0(cur, gtk_entry_get_text(GTK_ENTRY(sib->data))))
 	{
 	    gtk_entry_set_text(GTK_ENTRY(widget), s);
