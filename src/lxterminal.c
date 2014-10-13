@@ -78,6 +78,8 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
 static gboolean terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal);
 static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
+static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal);
+static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal);
 static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
@@ -139,11 +141,11 @@ static GtkActionEntry menu_items[] =
 /* 1 */    { "Edit", NULL, N_("_Edit"), NULL, NULL, NULL },
 /* 2 */    { "Tabs", NULL, N_("_Tabs"), NULL, NULL, NULL },
 /* 3 */    { "Help", NULL, N_("_Help"), NULL, NULL, NULL },
-/* 4 */    { "File_NewWindow", GTK_STOCK_ADD, N_("New _Window"), NEW_WINDOW_ACCEL_DEF, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
-/* 5 */    { "File_NewTab", GTK_STOCK_ADD, N_("New _Tab"), NEW_TAB_ACCEL_DEF, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
+/* 4 */    { "File_NewWindow", GTK_STOCK_ADD, N_("_New Window"), NEW_WINDOW_ACCEL_DEF, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
+/* 5 */    { "File_NewTab", GTK_STOCK_ADD, N_("New T_ab"), NEW_TAB_ACCEL_DEF, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
 /* 6 */    { "File_Sep1", NULL, "Sep" },
 /* 7 */    { "File_CloseTab", GTK_STOCK_CLOSE, N_("_Close Tab"), CLOSE_TAB_ACCEL_DEF, "Close Tab", G_CALLBACK(terminal_close_tab_activate_event) },
-/* 8 */    { "File_Quit", GTK_STOCK_QUIT, N_("_Quit"), QUIT_ACCEL_DEF, "Quit", G_CALLBACK(gtk_main_quit) },
+/* 8 */    { "File_CloseWindow", GTK_STOCK_QUIT, N_("Close _Window"), CLOSE_WINDOW_ACCEL_DEF, "Close Window", G_CALLBACK(terminal_close_window_activate_event) },
 /* 9 */    { "Edit_Copy", GTK_STOCK_COPY, N_("Cop_y"), COPY_ACCEL_DEF, "Copy", G_CALLBACK(terminal_copy_activate_event) },
 /* 10 */    { "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL_DEF, "Paste", G_CALLBACK(terminal_paste_activate_event) },
 /* 11 */    { "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
@@ -463,6 +465,24 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
 static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
 {
     terminal_close_tab_activate_event(NULL, terminal);
+    return TRUE;
+}
+
+/* Handler for "activate" signal on File/Close Window menu item.
+ * Close the current window. */
+static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+    /* Play it safe and delete tabs one by one. */
+    while(terminal->terms->len > 0)
+    {
+        terminal_child_exited_event(NULL, g_ptr_array_index(terminal->terms, 0));
+    }
+}
+
+/* Handler for accelerator <SHIFT><CTRL> Q.  Close the current window. */
+static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
+{
+    terminal_close_window_activate_event(NULL, terminal);
     return TRUE;
 }
 
@@ -1521,8 +1541,8 @@ void terminal_update_menu_shortcuts(Setting * setting)
     gtk_accel_map_change_entry("<Actions>/MenuBar/File_NewTab", key, mods, FALSE);
     gtk_accelerator_parse(setting->close_tab_accel, &key, &mods);
     gtk_accel_map_change_entry("<Actions>/MenuBar/File_CloseTab", key, mods, FALSE);
-    gtk_accelerator_parse(setting->quit_accel, &key, &mods);
-    gtk_accel_map_change_entry("<Actions>/MenuBar/File_Quit", key, mods, FALSE);
+    gtk_accelerator_parse(setting->close_window_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/File_CloseWindow", key, mods, FALSE);
     gtk_accelerator_parse(setting->copy_accel, &key, &mods);
     gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_Copy", key, mods, FALSE);
     gtk_accelerator_parse(setting->paste_accel, &key, &mods);
@@ -1546,7 +1566,7 @@ void terminal_initialize_menu_shortcuts(Setting * setting)
     menu_items[4].accelerator = setting->new_window_accel;
     menu_items[5].accelerator = setting->new_tab_accel;
     menu_items[7].accelerator = setting->close_tab_accel;
-    menu_items[8].accelerator = setting->quit_accel;
+    menu_items[8].accelerator = setting->close_window_accel;
     menu_items[9].accelerator = setting->copy_accel;
     menu_items[10].accelerator = setting->paste_accel;
     menu_items[14].accelerator = setting->name_tab_accel;

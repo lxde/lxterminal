@@ -46,7 +46,7 @@
 #define NEW_WINDOW_ACCEL "new_window_accel"
 #define NEW_TAB_ACCEL "new_tab_accel"
 #define CLOSE_TAB_ACCEL "close_tab_accel"
-#define QUIT_ACCEL "quit_accel"
+#define CLOSE_WINDOW_ACCEL "close_window_accel"
 #define COPY_ACCEL "copy_accel"
 #define PASTE_ACCEL "paste_accel"
 #define NAME_TAB_ACCEL "name_tab_accel"
@@ -58,7 +58,7 @@
 #define NEW_WINDOW_ACCEL_DEF "<CTRL><SHIFT>N"
 #define NEW_TAB_ACCEL_DEF "<CTRL><SHIFT>T"
 #define CLOSE_TAB_ACCEL_DEF "<CTRL><SHIFT>W"
-#define QUIT_ACCEL_DEF "<CTRL><SHIFT>Q"
+#define CLOSE_WINDOW_ACCEL_DEF "<CTRL><SHIFT>Q"
 #define COPY_ACCEL_DEF "<CTRL><SHIFT>C"
 #define PASTE_ACCEL_DEF "<CTRL><SHIFT>V"
 #define NAME_TAB_ACCEL_DEF "<CTRL><SHIFT>I"
@@ -95,7 +95,7 @@ typedef struct _setting {
     char * new_window_accel;        /* NEW_WINDOW_ACCEL */
     char * new_tab_accel;       /* NEW_TAB_ACCEL */
     char * close_tab_accel;     /* CLOSE_TAB_ACCEL */
-    char * quit_accel;      /* QUIT_ACCEL */
+    char * close_window_accel;      /* CLOSE_WINDOW_ACCEL */
     char * copy_accel;      /* COPY_ACCEL */
     char * paste_accel;     /* PASTE_ACCEL */
     char * name_tab_accel;      /* NAME_TAB_ACCEL */

@@ -277,10 +277,10 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
         G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->close_tab_accel);
 
-    w = GTK_WIDGET(gtk_builder_get_object(builder, QUIT_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->quit_accel);
+    w = GTK_WIDGET(gtk_builder_get_object(builder, CLOSE_WINDOW_ACCEL));
+    gtk_entry_set_text(GTK_ENTRY(w), setting->close_window_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->quit_accel);
+        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->close_window_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, COPY_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->copy_accel);

@@ -5,7 +5,7 @@
       <menuitem name="File_NewTab" action="File_NewTab"/>
       <separator/>
       <menuitem name="File_CloseTab" action="File_CloseTab"/>
-      <menuitem name="File_Quit" action="File_Quit"/>
+      <menuitem name="File_CloseWindow" action="File_CloseWindow"/>
     </menu>
     <menu name="Edit" action="Edit">
       <menuitem name="Edit_Copy" action="Edit_Copy"/>
