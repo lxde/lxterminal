@@ -37,6 +37,7 @@
 #define HIDE_SCROLLBAR "hidescrollbar"
 #define HIDE_MENUBAR "hidemenubar"
 #define HIDE_CLOSE_BUTTON "hideclosebutton"
+#define HIDE_POINTER "hidepointer"
 #define SEL_CHARS "selchars"
 #define DISABLE_F10 "disablef10"
 #define DISABLE_ALT "disablealt"
@@ -45,7 +46,7 @@
 #define NEW_WINDOW_ACCEL "new_window_accel"
 #define NEW_TAB_ACCEL "new_tab_accel"
 #define CLOSE_TAB_ACCEL "close_tab_accel"
-#define QUIT_ACCEL "quit_accel"
+#define CLOSE_WINDOW_ACCEL "close_window_accel"
 #define COPY_ACCEL "copy_accel"
 #define PASTE_ACCEL "paste_accel"
 #define NAME_TAB_ACCEL "name_tab_accel"
@@ -57,7 +58,7 @@
 #define NEW_WINDOW_ACCEL_DEF "<CTRL><SHIFT>N"
 #define NEW_TAB_ACCEL_DEF "<CTRL><SHIFT>T"
 #define CLOSE_TAB_ACCEL_DEF "<CTRL><SHIFT>W"
-#define QUIT_ACCEL_DEF "<CTRL><SHIFT>Q"
+#define CLOSE_WINDOW_ACCEL_DEF "<CTRL><SHIFT>Q"
 #define COPY_ACCEL_DEF "<CTRL><SHIFT>C"
 #define PASTE_ACCEL_DEF "<CTRL><SHIFT>V"
 #define NAME_TAB_ACCEL_DEF "<CTRL><SHIFT>I"
@@ -83,6 +84,7 @@ typedef struct _setting {
     gboolean hide_scroll_bar;       /* True if scroll bar is NOT visible */
     gboolean hide_menu_bar;     /* True if menu bar is NOT visible */
     gboolean hide_close_button;     /* True if close buttons are NOT visible */
+    gboolean hide_pointer;      /* True if mouse pointer should be auto-hidden */
     char * word_selection_characters;   /* Characters that act as word breaks during selection by word */
     gboolean disable_f10;       /* True if F10 will be passed to program; false if it brings up File menu */
     gboolean disable_alt;       /* True if Alt-n is passed to shell; false if it is used to switch between tabs */
@@ -93,7 +95,7 @@ typedef struct _setting {
     char * new_window_accel;        /* NEW_WINDOW_ACCEL */
     char * new_tab_accel;       /* NEW_TAB_ACCEL */
     char * close_tab_accel;     /* CLOSE_TAB_ACCEL */
-    char * quit_accel;      /* QUIT_ACCEL */
+    char * close_window_accel;      /* CLOSE_WINDOW_ACCEL */
     char * copy_accel;      /* COPY_ACCEL */
     char * paste_accel;     /* PASTE_ACCEL */
     char * name_tab_accel;      /* NAME_TAB_ACCEL */

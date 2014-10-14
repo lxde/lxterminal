@@ -56,6 +56,7 @@ void print_setting()
     printf("Hide scrollbar: %i\n", setting->hide_scroll_bar);
     printf("Hide menubar: %i\n", setting->hide_menu_bar);
     printf("Hide Close Button: %i\n", setting->hide_close_button);
+    printf("Hide mouse pointer: %i\n", setting->hide_pointer);
     printf("Word selection characters: %s\n", setting->word_selection_characters);
     printf("Disable F10: %i\n", setting->disable_f10);
     printf("Disable Alt: %i\n", setting->disable_alt);
@@ -65,7 +66,7 @@ void print_setting()
     printf("NEW_WINDOW_ACCEL: %s\n", setting->new_window_accel);
     printf("NEW_TAB_ACCEL: %s\n", setting->new_tab_accel);
     printf("CLOSE_TAB_ACCEL: %s\n", setting->close_tab_accel);
-    printf("QUIT_ACCEL: %s\n", setting->quit_accel);
+    printf("CLOSE_WINDOW_ACCEL: %s\n", setting->close_window_accel);
     printf("COPY_ACCEL: %s\n", setting->copy_accel);
     printf("PASTE_ACCEL: %s\n", setting->paste_accel);
     printf("NAME_TAB_ACCEL: %s\n", setting->name_tab_accel);
@@ -115,6 +116,7 @@ void save_setting()
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_SCROLLBAR, setting->hide_scroll_bar);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, setting->hide_menu_bar);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, setting->hide_close_button);
+    g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_POINTER, setting->hide_pointer);
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, setting->word_selection_characters);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_F10, setting->disable_f10);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_ALT, setting->disable_alt);
@@ -123,7 +125,7 @@ void save_setting()
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, NEW_WINDOW_ACCEL, setting->new_window_accel);
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, NEW_TAB_ACCEL, setting->new_tab_accel);
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_TAB_ACCEL, setting->close_tab_accel);
-    g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, QUIT_ACCEL, setting->quit_accel);
+    g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_WINDOW_ACCEL, setting->close_window_accel);
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, COPY_ACCEL, setting->copy_accel);
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, PASTE_ACCEL, setting->paste_accel);
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, NAME_TAB_ACCEL, setting->name_tab_accel);
@@ -173,7 +175,7 @@ Setting * copy_setting(Setting * setting)
     new_setting->new_window_accel = g_strdup(setting->new_window_accel);
     new_setting->new_tab_accel = g_strdup(setting->new_tab_accel);
     new_setting->close_tab_accel = g_strdup(setting->close_tab_accel);
-    new_setting->quit_accel = g_strdup(setting->quit_accel);
+    new_setting->close_window_accel = g_strdup(setting->close_window_accel);
     new_setting->copy_accel = g_strdup(setting->copy_accel);
     new_setting->paste_accel = g_strdup(setting->paste_accel);
     new_setting->name_tab_accel = g_strdup(setting->name_tab_accel);
@@ -196,7 +198,7 @@ void free_setting(Setting * setting)
     g_free(setting->new_window_accel);
     g_free(setting->new_tab_accel);
     g_free(setting->close_tab_accel);
-    g_free(setting->quit_accel);
+    g_free(setting->close_window_accel);
     g_free(setting->copy_accel);
     g_free(setting->paste_accel);
     g_free(setting->name_tab_accel);
@@ -274,6 +276,8 @@ Setting * load_setting()
         setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, NULL);
         setting->hide_close_button = 
             g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, NULL);
+        setting->hide_pointer = 
+            g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_POINTER, NULL);
         setting->word_selection_characters = 
             g_strdup(g_key_file_get_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, NULL));
         setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_F10, NULL);
@@ -286,8 +290,8 @@ Setting * load_setting()
             g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_TAB_ACCEL, NULL));
         setting->close_tab_accel = 
             g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_TAB_ACCEL, NULL));
-        setting->quit_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, QUIT_ACCEL, NULL));
+        setting->close_window_accel = 
+            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_WINDOW_ACCEL, NULL));
         setting->copy_accel = 
             g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, COPY_ACCEL, NULL));
         setting->paste_accel = 
@@ -333,9 +337,9 @@ Setting * load_setting()
     {
         setting->close_tab_accel = g_strdup(CLOSE_TAB_ACCEL_DEF);
     }
-    if (setting->quit_accel == NULL)
+    if (setting->close_window_accel == NULL)
     {
-        setting->quit_accel = g_strdup(QUIT_ACCEL_DEF);
+        setting->close_window_accel = g_strdup(CLOSE_WINDOW_ACCEL_DEF);
     }
     if (setting->copy_accel == NULL)
     {
