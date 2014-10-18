@@ -765,7 +765,6 @@ static gboolean terminal_window_size_allocate_event(GtkWidget * widget, GtkAlloc
     {
         /* No longer fixed size. */
         terminal->fixed_size = FALSE;
-
         /* Initialize geometry hints structure. */
         Term * term = g_ptr_array_index(terminal->terms, 0);
         GtkBorder * border = terminal_get_border(term);
@@ -1086,6 +1085,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     term->scrollbar = gtk_vscrollbar_new(NULL);
     gtk_box_pack_start(GTK_BOX(term->box), term->vte, TRUE, TRUE, 0);
     gtk_box_pack_start(GTK_BOX(term->box), term->scrollbar, FALSE, TRUE, 0);
+    gtk_widget_set_no_show_all(GTK_WIDGET(term->scrollbar), TRUE);
 
     /* Set up the VTE. */
     setlocale(LC_ALL, "");
@@ -1398,6 +1398,9 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 
     /* Create the menu bar as the child of the vertical box. */
     terminal_menubar_initialize(terminal);
+    gtk_widget_set_no_show_all(GTK_WIDGET(terminal->menu), TRUE);
+    if(setting->hide_menu_bar)
+        gtk_widget_hide(GTK_WIDGET(terminal->menu));
     gtk_box_pack_start(GTK_BOX(terminal->box), terminal->menu, FALSE, TRUE, 0);
 
     /* Create a notebook as the child of the vertical box. */
@@ -1487,13 +1490,6 @@ static void terminal_settings_apply(LXTerminal * terminal)
     /* Reinitialize "composited". */
     terminal->rgba = gtk_widget_is_composited(terminal->window);
 
-    /* Apply settings to all windows. */
-    guint i;
-    for (i = 0; i < terminal->terms->len; i++)
-    {
-        terminal_settings_apply_to_term(terminal, g_ptr_array_index(terminal->terms, i));
-    }
-
     /* Update tab position. */
     terminal->tab_position = terminal_tab_get_position_id(get_setting()->tab_position);
     terminal_tab_set_position(terminal->notebook, terminal->tab_position);
@@ -1512,6 +1508,13 @@ static void terminal_settings_apply(LXTerminal * terminal)
     else
     {
         gtk_widget_show(terminal->menu);
+    }
+
+    /* Apply settings to all tabs. */
+    guint i;
+    for (i = 0; i < terminal->terms->len; i++)
+    {
+        terminal_settings_apply_to_term(terminal, g_ptr_array_index(terminal->terms, i));
     }
 
     /* update <ALT>n status */
