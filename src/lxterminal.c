@@ -890,9 +890,6 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
         if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
             gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
 
-        /* Restore geometry regardless. */
-        terminal_geometry_restore(g_ptr_array_index(terminal->terms, 0));
-
         /* update <ALT>n status */
         terminal_update_alt(terminal);
     }
