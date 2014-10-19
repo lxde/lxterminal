@@ -63,7 +63,7 @@ static void preferences_dialog_allow_bold_toggled_event(GtkToggleButton * widget
 static void preferences_dialog_tab_position_changed_event(GtkComboBox * widget, Setting * setting)
 {
     /* Convert the index into a string, which is what we put in the configuration file. */
-    char * p = NULL;
+    const char * p = NULL;
     switch (gtk_combo_box_get_active(widget))
     {
         case 0:

@@ -148,7 +148,8 @@ void save_setting()
         }
         else
         {
-            if (write(fd, file_data, strlen(file_data))); /* warning ignoring result*/
+            if(write(fd, file_data, strlen(file_data)) < 0)
+	         g_warning("Configuration file write failed: %s\n", g_strerror(errno));
             close(fd);
         }
     }
@@ -243,7 +244,7 @@ Setting * load_setting()
     if ((g_file_test(config_path, G_FILE_TEST_EXISTS))
     && (g_key_file_load_from_file(setting->keyfile, config_path, G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS, &error)))
     {
-        setting->font_name = g_strdup(g_key_file_get_string(setting->keyfile, GENERAL_GROUP, FONT_NAME, NULL));
+        setting->font_name = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, FONT_NAME, NULL);
         char * p = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, BG_COLOR, NULL);
         if (p != NULL)
         {
@@ -262,10 +263,9 @@ Setting * load_setting()
         }
         setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISALLOW_BOLD, NULL);
         setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, NULL);
-        setting->cursor_underline = 
-            g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, NULL);
+        setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, NULL);
         setting->audible_bell = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, NULL);
-        setting->tab_position = g_strdup(g_key_file_get_string(setting->keyfile, GENERAL_GROUP, TAB_POS, NULL));
+        setting->tab_position = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, TAB_POS, NULL);
         setting->scrollback = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, SCROLLBACK, &error);
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND))
         {   
@@ -274,38 +274,24 @@ Setting * load_setting()
         }
         setting->hide_scroll_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_SCROLLBAR, NULL);
         setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, NULL);
-        setting->hide_close_button = 
-            g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, NULL);
-        setting->hide_pointer = 
-            g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_POINTER, NULL);
-        setting->word_selection_characters = 
-            g_strdup(g_key_file_get_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, NULL));
+        setting->hide_close_button = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, NULL);
+        setting->hide_pointer = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_POINTER, NULL);
+        setting->word_selection_characters = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, NULL);
         setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_F10, NULL);
         setting->disable_alt = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_ALT, NULL);
         
         /* Shortcut group settings. */
-        setting->new_window_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_WINDOW_ACCEL, NULL));
-        setting->new_tab_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_TAB_ACCEL, NULL));
-        setting->close_tab_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_TAB_ACCEL, NULL));
-        setting->close_window_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_WINDOW_ACCEL, NULL));
-        setting->copy_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, COPY_ACCEL, NULL));
-        setting->paste_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, PASTE_ACCEL, NULL));
-        setting->name_tab_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NAME_TAB_ACCEL, NULL));
-        setting->previous_tab_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, PREVIOUS_TAB_ACCEL, NULL));
-        setting->next_tab_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEXT_TAB_ACCEL, NULL));
-        setting->move_tab_left_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_LEFT_ACCEL, NULL));
-        setting->move_tab_right_accel = 
-            g_strdup(g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_RIGHT_ACCEL, NULL));
+        setting->new_window_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_WINDOW_ACCEL, NULL);
+        setting->new_tab_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_TAB_ACCEL, NULL);
+        setting->close_tab_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_TAB_ACCEL, NULL);
+        setting->close_window_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, CLOSE_WINDOW_ACCEL, NULL);
+        setting->copy_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, COPY_ACCEL, NULL);
+        setting->paste_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, PASTE_ACCEL, NULL);
+        setting->name_tab_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NAME_TAB_ACCEL, NULL);
+        setting->previous_tab_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, PREVIOUS_TAB_ACCEL, NULL);
+        setting->next_tab_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEXT_TAB_ACCEL, NULL);
+        setting->move_tab_left_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_LEFT_ACCEL, NULL);
+        setting->move_tab_right_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_RIGHT_ACCEL, NULL);
     }
     g_free(system_config_path);
     g_free(user_config_path);
