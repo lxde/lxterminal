@@ -1,0 +1,9 @@
+Changes on 0.2.0 since 0.1.11
+
+* Now builds under GTK3
+* Revamp of Preferences, including ability to change keyboard accels.
+* Option to hide mouse cursor on input
+* Fixed issue with 'ctrl-shift-c' accel sending 'ctrl-c' to terminal.
+* Fixed handling of multi-file input on -e/--command (eg -e foo *.txt)
+* Fixed issue where initial geometry is affected by hidden/shown UI elements.
+* File->Quit now replaced by safer "File->Close Window"
