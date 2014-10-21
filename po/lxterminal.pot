@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-14 13:30-0400\n"
+"POT-Creation-Date: 2014-10-21 11:53-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -278,8 +278,8 @@ msgstr ""
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
 #. * Create the new terminal.
-#: ../src/lxterminal.c:428 ../src/lxterminal.c:746 ../src/lxterminal.c:822
-#: ../src/lxterminal.c:1381 ../src/lxterminal.c:1427 ../src/preferences.c:178
+#: ../src/lxterminal.c:428 ../src/lxterminal.c:746 ../src/lxterminal.c:821
+#: ../src/lxterminal.c:1378 ../src/lxterminal.c:1427 ../src/preferences.c:178
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr ""
