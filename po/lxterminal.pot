@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-21 11:53-0400\n"
+"POT-Creation-Date: 2014-10-26 20:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -294,7 +294,7 @@ msgid "translator-credits"
 msgstr ""
 
 #: ../src/lxterminal.c:748
-msgid "Copyright (C) 2008-2011"
+msgid "Copyright (C) 2008-2014"
 msgstr ""
 
 #: ../src/lxterminal.c:749

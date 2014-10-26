@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 23:00+0100\n"
+"POT-Creation-Date: 2014-10-26 20:27+0200\n"
 "PO-Revision-Date: 2012-10-12 14:37+0200\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,111 +168,142 @@ msgstr "וייטנאמי"
 msgid "Thai"
 msgstr "תאילנדי"
 
-#: ../src/lxterminal.c:137
+#. 0
+#: ../src/lxterminal.c:140
 msgid "_File"
 msgstr "_קובץ"
 
-#: ../src/lxterminal.c:138
+#. 1
+#: ../src/lxterminal.c:141
 msgid "_Edit"
 msgstr "ע_ריכה"
 
-#: ../src/lxterminal.c:139
+#. 2
+#: ../src/lxterminal.c:142
 msgid "_Tabs"
 msgstr "_לשוניות"
 
-#: ../src/lxterminal.c:140
+#. 3
+#: ../src/lxterminal.c:143
 msgid "_Help"
 msgstr "ע_זרה"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
-msgid "New _Window"
+#. 4
+#: ../src/lxterminal.c:144
+#, fuzzy
+msgid "_New Window"
 msgstr "חלון _חדש"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
-msgid "New _Tab"
+#. 5
+#: ../src/lxterminal.c:145
+#, fuzzy
+msgid "New T_ab"
 msgstr "ל_שונית חדשה"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
+#. 6
+#. 7
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:182
 msgid "_Close Tab"
 msgstr "_סגירת הלשונית"
 
-#: ../src/lxterminal.c:151
-msgid "_Quit"
-msgstr "י_ציאה"
+#. 8
+#: ../src/lxterminal.c:148
+#, fuzzy
+msgid "Close _Window"
+msgstr "חלון _חדש"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
+#. 9
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:171
 msgid "Cop_y"
 msgstr "ה_עתק"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
+#. 10
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:172
 msgid "_Paste"
 msgstr "ה_דבק"
 
-#: ../src/lxterminal.c:154
+#. 11
+#: ../src/lxterminal.c:151
 msgid "Clear scr_ollback"
 msgstr "מחיקת ה_גלילה לאחור"
 
-#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
+#. 12
+#. 13
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
 msgid "Preference_s"
 msgstr "ה_עדפות"
 
-#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
+#. 14
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:177
 msgid "Na_me Tab"
 msgstr "ל_שונית שם"
 
-#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
+#. 15
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:178
 msgid "Pre_vious Tab"
 msgstr "הלשונית ה_קודמת"
 
-#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
+#. 16
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:179
 msgid "Ne_xt Tab"
 msgstr "הלשונית ה_באה"
 
-#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
+#. 17
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Move Tab _Left"
 msgstr "העברת הלשונית _שמאלה"
 
-#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
+#. 18
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Move Tab _Right"
 msgstr "העברת הלשונית _ימינה"
 
-#: ../src/lxterminal.c:162
+#. 19
+#: ../src/lxterminal.c:159
 msgid "_About"
 msgstr "על _אודות"
 
-#: ../src/lxterminal.c:173
+#: ../src/lxterminal.c:167
+msgid "New _Window"
+msgstr "חלון _חדש"
+
+#: ../src/lxterminal.c:168
+msgid "New _Tab"
+msgstr "ל_שונית חדשה"
+
+#: ../src/lxterminal.c:170
 msgid "Copy _URL"
 msgstr "העתקת ה_כתובת"
 
-#: ../src/lxterminal.c:176
+#: ../src/lxterminal.c:173
 msgid "Cl_ear scrollback"
 msgstr "מחיקת ה_גלילה לאחור"
 
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
 #. * Create the new terminal.
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
-#: ../src/lxterminal.c:1470 ../src/preferences.c:230
+#: ../src/lxterminal.c:428 ../src/lxterminal.c:746 ../src/lxterminal.c:821
+#: ../src/lxterminal.c:1378 ../src/lxterminal.c:1427 ../src/preferences.c:178
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "תכנית המסוף LXTerminal"
 
-#: ../src/lxterminal.c:563
+#: ../src/lxterminal.c:583 ../data/lxterminal-preferences.glade.h:29
 msgid "Name Tab"
 msgstr "לשונית שם"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:717
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
 "ירון שהרבני <sh.yaron@gmail.com>\n"
 "ליאל פרידמן <lielft@gmail.com>"
 
-#: ../src/lxterminal.c:725
-msgid "Copyright (C) 2008-2011"
-msgstr "כל הזכויות שמורות (C)‏ 2011-2008"
+#: ../src/lxterminal.c:748
+msgid "Copyright (C) 2008-2014"
+msgstr "כל הזכויות שמורות (C)‏ 2014-2008"
 
-#: ../src/lxterminal.c:726
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "תכנית להדמיית מסוף עבור מיזם LXDE"
 
@@ -345,38 +376,97 @@ msgid "Hide Close buttons"
 msgstr "הסתרת לחצני הסגירה"
 
 #: ../data/lxterminal-preferences.glade.h:17
+#, fuzzy
+msgid "Hide mouse pointer"
+msgstr "הסתרת לחצני הסגירה"
+
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
 msgstr "תצוגה"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
 msgstr "תווים לבחירה לפי מילה"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "ביטול מקש הקיצור לתפריט (F10 כברירת מחדל)"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Disable using Alt-n for tabs and menu"
 msgstr "ביטול השימוש ב־Alt-מספר עבור הלשוניות והתפריט"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Advanced"
 msgstr "מתקדם"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
+#, fuzzy
+msgid "New Window"
+msgstr "חלון _חדש"
+
+#: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
+msgid "New Tab"
+msgstr "ל_שונית חדשה"
+
+#: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
+msgid "Close Tab"
+msgstr "_סגירת הלשונית"
+
+#: ../data/lxterminal-preferences.glade.h:26
+#, fuzzy
+msgid "Close Window"
+msgstr "חלון _חדש"
+
+#: ../data/lxterminal-preferences.glade.h:27
+#, fuzzy
+msgid "Copy"
+msgstr "העתקת ה_כתובת"
+
+#: ../data/lxterminal-preferences.glade.h:28
+#, fuzzy
+msgid "Paste"
+msgstr "ה_דבק"
+
+#: ../data/lxterminal-preferences.glade.h:30
+#, fuzzy
+msgid "Previous Tab"
+msgstr "הלשונית ה_קודמת"
+
+#: ../data/lxterminal-preferences.glade.h:31
+#, fuzzy
+msgid "Next Tab"
+msgstr "הלשונית ה_באה"
+
+#: ../data/lxterminal-preferences.glade.h:32
+#, fuzzy
+msgid "Move Tab Left"
+msgstr "העברת הלשונית _שמאלה"
+
+#: ../data/lxterminal-preferences.glade.h:33
+#, fuzzy
+msgid "Move Tab Right"
+msgstr "העברת הלשונית _ימינה"
+
+#: ../data/lxterminal-preferences.glade.h:34
+msgid "Shortcuts"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
 msgstr "מלמעלה"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:36
 msgid "Bottom"
 msgstr "מלמטה"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:37
 msgid "Left"
 msgstr "משמאל"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:38
 msgid "Right"
 msgstr "מימין"
 
@@ -387,6 +477,13 @@ msgstr "מסוף"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "שימוש בשורת הפקודה"
+
+#: ../data/lxterminal.desktop.in.h:4
+msgid "console;command line;execute;"
+msgstr ""
+
+#~ msgid "_Quit"
+#~ msgstr "י_ציאה"
 
 #~ msgid "gtk-cancel"
 #~ msgstr "gtk-cancel"

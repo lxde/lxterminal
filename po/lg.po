@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 23:00+0100\n"
+"POT-Creation-Date: 2014-10-26 20:27+0200\n"
 "PO-Revision-Date: 2013-07-11 20:01+0000\n"
 "Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
@@ -169,109 +169,141 @@ msgstr "Eya kiviyetinamu"
 msgid "Thai"
 msgstr "Eya kitaayi"
 
-#: ../src/lxterminal.c:137
+#. 0
+#: ../src/lxterminal.c:140
 msgid "_File"
 msgstr "_Fayiro"
 
-#: ../src/lxterminal.c:138
+#. 1
+#: ../src/lxterminal.c:141
 msgid "_Edit"
 msgstr "_Kyusa"
 
-#: ../src/lxterminal.c:139
+#. 2
+#: ../src/lxterminal.c:142
 msgid "_Tabs"
 msgstr "Olu_dda"
 
-#: ../src/lxterminal.c:140
+#. 3
+#: ../src/lxterminal.c:143
 msgid "_Help"
 msgstr "_Nyamba"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
-msgid "New _Window"
+#. 4
+#: ../src/lxterminal.c:144
+#, fuzzy
+msgid "_New Window"
 msgstr "_Leeta ddirisa eddala"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
-msgid "New _Tab"
+#. 5
+#: ../src/lxterminal.c:145
+#, fuzzy
+msgid "New T_ab"
 msgstr "_Yongerawo oludda"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
+#. 6
+#. 7
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:182
 msgid "_Close Tab"
 msgstr "_Gyawo oludda"
 
-#: ../src/lxterminal.c:151
-msgid "_Quit"
-msgstr "_Mala"
+#. 8
+#: ../src/lxterminal.c:148
+#, fuzzy
+msgid "Close _Window"
+msgstr "_Leeta ddirisa eddala"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
+#. 9
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:171
 msgid "Cop_y"
 msgstr "_Koppa"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
+#. 10
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:172
 msgid "_Paste"
 msgstr "_Paatiika"
 
-#: ../src/lxterminal.c:154
+#. 11
+#: ../src/lxterminal.c:151
 msgid "Clear scr_ollback"
 msgstr "Gyawo ebiri mu ggwanika ly'ekiwandikiro"
 
-#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
+#. 12
+#. 13
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
 msgid "Preference_s"
 msgstr "_Enteekateeka"
 
-#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
+#. 14
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:177
 msgid "Na_me Tab"
 msgstr "Oludda lu_w'erinnya"
 
-#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
+#. 15
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:178
 msgid "Pre_vious Tab"
 msgstr "_Dda ku ludda olukulembera"
 
-#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
+#. 16
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:179
 msgid "Ne_xt Tab"
 msgstr "Dd_a ku ludda oluddako"
 
-#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
+#. 17
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Move Tab _Left"
 msgstr "Omukonda gusembeze ku _kkono"
 
-#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
+#. 18
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Move Tab _Right"
 msgstr "Omukonda gusembeze ku _ddyo"
 
-#: ../src/lxterminal.c:162
+#. 19
+#: ../src/lxterminal.c:159
 msgid "_About"
 msgstr "Ebifa ku _puloguramu eno"
 
-#: ../src/lxterminal.c:173
+#: ../src/lxterminal.c:167
+msgid "New _Window"
+msgstr "_Leeta ddirisa eddala"
+
+#: ../src/lxterminal.c:168
+msgid "New _Tab"
+msgstr "_Yongerawo oludda"
+
+#: ../src/lxterminal.c:170
 msgid "Copy _URL"
 msgstr "Kwata koppi ya _URL"
 
-#: ../src/lxterminal.c:176
+#: ../src/lxterminal.c:173
 msgid "Cl_ear scrollback"
 msgstr "_Gyawo ebiri mu ggwanika ly'ekiwandikiro"
 
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
 #. * Create the new terminal.
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
-#: ../src/lxterminal.c:1470 ../src/preferences.c:230
+#: ../src/lxterminal.c:428 ../src/lxterminal.c:746 ../src/lxterminal.c:821
+#: ../src/lxterminal.c:1378 ../src/lxterminal.c:1427 ../src/preferences.c:178
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:563
+#: ../src/lxterminal.c:583 ../data/lxterminal-preferences.glade.h:29
 msgid "Name Tab"
 msgstr "Oludda luw'erinnya"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:717
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr "Kizito Birabwa <kbirabwa@yahoo.co.uk>"
 
-#: ../src/lxterminal.c:725
-msgid "Copyright (C) 2008-2011"
-msgstr "Copyright (C) 2008-2011"
+#: ../src/lxterminal.c:748
+#, fuzzy
+msgid "Copyright (C) 2008-2014"
+msgstr "Copyright (C) 2008-2014"
 
-#: ../src/lxterminal.c:726
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "Puloguramu eya LXDE egeegeenya ekiwandikiro"
 
@@ -340,40 +372,99 @@ msgid "Hide Close buttons"
 msgstr "Kisa amapeesa agaggala ddirisa"
 
 #: ../data/lxterminal-preferences.glade.h:17
+#, fuzzy
+msgid "Hide mouse pointer"
+msgstr "Kisa amapeesa agaggala ddirisa"
+
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
 msgstr "Eby'olutimbe"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
 msgstr "Obubonero obubalibwa ng'ekitundu ky'ekigambo"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Eppeesa erya F10 lireme okuleeta menyu"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Disable using Alt-n for tabs and menu"
 msgstr ""
 "Okunyigir'okumu eppeesa erya Alt n'erya namba kireme okukyusanga oludda "
 "n'okukola ku menyu"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Advanced"
 msgstr "Ebyetaagisa bumanyirivu"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
+#, fuzzy
+msgid "New Window"
+msgstr "_Leeta ddirisa eddala"
+
+#: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
+msgid "New Tab"
+msgstr "_Yongerawo oludda"
+
+#: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
+msgid "Close Tab"
+msgstr "_Gyawo oludda"
+
+#: ../data/lxterminal-preferences.glade.h:26
+#, fuzzy
+msgid "Close Window"
+msgstr "_Leeta ddirisa eddala"
+
+#: ../data/lxterminal-preferences.glade.h:27
+#, fuzzy
+msgid "Copy"
+msgstr "Kwata koppi ya _URL"
+
+#: ../data/lxterminal-preferences.glade.h:28
+#, fuzzy
+msgid "Paste"
+msgstr "_Paatiika"
+
+#: ../data/lxterminal-preferences.glade.h:30
+#, fuzzy
+msgid "Previous Tab"
+msgstr "_Dda ku ludda olukulembera"
+
+#: ../data/lxterminal-preferences.glade.h:31
+#, fuzzy
+msgid "Next Tab"
+msgstr "Dd_a ku ludda oluddako"
+
+#: ../data/lxterminal-preferences.glade.h:32
+#, fuzzy
+msgid "Move Tab Left"
+msgstr "Omukonda gusembeze ku _kkono"
+
+#: ../data/lxterminal-preferences.glade.h:33
+#, fuzzy
+msgid "Move Tab Right"
+msgstr "Omukonda gusembeze ku _ddyo"
+
+#: ../data/lxterminal-preferences.glade.h:34
+msgid "Shortcuts"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
 msgstr "Waggulu"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:36
 msgid "Bottom"
 msgstr "Wansi"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:37
 msgid "Left"
 msgstr "Kono"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:38
 msgid "Right"
 msgstr "Ddyo"
 
@@ -384,6 +475,13 @@ msgstr "Kiwandikiro"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Kolera mu kiwandikiro"
+
+#: ../data/lxterminal.desktop.in.h:4
+msgid "console;command line;execute;"
+msgstr ""
+
+#~ msgid "_Quit"
+#~ msgstr "_Mala"
 
 #~ msgid "gtk-cancel"
 #~ msgstr "gtk-cancel"

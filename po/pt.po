@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 23:00+0100\n"
+"POT-Creation-Date: 2014-10-26 20:27+0200\n"
 "PO-Revision-Date: 2012-10-07 02:52+0200\n"
 "Last-Translator: Sérgio <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
@@ -170,111 +170,142 @@ msgstr "Vietnamita"
 msgid "Thai"
 msgstr "Tailandês"
 
-#: ../src/lxterminal.c:137
+#. 0
+#: ../src/lxterminal.c:140
 msgid "_File"
 msgstr "_Ficheiro"
 
-#: ../src/lxterminal.c:138
+#. 1
+#: ../src/lxterminal.c:141
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../src/lxterminal.c:139
+#. 2
+#: ../src/lxterminal.c:142
 msgid "_Tabs"
 msgstr "_Separadores"
 
-#: ../src/lxterminal.c:140
+#. 3
+#: ../src/lxterminal.c:143
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
-msgid "New _Window"
+#. 4
+#: ../src/lxterminal.c:144
+#, fuzzy
+msgid "_New Window"
 msgstr "Nova _janela"
 
-#: ../src/lxterminal.c:148 ../src/lxterminal.c:171
-msgid "New _Tab"
+#. 5
+#: ../src/lxterminal.c:145
+#, fuzzy
+msgid "New T_ab"
 msgstr "Novo _separador"
 
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:185
+#. 6
+#. 7
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:182
 msgid "_Close Tab"
 msgstr "Fe_char separador"
 
-#: ../src/lxterminal.c:151
-msgid "_Quit"
-msgstr "_Sair"
+#. 8
+#: ../src/lxterminal.c:148
+#, fuzzy
+msgid "Close _Window"
+msgstr "Nova _janela"
 
-#: ../src/lxterminal.c:152 ../src/lxterminal.c:174
+#. 9
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:171
 msgid "Cop_y"
 msgstr "Cop_iar"
 
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
+#. 10
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:172
 msgid "_Paste"
 msgstr "Co_lar"
 
-#: ../src/lxterminal.c:154
+#. 11
+#: ../src/lxterminal.c:151
 msgid "Clear scr_ollback"
 msgstr "Limpar barra de desl_ocação"
 
-#: ../src/lxterminal.c:156 ../src/lxterminal.c:178
+#. 12
+#. 13
+#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
 msgid "Preference_s"
 msgstr "Preferência_s"
 
-#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
+#. 14
+#: ../src/lxterminal.c:154 ../src/lxterminal.c:177
 msgid "Na_me Tab"
 msgstr "No_mear separador"
 
-#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
+#. 15
+#: ../src/lxterminal.c:155 ../src/lxterminal.c:178
 msgid "Pre_vious Tab"
 msgstr "Separador _anterior"
 
-#: ../src/lxterminal.c:159 ../src/lxterminal.c:182
+#. 16
+#: ../src/lxterminal.c:156 ../src/lxterminal.c:179
 msgid "Ne_xt Tab"
 msgstr "Separador _seguinte"
 
-#: ../src/lxterminal.c:160 ../src/lxterminal.c:183
+#. 17
+#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
 msgid "Move Tab _Left"
 msgstr "Mover separador para a _esquerda"
 
-#: ../src/lxterminal.c:161 ../src/lxterminal.c:184
+#. 18
+#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
 msgid "Move Tab _Right"
 msgstr "Mover separador para a _direita"
 
-#: ../src/lxterminal.c:162
+#. 19
+#: ../src/lxterminal.c:159
 msgid "_About"
 msgstr "So_bre"
 
-#: ../src/lxterminal.c:173
+#: ../src/lxterminal.c:167
+msgid "New _Window"
+msgstr "Nova _janela"
+
+#: ../src/lxterminal.c:168
+msgid "New _Tab"
+msgstr "Novo _separador"
+
+#: ../src/lxterminal.c:170
 msgid "Copy _URL"
 msgstr "Copiar _URL"
 
-#: ../src/lxterminal.c:176
+#: ../src/lxterminal.c:173
 msgid "Cl_ear scrollback"
 msgstr "Limpar barra de desl_ocação"
 
 #. Propagate the working directory of the current tab to the new tab.
 #. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
 #. * Create the new terminal.
-#: ../src/lxterminal.c:435 ../src/lxterminal.c:723 ../src/lxterminal.c:798
-#: ../src/lxterminal.c:1470 ../src/preferences.c:230
+#: ../src/lxterminal.c:428 ../src/lxterminal.c:746 ../src/lxterminal.c:821
+#: ../src/lxterminal.c:1378 ../src/lxterminal.c:1427 ../src/preferences.c:178
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:563
+#: ../src/lxterminal.c:583 ../data/lxterminal-preferences.glade.h:29
 msgid "Name Tab"
 msgstr "Dar nome ao separador"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:717
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
 "Álvaro Morais <alvarommorais@gmail.com>\n"
 "Sérgio Marques <smarquespt@gmail.com>"
 
-#: ../src/lxterminal.c:725
-msgid "Copyright (C) 2008-2011"
-msgstr "Direitos de autor (C) 2008-2011"
+#: ../src/lxterminal.c:748
+msgid "Copyright (C) 2008-2014"
+msgstr "Direitos de autor (C) 2008-2014"
 
-#: ../src/lxterminal.c:726
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal para o LXDE"
 
@@ -343,38 +374,97 @@ msgid "Hide Close buttons"
 msgstr "Ocultar botões para fechar"
 
 #: ../data/lxterminal-preferences.glade.h:17
+#, fuzzy
+msgid "Hide mouse pointer"
+msgstr "Ocultar botões para fechar"
+
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
 msgstr "Ecrã"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Select-by-word characters"
 msgstr "Caracteres de seleção por palavra"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Desativar tecla de atalho de menu (por definição é F10)"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Disable using Alt-n for tabs and menu"
 msgstr "Desativar a utilização de Alt-n para separadores e menus"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Advanced"
 msgstr "Avançado"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:23
+#, fuzzy
+msgid "New Window"
+msgstr "Nova _janela"
+
+#: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
+msgid "New Tab"
+msgstr "Novo _separador"
+
+#: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
+msgid "Close Tab"
+msgstr "Fe_char separador"
+
+#: ../data/lxterminal-preferences.glade.h:26
+#, fuzzy
+msgid "Close Window"
+msgstr "Nova _janela"
+
+#: ../data/lxterminal-preferences.glade.h:27
+#, fuzzy
+msgid "Copy"
+msgstr "Copiar _URL"
+
+#: ../data/lxterminal-preferences.glade.h:28
+#, fuzzy
+msgid "Paste"
+msgstr "Co_lar"
+
+#: ../data/lxterminal-preferences.glade.h:30
+#, fuzzy
+msgid "Previous Tab"
+msgstr "Separador _anterior"
+
+#: ../data/lxterminal-preferences.glade.h:31
+#, fuzzy
+msgid "Next Tab"
+msgstr "Separador _seguinte"
+
+#: ../data/lxterminal-preferences.glade.h:32
+#, fuzzy
+msgid "Move Tab Left"
+msgstr "Mover separador para a _esquerda"
+
+#: ../data/lxterminal-preferences.glade.h:33
+#, fuzzy
+msgid "Move Tab Right"
+msgstr "Mover separador para a _direita"
+
+#: ../data/lxterminal-preferences.glade.h:34
+msgid "Shortcuts"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
 msgstr "Superior"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:36
 msgid "Bottom"
 msgstr "Inferior"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:37
 msgid "Left"
 msgstr "Esquerda"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:38
 msgid "Right"
 msgstr "Direita"
 
@@ -385,3 +475,10 @@ msgstr "Terminal"
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
 msgstr "Utilizar a linha de comandos"
+
+#: ../data/lxterminal.desktop.in.h:4
+msgid "console;command line;execute;"
+msgstr ""
+
+#~ msgid "_Quit"
+#~ msgstr "_Sair"
