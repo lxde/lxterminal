@@ -8,17 +8,16 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-10-07 02:52+0200\n"
-"Last-Translator: Sérgio <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2014-10-26 22:43+0000\n"
+"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.5\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: PORTUGAL\n"
+"X-Generator: Pootle 2.6.0-rc2\n"
+"X-POOTLE-MTIME: 1414363411.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -192,13 +191,11 @@ msgstr "_Ajuda"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
 msgstr "Nova _janela"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
 msgstr "Novo _separador"
 
@@ -210,9 +207,8 @@ msgstr "Fe_char separador"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "Nova _janela"
+msgstr "Fechar _janela"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -374,9 +370,8 @@ msgid "Hide Close buttons"
 msgstr "Ocultar botões para fechar"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Ocultar botões para fechar"
+msgstr "Ocultar ponteiro do rato"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -399,58 +394,48 @@ msgid "Advanced"
 msgstr "Avançado"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Nova _janela"
+msgstr "Nova janela"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Novo _separador"
+msgstr "Novo separador"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "Fe_char separador"
+msgstr "Fechar separador"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "Nova _janela"
+msgstr "Nova janela"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Copiar _URL"
+msgstr "Copiar"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "Co_lar"
+msgstr "Colar"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "Separador _anterior"
+msgstr "Separador anterior"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "Separador _seguinte"
+msgstr "Separador seguinte"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Mover separador para a _esquerda"
+msgstr "Mover separador para a esquerda"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Mover separador para a _direita"
+msgstr "Mover separador para a direita"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Atalhos"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -478,7 +463,7 @@ msgstr "Utilizar a linha de comandos"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "consola;linha de comandos;executar"
 
 #~ msgid "_Quit"
 #~ msgstr "_Sair"
