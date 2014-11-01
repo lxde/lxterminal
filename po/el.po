@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2014-10-31 22:50+0000\n"
+"PO-Revision-Date: 2014-11-01 23:30+0000\n"
 "Last-Translator: armakolas <armakolas@gmail.com>\n"
 "Language-Team: Greek\n"
 "Language: el\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.6.0-rc2\n"
-"X-POOTLE-MTIME: 1414795857.000000\n"
+"X-POOTLE-MTIME: 1414884618.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -191,12 +191,12 @@ msgstr "_Βοήθεια"
 #. 4
 #: ../src/lxterminal.c:144
 msgid "_New Window"
-msgstr ""
+msgstr "Νέο Παράθυρο"
 
 #. 5
 #: ../src/lxterminal.c:145
 msgid "New T_ab"
-msgstr ""
+msgstr "Νέα Καρτέλα"
 
 #. 6
 #. 7
@@ -207,7 +207,7 @@ msgstr "_Κλέισιμο καρτέλας"
 #. 8
 #: ../src/lxterminal.c:148
 msgid "Close _Window"
-msgstr ""
+msgstr "Κλείσιμο Παραθύρου"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -298,8 +298,9 @@ msgstr ""
 "Αρμακόλας Νικόλαος <armakolas@gmail.com> 2014"
 
 #: ../src/lxterminal.c:748
+#, fuzzy
 msgid "Copyright (C) 2008-2014"
-msgstr ""
+msgstr "Copyright (C) 2008-2011"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -394,44 +395,53 @@ msgid "Advanced"
 msgstr "Για προχωρημένους"
 
 #: ../data/lxterminal-preferences.glade.h:23
+#, fuzzy
 msgid "New Window"
-msgstr ""
+msgstr "Νέο _παράθυρο"
 
 #: ../data/lxterminal-preferences.glade.h:24
+#, fuzzy
 msgid "New Tab"
-msgstr ""
+msgstr "Νέα _καρτέλα"
 
 #: ../data/lxterminal-preferences.glade.h:25
+#, fuzzy
 msgid "Close Tab"
-msgstr ""
+msgstr "_Κλέισιμο καρτέλας"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Close Window"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:27
+#, fuzzy
 msgid "Copy"
-msgstr ""
+msgstr "_Αντιγραφή"
 
 #: ../data/lxterminal-preferences.glade.h:28
+#, fuzzy
 msgid "Paste"
-msgstr ""
+msgstr "_Επικόλληση"
 
 #: ../data/lxterminal-preferences.glade.h:30
+#, fuzzy
 msgid "Previous Tab"
-msgstr ""
+msgstr "_Προηγούμενη καρτέλα"
 
 #: ../data/lxterminal-preferences.glade.h:31
+#, fuzzy
 msgid "Next Tab"
-msgstr ""
+msgstr "_Επόμενη καρτέλα"
 
 #: ../data/lxterminal-preferences.glade.h:32
+#, fuzzy
 msgid "Move Tab Left"
-msgstr ""
+msgstr "Μετακίνηση καρτέλας _αριστερά"
 
 #: ../data/lxterminal-preferences.glade.h:33
+#, fuzzy
 msgid "Move Tab Right"
-msgstr ""
+msgstr "Μετακίνηση καρτέλας _δεξιά"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
