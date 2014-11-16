@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2014-11-01 23:30+0000\n"
-"Last-Translator: armakolas <armakolas@gmail.com>\n"
+"PO-Revision-Date: 2014-11-16 12:02+0000\n"
+"Last-Translator: Giorgos Siafis <geosiafis@yahoo.gr>\n"
 "Language-Team: Greek\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.6.0-rc2\n"
-"X-POOTLE-MTIME: 1414884618.000000\n"
+"X-POOTLE-MTIME: 1416139324.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -293,14 +293,13 @@ msgstr "Ονομασία καρτέλας"
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
-"Κούτσικος Γιώργος <oege89@hotmail.com>\n"
-"Βασιλάκος Γιώργος <forfolias@linuxteam.cs.teilar.gr>\n"
-"Αρμακόλας Νικόλαος <armakolas@gmail.com> 2014"
+"Κούτσικος Γιώργος 'oege89@hotmail.com' /nΒασιλάκος Γιώργος 'forfolias@"
+"linuxteam.cs.teilar.gr' /nΓεώργιος Σιάφης 'geosiafis@yahoo.gr' /nΑρμακόλας "
+"Νικόλαος 'armakolas@gmail.com 2014'"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2014"
-msgstr "Copyright (C) 2008-2011"
+msgstr "Copyright (C) 2008-2014"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -372,7 +371,7 @@ msgstr "Απόκρυψη κουμπιών κλεισίματος "
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Hide mouse pointer"
-msgstr ""
+msgstr "Απόκρυψη δείκτη ποντικιού"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -395,57 +394,48 @@ msgid "Advanced"
 msgstr "Για προχωρημένους"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Νέο _παράθυρο"
+msgstr "Νέο Παράθυρο"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Νέα _καρτέλα"
+msgstr "Νέα Καρτέλα"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Κλέισιμο καρτέλας"
+msgstr "Κλείσιμο Καρτέλας"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Close Window"
-msgstr ""
+msgstr "Κλείσιμο Παράθυρου"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "_Αντιγραφή"
+msgstr "Αντιγραφή"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "_Επικόλληση"
+msgstr "Επικόλληση"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Προηγούμενη καρτέλα"
+msgstr "Προηγούμενη Καρτέλα"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "_Επόμενη καρτέλα"
+msgstr "Επόμενη Καρτέλα"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Μετακίνηση καρτέλας _αριστερά"
+msgstr "Μετακίνηση Καρτέλας Αριστερά"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Μετακίνηση καρτέλας _δεξιά"
+msgstr "Μετακίνηση Καρτέλας Δεξιά"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Συντομεύσεις"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -473,7 +463,7 @@ msgstr "Χρήση γραμμής εντολών"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "κονσόλα;γραμμή εντολών;εκτέλεση;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Έξοδος"
