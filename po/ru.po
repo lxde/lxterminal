@@ -8,17 +8,18 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-10-02 19:40+0200\n"
-"Last-Translator: Alexander <kazancas@gmail.com>\n"
+"PO-Revision-Date: 2014-12-01 20:00+0000\n"
+"Last-Translator: Andriy Grytsenko <andrej@rep.kiev.ua>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.0.5\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 2.6.0-rc2\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-POOTLE-MTIME: 1417464041.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -192,13 +193,11 @@ msgstr "_Справка"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
 msgstr "Новое _окно"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
 msgstr "Новая _вкладка"
 
@@ -210,9 +209,8 @@ msgstr "_Закрыть вкладку"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "Новое _окно"
+msgstr "Закрыть _окно"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -376,9 +374,8 @@ msgid "Hide Close buttons"
 msgstr "Скрыть кнопки \"закрыть\""
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Скрыть кнопки \"закрыть\""
+msgstr "Скрыть указатель мыши"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -401,58 +398,48 @@ msgid "Advanced"
 msgstr "Расширенные"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Новое _окно"
+msgstr "Новое окно"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Новая _вкладка"
+msgstr "Новая вкладка"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Закрыть вкладку"
+msgstr "Закрыть вкладку"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "Новое _окно"
+msgstr "Закрыть окно"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Копировать ссылку"
+msgstr "Копировать"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "_Вставить"
+msgstr "Вставить"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "Пре_дыдущая вкладка"
+msgstr "Предыдущая вкладка"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "Сле_дующая вкладка"
+msgstr "Следующая вкладка"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Переместить вкладку _влево"
+msgstr "Переместить вкладку влево"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Переместить вкладку _вправо"
+msgstr "Переместить вкладку вправо"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Сокращения"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -480,7 +467,7 @@ msgstr "Использовать командную строку"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "консоль;командная строка;выполнить;запустить;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Выход"
