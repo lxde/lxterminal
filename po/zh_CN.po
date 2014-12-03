@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-10-14 12:18+0200\n"
-"Last-Translator: Wylmer <wantinghard@gmail.com>\n"
+"PO-Revision-Date: 2014-12-03 12:15+0000\n"
+"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
 "Language-Team: zh_CN <LL@li.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Pootle 2.6.0-rc2\n"
+"X-POOTLE-MTIME: 1417608909.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -185,15 +186,13 @@ msgstr "帮助(_H)"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "新建窗口(_W)"
+msgstr "新建窗口(_N)"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "新建标签(_T)"
+msgstr "新建标签(_A)"
 
 #. 6
 #. 7
@@ -203,9 +202,8 @@ msgstr "关闭标签(_C)"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "新建窗口(_W)"
+msgstr "关闭窗口(_W)"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -365,9 +363,8 @@ msgid "Hide Close buttons"
 msgstr "隐藏关闭按钮"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "隐藏关闭按钮"
+msgstr "隐藏鼠标指针"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -390,58 +387,48 @@ msgid "Advanced"
 msgstr "高级"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "新建窗口(_W)"
+msgstr "新建窗口"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "新建标签(_T)"
+msgstr "新建标签"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "关闭标签(_C)"
+msgstr "关闭标签"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "新建窗口(_W)"
+msgstr "新建窗口"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "复制 _URL"
+msgstr "复制"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "粘贴(_P)"
+msgstr "粘贴"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "上一标签(_V)"
+msgstr "上一标签"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "下一标签(_X)"
+msgstr "下一标签"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "标签左移(_L)"
+msgstr "标签左移"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "标签右移(_R)"
+msgstr "标签右移"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷方式"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -469,7 +456,7 @@ msgstr "使用命令行"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "console;command line;execute;终端;命令行;执行;"
 
 #~ msgid "_Quit"
 #~ msgstr "退出(_Q)"
