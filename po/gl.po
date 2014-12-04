@@ -2,13 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2014-11-27 10:01+0000\n"
+"PO-Revision-Date: 2014-12-04 14:43+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Proxecto Trasno <proxecto@trasno.net>\n"
 "Language: gl\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.6.0-rc2\n"
-"X-POOTLE-MTIME: 1417082503.000000\n"
+"X-POOTLE-MTIME: 1417704202.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -294,7 +293,8 @@ msgstr "Nome da lapela"
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
-"Miguel Anxo Bouzada <mbouzada@gmail.com>, 2009, 2010, 2011, 2012 \n"
+"Miguel Anxo Bouzada <mbouzada@gmail.com>, 2009, 2010, 2011, 2012, 2013, "
+"2014\n"
 "Indalecio Freiría <ifreiria@gmail.com>, 2009 \n"
 "Proxecto Trasno <proxecto@trasno.net>"
 
