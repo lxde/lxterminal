@@ -3,22 +3,21 @@
 # This file is distributed under the same license as the 
 # lxterminal package.
 # Pjotr, 2011.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2014-01-28 09:42+0000\n"
-"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
+"PO-Revision-Date: 2015-01-15 14:52+0000\n"
+"Last-Translator: Pjotr  <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1390902131.0\n"
+"X-Generator: Pootle 2.6.0-rc2\n"
+"X-POOTLE-MTIME: 1421333521.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -192,15 +191,13 @@ msgstr "_Hulp"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "Nieuw _venster"
+msgstr "Nieuw venster"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "Nieuw _tabblad"
+msgstr "Nieuw tabblad"
 
 #. 6
 #. 7
@@ -210,9 +207,8 @@ msgstr "Tabblad _sluiten"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "Nieuw _venster"
+msgstr "Venster sluiten"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -374,9 +370,8 @@ msgid "Hide Close buttons"
 msgstr "Verberg sluitknoppen"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Verberg sluitknoppen"
+msgstr "Verberg muispijl"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -399,58 +394,48 @@ msgid "Advanced"
 msgstr "Gevorderd"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Nieuw _venster"
+msgstr "Nieuw venster"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Nieuw _tabblad"
+msgstr "Nieuw tabblad"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "Tabblad _sluiten"
+msgstr "Tabblad sluiten"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "Nieuw _venster"
+msgstr "Venster sluiten"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Webadres (URL) kopiëren"
+msgstr "Kopiëren"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "_Plakken"
+msgstr "Plakken"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "V_orig tabblad"
+msgstr "Vorig tabblad"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "Vol_gend tabblad"
+msgstr "Volgend tabblad"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Verplaats tabblad naar _links"
+msgstr "Verplaats tabblad naar links"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Verplaats tabblad naar _rechts"
+msgstr "Verplaats tabblad naar rechts"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Sneltoetsen"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -478,10 +463,13 @@ msgstr "Gebruik de opdrachtregel"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "terminal;opdrachtregel;uitvoeren;"
 
 #~ msgid "_Quit"
-#~ msgstr "_Afsluiten"
+#~ msgstr "終了(_Q)"
+
+#~ msgid "Disable using Alt-n to switch tabs"
+#~ msgstr "Alt-n によるタブの切り替えを無効にする"
 
 #~ msgid "gtk-cancel"
 #~ msgstr "gtk-cancel"
