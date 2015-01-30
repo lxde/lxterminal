@@ -1599,7 +1599,7 @@ int main(gint argc, gchar * * argv)
     LXTermWindow * lxtermwin = g_slice_new0(LXTermWindow);
 
     /* Initialize socket.  If we were able to get another LXTerminal to manage the window, exit. */
-    if ( ! lxterminal_socket_initialize(lxtermwin, &arguments))
+    if ( ! lxterminal_socket_initialize(lxtermwin, argc, argv))
         return 0;
 
     /* Load user preferences. */

@@ -38,9 +38,8 @@ static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition co
     /* Read message. */
     gchar * msg = NULL;
     gsize len = 0;
-    gsize term = 0;
     GError * err = NULL;
-    GIOStatus ret = g_io_channel_read_line(gio, &msg, &len, &term, &err);
+    GIOStatus ret = g_io_channel_read_to_end(gio, &msg, &len, &err);
     if (ret == G_IO_STATUS_ERROR)
     {
         g_warning("Error reading socket: %s\n", err->message);
@@ -49,18 +48,38 @@ static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition co
     /* Process message. */
     if (len > 0)
     {
-        /* Overwrite the line termination with a NUL. */
-        msg[term] = '\0';
-
+	/* Skip the the first (cur_dir) and last '\0' for argument count */
+        gint argc = -1;
+	gsize i;
+	for (i = 0; i < len; i ++)
+	{
+	    if (msg[i] == '\0')
+	    {
+	    	argc ++;
+	    }
+	}
+	gchar * cur_dir = msg;
+	gchar * * argv = g_malloc(argc * sizeof(char *));
+	gint nul_count = 0;
+	for (i = 0; i < len; i ++)
+	{
+	    if (msg[i] == '\0' && nul_count < argc)
+	    {
+		argv[nul_count] = &msg[i + 1];
+	    	nul_count ++;
+	    }
+	}
         /* Parse arguments.
          * Initialize a new LXTerminal and create a new window. */
-        gint argc;
-        gchar * * argv;
-        g_shell_parse_argv(msg, &argc, &argv, NULL);
         CommandArguments arguments;
         lxterminal_process_arguments(argc, argv, &arguments);
+        g_free(argv);
+	/* Make sure working directory matches that of the client process */
+	if (arguments.working_directory == NULL)
+	{
+	    arguments.working_directory = g_strdup(cur_dir);
+	}
         lxterminal_initialize(lxtermwin, &arguments);
-        g_strfreev(argv);
     }
     g_free(msg);
 
@@ -105,7 +124,7 @@ static gboolean lxterminal_socket_accept_client(GIOChannel * source, GIOConditio
     return TRUE;
 }
 
-gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, CommandArguments * arguments)
+gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, gint argc, gchar * * argv)
 {
     /* Normally, LXTerminal uses one process to control all of its windows.
      * The first process to start will create a Unix domain socket in /tmp.
@@ -196,46 +215,21 @@ gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, CommandArguments
         GIOChannel * gio = g_io_channel_unix_new(fd);
         g_io_channel_set_encoding(gio, NULL, NULL);
 
-        /* Reissue arguments to the socket.  Start with the name of the executable. */
-        g_io_channel_write_chars(gio, arguments->executable, -1, NULL, NULL);
+        /* Push current dir in case it is needed later */
+	gchar * cur_dir = g_get_current_dir();
+        g_io_channel_write_chars(gio, cur_dir, -1, NULL, NULL);
+	/* Use "" as a pointer to '\0' since g_io_channel_write_chars() won't accept NULL */
+	g_io_channel_write_chars(gio, "", 1, NULL, NULL);
+	g_free(cur_dir);
 
-        /* --command or -e. */
-        if (arguments->command != NULL)
-        {
-            gchar * command = g_shell_quote(arguments->command);
-            gchar * command_argument = g_strdup_printf(" --command=%s", command);
-            g_io_channel_write_chars(gio, command_argument, -1, NULL, NULL);
-            g_free(command);
-            g_free(command_argument);
-        }
+        /* push all of argv. */
+	gint i;
+	for (i = 0; i < argc; i ++)
+	{
+            g_io_channel_write_chars(gio, argv[i], -1, NULL, NULL);
+	    g_io_channel_write_chars(gio, "", 1, NULL, NULL);
+	}
 
-        /* --geometry. */
-        if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0))
-        {
-            gchar * geometry = g_strdup_printf(" --geometry=%dx%d", arguments->geometry_columns, arguments->geometry_rows);
-            g_io_channel_write_chars(gio, geometry, -1, NULL, NULL);
-            g_free(geometry);
-        }
-
-        /* -t, -T, --title or --tabs. */
-        if (arguments->tabs != NULL)
-        {
-            gchar * tabs = g_shell_quote(arguments->tabs);
-            gchar * tabs_argument = g_strdup_printf(" --tabs=%s", tabs);
-            g_io_channel_write_chars(gio, tabs_argument, -1, NULL, NULL);
-            g_free(tabs);
-            g_free(tabs_argument);
-        }
-
-        /* Always issue a --working-directory, either from the user's specification or the current directory. */
-        gchar * working_directory = g_shell_quote((arguments->working_directory != NULL) ? arguments->working_directory : g_get_current_dir());
-        gchar * working_directory_argument = g_strdup_printf(" --working-directory=%s", working_directory);
-        g_io_channel_write_chars(gio, working_directory_argument, -1, NULL, NULL);
-        g_free(working_directory);
-        g_free(working_directory_argument);
-
-        /* Finish up the transaction on the Unix domain socket. */
-        g_io_channel_write_chars(gio, "\n", -1, NULL, NULL);
         g_io_channel_flush(gio, NULL);
         g_io_channel_unref(gio);
         return FALSE;
