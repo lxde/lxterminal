@@ -52,3 +52,4 @@ data/lxterminal-preferences.ui
 data/lxterminal.conf
 data/lxterminal.desktop
 src/lxterminal
+autom4te.cache/
