@@ -2,22 +2,21 @@
 # Copyright (C) 2008 - 2010
 # This file is distributed under the same license as the lxterminal package.
 # FIRST Kizito Birabwa <kbirabwa@yahoo.co.u>, 2010.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2013-07-11 20:01+0000\n"
-"Last-Translator: kizito <kbirabwa@yahoo.co.uk>\n"
+"PO-Revision-Date: 2015-01-17 20:07+0000\n"
+"Last-Translator:   <kbirabwa@yahoo.co.uk>\n"
 "Language-Team: lg <kbirabwa@yahoo.co.uk>\n"
 "Language: lg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1373572919.0\n"
+"X-Generator: Pootle 2.6.0-rc2\n"
+"X-POOTLE-MTIME: 1421525225.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -191,15 +190,13 @@ msgstr "_Nyamba"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "_Leeta ddirisa eddala"
+msgstr "_Leeta ddirisa ppya"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "_Yongerawo oludda"
+msgstr "Yongerawo k_atimbe"
 
 #. 6
 #. 7
@@ -209,9 +206,8 @@ msgstr "_Gyawo oludda"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "_Leeta ddirisa eddala"
+msgstr "Gala _ddirisa"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -299,9 +295,8 @@ msgid "translator-credits"
 msgstr "Kizito Birabwa <kbirabwa@yahoo.co.uk>"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2014"
-msgstr "Copyright (C) 2008-2014"
+msgstr "Obuyinza bw'ebikugizo eby'obwa nannyini (C) 2008-2014"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -372,9 +367,8 @@ msgid "Hide Close buttons"
 msgstr "Kisa amapeesa agaggala ddirisa"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Kisa amapeesa agaggala ddirisa"
+msgstr "Kisa kasonga"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -399,58 +393,48 @@ msgid "Advanced"
 msgstr "Ebyetaagisa bumanyirivu"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "_Leeta ddirisa eddala"
+msgstr "Leeta ddirisa ppya"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "_Yongerawo oludda"
+msgstr "_Yongerawo katimbe"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Gyawo oludda"
+msgstr "_Gyawo katimbe"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "_Leeta ddirisa eddala"
+msgstr "Gala ddirisa"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Kwata koppi ya _URL"
+msgstr "Koppa"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "_Paatiika"
+msgstr "Paatiika"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Dda ku ludda olukulembera"
+msgstr "Dda ku katimbe akakulembera"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "Dd_a ku ludda oluddako"
+msgstr "Dda ku katimbe akaddako"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Omukonda gusembeze ku _kkono"
+msgstr "Akatimbe kasembeze ku kkono"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Omukonda gusembeze ku _ddyo"
+msgstr "Akatimbe kasembeze ku ddyo"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Busaliikiriza"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -478,7 +462,7 @@ msgstr "Kolera mu kiwandikiro"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "kiwandikiro;kiragiro;tandika mulimu;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Mala"
