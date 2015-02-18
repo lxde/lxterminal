@@ -74,7 +74,7 @@ typedef struct _term {
 /* Output of lxterminal_process_arguments. */
 typedef struct _command_arguments {
     char * executable;				/* Value of argv[0]; points into argument vector */
-    gchar * command;				/* Value of -e, --command; memory allocated by glib */
+    gchar * * command;				/* Value of -e, --command; memory allocated by glib */
     int geometry_columns;			/* Value of --geometry */
     int geometry_rows;
     char * title; 				/* Value of -t, -T, --title; points into argument vector */

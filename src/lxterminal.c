@@ -110,7 +110,7 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
-static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, const gchar * exec);
+static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
 static void terminal_free(Term * term);
 static void terminal_menubar_initialize(LXTerminal * terminal);
 static void terminal_menu_accelerator_update(LXTerminal * terminal);
@@ -789,7 +789,7 @@ static gboolean terminal_window_size_allocate_event(GtkWidget * widget, GtkAlloc
         }
 
         /* Resize the window. */
-	if (allocation->width > 0 && allocation->height > 0)
+        if (allocation->width > 0 && allocation->height > 0)
             gtk_window_resize(GTK_WINDOW(terminal->window), allocation->width, allocation->height);
     }
     return FALSE;
@@ -1070,7 +1070,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 }
 
 /* Create a new terminal. */
-static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, const gchar * exec)
+static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env,  gchar * * exec)
 {
     /* Create and initialize Term structure for new terminal. */
     Term * term = g_slice_new0(Term);
@@ -1138,24 +1138,24 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     /* Fork the process that will have the VTE as its controlling terminal. */
     if (exec == NULL)
     {
-            exec = g_getenv("SHELL");
+            exec = g_malloc(3 * sizeof(gchar *));
+            exec[0] = g_strdup(g_getenv("SHELL"));
+            exec[1] = g_path_get_basename(exec[0]);
+            exec[2] = NULL;
     }
-
-    gchar ** command;
-    g_shell_parse_argv(exec, NULL, &command, NULL);
 
     vte_terminal_fork_command_full(
                     VTE_TERMINAL(term->vte),
                     VTE_PTY_NO_LASTLOG | VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP,
                     pwd,
-                    command,
+                    exec,
                     env,
-                    G_SPAWN_SEARCH_PATH,
+                    G_SPAWN_SEARCH_PATH | G_SPAWN_FILE_AND_ARGV_ZERO,
                     NULL,
                     NULL,
                     &term->pid,
                     NULL);
-    g_strfreev(command);
+    g_strfreev(exec);
 
     /* Connect signals. */
     g_signal_connect(G_OBJECT(term->tab), "button-press-event", G_CALLBACK(terminal_tab_button_press_event), term);
@@ -1235,40 +1235,39 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
     arguments->executable = argv[0];
 
     gboolean login_shell = FALSE;
-    char * * argv_cursor = argv + 1;
-    argc --;
-    while (argc > 0)
+    char * * argv_cursor = argv;
+    gint cmd_len;
+
+    while (argc > 1)
     {
+        argc --;
+        argv_cursor ++;
         char * argument = *argv_cursor;
 
         /* --command=<command> */
         if (strncmp(argument, "--command=", 10) == 0)
         {
-            g_free(arguments->command);
-            arguments->command = g_strdup(&argument[10]);
+            g_strfreev(arguments->command);
+            g_shell_parse_argv(&argument[10], &cmd_len, &arguments->command, NULL);
         }
 
         /* -e <rest of arguments>, --command <rest of arguments>
          * The <rest of arguments> behavior is demanded by distros who insist on this xterm feature. */
         else if ((strcmp(argument, "--command") == 0) || (strcmp(argument, "-e") == 0))
         {
+            if(arguments->command != NULL) g_strfreev(arguments->command);
+            cmd_len = 0;
+            arguments->command = g_malloc(argc * sizeof(gchar *));
+
             while (argc > 1)
             {
                 argc --;
                 argv_cursor ++;
-                if (arguments->command == NULL)
-                {
-                    arguments->command = g_strdup(*argv_cursor);
-                }
-                else
-                {
-                    gchar * quoted_arg = g_shell_quote(*argv_cursor);
-                    gchar * new_command = g_strconcat(arguments->command, " ", quoted_arg, NULL);
-                    g_free(quoted_arg);
-                    g_free(arguments->command);
-                    arguments->command = new_command;
-                }
+                arguments->command[cmd_len] = g_strdup(*argv_cursor);
+                cmd_len ++;
             }
+            arguments->command[cmd_len] = NULL;
+            cmd_len ++;
         }
 
         /* --geometry=<columns>x<rows> */
@@ -1318,25 +1317,40 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         /* Undefined argument. */
         else
             return FALSE;
-
-        argc --;
-        argv_cursor ++;
     }
-
     /* Handle --loginshell. */
     if (login_shell)
     {
+        const gchar * shell = g_getenv("SHELL");
+        gchar * shellname = g_path_get_basename(shell);
         if (arguments->command == NULL)
         {
-            arguments->command = g_strdup("sh -l");
+            arguments->command = g_malloc(3 * sizeof(gchar *));
+            arguments->command[0] = g_strdup(shell);
+            arguments->command[1] = g_strdup_printf("-%s", shellname);
+            arguments->command[2] = NULL;
         }
         else
         {
-            gchar * escaped_command = g_shell_quote(arguments->command);
-            gchar * new_command = g_strdup_printf("sh -l -c %s", escaped_command);
-            g_free(escaped_command);
+            gchar * * tmp = g_malloc((cmd_len + 3) * sizeof(gchar *));
+            tmp[0] = g_strdup(shell);
+            tmp[1] = g_strdup_printf("-%s", shellname);
+            tmp[2] = g_strdup("-c");
+            memcpy((tmp + 3), arguments->command, cmd_len * sizeof(gchar *));
             g_free(arguments->command);
-            arguments->command = new_command;
+            arguments->command = tmp;
+        }
+        g_free(shellname);
+    }
+    else
+    {
+        if(arguments->command != NULL)
+        {
+            gchar * * tmp = g_malloc((cmd_len + 1) * sizeof(gchar *));
+            tmp[0] = g_strdup(arguments->command[0]);
+            memcpy((tmp + 1), arguments->command, cmd_len * sizeof(gchar *));
+            g_free(arguments->command);
+            arguments->command = tmp;
         }
     }
     return TRUE;
