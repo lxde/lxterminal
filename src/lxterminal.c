@@ -563,8 +563,17 @@ static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, 
                 if (term->index == current)
                 {
                 /* If Term structure found, set the tab's label and mark it so we will never overwrite it. */
-                    term->user_specified_label = TRUE;
-                    gtk_label_set_text(GTK_LABEL(term->label), g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog_item))));
+		    if (gtk_entry_get_text_length(GTK_ENTRY(dialog_item)) != 0)
+		    {
+                        term->user_specified_label = TRUE;
+                        gtk_label_set_text(GTK_LABEL(term->label), g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog_item))));
+		    }
+		    else
+		    {
+		    /* reset tab label if it is set to an empty string */
+		        term->user_specified_label = FALSE;
+			gtk_label_set_text(GTK_LABEL(term->label), vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
+		    }
                     break;
                 }
             }
