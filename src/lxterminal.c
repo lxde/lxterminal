@@ -86,7 +86,7 @@ static void terminal_copy_activate_event(GtkAction * action, LXTerminal * termin
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_clear_activate_event(GtkAction * action, LXTerminal * terminal);
 //static gboolean terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
-static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, LXTerminal * terminal);
+static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, Term * term);
 static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * terminal);
 //static gboolean terminal_name_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal * terminal);
@@ -546,38 +546,30 @@ static void terminal_clear_activate_event(GtkAction * action, LXTerminal * termi
 }*/
 
 /* Handler for "response" signal on Name Tab dialog. */
-static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, LXTerminal * terminal)
+static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, Term * term)
 {
     if (response == GTK_RESPONSE_OK)
     {
         GtkWidget * dialog_item = g_object_get_data(G_OBJECT(dialog), "entry");
+        const gchar * title;
 
-        gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
-        if (current != -1)
+        /* Set the tab's label and mark it so we will never overwrite it. */
+        if (gtk_entry_get_text_length(GTK_ENTRY(dialog_item)) != 0)
         {
-            /* Search for the Term structure corresponding to the current tab. */
-            guint i;
-            for (i = 0; i < terminal->terms->len; i++)
-            {
-                Term * term = g_ptr_array_index(terminal->terms, i);
-                if (term->index == current)
-                {
-                /* If Term structure found, set the tab's label and mark it so we will never overwrite it. */
-		    if (gtk_entry_get_text_length(GTK_ENTRY(dialog_item)) != 0)
-		    {
-                        term->user_specified_label = TRUE;
-                        gtk_label_set_text(GTK_LABEL(term->label), g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog_item))));
-		    }
-		    else
-		    {
-		    /* reset tab label if it is set to an empty string */
-		        term->user_specified_label = FALSE;
-			gtk_label_set_text(GTK_LABEL(term->label), vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
-		    }
-                    break;
-                }
-            }
+            term->user_specified_label = TRUE;
+            title = gtk_entry_get_text(GTK_ENTRY(dialog_item));
+            gtk_label_set_text(GTK_LABEL(term->label), title);
         }
+        else
+        {
+            /* reset tab label if it is set to an empty string */
+            term->user_specified_label = FALSE;
+            title = vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
+            gtk_label_set_text(GTK_LABEL(term->label), title);
+        }
+        /* Set title if term is currently active tab */
+        if (GTK_WIDGET(term->box) == gtk_notebook_get_nth_page(GTK_NOTEBOOK(term->parent->notebook), gtk_notebook_get_current_page(GTK_NOTEBOOK(term->parent->notebook))))
+            gtk_window_set_title(GTK_WINDOW(term->parent->window), title);
     }
 
     /* Dismiss dialog. */
@@ -588,6 +580,25 @@ static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, 
  * Put up a dialog to get a user specified name for the tab. */
 static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * terminal)
 {
+    Term * term;
+    gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
+    if (current != -1)
+    {
+        /* Search for the Term structure corresponding to the current tab. */
+        guint i;
+        for (i = 0; i < terminal->terms->len; i++)
+        {
+            term = g_ptr_array_index(terminal->terms, i);
+            if (term->index == current)
+            {
+                break;
+            }
+        }
+    }
+    else
+    {
+        return;
+    }
     GtkWidget * dialog = gtk_dialog_new_with_buttons(
         _("Name Tab"),
         GTK_WINDOW(terminal->window),
@@ -604,25 +615,11 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
     {
         gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
     }
-    g_signal_connect(G_OBJECT(dialog), "response", G_CALLBACK(terminal_name_tab_response_event), terminal);
+    g_signal_connect(G_OBJECT(dialog), "response", G_CALLBACK(terminal_name_tab_response_event), term);
     GtkWidget * dialog_item = gtk_entry_new();
     g_object_set_data(G_OBJECT(dialog), "entry", (gpointer) dialog_item);
     gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dialog))), dialog_item, FALSE, FALSE, 2);
-    gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
-    if (current != -1)
-    {
-        /* Search for the Term structure corresponding to the current tab. */
-        guint i;
-        for (i = 0; i < terminal->terms->len; i++)
-        {
-            Term * term = g_ptr_array_index(terminal->terms, i);
-            if (term->index == current)
-            {
-                gtk_entry_set_text(GTK_ENTRY(dialog_item), gtk_label_get_text(GTK_LABEL(term->label)));
-                break;
-            }
-        }
-    }
+    gtk_entry_set_text(GTK_ENTRY(dialog_item), gtk_label_get_text(GTK_LABEL(term->label)));
     gtk_entry_set_activates_default(GTK_ENTRY(dialog_item), TRUE);
     gtk_widget_show_all(dialog);
 }
@@ -826,7 +823,7 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
     {
         /* Propagate the title to the toplevel window. */
         Term * term = g_ptr_array_index(terminal->terms, num);
-        const gchar * title = vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
+        const gchar * title = gtk_label_get_text(GTK_LABEL(term->label));
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
     }
 }
@@ -839,8 +836,11 @@ static void terminal_window_title_changed_event(GtkWidget * vte, Term * term)
     {
         gtk_label_set_text(GTK_LABEL(term->label), vte_terminal_get_window_title(VTE_TERMINAL(vte)));
         gtk_widget_set_tooltip_text(term->label, vte_terminal_get_window_title(VTE_TERMINAL(vte)));
+        GtkNotebook * notebook = GTK_NOTEBOOK(term->parent->notebook);
+        /* Set title if term is currently active tab */
+        if (GTK_WIDGET(term->box) == gtk_notebook_get_nth_page(notebook, gtk_notebook_get_current_page(notebook)))
+            gtk_window_set_title(GTK_WINDOW(term->parent->window), vte_terminal_get_window_title(VTE_TERMINAL(vte)));
     }
-    gtk_window_set_title(GTK_WINDOW(term->parent->window), vte_terminal_get_window_title(VTE_TERMINAL(vte)));
 }
 
 /* Weak-notify callback for LXTerminal object. */
