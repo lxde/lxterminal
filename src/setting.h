@@ -112,7 +112,7 @@ extern Setting * load_setting();
 
 /* Utils for chsnge setting through preference */
 extern void set_setting(Setting * setting);
-extern void free_setting(Setting * setting);
+extern void free_setting(Setting ** setting);
 extern Setting * copy_setting(Setting * setting);
 
 extern void print_setting();

@@ -85,7 +85,7 @@ void set_setting(Setting * new_setting)
 {
     if (setting != NULL)
     {
-        free_setting(setting);
+        free_setting(&setting);
     }
     setting = new_setting;
 }
@@ -189,7 +189,7 @@ Setting * copy_setting(Setting * setting)
 }
 
 /* Deep free settings. */
-void free_setting(Setting * setting)
+void free_setting(Setting ** setting)
 {
     g_return_if_fail (setting != NULL);
 
@@ -209,7 +209,7 @@ void free_setting(Setting * setting)
     g_free(setting->move_tab_right_accel);
 
     g_slice_free(Setting, setting);
-    setting = NULL;
+    *setting = NULL;
 }
 
 /* Load settings from configuration file. */
