@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
 "PO-Revision-Date: 2012-10-19 18:52+0200\n"
-"Last-Translator: zvacet <ikoli@yahoo.com>\n"
+"Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: <asjlob AT vip.hr> <>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -195,13 +195,13 @@ msgstr "_Pomoć"
 #: ../src/lxterminal.c:144
 #, fuzzy
 msgid "_New Window"
-msgstr "Novi _Prozor"
+msgstr "_Novi prozor"
 
 #. 5
 #: ../src/lxterminal.c:145
 #, fuzzy
 msgid "New T_ab"
-msgstr "Nova _kartica"
+msgstr "Nova k_artica"
 
 #. 6
 #. 7
@@ -213,7 +213,7 @@ msgstr "_Zatvori karticu"
 #: ../src/lxterminal.c:148
 #, fuzzy
 msgid "Close _Window"
-msgstr "Novi _Prozor"
+msgstr "Zatvori _prozor"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -268,7 +268,7 @@ msgstr "_O programu"
 
 #: ../src/lxterminal.c:167
 msgid "New _Window"
-msgstr "Novi _Prozor"
+msgstr "Novi _prozor"
 
 #: ../src/lxterminal.c:168
 msgid "New _Tab"
@@ -376,7 +376,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Hide mouse pointer"
-msgstr ""
+msgstr "Sakrij pokazivač miša"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -401,56 +401,56 @@ msgstr "Napredno"
 #: ../data/lxterminal-preferences.glade.h:23
 #, fuzzy
 msgid "New Window"
-msgstr "Novi _Prozor"
+msgstr "Novi Prozor"
 
 #: ../data/lxterminal-preferences.glade.h:24
 #, fuzzy
 msgid "New Tab"
-msgstr "Nova _kartica"
+msgstr "Nova kartica"
 
 #: ../data/lxterminal-preferences.glade.h:25
 #, fuzzy
 msgid "Close Tab"
-msgstr "_Zatvori karticu"
+msgstr "Zatvori karticu"
 
 #: ../data/lxterminal-preferences.glade.h:26
 #, fuzzy
 msgid "Close Window"
-msgstr "Novi _Prozor"
+msgstr "Zatvori prozor"
 
 #: ../data/lxterminal-preferences.glade.h:27
 #, fuzzy
 msgid "Copy"
-msgstr "Kopiraj _URL"
+msgstr "Kopiraj"
 
 #: ../data/lxterminal-preferences.glade.h:28
 #, fuzzy
 msgid "Paste"
-msgstr "_Zalijepi"
+msgstr "Zalijepi"
 
 #: ../data/lxterminal-preferences.glade.h:30
 #, fuzzy
 msgid "Previous Tab"
-msgstr "Pret_hodna kartica"
+msgstr "Prethodna kartica"
 
 #: ../data/lxterminal-preferences.glade.h:31
 #, fuzzy
 msgid "Next Tab"
-msgstr "Sli_jedeća kartica"
+msgstr "Slijedeća kartica"
 
 #: ../data/lxterminal-preferences.glade.h:32
 #, fuzzy
 msgid "Move Tab Left"
-msgstr "Pomakni karticu _lijevo"
+msgstr "Pomakni karticu lijevo"
 
 #: ../data/lxterminal-preferences.glade.h:33
 #, fuzzy
 msgid "Move Tab Right"
-msgstr "Pomakni karticu _desno"
+msgstr "Pomakni karticu desno"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Prečaci"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -478,7 +478,7 @@ msgstr "Koristi naredbeni redak"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "konzola;naredbeni redak;izvrši;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Izlaz"
@@ -493,7 +493,7 @@ msgstr ""
 #~ msgstr "Osnovno"
 
 #~ msgid "_Preferences"
-#~ msgstr "_Postavke"
+#~ msgstr "_Osobitosti"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Prozirna pozadina:"
@@ -503,3 +503,13 @@ msgstr ""
 
 #~ msgid "_Character Encoding"
 #~ msgstr "_Kodiranje Znakova"
+
+
+
+
+
+
+
+
+
+
