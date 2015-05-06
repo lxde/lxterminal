@@ -19,6 +19,8 @@ msgstr ""
 "X-Generator: Pootle 2.0.5\n"
 "X-Poedit-Language: Bulgarian\n"
 "X-Poedit-Country: BULGARIA\n"
+"X-Pootle-Path: /bg/lxterminal/po/bg.po\n"
+"X-Pootle-Revision: 0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"

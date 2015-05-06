@@ -8,16 +8,18 @@ msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2014-03-25 17:44+0000\n"
-"Last-Translator: Pierre <lubuntu@pierregobin.fr>\n"
+"PO-Revision-Date: 2015-03-23 23:49+0000\n"
+"Last-Translator: Jerome Leclanche <jerome@leclan.ch>\n"
 "Language-Team: fr <gaknar@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1395769451.0\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1427154592.000000\n"
+"X-Pootle-Path: /fr/lxterminal/po/fr.po\n"
+"X-Pootle-Revision: 12\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -396,54 +398,44 @@ msgid "Advanced"
 msgstr "Avancé"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "_Nouvelle fenêtre"
+msgstr "Nouvelle fenêtre"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Nouvel _onglet"
+msgstr "Nouvel onglet"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Fermer l'onglet"
+msgstr "Fermer l'onglet"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "_Nouvelle fenêtre"
+msgstr "Fermer la fenêtre"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Copier l'_URL"
+msgstr "Copier"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "C_oller"
+msgstr "Coller"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "Onglet _précédent"
+msgstr "Onglet précédent"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "Onglet _suivant"
+msgstr "Onglet suivant"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Déplacer l'onglet à _gauche"
+msgstr "Déplacer l'onglet à gauche"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Déplacer l'onglet à _droite"
+msgstr "Déplacer l'onglet à droite"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"

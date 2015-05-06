@@ -16,6 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Pootle 1.1.0\n"
+"X-Pootle-Path: /ms/lxterminal/po/ms.po\n"
+"X-Pootle-Revision: 0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"

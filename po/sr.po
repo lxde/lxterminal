@@ -9,16 +9,19 @@ msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2013-09-06 09:45+0100\n"
-"Last-Translator: Jay A.Fleming <tito.nehru.naser@gmail.com>\n"
+"PO-Revision-Date: 2015-05-01 22:58+0000\n"
+"Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.0.5\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1430521094.000000\n"
+"X-Pootle-Path: /sr/lxterminal/po/sr.po\n"
+"X-Pootle-Revision: 1166\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -156,7 +159,7 @@ msgstr "Гујарати"
 
 #: ../src/encoding.c:194
 msgid "Gurmukhi"
-msgstr "Гурмуки "
+msgstr "Гурмуки"
 
 #: ../src/encoding.c:196
 msgid "Icelandic"
@@ -192,15 +195,13 @@ msgstr "_Помоћ"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "Нови _прозор"
+msgstr "_Нови прозор"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "Нови _лист"
+msgstr "Нови л_ист"
 
 #. 6
 #. 7
@@ -210,9 +211,8 @@ msgstr "За_твори лист"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "Нови _прозор"
+msgstr "Затвори _прозор"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -238,7 +238,7 @@ msgstr "По_ставке"
 #. 14
 #: ../src/lxterminal.c:154 ../src/lxterminal.c:177
 msgid "Na_me Tab"
-msgstr "_Име листа"
+msgstr "Наз_ив листа"
 
 #. 15
 #: ../src/lxterminal.c:155 ../src/lxterminal.c:178
@@ -292,16 +292,16 @@ msgstr "ЛИкс-Терминал"
 
 #: ../src/lxterminal.c:583 ../data/lxterminal-preferences.glade.h:29
 msgid "Name Tab"
-msgstr "Дајте име листу"
+msgstr "Дајте назив листу"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
-msgstr "Serbian (sr) — Jay A. Fleming <tito.nehru.naser@gmail.com>"
+msgstr "Jay A. Fleming"
 
 #: ../src/lxterminal.c:748
 msgid "Copyright (C) 2008-2014"
-msgstr "2008-2014. Нека су права задржана."
+msgstr "Ауторска права — 2008-2014."
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -313,7 +313,7 @@ msgstr "Подешавања"
 
 #: ../data/lxterminal-preferences.glade.h:2
 msgid "Terminal font"
-msgstr "Фонт у терминалу:"
+msgstr "Словолик у терминалу:"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Background"
@@ -325,7 +325,7 @@ msgstr "Боја текста"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "Allow bold font"
-msgstr "Дозволи задебљан фонт"
+msgstr "Дозволи задебљан словолик"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Cursor blink"
@@ -357,7 +357,7 @@ msgstr "Смештај траке са листовима:"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Scrollback lines"
-msgstr "Број линија историје"
+msgstr "Број линија историјата"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide scroll bar"
@@ -365,16 +365,15 @@ msgstr "Сакриј дугмад за клизање"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Hide menu bar"
-msgstr "Сакриј траку са менијем"
+msgstr "Сакриј траку изборника"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Hide Close buttons"
 msgstr "Сакриј  дугмад за затварање"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Сакриј  дугмад за затварање"
+msgstr "Сакриј курсор"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -386,69 +385,59 @@ msgstr "Знакови који образују речи"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Искључи пречице за мени (F10 подразумевано)"
+msgstr "Искључи пречицу до изборника (F10 подразумевано)"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Искључи употребу „Alt-n“ тастера у листовима и менију"
+msgstr "Искључи употребу „Alt-n“ тастера у листовима и изборнику"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Advanced"
 msgstr "Напредно"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Нови _прозор"
+msgstr "Нови прозор"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Нови _лист"
+msgstr "Нови лист"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "За_твори лист"
+msgstr "Затвори лист"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "Нови _прозор"
+msgstr "Нови прозор"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Умножи _УРЛ"
+msgstr "Умножи"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "У_баци"
+msgstr "Убаци"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Претходни лист"
+msgstr "Претходни лист"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "_Следећи лист"
+msgstr "Следећи лист"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Премести лист _лево"
+msgstr "Премести лист улево"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Премести лист _десно"
+msgstr "Премести лист удесно"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Пречице"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -472,11 +461,12 @@ msgstr "Терминал"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Користите линију наредби"
+msgstr "Употребљавајте линију наредби"
 
 #: ../data/lxterminal.desktop.in.h:4
+#, fuzzy
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "console;command line;execute;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Затвори прозор"

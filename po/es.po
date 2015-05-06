@@ -8,16 +8,18 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2015-03-14 10:19+0000\n"
-"Last-Translator: jcsl <trcs@gmx.com>\n"
+"PO-Revision-Date: 2015-03-27 20:38+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.6.0-rc2\n"
-"X-POOTLE-MTIME: 1426328388.000000\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1427488739.000000\n"
+"X-Pootle-Path: /es/lxterminal/po/es.po\n"
+"X-Pootle-Revision: 208\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -224,7 +226,7 @@ msgstr "_Pegar"
 #. 11
 #: ../src/lxterminal.c:151
 msgid "Clear scr_ollback"
-msgstr "_Limpiar el histórico"
+msgstr "_Limpiar el historial"
 
 #. 12
 #. 13
@@ -295,11 +297,11 @@ msgstr "Nombrar la pestaña"
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
-"Daniel Pacheco <daniel@tunki.org>, 2008\n"
-"Julio Napurí Carlos <julionc@gmail.com>, 2008\n"
-"Guillermo Iguarán <tronador@cuteam.org>, 2009\n"
+"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2013-2015\n"
 "Hugo Florentino <sysadmin@cips.cu>, 2009-2011\n"
-"Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013"
+"Guillermo Iguarán <tronador@cuteam.org>, 2009\n"
+"Daniel Pacheco <daniel@tunki.org>, 2008\n"
+"Julio Napurí Carlos <julionc@gmail.com>, 2008"
 
 #: ../src/lxterminal.c:748
 msgid "Copyright (C) 2008-2014"
@@ -359,7 +361,7 @@ msgstr "Posición del panel de pestañas"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Scrollback lines"
-msgstr "Líneas de histórico"
+msgstr "Líneas del historial"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Hide scroll bar"

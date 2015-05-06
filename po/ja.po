@@ -11,14 +11,18 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2010-07-31 17:47+0900\n"
-"Last-Translator: Hironao Komatsu <hironao@users.sourceforge.net>\n"
+"PO-Revision-Date: 2015-05-04 04:34+0000\n"
+"Last-Translator: rago1975 <take1975@kumamoto.email.ne.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1430714060.000000\n"
+"X-Pootle-Path: /ja/lxterminal/po/ja.po\n"
+"X-Pootle-Revision: 1349\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -192,13 +196,11 @@ msgstr "ヘルプ(_H)"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
 msgstr "新規ウィンドウ(_W)"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
 msgstr "新規タブ(_T)"
 
@@ -210,9 +212,8 @@ msgstr "タブを閉じる(_C)"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "新規ウィンドウ(_W)"
+msgstr "ウィンドウを閉じる(_W)"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -374,9 +375,8 @@ msgid "Hide Close buttons"
 msgstr "閉じるボタンを隠す"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "閉じるボタンを隠す"
+msgstr "マウスポインタを隠す"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -399,58 +399,48 @@ msgid "Advanced"
 msgstr "高度な設定"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "新規ウィンドウ(_W)"
+msgstr "新規ウィンドウ"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "新規タブ(_T)"
+msgstr "新規タブ"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "タブを閉じる(_C)"
+msgstr "タブを閉じる"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "新規ウィンドウ(_W)"
+msgstr "ウィンドウを閉じる"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "URLをコピー(_U)"
+msgstr "コピー"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "貼り付け(_P)"
+msgstr "貼り付け"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "前のタブ(_V)"
+msgstr "前のタブ"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "次のタブ(_X)"
+msgstr "次のタブ"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "タブを左へ移動(_L)"
+msgstr "タブを左に移動"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "タブを右へ移動(_R)"
+msgstr "タブを右に移動"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "ショートカット"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -478,7 +468,7 @@ msgstr "コマンド・ライン端末です"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "コンソール;コマンドライン;実行;"
 
 #~ msgid "_Quit"
 #~ msgstr "終了(_Q)"

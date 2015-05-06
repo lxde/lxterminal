@@ -19,6 +19,8 @@ msgstr ""
 "X-Poedit-Language: Urdu\n"
 "X-Poedit-Country: PAKISTAN\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Pootle-Path: /ur_PK/lxterminal/po/ur_PK.po\n"
+"X-Pootle-Revision: 0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"

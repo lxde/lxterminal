@@ -13,6 +13,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
 "X-Generator: Pootle 2.0.5\n"
+"X-Pootle-Path: /ro/lxterminal/po/ro.po\n"
+"X-Pootle-Revision: 0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"

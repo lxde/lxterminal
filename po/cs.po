@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-10-09 17:26+0200\n"
-"Last-Translator: ALIUM <info@aloisnespor.info>\n"
+"PO-Revision-Date: 2015-03-26 21:33+0000\n"
+"Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1427405596.000000\n"
+"X-Pootle-Path: /cs/lxterminal/po/cs.po\n"
+"X-Pootle-Revision: 141\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -190,13 +193,11 @@ msgstr "_Nápověda"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "Nové _okno"
+msgstr "_Nové okno"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
 msgstr "Nová kar_ta"
 
@@ -208,9 +209,8 @@ msgstr "_Zavřít kartu"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "Nové _okno"
+msgstr "Zavřít _okno"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -298,7 +298,6 @@ msgid "translator-credits"
 msgstr "Michal Várady, Radek Tříška, Alois Nešpor"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2014"
 msgstr "Copyright (C) 2008-2014"
 
@@ -371,9 +370,8 @@ msgid "Hide Close buttons"
 msgstr "Skrýt zavírací tlačítka"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Skrýt zavírací tlačítka"
+msgstr "Skrýt ukazatel myši"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -396,58 +394,48 @@ msgid "Advanced"
 msgstr "Rozšířené"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Nové _okno"
+msgstr "Nové okno"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Nová kar_ta"
+msgstr "Nová karta"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Zavřít kartu"
+msgstr "Zavřít kartu"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "Nové _okno"
+msgstr "Zavřít okno"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Kopírovat _URL"
+msgstr "Kopírovat"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "_Vložit"
+msgstr "Vložit"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "Před_chozí karta"
+msgstr "Předchozí karta"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "Da_lší karta"
+msgstr "Další karta"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Přesunout kartu v_levo"
+msgstr "Přesunout kartu vlevo"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Přesunout kartu vp_ravo"
+msgstr "Přesunout kartu vpravo"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Klávesové zkratky"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -475,7 +463,7 @@ msgstr "Používat příkazový řádek"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "konzole;příkazový řádek;spuštění;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Ukončit"

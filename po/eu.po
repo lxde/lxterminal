@@ -8,17 +8,19 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-10-27 21:43+0200\n"
-"Last-Translator: Asier <asier.iturralde@gmail.com>\n"
+"PO-Revision-Date: 2015-05-01 20:00+0000\n"
+"Last-Translator: Asier Iturralde Sarasola <asier.iturralde@gmail.com>\n"
 "Language-Team: Basque <alainmendi@gmail.com>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.5\n"
-"X-Poedit-Language: Basque\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-POOTLE-MTIME: 1430510431.000000\n"
+"X-Pootle-Path: /eu/lxterminal/po/eu.po\n"
+"X-Pootle-Revision: 875\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -192,13 +194,11 @@ msgstr "_Laguntza"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
 msgstr "_Leiho berria"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
 msgstr "_Fitxa berria"
 
@@ -210,9 +210,8 @@ msgstr "_Itxi fitxa"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "_Leiho berria"
+msgstr "Itxi _leihoa"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -227,7 +226,7 @@ msgstr "_Itsatsi"
 #. 11
 #: ../src/lxterminal.c:151
 msgid "Clear scr_ollback"
-msgstr "Garbitu _atzera_korritzea"
+msgstr "Garbitu _atzera-korritzea"
 
 #. 12
 #. 13
@@ -374,9 +373,8 @@ msgid "Hide Close buttons"
 msgstr "Ezkutatu Itxi botoiak"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Ezkutatu Itxi botoiak"
+msgstr "Ezkutatu saguaren erakuslea"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -399,58 +397,48 @@ msgid "Advanced"
 msgstr "Aurreratua"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "_Leiho berria"
+msgstr "Leiho berria"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "_Fitxa berria"
+msgstr "Fitxa berria"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Itxi fitxa"
+msgstr "Itxi fitxa"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "_Leiho berria"
+msgstr "Itxi leihoa"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Kopiatu _URLa"
+msgstr "Kopiatu"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "_Itsatsi"
+msgstr "Itsatsi"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Aurreko fitxa"
+msgstr "Aurreko fitxa"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "_Hurrengo fitxa"
+msgstr "Hurrengo fitxa"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Mugitu fitxa e_zkerrera"
+msgstr "Mugitu fitxa ezkerrera"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Mugitu fitxa e_skuinera"
+msgstr "Mugitu fitxa eskuinera"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Lasterbideak"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -478,7 +466,7 @@ msgstr "Erabili komando-lerroa"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "kontsola;komando-lerroa;exekutatu;"
 
 #~ msgid "_Quit"
 #~ msgstr "I_rten"

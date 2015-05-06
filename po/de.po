@@ -19,6 +19,8 @@ msgstr ""
 "X-Generator: Pootle 2.6.0-rc2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-POOTLE-MTIME: 1417360482.000000\n"
+"X-Pootle-Path: /de/lxterminal/po/de.po\n"
+"X-Pootle-Revision: 0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"

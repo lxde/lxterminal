@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2013-08-27 10:23+0000\n"
-"Last-Translator: Piotr <strebski@o2.pl>\n"
+"PO-Revision-Date: 2014-12-08 13:26+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish <>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -20,8 +20,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1377599017.0\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1418045161.000000\n"
+"X-Pootle-Path: /pl/lxterminal/po/pl.po\n"
+"X-Pootle-Revision: 0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -195,15 +197,13 @@ msgstr "Pomo_c"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "Nowe _okno"
+msgstr "_Nowe okno"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "Nowa _karta"
+msgstr "Nowa k_arta"
 
 #. 6
 #. 7
@@ -213,9 +213,8 @@ msgstr "Za_mknij kartę"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "Nowe _okno"
+msgstr "Zamknij _okno"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -377,9 +376,8 @@ msgid "Hide Close buttons"
 msgstr "Ukrycie przycisków zamykania kart"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Ukrycie przycisków zamykania kart"
+msgstr "Ukryj wskaźnik myszy"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -402,58 +400,48 @@ msgid "Advanced"
 msgstr "Zaawansowane"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Nowe _okno"
+msgstr "Nowe okno"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Nowa _karta"
+msgstr "Nowa karta"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "Za_mknij kartę"
+msgstr "Zamknij kartę"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "Nowe _okno"
+msgstr "Zamknij okno"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Kopiuj adres _URL"
+msgstr "Kopiuj"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "_Wklej"
+msgstr "Wklej"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Poprzednia"
+msgstr "Poprzednia karta"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "_Następna"
+msgstr "Następna karta"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Przemieść w _lewo"
+msgstr "Przemieść kartę w lewo"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Przemieść w _prawo"
+msgstr "Przemieść kartę w prawo"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Skróty"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -481,7 +469,7 @@ msgstr "Emulator terminala"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "konsola;wiersz poleceń;wykonaj;"
 
 #~ msgid "_Quit"
 #~ msgstr "Za_kończ"

@@ -9,15 +9,18 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-08-23 16:08+0200\n"
-"Last-Translator: Bendegúz <gyonkibendeguz@gmail.com>\n"
+"PO-Revision-Date: 2015-05-04 16:31+0000\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1430757086.000000\n"
+"X-Pootle-Path: /hu/lxterminal/po/hu.po\n"
+"X-Pootle-Revision: 1372\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -191,13 +194,11 @@ msgstr "_Súgó"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
 msgstr "Új _ablak"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
 msgstr "Új _lap"
 
@@ -209,9 +210,8 @@ msgstr "Lap be_zárása"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "Új _ablak"
+msgstr "_Ablak bezárása"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -274,7 +274,7 @@ msgstr "Új _lap"
 
 #: ../src/lxterminal.c:170
 msgid "Copy _URL"
-msgstr ""
+msgstr "_URL másolása"
 
 #: ../src/lxterminal.c:173
 msgid "Cl_ear scrollback"
@@ -373,9 +373,8 @@ msgid "Hide Close buttons"
 msgstr "Bezáró gombok elrejtése"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Bezáró gombok elrejtése"
+msgstr "Egérmutató elrejtése"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -398,57 +397,48 @@ msgid "Advanced"
 msgstr "Haladó"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "Új _ablak"
+msgstr "Új ablak"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "Új _lap"
+msgstr "Új lap"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "Lap be_zárása"
+msgstr "Lap bezárása"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "Új _ablak"
+msgstr "Ablak bezárása"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Copy"
-msgstr ""
+msgstr "Másolás"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "Be_illesztés"
+msgstr "Beillesztés"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Előző lap"
+msgstr "Előző lap"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "_Következő lap"
+msgstr "Következő lap"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Lap _balra mozgatása"
+msgstr "Lap mozgatása balra"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Lap _jobbra mozgatása"
+msgstr "Lap mozgatása jobbra"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Gyorsbillentyűk"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -476,7 +466,7 @@ msgstr "Parancssor használata"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "konzol;parancssor;végrehajtás;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Kilépés"
