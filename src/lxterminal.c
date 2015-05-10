@@ -73,31 +73,20 @@ static void terminal_initialize_switch_tab_accelerator(Term * term);
 static void terminal_update_alt(LXTerminal *terminal);
 static gboolean terminal_switch_tab_accelerator(Term * term);
 static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_clear_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, Term * term);
 static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_name_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_previous_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_next_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_move_tab_execute(LXTerminal * terminal, gint direction);
 static void terminal_move_tab_left_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_move_tab_left_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_move_tab_right_activate_event(GtkAction * action, LXTerminal * terminal);
-//static gboolean terminal_move_tab_right_accelerator(LXTerminal * terminal, guint action, GtkWidget * item);
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal);
 
 /* Window creation, destruction, and control. */
@@ -409,13 +398,6 @@ static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * 
     g_free(arguments.working_directory);
 }
 
-/* Handler for accelerator <SHIFT><CTRL> N.  Open a new window. */
-/*static gboolean terminal_new_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_new_window_activate_event(NULL, terminal);
-    return TRUE;
-}*/
-
 /* Handler for "activate" signal on File/New Tab menu item.
  * Open a new tab. */
 static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * terminal)
@@ -452,13 +434,6 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
     terminal_update_alt(terminal);
 }
 
-/* Handler for accelerator <SHIFT><CTRL> T.  Open a new tab. */
-/*static gboolean terminal_new_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_new_tab_activate_event(NULL, terminal);
-    return TRUE;
-}*/
-
 /* Handler for "activate" signal on File/Close Tab menu item.
  * Close the current tab. */
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal)
@@ -466,13 +441,6 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
     terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
 }
-
-/* Handler for accelerator <SHIFT><CTRL> W.  Close the current tab. */
-/*static gboolean terminal_close_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_close_tab_activate_event(NULL, terminal);
-    return TRUE;
-}*/
 
 /* Handler for "activate" signal on File/Close Window menu item.
  * Close the current window. */
@@ -485,13 +453,8 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
     }
 }
 
-/* Handler for accelerator <SHIFT><CTRL> Q.  Close the current window. */
-/*static gboolean terminal_close_window_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_close_window_activate_event(NULL, terminal);
-    return TRUE;
-}*/
-
+/* Handler for the "Copy URL" right-click menu item.
+ * Copy the URL to the clipboard. */
 static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
@@ -510,23 +473,6 @@ static void terminal_copy_activate_event(GtkAction * action, LXTerminal * termin
     vte_terminal_copy_clipboard(VTE_TERMINAL(term->vte));
 }
 
-/* Handler for accelerator <CTRL><SHIFT> C.  Copy to the clipboard. */
-/*static gboolean terminal_copy_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    // fire event only if text selected
-    Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
-    if (vte_terminal_get_has_selection(VTE_TERMINAL(term->vte)))
-    {
-        terminal_copy_activate_event(NULL, terminal);
-        return TRUE;
-    }
-    else
-    {   
-        // if not selected send keys to terminal
-        return FALSE;
-    }
-}*/
-
 /* Handler for "activate" signal on Edit/Paste menu item.
  * Paste from the clipboard. */
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal)
@@ -543,13 +489,6 @@ static void terminal_clear_activate_event(GtkAction * action, LXTerminal * termi
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), 0);
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), get_setting()->scrollback);
 }
-
-/* Handler for accelerator <CTRL><SHIFT> V.  Paste from the clipboard. */
-/*static gboolean terminal_paste_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_paste_activate_event(NULL, terminal);
-    return TRUE;
-}*/
 
 /* Handler for "response" signal on Name Tab dialog. */
 static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, Term * term)
@@ -630,13 +569,6 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
     gtk_widget_show_all(dialog);
 }
 
-/* Handler for accelerator <CTRL><SHIFT> R.  Name the tab. */
-/*static gboolean terminal_name_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_name_tab_activate_event(NULL, terminal);
-    return TRUE;
-}*/
-
 /* Handler for "activate" signal on Tabs/Previous Tab menu item.
  * Cycle through tabs in the reverse direction. */
 static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal * terminal)
@@ -652,14 +584,6 @@ static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal 
     }
 }
 
-/* Handler for accelerator <CTRL><PAGE UP>.  Cycle through tabs in the reverse direction. */
-/*static gboolean terminal_previous_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    GtkAction *_action = gtk_action_group_get_action(terminal->action_group, "Tabs_PreviousTab");
-    gtk_action_activate(_action);
-    return TRUE;
-}*/
-
 /* Handler for "activate" signal on Tabs/Next Tab menu item.
  * Cycle through tabs in the forward direction. */
 static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * terminal)
@@ -674,14 +598,6 @@ static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * te
         gtk_notebook_next_page(GTK_NOTEBOOK(terminal->notebook));
     }
 }
-
-/* Handler for accelerator <CTRL><PAGE DOWN>.  Cycle through tabs in the forward direction. */
-/*static gboolean terminal_next_tab_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    GtkAction *_action = gtk_action_group_get_action(terminal->action_group, "Tabs_NextTab");
-    gtk_action_activate(_action);
-    return TRUE;
-}*/
 
 /* Helper for move tab left and right. */
 static void terminal_move_tab_execute(LXTerminal * terminal, gint direction)
@@ -717,26 +633,12 @@ static void terminal_move_tab_left_activate_event(GtkAction * action, LXTerminal
     terminal_move_tab_execute(terminal, -1);
 }
 
-/* Handler for accelerator <SHIFT><CTRL><PAGE UP>.  Move the tab one position in the reverse direction. */
-/*static gboolean terminal_move_tab_left_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_move_tab_execute(terminal, -1);
-    return TRUE;
-}*/
-
 /* Handler for "activate" signal on Tabs/Move Tab Right menu item.
  * Move the tab one position in the forward direction. */
 static void terminal_move_tab_right_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     terminal_move_tab_execute(terminal, 1);
 }
-
-/* Handler for accelerator <SHIFT><CTRL><PAGE DOWN>.  Move the tab one position in the forward direction. */
-/*static gboolean terminal_move_tab_right_accelerator(LXTerminal * terminal, guint action, GtkWidget * item)
-{
-    terminal_move_tab_execute(terminal, 1);
-    return TRUE;
-}*/
 
 /* Handler for "activate" signal on Help/About menu item. */
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal)
@@ -977,8 +879,6 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
     if (event->type != GDK_BUTTON_PRESS) /* skip GDK_2BUTTON_PRESS and GDK_3BUTTON_PRESS */
         return FALSE;
 
-    //g_print("press\n");
-
     /* Right-click. */
     if (event->button == 3)
     {
@@ -1009,8 +909,6 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
 
 static gboolean terminal_vte_button_release_event(VteTerminal * vte, GdkEventButton * event, Term * term)
 {
-    //g_print("release\n");
-
     if (event->button == 3 && term->open_menu_on_button_release)
     {
         terminal_show_popup_menu(vte, event, term);
@@ -1023,7 +921,6 @@ static gboolean terminal_vte_button_release_event(VteTerminal * vte, GdkEventBut
 
 static void terminal_vte_commit(VteTerminal * vte, gchar * text, guint size, Term * term)
 {
-    //g_print("commit\n");
     term->open_menu_on_button_release = FALSE;
 }
 
