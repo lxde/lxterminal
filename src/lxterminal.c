@@ -111,6 +111,7 @@ static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButt
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
+static void terminal_new_tab(LXTerminal * terminal, const gchar * label);
 static void terminal_free(Term * term);
 static void terminal_menubar_initialize(LXTerminal * terminal);
 static void terminal_menu_accelerator_update(LXTerminal * terminal);
@@ -419,13 +420,18 @@ static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * 
  * Open a new tab. */
 static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * terminal)
 {
+    terminal_new_tab(terminal, NULL);
+}
+
+static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
+{
     gchar * proc_cwd = terminal_get_current_dir(terminal);
 
     /* Propagate the working directory of the current tab to the new tab.
      * If the working directory was determined above, use it; otherwise default to the working directory of the process.
      * Create the new terminal. */
 
-    Term * term = terminal_new(terminal, _("LXTerminal"), proc_cwd, NULL, NULL);
+    Term * term = terminal_new(terminal, label, proc_cwd, NULL, NULL);
     g_free(proc_cwd);
 
     /* Add a tab to the notebook and the "terms" array. */
@@ -1129,8 +1135,34 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     gtk_widget_modify_style(term->close_button, rcstyle);
     g_object_ref(rcstyle);
 
+    /* Come up with default label and window title */
+    if (exec == NULL)
+    {
+        vte_terminal_feed(VTE_TERMINAL(term->vte), "\033]0;LXTerminal\007", -1);
+    }
+    else
+    {
+        /* Set title to the command being called */
+        gchar * cmd = g_path_get_basename((exec[1][0] == '-') ? exec[3] : exec[1]);
+        gchar * title = g_strdup_printf("\033]0;%s\007", cmd);
+        vte_terminal_feed(VTE_TERMINAL(term->vte), title, -1);
+        g_free(cmd);
+        g_free(title);
+    }
+
     /* Create the label. */
-    term->label = gtk_label_new((label != NULL) ? label : pwd);
+    if (label != NULL)
+    {
+        /* User specified label. */
+        term->label = gtk_label_new(label);
+        term->user_specified_label = TRUE;
+    }
+    else
+    {
+        term->label = gtk_label_new(vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
+        term->user_specified_label = FALSE;
+    }
+    term->label = gtk_label_new((label != NULL) ? label : vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
     gtk_widget_set_size_request(GTK_WIDGET(term->label), 100, -1);
     gtk_label_set_ellipsize(GTK_LABEL(term->label), PANGO_ELLIPSIZE_END);
     gtk_misc_set_alignment(GTK_MISC(term->label), 0.0, 0.5);
@@ -1147,10 +1179,10 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     /* Fork the process that will have the VTE as its controlling terminal. */
     if (exec == NULL)
     {
-            exec = g_malloc(3 * sizeof(gchar *));
-            exec[0] = g_strdup(g_getenv("SHELL"));
-            exec[1] = g_path_get_basename(exec[0]);
-            exec[2] = NULL;
+        exec = g_malloc(3 * sizeof(gchar *));
+        exec[0] = g_strdup(g_getenv("SHELL"));
+        exec[1] = g_path_get_basename(exec[0]);
+        exec[2] = NULL;
     }
 
     vte_terminal_fork_command_full(
@@ -1396,10 +1428,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
         }
     #endif
 
-    /* Set window title. */
-    gtk_window_set_title(GTK_WINDOW(terminal->window), 
-        ((arguments->title != NULL) ? arguments->title : _("LXTerminal")));
-
     /* Set window icon. */
     if (gtk_icon_theme_has_icon(gtk_icon_theme_get_default(), "lxterminal"))
     {
@@ -1447,11 +1475,14 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     }
     Term * term = terminal_new(
         terminal,
-        _("LXTerminal"),
+        ((arguments->title != NULL) ? arguments->title : NULL),
         ((arguments->working_directory != NULL) ? arguments->working_directory : local_working_directory),
         NULL,
         arguments->command);
     g_free(local_working_directory);
+
+    /* Set window title. */
+    gtk_window_set_title(GTK_WINDOW(terminal->window), gtk_label_get_text(GTK_LABEL(term->label)));
 
     /* Set the terminal geometry. */
     if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0))
@@ -1473,30 +1504,19 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     /* Initialize the geometry hints. */
     gdk_window_get_geometry_hints(gtk_widget_get_window(GTK_WIDGET(term->vte)), &terminal->geometry, &terminal->geometry_mask);
 
-    if (arguments->tabs != NULL)
+    if (arguments->tabs != NULL && arguments->tabs[0] != '\0')
     {
-        int tab_index = 0;
-        char * strings = g_strdup(arguments->tabs);
-        /* use token to slice strings to different tab names */
-        char * token = strtok(strings, ",");
+        /* use token to destructively slice tabs to different tab names */
+        char * token = strtok(arguments->tabs, ",");
+        term->user_specified_label = TRUE;
+        gtk_label_set_text(GTK_LABEL(term->label), token);
+        token = strtok(NULL, ",");
 
         while (token != NULL && token[0] != '\0')
         {
-            if (tab_index > 0)
-            {
-                terminal_new_tab_activate_event(0, terminal);
-            }
-
-            /* set the name */
-            Term * term = g_ptr_array_index(terminal->terms, tab_index);
-            term->user_specified_label = TRUE;
-            gtk_label_set_text(GTK_LABEL(term->label), g_strdup(token));
-
+            terminal_new_tab(terminal, token);
             token = strtok(NULL, ",");
-            tab_index ++;
         }
-
-        g_free(strings);
     }
 
     /* Connect signals. */
