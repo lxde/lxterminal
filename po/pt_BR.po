@@ -11,17 +11,18 @@ msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-10-13 20:30+0200\n"
-"Last-Translator: Henrique P. <zehrique@gmail.com>\n"
+"PO-Revision-Date: 2015-05-19 22:12+0000\n"
+"Last-Translator: Felipe Braga <fbobraga@gmail.com>\n"
 "Language-Team: Portuguese (Brazilian) <translation@mailinglist.lxde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 2.0.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-POOTLE-MTIME: 1432073577.000000\n"
 "X-Pootle-Path: /pt_BR/lxterminal/po/pt_BR.po\n"
-"X-Pootle-Revision: 0\n"
+"X-Pootle-Revision: 2022\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -195,15 +196,13 @@ msgstr "Aj_uda"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "N_ova janela"
+msgstr "_Nova janela"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "No_va aba"
+msgstr "Nova _aba"
 
 #. 6
 #. 7
@@ -213,9 +212,8 @@ msgstr "_Fechar aba"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "N_ova janela"
+msgstr "Fechar _janela"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -230,7 +228,7 @@ msgstr "C_olar"
 #. 11
 #: ../src/lxterminal.c:151
 msgid "Clear scr_ollback"
-msgstr "Ocultar barra de rolagem"
+msgstr "_Limpar rolagem para trás"
 
 #. 12
 #. 13
@@ -307,7 +305,6 @@ msgstr ""
 "Sérgio Cipolla <secipolla@gmail.com>"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2014"
 msgstr "Copyright (C) 2008-2014"
 
@@ -380,9 +377,8 @@ msgid "Hide Close buttons"
 msgstr "Ocultar botões Fechar"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Ocultar botões Fechar"
+msgstr "Ocultar ponteiro do mouse"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -405,58 +401,48 @@ msgid "Advanced"
 msgstr "Avançado"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "N_ova janela"
+msgstr "Nova janela"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "No_va aba"
+msgstr "Nova aba"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Fechar aba"
+msgstr "Fechar aba"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "N_ova janela"
+msgstr "Fechar Janela"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "Copiar _URL"
+msgstr "Copiar"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "C_olar"
+msgstr "Colar"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "Aba a_nterior"
+msgstr "Aba anterior"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "Pró_xima aba"
+msgstr "Próxima aba"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Mover aba para a _esquerda"
+msgstr "Mover aba para a esquerda"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Mover aba para a _direita"
+msgstr "Mover aba para a direita"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Atalhos"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -484,7 +470,7 @@ msgstr "Use a linha de comando"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "console;linha de comando;executar;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Sair"
