@@ -407,13 +407,28 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
 
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 {
+    Term * term;
     gchar * proc_cwd = terminal_get_current_dir(terminal);
 
     /* Propagate the working directory of the current tab to the new tab.
      * If the working directory was determined above, use it; otherwise default to the working directory of the process.
      * Create the new terminal. */
 
-    Term * term = terminal_new(terminal, label, proc_cwd, NULL, NULL);
+    if (terminal->login_shell)
+    {
+	/* Create a login shell, this should be cleaner. */
+        gchar * * exec = g_malloc(3 * sizeof(gchar *));
+        exec[0] = g_strdup(g_getenv("SHELL"));
+	char * shellname = g_path_get_basename(exec[0]);
+        exec[1] = g_strdup_printf("-%s", shellname);
+	g_free(shellname);
+        exec[2] = NULL;
+        term = terminal_new(terminal, label, proc_cwd, NULL, exec);
+    }
+    else
+    {
+        term = terminal_new(terminal, label, proc_cwd, NULL, NULL);
+    }
     g_free(proc_cwd);
 
     /* Add a tab to the notebook and the "terms" array. */
@@ -1040,7 +1055,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     else
     {
         /* Set title to the command being called */
-        gchar * cmd = g_path_get_basename((exec[1][0] == '-') ? exec[3] : exec[1]);
+        gchar * cmd = g_path_get_basename((exec[1][0] == '-' && exec[2] != NULL) ? exec[3] : exec[1]);
         gchar * title = g_strdup_printf("\033]0;%s\007", cmd);
         vte_terminal_feed(VTE_TERMINAL(term->vte), title, -1);
         g_free(cmd);
@@ -1172,7 +1187,6 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
     memset(arguments, 0, sizeof(CommandArguments));
     arguments->executable = argv[0];
 
-    gboolean login_shell = FALSE;
     char * * argv_cursor = argv;
     gint cmd_len;
 
@@ -1221,7 +1235,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         /* -l, --loginshell */
         else if ((strcmp(argument, "--loginshell") == 0) || (strcmp(argument, "-l") == 0))
         {
-            login_shell = TRUE;
+            arguments->login_shell = TRUE;
         }
 
         /* --title=<title> */
@@ -1257,7 +1271,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             return FALSE;
     }
     /* Handle --loginshell. */
-    if (login_shell)
+    if (arguments->login_shell == TRUE)
     {
         const gchar * shell = g_getenv("SHELL");
         gchar * shellname = g_path_get_basename(shell);
@@ -1303,6 +1317,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     terminal->parent = lxtermwin;
     terminal->terms = g_ptr_array_new();
     terminal->fixed_size = TRUE;
+    terminal->login_shell = arguments->login_shell;
     g_ptr_array_add(lxtermwin->windows, terminal);
     terminal->index = terminal->parent->windows->len - 1;
     Setting * setting = get_setting();

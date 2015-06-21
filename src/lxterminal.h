@@ -52,6 +52,7 @@ typedef struct _lxterminal {
     GdkColor background;			/* User preference background color converted to GdkColor */
     GdkColor foreground;			/* User preference foreground color converted to GdkColor */
     gint tab_position;				/* Tab position as an integer value */
+    gboolean login_shell;			/* Terminal will spawn login shells */
 } LXTerminal;
 
 /* Representative of a tab within a toplevel window. */
@@ -80,6 +81,7 @@ typedef struct _command_arguments {
     char * title; 				/* Value of -t, -T, --title; points into argument vector */
     char * tabs; 				/* Value of --tab; points into argument vector */
     char * working_directory;			/* Value of --working-directory; points into argument vector */
+    gboolean login_shell;			/* Terminal will spawn login shells */
 } CommandArguments;
 
 extern gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArguments * arguments);
