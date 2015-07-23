@@ -22,6 +22,7 @@
 #define LXTERMINAL_SETTING_H
 
 #include <gtk/gtk.h>
+#include <vte/vte.h>
 
 #define GENERAL_GROUP "general"
 #define FONT_NAME "fontname"
@@ -72,9 +73,14 @@ typedef struct _setting {
 
     GKeyFile * keyfile;         /* Pointer to GKeyFile containing settings */
     char * font_name;           /* Font name */
+#if VTE_CHECK_VERSION (0, 38, 0)
+    GdkRGBA background_color;      /* Background color */
+    GdkRGBA foreground_color;      /* Foreground color */
+#else
     GdkColor background_color;      /* Background color */
     guint16 background_alpha;       /* Alpha value to go with background color */
     GdkColor foreground_color;      /* Foreground color */
+#endif
     gboolean disallow_bold;     /* Disallow bolding by VTE */
     gboolean cursor_blink;      /* True if cursor blinks */
     gboolean cursor_underline;      /* True if underline cursor; false if block cursor */

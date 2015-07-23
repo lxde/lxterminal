@@ -21,6 +21,7 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
+#include <vte/vte.h>
 
 #include "lxterminal.h"
 #include "setting.h"
@@ -37,6 +38,9 @@ static void preferences_dialog_font_set_event(GtkFontButton * widget, Setting * 
 /* Handler for "color-set" signal on Background Color color button. */
 static void preferences_dialog_background_color_set_event(GtkColorButton * widget, Setting * setting)
 {
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gtk_color_button_get_rgba(widget, &setting->background_color);
+#else
     gtk_color_button_get_color(widget, &setting->background_color);
     setting->background_alpha = gtk_color_button_get_alpha(widget);
 
@@ -44,12 +48,17 @@ static void preferences_dialog_background_color_set_event(GtkColorButton * widge
     {
         setting->background_alpha = 1;
     }
+#endif
 }
 
 /* Handler for "color-set" signal on Foreground Color color button. */
 static void preferences_dialog_foreground_color_set_event(GtkColorButton * widget, Setting * setting)
 {
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gtk_color_button_get_rgba(widget, &setting->foreground_color);
+#else
     gtk_color_button_get_color(widget, &setting->foreground_color);
+#endif
 }
 
 /* Handler for "toggled" signal on Allow Bold toggle button.
@@ -183,13 +192,21 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "font-set", G_CALLBACK(preferences_dialog_font_set_event), setting);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "background_color"));
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->background_color);
+#else
     gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->background_color);
     gtk_color_button_set_alpha(GTK_COLOR_BUTTON(w), setting->background_alpha);
+#endif
     g_signal_connect(G_OBJECT(w), "color-set", 
         G_CALLBACK(preferences_dialog_background_color_set_event), setting);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "foreground_color"));
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->foreground_color);
+#else
     gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->foreground_color);
+#endif
     g_signal_connect(G_OBJECT(w), "color-set", 
         G_CALLBACK(preferences_dialog_foreground_color_set_event), setting);
 

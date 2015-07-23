@@ -22,6 +22,7 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
+#include <vte/vte.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <errno.h>
@@ -40,11 +41,19 @@ void print_setting()
     g_return_if_fail (setting != NULL);
 
     printf("Font name: %s\n", setting->font_name);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gchar * p = gdk_rgba_to_string(&setting->background_color);
+#else
     gchar * p = gdk_color_to_string(&setting->background_color);
+#endif
     printf("Background color: %s\n", p);
     g_free(p);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    p = gdk_rgba_to_string(&setting->foreground_color);
+#else
     printf("Background Alpha: %i\n", setting->background_alpha);
     p = gdk_color_to_string(&setting->foreground_color);
+#endif
     printf("Foreground color: %s\n", p);
     g_free(p);
     printf("Disallow bolding by VTE: %i\n", setting->disallow_bold);
@@ -98,12 +107,20 @@ void save_setting()
     
     /* Push settings to GKeyFile. */
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, FONT_NAME, setting->font_name);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gchar * p = gdk_rgba_to_string(&setting->background_color);
+#else
     gchar * p = gdk_color_to_string(&setting->background_color);
+#endif
     if (p != NULL)
         g_key_file_set_string(setting->keyfile, GENERAL_GROUP, BG_COLOR, p);
     g_free(p);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    p = gdk_rgba_to_string(&setting->foreground_color);
+#else
     g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, BG_ALPHA, setting->background_alpha);
     p = gdk_color_to_string(&setting->foreground_color);
+#endif
     if (p != NULL)
         g_key_file_set_string(setting->keyfile, GENERAL_GROUP, FG_COLOR, p);
     g_free(p);
@@ -235,8 +252,13 @@ Setting * load_setting()
     setting = g_slice_new0(Setting);
 
     /* Initialize nonzero integer values to defaults. */
+#if VTE_CHECK_VERSION (0, 38, 0)
+    setting->background_color.alpha = setting->foreground_color.alpha = 1;
+    setting->foreground_color.red = setting->foreground_color.green = setting->foreground_color.blue = (gdouble) 170/255;
+#else
     setting->background_alpha = 65535;
     setting->foreground_color.red = setting->foreground_color.green = setting->foreground_color.blue = 0xaaaa;
+#endif
 
     /* Load configuration. */
     setting->keyfile = g_key_file_new();
@@ -248,6 +270,9 @@ Setting * load_setting()
         char * p = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, BG_COLOR, NULL);
         if (p != NULL)
         {
+#if VTE_CHECK_VERSION (0, 38, 0)
+            gdk_rgba_parse(&setting->background_color, p);
+#else
             gdk_color_parse(p, &setting->background_color);
         }
         setting->background_alpha = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, BG_ALPHA, &error);
@@ -255,11 +280,16 @@ Setting * load_setting()
         {   
             /* Set default value if key not found! */
             setting->background_alpha = 65535;
+#endif
         }
         p = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, FG_COLOR, NULL);
         if (p != NULL)
         {
+#if VTE_CHECK_VERSION (0, 38, 0)
+            gdk_rgba_parse(&setting->foreground_color, p);
+#else
             gdk_color_parse(p, &setting->foreground_color);
+#endif
         }
         setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISALLOW_BOLD, NULL);
         setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, NULL);

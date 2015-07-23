@@ -39,6 +39,27 @@
 #include "unixsocket.h"
 
 /* Linux color for palette. */
+#if VTE_CHECK_VERSION (0, 38, 0)
+static const GdkRGBA linux_color[16] =
+{
+    { 0, 0, 0, 1 },
+    { 0.67, 0, 0, 1 },
+    { 0, 0.67, 0, 1 },
+    { 0.67, 0.33, 0, 1 },
+    { 0, 0, 0.67, 1 },
+    { 0.67, 0, 0.67, 1 },
+    { 0, 0.67, 0.67, 1 },
+    { 0.67, 0.67, 0.67, 1 },
+    { 0.33, 0.33, 0.33, 1 },
+    { 1, 0.33, 0.33, 1 },
+    { 0.33, 1, 0.33, 1 },
+    { 1, 1, 0.33, 1 },
+    { 0.33, 0.33, 1, 1 },
+    { 1, 0.33, 1, 1 },
+    { 0.33, 1, 1, 1 },
+    { 1, 1, 1, 1 }
+};
+#else
 static const GdkColor linux_color[16] =
 {
     { 0, 0x0000, 0x0000, 0x0000 },
@@ -58,6 +79,7 @@ static const GdkColor linux_color[16] =
     { 0, 0x5555, 0xffff, 0xffff },
     { 0, 0xffff, 0xffff, 0xffff }
 };
+#endif
 
 /* X accessor. */
 static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geometry, GdkWindowHints * geometry_mask);
@@ -229,7 +251,18 @@ static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geom
 /* Accessor for border values from VteTerminal. */
 static GtkBorder * terminal_get_border(Term * term)
 {
-#if VTE_CHECK_VERSION(0, 24, 0)
+#if VTE_CHECK_VERSION (0, 38, 0)
+    GtkBorder padding;
+    gtk_style_context_get_padding(gtk_widget_get_style_context(term->vte),
+                                  gtk_widget_get_state_flags(term->vte),
+                                  &padding);
+    GtkBorder * border = gtk_border_new();
+    border->left = padding.left;
+    border->right = padding.right;
+    border->top = padding.top;
+    border->bottom = padding.bottom;
+    return border;
+#elif VTE_CHECK_VERSION(0, 24, 0)
     /* Style property, new in 0.24.0, replaces the function below. */
     GtkBorder * border;
     gtk_widget_style_get(term->vte, "inner-border", &border, NULL);
@@ -943,10 +976,19 @@ static void terminal_vte_commit(VteTerminal * vte, gchar * text, guint size, Ter
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 {
     Setting * setting = get_setting();
+#if VTE_CHECK_VERSION (0, 38, 0)
+    PangoFontDescription * font_desc;
+#endif
 
     /* Terminal properties. */
+#if VTE_CHECK_VERSION (0, 38, 0)
+    font_desc = pango_font_description_from_string(setting->font_name);
+    vte_terminal_set_font(VTE_TERMINAL(term->vte), font_desc);
+    pango_font_description_free(font_desc);
+#else
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
     vte_terminal_set_word_chars(VTE_TERMINAL(term->vte), setting->word_selection_characters);
+#endif
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
     vte_terminal_set_allow_bold(VTE_TERMINAL(term->vte), ! setting->disallow_bold);
     vte_terminal_set_cursor_blink_mode(VTE_TERMINAL(term->vte), ((setting->cursor_blink) ? VTE_CURSOR_BLINK_ON : VTE_CURSOR_BLINK_OFF));
@@ -955,6 +997,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     vte_terminal_set_mouse_autohide(VTE_TERMINAL(term->vte), setting->hide_pointer);
 
     /* Background and foreground colors. */
+#if !VTE_CHECK_VERSION (0, 38, 0)
     if (terminal->rgba)
     {
         /* vte_terminal_queue_background_update doesn't run without changing background. */
@@ -967,6 +1010,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
         vte_terminal_set_background_transparent(VTE_TERMINAL(term->vte), setting->background_alpha == 65535 ? FALSE : TRUE);
         vte_terminal_set_background_saturation(VTE_TERMINAL(term->vte), 1 - ((double) setting->background_alpha / 65535));
     }
+#endif
     vte_terminal_set_colors(VTE_TERMINAL(term->vte), &setting->foreground_color, &setting->background_color, &linux_color[0], 16);
 
     /* Hide or show scrollbar. */
@@ -1013,8 +1057,12 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 
     /* Set up the VTE. */
     setlocale(LC_ALL, "");
+#if VTE_CHECK_VERSION (0, 38, 0)
+    vte_terminal_set_encoding(VTE_TERMINAL(term->vte), nl_langinfo(CODESET), NULL);
+#else
     vte_terminal_set_emulation(VTE_TERMINAL(term->vte), "xterm");
     vte_terminal_set_encoding(VTE_TERMINAL(term->vte), nl_langinfo(CODESET));
+#endif
     vte_terminal_set_backspace_binding(VTE_TERMINAL(term->vte), VTE_ERASE_ASCII_DELETE);
     vte_terminal_set_delete_binding(VTE_TERMINAL(term->vte), VTE_ERASE_DELETE_SEQUENCE);
 
@@ -1086,7 +1134,11 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     gtk_widget_show_all(term->tab);
 
     /* Set up scrollbar. */
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), gtk_scrollable_get_vadjustment(GTK_SCROLLABLE(term->vte)));
+#else
     gtk_range_set_adjustment(GTK_RANGE(term->scrollbar), vte_terminal_get_adjustment(VTE_TERMINAL(term->vte)));
+#endif
 
     /* Fork the process that will have the VTE as its controlling terminal. */
     if (exec == NULL)
@@ -1097,6 +1149,20 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
         exec[2] = NULL;
     }
 
+#if VTE_CHECK_VERSION (0, 38, 0)
+    vte_terminal_spawn_sync(
+                    VTE_TERMINAL(term->vte),
+                    VTE_PTY_NO_LASTLOG | VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP,
+                    pwd,
+                    exec,
+                    env,
+                    G_SPAWN_SEARCH_PATH | G_SPAWN_FILE_AND_ARGV_ZERO,
+                    NULL,
+                    NULL,
+                    &term->pid,
+                    NULL,
+                    NULL);
+#else
     vte_terminal_fork_command_full(
                     VTE_TERMINAL(term->vte),
                     VTE_PTY_NO_LASTLOG | VTE_PTY_NO_UTMP | VTE_PTY_NO_WTMP,
@@ -1108,6 +1174,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
                     NULL,
                     &term->pid,
                     NULL);
+#endif
     g_strfreev(exec);
 
     /* Connect signals. */
