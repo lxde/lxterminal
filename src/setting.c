@@ -177,7 +177,7 @@ void save_setting()
 
     /* Save color palette */
     for (i=0; i<16; i++) {
-        gchar *palette_color_key = g_strdup_printf(PALETTE_COLOR_PREFIX "%i", i);
+        gchar *palette_color_key = g_strdup_printf(PALETTE_COLOR_PREFIX "%d", i);
 #if VTE_CHECK_VERSION (0, 38, 0)
 	p = gdk_rgba_to_string(&setting->palette_color[i]);
 #else
@@ -359,16 +359,16 @@ Setting * load_setting()
 #endif
         }
 
-        g_key_file_get_string(setting->keyfile, GENERAL_GROUP, COLOR_PRESET, setting->color_preset);
+        setting->color_preset = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, COLOR_PRESET, NULL);
         if (setting->color_preset) {
             for (i=0; i<16; i++) {
-                gchar *palette_color_key = g_strdup_printf(PALETTE_COLOR_PREFIX "%i", i);
-                g_key_file_get_string(setting->keyfile, GENERAL_GROUP, palette_color_key, p);
+                gchar *palette_color_key = g_strdup_printf(PALETTE_COLOR_PREFIX "%d", i);
+                p = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, palette_color_key, NULL);
                 if (p != NULL) {
 #if VTE_CHECK_VERSION (0, 38, 0)
-                    gdk_rgba_parse(&setting->foreground_color, p);
+                    gdk_rgba_parse(&setting->palette_color[i], p);
 #else
-                    gdk_color_parse(p, &setting->foreground_color);
+                    gdk_color_parse(p, &setting->palette_color[i]);
 #endif
                 } else {
                     goto color_preset_does_not_exist;
