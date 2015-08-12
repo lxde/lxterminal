@@ -111,6 +111,8 @@ static gboolean preferences_dialog_palette_preset_changed_event(GtkComboBox * wi
         return FALSE;
     }
 
+    setting->color_preset = color_presets[active].name;
+
     w = GTK_WIDGET(gtk_builder_get_object(builder, "background_color"));
 #if VTE_CHECK_VERSION (0, 38, 0)
     gdk_rgba_parse(&setting->background_color, color_presets[active].background_color);
