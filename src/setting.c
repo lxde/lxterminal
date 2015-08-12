@@ -181,7 +181,7 @@ void save_setting()
 #if VTE_CHECK_VERSION (0, 38, 0)
 	p = gdk_rgba_to_string(&setting->palette_color[i]);
 #else
-	p = gdk_color_to_string(&setting->foreground_color[i]);
+	p = gdk_color_to_string(&setting->palette_color[i]);
 #endif
 	if (p != NULL)
 	    g_key_file_set_string(setting->keyfile, GENERAL_GROUP, palette_color_key, p);
@@ -381,7 +381,7 @@ color_preset_does_not_exist:
 #if VTE_CHECK_VERSION (0, 38, 0)
                 gdk_rgba_parse(&setting->palette_color[i], color_presets[0].palette[i]);
 #else
-                gdk_color_parse(p, &setting->palette_color[i], color_presets[0].palette[i]);
+                gdk_color_parse(color_presets[0].palette[i], &setting->palette_color[i]);
 #endif
             }
         }
