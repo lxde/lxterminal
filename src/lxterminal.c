@@ -74,7 +74,12 @@ static void terminal_window_set_fixed_size(LXTerminal * terminal);
 static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal);
 static void terminal_window_title_changed_event(GtkWidget * vte, Term * term);
 static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_object_was);
+#if VTE_CHECK_VERSION (0, 38, 0)
+static void terminal_child_exited_event(VteTerminal * vte, gint status, Term * term);
+#else
 static void terminal_child_exited_event(VteTerminal * vte, Term * term);
+#endif
+static void terminal_close_button_event(VteTerminal * vte, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
@@ -444,7 +449,7 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
-    terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
+    terminal_close_button_event(VTE_TERMINAL(term->vte), term);
 }
 
 /* Handler for "activate" signal on File/Close Window menu item.
@@ -454,7 +459,7 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
     /* Play it safe and delete tabs one by one. */
     while(terminal->terms->len > 0)
     {
-        terminal_child_exited_event(NULL, g_ptr_array_index(terminal->terms, 0));
+        terminal_close_button_event(NULL, g_ptr_array_index(terminal->terms, 0));
     }
 }
 
@@ -779,9 +784,12 @@ static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_obje
     }
 }
 
-/* Handler for "child-exited" signal on VTE.
- * Also handler for "activate" signal on Close button of tab and File/Close Tab menu item and accelerator. */
+/* Handler for "child-exited" signal on VTE. */
+#if VTE_CHECK_VERSION (0, 38, 0)
+static void terminal_child_exited_event(VteTerminal * vte, gint status, Term * term)
+#else
 static void terminal_child_exited_event(VteTerminal * vte, Term * term)
+#endif
 {
     LXTerminal * terminal = term->parent;
 
@@ -817,13 +825,24 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
     }
 }
 
+/* Adapter for "activate" signal on Close button of tab and File/Close Tab menu item and accelerator. */
+static void terminal_close_button_event(VteTerminal * vte, Term * term)
+{
+#if VTE_CHECK_VERSION (0, 38, 0)
+    terminal_child_exited_event(vte, 0, term);
+#else
+    terminal_child_exited_event(vte, term);
+#endif
+}
+
+
 /* Handler for "button-press-event" signal on a notebook tab. */
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term)
 {
     if (event->button == 2)
     {
         /* Middle click closes the tab. */
-        terminal_child_exited_event(NULL, term);
+        terminal_close_button_event(NULL, term);
         return TRUE;
     }
     return FALSE;
@@ -1136,7 +1155,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 
     /* Connect signals. */
     g_signal_connect(G_OBJECT(term->tab), "button-press-event", G_CALLBACK(terminal_tab_button_press_event), term);
-    g_signal_connect(G_OBJECT(term->close_button), "clicked", G_CALLBACK(terminal_child_exited_event), term);
+    g_signal_connect(G_OBJECT(term->close_button), "clicked", G_CALLBACK(terminal_close_button_event), term);
     g_signal_connect(G_OBJECT(term->vte), "button-press-event", G_CALLBACK(terminal_vte_button_press_event), term);
     g_signal_connect(G_OBJECT(term->vte), "button-release-event", G_CALLBACK(terminal_vte_button_release_event), term);
     g_signal_connect(G_OBJECT(term->vte), "commit", G_CALLBACK(terminal_vte_commit), term);
