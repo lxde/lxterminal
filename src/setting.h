@@ -42,6 +42,8 @@
 #define SEL_CHARS "selchars"
 #define DISABLE_F10 "disablef10"
 #define DISABLE_ALT "disablealt"
+#define PALETTE_COLOR_PREFIX "palette_color_"
+#define COLOR_PRESET "color_preset"
 
 #define SHORTCUT_GROUP "shortcut"
 #define NEW_WINDOW_ACCEL "new_window_accel"
@@ -76,11 +78,14 @@ typedef struct _setting {
 #if VTE_CHECK_VERSION (0, 38, 0)
     GdkRGBA background_color;      /* Background color */
     GdkRGBA foreground_color;      /* Foreground color */
+    GdkRGBA palette_color[16];      /* Palette colors */
 #else
     GdkColor background_color;      /* Background color */
     guint16 background_alpha;       /* Alpha value to go with background color */
     GdkColor foreground_color;      /* Foreground color */
+    GdkColor palette_color[16];      /* Palette colors */
 #endif
+    char * color_preset;        /* Color preset name */
     gboolean disallow_bold;     /* Disallow bolding by VTE */
     gboolean cursor_blink;      /* True if cursor blinks */
     gboolean cursor_underline;      /* True if underline cursor; false if block cursor */
@@ -112,6 +117,14 @@ typedef struct _setting {
 
 } Setting;
 
+/* Colors use char for Gdk2 and Gdk3 compability and less duplication */
+typedef struct _colorpreset {
+    char * name;
+    char * background_color;
+    char * foreground_color;
+    char * palette[16];
+} ColorPreset;
+
 extern Setting * get_setting();
 extern void save_setting();
 extern Setting * load_setting();
@@ -122,5 +135,7 @@ extern void free_setting(Setting * setting);
 extern Setting * copy_setting(Setting * setting);
 
 extern void print_setting();
+
+extern ColorPreset color_presets[];
 
 #endif

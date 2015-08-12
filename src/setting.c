@@ -35,6 +35,56 @@
 /* Single copy setting*/
 Setting * setting;
 
+extern ColorPreset color_presets[] = {
+    {
+        .name = "VGA",
+        .background_color = "#000000",
+        .foreground_color = "#aaaaaa",
+        .palette = {
+            "#000000", "#aa0000", "#00aa00", "#aa5500",
+            "#0000aa", "#aa00aa", "#00aaaa", "#aaaaaa",
+            "#555555", "#ff5555", "#55ff55", "#ffff55",
+            "#5555ff", "#ff55ff", "#55ffff", "#ffffff"
+        }
+    },
+    {
+        .name = "xterm",
+        .background_color = "#000000",
+        .foreground_color = "#e5e5e5",
+        .palette = {
+            "#000000", "#cd0000", "#00cd00", "#cdcd00",
+            "#0000ee", "#cd00cd", "#00cdcd", "#e5e5e5",
+            "#7f7f7f", "#ff0000", "#00ff00", "#ffff00",
+            "#5c5cff", "#ff00ff", "#00ffff", "#ffffff"
+        }
+    },
+    {
+        .name = "Tango",
+        .background_color = "#000000",
+        .foreground_color = "#d3d7cf",
+        .palette = {
+            "#000000", "#cd0000", "#4e9a06", "#c4a000",
+            "#3465a4", "#75507b", "#06989a", "#d3d7cf",
+            "#555753", "#ef2929", "#8ae234", "#fce94f",
+            "#729fcf", "#ad7fa8", "#34e2e2", "#eeeeec"
+        }
+    },
+    {
+        .name = "Solarized",
+        .background_color = "#073642",
+        .foreground_color = "#eee8d5",
+        .palette = {
+            "#073642", "#dc322f", "#859900", "#b58900",
+            "#268bd2", "#d33682", "#2aa198", "#eee8d5",
+            "#002b36", "#cb4b16", "#586e75", "#657b83",
+            "#839496", "#6c71c4", "#93a1a1", "#fdf6e3"
+        }
+    },
+    {
+        .name = "Custom"
+    }
+};
+
 /* Debug print. */
 void print_setting()
 {
@@ -102,6 +152,7 @@ void set_setting(Setting * new_setting)
 /* Save settings to configuration file. */
 void save_setting()
 {
+    int i;
     g_return_if_fail (setting != NULL);
     //print_setting();
     
@@ -123,6 +174,20 @@ void save_setting()
 #endif
     if (p != NULL)
         g_key_file_set_string(setting->keyfile, GENERAL_GROUP, FG_COLOR, p);
+
+    /* Save color palette */
+    for (i=0; i<16; i++) {
+        gchar *palette_color_key = g_strdup_printf(PALETTE_COLOR_PREFIX "%i", i);
+#if VTE_CHECK_VERSION (0, 38, 0)
+	p = gdk_rgba_to_string(&setting->palette_color[i]);
+#else
+	p = gdk_color_to_string(&setting->foreground_color[i]);
+#endif
+	if (p != NULL)
+	    g_key_file_set_string(setting->keyfile, GENERAL_GROUP, palette_color_key, p);
+    }
+    g_key_file_set_string(setting->keyfile, GENERAL_GROUP, COLOR_PRESET, setting->color_preset);
+
     g_free(p);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISALLOW_BOLD, setting->disallow_bold);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, setting->cursor_blink);
@@ -232,6 +297,7 @@ void free_setting(Setting * setting)
 /* Load settings from configuration file. */
 Setting * load_setting()
 {
+    int i;
     gchar * dir = g_build_filename(g_get_user_config_dir(), "lxterminal" , NULL);
     g_mkdir_with_parents(dir, S_IRUSR | S_IWUSR | S_IXUSR);
     gchar * user_config_path = g_build_filename(dir, "lxterminal.conf", NULL);
@@ -260,6 +326,7 @@ Setting * load_setting()
     setting->foreground_color.red = setting->foreground_color.green = setting->foreground_color.blue = 0xaaaa;
 #endif
 
+    g_key_file_set_string(setting->keyfile, GENERAL_GROUP, COLOR_PRESET, setting->color_preset);
     /* Load configuration. */
     setting->keyfile = g_key_file_new();
     GError * error = NULL;
@@ -291,6 +358,34 @@ Setting * load_setting()
             gdk_color_parse(p, &setting->foreground_color);
 #endif
         }
+
+        g_key_file_get_string(setting->keyfile, GENERAL_GROUP, COLOR_PRESET, setting->color_preset);
+        if (setting->color_preset) {
+            for (i=0; i<16; i++) {
+                gchar *palette_color_key = g_strdup_printf(PALETTE_COLOR_PREFIX "%i", i);
+                g_key_file_get_string(setting->keyfile, GENERAL_GROUP, palette_color_key, p);
+                if (p != NULL) {
+#if VTE_CHECK_VERSION (0, 38, 0)
+                    gdk_rgba_parse(&setting->foreground_color, p);
+#else
+                    gdk_color_parse(p, &setting->foreground_color);
+#endif
+                } else {
+                    goto color_preset_does_not_exist;
+                }
+            }
+        } else {
+color_preset_does_not_exist:
+            setting->color_preset = color_presets[0].name;
+            for (i=0; i<16; i++) {
+#if VTE_CHECK_VERSION (0, 38, 0)
+                gdk_rgba_parse(&setting->palette_color[i], color_presets[0].palette[i]);
+#else
+                gdk_color_parse(p, &setting->palette_color[i], color_presets[0].palette[i]);
+#endif
+            }
+        }
+
         setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISALLOW_BOLD, NULL);
         setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, NULL);
         setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, NULL);

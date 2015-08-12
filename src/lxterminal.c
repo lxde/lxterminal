@@ -38,49 +38,6 @@
 #include "preferences.h"
 #include "unixsocket.h"
 
-/* Linux color for palette. */
-#if VTE_CHECK_VERSION (0, 38, 0)
-static const GdkRGBA linux_color[16] =
-{
-    { 0, 0, 0, 1 },
-    { 0.67, 0, 0, 1 },
-    { 0, 0.67, 0, 1 },
-    { 0.67, 0.33, 0, 1 },
-    { 0, 0, 0.67, 1 },
-    { 0.67, 0, 0.67, 1 },
-    { 0, 0.67, 0.67, 1 },
-    { 0.67, 0.67, 0.67, 1 },
-    { 0.33, 0.33, 0.33, 1 },
-    { 1, 0.33, 0.33, 1 },
-    { 0.33, 1, 0.33, 1 },
-    { 1, 1, 0.33, 1 },
-    { 0.33, 0.33, 1, 1 },
-    { 1, 0.33, 1, 1 },
-    { 0.33, 1, 1, 1 },
-    { 1, 1, 1, 1 }
-};
-#else
-static const GdkColor linux_color[16] =
-{
-    { 0, 0x0000, 0x0000, 0x0000 },
-    { 0, 0xaaaa, 0x0000, 0x0000 },
-    { 0, 0x0000, 0xaaaa, 0x0000 },
-    { 0, 0xaaaa, 0x5555, 0x0000 },
-    { 0, 0x0000, 0x0000, 0xaaaa },
-    { 0, 0xaaaa, 0x0000, 0xaaaa },
-    { 0, 0x0000, 0xaaaa, 0xaaaa },
-    { 0, 0xaaaa, 0xaaaa, 0xaaaa },
-    { 0, 0x5555, 0x5555, 0x5555 },
-    { 0, 0xffff, 0x5555, 0x5555 },
-    { 0, 0x5555, 0xffff, 0x5555 },
-    { 0, 0xffff, 0xffff, 0x5555 },
-    { 0, 0x5555, 0x5555, 0xffff },
-    { 0, 0xffff, 0x5555, 0xffff },
-    { 0, 0x5555, 0xffff, 0xffff },
-    { 0, 0xffff, 0xffff, 0xffff }
-};
-#endif
-
 /* X accessor. */
 static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geometry, GdkWindowHints * geometry_mask);
 
@@ -1011,7 +968,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
         vte_terminal_set_background_saturation(VTE_TERMINAL(term->vte), 1 - ((double) setting->background_alpha / 65535));
     }
 #endif
-    vte_terminal_set_colors(VTE_TERMINAL(term->vte), &setting->foreground_color, &setting->background_color, &linux_color[0], 16);
+    vte_terminal_set_colors(VTE_TERMINAL(term->vte), &setting->foreground_color, &setting->background_color, &setting->palette_color, 16);
 
     /* Hide or show scrollbar. */
     if (setting->hide_scroll_bar)

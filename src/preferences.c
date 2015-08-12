@@ -27,6 +27,10 @@
 #include "setting.h"
 #include "preferences.h"
 
+GtkBuilder *builder;
+
+gint preset_custom_id;
+
 /* Handler for "font-set" signal on Terminal Font font button. */
 static void preferences_dialog_font_set_event(GtkFontButton * widget, Setting * setting)
 {
@@ -36,8 +40,9 @@ static void preferences_dialog_font_set_event(GtkFontButton * widget, Setting * 
 }
 
 /* Handler for "color-set" signal on Background Color color button. */
-static void preferences_dialog_background_color_set_event(GtkColorButton * widget, Setting * setting)
+static gboolean preferences_dialog_background_color_set_event(GtkColorButton * widget, Setting * setting)
 {
+    GtkWidget *w;
 #if VTE_CHECK_VERSION (0, 38, 0)
     gtk_color_button_get_rgba(widget, &setting->background_color);
 #else
@@ -49,16 +54,97 @@ static void preferences_dialog_background_color_set_event(GtkColorButton * widge
         setting->background_alpha = 1;
     }
 #endif
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    gtk_combo_box_set_active(w, preset_custom_id);
+
+    return FALSE;
 }
 
 /* Handler for "color-set" signal on Foreground Color color button. */
-static void preferences_dialog_foreground_color_set_event(GtkColorButton * widget, Setting * setting)
+static gboolean preferences_dialog_foreground_color_set_event(GtkColorButton * widget, Setting * setting)
 {
+    GtkWidget *w;
+
 #if VTE_CHECK_VERSION (0, 38, 0)
     gtk_color_button_get_rgba(widget, &setting->foreground_color);
 #else
     gtk_color_button_get_color(widget, &setting->foreground_color);
 #endif
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    gtk_combo_box_set_active(w, preset_custom_id);
+    return FALSE;
+}
+
+/* Handler for "color-set" signal on any palette color button. */
+static gboolean preferences_dialog_palette_color_set_event(GtkColorButton * widget, Setting * setting)
+{
+    GtkWidget *w;
+    int i;
+
+    for (i=0;i<16;i++) {
+        gchar *object_key = g_strdup_printf("color_%i", i);
+        w = GTK_WIDGET(gtk_builder_get_object(builder, object_key));
+#if VTE_CHECK_VERSION (0, 38, 0)
+        gtk_color_button_get_rgba(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+#else
+        gtk_color_button_get_color(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+#endif
+	g_free(object_key);
+    }
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    gtk_combo_box_set_active(w, preset_custom_id);
+    return FALSE;
+}
+
+/* Handler for "changed" signal on palette preset menu */
+static gboolean preferences_dialog_palette_preset_changed_event(GtkComboBox * widget, Setting * setting)
+{
+    gint active;
+    int i;
+    GtkWidget *w;
+
+    active = gtk_combo_box_get_active(widget);
+    if (g_strcmp0(color_presets[active].name, "Custom") == 0) {
+        return FALSE;
+    }
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "background_color"));
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gdk_rgba_parse(&setting->background_color, color_presets[active].background_color);
+    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->background_color);
+#else
+    gdk_color_parse(color_presets[active].background_color, &setting->background_color);
+    setting->background_alpha = 65535;
+    gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->background_color);
+    gtk_color_button_set_alpha(GTK_COLOR_BUTTON(w), 65535);
+#endif
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "foreground_color"));
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gdk_rgba_parse(&setting->foreground_color, color_presets[active].foreground_color);
+    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->foreground_color);
+#else
+    gdk_color_parse(color_presets[active].foreground_color, &setting->foreground_color);
+    gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->foreground_color);
+#endif
+
+    for (i=0;i<16;i++) {
+        gchar *object_key = g_strdup_printf("color_%i", i);
+        w = GTK_WIDGET(gtk_builder_get_object(builder, object_key));
+#if VTE_CHECK_VERSION (0, 38, 0)
+        gdk_rgba_parse(&setting->palette_color[i], color_presets[active].palette[i]);
+        gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+#else
+        gdk_color_parse(color_presets[active].palette[i], &setting->palette_color[i]);
+        gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+#endif
+	g_free(object_key);
+    }
+
+    return FALSE;
 }
 
 /* Handler for "toggled" signal on Allow Bold toggle button.
@@ -174,9 +260,10 @@ static gboolean preferences_dialog_shortcut_focus_out_event(GtkWidget * widget, 
 /* Initialize and display the preferences dialog. */
 void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
 {
+    int i;
     Setting * setting = copy_setting(get_setting());
 
-    GtkBuilder * builder = gtk_builder_new();
+    builder = gtk_builder_new();
     if ( ! gtk_builder_add_from_file(builder, PACKAGE_DATA_DIR "/lxterminal/lxterminal-preferences.ui", NULL))
     {
         g_object_unref(builder);
@@ -209,6 +296,43 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
 #endif
     g_signal_connect(G_OBJECT(w), "color-set", 
         G_CALLBACK(preferences_dialog_foreground_color_set_event), setting);
+
+    for (i=0; i<16; i++) {
+        gchar *object_key = g_strdup_printf("color_%i", i);
+        w = GTK_WIDGET(gtk_builder_get_object(builder, object_key));
+#if VTE_CHECK_VERSION (0, 38, 0)
+        gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+#else
+        gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+#endif
+        g_signal_connect(G_OBJECT(w), "color-set",
+            G_CALLBACK(preferences_dialog_palette_color_set_event), setting);
+	g_free(object_key);
+    }
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "values_color_presets"));
+    GtkWidget *w2 = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    gboolean preset_is_set = FALSE;
+    for (i=0; ; i++) {
+        gchar *some_data;
+        gtk_list_store_insert_with_values (w, NULL, -1, 0, color_presets[i].name, -1);
+
+        if (g_strcmp0(color_presets[i].name, setting->color_preset) == 0) {
+            gtk_combo_box_set_active(w2, i);
+            preset_is_set = TRUE;
+        }
+
+        if (g_strcmp0(color_presets[i].name, "Custom") == 0) {
+            if (preset_is_set == FALSE) {
+                gtk_combo_box_set_active(w2, i);
+            }
+            preset_custom_id = i;
+            break;
+        }
+    }
+
+    g_signal_connect(G_OBJECT(w2), "changed",
+            G_CALLBACK(preferences_dialog_palette_preset_changed_event), setting);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "allow_bold"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), ! setting->disallow_bold);
@@ -334,8 +458,6 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
         G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->move_tab_right_accel);
 
-    g_object_unref(builder);
-
     gtk_window_set_modal(GTK_WINDOW(GTK_DIALOG(dialog)), TRUE);
     gtk_window_set_transient_for(GTK_WINDOW(GTK_DIALOG(dialog)), 
         GTK_WINDOW(terminal->window));
@@ -353,4 +475,6 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     {
         free_setting(setting);
     }
+
+    g_object_unref(builder);
 }
