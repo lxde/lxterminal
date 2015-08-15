@@ -57,6 +57,9 @@
 #define NEXT_TAB_ACCEL "next_tab_accel"
 #define MOVE_TAB_LEFT_ACCEL "move_tab_left_accel"
 #define MOVE_TAB_RIGHT_ACCEL "move_tab_right_accel"
+#define ZOOM_IN_ACCEL "zoom_in_accel"
+#define ZOOM_OUT_ACCEL "zoom_out_accel"
+#define ZOOM_RESET_ACCEL "zoom_reset_accel"
 
 #define NEW_WINDOW_ACCEL_DEF "<CTRL><SHIFT>N"
 #define NEW_TAB_ACCEL_DEF "<CTRL><SHIFT>T"
@@ -69,6 +72,9 @@
 #define NEXT_TAB_ACCEL_DEF "<CTRL>Page_Down"
 #define MOVE_TAB_LEFT_ACCEL_DEF "<CTRL><SHIFT>Page_Up"
 #define MOVE_TAB_RIGHT_ACCEL_DEF "<CTRL><SHIFT>Page_Down"
+#define ZOOM_IN_ACCEL_DEF "<CTRL><SHIFT>plus"
+#define ZOOM_OUT_ACCEL_DEF "<CTRL><SHIFT>minus"
+#define ZOOM_RESET_ACCEL_DEF "<CTRL><SHIFT>0"
 
 /* User preferences. */
 typedef struct _setting {
@@ -114,6 +120,9 @@ typedef struct _setting {
     char * next_tab_accel;      /* NEXT_TAB_ACCEL */
     char * move_tab_left_accel;     /* MOVE_TAB_LEFT_ACCEL */
     char * move_tab_right_accel;    /* MOVE_TAB_RIGHT_ACCEL */
+    char * zoom_in_accel;    /* ZOOM_IN_ACCEL */
+    char * zoom_out_accel;    /* ZOOM_OUT_ACCEL */
+    char * zoom_reset_accel;    /* ZOOM_RESET_ACCEL */
 
 } Setting;
 
