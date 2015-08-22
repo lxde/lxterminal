@@ -84,6 +84,7 @@ static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButt
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
+static void terminal_set_geometry_hints(Term * term);
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label);
 static void terminal_free(Term * term);
 static void terminal_menubar_initialize(LXTerminal * terminal);
@@ -334,6 +335,33 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
     terminal_new_tab(terminal, NULL);
 }
 
+static void terminal_set_geometry_hints(Term *term)
+{
+    if (term->parent->fixed_size)
+	    return;
+
+    VteTerminal *vteterm = VTE_TERMINAL(term->vte);
+    GtkBorder * border = terminal_get_border(term);
+    gint charwidth = vte_terminal_get_char_width(vteterm);
+    gint charheight = vte_terminal_get_char_height(vteterm);
+    gint col = vte_terminal_get_column_count(vteterm);
+    gint row = vte_terminal_get_row_count(vteterm);
+
+    term->parent->fixed_size = TRUE;
+    GdkGeometry geometry = {
+        .min_width = border->left + charwidth*6 + border->right,
+        .min_height = border->top + charheight*3 + border->bottom,
+        .base_width = border->left + border->right,
+        .base_height = border->top + border->bottom,
+        .width_inc = charwidth,
+        .height_inc = charheight
+    };
+
+    gtk_window_set_geometry_hints(GTK_WINDOW(term->parent->window),
+            vteterm, &geometry,
+            GDK_HINT_MIN_SIZE | GDK_HINT_BASE_SIZE | GDK_HINT_RESIZE_INC);
+}
+
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 {
     Term * term;
@@ -375,6 +403,8 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 
     /* Disable Alt-n switch tabs or not. */
     terminal_update_alt(terminal);
+
+    terminal_set_geometry_hints(term);
 }
 
 /* Handler for "activate" signal on File/Close Tab menu item.
@@ -673,10 +703,11 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
 {
     if (terminal->terms->len > num)
     {
-        /* Propagate the title to the toplevel window. */
         Term * term = g_ptr_array_index(terminal->terms, num);
+        /* Propagate the title to the toplevel window. */
         const gchar * title = gtk_label_get_text(GTK_LABEL(term->label));
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
+        terminal_set_geometry_hints(term);
     }
 }
 
@@ -1436,6 +1467,11 @@ static void terminal_settings_apply(LXTerminal * terminal)
 
     /* update <ALT>n status */
     terminal_update_alt(terminal);
+
+    GtkNotebook *notebook = GTK_NOTEBOOK(terminal->notebook);
+    gint current_page_number = gtk_notebook_get_current_page(notebook);
+    Term *term = g_ptr_array_index(terminal->terms, current_page_number);
+    terminal_set_geometry_hints(term);
 }
 
 /* Apply terminal settings to all tabs in all terminals. */
