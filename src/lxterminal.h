@@ -47,7 +47,6 @@ typedef struct _lxterminal {
 //    Setting * setting;				/* A copy of parent->setting */
     GdkGeometry geometry;			/* Geometry hints (see XGetWMNormalHints) */
     GdkWindowHints geometry_mask;		/* Mask of valid data in geometry hints */
-    gboolean fixed_size;			/* True if the terminal is fixed size */
     gboolean rgba;				/* True if colormap is RGBA */
     GdkColor background;			/* User preference background color converted to GdkColor */
     GdkColor foreground;			/* User preference foreground color converted to GdkColor */
@@ -70,6 +69,9 @@ typedef struct _term {
     GClosure * closure;				/* Accelerator structure */
     gchar * matched_url;
     gboolean open_menu_on_button_release;
+#if !VTE_CHECK_VERSION (0, 38, 0)
+    gdouble scale;
+#endif
 } Term;
 
 /* Output of lxterminal_process_arguments. */

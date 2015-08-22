@@ -337,9 +337,6 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
 
 static void terminal_set_geometry_hints(Term *term)
 {
-    if (term->parent->fixed_size)
-	    return;
-
     VteTerminal *vteterm = VTE_TERMINAL(term->vte);
     GtkBorder * border = terminal_get_border(term);
     gint charwidth = vte_terminal_get_char_width(vteterm);
@@ -347,7 +344,6 @@ static void terminal_set_geometry_hints(Term *term)
     gint col = vte_terminal_get_column_count(vteterm);
     gint row = vte_terminal_get_row_count(vteterm);
 
-    term->parent->fixed_size = TRUE;
     GdkGeometry geometry = {
         .min_width = border->left + charwidth*6 + border->right,
         .min_height = border->top + charheight*3 + border->bottom,
@@ -621,29 +617,43 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
     Term *term = g_ptr_array_index(terminal->terms, current_page_number);
     VteTerminal *vteterm = VTE_TERMINAL(term->vte);
     Setting *setting = get_setting();
+    gint col = vte_terminal_get_column_count(vteterm);
+    gint row = vte_terminal_get_row_count(vteterm);
+    gdouble scale;
 
     if (direction == 0) {
+        scale = 1;
+    } else {
 #if VTE_CHECK_VERSION (0, 38, 0)
-        PangoFontDescription * font_desc;
-        font_desc = pango_font_description_from_string(setting->font_name);
-        vte_terminal_set_font(vteterm, font_desc);
-        pango_font_description_free(font_desc);
+        scale = vte_terminal_get_font_scale(vteterm);
 #else
-        vte_terminal_set_font_from_string(vteterm, setting->font_name);
+        scale = term->scale;
 #endif
+        scale += direction * 0.1;
+        if (scale < 0.3) {
+            return;
+        }
     }
 
+#if VTE_CHECK_VERSION (0, 38, 0)
+    vte_terminal_set_font_scale(vteterm, scale);
+#else
     const PangoFontDescription *font_desc;
     PangoFontDescription *new_font_desc;
     font_desc = vte_terminal_get_font(vteterm);
-    gdouble current_scale = pango_units_to_double(pango_font_description_get_size(font_desc));
-    if (current_scale + direction < 3) {
-	    return;
-    }
+    gdouble current_size = pango_units_to_double(pango_font_description_get_size(font_desc));
     new_font_desc = pango_font_description_copy(font_desc);
-    pango_font_description_set_size(new_font_desc, pango_units_from_double(current_scale + direction));
+    pango_font_description_set_size(new_font_desc, pango_units_from_double(current_size*scale));
     vte_terminal_set_font(vteterm, new_font_desc);
     pango_font_description_free(new_font_desc);
+#endif
+
+    terminal_set_geometry_hints(term);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gtk_window_resize_to_geometry(terminal->window, col, row);
+#else
+    /* TODO: need help */
+#endif
 }
 
 /* Handler for "activate" signal on Tabs/Zoom In */
@@ -1123,6 +1133,11 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 
     /* Show the widget and return. */
     gtk_widget_show_all(term->box);
+
+#if !VTE_CHECK_VERSION (0, 38, 0)
+    /* Set font scale */
+    term->scale = 1;
+#endif
 
     /* Apply user preferences. */
     terminal_settings_apply_to_term(terminal, term);
