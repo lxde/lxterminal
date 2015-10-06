@@ -72,9 +72,9 @@
 #define NEXT_TAB_ACCEL_DEF "<CTRL>Page_Down"
 #define MOVE_TAB_LEFT_ACCEL_DEF "<CTRL><SHIFT>Page_Up"
 #define MOVE_TAB_RIGHT_ACCEL_DEF "<CTRL><SHIFT>Page_Down"
-#define ZOOM_IN_ACCEL_DEF "<CTRL><SHIFT>plus"
-#define ZOOM_OUT_ACCEL_DEF "<CTRL><SHIFT>minus"
-#define ZOOM_RESET_ACCEL_DEF "<CTRL><SHIFT>0"
+#define ZOOM_IN_ACCEL_DEF "<CTRL>plus"
+#define ZOOM_OUT_ACCEL_DEF "<CTRL>underscore"
+#define ZOOM_RESET_ACCEL_DEF "<CTRL>parenright"
 
 /* User preferences. */
 typedef struct _setting {
