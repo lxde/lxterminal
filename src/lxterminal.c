@@ -419,6 +419,7 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 	g_free(shellname);
         exec[2] = NULL;
         term = terminal_new(terminal, label, proc_cwd, NULL, exec);
+        g_strfreev(exec);
     }
     else
     {
