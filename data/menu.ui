@@ -12,6 +12,10 @@
       <menuitem name="Edit_Paste" action="Edit_Paste"/>
       <menuitem name="Edit_Clear" action="Edit_Clear"/>
       <separator/>
+      <menuitem name="Edit_ZoomIn" action="Edit_ZoomIn"/>
+      <menuitem name="Edit_ZoomOut" action="Edit_ZoomOut"/>
+      <menuitem name="Edit_ZoomReset" action="Edit_ZoomReset"/>
+      <separator/>
       <menuitem name="Edit_Preferences" action="Edit_Preferences"/>
     </menu>
     <menu name="Tabs" action="Tabs">

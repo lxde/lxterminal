@@ -57,7 +57,7 @@ static gboolean preferences_dialog_background_color_set_event(GtkColorButton * w
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
     gtk_combo_box_set_active(w, preset_custom_id);
-
+    setting->color_preset = color_presets[preset_custom_id].name;
     return FALSE;
 }
 
@@ -74,6 +74,7 @@ static gboolean preferences_dialog_foreground_color_set_event(GtkColorButton * w
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
     gtk_combo_box_set_active(w, preset_custom_id);
+    setting->color_preset = color_presets[preset_custom_id].name;
     return FALSE;
 }
 
@@ -96,6 +97,7 @@ static gboolean preferences_dialog_palette_color_set_event(GtkColorButton * widg
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
     gtk_combo_box_set_active(w, preset_custom_id);
+    setting->color_preset = color_presets[preset_custom_id].name;
     return FALSE;
 }
 
@@ -459,6 +461,21 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     gtk_entry_set_text(GTK_ENTRY(w), setting->move_tab_right_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
         G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->move_tab_right_accel);
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_IN_ACCEL));
+    gtk_entry_set_text(GTK_ENTRY(w), setting->zoom_in_accel);
+    g_signal_connect(G_OBJECT(w), "focus-out-event", 
+        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->zoom_in_accel);
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_OUT_ACCEL));
+    gtk_entry_set_text(GTK_ENTRY(w), setting->zoom_out_accel);
+    g_signal_connect(G_OBJECT(w), "focus-out-event", 
+        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->zoom_out_accel);
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_RESET_ACCEL));
+    gtk_entry_set_text(GTK_ENTRY(w), setting->zoom_reset_accel);
+    g_signal_connect(G_OBJECT(w), "focus-out-event", 
+        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->zoom_reset_accel);
 
     gtk_window_set_modal(GTK_WINDOW(GTK_DIALOG(dialog)), TRUE);
     gtk_window_set_transient_for(GTK_WINDOW(GTK_DIALOG(dialog)), 

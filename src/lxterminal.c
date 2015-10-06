@@ -44,7 +44,6 @@ static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geom
 
 /* Utilities. */
 static GtkBorder * terminal_get_border(Term * term);
-static void terminal_geometry_restore(Term * term);
 static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
 static gchar * terminal_get_current_dir(LXTerminal * terminal);
 static gchar * terminal_get_preferred_shell();
@@ -68,11 +67,12 @@ static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * te
 static void terminal_move_tab_execute(LXTerminal * terminal, gint direction);
 static void terminal_move_tab_left_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_move_tab_right_activate_event(GtkAction * action, LXTerminal * terminal);
+static gboolean terminal_zoom_in_activate_event(GtkAction * action, LXTerminal * terminal);
+static gboolean terminal_zoom_out_activate_event(GtkAction * action, LXTerminal * terminal);
+static gboolean terminal_zoom_reset_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal);
 
 /* Window creation, destruction, and control. */
-static gboolean terminal_window_size_allocate_event(GtkWidget * widget, GtkAllocation * allocation, LXTerminal * terminal);
-static void terminal_window_set_fixed_size(LXTerminal * terminal);
 static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal);
 static void terminal_window_title_changed_event(GtkWidget * vte, Term * term);
 static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_object_was);
@@ -86,6 +86,7 @@ static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButt
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
+static void terminal_set_geometry_hints(Term * term);
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label);
 static void terminal_free(Term * term);
 static void terminal_menubar_initialize(LXTerminal * terminal);
@@ -126,13 +127,17 @@ static GtkActionEntry menu_items[] =
 /* 10 */    { "Edit_Paste", GTK_STOCK_PASTE, N_("_Paste"), PASTE_ACCEL_DEF, "Paste", G_CALLBACK(terminal_paste_activate_event) },
 /* 11 */    { "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
 /* 12 */    { "Edit_Sep1", NULL, "Sep" },
-/* 13 */    { "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
-/* 14 */    { "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL_DEF, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
-/* 15 */    { "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL_DEF, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
-/* 16 */    { "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NEXT_TAB_ACCEL_DEF, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
-/* 17 */    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL_DEF, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
-/* 18 */    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL_DEF, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
-/* 19 */    { "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) },
+/* 13 */    { "Edit_ZoomIn", GTK_STOCK_ZOOM_IN, N_("Zoom _In"), ZOOM_IN_ACCEL_DEF, "Zoom In", G_CALLBACK(terminal_zoom_in_activate_event) },
+/* 14 */    { "Edit_ZoomOut", GTK_STOCK_ZOOM_OUT, N_("Zoom O_ut"), ZOOM_OUT_ACCEL_DEF, "Zoom Out", G_CALLBACK(terminal_zoom_out_activate_event) },
+/* 15 */    { "Edit_ZoomReset", GTK_STOCK_ZOOM_FIT, N_("Zoom _Reset"), ZOOM_RESET_ACCEL_DEF, "Zoom Reset", G_CALLBACK(terminal_zoom_reset_activate_event) },
+/* 16 */    { "Edit_Sep2", NULL, "Sep" },
+/* 17 */    { "Edit_Preferences", GTK_STOCK_EXECUTE, N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
+/* 18 */    { "Tabs_NameTab", GTK_STOCK_INFO, N_("Na_me Tab"), NAME_TAB_ACCEL_DEF, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
+/* 19 */    { "Tabs_PreviousTab", GTK_STOCK_GO_BACK, N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL_DEF, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
+/* 20 */    { "Tabs_NextTab", GTK_STOCK_GO_FORWARD, N_("Ne_xt Tab"), NEXT_TAB_ACCEL_DEF, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
+/* 21 */    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL_DEF, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
+/* 22 */    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL_DEF, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
+/* 23 */    { "Help_About", GTK_STOCK_ABOUT, N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) },
 };
 #define MENUBAR_MENUITEM_COUNT G_N_ELEMENTS(menu_items)
 
@@ -159,59 +164,6 @@ static GtkActionEntry vte_menu_items[] =
 };
 #define VTE_MENUITEM_COUNT G_N_ELEMENTS(vte_menu_items)
 
-/* Copied out of static function in gdk_window.
- * A wrapper around XGetWMNormalHints. */
-static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geometry, GdkWindowHints * geometry_mask)
-{
-    g_return_if_fail(GDK_IS_WINDOW (window));
-    g_return_if_fail(geometry != NULL);
-    g_return_if_fail(geometry_mask != NULL);
-
-    *geometry_mask = 0;
-
-    if (gdk_window_is_destroyed(window))
-        return;
-
-    XSizeHints size_hints;
-    glong junk_size_mask = 0;
-    if ( ! XGetWMNormalHints(GDK_WINDOW_XDISPLAY(window), GDK_WINDOW_XID(window), &size_hints, &junk_size_mask))
-        return;
-
-    if (size_hints.flags & PMinSize)
-    {
-        *geometry_mask |= GDK_HINT_MIN_SIZE;
-        geometry->min_width = size_hints.min_width;
-        geometry->min_height = size_hints.min_height;
-    }
-
-    if (size_hints.flags & PMaxSize)
-    {
-        *geometry_mask |= GDK_HINT_MAX_SIZE;
-        geometry->max_width = MAX (size_hints.max_width, 1);
-        geometry->max_height = MAX (size_hints.max_height, 1);
-    }
-
-    if (size_hints.flags & PResizeInc)
-    {
-        *geometry_mask |= GDK_HINT_RESIZE_INC;
-        geometry->width_inc = size_hints.width_inc;
-        geometry->height_inc = size_hints.height_inc;
-    }
-
-    if (size_hints.flags & PAspect)
-    {
-        *geometry_mask |= GDK_HINT_ASPECT;
-        geometry->min_aspect = (gdouble) size_hints.min_aspect.x / (gdouble) size_hints.min_aspect.y;
-        geometry->max_aspect = (gdouble) size_hints.max_aspect.x / (gdouble) size_hints.max_aspect.y;
-    }
-
-    if (size_hints.flags & PWinGravity)
-    {
-        *geometry_mask |= GDK_HINT_WIN_GRAVITY;
-        geometry->win_gravity = size_hints.win_gravity;
-    }
-}
-
 /* Accessor for border values from VteTerminal. */
 static GtkBorder * terminal_get_border(Term * term)
 {
@@ -237,23 +189,6 @@ static GtkBorder * terminal_get_border(Term * term)
     vte_terminal_get_padding(VTE_TERMINAL(term->vte), &border->left, &border->top);
     return border;
 #endif
-}
-
-/* Restore the terminal geometry after a font size change or hiding the tab bar. */
-static void terminal_geometry_restore(Term * term)
-{
-    /* Set fixed VTE size. */
-    terminal_window_set_fixed_size(term->parent);
-
-    /* Recover the window size. */
-    GtkBorder * border = terminal_get_border(term);
-    vte_terminal_set_size(VTE_TERMINAL(term->vte),
-        vte_terminal_get_column_count(VTE_TERMINAL(term->vte)),
-        vte_terminal_get_row_count(VTE_TERMINAL(term->vte)));
-    gtk_window_resize(GTK_WINDOW(term->parent->window),
-        border->left + vte_terminal_get_char_width(VTE_TERMINAL(term->vte)),
-        border->top + vte_terminal_get_char_height(VTE_TERMINAL(term->vte)));
-    gtk_border_free(border);
 }
 
 /* Set the position of the tabs on the main window. */
@@ -432,6 +367,29 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
     terminal_new_tab(terminal, NULL);
 }
 
+static void terminal_set_geometry_hints(Term *term)
+{
+    VteTerminal *vteterm = VTE_TERMINAL(term->vte);
+    GtkBorder * border = terminal_get_border(term);
+    gint charwidth = vte_terminal_get_char_width(vteterm);
+    gint charheight = vte_terminal_get_char_height(vteterm);
+    gint col = vte_terminal_get_column_count(vteterm);
+    gint row = vte_terminal_get_row_count(vteterm);
+
+    GdkGeometry geometry = {
+        .min_width = border->left + charwidth*6 + border->right,
+        .min_height = border->top + charheight*3 + border->bottom,
+        .base_width = border->left + border->right,
+        .base_height = border->top + border->bottom,
+        .width_inc = charwidth,
+        .height_inc = charheight
+    };
+
+    gtk_window_set_geometry_hints(GTK_WINDOW(term->parent->window),
+            vteterm, &geometry,
+            GDK_HINT_MIN_SIZE | GDK_HINT_BASE_SIZE | GDK_HINT_RESIZE_INC);
+}
+
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 {
     Term * term;
@@ -469,12 +427,13 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
     gtk_notebook_set_current_page(GTK_NOTEBOOK(term->parent->notebook), term->index);
     if (term->index > 0)
     {
-        terminal_window_set_fixed_size(terminal);
         gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), TRUE);
     }
 
     /* Disable Alt-n switch tabs or not. */
     terminal_update_alt(terminal);
+
+    terminal_set_geometry_hints(term);
 }
 
 /* Handler for "activate" signal on File/Close Tab menu item.
@@ -683,6 +642,74 @@ static void terminal_move_tab_right_activate_event(GtkAction * action, LXTermina
     terminal_move_tab_execute(terminal, 1);
 }
 
+/* Helper for terminal zoom in/out. */
+static void terminal_zoom(LXTerminal * terminal, gint direction)
+{
+    GtkNotebook *notebook = GTK_NOTEBOOK(terminal->notebook);
+    gint current_page_number = gtk_notebook_get_current_page(notebook);
+    Term *term = g_ptr_array_index(terminal->terms, current_page_number);
+    VteTerminal *vteterm = VTE_TERMINAL(term->vte);
+    Setting *setting = get_setting();
+    gint col = vte_terminal_get_column_count(vteterm);
+    gint row = vte_terminal_get_row_count(vteterm);
+    gdouble scale;
+
+    if (direction == 0) {
+        scale = 1;
+    } else {
+#if VTE_CHECK_VERSION (0, 38, 0)
+        scale = vte_terminal_get_font_scale(vteterm);
+#else
+        scale = term->scale;
+#endif
+        scale += direction * 0.1;
+        if (scale < 0.3) {
+            return;
+        }
+    }
+
+#if VTE_CHECK_VERSION (0, 38, 0)
+    vte_terminal_set_font_scale(vteterm, scale);
+#else
+    const PangoFontDescription *font_desc;
+    PangoFontDescription *new_font_desc;
+    font_desc = vte_terminal_get_font(vteterm);
+    gdouble current_size = pango_units_to_double(pango_font_description_get_size(font_desc));
+    new_font_desc = pango_font_description_copy(font_desc);
+    pango_font_description_set_size(new_font_desc, pango_units_from_double(current_size*scale));
+    vte_terminal_set_font(vteterm, new_font_desc);
+    pango_font_description_free(new_font_desc);
+#endif
+
+    terminal_set_geometry_hints(term);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    gtk_window_resize_to_geometry(terminal->window, col, row);
+#else
+    /* TODO: need help */
+#endif
+}
+
+/* Handler for "activate" signal on Tabs/Zoom In */
+static gboolean terminal_zoom_in_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+    terminal_zoom(terminal, 1);
+    return FALSE;
+}
+
+/* Handler for "activate" signal on Tabs/Zoom Out */
+static gboolean terminal_zoom_out_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+    terminal_zoom(terminal, -1);
+    return FALSE;
+}
+
+/* Handler for "activate" signal on Tabs/Zoom Reset */
+static gboolean terminal_zoom_reset_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+    terminal_zoom(terminal, 0);
+    return FALSE;
+}
+
 /* Handler for "activate" signal on Help/About menu item. */
 static void terminal_about_activate_event(GtkAction * action, LXTerminal * terminal)
 {
@@ -714,68 +741,16 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
     gtk_widget_destroy(about_dlg);
 }
 
-/* Handler for "size-request" signal on the top level window. */
-static gboolean terminal_window_size_allocate_event(GtkWidget * widget, GtkAllocation * allocation, LXTerminal * terminal)
-{
-    /* Only do this once. */
-    if (terminal->fixed_size)
-    {
-        /* No longer fixed size. */
-        terminal->fixed_size = FALSE;
-        /* Initialize geometry hints structure. */
-        Term * term = g_ptr_array_index(terminal->terms, 0);
-        GtkBorder * border = terminal_get_border(term);
-        GdkGeometry hints;
-        hints.width_inc = vte_terminal_get_char_width(VTE_TERMINAL(term->vte));
-        hints.height_inc = vte_terminal_get_char_height(VTE_TERMINAL(term->vte));
-        hints.base_width = border->right + 1;
-        hints.base_height = border->bottom + 1;
-        hints.min_width = hints.base_width + hints.width_inc * 4;
-        hints.min_height = hints.base_height + hints.height_inc * 2;
-        gtk_border_free(border);
-
-        /* Set hints into all terminals.  This makes sure we resize on character cell boundaries. */
-        guint i;
-        for (i = 0; i < terminal->terms->len; i++)
-        {
-            Term * term = g_ptr_array_index(terminal->terms, i);
-            gtk_window_set_geometry_hints(GTK_WINDOW(terminal->window),
-            term->vte,
-            &hints,
-                GDK_HINT_RESIZE_INC | GDK_HINT_MIN_SIZE | GDK_HINT_BASE_SIZE);
-        }
-
-        /* Resize the window. */
-        if (allocation->width > 0 && allocation->height > 0)
-            gtk_window_resize(GTK_WINDOW(terminal->window), allocation->width, allocation->height);
-    }
-    return FALSE;
-}
-
-/* Set geometry hints for the fixed size case. */
-static void terminal_window_set_fixed_size(LXTerminal * terminal)
-{
-    terminal->fixed_size = TRUE;
-    guint i;
-    for (i = 0; i < terminal->terms->len; i++)
-    {
-        Term * term = g_ptr_array_index(terminal->terms, i);
-        gtk_window_set_geometry_hints(GTK_WINDOW(terminal->window),
-            term->vte,
-            &terminal->geometry,
-            terminal->geometry_mask);
-    }
-}
-
 /* Handler for "switch-page" event on the tab notebook. */
 static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal)
 {
     if (terminal->terms->len > num)
     {
-        /* Propagate the title to the toplevel window. */
         Term * term = g_ptr_array_index(terminal->terms, num);
+        /* Propagate the title to the toplevel window. */
         const gchar * title = gtk_label_get_text(GTK_LABEL(term->label));
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
+        terminal_set_geometry_hints(term);
     }
 }
 
@@ -1041,12 +1016,6 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     {
         gtk_widget_show(term->close_button);
     }
-
-    /* If terminal geometry changed, react to it. */
-    if (setting->geometry_change)
-    {
-        terminal_geometry_restore(term);
-    }
 }
 
 /* Create a new terminal. */
@@ -1197,6 +1166,11 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 
     /* Show the widget and return. */
     gtk_widget_show_all(term->box);
+
+#if !VTE_CHECK_VERSION (0, 38, 0)
+    /* Set font scale */
+    term->scale = 1;
+#endif
 
     /* Apply user preferences. */
     terminal_settings_apply_to_term(terminal, term);
@@ -1392,7 +1366,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     LXTerminal * terminal = g_slice_new0(LXTerminal);
     terminal->parent = lxtermwin;
     terminal->terms = g_ptr_array_new();
-    terminal->fixed_size = TRUE;
     terminal->login_shell = arguments->login_shell;
     g_ptr_array_add(lxtermwin->windows, terminal);
     terminal->index = terminal->parent->windows->len - 1;
@@ -1489,9 +1462,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     /* Update terminal settings. */
     terminal_settings_apply(terminal);
 
-    /* Initialize the geometry hints. */
-    gdk_window_get_geometry_hints(gtk_widget_get_window(GTK_WIDGET(term->vte)), &terminal->geometry, &terminal->geometry_mask);
-
     if (arguments->tabs != NULL && arguments->tabs[0] != '\0')
     {
         /* use token to destructively slice tabs to different tab names */
@@ -1507,8 +1477,6 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
         }
     }
 
-    /* Connect signals. */
-    g_signal_connect(G_OBJECT(terminal->window), "size-allocate", G_CALLBACK(terminal_window_size_allocate_event), terminal);
     return terminal;
 }
 
@@ -1547,6 +1515,11 @@ static void terminal_settings_apply(LXTerminal * terminal)
 
     /* update <ALT>n status */
     terminal_update_alt(terminal);
+
+    GtkNotebook *notebook = GTK_NOTEBOOK(terminal->notebook);
+    gint current_page_number = gtk_notebook_get_current_page(notebook);
+    Term *term = g_ptr_array_index(terminal->terms, current_page_number);
+    terminal_set_geometry_hints(term);
 }
 
 /* Apply terminal settings to all tabs in all terminals. */
@@ -1577,6 +1550,12 @@ void terminal_update_menu_shortcuts(Setting * setting)
     gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_Copy", key, mods, FALSE);
     gtk_accelerator_parse(setting->paste_accel, &key, &mods);
     gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_Paste", key, mods, FALSE);
+    gtk_accelerator_parse(setting->zoom_in_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_ZoomIn", key, mods, FALSE);
+    gtk_accelerator_parse(setting->zoom_out_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_ZoomOut", key, mods, FALSE);
+    gtk_accelerator_parse(setting->zoom_reset_accel, &key, &mods);
+    gtk_accel_map_change_entry("<Actions>/MenuBar/Edit_ZoomReset", key, mods, FALSE);
     gtk_accelerator_parse(setting->name_tab_accel, &key, &mods);
     gtk_accel_map_change_entry("<Actions>/MenuBar/Tabs_NameTab", key, mods, FALSE);
     gtk_accelerator_parse(setting->previous_tab_accel, &key, &mods);
@@ -1599,11 +1578,14 @@ void terminal_initialize_menu_shortcuts(Setting * setting)
     menu_items[8].accelerator = setting->close_window_accel;
     menu_items[9].accelerator = setting->copy_accel;
     menu_items[10].accelerator = setting->paste_accel;
-    menu_items[14].accelerator = setting->name_tab_accel;
-    menu_items[15].accelerator = setting->previous_tab_accel;
-    menu_items[16].accelerator = setting->next_tab_accel;
-    menu_items[17].accelerator = setting->move_tab_left_accel;
-    menu_items[18].accelerator = setting->move_tab_right_accel;
+    menu_items[13].accelerator = setting->zoom_in_accel;
+    menu_items[14].accelerator = setting->zoom_out_accel;
+    menu_items[15].accelerator = setting->zoom_reset_accel;
+    menu_items[18].accelerator = setting->name_tab_accel;
+    menu_items[19].accelerator = setting->previous_tab_accel;
+    menu_items[20].accelerator = setting->next_tab_accel;
+    menu_items[21].accelerator = setting->move_tab_left_accel;
+    menu_items[22].accelerator = setting->move_tab_right_accel;
 }
 
 /* Main entry point. */

@@ -215,6 +215,9 @@ void save_setting()
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, NEXT_TAB_ACCEL, setting->next_tab_accel);
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_LEFT_ACCEL, setting->move_tab_left_accel);
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_RIGHT_ACCEL, setting->move_tab_right_accel);
+    g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, ZOOM_IN_ACCEL, setting->zoom_in_accel);
+    g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, ZOOM_OUT_ACCEL, setting->zoom_out_accel);
+    g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, ZOOM_RESET_ACCEL, setting->zoom_reset_accel);
 
     /* Convert GKeyFile to text and build path to configuration file. */
     gchar * file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
@@ -417,6 +420,9 @@ color_preset_does_not_exist:
         setting->next_tab_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEXT_TAB_ACCEL, NULL);
         setting->move_tab_left_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_LEFT_ACCEL, NULL);
         setting->move_tab_right_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, MOVE_TAB_RIGHT_ACCEL, NULL);
+        setting->zoom_in_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, ZOOM_IN_ACCEL, NULL);
+        setting->zoom_out_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, ZOOM_OUT_ACCEL, NULL);
+        setting->zoom_reset_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, ZOOM_RESET_ACCEL, NULL);
     }
     g_free(system_config_path);
     g_free(user_config_path);
@@ -479,6 +485,21 @@ color_preset_does_not_exist:
     if (setting->move_tab_right_accel == NULL)
     {
         setting->move_tab_right_accel = g_strdup(MOVE_TAB_RIGHT_ACCEL_DEF);
+    }
+
+    if (setting->zoom_in_accel == NULL)
+    {
+        setting->zoom_in_accel = g_strdup(ZOOM_IN_ACCEL_DEF);
+    }
+
+    if (setting->zoom_out_accel == NULL)
+    {
+        setting->zoom_out_accel = g_strdup(ZOOM_OUT_ACCEL_DEF);
+    }
+
+    if (setting->zoom_reset_accel == NULL)
+    {
+        setting->zoom_reset_accel = g_strdup(ZOOM_RESET_ACCEL_DEF);
     }
 
     if (need_save)
