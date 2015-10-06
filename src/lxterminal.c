@@ -32,6 +32,7 @@
 #include <langinfo.h>
 #include <locale.h>
 #include <sys/stat.h>
+#include <pwd.h>
 
 #include "lxterminal.h"
 #include "setting.h"
@@ -46,6 +47,7 @@ static GtkBorder * terminal_get_border(Term * term);
 static void terminal_geometry_restore(Term * term);
 static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
 static gchar * terminal_get_current_dir(LXTerminal * terminal);
+static gchar * terminal_get_preferred_shell();
 
 /* Menu and accelerator event handlers. */
 static void terminal_initialize_switch_tab_accelerator(Term * term);
@@ -309,6 +311,36 @@ static gchar * terminal_get_current_dir(LXTerminal * terminal)
     return proc_cwd;
 }
 
+/* Get preferred shell.
+ * Modified from eggshell.c of gnome-terminal. */
+static gchar * terminal_get_preferred_shell () {
+    gchar *shell;
+    struct passwd *pw;
+    gchar *fallback_shell = "/bin/sh";
+
+    shell = g_getenv("SHELL");
+    if (geteuid() == getuid() && getegid() == getgid()) {
+        if (shell != NULL) {
+            if (access(shell, X_OK) == 0) {
+                return shell;
+            }
+        }
+    }
+
+    pw = getpwuid(getuid());
+    if (pw && pw->pw_shell) {
+        if (access (pw->pw_shell, X_OK) == 0) {
+            return pw->pw_shell;
+        }
+    }
+
+    if (access (fallback_shell, X_OK) == 0) {
+        return fallback_shell;
+    }
+
+    return NULL;
+}
+
 /* Initialize the <ALT> n accelerators, where n is a digit.
  * These switch to the tab selected by the digit, if it exists. */
 static void terminal_initialize_switch_tab_accelerator(Term * term)
@@ -411,12 +443,12 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 
     if (terminal->login_shell)
     {
-	/* Create a login shell, this should be cleaner. */
+        /* Create a login shell, this should be cleaner. */
         gchar * * exec = g_malloc(3 * sizeof(gchar *));
-        exec[0] = g_strdup(g_getenv("SHELL"));
-	char * shellname = g_path_get_basename(exec[0]);
+        exec[0] = g_strdup(terminal_get_preferred_shell());
+        char * shellname = g_path_get_basename(exec[0]);
         exec[1] = g_strdup_printf("-%s", shellname);
-	g_free(shellname);
+        g_free(shellname);
         exec[2] = NULL;
         term = terminal_new(terminal, label, proc_cwd, NULL, exec);
         g_strfreev(exec);
@@ -1121,7 +1153,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     if (exec == NULL)
     {
         exec = g_malloc(3 * sizeof(gchar *));
-        exec[0] = g_strdup(g_getenv("SHELL"));
+        exec[0] = g_strdup(terminal_get_preferred_shell());
         exec[1] = g_path_get_basename(exec[0]);
         exec[2] = NULL;
     }
@@ -1317,7 +1349,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
     /* Handle --loginshell. */
     if (arguments->login_shell == TRUE)
     {
-        const gchar * shell = g_getenv("SHELL");
+        const gchar * shell = terminal_get_preferred_shell();
         gchar * shellname = g_path_get_basename(shell);
         if (arguments->command == NULL)
         {
