@@ -685,7 +685,25 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
 #if VTE_CHECK_VERSION (0, 38, 0)
     gtk_window_resize_to_geometry(terminal->window, col, row);
 #else
-    /* TODO: need help */
+    {
+    GtkRequisition toplevel_request;
+    GtkRequisition widget_request;
+    GtkBorder *inner_border = NULL;
+    int char_width, char_height;
+    int w, h;
+    gtk_widget_set_size_request(GTK_WIDGET(vteterm), 2000, 2000);
+    gtk_widget_size_request(terminal->window, &toplevel_request);
+    gtk_widget_size_request(GTK_WIDGET(vteterm), &widget_request);
+    char_width = vte_terminal_get_char_width(vteterm);
+    char_height = vte_terminal_get_char_height(vteterm);
+    w = toplevel_request.width - widget_request.width;
+    h = toplevel_request.height - widget_request.height;
+    gtk_widget_style_get(GTK_WIDGET(vteterm), "inner-border", &inner_border, NULL);
+    w += (inner_border ? (inner_border->left + inner_border->right) : 0) + char_width * col;
+    h += (inner_border ? (inner_border->top + inner_border->bottom) : 0) + char_height * row;
+    gtk_border_free(inner_border);
+    gtk_window_resize(terminal->window, w, h);
+    }
 #endif
 }
 
