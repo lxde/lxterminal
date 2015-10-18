@@ -683,6 +683,9 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
 
     terminal_set_geometry_hints(term);
 #if VTE_CHECK_VERSION (0, 38, 0)
+    if (gtk_widget_get_mapped(terminal->window)) {
+        return;
+    }
     gtk_window_resize_to_geometry(terminal->window, col, row);
 #else
     {
