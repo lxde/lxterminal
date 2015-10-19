@@ -667,13 +667,14 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
             return;
         }
     }
+    term->scale = scale;
 
 #if VTE_CHECK_VERSION (0, 38, 0)
     vte_terminal_set_font_scale(vteterm, scale);
 #else
     const PangoFontDescription *font_desc;
     PangoFontDescription *new_font_desc;
-    font_desc = vte_terminal_get_font(vteterm);
+    font_desc = pango_font_description_from_string(setting->font_name);
     gdouble current_size = pango_units_to_double(pango_font_description_get_size(font_desc));
     new_font_desc = pango_font_description_copy(font_desc);
     pango_font_description_set_size(new_font_desc, pango_units_from_double(current_size*scale));
@@ -706,6 +707,7 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
     h += (inner_border ? (inner_border->top + inner_border->bottom) : 0) + char_height * row;
     gtk_border_free(inner_border);
     gtk_window_resize(terminal->window, w, h);
+    gtk_widget_set_size_request(GTK_WIDGET(vteterm), -1, -1);
     }
 #endif
 }
@@ -1007,6 +1009,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 #else
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
     vte_terminal_set_word_chars(VTE_TERMINAL(term->vte), setting->word_selection_characters);
+    term->scale = 1;
 #endif
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
     vte_terminal_set_allow_bold(VTE_TERMINAL(term->vte), ! setting->disallow_bold);
