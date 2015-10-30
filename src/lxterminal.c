@@ -868,6 +868,10 @@ static void terminal_close_button_event(VteTerminal * vte, Term * term)
 /* Handler for "button-press-event" signal on a notebook tab. */
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term)
 {
+    /* Remove bold markup from tab title when activating it */
+    if (event->button == 1)
+        gtk_label_set_markup(GTK_LABEL(term->label),vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
+
     if (event->button == 2)
     {
         /* Middle click closes the tab. */
@@ -924,6 +928,16 @@ static void terminal_show_popup_menu(VteTerminal * vte, GdkEventButton * event, 
 
     gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")),
         NULL, NULL, NULL, NULL, event->button, event->time);
+}
+
+/* Handler for "cursor-moved" signal on VTE */
+static void terminal_vte_cursor_moved_event(VteTerminal * vte, GdkEventButton * event, Term * term)
+{
+    LXTerminal * terminal = term->parent;
+    Term * activeterm = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
+    /* If the activity is in a background tab, set its label to bold */
+    if ( activeterm != term )
+        gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
 }
 
 /* Handler for "button-press-event" signal on VTE. */
@@ -1183,6 +1197,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     g_signal_connect(G_OBJECT(term->vte), "button-release-event", G_CALLBACK(terminal_vte_button_release_event), term);
     g_signal_connect(G_OBJECT(term->vte), "commit", G_CALLBACK(terminal_vte_commit), term);
     g_signal_connect(G_OBJECT(term->vte), "child-exited", G_CALLBACK(terminal_child_exited_event), term);
+    g_signal_connect(G_OBJECT(term->vte), "cursor-moved", G_CALLBACK(terminal_vte_cursor_moved_event), term);
     g_signal_connect(G_OBJECT(term->vte), "window-title-changed", G_CALLBACK(terminal_window_title_changed_event), term);
 
     /* Show the widget and return. */
