@@ -83,6 +83,7 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term);
 #endif
 static void terminal_close_button_event(VteTerminal * vte, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
+static void terminal_vte_cursor_moved_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
