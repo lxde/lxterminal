@@ -144,7 +144,7 @@ void set_setting(Setting * new_setting)
 {
     if (setting != NULL)
     {
-        free_setting(setting);
+        free_setting(&setting);
     }
     setting = new_setting;
 }
@@ -274,27 +274,30 @@ Setting * copy_setting(Setting * setting)
 }
 
 /* Deep free settings. */
-void free_setting(Setting * setting)
+void free_setting(Setting ** setting)
 {
-    g_return_if_fail (setting != NULL);
+    Setting *_setting;
+    g_return_if_fail (setting != NULL && *setting != NULL);
 
-    g_free(setting->font_name);
-    g_free(setting->tab_position);
-    g_free(setting->word_selection_characters);
-    g_free(setting->new_window_accel);
-    g_free(setting->new_tab_accel);
-    g_free(setting->close_tab_accel);
-    g_free(setting->close_window_accel);
-    g_free(setting->copy_accel);
-    g_free(setting->paste_accel);
-    g_free(setting->name_tab_accel);
-    g_free(setting->previous_tab_accel);
-    g_free(setting->next_tab_accel);
-    g_free(setting->move_tab_left_accel);
-    g_free(setting->move_tab_right_accel);
+    _setting = *setting;
 
-    g_slice_free(Setting, setting);
-    setting = NULL;
+    g_free(_setting->font_name);
+    g_free(_setting->tab_position);
+    g_free(_setting->word_selection_characters);
+    g_free(_setting->new_window_accel);
+    g_free(_setting->new_tab_accel);
+    g_free(_setting->close_tab_accel);
+    g_free(_setting->close_window_accel);
+    g_free(_setting->copy_accel);
+    g_free(_setting->paste_accel);
+    g_free(_setting->name_tab_accel);
+    g_free(_setting->previous_tab_accel);
+    g_free(_setting->next_tab_accel);
+    g_free(_setting->move_tab_left_accel);
+    g_free(_setting->move_tab_right_accel);
+
+    g_slice_free(Setting, _setting);
+    *setting = NULL;
 }
 
 /* Load settings from configuration file. */

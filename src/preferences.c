@@ -221,10 +221,10 @@ static void preferences_dialog_generic_toggled_event(GtkToggleButton * widget, g
 }
 
 /* Generic "focus-out-event" handler for GtkEntry events */
-static gboolean preferences_dialog_generic_focus_out_event(GtkWidget * widget, GdkEventFocus * event, gchar * s)
+static gboolean preferences_dialog_generic_focus_out_event(GtkWidget * widget, GdkEventFocus * event, gchar ** s)
 {
-    g_free(s);
-    s = g_strdup(gtk_entry_get_text(GTK_ENTRY(widget)));
+    g_free(*s);
+    *s = g_strdup(gtk_entry_get_text(GTK_ENTRY(widget)));
     return FALSE;
 }
 
@@ -394,7 +394,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     w = GTK_WIDGET(gtk_builder_get_object(builder, "select_by_word"));
     gtk_entry_set_text(GTK_ENTRY(w), setting->word_selection_characters);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_generic_focus_out_event), setting->word_selection_characters);
+        G_CALLBACK(preferences_dialog_generic_focus_out_event), &setting->word_selection_characters);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "disable_f10"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->disable_f10);
@@ -492,7 +492,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     }
     else
     {
-        free_setting(setting);
+        free_setting(&setting);
     }
 
     g_object_unref(builder);
