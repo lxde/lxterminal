@@ -86,6 +86,7 @@ extern ColorPreset color_presets[] = {
 };
 
 /* Debug print. */
+#if 0
 void print_setting()
 {
     g_return_if_fail (setting != NULL);
@@ -134,6 +135,7 @@ void print_setting()
     printf("MOVE_TAB_LEFT_ACCEL: %s\n", setting->move_tab_left_accel);
     printf("MOVE_TAB_RIGHT_ACCEL: %s\n", setting->move_tab_right_accel);
 }
+#endif
 
 Setting * get_setting()
 {
