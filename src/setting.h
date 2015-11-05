@@ -35,6 +35,8 @@
 #define AUDIBLE_BELL "audiblebell"
 #define TAB_POS "tabpos"
 #define SCROLLBACK "scrollback"
+#define GEOMETRY_COLUMNS "geometry_columns"
+#define GEOMETRY_ROWS "geometry_rows"
 #define HIDE_SCROLLBAR "hidescrollbar"
 #define HIDE_MENUBAR "hidemenubar"
 #define HIDE_CLOSE_BUTTON "hideclosebutton"
@@ -98,6 +100,8 @@ typedef struct _setting {
     gboolean audible_bell;      /* True if audible bell */
     char * tab_position;        /* Position of tabs on main window (top, bottom, left, right) */
     gint scrollback;            /* Scrollback buffer size in lines */
+    gint geometry_columns;
+    gint geometry_rows;
     gboolean hide_scroll_bar;       /* True if scroll bar is NOT visible */
     gboolean hide_menu_bar;     /* True if menu bar is NOT visible */
     gboolean hide_close_button;     /* True if close buttons are NOT visible */

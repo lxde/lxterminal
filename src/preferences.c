@@ -186,10 +186,10 @@ static void preferences_dialog_tab_position_changed_event(GtkComboBox * widget, 
     //terminal_settings_apply_to_all(terminal);
 }
 
-/* Handler for "value-changed" signal on Scrollback spin button. */
-static void preferences_dialog_scrollback_value_changed_event(GtkSpinButton * widget, Setting * setting)
+/* Handler for "value-changed" signal on spin button. */
+static void preferences_dialog_int_value_changed_event(GtkSpinButton * widget, gint * value)
 {
-    setting->scrollback = gtk_spin_button_get_value_as_int(widget);
+    *value = gtk_spin_button_get_value_as_int(widget);
 }
 
 /* Convert the user preference on tab position, expressed as a string, to the internal representation.
@@ -369,7 +369,17 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     w = GTK_WIDGET(gtk_builder_get_object(builder, "scrollback_lines"));
     gtk_spin_button_set_value(GTK_SPIN_BUTTON(w), setting->scrollback);
     g_signal_connect(G_OBJECT(w), "value-changed", 
-        G_CALLBACK(preferences_dialog_scrollback_value_changed_event), setting);
+        G_CALLBACK(preferences_dialog_int_value_changed_event), &setting->scrollback);
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "geometry_columns"));
+    gtk_spin_button_set_value(GTK_SPIN_BUTTON(w), setting->geometry_columns);
+    g_signal_connect(G_OBJECT(w), "value-changed", 
+        G_CALLBACK(preferences_dialog_int_value_changed_event), &setting->geometry_columns);
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "geometry_rows"));
+    gtk_spin_button_set_value(GTK_SPIN_BUTTON(w), setting->geometry_rows);
+    g_signal_connect(G_OBJECT(w), "value-changed", 
+        G_CALLBACK(preferences_dialog_int_value_changed_event), &setting->geometry_rows);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "hide_scroll_bar"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->hide_scroll_bar);

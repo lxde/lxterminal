@@ -1486,9 +1486,10 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     gtk_window_set_title(GTK_WINDOW(terminal->window), gtk_label_get_text(GTK_LABEL(term->label)));
 
     /* Set the terminal geometry. */
-    if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0))
-    {
+    if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0)) {
         vte_terminal_set_size(VTE_TERMINAL(term->vte), arguments->geometry_columns, arguments->geometry_rows);
+    } else {
+        vte_terminal_set_size(VTE_TERMINAL(term->vte), setting->geometry_columns, setting->geometry_rows);
     }
 
     /* Add the first terminal to the notebook and the data structures. */

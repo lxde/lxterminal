@@ -195,6 +195,8 @@ void save_setting()
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, setting->audible_bell);
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, TAB_POS, setting->tab_position);
     g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, SCROLLBACK, setting->scrollback);
+    g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_COLUMNS, setting->geometry_columns);
+    g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_ROWS, setting->geometry_rows);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_SCROLLBAR, setting->hide_scroll_bar);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, setting->hide_menu_bar);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, setting->hide_close_button);
@@ -402,6 +404,14 @@ color_preset_does_not_exist:
         {   
             /* Set default value if key not found! */
             setting->scrollback = 1000;
+        }
+        setting->geometry_columns = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_COLUMNS, &error);
+        if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND)) {
+            setting->geometry_columns = 80;
+        }
+        setting->geometry_rows = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_ROWS, &error);
+        if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND)) {
+            setting->geometry_rows = 24;
         }
         setting->hide_scroll_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_SCROLLBAR, NULL);
         setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, NULL);
