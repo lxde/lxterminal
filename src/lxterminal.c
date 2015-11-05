@@ -83,7 +83,7 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term);
 #endif
 static void terminal_close_button_event(VteTerminal * vte, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
-static void terminal_vte_cursor_moved_event(VteTerminal * vte, GdkEventButton * event, Term * term);
+static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
@@ -934,13 +934,13 @@ static void terminal_show_popup_menu(VteTerminal * vte, GdkEventButton * event, 
 }
 
 /* Handler for "cursor-moved" signal on VTE */
-static void terminal_vte_cursor_moved_event(VteTerminal * vte, GdkEventButton * event, Term * term)
+static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term)
 {
     LXTerminal * terminal = term->parent;
     Term * activeterm = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
     /* If the activity is in a background tab, set its label to bold */
     if ( activeterm != term )
-        gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
+        gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>* ",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
 }
 
 /* Handler for "button-press-event" signal on VTE. */
