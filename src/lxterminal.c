@@ -668,7 +668,6 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
             return;
         }
     }
-    term->scale = scale;
 
 #if VTE_CHECK_VERSION (0, 38, 0)
     vte_terminal_set_font_scale(vteterm, scale);
@@ -681,6 +680,7 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
     pango_font_description_set_size(new_font_desc, pango_units_from_double(current_size*scale));
     vte_terminal_set_font(vteterm, new_font_desc);
     pango_font_description_free(new_font_desc);
+    term->scale = scale;
 #endif
 
     terminal_set_geometry_hints(term);
