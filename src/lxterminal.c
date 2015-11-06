@@ -110,6 +110,7 @@ static gchar usage_display[] = {
     "  -t, -T, --title=,\n"
     "    --tabs=NAME[,NAME[,NAME[...]]] Set the terminal's title\n"
     "  --working-directory=DIRECTORY    Set the terminal's working directory\n"
+    "  -v, --version                    Version information\n"
 };
 
 /* Actions for menu bar items. */
@@ -1356,9 +1357,17 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             arguments->working_directory = &argument[20];
         }
 
-        /* Undefined argument. */
-        else
+	/* -v or --version: Version information */
+        else if (strcmp(argument, "-v") == 0 || strcmp(argument, "--version") == 0) {
+            printf("%s\n", PACKAGE_STRING);
             return FALSE;
+        }
+
+        /* Undefined argument. Display help and exit */
+        else {
+            printf("%s\n", usage_display);
+            return FALSE;
+	}
     }
     /* Handle --loginshell. */
     if (arguments->login_shell == TRUE)
@@ -1641,11 +1650,9 @@ int main(gint argc, gchar * * argv)
     textdomain(GETTEXT_PACKAGE);
 #endif
 
-    /* Parse the command arguments.  If there is an error, display usage help and exit. */
+    /* Parse the command arguments. Exit when needed. */
     CommandArguments arguments;
-    if ( ! lxterminal_process_arguments(argc, argv, &arguments))
-    {
-        printf("%s\n", usage_display);
+    if (!lxterminal_process_arguments(argc, argv, &arguments)) {
         return 0;
     }
 
