@@ -84,6 +84,7 @@ typedef struct _command_arguments {
     char * tabs; 				/* Value of --tab; points into argument vector */
     char * working_directory;			/* Value of --working-directory; points into argument vector */
     gboolean login_shell;			/* Terminal will spawn login shells */
+    gboolean no_remote;
 } CommandArguments;
 
 extern gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArguments * arguments);

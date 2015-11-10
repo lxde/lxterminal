@@ -110,6 +110,7 @@ static gchar usage_display[] = {
     "  -t, -T, --title=,\n"
     "    --tabs=NAME[,NAME[,NAME[...]]] Set the terminal's title\n"
     "  --working-directory=DIRECTORY    Set the terminal's working directory\n"
+    "  --no-remote                      Do not accept or send remote commands\n"
     "  -v, --version                    Version information\n"
 };
 
@@ -1357,6 +1358,11 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             arguments->working_directory = &argument[20];
         }
 
+	/* --no-remote: Do not accept or send remote commands */
+        else if (strcmp(argument, "--no-remote") == 0) {
+            arguments->no_remote = TRUE;
+        }
+
 	/* -v or --version: Version information */
         else if (strcmp(argument, "-v") == 0 || strcmp(argument, "--version") == 0) {
             printf("%s\n", PACKAGE_STRING);
@@ -1660,7 +1666,7 @@ int main(gint argc, gchar * * argv)
     LXTermWindow * lxtermwin = g_slice_new0(LXTermWindow);
 
     /* Initialize socket.  If we were able to get another LXTerminal to manage the window, exit. */
-    if ( ! lxterminal_socket_initialize(lxtermwin, argc, argv))
+    if (!arguments.no_remote && !lxterminal_socket_initialize(lxtermwin, argc, argv))
         return 0;
 
     /* Load user preferences. */
