@@ -951,7 +951,14 @@ static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term)
     /* If the activity is in a background tab, set its label to bold */
     if ( activeterm != term )
         if (term->user_specified_label)
-            gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>* ",gtk_label_get_text(GTK_LABEL(term->label)),"</b>",NULL));
+        {
+            gchar *currentcustomtitle=gtk_label_get_text(GTK_LABEL(term->label));
+            /* Only add an asterisk if there isn't none already */
+            if (!g_str_has_prefix(currentcustomtitle,"* "))
+                currentcustomtitle=g_strconcat("* ",currentcustomtitle,NULL);
+
+            gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>",currentcustomtitle,"</b>",NULL));
+        }
         else
             gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>* ",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
 }
