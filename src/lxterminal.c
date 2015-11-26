@@ -773,6 +773,18 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
     if (terminal->terms->len > num)
     {
         Term * term = g_ptr_array_index(terminal->terms, num);
+
+        /* Remove bold markup from tab title when activating it */
+        gchar *titaux;
+        if (term->user_specified_label)
+            titaux=gtk_label_get_text(GTK_LABEL(term->label));
+        else
+            titaux=vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
+        /* Also remove asterisk prefix if present */
+        if (g_str_has_prefix(titaux,"* "))
+            titaux+=2;
+        gtk_label_set_markup(GTK_LABEL(term->label),titaux);
+
         /* Propagate the title to the toplevel window. */
         const gchar * title = gtk_label_get_text(GTK_LABEL(term->label));
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
@@ -873,10 +885,6 @@ static void terminal_close_button_event(VteTerminal * vte, Term * term)
 /* Handler for "button-press-event" signal on a notebook tab. */
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term)
 {
-    /* Remove bold markup from tab title when activating it */
-    if (event->button == 1)
-        gtk_label_set_markup(GTK_LABEL(term->label),vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
-
     if (event->button == 2)
     {
         /* Middle click closes the tab. */
@@ -942,7 +950,17 @@ static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term)
     Term * activeterm = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
     /* If the activity is in a background tab, set its label to bold */
     if ( activeterm != term )
-        gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>* ",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
+        if (term->user_specified_label)
+        {
+            gchar *currentcustomtitle=gtk_label_get_text(GTK_LABEL(term->label));
+            /* Only add an asterisk if there isn't none already */
+            if (!g_str_has_prefix(currentcustomtitle,"* "))
+                currentcustomtitle=g_strconcat("* ",currentcustomtitle,NULL);
+
+            gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>",currentcustomtitle,"</b>",NULL));
+        }
+        else
+            gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>* ",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
 }
 
 /* Handler for "button-press-event" signal on VTE. */
