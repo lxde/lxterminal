@@ -8,18 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2013-07-20 04:41+0000\n"
-"Last-Translator: Praveen <mail2ipn@gmail.com>\n"
+"PO-Revision-Date: 2015-06-19 14:36+0000\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1374295319.0\n"
-"X-Pootle-Path: /te/lxterminal/po/te.po\n"
-"X-Pootle-Revision: 0\n"
+"X-Generator: Pootle 2.7\n"
+"X-POOTLE-MTIME: 1434724615.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -193,15 +191,13 @@ msgstr "సహాయం (_H)"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "కొత్త విండో (_W)"
+msgstr "కొత్త కిటికీ (_N)"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "కొత్త ట్యాబ్ (_T)"
+msgstr "కొత్త ట్యాబు (_a)"
 
 #. 6
 #. 7
@@ -211,9 +207,8 @@ msgstr "ట్యాబ్ మూయి (_C)"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "కొత్త విండో (_W)"
+msgstr "కిటికీ మూసివేయి (_W)"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -228,7 +223,7 @@ msgstr "అతికించు (_P)"
 #. 11
 #: ../src/lxterminal.c:151
 msgid "Clear scr_ollback"
-msgstr "స్క్రోల్ బ్యాక్ తుడిచివేయి (_+o)"
+msgstr "స్క్రోల్ బ్యాక్ తుడిచివేయి (_o)"
 
 #. 12
 #. 13
@@ -298,7 +293,7 @@ msgstr "ట్యాబ్ పేరుపెట్టు"
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
-msgstr "Praveen Illa <mail2ipn@gmail.com>, 2011."
+msgstr "Praveen Illa <mail2ipn@gmail.com>, 2011-2015."
 
 #: ../src/lxterminal.c:748
 msgid "Copyright (C) 2008-2014"
@@ -373,9 +368,8 @@ msgid "Hide Close buttons"
 msgstr "మూసివేయి బటన్లను దాయి"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "మూసివేయి బటన్లను దాయి"
+msgstr "మౌసు పాయింటరును దాయి"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -398,58 +392,48 @@ msgid "Advanced"
 msgstr "ఉన్నత"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "కొత్త విండో (_W)"
+msgstr "కొత్త కిటికీ"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "కొత్త ట్యాబ్ (_T)"
+msgstr "కొత్త ట్యాబ్"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "ట్యాబ్ మూయి (_C)"
+msgstr "ట్యాబ్ మూయి"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "కొత్త విండో (_W)"
+msgstr "కిటికీ మూసివేయి"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "URL నకలుచేయి (_U)"
+msgstr "నకలుచేయి"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "అతికించు (_P)"
+msgstr "అతికించు"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "మునుపటి ట్యాబ్ (_v)"
+msgstr "మునుపటి ట్యాబు"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "తరువాత ట్యాబ్ (_x)"
+msgstr "తరువాతి ట్యాబు"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "ట్యాబ్‌ను ఎడమవైపుకు కదుపు (_L)"
+msgstr "ట్యాబును ఎడమవైపుకు తరలించు"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "ట్యాబ్‌ను కుడివైపుకు కదుపు (_R)"
+msgstr "ట్యాబును కుడివైపుకు తరలించు"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "అడ్డదారులు"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -477,7 +461,7 @@ msgstr "కమాండు లైనును వాడు"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "కన్సోల్;ఆదేశ పంక్తి;అమలుచేయి;"
 
 #~ msgid "_Quit"
 #~ msgstr "నిష్క్రమించు (_Q)"

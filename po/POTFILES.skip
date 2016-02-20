@@ -1,5 +1,0 @@
-# .ui files are generated
-data/lxterminal-preferences.ui
-
-# encoding.c is unused for now
-src/encoding.c

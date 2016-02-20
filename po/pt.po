@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2014-10-26 22:43+0000\n"
+"PO-Revision-Date: 2015-07-11 20:53+0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -16,10 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.6.0-rc2\n"
-"X-POOTLE-MTIME: 1414363411.000000\n"
-"X-Pootle-Path: /pt/lxterminal/po/pt.po\n"
-"X-Pootle-Revision: 0\n"
+"X-Generator: Pootle 2.7\n"
+"X-POOTLE-MTIME: 1436648037.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -369,7 +367,7 @@ msgstr "Ocultar barra de menu"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Hide Close buttons"
-msgstr "Ocultar botões para fechar"
+msgstr "Ocultar botão Fechar"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Hide mouse pointer"

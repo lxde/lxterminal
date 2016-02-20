@@ -8,18 +8,16 @@ msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2015-03-23 23:49+0000\n"
-"Last-Translator: Jerome Leclanche <jerome@leclan.ch>\n"
+"PO-Revision-Date: 2015-08-12 15:40+0000\n"
+"Last-Translator: Julien Henry <Julius22@laposte.net>\n"
 "Language-Team: fr <gaknar@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 2.7.0-alpha1\n"
-"X-POOTLE-MTIME: 1427154592.000000\n"
-"X-Pootle-Path: /fr/lxterminal/po/fr.po\n"
-"X-Pootle-Revision: 12\n"
+"X-Generator: Pootle 2.7\n"
+"X-POOTLE-MTIME: 1439394024.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -373,9 +371,8 @@ msgid "Hide Close buttons"
 msgstr "Masquer les boutons de fermeture"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Masquer les boutons de fermeture"
+msgstr "Masquer le pointeur de souris"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -439,7 +436,7 @@ msgstr "Déplacer l'onglet à droite"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "Raccourcis"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"

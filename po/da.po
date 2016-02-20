@@ -16,10 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7.0-alpha1\n"
+"X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1414777775.000000\n"
-"X-Pootle-Path: /da/lxterminal/po/da.po\n"
-"X-Pootle-Revision: 0\n"
 
 #: ../src/encoding.c:124
 msgid "West European"

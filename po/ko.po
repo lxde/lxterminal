@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-26 20:27+0200\n"
-"PO-Revision-Date: 2012-10-16 17:57+0900\n"
+"PO-Revision-Date: 2015-07-20 14:03+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language: ko\n"
@@ -17,9 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.5\n"
-"X-Pootle-Path: /ko/lxterminal/po/ko.po\n"
-"X-Pootle-Revision: 0\n"
+"X-Generator: Pootle 2.7\n"
+"X-POOTLE-MTIME: 1437400999.000000\n"
 
 #: ../src/encoding.c:124
 msgid "West European"
@@ -193,15 +192,13 @@ msgstr "도움말(_H)"
 
 #. 4
 #: ../src/lxterminal.c:144
-#, fuzzy
 msgid "_New Window"
-msgstr "새 창(_W)"
+msgstr "새 창(_N)"
 
 #. 5
 #: ../src/lxterminal.c:145
-#, fuzzy
 msgid "New T_ab"
-msgstr "새 탭(_T)"
+msgstr "새 탭(_A)"
 
 #. 6
 #. 7
@@ -211,9 +208,8 @@ msgstr "탭 닫기(_C)"
 
 #. 8
 #: ../src/lxterminal.c:148
-#, fuzzy
 msgid "Close _Window"
-msgstr "새 창(_W)"
+msgstr "창 닫기(_W)"
 
 #. 9
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:171
@@ -300,10 +296,9 @@ msgstr "제목 설정"
 msgid "translator-credits"
 msgstr ""
 "Seo Sanghyeon <sanxiyn@gmail.com>\n"
-"Seong-ho Cho <darkcircle.0426@gmail.com>"
+"Seong-ho Cho <shcho@gnome.org>"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2014"
 msgstr "Copyright (C) 2008-2014"
 
@@ -376,9 +371,8 @@ msgid "Hide Close buttons"
 msgstr "닫기 단추 숨김"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "닫기 단추 숨김"
+msgstr "마우스 커서 숨김"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Display"
@@ -401,58 +395,48 @@ msgid "Advanced"
 msgstr "고급"
 
 #: ../data/lxterminal-preferences.glade.h:23
-#, fuzzy
 msgid "New Window"
-msgstr "새 창(_W)"
+msgstr "새 창"
 
 #: ../data/lxterminal-preferences.glade.h:24
-#, fuzzy
 msgid "New Tab"
-msgstr "새 탭(_T)"
+msgstr "새 탭"
 
 #: ../data/lxterminal-preferences.glade.h:25
-#, fuzzy
 msgid "Close Tab"
-msgstr "탭 닫기(_C)"
+msgstr "탭 닫기"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Close Window"
-msgstr "새 창(_W)"
+msgstr "창 닫기"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Copy"
-msgstr "URL 복사(_U)"
+msgstr "복사"
 
 #: ../data/lxterminal-preferences.glade.h:28
-#, fuzzy
 msgid "Paste"
-msgstr "붙여넣기(_P)"
+msgstr "붙여넣기"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "Previous Tab"
-msgstr "이전 탭(_V)"
+msgstr "이전 탭"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Next Tab"
-msgstr "다음 탭(_X)"
+msgstr "다음 탭"
 
 #: ../data/lxterminal-preferences.glade.h:32
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "탭 왼쪽으로 옮기기(_L)"
+msgstr "탭 왼쪽으로 옮기기"
 
 #: ../data/lxterminal-preferences.glade.h:33
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "탭 오른쪽으로 옮기기(_R)"
+msgstr "탭 오른쪽으로 옮기기"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Shortcuts"
-msgstr ""
+msgstr "바로 가기"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Top"
@@ -480,7 +464,7 @@ msgstr "명령 행을 사용합니다"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "console;콘솔;command line;명령줄;execute;실행;"
 
 #~ msgid "_Quit"
 #~ msgstr "끝내기(_Q)"
