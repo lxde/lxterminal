@@ -395,6 +395,10 @@ msgstr "停用選單捷徑鍵 (預設為 F10)"
 msgid "Disable using Alt-n for tabs and menu"
 msgstr "停用以 Alt-n 切換分頁及選單"
 
+#: ../data/lxterminal-preferences.glade.h:39
+msgid "Disable confirmation before close a multi-tab terminal"
+msgstr "停用關閉多個分頁時的確認視窗"
+
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Advanced"
 msgstr "進階"

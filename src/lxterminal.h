@@ -29,44 +29,44 @@
 
 /* Top level application context. */
 typedef struct _lxtermwindow {
-//    Setting * setting;				/* Pointer to current user preferences */
-    GPtrArray * windows;			/* Array of pointers to LXTerminal structures */
+//    Setting * setting;                /* Pointer to current user preferences */
+    GPtrArray * windows;            /* Array of pointers to LXTerminal structures */
 } LXTermWindow;
 
 /* Representative of a toplevel window. */
 typedef struct _lxterminal {
-    LXTermWindow * parent;			/* Back pointer to top level context */
-    gint index;					/* Index of this element in parent->windows */
-    GtkWidget * window;				/* Toplevel window */
-    GtkWidget * box;				/* Vertical box, child of toplevel window */
-    GtkWidget * menu;				/* Menu bar, child of vertical box */
+    LXTermWindow * parent;          /* Back pointer to top level context */
+    gint index;                 /* Index of this element in parent->windows */
+    GtkWidget * window;             /* Toplevel window */
+    GtkWidget * box;                /* Vertical box, child of toplevel window */
+    GtkWidget * menu;               /* Menu bar, child of vertical box */
     GtkActionGroup *action_group;   /* Action group on this window */
-    GtkAccelGroup * accel_group;		/* Accelerator group for accelerators on this window */
-    GtkWidget * notebook;			/* Notebook, child of vertical box */
-    GPtrArray * terms;				/* Array of pointers to Term structures */
-//    Setting * setting;				/* A copy of parent->setting */
-    GdkGeometry geometry;			/* Geometry hints (see XGetWMNormalHints) */
-    GdkWindowHints geometry_mask;		/* Mask of valid data in geometry hints */
-    gboolean rgba;				/* True if colormap is RGBA */
-    GdkColor background;			/* User preference background color converted to GdkColor */
-    GdkColor foreground;			/* User preference foreground color converted to GdkColor */
-    gint tab_position;				/* Tab position as an integer value */
-    gboolean login_shell;			/* Terminal will spawn login shells */
+    GtkAccelGroup * accel_group;        /* Accelerator group for accelerators on this window */
+    GtkWidget * notebook;           /* Notebook, child of vertical box */
+    GPtrArray * terms;              /* Array of pointers to Term structures */
+//    Setting * setting;                /* A copy of parent->setting */
+    GdkGeometry geometry;           /* Geometry hints (see XGetWMNormalHints) */
+    GdkWindowHints geometry_mask;       /* Mask of valid data in geometry hints */
+    gboolean rgba;              /* True if colormap is RGBA */
+    GdkColor background;            /* User preference background color converted to GdkColor */
+    GdkColor foreground;            /* User preference foreground color converted to GdkColor */
+    gint tab_position;              /* Tab position as an integer value */
+    gboolean login_shell;           /* Terminal will spawn login shells */
 } LXTerminal;
 
 /* Representative of a tab within a toplevel window. */
 typedef struct _term {
-    LXTerminal * parent;			/* Back pointer to LXTerminal */
-    gint index;					/* Index of this element in parent->terms */
-    GtkWidget * tab;				/* Toplevel of the tab */
-    GtkWidget * label;				/* Label of the tab, child of the toplevel */
-    gboolean user_specified_label;		/* User did "Name Tab", so we will never overwrite this with the window title */
-    GtkWidget * close_button;			/* Close button for the tab, child of the toplevel */
-    GtkWidget * box;				/* Horizontal box, child of notebook */
-    GtkWidget * vte;				/* VteTerminal, child of horizontal box */
-    GtkWidget * scrollbar;			/* Scroll bar, child of horizontal box */
+    LXTerminal * parent;            /* Back pointer to LXTerminal */
+    gint index;                 /* Index of this element in parent->terms */
+    GtkWidget * tab;                /* Toplevel of the tab */
+    GtkWidget * label;              /* Label of the tab, child of the toplevel */
+    gboolean user_specified_label;      /* User did "Name Tab", so we will never overwrite this with the window title */
+    GtkWidget * close_button;           /* Close button for the tab, child of the toplevel */
+    GtkWidget * box;                /* Horizontal box, child of notebook */
+    GtkWidget * vte;                /* VteTerminal, child of horizontal box */
+    GtkWidget * scrollbar;          /* Scroll bar, child of horizontal box */
     GPid pid;                                   /* Process ID of the process that has this as its terminal */
-    GClosure * closure;				/* Accelerator structure */
+    GClosure * closure;             /* Accelerator structure */
     gchar * matched_url;
     gboolean open_menu_on_button_release;
 #if !VTE_CHECK_VERSION (0, 38, 0)
@@ -76,14 +76,14 @@ typedef struct _term {
 
 /* Output of lxterminal_process_arguments. */
 typedef struct _command_arguments {
-    char * executable;				/* Value of argv[0]; points into argument vector */
-    gchar * * command;				/* Value of -e, --command; memory allocated by glib */
-    int geometry_columns;			/* Value of --geometry */
+    char * executable;              /* Value of argv[0]; points into argument vector */
+    gchar * * command;              /* Value of -e, --command; memory allocated by glib */
+    int geometry_columns;           /* Value of --geometry */
     int geometry_rows;
-    char * title; 				/* Value of -t, -T, --title; points into argument vector */
-    char * tabs; 				/* Value of --tab; points into argument vector */
-    char * working_directory;			/* Value of --working-directory; points into argument vector */
-    gboolean login_shell;			/* Terminal will spawn login shells */
+    char * title;               /* Value of -t, -T, --title; points into argument vector */
+    char * tabs;                /* Value of --tab; points into argument vector */
+    char * working_directory;           /* Value of --working-directory; points into argument vector */
+    gboolean login_shell;           /* Terminal will spawn login shells */
     gboolean no_remote;
 } CommandArguments;
 
