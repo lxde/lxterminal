@@ -451,32 +451,32 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
  * Close the current window. */
 static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-	int close_flag = 0;
-	if (terminal->terms->len > 1)
-	{
-		GtkWidget * dialog = gtk_message_dialog_new(
-				GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
-				"You are about to close %d tabs. Are you sure you want to continue?", terminal->terms->len);
-		gtk_window_set_title(GTK_WINDOW(dialog), "Confirm close");
-		gint result = gtk_dialog_run(GTK_DIALOG(dialog));
-		gtk_widget_destroy(dialog);
-		if (result == GTK_RESPONSE_YES)
-		{
-			close_flag = 1;
-		}
-	}
-	else
-	{
-		close_flag = 1;
-	}
-	if (close_flag)
-	{
-		/* Play it safe and delete tabs one by one. */
-		while(terminal->terms->len > 0)
-		{
-			terminal_close_button_event(NULL, g_ptr_array_index(terminal->terms, 0));
-		}
-	}
+    int close_flag = 0;
+    if (terminal->terms->len > 1)
+    {
+        GtkWidget * dialog = gtk_message_dialog_new(
+                GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
+                "You are about to close %d tabs. Are you sure you want to continue?", terminal->terms->len);
+        gtk_window_set_title(GTK_WINDOW(dialog), "Confirm close");
+        gint result = gtk_dialog_run(GTK_DIALOG(dialog));
+        gtk_widget_destroy(dialog);
+        if (result == GTK_RESPONSE_YES)
+        {
+            close_flag = 1;
+        }
+    }
+    else
+    {
+        close_flag = 1;
+    }
+    if (close_flag)
+    {
+        /* Play it safe and delete tabs one by one. */
+        while(terminal->terms->len > 0)
+        {
+            terminal_close_button_event(NULL, g_ptr_array_index(terminal->terms, 0));
+        }
+    }
 }
 
 /* Handler for the "Copy URL" right-click menu item.
@@ -831,29 +831,29 @@ static void terminal_window_title_changed_event(GtkWidget * vte, Term * term)
 /* Handler for "delete-event" signal on a LXTerminal. */
 static gboolean terminal_close_window_confirmation_event(GtkWidget * widget, GdkEventButton * event, LXTerminal * terminal)
 {
-	int close_flag = 0;
-	if (terminal->terms->len > 1)
-	{
-		GtkWidget * dialog = gtk_message_dialog_new(
-				GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
-				"You are about to close %d tabs. Are you sure you want to continue?", terminal->terms->len);
-		gtk_window_set_title(GTK_WINDOW(dialog), "Confirm close");
-		gint result = gtk_dialog_run(GTK_DIALOG(dialog));
-		gtk_widget_destroy(dialog);
-		if (result == GTK_RESPONSE_YES)
-		{
-			close_flag = 1;
-		}
-	}
-	else
-	{
-		close_flag = 1;
-	}
-	if (close_flag)
-	{
-		return FALSE;
-	}
-	return TRUE;
+    int close_flag = 0;
+    if (terminal->terms->len > 1)
+    {
+        GtkWidget * dialog = gtk_message_dialog_new(
+                GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
+                "You are about to close %d tabs. Are you sure you want to continue?", terminal->terms->len);
+        gtk_window_set_title(GTK_WINDOW(dialog), "Confirm close");
+        gint result = gtk_dialog_run(GTK_DIALOG(dialog));
+        gtk_widget_destroy(dialog);
+        if (result == GTK_RESPONSE_YES)
+        {
+            close_flag = 1;
+        }
+    }
+    else
+    {
+        close_flag = 1;
+    }
+    if (close_flag)
+    {
+        return FALSE;
+    }
+    return TRUE;
 }
 
 /* Weak-notify callback for LXTerminal object. */
@@ -886,38 +886,38 @@ static void terminal_child_exited_event(VteTerminal * vte, gint status, Term * t
 static void terminal_child_exited_event(VteTerminal * vte, Term * term)
 #endif
 {
-	LXTerminal * terminal = term->parent;
+    LXTerminal * terminal = term->parent;
 
-	/* Last tab being deleted.  Deallocate memory and close the window. */
-	if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
-	{
-		g_ptr_array_free(terminal->terms, TRUE);
-		gtk_widget_destroy(terminal->window);
-	}
+    /* Last tab being deleted.  Deallocate memory and close the window. */
+    if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
+    {
+        g_ptr_array_free(terminal->terms, TRUE);
+        gtk_widget_destroy(terminal->window);
+    }
 
-	/* Not last tab being deleted. */
-	else
-	{
-		/* Remove the element and decrease the index number of each succeeding element. */
-		g_ptr_array_remove_index(terminal->terms, term->index);
-		guint i;
-		for (i = term->index; i < terminal->terms->len; i++)
-		{
-			Term * t = g_ptr_array_index(terminal->terms, i);
-			t->index --;
-		}
+    /* Not last tab being deleted. */
+    else
+    {
+        /* Remove the element and decrease the index number of each succeeding element. */
+        g_ptr_array_remove_index(terminal->terms, term->index);
+        guint i;
+        for (i = term->index; i < terminal->terms->len; i++)
+        {
+            Term * t = g_ptr_array_index(terminal->terms, i);
+            t->index --;
+        }
 
-		/* Delete the tab and free the Term structure. */
-		gtk_notebook_remove_page(GTK_NOTEBOOK(terminal->notebook), term->index);
-		terminal_free(term);
+        /* Delete the tab and free the Term structure. */
+        gtk_notebook_remove_page(GTK_NOTEBOOK(terminal->notebook), term->index);
+        terminal_free(term);
 
-		/* If only one page is left, hide the tab. */
-		if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
-			gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
+        /* If only one page is left, hide the tab. */
+        if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
+            gtk_notebook_set_show_tabs(GTK_NOTEBOOK(terminal->notebook), FALSE);
 
-		/* update <ALT>n status */
-		terminal_update_alt(terminal);
-	}
+        /* update <ALT>n status */
+        terminal_update_alt(terminal);
+    }
 }
 
 /* Adapter for "activate" signal on Close button of tab and File/Close Tab menu item and accelerator. */
@@ -1425,12 +1425,12 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             arguments->working_directory = &argument[20];
         }
 
-	/* --no-remote: Do not accept or send remote commands */
+    /* --no-remote: Do not accept or send remote commands */
         else if (strcmp(argument, "--no-remote") == 0) {
             arguments->no_remote = TRUE;
         }
 
-	/* -v or --version: Version information */
+    /* -v or --version: Version information */
         else if (strcmp(argument, "-v") == 0 || strcmp(argument, "--version") == 0) {
             printf("%s\n", PACKAGE_STRING);
             return FALSE;
@@ -1440,7 +1440,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         else {
             printf("%s\n", usage_display);
             return FALSE;
-	}
+    }
     }
     /* Handle --loginshell. */
     if (arguments->login_shell == TRUE)
@@ -1550,7 +1550,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     g_signal_connect(G_OBJECT(terminal->notebook), "switch-page", 
         G_CALLBACK(terminal_switch_page_event), terminal);
     g_signal_connect(G_OBJECT(terminal->window), "delete-event",
-		G_CALLBACK(terminal_close_window_confirmation_event), terminal);
+        G_CALLBACK(terminal_close_window_confirmation_event), terminal);
 
     /* Create the first terminal. */
     gchar * local_working_directory = NULL;
