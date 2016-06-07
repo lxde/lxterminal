@@ -76,6 +76,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
 static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal);
 static void terminal_window_title_changed_event(GtkWidget * vte, Term * term);
 static gboolean terminal_close_window_confirmation_event(GtkWidget * widget, GdkEventButton * event, LXTerminal * terminal);
+static gboolean terminal_close_window_confirmation_dialog(LXTerminal * terminal);
 static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_object_was);
 #if VTE_CHECK_VERSION (0, 38, 0)
 static void terminal_child_exited_event(VteTerminal * vte, gint status, Term * term);
@@ -451,16 +452,8 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
  * Close the current window. */
 static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-    if (!get_setting()->disable_confirm && terminal->terms->len > 1) {
-        GtkWidget * dialog = gtk_message_dialog_new(
-                GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
-                _("You are about to close %d tabs. Are you sure you want to continue?"), terminal->terms->len);
-        gtk_window_set_title(GTK_WINDOW(dialog), _("Confirm close"));
-        gint result = gtk_dialog_run(GTK_DIALOG(dialog));
-        gtk_widget_destroy(dialog);
-        if (result != GTK_RESPONSE_YES) {
-            return;
-        }
+    if (!terminal_close_window_confirmation_dialog(terminal)) {
+        return;
     }
 
     /* Play it safe and delete tabs one by one. */
@@ -821,7 +814,23 @@ static void terminal_window_title_changed_event(GtkWidget * vte, Term * term)
 /* Handler for "delete-event" signal on a LXTerminal. */
 static gboolean terminal_close_window_confirmation_event(GtkWidget * widget, GdkEventButton * event, LXTerminal * terminal)
 {
-    terminal_close_window_activate_event(NULL, terminal);
+    return !terminal_close_window_confirmation_dialog(terminal);
+}
+
+/* Display closing tabs warning */
+static gboolean terminal_close_window_confirmation_dialog(LXTerminal * terminal)
+{
+    if (!get_setting()->disable_confirm && terminal->terms->len > 1) {
+        GtkWidget * dialog = gtk_message_dialog_new(
+                GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
+                _("You are about to close %d tabs. Are you sure you want to continue?"), terminal->terms->len);
+        gtk_window_set_title(GTK_WINDOW(dialog), _("Confirm close"));
+        gint result = gtk_dialog_run(GTK_DIALOG(dialog));
+        gtk_widget_destroy(dialog);
+        if (result != GTK_RESPONSE_YES) {
+            return FALSE;
+        }
+    }
     return TRUE;
 }
 
