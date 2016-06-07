@@ -120,6 +120,7 @@ void print_setting()
     printf("Word selection characters: %s\n", setting->word_selection_characters);
     printf("Disable F10: %i\n", setting->disable_f10);
     printf("Disable Alt: %i\n", setting->disable_alt);
+    printf("Disable Confirm: %i\n", setting->disable_confirm);
     printf("Geometry change: %i\n", setting->geometry_change);
     
     /* Shortcut group settings. */
@@ -206,6 +207,7 @@ void save_setting()
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, setting->word_selection_characters);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_F10, setting->disable_f10);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_ALT, setting->disable_alt);
+    g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_CONFIRM, setting->disable_confirm);
 
     /* Shortcut group settings. */
     g_key_file_set_string(setting->keyfile, SHORTCUT_GROUP, NEW_WINDOW_ACCEL, setting->new_window_accel);
@@ -422,6 +424,7 @@ color_preset_does_not_exist:
         setting->word_selection_characters = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, SEL_CHARS, NULL);
         setting->disable_f10 = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_F10, NULL);
         setting->disable_alt = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_ALT, NULL);
+        setting->disable_confirm = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISABLE_CONFIRM, NULL);
         
         /* Shortcut group settings. */
         setting->new_window_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_WINDOW_ACCEL, NULL);

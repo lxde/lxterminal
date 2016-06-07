@@ -416,7 +416,12 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "toggled", 
         G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->disable_alt);
     
-    /* Shortcuts */
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "disable_confirm"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->disable_confirm);
+    g_signal_connect(G_OBJECT(w), "toggled", 
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->disable_confirm);
+    
+	/* Shortcuts */
     w = GTK_WIDGET(gtk_builder_get_object(builder, NEW_WINDOW_ACCEL));
     gtk_entry_set_text(GTK_ENTRY(w), setting->new_window_accel);
     g_signal_connect(G_OBJECT(w), "focus-out-event", 

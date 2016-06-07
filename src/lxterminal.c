@@ -451,23 +451,19 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
  * Close the current window. */
 static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-    int close_flag = 0;
-    if (terminal->terms->len > 1)
+    int close_flag = 1;
+    if (!get_setting()->disable_confirm && terminal->terms->len > 1)
     {
         GtkWidget * dialog = gtk_message_dialog_new(
                 GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
-                "You are about to close %d tabs. Are you sure you want to continue?", terminal->terms->len);
+                _("You are about to close %d tabs. Are you sure you want to continue?"), terminal->terms->len);
         gtk_window_set_title(GTK_WINDOW(dialog), "Confirm close");
         gint result = gtk_dialog_run(GTK_DIALOG(dialog));
         gtk_widget_destroy(dialog);
-        if (result == GTK_RESPONSE_YES)
+        if (result == GTK_RESPONSE_NO)
         {
-            close_flag = 1;
+            close_flag = 0;
         }
-    }
-    else
-    {
-        close_flag = 1;
     }
     if (close_flag)
     {
@@ -831,23 +827,19 @@ static void terminal_window_title_changed_event(GtkWidget * vte, Term * term)
 /* Handler for "delete-event" signal on a LXTerminal. */
 static gboolean terminal_close_window_confirmation_event(GtkWidget * widget, GdkEventButton * event, LXTerminal * terminal)
 {
-    int close_flag = 0;
-    if (terminal->terms->len > 1)
+    int close_flag = 1;
+    if (!get_setting()->disable_confirm && terminal->terms->len > 1)
     {
         GtkWidget * dialog = gtk_message_dialog_new(
                 GTK_WIDGET(terminal->window), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO,
-                "You are about to close %d tabs. Are you sure you want to continue?", terminal->terms->len);
+                _("You are about to close %d tabs. Are you sure you want to continue?"), terminal->terms->len);
         gtk_window_set_title(GTK_WINDOW(dialog), "Confirm close");
         gint result = gtk_dialog_run(GTK_DIALOG(dialog));
         gtk_widget_destroy(dialog);
-        if (result == GTK_RESPONSE_YES)
+        if (result == GTK_RESPONSE_NO)
         {
-            close_flag = 1;
+            close_flag = 0;
         }
-    }
-    else
-    {
-        close_flag = 1;
     }
     if (close_flag)
     {
