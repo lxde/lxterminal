@@ -458,7 +458,7 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
         gtk_window_set_title(GTK_WINDOW(dialog), _("Confirm close"));
         gint result = gtk_dialog_run(GTK_DIALOG(dialog));
         gtk_widget_destroy(dialog);
-        if (result != GTK_RESPONSE_OK) {
+        if (result != GTK_RESPONSE_YES) {
             return;
         }
     }
