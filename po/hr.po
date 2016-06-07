@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 10:26+0800\n"
-"PO-Revision-Date: 2015-04-02 10:47+0000\n"
+"POT-Creation-Date: 2016-06-07 10:45+0800\n"
+"PO-Revision-Date: 2012-10-19 18:52+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: <asjlob AT vip.hr> <>\n"
 "Language: hr\n"
@@ -280,7 +280,7 @@ msgstr "_O programu"
 
 #: ../src/lxterminal.c:152
 msgid "New _Window"
-msgstr "Novi _Prozor"
+msgstr "Novi _prozor"
 
 #: ../src/lxterminal.c:153
 msgid "New _Tab"
@@ -482,7 +482,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide mouse pointer"
-msgstr "Sakrij pokazivača miša"
+msgstr "Sakrij pokazivač miša"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
@@ -518,7 +518,7 @@ msgstr "Napredno"
 
 #: ../data/lxterminal-preferences.glade.h:48
 msgid "New Window"
-msgstr "Novi prozor"
+msgstr "Novi Prozor"
 
 #: ../data/lxterminal-preferences.glade.h:49
 msgid "New Tab"
@@ -597,7 +597,7 @@ msgstr "konzola;naredbeni redak;izvrši;"
 #~ msgstr "Osnovno"
 
 #~ msgid "_Preferences"
-#~ msgstr "_Postavke"
+#~ msgstr "_Osobitosti"
 
 #~ msgid "Transparent Background:"
 #~ msgstr "Prozirna pozadina:"
