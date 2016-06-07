@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-26 20:27+0200\n"
+"POT-Creation-Date: 2016-06-07 10:26+0800\n"
 "PO-Revision-Date: 2014-07-08 19:16+0000\n"
 "Last-Translator: system user <>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -171,139 +171,155 @@ msgid "Thai"
 msgstr "تھائی"
 
 #. 0
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "_فائل"
 
 #. 1
-#: ../src/lxterminal.c:141
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "_تدوین"
 
 #. 2
-#: ../src/lxterminal.c:142
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "_ٹیب"
 
 #. 3
-#: ../src/lxterminal.c:143
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "_ہدایات"
 
 #. 4
-#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:125
 #, fuzzy
 msgid "_New Window"
 msgstr "_نئی ونڈو"
 
 #. 5
-#: ../src/lxterminal.c:145
+#: ../src/lxterminal.c:126
 #, fuzzy
 msgid "New T_ab"
 msgstr "نیا _ٹیب"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:182
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "ٹیب _بند کریں"
 
 #. 8
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:129
 #, fuzzy
 msgid "Close _Window"
 msgstr "_نئی ونڈو"
 
 #. 9
-#: ../src/lxterminal.c:149 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 #, fuzzy
 msgid "Cop_y"
 msgstr "_کاپی"
 
 #. 10
-#: ../src/lxterminal.c:150 ../src/lxterminal.c:172
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "_پیسٹ"
 
 #. 11
-#: ../src/lxterminal.c:151
+#: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
 msgstr ""
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:153 ../src/lxterminal.c:175
+#: ../src/lxterminal.c:134
+msgid "Zoom _In"
+msgstr ""
+
+#. 14
+#: ../src/lxterminal.c:135
+msgid "Zoom O_ut"
+msgstr ""
+
+#. 15
+#: ../src/lxterminal.c:136
+msgid "Zoom _Reset"
+msgstr ""
+
+#. 16
+#. 17
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 #, fuzzy
 msgid "Preference_s"
 msgstr "ترجیحات"
 
-#. 14
-#: ../src/lxterminal.c:154 ../src/lxterminal.c:177
+#. 18
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 #, fuzzy
 msgid "Na_me Tab"
 msgstr "نیا _ٹیب"
 
-#. 15
-#: ../src/lxterminal.c:155 ../src/lxterminal.c:178
+#. 19
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 #, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_سابقہ ٹیب"
 
-#. 16
-#: ../src/lxterminal.c:156 ../src/lxterminal.c:179
+#. 20
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 #, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_اگلا ٹیب"
 
-#. 17
-#: ../src/lxterminal.c:157 ../src/lxterminal.c:180
+#. 21
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr ""
 
-#. 18
-#: ../src/lxterminal.c:158 ../src/lxterminal.c:181
+#. 22
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr ""
 
-#. 19
-#: ../src/lxterminal.c:159
+#. 23
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "_بابت"
 
-#: ../src/lxterminal.c:167
+#: ../src/lxterminal.c:152
 #, fuzzy
 msgid "New _Window"
 msgstr "_نئی ونڈو"
 
-#: ../src/lxterminal.c:168
+#: ../src/lxterminal.c:153
 #, fuzzy
 msgid "New _Tab"
 msgstr "نیا _ٹیب"
 
-#: ../src/lxterminal.c:170
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr ""
 
-#: ../src/lxterminal.c:173
+#: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
 msgstr ""
 
-#. Propagate the working directory of the current tab to the new tab.
-#. * If the working directory was determined above, use it; otherwise default to the working directory of the process.
-#. * Create the new terminal.
-#: ../src/lxterminal.c:428 ../src/lxterminal.c:746 ../src/lxterminal.c:821
-#: ../src/lxterminal.c:1378 ../src/lxterminal.c:1427 ../src/preferences.c:178
-#: ../data/lxterminal.desktop.in.h:1
-msgid "LXTerminal"
-msgstr "ایل ایکس ٹرمنل"
+#: ../src/lxterminal.c:457
+#, c-format
+msgid "You are about to close %d tabs. Are you sure you want to continue?"
+msgstr ""
 
-#: ../src/lxterminal.c:583 ../data/lxterminal-preferences.glade.h:29
+#: ../src/lxterminal.c:458
+msgid "Confirm close"
+msgstr ""
+
+#: ../src/lxterminal.c:564 ../data/lxterminal-preferences.glade.h:54
 #, fuzzy
 msgid "Name Tab"
 msgstr "نیا _ٹیب"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:740
+#: ../src/lxterminal.c:761
 msgid "translator-credits"
 msgstr ""
 "محمد علی مکی\n"
@@ -313,175 +329,277 @@ msgstr ""
 "مکی کا بلاگ\n"
 "http://makki.urducoder.com"
 
-#: ../src/lxterminal.c:748
+#: ../src/lxterminal.c:767 ../src/lxterminal.c:801 ../src/preferences.c:278
+#: ../data/lxterminal.desktop.in.h:1
+msgid "LXTerminal"
+msgstr "ایل ایکس ٹرمنل"
+
+#: ../src/lxterminal.c:769
 msgid "Copyright (C) 2008-2014"
 msgstr "کاپی رائٹ (C) 2008-2014"
 
-#: ../src/lxterminal.c:749
+#: ../src/lxterminal.c:770
 msgid "Terminal emulator for LXDE project"
 msgstr "ٹرمنل ایمولیٹر برائے ایل ایکس ڈی ای پراجیکٹ"
 
 #: ../data/lxterminal-preferences.glade.h:1
+msgid "Top"
+msgstr "اوپر"
+
+#: ../data/lxterminal-preferences.glade.h:2
+msgid "Bottom"
+msgstr "نیچے"
+
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Left"
+msgstr "بائیں"
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Right"
+msgstr "دائیں"
+
+#: ../data/lxterminal-preferences.glade.h:5
 #, fuzzy
 msgid "LXTerminal Preferences"
 msgstr "ترجیحات"
 
-#: ../data/lxterminal-preferences.glade.h:2
+#: ../data/lxterminal-preferences.glade.h:6
 #, fuzzy
 msgid "Terminal font"
 msgstr "ٹرمنل کا فونٹ:"
 
-#: ../data/lxterminal-preferences.glade.h:3
+#: ../data/lxterminal-preferences.glade.h:7
 #, fuzzy
 msgid "Background"
 msgstr "پس منظر:"
 
-#: ../data/lxterminal-preferences.glade.h:4
+#: ../data/lxterminal-preferences.glade.h:8
 #, fuzzy
 msgid "Foreground"
 msgstr "پیش منظر:"
 
-#: ../data/lxterminal-preferences.glade.h:5
+#: ../data/lxterminal-preferences.glade.h:9
 msgid "Allow bold font"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:6
+#: ../data/lxterminal-preferences.glade.h:10
 msgid "Cursor blink"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:7
+#: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor style"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:8
+#: ../data/lxterminal-preferences.glade.h:12
 msgid "Block"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:9
+#: ../data/lxterminal-preferences.glade.h:13
 msgid "Underline"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:10
+#: ../data/lxterminal-preferences.glade.h:14
 msgid "Audible bell"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:11
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Black"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "Red"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:17
+#, fuzzy
+msgid "Green"
+msgstr "گریک"
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Brown"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Blue"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Magenta"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Cyan"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:22
+msgid "Gray"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Darkgray"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Bright Red"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:25
+msgid "Bright Green"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:26
+msgid "Yellow"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:27
+msgid "Bright Blue"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:28
+msgid "Bright Magenta"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:29
+msgid "Bright Cyan"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:30
+msgid "White"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:31
+msgid "Palette"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:32
+msgid "Palette Preset"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:12
+#: ../data/lxterminal-preferences.glade.h:34
 #, fuzzy
 msgid "Tab panel position"
 msgstr "ٹیب پینل مقام:"
 
-#: ../data/lxterminal-preferences.glade.h:13
+#: ../data/lxterminal-preferences.glade.h:35
 #, fuzzy
 msgid "Scrollback lines"
 msgstr "سکرول بیک لائنیں:"
 
-#: ../data/lxterminal-preferences.glade.h:14
+#: ../data/lxterminal-preferences.glade.h:36
 msgid "Hide scroll bar"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:15
+#: ../data/lxterminal-preferences.glade.h:37
 msgid "Hide menu bar"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:16
+#: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide Close buttons"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide mouse pointer"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:40
+msgid "Default window size"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:41
+msgid "x"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:43
 #, fuzzy
 msgid "Select-by-word characters"
 msgstr "منتخب-از-جملہ حروف:"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:44
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:45
 msgid "Disable using Alt-n for tabs and menu"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:46
+msgid "Disable confirmation before closing a window with multiple tabs"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:48
 #, fuzzy
 msgid "New Window"
 msgstr "_نئی ونڈو"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:49
 #, fuzzy
 msgid "New Tab"
 msgstr "نیا _ٹیب"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:50
 #, fuzzy
 msgid "Close Tab"
 msgstr "ٹیب _بند کریں"
 
-#: ../data/lxterminal-preferences.glade.h:26
+#: ../data/lxterminal-preferences.glade.h:51
 #, fuzzy
 msgid "Close Window"
 msgstr "_نئی ونڈو"
 
-#: ../data/lxterminal-preferences.glade.h:27
+#: ../data/lxterminal-preferences.glade.h:52
 msgid "Copy"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:28
+#: ../data/lxterminal-preferences.glade.h:53
 #, fuzzy
 msgid "Paste"
 msgstr "_پیسٹ"
 
-#: ../data/lxterminal-preferences.glade.h:30
+#: ../data/lxterminal-preferences.glade.h:55
 #, fuzzy
 msgid "Previous Tab"
 msgstr "_سابقہ ٹیب"
 
-#: ../data/lxterminal-preferences.glade.h:31
+#: ../data/lxterminal-preferences.glade.h:56
 #, fuzzy
 msgid "Next Tab"
 msgstr "_اگلا ٹیب"
 
-#: ../data/lxterminal-preferences.glade.h:32
+#: ../data/lxterminal-preferences.glade.h:57
 msgid "Move Tab Left"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:33
+#: ../data/lxterminal-preferences.glade.h:58
 msgid "Move Tab Right"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:34
-msgid "Shortcuts"
+#: ../data/lxterminal-preferences.glade.h:59
+msgid "Zoom In"
 msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:35
-msgid "Top"
-msgstr "اوپر"
+#: ../data/lxterminal-preferences.glade.h:60
+msgid "Zoom Out"
+msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:36
-msgid "Bottom"
-msgstr "نیچے"
+#: ../data/lxterminal-preferences.glade.h:61
+msgid "Zoom Reset"
+msgstr ""
 
-#: ../data/lxterminal-preferences.glade.h:37
-msgid "Left"
-msgstr "بائیں"
-
-#: ../data/lxterminal-preferences.glade.h:38
-msgid "Right"
-msgstr "دائیں"
+#: ../data/lxterminal-preferences.glade.h:62
+msgid "Shortcuts"
+msgstr ""
 
 #: ../data/lxterminal.desktop.in.h:2
 #, fuzzy
