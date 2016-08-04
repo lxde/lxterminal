@@ -1434,11 +1434,12 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         }
         else
         {
-            gchar * * tmp = g_malloc((cmd_len + 3) * sizeof(gchar *));
+            gchar * * tmp = g_malloc((cmd_len + 4) * sizeof(gchar *));
             tmp[0] = g_strdup(shell);
             tmp[1] = g_strdup_printf("-%s", shellname);
             tmp[2] = g_strdup("-c");
             memcpy((tmp + 3), arguments->command, cmd_len * sizeof(gchar *));
+            tmp[cmd_len + 3] = NULL;
             g_free(arguments->command);
             arguments->command = tmp;
         }
@@ -1448,9 +1449,10 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
     {
         if(arguments->command != NULL)
         {
-            gchar * * tmp = g_malloc((cmd_len + 1) * sizeof(gchar *));
+            gchar * * tmp = g_malloc((cmd_len + 2) * sizeof(gchar *));
             tmp[0] = g_strdup(arguments->command[0]);
             memcpy((tmp + 1), arguments->command, cmd_len * sizeof(gchar *));
+            tmp[cmd_len + 1] = NULL;
             g_free(arguments->command);
             arguments->command = tmp;
         }
