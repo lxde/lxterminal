@@ -785,9 +785,9 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
         else
             titaux=vte_terminal_get_window_title(VTE_TERMINAL(term->vte));
         /* Also remove asterisk prefix if present */
-        if (g_str_has_prefix(titaux,"* "))
+        if (titaux && g_str_has_prefix(titaux,"* "))
             titaux+=2;
-        gtk_label_set_markup(GTK_LABEL(term->label),titaux);
+        gtk_label_set_markup(GTK_LABEL(term->label), titaux ? titaux : "" );
 
         /* Propagate the title to the toplevel window. */
         const gchar * title = gtk_label_get_text(GTK_LABEL(term->label));

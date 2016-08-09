@@ -338,7 +338,6 @@ Setting * load_setting()
     setting->foreground_color.red = setting->foreground_color.green = setting->foreground_color.blue = 0xaaaa;
 #endif
 
-    g_key_file_set_string(setting->keyfile, GENERAL_GROUP, COLOR_PRESET, setting->color_preset);
     /* Load configuration. */
     setting->keyfile = g_key_file_new();
     GError * error = NULL;
@@ -409,14 +408,17 @@ color_preset_does_not_exist:
             /* Set default value if key not found! */
             setting->scrollback = 1000;
         }
+        g_clear_error(&error);
         setting->geometry_columns = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_COLUMNS, &error);
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND)) {
             setting->geometry_columns = 80;
         }
+        g_clear_error(&error);
         setting->geometry_rows = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_ROWS, &error);
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND)) {
             setting->geometry_rows = 24;
         }
+        g_clear_error(&error);
         setting->hide_scroll_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_SCROLLBAR, NULL);
         setting->hide_menu_bar = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_MENUBAR, NULL);
         setting->hide_close_button = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, HIDE_CLOSE_BUTTON, NULL);
