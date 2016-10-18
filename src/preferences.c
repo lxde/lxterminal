@@ -40,13 +40,13 @@ static void preferences_dialog_font_set_event(GtkFontButton * widget, Setting * 
 }
 
 /* Handler for "color-set" signal on Background Color color button. */
-static gboolean preferences_dialog_background_color_set_event(GtkColorButton * widget, Setting * setting)
+static gboolean preferences_dialog_background_color_set_event(GtkWidget * widget, Setting * setting)
 {
 #if VTE_CHECK_VERSION (0, 38, 0)
-    gtk_color_button_get_rgba(widget, &setting->background_color);
+    gtk_color_chooser_get_rgba(GTK_COLOR_CHOOSER(widget), &setting->background_color);
 #else
-    gtk_color_button_get_color(widget, &setting->background_color);
-    setting->background_alpha = gtk_color_button_get_alpha(widget);
+    gtk_color_button_get_color(GTK_COLOR_BUTTON(widget), &setting->background_color);
+    setting->background_alpha = gtk_color_button_get_alpha(GTK_COLOR_BUTTON(widget));
 
     if (setting->background_alpha == 0)
     {
@@ -61,12 +61,12 @@ static gboolean preferences_dialog_background_color_set_event(GtkColorButton * w
 }
 
 /* Handler for "color-set" signal on Foreground Color color button. */
-static gboolean preferences_dialog_foreground_color_set_event(GtkColorButton * widget, Setting * setting)
+static gboolean preferences_dialog_foreground_color_set_event(GtkWidget * widget, Setting * setting)
 {
 #if VTE_CHECK_VERSION (0, 38, 0)
-    gtk_color_button_get_rgba(widget, &setting->foreground_color);
+    gtk_color_chooser_get_rgba(GTK_COLOR_CHOOSER(widget), &setting->foreground_color);
 #else
-    gtk_color_button_get_color(widget, &setting->foreground_color);
+    gtk_color_button_get_color(GTK_COLOR_BUTTON(widget), &setting->foreground_color);
 #endif
 
     GtkComboBox *w = GTK_COMBO_BOX(gtk_builder_get_object(builder, "combobox_color_preset"));
@@ -84,7 +84,7 @@ static gboolean preferences_dialog_palette_color_set_event(GtkColorButton * widg
         gchar *object_key = g_strdup_printf("color_%i", i);
     	GtkColorButton *w = GTK_COLOR_BUTTON(gtk_builder_get_object(builder, object_key));
 #if VTE_CHECK_VERSION (0, 38, 0)
-        gtk_color_button_get_rgba(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+        gtk_color_chooser_get_rgba(GTK_COLOR_CHOOSER(w), &setting->palette_color[i]);
 #else
         gtk_color_button_get_color(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
 #endif
@@ -114,7 +114,7 @@ static gboolean preferences_dialog_palette_preset_changed_event(GtkComboBox * wi
     w = GTK_WIDGET(gtk_builder_get_object(builder, "background_color"));
 #if VTE_CHECK_VERSION (0, 38, 0)
     gdk_rgba_parse(&setting->background_color, color_presets[active].background_color);
-    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->background_color);
+    gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(w), &setting->background_color);
 #else
     gdk_color_parse(color_presets[active].background_color, &setting->background_color);
     setting->background_alpha = 65535;
@@ -125,7 +125,7 @@ static gboolean preferences_dialog_palette_preset_changed_event(GtkComboBox * wi
     w = GTK_WIDGET(gtk_builder_get_object(builder, "foreground_color"));
 #if VTE_CHECK_VERSION (0, 38, 0)
     gdk_rgba_parse(&setting->foreground_color, color_presets[active].foreground_color);
-    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->foreground_color);
+    gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(w), &setting->foreground_color);
 #else
     gdk_color_parse(color_presets[active].foreground_color, &setting->foreground_color);
     gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->foreground_color);
@@ -136,7 +136,7 @@ static gboolean preferences_dialog_palette_preset_changed_event(GtkComboBox * wi
         w = GTK_WIDGET(gtk_builder_get_object(builder, object_key));
 #if VTE_CHECK_VERSION (0, 38, 0)
         gdk_rgba_parse(&setting->palette_color[i], color_presets[active].palette[i]);
-        gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+        gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(w), &setting->palette_color[i]);
 #else
         gdk_color_parse(color_presets[active].palette[i], &setting->palette_color[i]);
         gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
@@ -280,7 +280,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "background_color"));
 #if VTE_CHECK_VERSION (0, 38, 0)
-    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->background_color);
+    gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(w), &setting->background_color);
 #else
     gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->background_color);
     gtk_color_button_set_alpha(GTK_COLOR_BUTTON(w), setting->background_alpha);
@@ -290,7 +290,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "foreground_color"));
 #if VTE_CHECK_VERSION (0, 38, 0)
-    gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->foreground_color);
+    gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(w), &setting->foreground_color);
 #else
     gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->foreground_color);
 #endif
@@ -301,7 +301,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
         gchar *object_key = g_strdup_printf("color_%i", i);
         w = GTK_WIDGET(gtk_builder_get_object(builder, object_key));
 #if VTE_CHECK_VERSION (0, 38, 0)
-        gtk_color_button_set_rgba(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
+        gtk_color_chooser_set_rgba(GTK_COLOR_CHOOSER(w), &setting->palette_color[i]);
 #else
         gtk_color_button_set_color(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
 #endif
