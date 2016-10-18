@@ -690,13 +690,7 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
 #endif
 
     terminal_set_geometry_hints(term);
-#if VTE_CHECK_VERSION (0, 38, 0)
-    if (gtk_widget_get_mapped(terminal->window)) {
-        return;
-    }
-    gtk_window_resize_to_geometry(terminal->window, col, row);
-#else
-    {
+
     GtkRequisition toplevel_request;
     GtkRequisition widget_request;
     GtkBorder *inner_border = NULL;
@@ -715,8 +709,6 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
     gtk_border_free(inner_border);
     gtk_window_resize(terminal->window, w, h);
     gtk_widget_set_size_request(GTK_WIDGET(vteterm), -1, -1);
-    }
-#endif
 }
 
 /* Handler for "activate" signal on Tabs/Zoom In */
