@@ -384,9 +384,7 @@ static GdkGeometry* terminal_set_geometry_hints(Term *term)
     gtk_window_get_size(term->parent->window, &windowwidth, &windowheight);
     GtkBorder *termBorder = terminal_get_border(term);
 
-    if (termAlloc->width == 0) {
-        return NULL;
-    }
+    g_printf("termAlloc width %d height %d\n",termAlloc->width, termAlloc->height);
 
     GdkGeometry *geometry = g_malloc0(sizeof(GdkGeometry));
     gint borderwidth = windowwidth - termAlloc->width + termBorder->left + termBorder->right;
@@ -399,8 +397,6 @@ static GdkGeometry* terminal_set_geometry_hints(Term *term)
     geometry->base_height = borderheight;
     geometry->width_inc = charwidth;
     geometry->height_inc = charheight;
-
-    g_printf("border width %d height %d\n",borderwidth, borderheight);
 
     gtk_window_set_geometry_hints(GTK_WINDOW(term->parent->window), NULL, geometry,
             GDK_HINT_MIN_SIZE | GDK_HINT_BASE_SIZE | GDK_HINT_RESIZE_INC);
@@ -449,15 +445,12 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 
     /* Disable Alt-n switch tabs or not. */
     terminal_update_alt(terminal);
-
-    /* Wait for its size to be allocated, then set its geometry */
-    g_signal_connect(term->vte, "size-allocate", G_CALLBACK(terminal_vte_size_allocate_event), term);
 }
 
 static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *allocation, Term *term) {
     GdkGeometry *geometry = terminal_set_geometry_hints(term);
     g_free(geometry);
-    // g_signal_handler_disconnect(term->vte, TODO);
+    g_signal_handlers_disconnect_by_func(widget, terminal_vte_size_allocate_event, term);
 }
 
 /* Handler for "activate" signal on File/Close Tab menu item.
@@ -793,8 +786,8 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
         const gchar * title = gtk_label_get_text(GTK_LABEL(term->label));
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
 
-        GdkGeometry *geometry = terminal_set_geometry_hints(term);
-        g_free(geometry);
+        /* Wait for its size to be allocated, then set its geometry */
+        g_signal_connect(term->vte, "size-allocate", G_CALLBACK(terminal_vte_size_allocate_event), term);
     }
 }
 
