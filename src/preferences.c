@@ -310,12 +310,12 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
 	g_free(object_key);
     }
 
-    w = GTK_WIDGET(gtk_builder_get_object(builder, "values_color_presets"));
+    GtkListStore *w3 = GTK_LIST_STORE(gtk_builder_get_object(builder, "values_color_presets"));
     GtkComboBox *w2 = GTK_COMBO_BOX(gtk_builder_get_object(builder, "combobox_color_preset"));
     gboolean preset_is_set = FALSE;
     for (i=0; ; i++) {
         gchar *some_data;
-        gtk_list_store_insert_with_values (GTK_LIST_STORE(w), NULL, -1, 0, color_presets[i].name, -1);
+        gtk_list_store_insert_with_values (w3, NULL, -1, 0, color_presets[i].name, -1);
 
         if (g_strcmp0(color_presets[i].name, setting->color_preset) == 0) {
             gtk_combo_box_set_active(w2, i);
