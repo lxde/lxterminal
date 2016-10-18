@@ -1619,8 +1619,9 @@ static void terminal_settings_apply(LXTerminal * terminal)
     GtkNotebook *notebook = GTK_NOTEBOOK(terminal->notebook);
     gint current_page_number = gtk_notebook_get_current_page(notebook);
     Term *term = g_ptr_array_index(terminal->terms, current_page_number);
-    GdkGeometry *geometry = terminal_set_geometry_hints(term);
-    g_free(geometry);
+
+    /* Wait for its size to be allocated, then set its geometry */
+    g_signal_connect(term->vte, "size-allocate", G_CALLBACK(terminal_vte_size_allocate_event), term);
 }
 
 /* Apply terminal settings to all tabs in all terminals. */
