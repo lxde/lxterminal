@@ -384,8 +384,6 @@ static GdkGeometry* terminal_set_geometry_hints(Term *term)
     gtk_window_get_size(term->parent->window, &windowwidth, &windowheight);
     GtkBorder *termBorder = terminal_get_border(term);
 
-    g_printf("termAlloc width %d height %d\n",termAlloc->width, termAlloc->height);
-
     GdkGeometry *geometry = g_malloc0(sizeof(GdkGeometry));
     gint borderwidth = windowwidth - termAlloc->width + termBorder->left + termBorder->right;
     gint borderheight = windowheight - termAlloc->height + termBorder->top + termBorder->bottom;
