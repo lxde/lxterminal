@@ -42,7 +42,6 @@ static void preferences_dialog_font_set_event(GtkFontButton * widget, Setting * 
 /* Handler for "color-set" signal on Background Color color button. */
 static gboolean preferences_dialog_background_color_set_event(GtkColorButton * widget, Setting * setting)
 {
-    GtkWidget *w;
 #if VTE_CHECK_VERSION (0, 38, 0)
     gtk_color_button_get_rgba(widget, &setting->background_color);
 #else
@@ -55,7 +54,7 @@ static gboolean preferences_dialog_background_color_set_event(GtkColorButton * w
     }
 #endif
 
-    w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    GtkComboBox *w = GTK_COMBO_BOX(gtk_builder_get_object(builder, "combobox_color_preset"));
     gtk_combo_box_set_active(w, preset_custom_id);
     setting->color_preset = color_presets[preset_custom_id].name;
     return FALSE;
@@ -64,15 +63,13 @@ static gboolean preferences_dialog_background_color_set_event(GtkColorButton * w
 /* Handler for "color-set" signal on Foreground Color color button. */
 static gboolean preferences_dialog_foreground_color_set_event(GtkColorButton * widget, Setting * setting)
 {
-    GtkWidget *w;
-
 #if VTE_CHECK_VERSION (0, 38, 0)
     gtk_color_button_get_rgba(widget, &setting->foreground_color);
 #else
     gtk_color_button_get_color(widget, &setting->foreground_color);
 #endif
 
-    w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    GtkComboBox *w = GTK_COMBO_BOX(gtk_builder_get_object(builder, "combobox_color_preset"));
     gtk_combo_box_set_active(w, preset_custom_id);
     setting->color_preset = color_presets[preset_custom_id].name;
     return FALSE;
@@ -81,12 +78,11 @@ static gboolean preferences_dialog_foreground_color_set_event(GtkColorButton * w
 /* Handler for "color-set" signal on any palette color button. */
 static gboolean preferences_dialog_palette_color_set_event(GtkColorButton * widget, Setting * setting)
 {
-    GtkWidget *w;
     int i;
 
     for (i=0;i<16;i++) {
         gchar *object_key = g_strdup_printf("color_%i", i);
-        w = GTK_WIDGET(gtk_builder_get_object(builder, object_key));
+    	GtkColorButton *w = GTK_COLOR_BUTTON(gtk_builder_get_object(builder, object_key));
 #if VTE_CHECK_VERSION (0, 38, 0)
         gtk_color_button_get_rgba(GTK_COLOR_BUTTON(w), &setting->palette_color[i]);
 #else
@@ -95,7 +91,7 @@ static gboolean preferences_dialog_palette_color_set_event(GtkColorButton * widg
 	g_free(object_key);
     }
 
-    w = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    GtkComboBox *w = GTK_COMBO_BOX(gtk_builder_get_object(builder, "combobox_color_preset"));
     gtk_combo_box_set_active(w, preset_custom_id);
     setting->color_preset = color_presets[preset_custom_id].name;
     return FALSE;
@@ -315,11 +311,11 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     }
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "values_color_presets"));
-    GtkWidget *w2 = GTK_WIDGET(gtk_builder_get_object(builder, "combobox_color_preset"));
+    GtkComboBox *w2 = GTK_COMBO_BOX(gtk_builder_get_object(builder, "combobox_color_preset"));
     gboolean preset_is_set = FALSE;
     for (i=0; ; i++) {
         gchar *some_data;
-        gtk_list_store_insert_with_values (w, NULL, -1, 0, color_presets[i].name, -1);
+        gtk_list_store_insert_with_values (GTK_LIST_STORE(w), NULL, -1, 0, color_presets[i].name, -1);
 
         if (g_strcmp0(color_presets[i].name, setting->color_preset) == 0) {
             gtk_combo_box_set_active(w2, i);

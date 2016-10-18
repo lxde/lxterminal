@@ -35,7 +35,7 @@
 /* Single copy setting*/
 Setting * setting;
 
-extern ColorPreset color_presets[] = {
+ColorPreset color_presets[] = {
     {
         .name = "VGA",
         .background_color = "#000000",
