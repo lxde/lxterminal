@@ -705,7 +705,6 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
     gtk_window_resize(GTK_WINDOW(terminal->window),
                       geometry->base_width + geometry->width_inc * col,
                       geometry->base_height + geometry->height_inc * row);
-    gtk_widget_set_size_request(GTK_WIDGET(vteterm), -1, -1);
 
     g_free(geometry);
 }
