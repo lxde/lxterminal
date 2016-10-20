@@ -439,7 +439,7 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 }
 
 static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *allocation, Term *term) {
-    GdkGeometry geometry = {0};
+    GdkGeometry geometry;
     terminal_set_geometry_hints(term, &geometry);
     g_signal_handlers_disconnect_by_func(widget, terminal_vte_size_allocate_event, term);
 }
