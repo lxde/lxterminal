@@ -777,7 +777,7 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
         gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal")));
 
         /* Wait for its size to be allocated, then set its geometry */
-        g_signal_connect(term->vte, "size-allocate", G_CALLBACK(terminal_vte_size_allocate_event), term);
+        g_signal_connect(notebook, "size-allocate", G_CALLBACK(terminal_vte_size_allocate_event), term);
     }
 }
 
