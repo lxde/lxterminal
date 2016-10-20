@@ -43,7 +43,7 @@
 static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geometry, GdkWindowHints * geometry_mask);
 
 /* Utilities. */
-static GtkBorder * terminal_get_border(Term * term);
+static void terminal_get_border(Term * term, GtkBorder * border);
 static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
 static gchar * terminal_get_current_dir(LXTerminal * terminal);
 static const gchar * terminal_get_preferred_shell();
@@ -90,7 +90,7 @@ static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
-static GdkGeometry * terminal_set_geometry_hints(Term * term);
+static void terminal_set_geometry_hints(Term * term, GdkGeometry * geometry);
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label);
 static void terminal_free(Term * term);
 static void terminal_menubar_initialize(LXTerminal * terminal);
@@ -171,29 +171,25 @@ static GtkActionEntry vte_menu_items[] =
 #define VTE_MENUITEM_COUNT G_N_ELEMENTS(vte_menu_items)
 
 /* Accessor for border values from VteTerminal. */
-static GtkBorder * terminal_get_border(Term * term)
+static void terminal_get_border(Term * term, GtkBorder * border)
 {
 #if VTE_CHECK_VERSION (0, 38, 0)
     GtkBorder padding;
     gtk_style_context_get_padding(gtk_widget_get_style_context(term->vte),
                                   gtk_widget_get_state_flags(term->vte),
                                   &padding);
-    GtkBorder * border = gtk_border_new();
     border->left = padding.left;
     border->right = padding.right;
     border->top = padding.top;
     border->bottom = padding.bottom;
-    return border;
 #elif VTE_CHECK_VERSION(0, 24, 0)
     /* Style property, new in 0.24.0, replaces the function below. */
-    GtkBorder * border;
-    gtk_widget_style_get(term->vte, "inner-border", &border, NULL);
-    return gtk_border_copy(border);
+    GtkBorder *_border;
+    gtk_widget_style_get(term->vte, "inner-border", &_border, NULL);
+    memcpy(border, _border, sizeof(GtkBorder));
 #else
     /* Deprecated function produces a warning. */
-    GtkBorder * border = gtk_border_new();
     vte_terminal_get_padding(VTE_TERMINAL(term->vte), &border->left, &border->top);
-    return border;
 #endif
 }
 
@@ -373,21 +369,20 @@ static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * ter
     terminal_new_tab(terminal, NULL);
 }
 
-static GdkGeometry* terminal_set_geometry_hints(Term *term)
+static void terminal_set_geometry_hints(Term *term, GdkGeometry *geometry)
 {
     VteTerminal *vteterm = VTE_TERMINAL(term->vte);
     gint windowwidth, windowheight;
-    GtkAllocation* termAlloc = g_new(GtkAllocation, 1);
-    gtk_widget_get_allocation(GTK_WIDGET(term->vte), termAlloc);
+    GtkAllocation termAlloc;
+    gtk_widget_get_allocation(GTK_WIDGET(term->vte), &termAlloc);
     gint charwidth = vte_terminal_get_char_width(vteterm);
     gint charheight = vte_terminal_get_char_height(vteterm);
     gtk_window_get_size(GTK_WINDOW(term->parent->window), &windowwidth, &windowheight);
-    GtkBorder *termBorder = terminal_get_border(term);
+    GtkBorder termBorder;
+    terminal_get_border(term, &termBorder);
 
-    GdkGeometry *geometry = g_malloc0(sizeof(GdkGeometry));
-    gint borderwidth = windowwidth - termAlloc->width + termBorder->left + termBorder->right;
-    gint borderheight = windowheight - termAlloc->height + termBorder->top + termBorder->bottom;
-    g_free(termAlloc);
+    gint borderwidth = windowwidth - termAlloc.width + termBorder.left + termBorder.right;
+    gint borderheight = windowheight - termAlloc.height + termBorder.top + termBorder.bottom;
 
     geometry->min_width = borderwidth + charwidth*6;
     geometry->min_height = borderheight + charheight*3;
@@ -398,8 +393,6 @@ static GdkGeometry* terminal_set_geometry_hints(Term *term)
 
     gtk_window_set_geometry_hints(GTK_WINDOW(term->parent->window), NULL, geometry,
             GDK_HINT_MIN_SIZE | GDK_HINT_BASE_SIZE | GDK_HINT_RESIZE_INC);
-
-    return geometry;
 }
 
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
@@ -446,8 +439,8 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 }
 
 static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *allocation, Term *term) {
-    GdkGeometry *geometry = terminal_set_geometry_hints(term);
-    g_free(geometry);
+    GdkGeometry geometry = {0};
+    terminal_set_geometry_hints(term, &geometry);
     g_signal_handlers_disconnect_by_func(widget, terminal_vte_size_allocate_event, term);
 }
 
@@ -700,13 +693,13 @@ static void terminal_zoom(LXTerminal * terminal, gint direction)
     term->scale = scale;
 #endif
 
-    GdkGeometry *geometry = terminal_set_geometry_hints(term);
+
+    GdkGeometry geometry = {0};
+    terminal_set_geometry_hints(term, &geometry);
 
     gtk_window_resize(GTK_WINDOW(terminal->window),
-                      geometry->base_width + geometry->width_inc * col,
-                      geometry->base_height + geometry->height_inc * row);
-
-    g_free(geometry);
+                      geometry.base_width + geometry.width_inc * col,
+                      geometry.base_height + geometry.height_inc * row);
 }
 
 /* Handler for "activate" signal on Tabs/Zoom In */
@@ -921,13 +914,14 @@ static gchar * terminal_get_match_at(VteTerminal * vte, Term * term, GdkEventBut
 #else
     /* steal from tilda-0.09.6/src/tilda_terminal.c:743
      * See if the terminal has matched the regular expression. */
-    GtkBorder * border = terminal_get_border(term);
+
+    GtkBorder border;
+    terminal_get_border(term, &border);
     gint tag;
     gchar * match = vte_terminal_match_check(vte,
-        (event->x - border->left) / vte_terminal_get_char_width(vte),
-        (event->y - border->top) / vte_terminal_get_char_height(vte),
+        (event->x - border.left) / vte_terminal_get_char_width(vte),
+        (event->y - border.top) / vte_terminal_get_char_height(vte),
         &tag);
-    gtk_border_free(border);
 
     return match;
 #endif
