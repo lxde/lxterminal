@@ -44,6 +44,7 @@ static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geom
 
 /* Utilities. */
 static void terminal_get_border(Term * term, GtkBorder * border);
+static void terminal_save_size(LXTerminal * terminal);
 static void terminal_tab_set_position(GtkWidget * notebook, gint tab_position);
 static gchar * terminal_get_current_dir(LXTerminal * terminal);
 static const gchar * terminal_get_preferred_shell();
@@ -67,6 +68,7 @@ static void terminal_next_tab_activate_event(GtkAction * action, LXTerminal * te
 static void terminal_move_tab_execute(LXTerminal * terminal, gint direction);
 static void terminal_move_tab_left_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_move_tab_right_activate_event(GtkAction * action, LXTerminal * terminal);
+static void terminal_zoom(LXTerminal * terminal);
 static gboolean terminal_zoom_in_activate_event(GtkAction * action, LXTerminal * terminal);
 static gboolean terminal_zoom_out_activate_event(GtkAction * action, LXTerminal * terminal);
 static gboolean terminal_zoom_reset_activate_event(GtkAction * action, LXTerminal * terminal);
@@ -395,6 +397,14 @@ static void terminal_set_geometry_hints(Term *term, GdkGeometry *geometry)
             GDK_HINT_MIN_SIZE | GDK_HINT_BASE_SIZE | GDK_HINT_RESIZE_INC);
 }
 
+static void terminal_save_size(LXTerminal * terminal)
+{
+    Term * term = g_ptr_array_index(terminal->terms, 0);
+    
+    terminal->col = vte_terminal_get_column_count(VTE_TERMINAL(term->vte));
+    terminal->row = vte_terminal_get_row_count(VTE_TERMINAL(term->vte));
+}
+
 static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 {
     Term * term;
@@ -431,6 +441,7 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
     gtk_notebook_set_current_page(GTK_NOTEBOOK(term->parent->notebook), term->index);
     if (term->index > 0)
     {
+	terminal_save_size(terminal);
         gtk_notebook_set_show_tabs(GTK_NOTEBOOK(term->parent->notebook), TRUE);
     }
 
@@ -438,7 +449,8 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
     terminal_update_alt(terminal);
 }
 
-static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *allocation, Term *term) {
+static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *allocation, Term *term)
+{
     GdkGeometry geometry;
     terminal_set_geometry_hints(term, &geometry);
     g_signal_handlers_disconnect_by_func(widget, terminal_vte_size_allocate_event, term);
@@ -654,72 +666,63 @@ static void terminal_move_tab_right_activate_event(GtkAction * action, LXTermina
 }
 
 /* Helper for terminal zoom in/out. */
-static void terminal_zoom(LXTerminal * terminal, gint direction)
+static void terminal_zoom(LXTerminal * terminal)
 {
-    GtkNotebook *notebook = GTK_NOTEBOOK(terminal->notebook);
-    gint current_page_number = gtk_notebook_get_current_page(notebook);
-    Term *term = g_ptr_array_index(terminal->terms, current_page_number);
-    VteTerminal *vteterm = VTE_TERMINAL(term->vte);
-    Setting *setting = get_setting();
-    gint col = vte_terminal_get_column_count(vteterm);
-    gint row = vte_terminal_get_row_count(vteterm);
-    gdouble scale;
+    Term *term;
+    guint i;
+    terminal_save_size(terminal);
 
-    if (direction == 0) {
-        scale = 1;
-    } else {
 #if VTE_CHECK_VERSION (0, 38, 0)
-        scale = vte_terminal_get_font_scale(vteterm);
-#else
-        scale = term->scale;
-#endif
-        scale += direction * 0.1;
-        if (scale < 0.3) {
-            return;
-        }
+    for (i = 0; i < terminal->terms->len; i++) {
+	term = g_ptr_array_index(terminal->terms, i);
+        vte_terminal_set_font_scale(VTE_TERMINAL(term->vte), terminal->scale);
     }
-
-#if VTE_CHECK_VERSION (0, 38, 0)
-    vte_terminal_set_font_scale(vteterm, scale);
 #else
+    Setting *setting = get_setting();
     const PangoFontDescription *font_desc;
     PangoFontDescription *new_font_desc;
     font_desc = pango_font_description_from_string(setting->font_name);
     gdouble current_size = pango_units_to_double(pango_font_description_get_size(font_desc));
     new_font_desc = pango_font_description_copy(font_desc);
-    pango_font_description_set_size(new_font_desc, pango_units_from_double(current_size*scale));
-    vte_terminal_set_font(vteterm, new_font_desc);
+    pango_font_description_set_size(new_font_desc, pango_units_from_double(current_size*terminal->scale));
+    for (i = 0; i < terminal->terms->len; i++) {
+	term = g_ptr_array_index(terminal->terms, i);
+        vte_terminal_set_font(VTE_TERMINAL(term->vte), new_font_desc);
+    }
     pango_font_description_free(new_font_desc);
-    term->scale = scale;
 #endif
-
 
     GdkGeometry geometry = {0};
     terminal_set_geometry_hints(term, &geometry);
 
     gtk_window_resize(GTK_WINDOW(terminal->window),
-                      geometry.base_width + geometry.width_inc * col,
-                      geometry.base_height + geometry.height_inc * row);
+                      geometry.base_width + geometry.width_inc * terminal->col,
+                      geometry.base_height + geometry.height_inc * terminal->row);
 }
 
 /* Handler for "activate" signal on Tabs/Zoom In */
 static gboolean terminal_zoom_in_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-    terminal_zoom(terminal, 1);
+    terminal->scale += 0.1;
+    terminal_zoom(terminal);
     return FALSE;
 }
 
 /* Handler for "activate" signal on Tabs/Zoom Out */
 static gboolean terminal_zoom_out_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-    terminal_zoom(terminal, -1);
+    if (terminal->scale < 0.3)
+        return FALSE;
+    terminal->scale -= 0.1;
+    terminal_zoom(terminal);
     return FALSE;
 }
 
 /* Handler for "activate" signal on Tabs/Zoom Reset */
 static gboolean terminal_zoom_reset_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-    terminal_zoom(terminal, 0);
+    terminal->scale = 1.0;
+    terminal_zoom(terminal);
     return FALSE;
 }
 
@@ -1048,8 +1051,8 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 #else
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
     vte_terminal_set_word_chars(VTE_TERMINAL(term->vte), setting->word_selection_characters);
-    term->scale = 1;
 #endif
+    terminal->scale = 1;
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
     vte_terminal_set_allow_bold(VTE_TERMINAL(term->vte), ! setting->disallow_bold);
     vte_terminal_set_cursor_blink_mode(VTE_TERMINAL(term->vte), ((setting->cursor_blink) ? VTE_CURSOR_BLINK_ON : VTE_CURSOR_BLINK_OFF));
@@ -1251,10 +1254,8 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     /* Show the widget and return. */
     gtk_widget_show_all(term->box);
 
-#if !VTE_CHECK_VERSION (0, 38, 0)
     /* Set font scale */
-    term->scale = 1;
-#endif
+    terminal->scale = 1;
 
     /* Apply user preferences. */
     terminal_settings_apply_to_term(terminal, term);

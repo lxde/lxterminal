@@ -52,6 +52,9 @@ typedef struct _lxterminal {
     GdkColor foreground;            /* User preference foreground color converted to GdkColor */
     gint tab_position;              /* Tab position as an integer value */
     gboolean login_shell;           /* Terminal will spawn login shells */
+    gdouble scale;                  /* Terminal scale */
+    glong col;                      /* Saved horizontal size */
+    glong row;                      /* Saved vertical size */
 } LXTerminal;
 
 /* Representative of a tab within a toplevel window. */
@@ -69,9 +72,6 @@ typedef struct _term {
     GClosure * closure;             /* Accelerator structure */
     gchar * matched_url;
     gboolean open_menu_on_button_release;
-#if !VTE_CHECK_VERSION (0, 38, 0)
-    gdouble scale;
-#endif
 } Term;
 
 /* Output of lxterminal_process_arguments. */
