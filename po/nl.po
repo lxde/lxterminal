@@ -229,17 +229,17 @@ msgstr "Terugschuiven wissen"
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "_Inzoomen"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "_Uitzoomen"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "Terugzoomen naar _standaard"
 
 #. 16
 #. 17
@@ -296,11 +296,11 @@ msgstr "Terugschuiven wissen"
 #: ../src/lxterminal.c:457
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "U staat op het punt om %d tabbladen te sluiten. Weet u zeker dat u wilt doorgaan?"
 
 #: ../src/lxterminal.c:458
 msgid "Confirm close"
-msgstr ""
+msgstr "Bevestig afsluiten"
 
 #: ../src/lxterminal.c:564 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
@@ -372,7 +372,7 @@ msgstr "Stijl van aanwijzer"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Block"
-msgstr "Blokkeer"
+msgstr "Blokkeren"
 
 #: ../data/lxterminal-preferences.glade.h:13
 msgid "Underline"
@@ -384,76 +384,75 @@ msgstr "Hoorbare klok"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Zwart"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Rood"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Grieks"
+msgstr "Groen"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Bruin"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Blauw"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Scharlakenrood"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Turquoise"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Grijs"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Donkergrijs"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Fel rood"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Fel groen"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Geel"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Fel blauw"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Fel scharlaken"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Fel turquoise"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Wit"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Palet"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Standaardpalet"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -485,11 +484,11 @@ msgstr "Verberg muispijl"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Standaardgrootte van vensters"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -509,7 +508,7 @@ msgstr "Schakel het gebruik van Alt-n uit voor tabbladen en menu"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Schakel de bevestiging uit voor het sluiten van een venster met meerdere tabbladen"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -557,15 +556,15 @@ msgstr "Verplaats tabblad naar rechts"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Inzoomen"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Uitzoomen"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Terugzoomen naar standaard"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
@@ -584,7 +583,7 @@ msgid "console;command line;execute;"
 msgstr "terminal;opdrachtregel;uitvoeren;"
 
 #~ msgid "_Quit"
-#~ msgstr "終了(_Q)"
+#~ msgstr "_Afsluiten"
 
 #~ msgid "Disable using Alt-n to switch tabs"
 #~ msgstr "Alt-n によるタブの切り替えを無効にする"
