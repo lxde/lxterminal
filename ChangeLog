@@ -1,0 +1,10 @@
+Changes since 0.2.0
+- Arguments are now properly passed to child process.
+- Fixed login shell, also applies to new tabs. 
+- Renamed tabs can now be reset, fixed '--title'.
+- Improved GTK3 and VTE support. 
+- Added palette customization.
+- Added terminal zoom feature.
+- Added tab activity notification (bold).
+- Added --no_remote to spawn a separate teminal process.
+- Optional confirmation when closing multiple tabs.
