@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 10:26+0800\n"
+"POT-Creation-Date: 2016-11-29 15:56-0500\n"
 "PO-Revision-Date: 2015-05-04 04:34+0000\n"
 "Last-Translator: rago1975 <take1975@kumamoto.email.ne.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -173,161 +173,162 @@ msgid "Thai"
 msgstr "タイ語"
 
 #. 0
-#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:125
 msgid "_File"
 msgstr "ファイル(_F)"
 
 #. 1
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:126
 msgid "_Edit"
 msgstr "編集(_E)"
 
 #. 2
-#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:127
 msgid "_Tabs"
 msgstr "タブ(_T)"
 
 #. 3
-#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:128
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
 #. 4
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:129
 msgid "_New Window"
 msgstr "新規ウィンドウ(_W)"
 
 #. 5
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:130
 msgid "New T_ab"
 msgstr "新規タブ(_T)"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
 msgid "_Close Tab"
 msgstr "タブを閉じる(_C)"
 
 #. 8
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:133
 msgid "Close _Window"
 msgstr "ウィンドウを閉じる(_W)"
 
 #. 9
-#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
+#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
 msgid "Cop_y"
 msgstr "コピー(_Y)"
 
 #. 10
-#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
+#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
 #. 11
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:136
 msgid "Clear scr_ollback"
 msgstr "バックログの消去(_O)"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:138
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "Preference_s"
 msgstr "設定(_S)"
 
 #. 18
-#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Na_me Tab"
 msgstr "タブの名前変更(_M)"
 
 #. 19
-#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
 msgid "Pre_vious Tab"
 msgstr "前のタブ(_V)"
 
 #. 20
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
 msgid "Ne_xt Tab"
 msgstr "次のタブ(_X)"
 
 #. 21
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Move Tab _Left"
 msgstr "タブを左へ移動(_L)"
 
 #. 22
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "Move Tab _Right"
 msgstr "タブを右へ移動(_R)"
 
 #. 23
-#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:148
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:156
 msgid "New _Window"
 msgstr "新規ウィンドウ(_W)"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:157
 msgid "New _Tab"
 msgstr "新規タブ(_T)"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:159
 msgid "Copy _URL"
 msgstr "URLをコピー(_U)"
 
-#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:162
 msgid "Cl_ear scrollback"
 msgstr "バックログを消去(_E)"
 
-#: ../src/lxterminal.c:457
-#, c-format
-msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
-
-#: ../src/lxterminal.c:458
-msgid "Confirm close"
-msgstr ""
-
-#: ../src/lxterminal.c:564 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "タブの名前変更"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:761
+#: ../src/lxterminal.c:742
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>"
 
-#: ../src/lxterminal.c:767 ../src/lxterminal.c:801 ../src/preferences.c:278
+#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:769
-msgid "Copyright (C) 2008-2014"
-msgstr "Copyright (C) 2008-2014"
+#: ../src/lxterminal.c:750
+#, fuzzy
+msgid "Copyright (C) 2008-2017"
+msgstr "Copyright (C) 2008-2017"
 
-#: ../src/lxterminal.c:770
+#: ../src/lxterminal.c:751
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDEプロジェクトのための端末エミュレータ"
+
+#: ../src/lxterminal.c:816
+#, c-format
+msgid "You are about to close %d tabs. Are you sure you want to continue?"
+msgstr ""
+
+#: ../src/lxterminal.c:817
+msgid "Confirm close"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 10:26+0800\n"
+"POT-Creation-Date: 2016-11-29 15:56-0500\n"
 "PO-Revision-Date: 2015-05-19 22:12+0000\n"
 "Last-Translator: Felipe Braga <fbobraga@gmail.com>\n"
 "Language-Team: Portuguese (Brazilian) <translation@mailinglist.lxde.org>\n"
@@ -173,144 +173,135 @@ msgid "Thai"
 msgstr "Tailandês"
 
 #. 0
-#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:125
 msgid "_File"
 msgstr "_Arquivo"
 
 #. 1
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:126
 msgid "_Edit"
 msgstr "_Editar"
 
 #. 2
-#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:127
 msgid "_Tabs"
 msgstr "A_bas"
 
 #. 3
-#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:128
 msgid "_Help"
 msgstr "Aj_uda"
 
 #. 4
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:129
 msgid "_New Window"
 msgstr "_Nova janela"
 
 #. 5
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:130
 msgid "New T_ab"
 msgstr "Nova _aba"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
 msgid "_Close Tab"
 msgstr "_Fechar aba"
 
 #. 8
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:133
 msgid "Close _Window"
 msgstr "Fechar _janela"
 
 #. 9
-#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
+#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
 msgid "Cop_y"
 msgstr "_Copiar"
 
 #. 10
-#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
+#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
 msgid "_Paste"
 msgstr "C_olar"
 
 #. 11
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:136
 msgid "Clear scr_ollback"
 msgstr "_Limpar rolagem para trás"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:138
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "Preference_s"
 msgstr "Preferência_s"
 
 #. 18
-#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Na_me Tab"
 msgstr "No_me da aba"
 
 #. 19
-#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
 msgid "Pre_vious Tab"
 msgstr "Aba a_nterior"
 
 #. 20
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
 msgid "Ne_xt Tab"
 msgstr "Pró_xima aba"
 
 #. 21
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Move Tab _Left"
 msgstr "Mover aba para a _esquerda"
 
 #. 22
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "Move Tab _Right"
 msgstr "Mover aba para a _direita"
 
 #. 23
-#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:148
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:156
 msgid "New _Window"
 msgstr "N_ova janela"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:157
 msgid "New _Tab"
 msgstr "No_va aba"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:159
 msgid "Copy _URL"
 msgstr "Copiar _URL"
 
-#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:162
 msgid "Cl_ear scrollback"
 msgstr "Ocultar _barra de rolagem"
 
-#: ../src/lxterminal.c:457
-#, c-format
-msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
-
-#: ../src/lxterminal.c:458
-msgid "Confirm close"
-msgstr ""
-
-#: ../src/lxterminal.c:564 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "Nome da aba"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:761
+#: ../src/lxterminal.c:742
 msgid "translator-credits"
 msgstr ""
 "Fábio Antunes <nospam@emal.com>\n"
@@ -318,18 +309,28 @@ msgstr ""
 "Henrique P. Machado <hpmachado@gnome.org>\n"
 "Sérgio Cipolla <secipolla@gmail.com>"
 
-#: ../src/lxterminal.c:767 ../src/lxterminal.c:801 ../src/preferences.c:278
+#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:769
-msgid "Copyright (C) 2008-2014"
-msgstr "Copyright (C) 2008-2014"
+#: ../src/lxterminal.c:750
+#, fuzzy
+msgid "Copyright (C) 2008-2017"
+msgstr "Copyright (C) 2008-2017"
 
-#: ../src/lxterminal.c:770
+#: ../src/lxterminal.c:751
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulador de terminal do projeto LXDE"
+
+#: ../src/lxterminal.c:816
+#, c-format
+msgid "You are about to close %d tabs. Are you sure you want to continue?"
+msgstr ""
+
+#: ../src/lxterminal.c:817
+msgid "Confirm close"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"

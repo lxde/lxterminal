@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 10:26+0800\n"
+"POT-Creation-Date: 2016-11-29 15:56-0500\n"
 "PO-Revision-Date: 2015-07-20 14:03+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
@@ -171,161 +171,162 @@ msgid "Thai"
 msgstr "타이어"
 
 #. 0
-#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:125
 msgid "_File"
 msgstr "파일(_F)"
 
 #. 1
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:126
 msgid "_Edit"
 msgstr "편집(_E)"
 
 #. 2
-#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:127
 msgid "_Tabs"
 msgstr "탭(_T)"
 
 #. 3
-#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:128
 msgid "_Help"
 msgstr "도움말(_H)"
 
 #. 4
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:129
 msgid "_New Window"
 msgstr "새 창(_N)"
 
 #. 5
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:130
 msgid "New T_ab"
 msgstr "새 탭(_A)"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
 msgid "_Close Tab"
 msgstr "탭 닫기(_C)"
 
 #. 8
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:133
 msgid "Close _Window"
 msgstr "창 닫기(_W)"
 
 #. 9
-#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
+#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
 msgid "Cop_y"
 msgstr "복사(_Y)"
 
 #. 10
-#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
+#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
 msgid "_Paste"
 msgstr "붙여넣기(_P)"
 
 #. 11
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:136
 msgid "Clear scr_ollback"
 msgstr "이전 스크롤 지우기(_O)"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:138
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
 msgid "Preference_s"
 msgstr "기본 설정(_S)"
 
 #. 18
-#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Na_me Tab"
 msgstr "탭 이름(_M)"
 
 #. 19
-#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
 msgid "Pre_vious Tab"
 msgstr "이전 탭(_V)"
 
 #. 20
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
 msgid "Ne_xt Tab"
 msgstr "다음 탭(_X)"
 
 #. 21
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Move Tab _Left"
 msgstr "탭 왼쪽으로 옮기기(_L)"
 
 #. 22
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
 msgid "Move Tab _Right"
 msgstr "탭 오른쪽으로 옮기기(_R)"
 
 #. 23
-#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:148
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:156
 msgid "New _Window"
 msgstr "새 창(_W)"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:157
 msgid "New _Tab"
 msgstr "새 탭(_T)"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:159
 msgid "Copy _URL"
 msgstr "URL 복사(_U)"
 
-#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:162
 msgid "Cl_ear scrollback"
 msgstr "이전 스크롤 지우기(_E)"
 
-#: ../src/lxterminal.c:457
-#, c-format
-msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
-
-#: ../src/lxterminal.c:458
-msgid "Confirm close"
-msgstr ""
-
-#: ../src/lxterminal.c:564 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "제목 설정"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:761
+#: ../src/lxterminal.c:742
 msgid "translator-credits"
 msgstr ""
 "Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Seong-ho Cho <shcho@gnome.org>"
 
-#: ../src/lxterminal.c:767 ../src/lxterminal.c:801 ../src/preferences.c:278
+#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:769
-msgid "Copyright (C) 2008-2014"
-msgstr "Copyright (C) 2008-2014"
+#: ../src/lxterminal.c:750
+#, fuzzy
+msgid "Copyright (C) 2008-2017"
+msgstr "Copyright (C) 2008-2017"
 
-#: ../src/lxterminal.c:770
+#: ../src/lxterminal.c:751
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE 프로젝트의 터미널 에뮬레이터"
+
+#: ../src/lxterminal.c:816
+#, c-format
+msgid "You are about to close %d tabs. Are you sure you want to continue?"
+msgstr ""
+
+#: ../src/lxterminal.c:817
+msgid "Confirm close"
+msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
