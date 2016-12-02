@@ -232,17 +232,17 @@ msgstr "Supprimer les anciennes _lignes"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "Zoom a_vant"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "Zoom a_rrière"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "Ré_initialiser Zoom"
 
 #. 16
 #. 17
@@ -322,11 +322,11 @@ msgstr "Émulateur de terminal pour le projet LXDE"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Vous vous appretez à fermer %d onglets.  Êtes vous certain?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Confirmer la fermeture"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -386,76 +386,76 @@ msgstr "Son système"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Noir"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Rouge"
 
 #: ../data/lxterminal-preferences.glade.h:17
 #, fuzzy
 msgid "Green"
-msgstr "Grec"
+msgstr "Vert"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Brun"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Bleu"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Cyan"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Gris"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Gris Foncé"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Rouge Vif"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Vert Primaire"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Jaune"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Bleu Primaire"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Magenta Clair"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Cyan Clair"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Blanc"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Palette"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Gabarit de Palette"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -487,11 +487,11 @@ msgstr "Masquer le pointeur de souris"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Taille par défaut de la fenêtre"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -511,7 +511,7 @@ msgstr "Désactiver l'utilisation de Alt-n pour les onglets et le menu"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Désactiver la confirmation avant de fermer une fenêtre multi-onglet"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -559,15 +559,15 @@ msgstr "Déplacer l'onglet à droite"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Zoom avant"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Zoom arrière"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Réinitialiser Zoom"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
