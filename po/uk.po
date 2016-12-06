@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 15:56-0500\n"
-"PO-Revision-Date: 2014-10-21 23:20+0000\n"
+"PO-Revision-Date: 2016-12-06 22:46+0200\n"
 "Last-Translator: Andriy Grytsenko <andrej@rep.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -230,17 +230,17 @@ msgstr "_Очистити прокрутку"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "З_більшити"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "З_меншити"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "З_вичайний розмір"
 
 #. 16
 #. 17
@@ -296,7 +296,7 @@ msgstr "_Очистити прокрутку"
 
 #: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
-msgstr "Назвати вкладку"
+msgstr "Найменувати вкладку"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:742
@@ -311,7 +311,6 @@ msgid "LXTerminal"
 msgstr "LX-термінал"
 
 #: ../src/lxterminal.c:750
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Права застережено (C) 2008-2017"
 
@@ -322,11 +321,11 @@ msgstr "Емулятор терміналу для проекту LXDE"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Ви збираєтесь закрити %d вкладок. Впевнені, що бажаєте це робити?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Підтвердити закриття"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -386,76 +385,75 @@ msgstr "Звуковий дзвінок"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Чорний"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Червоний"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Грецьке"
+msgstr "Зелений"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Брунатний"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Синій"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Малиновий"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Блакитний"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Сірий"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Темно-синій"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Яскраво-червоний"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Яскраво-зелений"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Жовтий"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Яскраво-синій"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Пурпуровий"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Яскраво-блакитний"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Білий"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Палітра"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Встановлена палітра"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -487,11 +485,11 @@ msgstr "Сховати вказівник миші"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Розмір вікна за замовчанням"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -511,7 +509,7 @@ msgstr "Заборонити використання Alt-n для вкладо�
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Вимкнути підтвердження закриття вікна з багатьма вкладками"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -559,15 +557,15 @@ msgstr "Перемістити вкладку праворуч"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Збільшити"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Зменшити"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Звичайний розмір"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
