@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
-"PO-Revision-Date: 2015-03-21 23:18+0000\n"
-"Last-Translator: wwycheuk <wwycheuk@gmail.com>\n"
-"Language-Team: zh_TW <LL@li.org>\n"
+"POT-Creation-Date: 2016-06-07 10:26+0800\n"
+"PO-Revision-Date: 2016-12-08 11:29+0800\n"
+"Last-Translator: Yao Wei (魏銘廷) <mwei@lxde.org>\n"
+"Language-Team: LXDE Contributors <admin@lxde.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -60,7 +60,6 @@ msgstr "中歐語系"
 msgid "South European"
 msgstr "南歐語系"
 
-# google翻譯
 #: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
 msgid "Baltic"
 msgstr "波羅的海語系"
@@ -68,7 +67,7 @@ msgstr "波羅的海語系"
 #: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
 #: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
 msgid "Cyrillic"
-msgstr "西里爾(斯拉夫)字母"
+msgstr "西里爾 (斯拉夫) 字母"
 
 # tim
 #: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
@@ -80,10 +79,10 @@ msgstr "阿拉伯語系"
 msgid "Greek"
 msgstr "希臘文"
 
-# Visual視覺系的，google
+# https://zh.wikipedia.org/wiki/ISO/IEC_8859-8 "visual order" -> "視覺順序"
 #: ../src/encoding.c:142
 msgid "Hebrew Visual"
-msgstr "希伯來語系Visual"
+msgstr "希伯來語系 (視覺順序)"
 
 #: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
 #: ../src/encoding.c:213
@@ -113,7 +112,7 @@ msgstr "亞美尼亞語系"
 
 #: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
 msgid "Chinese Traditional"
-msgstr "正（繁）體中文"
+msgstr "正 (繁) 體中文"
 
 #: ../src/encoding.c:160
 msgid "Cyrillic/Russian"
@@ -235,17 +234,17 @@ msgstr "清除捲動列(_O)"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "放大(_I)"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "縮小(_U)"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "還原縮放(_R)"
 
 #. 16
 #. 17
@@ -308,7 +307,7 @@ msgstr "命名分頁"
 msgid "translator-credits"
 msgstr ""
 "Fred Chien <cfsghost@gmail.com>\n"
-"Ming-Ting Wei <medicalwei@gmail.com>"
+"Ming-Ting Wei <mwei@lxde.org>"
 
 #: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
 #: ../data/lxterminal.desktop.in.h:1
@@ -391,76 +390,75 @@ msgstr "鈴聲可聞"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "黑色"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "紅色"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "希臘文"
+msgstr "綠色"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "棕色"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "藍色"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "洋紅色"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "青色"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "灰色"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "暗灰色"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "亮紅色"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "亮綠色"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "亮黃色"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "亮藍色"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "亮洋紅色"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "亮青色"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "白色"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "色盤"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "預設色盤"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -492,11 +490,11 @@ msgstr "隱藏滑鼠指標"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "預設視窗大小"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -564,15 +562,15 @@ msgstr "將分頁右移"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "放大"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "縮小"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "還原縮放"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
@@ -587,9 +585,8 @@ msgid "Use the command line"
 msgstr "使用命令列"
 
 #: ../data/lxterminal.desktop.in.h:4
-#, fuzzy
 msgid "console;command line;execute;"
-msgstr "console;command line;execute;"
+msgstr "console;command line;execute;終端機;終端;文字介面;執行;小黑窗;命令列"
 
 #~ msgid "_Quit"
 #~ msgstr "離開(_Q)"
