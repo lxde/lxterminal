@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # akdengi <kazancas@gmail.com>, 2009,2010
+# Alexey Loginov <alexl@mageia.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 15:56-0500\n"
-"PO-Revision-Date: 2014-12-01 20:00+0000\n"
-"Last-Translator: Andriy Grytsenko <andrej@rep.kiev.ua>\n"
+"PO-Revision-Date: 2016-12-06 23:23+0300\n"
+"Last-Translator: AlexL <alexl@mageia.org>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.7\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-POOTLE-MTIME: 1417464041.000000\n"
 
@@ -231,17 +231,17 @@ msgstr "_Очистить прокрутку"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "_Приблизить"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "_Отдалить"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_Сбросить масштаб"
 
 #. 16
 #. 17
@@ -306,6 +306,7 @@ msgstr ""
 "Alexander Vozhennikov (vodka_ploho@mail.ru)\n"
 "Alexande Golubev (ag@lhp.ru)\n"
 "Alexander Kazancev (kazancas@gmail.com)\n"
+"Alexey Loginov (alexl@mageia.org)\n"
 "Max Belov (mpui@tut.by)"
 
 #: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
@@ -314,7 +315,6 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:750
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Авторские права (C) 2008-2017"
 
@@ -325,11 +325,11 @@ msgstr "Эмулятор терминала проекта LXDE"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Вы собираетесь закрыть %d вкладок. Вы уверены что хотите продолжить?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Подтверждение закрытия"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -389,76 +389,75 @@ msgstr "Воспроизводить звуковой сигнал"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Чёрный"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Красный"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Греческая"
+msgstr "Зелёный"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Коричневый"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Синий"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Пурпурный"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Бирюзовый"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Серый"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Тёмно-серый"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Светло-красный"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Светло-зелёный"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Жёлтый"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Светло-синий"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Светло-пурпурный"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Светло-бирюзовый"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Белый"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Палитра"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Предустановки палитры"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -490,11 +489,11 @@ msgstr "Скрыть указатель мыши"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Размер окна по умолчанию"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -514,7 +513,7 @@ msgstr "Отключить горячие клавиши alt-n для перек
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Отключить подтверждение перед закрытием окна с несколькими вкладками"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -562,15 +561,15 @@ msgstr "Переместить вкладку вправо"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Приблизить"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Отдалить"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Сбросить масштаб"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
