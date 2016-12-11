@@ -1,14 +1,14 @@
 # Kazakh translation for lxterminal.
 # Copyright (C) 2012 The LXDE team
 # This file is distributed under the same license as the LXDE package.
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2012.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2012-2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 15:56-0500\n"
-"PO-Revision-Date: 2014-07-08 19:15+0000\n"
+"PO-Revision-Date: 2016-12-07 08:40+0500\n"
 "Last-Translator: system user <>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.7\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-POOTLE-MTIME: 1404846932.000000\n"
 
 #: ../src/encoding.c:124
@@ -191,13 +191,11 @@ msgstr "_Көмек"
 
 #. 4
 #: ../src/lxterminal.c:129
-#, fuzzy
 msgid "_New Window"
-msgstr "Жаңа _терезе"
+msgstr "Жаңа тере_зе"
 
 #. 5
 #: ../src/lxterminal.c:130
-#, fuzzy
 msgid "New T_ab"
 msgstr "Жаңа _бет"
 
@@ -209,9 +207,8 @@ msgstr "Бетті _жабу"
 
 #. 8
 #: ../src/lxterminal.c:133
-#, fuzzy
 msgid "Close _Window"
-msgstr "Жаңа _терезе"
+msgstr "_Терезені жабу"
 
 #. 9
 #: ../src/lxterminal.c:134 ../src/lxterminal.c:160
@@ -232,17 +229,17 @@ msgstr "Айна_лдыруды тазарту"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "Үлке_йту"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "_Кішірейту"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "Масштабты _тастау"
 
 #. 16
 #. 17
@@ -311,7 +308,6 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:750
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Copyright (C) 2008-2017"
 
@@ -322,11 +318,11 @@ msgstr "LXDE жобасы үшін терминал эмуляторы"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "%d бетті жабуды сұрадыңыз. Жалғастыруды шынымен қалайсыз ба?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Жабуды растау"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -386,76 +382,75 @@ msgstr "Дыбыс беру"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Қара"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Қызыл"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Грек"
+msgstr "Жасыл"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Қоңыр"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Көк"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Күлгін"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Көгілдір"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Сұр"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Күңгірт сұр"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Ақшыл қызыл"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Ақшыл жасыл"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Сары"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Ақшыл көк"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Ақшыл күлгін"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Ақшыл көгілдір"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Ақ"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Палитра"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Палитраны тастау"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -482,17 +477,16 @@ msgid "Hide Close buttons"
 msgstr "Жабу батырмаларын жасыру"
 
 #: ../data/lxterminal-preferences.glade.h:39
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Жабу батырмаларын жасыру"
+msgstr "Тышқан курсорын жасыру"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Терезенің үнсіз келісім өлшемі"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -512,77 +506,67 @@ msgstr "Беттер мен мәзірлер үшін Alt-n қолдануды �
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Бірнеше беті бар терезені жабу кезінде растау сұрауды сөндіру"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
 msgstr "Кеңейтілген"
 
 #: ../data/lxterminal-preferences.glade.h:48
-#, fuzzy
 msgid "New Window"
-msgstr "Жаңа _терезе"
+msgstr "Жаңа терезе"
 
 #: ../data/lxterminal-preferences.glade.h:49
-#, fuzzy
 msgid "New Tab"
-msgstr "Жаңа _бет"
+msgstr "Жаңа бет"
 
 #: ../data/lxterminal-preferences.glade.h:50
-#, fuzzy
 msgid "Close Tab"
-msgstr "Бетті _жабу"
+msgstr "Бетті жабу"
 
 #: ../data/lxterminal-preferences.glade.h:51
-#, fuzzy
 msgid "Close Window"
-msgstr "Жаңа _терезе"
+msgstr "Терезені жабу"
 
 #: ../data/lxterminal-preferences.glade.h:52
-#, fuzzy
 msgid "Copy"
-msgstr "_Сілтемені көшіру"
+msgstr "Көшіріп алу"
 
 #: ../data/lxterminal-preferences.glade.h:53
-#, fuzzy
 msgid "Paste"
-msgstr "Кірі_стіру"
+msgstr "Кірістіру"
 
 #: ../data/lxterminal-preferences.glade.h:55
-#, fuzzy
 msgid "Previous Tab"
-msgstr "Ал_дыңғы бет"
+msgstr "Алдыңғы бет"
 
 #: ../data/lxterminal-preferences.glade.h:56
-#, fuzzy
 msgid "Next Tab"
-msgstr "Ке_лесі бет"
+msgstr "Келесі бет"
 
 #: ../data/lxterminal-preferences.glade.h:57
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Бетті _солға жылжыту"
+msgstr "Бетті солға жылжыту"
 
 #: ../data/lxterminal-preferences.glade.h:58
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Бетті _оңға жылжыту"
+msgstr "Бетті оңға жылжыту"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Үлкейту"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Кішірейту"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Масштабты тастау"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "Жарлықтар"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -594,7 +578,7 @@ msgstr "Командалық жолды қолдану"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "консоль;командалық жол;жөнелту;орындау;console;terminal;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Шығу"
