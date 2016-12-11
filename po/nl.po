@@ -2,13 +2,13 @@
 # Copyright (C) the author of the lxterminal package.
 # This file is distributed under the same license as the 
 # lxterminal package.
-# Pjotr, 2011.
+# Pjotr, 2011-2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 15:56-0500\n"
-"PO-Revision-Date: 2015-01-15 14:52+0000\n"
+"PO-Revision-Date: 2016-12-11 13:05+0200\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -229,17 +229,17 @@ msgstr "Terugschuiven wissen"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "Ver_groten"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "Ver_kleinen"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "Vergrotingsfactor terugzetten op standaard"
 
 #. 16
 #. 17
@@ -321,11 +321,11 @@ msgstr "Terminalvenster voor het LXDE-project"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "U staat op het punt om %d tabbladen te sluiten. Weet u zeker dat u wilt doorgaan?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Bevestig sluiten"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -385,11 +385,11 @@ msgstr "Hoorbare klok"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Zwart"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Rood"
 
 #: ../data/lxterminal-preferences.glade.h:17
 #, fuzzy
@@ -398,63 +398,63 @@ msgstr "Grieks"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Bruin"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Blauw"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Scharlaken"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Turquoise"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Grijs"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Donkergrijs"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Helderrood"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Heldergroen"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Geel"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Helderblauw"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Helderscharlaken"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Helderturquoise"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Wit"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Palet"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Voorinstellingen van palet"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -486,11 +486,11 @@ msgstr "Verberg muispijl"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Standaardgrootte van venster"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -510,7 +510,7 @@ msgstr "Schakel het gebruik van Alt-n uit voor tabbladen en menu"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Schakel bevestiging uit voor sluiten van venster met meerdere tabbladen"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -558,15 +558,15 @@ msgstr "Verplaats tabblad naar rechts"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Vergroten"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Verkleinen"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Vergrotingsfactor terugzetten op standaard"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
@@ -585,10 +585,10 @@ msgid "console;command line;execute;"
 msgstr "terminal;opdrachtregel;uitvoeren;"
 
 #~ msgid "_Quit"
-#~ msgstr "終了(_Q)"
+#~ msgstr "_Afsluiten"
 
 #~ msgid "Disable using Alt-n to switch tabs"
-#~ msgstr "Alt-n によるタブの切り替えを無効にする"
+#~ msgstr "Schakel 'Alt n' uit voor het schakelen tussen tabbladen"
 
 #~ msgid "gtk-cancel"
 #~ msgstr "gtk-cancel"
@@ -603,7 +603,7 @@ msgstr "terminal;opdrachtregel;uitvoeren;"
 #~ msgstr "Allerlei"
 
 #~ msgid "Disable F10 shortcut for menu:"
-#~ msgstr "F10-sneltoets voor menu uitschakelen:"
+#~ msgstr "Schakel F10-sneltoets uit voor menu:"
 
 #~ msgid "General"
 #~ msgstr "Algemeen"
