@@ -1,22 +1,23 @@
 # Czech translations for lxterminal package.
 # Copyright (C) 2009 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-# Michal Várady <miko.vaji@gmail.com>, 2009.
 #
+# Michal Várady <miko.vaji@gmail.com>, 2009.
+# Pavel Fric <pavelfric@seznam.cz>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 15:56-0500\n"
-"PO-Revision-Date: 2015-03-26 21:33+0000\n"
+"PO-Revision-Date: 2016-12-11 06:25+0100\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
-"Language-Team: Czech\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Pootle 2.7\n"
+"X-Generator: Lokalize 1.5\n"
 "X-POOTLE-MTIME: 1427405596.000000\n"
 
 #: ../src/encoding.c:124
@@ -229,17 +230,17 @@ msgstr "Vyčistit ro_lování"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "_Přiblížit"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "_Oddálit"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_Výchozí přiblížení"
 
 #. 16
 #. 17
@@ -308,9 +309,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:750
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
-msgstr "Copyright (C) 2008-2017"
+msgstr "Autorské právo (C) 2008-2017"
 
 #: ../src/lxterminal.c:751
 msgid "Terminal emulator for LXDE project"
@@ -319,11 +319,11 @@ msgstr "Emulátor terminálu pro projekt LXDE"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Chystáte se zavřít %d karet. Opravdu chcete pokračovat?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Potvrdit zavření"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -383,76 +383,75 @@ msgstr "Akustický zvonek"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Černá"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Červená"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Řecké"
+msgstr "Zelená"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Hnědá"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Purpurová"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Modrozelená"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Šedá"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Tmavěšedá"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Světlečervená"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Světlezelená"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Žlutá"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Světlemodrá"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Světlepurpurová"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Světlemodrozelená"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Bílá"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Paleta"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Přednastavení palety"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -484,11 +483,11 @@ msgstr "Skrýt ukazatel myši"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Výchozí velikost okna"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -508,7 +507,7 @@ msgstr "Zakázat použití Alt-n pro záložky a menu"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Zakázat potvrzení před zavřením okna s více kartami"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -556,15 +555,15 @@ msgstr "Přesunout kartu vpravo"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Přiblížit"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Oddálit"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Výchozí přiblížení"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
