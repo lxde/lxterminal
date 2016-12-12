@@ -167,7 +167,7 @@ msgstr "Vietnamita"
 
 #: ../src/encoding.c:204
 msgid "Thai"
-msgstr "Thailandés"
+msgstr "Tailandès"
 
 #. 0
 #: ../src/lxterminal.c:125
@@ -192,12 +192,12 @@ msgstr "_Ajuda"
 #. 4
 #: ../src/lxterminal.c:129
 msgid "_New Window"
-msgstr "_Nova finestra"
+msgstr "Finestra _nova"
 
 #. 5
 #: ../src/lxterminal.c:130
 msgid "New T_ab"
-msgstr "Nova _pestanya"
+msgstr "Pes_tanya nova"
 
 #. 6
 #. 7
@@ -229,17 +229,17 @@ msgstr "Neteja el desplaçament e_nrere"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "Ampl_ia"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "Red_ueix"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_Restableix el zoom"
 
 #. 16
 #. 17
@@ -279,15 +279,15 @@ msgstr "Quant _a"
 
 #: ../src/lxterminal.c:156
 msgid "New _Window"
-msgstr "_Nova finestra"
+msgstr "Finestra _nova"
 
 #: ../src/lxterminal.c:157
 msgid "New _Tab"
-msgstr "_Nova pestanya"
+msgstr "Pestanya _nova"
 
 #: ../src/lxterminal.c:159
 msgid "Copy _URL"
-msgstr "Copia _URL"
+msgstr "Copia l'_URL"
 
 #: ../src/lxterminal.c:162
 msgid "Cl_ear scrollback"
@@ -295,7 +295,7 @@ msgstr "_Neteja el desplaçament"
 
 #: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
-msgstr "Anomena pestanya"
+msgstr "Anomena la pestanya"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:742
@@ -319,11 +319,11 @@ msgstr "Emulador de terminal del projecte LXDE"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Esteu a punt de tancar %d pestanyes. Segur que voleu continuar?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Confirmeu el tancament"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -335,11 +335,11 @@ msgstr "A baix"
 
 #: ../data/lxterminal-preferences.glade.h:3
 msgid "Left"
-msgstr "Esquerra"
+msgstr "A l'esquerra"
 
 #: ../data/lxterminal-preferences.glade.h:4
 msgid "Right"
-msgstr "Dreta"
+msgstr "A la dreta"
 
 #: ../data/lxterminal-preferences.glade.h:5
 msgid "LXTerminal Preferences"
@@ -347,7 +347,7 @@ msgstr "Preferències d'LXTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Terminal font"
-msgstr "Tipus de lletra terminal"
+msgstr "Tipus de lletra del terminal"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Background"
@@ -359,11 +359,11 @@ msgstr "Primer pla"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Allow bold font"
-msgstr "Permetre negreta"
+msgstr "Permet la negreta"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Cursor blink"
-msgstr "Parpalleig del cursor"
+msgstr "Parpelleig del cursor"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor style"
@@ -383,76 +383,76 @@ msgstr "Campana audible"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Negre"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Vermell"
 
 #: ../data/lxterminal-preferences.glade.h:17
 #, fuzzy
 msgid "Green"
-msgstr "Grec"
+msgstr "Verd"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Marró"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Blau"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Cian"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Gris"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Gris fosc"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Vermell brillant"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Verd brillant"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Groc"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Blau brillant"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Magenta brillant"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Cian brillant"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Blanc"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Paleta"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Preconfiguració de la paleta"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -460,7 +460,7 @@ msgstr "Estil"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Tab panel position"
-msgstr "Posició del panell de pestanyes"
+msgstr "Posició del plafó de pestanyes"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Scrollback lines"
@@ -468,11 +468,11 @@ msgstr "Línies de desplaçament enrere"
 
 #: ../data/lxterminal-preferences.glade.h:36
 msgid "Hide scroll bar"
-msgstr "Amaga la barra de desplaçament"
+msgstr "Amaga la barra del desplaçament"
 
 #: ../data/lxterminal-preferences.glade.h:37
 msgid "Hide menu bar"
-msgstr "Amaga la barra de menú"
+msgstr "Amaga la barra del menú"
 
 #: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide Close buttons"
@@ -484,15 +484,15 @@ msgstr "Amaga el cursor del ratolí"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Mida de la finestra per defecte"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
-msgstr "Monitor"
+msgstr "Pantalla"
 
 #: ../data/lxterminal-preferences.glade.h:43
 msgid "Select-by-word characters"
@@ -500,16 +500,16 @@ msgstr "Caràcters de selecció per paraula"
 
 #: ../data/lxterminal-preferences.glade.h:44
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Deshabilita les dreceres de teclat del menú (F10 per defecte)"
+msgstr "Inhabilita les dreceres de teclat del menú (F10 per defecte)"
 
 #: ../data/lxterminal-preferences.glade.h:45
 #, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Deshabilita el canvi de pestanyes amb Alt-n"
+msgstr "Inhabilita el canvi de pestanyes amb Alt-n"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Inhabilita la confirmació abans de tancar una finestra amb més d'una pestanya"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -533,7 +533,7 @@ msgstr "Tanca la finestra"
 
 #: ../data/lxterminal-preferences.glade.h:52
 msgid "Copy"
-msgstr ""
+msgstr "Copia"
 
 #: ../data/lxterminal-preferences.glade.h:53
 msgid "Paste"
@@ -549,7 +549,7 @@ msgstr "Pestanya següent"
 
 #: ../data/lxterminal-preferences.glade.h:57
 msgid "Move Tab Left"
-msgstr "Vés a la pestanya de l'esquerra"
+msgstr "Vés a la pestanya esquerra"
 
 #: ../data/lxterminal-preferences.glade.h:58
 #, fuzzy
@@ -558,19 +558,19 @@ msgstr "Vés a la pestanya dreta"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Amplia"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Redueix"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Restableix el zoom"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "Dreceres"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -582,21 +582,20 @@ msgstr "Utilitza la línia d'ordres"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "consola; línia d'ordres; executa"
 
 #~ msgid "_Quit"
 #~ msgstr "_Surt"
 
 #~ msgid "gtk-cancel"
-#~ msgstr "gtk-cancel"
+#~ msgstr "gtk-cancel·la"
 
 #~ msgid "gtk-ok"
-#~ msgstr "gtk-ok"
+#~ msgstr "gtk-d'acord"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr ""
-#~ "S'ha produït un error en arrencar el navegador web. La ordre ha estat `"
-#~ "%s'\n"
+#~ "S'ha produït un error en arrencar el navegador web. L'ordre ha estat "%s".\n"
 
 #~ msgid "Misc"
 #~ msgstr "Misc"
