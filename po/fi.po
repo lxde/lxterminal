@@ -2,21 +2,22 @@
 # Copyright (C) 2008
 # This file is distributed under the same license as the PACKAGE package.
 # Elias Julkunen <elias.julkunen@gmail.com>, 2008.
+# Juhani Numminen <juhaninumminen0@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 15:56-0500\n"
-"PO-Revision-Date: 2015-06-10 10:45+0000\n"
+"PO-Revision-Date: 2016-12-13 21:47+0200\n"
 "Last-Translator: Juhani Numminen <juhaninumminen0@gmail.com>\n"
-"Language-Team: Finnish <laatu@lokalisointi.org>\n"
+"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7\n"
+"X-Generator: Gtranslator 2.91.7\n"
 "X-POOTLE-MTIME: 1433933143.000000\n"
 
 #: ../src/encoding.c:124
@@ -229,17 +230,17 @@ msgstr "T_yhjennä rivihistoria"
 #. 13
 #: ../src/lxterminal.c:138
 msgid "Zoom _In"
-msgstr ""
+msgstr "_Lähennä"
 
 #. 14
 #: ../src/lxterminal.c:139
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "L_oitonna"
 
 #. 15
 #: ../src/lxterminal.c:140
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_Palauta suurennus"
 
 #. 16
 #. 17
@@ -302,7 +303,7 @@ msgstr "Nimeä välilehti"
 msgid "translator-credits"
 msgstr ""
 "Elias Julkunen <elias.julkunen@gmail.com>\n"
-"Juhani Numminen <juhaninumminen0@gmail.com>, 2015"
+"Juhani Numminen <juhaninumminen0@gmail.com>"
 
 #: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
 #: ../data/lxterminal.desktop.in.h:1
@@ -310,9 +311,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:750
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
-msgstr "Copyright © 2008–2014"
+msgstr "Copyright © 2008–2017"
 
 #: ../src/lxterminal.c:751
 msgid "Terminal emulator for LXDE project"
@@ -321,11 +321,11 @@ msgstr "LXDE-projektin pääteohjelma"
 #: ../src/lxterminal.c:816
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Olet sulkemassa %d välilehteä. Suljetaanko välilehdet?"
 
 #: ../src/lxterminal.c:817
 msgid "Confirm close"
-msgstr ""
+msgstr "Vahvista sulkeminen"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -365,11 +365,11 @@ msgstr "Salli lihavointi"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Cursor blink"
-msgstr "Vilkuta osoitinta"
+msgstr "Vilkkuva osoitin"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor style"
-msgstr "Osoittimen tyyli"
+msgstr "Osoittimen muoto"
 
 #: ../data/lxterminal-preferences.glade.h:12
 msgid "Block"
@@ -385,76 +385,75 @@ msgstr "Äänimerkki"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Musta"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Punainen"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Kreikkalainen"
+msgstr "Vihreä"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Ruskea"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Sininen"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Syaani"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Harmaa"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Tumman harmaa"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Kirkkaan punainen"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Kirkkaan vihreä"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Keltainen"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Kirkkaan sininen"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Kirkkaan magenta"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Kirkkaan syaani"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Valkoinen"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Valipaletti"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Paletin esiasetus"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -486,11 +485,11 @@ msgstr "Piilota hiiren osoitin"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Ikkunan oletuskoko"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -506,11 +505,11 @@ msgstr "Älä käytä valikon pikanäppäintä (oletuksena F10)"
 
 #: ../data/lxterminal-preferences.glade.h:45
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Älä käytä Alt-n pikanäppäintä välilehden vaihtamiseen"
+msgstr "Älä käytä pikanäppäintä Alt-n välilehden vaihtamiseen"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Älä varoita ennen usean välilehden sulkemista"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -558,15 +557,15 @@ msgstr "Siirrä välilehteä oikealle"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Lähennä"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Loitonna"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Palauta suurennus"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
@@ -583,8 +582,8 @@ msgstr "Käytä komentoriviä"
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr ""
-"konsoli;pääte;emulaattori;komentorivi;suorita;aja;console;command line;"
-"execute;"
+"konsoli;pääte;terminaali;komentorivi;komentotulkki;suorita;aja;console;"
+"command line;execute;"
 
 #~ msgid "_Quit"
 #~ msgstr "_Poistu"
