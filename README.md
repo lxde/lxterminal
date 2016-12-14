@@ -10,8 +10,8 @@ instances of the terminal are sharing a single process.
 ### Dependencies
 
 This dependency is listed as the package name used in Debian.  If your
-distribution is not Debian or its derivatives, you could find equivalents for
-your target distribution.
+distribution is neither Debian nor its derivatives, you could find equivalents
+for your target distribution.
 
 Basic requirements for building:
 * libglib2.0-dev
@@ -31,8 +31,8 @@ You may try:
 
 ```
 # Install tools and build dependencies
-apt install git
-apt build-deps lxterminal
+sudo apt install git xsltproc docbook-xml docbook-xsl
+sudo apt build-dep lxterminal
 
 # Get the source code from git
 git clone https://github.com/lxde/lxterminal.git
@@ -40,7 +40,7 @@ cd lxterminal
 
 # Build and install
 ./autogen.sh
-./configure
+./configure --enable-man
 make
 sudo make install
 ```
