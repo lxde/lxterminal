@@ -595,7 +595,7 @@ msgstr "consola; línia d'ordres; executa"
 
 #~ msgid "Failed to launch the web browser. The command was `%s'\n"
 #~ msgstr ""
-#~ "S'ha produït un error en arrencar el navegador web. L'ordre ha estat "%s".\n"
+#~ "S'ha produït un error en arrencar el navegador web. L'ordre ha estat `%s'.\n"
 
 #~ msgid "Misc"
 #~ msgstr "Misc"
