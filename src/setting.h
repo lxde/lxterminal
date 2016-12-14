@@ -25,6 +25,8 @@
 #include <vte/vte.h>
 
 #define GENERAL_GROUP "general"
+#define WIDTH "width"
+#define HEIGHT "height"
 #define FONT_NAME "fontname"
 #define FG_COLOR "fgcolor"
 #define BG_COLOR "bgcolor"
@@ -83,6 +85,8 @@
 typedef struct _setting {
 
     GKeyFile * keyfile;         /* Pointer to GKeyFile containing settings */
+    gint width;                 /* Window width */
+    gint height;                /* Window height */
     char * font_name;           /* Font name */
 #if VTE_CHECK_VERSION (0, 38, 0)
     GdkRGBA background_color;      /* Background color */

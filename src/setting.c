@@ -91,6 +91,8 @@ void print_setting()
 {
     g_return_if_fail (setting != NULL);
 
+    printf("Window width: %i\n", setting->width);
+    printf("Window height: %i\n", setting->height);
     printf("Font name: %s\n", setting->font_name);
 #if VTE_CHECK_VERSION (0, 38, 0)
     gchar * p = gdk_rgba_to_string(&setting->background_color);
@@ -160,6 +162,9 @@ void save_setting()
     //print_setting();
     
     /* Push settings to GKeyFile. */
+    gtk_window_get_size(GTK_WINDOW(terminal->window), &setting->width, &setting->height);
+    g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, WIDTH, setting->width);
+    g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, HEIGHT, setting->height);
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, FONT_NAME, setting->font_name);
 #if VTE_CHECK_VERSION (0, 38, 0)
     gchar * p = gdk_rgba_to_string(&setting->background_color);
@@ -259,6 +264,8 @@ Setting * copy_setting(Setting * setting)
     Setting * new_setting = g_slice_new0(Setting);
     memcpy(new_setting, setting, sizeof(Setting));
 
+    new_setting->width = g_strdup(setting->width);
+    new_setting->height = g_strdup(setting->height);
     new_setting->font_name = g_strdup(setting->font_name);
     new_setting->tab_position = g_strdup(setting->tab_position);
     new_setting->word_selection_characters = g_strdup(setting->word_selection_characters);
@@ -344,6 +351,8 @@ Setting * load_setting()
     if ((g_file_test(config_path, G_FILE_TEST_EXISTS))
     && (g_key_file_load_from_file(setting->keyfile, config_path, G_KEY_FILE_KEEP_COMMENTS | G_KEY_FILE_KEEP_TRANSLATIONS, &error)))
     {
+        setting->width = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, WIDTH, &error);
+        setting->height = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, HEIGHT, &error);
         setting->font_name = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, FONT_NAME, NULL);
         char * p = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, BG_COLOR, NULL);
         if (p != NULL)
