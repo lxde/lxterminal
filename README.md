@@ -1,27 +1,51 @@
-# LXterminal
+# LXTerminal
 
-LXterminal is a VTE-based terminal emulator with support for multiple tabs. 
-It is completely desktop-independent and does not have any unnecessary 
-dependencies. In order to reduce memory usage and increase the performance 
-all instances of the terminal are sharing a single process.
+LXTerminal is a VTE-based terminal emulator with support for multiple tabs.  It
+is completely desktop-independent and does not have any unnecessary
+dependencies. In order to reduce memory usage and increase the performance all
+instances of the terminal are sharing a single process.
 
-- Add shortcut tab to preference
-- Single instance setting for all windows
-- Load menubar from menu.ui
-- Extract shortcut from ui_manager after loading GtkActionEntry
-- Smart copy - may set <CTRL>C for copy - test selected symbol, if selected - copy, otherwise send key to terminal
-- Update .po for Shortcut Prefernces tab, update ru.po localization.
+## Building and installation
 
-##  Install
+### Dependencies
 
-See INSTALL, and if you want to build LXterminal on ubuntu, you may try
+This dependency is listed as the package name used in Debian.  If your
+distribution is not Debian or its derivatives, you could find equivalents for
+your target distribution.
+
+Basic requirements for building:
+* libglib2.0-dev
+* libgtk2.0-dev
+* libvte-dev
+* autotools-dev
+* intltool
+
+For generating man pages (`./configure --enable-man`):
+* xsltproc
+* docbool-xml
+* docbook-xsl
+
+### Building on Debian, Ubuntu or their derivatives from git
+
+You may try:
 
 ```
-apt-get install autoconf xsltproc docbook-xml docbook-xsl  git
+# Install tools and build dependencies
+apt install git
+apt build-deps lxterminal
+
+# Get the source code from git
 git clone https://github.com/lxde/lxterminal.git
 cd lxterminal
-apt-get build-dep lxterminal
+
+# Build and install
 ./autogen.sh
-./configure --prefix=/usr --enable-man
-make && sudo make install
+./configure
+make
+sudo make install
 ```
+
+Note that if you get the message `E: You must put some 'source' URIs in your
+sources.list`, it means you need to add `deb-src` URI into
+`/etc/apt/sources.list` to find the build dependencies.  Try duplicating the
+URI of the main repository and replace `deb` with `deb-src`.
