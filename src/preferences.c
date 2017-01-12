@@ -224,37 +224,48 @@ static gboolean preferences_dialog_generic_focus_out_event(GtkWidget * widget, G
     return FALSE;
 }
 
-/* Specific "focus-out-event" handler for shortcut GtkEntry events */
-static gboolean preferences_dialog_shortcut_focus_out_event(GtkWidget * widget, GdkEventFocus * event, gchar * s)
+/* Specific "key-press-event" handler for shortcut GtkEntry events */
+static gboolean preferences_dialog_shortcut_key_press_event(GtkWidget * widget, GdkEventKey * ekey, gchar ** s)
 {
-    guint key = 0;
-    GdkModifierType mods = 0;
-    const gchar * cur = gtk_entry_get_text(GTK_ENTRY(widget));
+    guint key = ekey->keyval;
+    guint mod = ekey->state;
+    gchar * lbl;
     GList * sib;
 
-    if(g_strcmp0(s, cur) == 0)
-        /* Nothing changed. */
+    /* Prevent Tab being used as one of the keys, and return false if doing so. */
+    if (key == GDK_KEY_Tab || key == GDK_KEY_ISO_Left_Tab) {
         return FALSE;
+    }
 
-    /* Look for dupplicate accelerator. */
-    for(sib = gtk_container_get_children(GTK_CONTAINER(gtk_widget_get_parent(widget))); sib; sib = sib->next)
-	if(GTK_IS_ENTRY(sib->data) && GTK_WIDGET(sib->data) != widget && !g_strcmp0(cur, gtk_entry_get_text(GTK_ENTRY(sib->data))))
-	{
-	    gtk_entry_set_text(GTK_ENTRY(widget), s);
-	    return FALSE;
+    lbl = gtk_accelerator_get_label(key, mod);
+
+    /* Look for duplicate accelerator. */
+    for(sib = gtk_container_get_children(GTK_CONTAINER(gtk_widget_get_parent(widget))); sib; sib = sib->next) {
+	if(GTK_IS_ENTRY(sib->data) && GTK_WIDGET(sib->data) != widget && !g_strcmp0(lbl, gtk_entry_get_text(GTK_ENTRY(sib->data)))) {
+            goto free_lbl;
 	}
-
-    gtk_accelerator_parse(cur, &key, &mods);
+    }
 
     /* Make sure accelerator is valid. */
-    if( ! (key == 0 && mods == 0) && gtk_accelerator_valid(key, mods))
-    {
-        g_free(s);
-        s = g_strdup(cur);
-    } else {
-        gtk_entry_set_text(GTK_ENTRY(widget), s);
+    if (!gtk_accelerator_valid(key, mod)) {
+        goto free_lbl;
     }
-    return FALSE;
+
+    g_free(*s);
+    *s = gtk_accelerator_name(key, mod);
+    gtk_entry_set_text(GTK_ENTRY(widget), lbl);
+
+free_lbl:
+    g_free(lbl);
+    return TRUE;
+}
+
+gchar * accel_get_label_from_name(const gchar * name)
+{
+	guint key;
+	GdkModifierType mods;
+	gtk_accelerator_parse(name, &key, &mods);
+	return gtk_accelerator_get_label(key, mods);
 }
 
 /* Initialize and display the preferences dialog. */
@@ -416,77 +427,77 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->disable_confirm);
     g_signal_connect(G_OBJECT(w), "toggled", 
         G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->disable_confirm);
-    
-	/* Shortcuts */
+
+    /* Shortcuts */
     w = GTK_WIDGET(gtk_builder_get_object(builder, NEW_WINDOW_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->new_window_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->new_window_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->new_window_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->new_window_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, NEW_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->new_tab_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->new_tab_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->new_tab_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->new_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, CLOSE_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->close_tab_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->close_tab_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->close_tab_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->close_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, CLOSE_WINDOW_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->close_window_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->close_window_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->close_window_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->close_window_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, COPY_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->copy_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->copy_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->copy_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->copy_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, PASTE_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->paste_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->paste_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->paste_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->paste_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, NAME_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->name_tab_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->name_tab_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->name_tab_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->name_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, PREVIOUS_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->previous_tab_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->previous_tab_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->previous_tab_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->previous_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, NEXT_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->next_tab_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->next_tab_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->next_tab_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->next_tab_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, MOVE_TAB_LEFT_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->move_tab_left_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->move_tab_left_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->move_tab_left_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->move_tab_left_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, MOVE_TAB_RIGHT_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->move_tab_right_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->move_tab_right_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->move_tab_right_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->move_tab_right_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_IN_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->zoom_in_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->zoom_in_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->zoom_in_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->zoom_in_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_OUT_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->zoom_out_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->zoom_out_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->zoom_out_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->zoom_out_accel);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_RESET_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), setting->zoom_reset_accel);
-    g_signal_connect(G_OBJECT(w), "focus-out-event", 
-        G_CALLBACK(preferences_dialog_shortcut_focus_out_event), setting->zoom_reset_accel);
+    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->zoom_reset_accel));
+    g_signal_connect(G_OBJECT(w), "key-press-event",
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->zoom_reset_accel);
 
     gtk_window_set_modal(GTK_WINDOW(GTK_DIALOG(dialog)), TRUE);
     gtk_window_set_transient_for(GTK_WINDOW(GTK_DIALOG(dialog)), 
