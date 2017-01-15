@@ -229,7 +229,7 @@ static gboolean preferences_dialog_generic_focus_out_event(GtkWidget * widget, G
 static gboolean preferences_dialog_shortcut_key_press_event(GtkWidget * widget, GdkEventKey * ekey, gchar ** s)
 {
     guint key = ekey->keyval;
-    guint mod = ekey->state;
+    guint mod = ekey->state & gtk_accelerator_get_default_mod_mask();
     gchar * lbl;
     GList * sib;
 
@@ -261,12 +261,15 @@ free_lbl:
     return TRUE;
 }
 
-gchar * accel_get_label_from_name(const gchar * name)
+void accel_set_label(const gchar * name, GtkWidget * w)
 {
-	guint key;
-	GdkModifierType mods;
-	gtk_accelerator_parse(name, &key, &mods);
-	return gtk_accelerator_get_label(key, mods);
+    guint key;
+    GdkModifierType mods;
+    gchar * label;
+    gtk_accelerator_parse(name, &key, &mods);
+    label = gtk_accelerator_get_label(key, mods);
+    gtk_entry_set_text(GTK_ENTRY(w), label);
+    g_free(label);
 }
 
 /* Initialize and display the preferences dialog. */
@@ -429,75 +432,26 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
         G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->disable_confirm);
 
     /* Shortcuts */
-    w = GTK_WIDGET(gtk_builder_get_object(builder, NEW_WINDOW_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->new_window_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->new_window_accel);
+#define PREF_SETUP_SHORTCUT(OBJ, VAR) \
+    w = GTK_WIDGET(gtk_builder_get_object(builder, OBJ)); \
+    accel_set_label(VAR, w); \
+    g_signal_connect(G_OBJECT(w), "key-press-event", \
+        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &VAR); \
 
-    w = GTK_WIDGET(gtk_builder_get_object(builder, NEW_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->new_tab_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->new_tab_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, CLOSE_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->close_tab_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->close_tab_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, CLOSE_WINDOW_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->close_window_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->close_window_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, COPY_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->copy_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->copy_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, PASTE_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->paste_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->paste_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, NAME_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->name_tab_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->name_tab_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, PREVIOUS_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->previous_tab_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->previous_tab_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, NEXT_TAB_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->next_tab_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->next_tab_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, MOVE_TAB_LEFT_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->move_tab_left_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->move_tab_left_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, MOVE_TAB_RIGHT_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->move_tab_right_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->move_tab_right_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_IN_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->zoom_in_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->zoom_in_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_OUT_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->zoom_out_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->zoom_out_accel);
-
-    w = GTK_WIDGET(gtk_builder_get_object(builder, ZOOM_RESET_ACCEL));
-    gtk_entry_set_text(GTK_ENTRY(w), accel_get_label_from_name(setting->zoom_reset_accel));
-    g_signal_connect(G_OBJECT(w), "key-press-event",
-        G_CALLBACK(preferences_dialog_shortcut_key_press_event), &setting->zoom_reset_accel);
+    PREF_SETUP_SHORTCUT(NEW_WINDOW_ACCEL, setting->new_window_accel)
+    PREF_SETUP_SHORTCUT(NEW_TAB_ACCEL, setting->new_tab_accel)
+    PREF_SETUP_SHORTCUT(CLOSE_TAB_ACCEL, setting->close_tab_accel)
+    PREF_SETUP_SHORTCUT(CLOSE_WINDOW_ACCEL, setting->close_window_accel)
+    PREF_SETUP_SHORTCUT(COPY_ACCEL, setting->copy_accel)
+    PREF_SETUP_SHORTCUT(PASTE_ACCEL, setting->paste_accel)
+    PREF_SETUP_SHORTCUT(NAME_TAB_ACCEL, setting->name_tab_accel)
+    PREF_SETUP_SHORTCUT(PREVIOUS_TAB_ACCEL, setting->previous_tab_accel)
+    PREF_SETUP_SHORTCUT(NEXT_TAB_ACCEL, setting->next_tab_accel)
+    PREF_SETUP_SHORTCUT(MOVE_TAB_LEFT_ACCEL, setting->move_tab_left_accel)
+    PREF_SETUP_SHORTCUT(MOVE_TAB_RIGHT_ACCEL, setting->move_tab_right_accel)
+    PREF_SETUP_SHORTCUT(ZOOM_IN_ACCEL, setting->zoom_in_accel)
+    PREF_SETUP_SHORTCUT(ZOOM_OUT_ACCEL, setting->zoom_out_accel)
+    PREF_SETUP_SHORTCUT(ZOOM_RESET_ACCEL, setting->zoom_reset_accel)
 
     gtk_window_set_modal(GTK_WINDOW(GTK_DIALOG(dialog)), TRUE);
     gtk_window_set_transient_for(GTK_WINDOW(GTK_DIALOG(dialog)), 
