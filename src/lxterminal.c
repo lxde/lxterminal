@@ -39,9 +39,6 @@
 #include "preferences.h"
 #include "unixsocket.h"
 
-/* X accessor. */
-static void gdk_window_get_geometry_hints(GdkWindow * window, GdkGeometry * geometry, GdkWindowHints * geometry_mask);
-
 /* Utilities. */
 static void terminal_get_border(Term * term, GtkBorder * border);
 static void terminal_save_size(LXTerminal * terminal);
@@ -915,7 +912,7 @@ static gchar * terminal_get_match_at(VteTerminal * vte, Term * term, GdkEventBut
 {
 #if VTE_CHECK_VERSION (0, 38, 0)
     gint tag;
-    return vte_terminal_match_check_event(vte, event, &tag);
+    return vte_terminal_match_check_event(vte, (GdkEvent *) event, &tag);
 #else
     /* steal from tilda-0.09.6/src/tilda_terminal.c:743
      * See if the terminal has matched the regular expression. */
