@@ -94,7 +94,7 @@ typedef struct _setting {
     GdkColor foreground_color;      /* Foreground color */
     GdkColor palette_color[16];      /* Palette colors */
 #endif
-    char * color_preset;        /* Color preset name */
+    const char * color_preset;        /* Color preset name */
     gboolean disallow_bold;     /* Disallow bolding by VTE */
     gboolean cursor_blink;      /* True if cursor blinks */
     gboolean cursor_underline;      /* True if underline cursor; false if block cursor */
@@ -134,10 +134,10 @@ typedef struct _setting {
 
 /* Colors use char for Gdk2 and Gdk3 compability and less duplication */
 typedef struct _colorpreset {
-    char * name;
-    char * background_color;
-    char * foreground_color;
-    char * palette[16];
+    const char * name;
+    const char * background_color;
+    const char * foreground_color;
+    const char * palette[16];
 } ColorPreset;
 
 extern Setting * get_setting();

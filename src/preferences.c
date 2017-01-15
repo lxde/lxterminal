@@ -261,7 +261,7 @@ free_lbl:
     return TRUE;
 }
 
-void accel_set_label(const gchar * name, GtkWidget * w)
+static void accel_set_label(const gchar * name, GtkWidget * w)
 {
     guint key;
     GdkModifierType mods;

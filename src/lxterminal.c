@@ -251,7 +251,7 @@ static gchar * terminal_get_current_dir(LXTerminal * terminal)
 static const gchar * terminal_get_preferred_shell () {
     const gchar *shell;
     struct passwd *pw;
-    gchar *fallback_shell = "/bin/sh";
+    const gchar *fallback_shell = "/bin/sh";
 
     shell = g_getenv("SHELL");
     if (geteuid() == getuid() && getegid() == getgid()) {
@@ -548,23 +548,21 @@ static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * te
 {
     Term * term;
     gint current = gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook));
-    if (current != -1)
-    {
-        /* Search for the Term structure corresponding to the current tab. */
-        guint i;
-        for (i = 0; i < terminal->terms->len; i++)
-        {
-            term = g_ptr_array_index(terminal->terms, i);
-            if (term->index == current)
-            {
-                break;
-            }
-        }
-    }
-    else
-    {
+    if (current == -1 || terminal->terms->len <= 0) {
         return;
     }
+
+    /* Search for the Term structure corresponding to the current tab. */
+    guint i;
+    for (i = 0; i < terminal->terms->len; i++)
+    {
+        term = g_ptr_array_index(terminal->terms, i);
+        if (term->index == current)
+        {
+            break;
+        }
+    }
+
     GtkWidget * dialog = gtk_dialog_new_with_buttons(
         _("Name Tab"),
         GTK_WINDOW(terminal->window),
@@ -683,6 +681,10 @@ static void terminal_zoom(LXTerminal * terminal)
     Term *term;
     guint i;
     terminal_save_size(terminal);
+
+    if (terminal->terms->len <= 0) {
+        return;
+    }
 
     for (i = 0; i < terminal->terms->len; i++) {
         term = g_ptr_array_index(terminal->terms, i);
@@ -968,18 +970,18 @@ static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term)
     LXTerminal * terminal = term->parent;
     Term * activeterm = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
     /* If the activity is in a background tab, set its label to bold */
-    if ( activeterm != term )
-        if (term->user_specified_label)
-        {
+    if ( activeterm != term ) {
+        if (term->user_specified_label) {
             const gchar *currentcustomtitle=gtk_label_get_text(GTK_LABEL(term->label));
             /* Only add an asterisk if there isn't none already */
             if (!g_str_has_prefix(currentcustomtitle,"* "))
                 currentcustomtitle=g_strconcat("* ",currentcustomtitle,NULL);
 
             gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>",currentcustomtitle,"</b>",NULL));
-        }
-        else
+        } else {
             gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>* ",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
+	}
+    }
 }
 
 /* Handler for "button-press-event" signal on VTE. */
