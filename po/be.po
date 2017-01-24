@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
+"POT-Creation-Date: 2017-01-24 12:14+0800\n"
 "PO-Revision-Date: 2014-07-08 19:15+0000\n"
 "Last-Translator: system user <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,314 +20,172 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1404846909.000000\n"
 
-#: ../src/encoding.c:124
-msgid "West European"
-msgstr "Заходнееўрапейская"
-
-#: ../src/encoding.c:125
-msgid "East European"
-msgstr "Усходнееўрапейская"
-
-#: ../src/encoding.c:126
-msgid "East Asian"
-msgstr "Заходнеазіяцкая"
-
-#: ../src/encoding.c:127
-msgid "SE & SW Asian"
-msgstr "Паўднёваўсходняя і паўднёвазаходняя азіяцкія"
-
-#: ../src/encoding.c:128
-msgid "Middle Eastern"
-msgstr "Бліжнеўсходняя"
-
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
-msgid "Unicode"
-msgstr "Унікод"
-
-#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
-msgid "Western"
-msgstr "Заходняя"
-
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
-#: ../src/encoding.c:208
-msgid "Central European"
-msgstr "Цэнтральнаеўрапейская"
-
-#: ../src/encoding.c:137
-msgid "South European"
-msgstr "Паўднёваеўрапейская"
-
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
-msgid "Baltic"
-msgstr "Балтыйская"
-
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
-msgid "Cyrillic"
-msgstr "Кірыліца"
-
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
-#: ../src/encoding.c:214
-msgid "Arabic"
-msgstr "Арабская"
-
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Greek"
-msgstr "Грэчаская"
-
-#: ../src/encoding.c:142
-msgid "Hebrew Visual"
-msgstr "Іўрыт (візуальны)"
-
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
-#: ../src/encoding.c:213
-msgid "Hebrew"
-msgstr "Іўрыт"
-
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
-#: ../src/encoding.c:212
-msgid "Turkish"
-msgstr "Турэцкая"
-
-#: ../src/encoding.c:145
-msgid "Nordic"
-msgstr "Скандынаўская"
-
-#: ../src/encoding.c:147
-msgid "Celtic"
-msgstr "Кельцкая"
-
-#: ../src/encoding.c:149 ../src/encoding.c:198
-msgid "Romanian"
-msgstr "Румынская"
-
-#: ../src/encoding.c:157
-msgid "Armenian"
-msgstr "Армянская"
-
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
-msgid "Chinese Traditional"
-msgstr "Кітайская традыцыйная"
-
-#: ../src/encoding.c:160
-msgid "Cyrillic/Russian"
-msgstr "Кірыліца/Расія"
-
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
-msgid "Japanese"
-msgstr "Японская"
-
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
-#: ../src/encoding.c:205
-msgid "Korean"
-msgstr "Карэйская"
-
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
-#: ../src/encoding.c:170
-msgid "Chinese Simplified"
-msgstr "Кітайская спрошчаная"
-
-#: ../src/encoding.c:169
-msgid "Georgian"
-msgstr "Грузінская"
-
-#: ../src/encoding.c:184 ../src/encoding.c:200
-msgid "Cyrillic/Ukrainian"
-msgstr "Кірыліца/Украіна"
-
-#: ../src/encoding.c:188
-msgid "Croatian"
-msgstr "Харвацкая"
-
-#: ../src/encoding.c:190
-msgid "Hindi"
-msgstr "Хіндзі"
-
-#: ../src/encoding.c:191
-msgid "Farsi"
-msgstr "Фарсі"
-
-#: ../src/encoding.c:193
-msgid "Gujarati"
-msgstr "Гуяраці"
-
-#: ../src/encoding.c:194
-msgid "Gurmukhi"
-msgstr "Гурмукі"
-
-#: ../src/encoding.c:196
-msgid "Icelandic"
-msgstr "Ісландская"
-
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
-msgid "Vietnamese"
-msgstr "В'етнамская"
-
-#: ../src/encoding.c:204
-msgid "Thai"
-msgstr "Тайская"
-
 #. 0
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "Ф_айл"
 
 #. 1
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "_Праца"
 
 #. 2
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "_Карткі"
 
 #. 3
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "_Даведка"
 
 #. 4
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:125
 #, fuzzy
 msgid "_New Window"
 msgstr "Новае _вакно"
 
 #. 5
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:126
 #, fuzzy
 msgid "New T_ab"
 msgstr "Новая картка"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "_Закрыць картку"
 
 #. 8
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:129
 #, fuzzy
 msgid "Close _Window"
 msgstr "Новае _вакно"
 
 #. 9
-#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 msgid "Cop_y"
 msgstr "_Капіраваць"
 
 #. 10
-#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "_Уставіць"
 
 #. 11
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
 msgstr "Ачысціць гісторыю выва_ду"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:134
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 msgid "Preference_s"
 msgstr "Настаўленн_і"
 
 #. 18
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 msgid "Na_me Tab"
 msgstr "Назвац_ь картку"
 
 #. 19
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 msgid "Pre_vious Tab"
 msgstr "П_апярэдняя картка"
 
 #. 20
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 msgid "Ne_xt Tab"
 msgstr "На_ступная картка"
 
 #. 21
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr "Перамясціць картку ў_лева"
 
 #. 22
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr "Перамясціць картку ў_права"
 
 #. 23
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "_Пра праграму"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:152
 msgid "New _Window"
 msgstr "Новае _вакно"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:153
 msgid "New _Tab"
 msgstr "Новая картка"
 
-#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr "Капіраваць _URL"
 
-#: ../src/lxterminal.c:162
+#: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
 msgstr "С_кінуць гісторыю вываду"
 
-#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "Назваць картку"
 
+#: ../src/lxterminal.c:570
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxterminal.c:571
+msgid "_OK"
+msgstr ""
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:742
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
 "Анік Кіна <son_of_the_photographer@tut.by>, 2010\n"
 "Мікалай Удодаў <crom-a@tut.by>, 2011, 2012."
 
-#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
+#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:748
 #, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Аўтарскае права (C) 2008-2017"
 
-#: ../src/lxterminal.c:751
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "Эмулятар тэрмінала для праекта LXDE"
 
-#: ../src/lxterminal.c:816
+#: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr ""
 
-#: ../src/lxterminal.c:817
+#: ../src/lxterminal.c:815
 msgid "Confirm close"
 msgstr ""
 
@@ -598,6 +456,111 @@ msgstr "Эмулятар тэрмінала"
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr ""
+
+#~ msgid "West European"
+#~ msgstr "Заходнееўрапейская"
+
+#~ msgid "East European"
+#~ msgstr "Усходнееўрапейская"
+
+#~ msgid "East Asian"
+#~ msgstr "Заходнеазіяцкая"
+
+#~ msgid "SE & SW Asian"
+#~ msgstr "Паўднёваўсходняя і паўднёвазаходняя азіяцкія"
+
+#~ msgid "Middle Eastern"
+#~ msgstr "Бліжнеўсходняя"
+
+#~ msgid "Unicode"
+#~ msgstr "Унікод"
+
+#~ msgid "Western"
+#~ msgstr "Заходняя"
+
+#~ msgid "Central European"
+#~ msgstr "Цэнтральнаеўрапейская"
+
+#~ msgid "South European"
+#~ msgstr "Паўднёваеўрапейская"
+
+#~ msgid "Baltic"
+#~ msgstr "Балтыйская"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Кірыліца"
+
+#~ msgid "Arabic"
+#~ msgstr "Арабская"
+
+#~ msgid "Greek"
+#~ msgstr "Грэчаская"
+
+#~ msgid "Hebrew Visual"
+#~ msgstr "Іўрыт (візуальны)"
+
+#~ msgid "Hebrew"
+#~ msgstr "Іўрыт"
+
+#~ msgid "Turkish"
+#~ msgstr "Турэцкая"
+
+#~ msgid "Nordic"
+#~ msgstr "Скандынаўская"
+
+#~ msgid "Celtic"
+#~ msgstr "Кельцкая"
+
+#~ msgid "Romanian"
+#~ msgstr "Румынская"
+
+#~ msgid "Armenian"
+#~ msgstr "Армянская"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Кітайская традыцыйная"
+
+#~ msgid "Cyrillic/Russian"
+#~ msgstr "Кірыліца/Расія"
+
+#~ msgid "Japanese"
+#~ msgstr "Японская"
+
+#~ msgid "Korean"
+#~ msgstr "Карэйская"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Кітайская спрошчаная"
+
+#~ msgid "Georgian"
+#~ msgstr "Грузінская"
+
+#~ msgid "Cyrillic/Ukrainian"
+#~ msgstr "Кірыліца/Украіна"
+
+#~ msgid "Croatian"
+#~ msgstr "Харвацкая"
+
+#~ msgid "Hindi"
+#~ msgstr "Хіндзі"
+
+#~ msgid "Farsi"
+#~ msgstr "Фарсі"
+
+#~ msgid "Gujarati"
+#~ msgstr "Гуяраці"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Гурмукі"
+
+#~ msgid "Icelandic"
+#~ msgstr "Ісландская"
+
+#~ msgid "Vietnamese"
+#~ msgstr "В'етнамская"
+
+#~ msgid "Thai"
+#~ msgstr "Тайская"
 
 #~ msgid "_Quit"
 #~ msgstr "_Выйсці"

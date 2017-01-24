@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
+"POT-Creation-Date: 2017-01-24 12:14+0800\n"
 "PO-Revision-Date: 2015-08-12 15:40+0000\n"
 "Last-Translator: Julien Henry <Julius22@laposte.net>\n"
 "Language-Team: fr <gaknar@gmail.com>\n"
@@ -19,312 +19,170 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1439394024.000000\n"
 
-#: ../src/encoding.c:124
-msgid "West European"
-msgstr "Européen de l'Ouest"
-
-#: ../src/encoding.c:125
-msgid "East European"
-msgstr "Européen de l'Est"
-
-#: ../src/encoding.c:126
-msgid "East Asian"
-msgstr "Asiatique de l'Est"
-
-#: ../src/encoding.c:127
-msgid "SE & SW Asian"
-msgstr "Asiatique du SE et du SO"
-
-#: ../src/encoding.c:128
-msgid "Middle Eastern"
-msgstr "Moyen-Oriental"
-
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
-msgid "Unicode"
-msgstr "Unicode"
-
-#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
-msgid "Western"
-msgstr "Occidental"
-
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
-#: ../src/encoding.c:208
-msgid "Central European"
-msgstr "Européen central"
-
-#: ../src/encoding.c:137
-msgid "South European"
-msgstr "Européen du Sud"
-
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
-msgid "Baltic"
-msgstr "Baltique"
-
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
-msgid "Cyrillic"
-msgstr "Cyrillique"
-
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
-#: ../src/encoding.c:214
-msgid "Arabic"
-msgstr "Arabe"
-
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Greek"
-msgstr "Grec"
-
-#: ../src/encoding.c:142
-msgid "Hebrew Visual"
-msgstr "Hébreu visuel"
-
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
-#: ../src/encoding.c:213
-msgid "Hebrew"
-msgstr "Hébreu"
-
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
-#: ../src/encoding.c:212
-msgid "Turkish"
-msgstr "Turc"
-
-#: ../src/encoding.c:145
-msgid "Nordic"
-msgstr "Nordique"
-
-#: ../src/encoding.c:147
-msgid "Celtic"
-msgstr "Celtique"
-
-#: ../src/encoding.c:149 ../src/encoding.c:198
-msgid "Romanian"
-msgstr "Roumain"
-
-#: ../src/encoding.c:157
-msgid "Armenian"
-msgstr "Arménien"
-
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
-msgid "Chinese Traditional"
-msgstr "Chinois traditionnel"
-
-#: ../src/encoding.c:160
-msgid "Cyrillic/Russian"
-msgstr "Cyrillique/Russe"
-
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
-msgid "Japanese"
-msgstr "Japonais"
-
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
-#: ../src/encoding.c:205
-msgid "Korean"
-msgstr "Coréen"
-
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
-#: ../src/encoding.c:170
-msgid "Chinese Simplified"
-msgstr "Chinois simplifié"
-
-#: ../src/encoding.c:169
-msgid "Georgian"
-msgstr "Géorgien"
-
-#: ../src/encoding.c:184 ../src/encoding.c:200
-msgid "Cyrillic/Ukrainian"
-msgstr "Cyrillique/Ukrainien"
-
-#: ../src/encoding.c:188
-msgid "Croatian"
-msgstr "Croate"
-
-#: ../src/encoding.c:190
-msgid "Hindi"
-msgstr "Hindî"
-
-#: ../src/encoding.c:191
-msgid "Farsi"
-msgstr "Persan"
-
-#: ../src/encoding.c:193
-msgid "Gujarati"
-msgstr "Gujarâtî"
-
-#: ../src/encoding.c:194
-msgid "Gurmukhi"
-msgstr "Gurmukhī"
-
-#: ../src/encoding.c:196
-msgid "Icelandic"
-msgstr "Islandais"
-
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
-msgid "Vietnamese"
-msgstr "Vietnamien"
-
-#: ../src/encoding.c:204
-msgid "Thai"
-msgstr "Thaï"
-
 #. 0
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "_Fichier"
 
 #. 1
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "Éditio_n"
 
 #. 2
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "_Onglets"
 
 #. 3
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "_Aide"
 
 #. 4
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:125
 #, fuzzy
 msgid "_New Window"
 msgstr "_Nouvelle fenêtre"
 
 #. 5
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:126
 #, fuzzy
 msgid "New T_ab"
 msgstr "Nouvel _onglet"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "_Fermer l'onglet"
 
 #. 8
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:129
 #, fuzzy
 msgid "Close _Window"
 msgstr "_Nouvelle fenêtre"
 
 #. 9
-#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 msgid "Cop_y"
 msgstr "_Copier"
 
 #. 10
-#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "C_oller"
 
 #. 11
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
 msgstr "Supprimer les anciennes _lignes"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:134
 msgid "Zoom _In"
 msgstr "Zoom a_vant"
 
 #. 14
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
 msgstr "Zoom a_rrière"
 
 #. 15
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
 msgstr "Ré_initialiser Zoom"
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 msgid "Preference_s"
 msgstr "Préférence_s"
 
 #. 18
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 msgid "Na_me Tab"
 msgstr "No_mmer l'onglet"
 
 #. 19
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 msgid "Pre_vious Tab"
 msgstr "Onglet _précédent"
 
 #. 20
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 msgid "Ne_xt Tab"
 msgstr "Onglet _suivant"
 
 #. 21
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr "Déplacer l'onglet à _gauche"
 
 #. 22
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr "Déplacer l'onglet à _droite"
 
 #. 23
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "À pr_opos"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:152
 msgid "New _Window"
 msgstr "_Nouvelle fenêtre"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:153
 msgid "New _Tab"
 msgstr "Nouvel _onglet"
 
-#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr "Copier l'_URL"
 
-#: ../src/lxterminal.c:162
+#: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
 msgstr "Supprimer les anciennes _lignes"
 
-#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "Nommer l'onglet"
 
+#: ../src/lxterminal.c:570
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxterminal.c:571
+msgid "_OK"
+msgstr ""
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:742
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr "Cilyan Olowen <gaknar@gmail.com>"
 
-#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
+#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:748
 #, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Copyright (C) 2008-2017"
 
-#: ../src/lxterminal.c:751
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "Émulateur de terminal pour le projet LXDE"
 
-#: ../src/lxterminal.c:816
+#: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr "Vous vous appretez à fermer %d onglets.  Êtes vous certain?"
 
-#: ../src/lxterminal.c:817
+#: ../src/lxterminal.c:815
 msgid "Confirm close"
 msgstr "Confirmer la fermeture"
 
@@ -584,6 +442,111 @@ msgstr "Utiliser la ligne de commande"
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr ""
+
+#~ msgid "West European"
+#~ msgstr "Européen de l'Ouest"
+
+#~ msgid "East European"
+#~ msgstr "Européen de l'Est"
+
+#~ msgid "East Asian"
+#~ msgstr "Asiatique de l'Est"
+
+#~ msgid "SE & SW Asian"
+#~ msgstr "Asiatique du SE et du SO"
+
+#~ msgid "Middle Eastern"
+#~ msgstr "Moyen-Oriental"
+
+#~ msgid "Unicode"
+#~ msgstr "Unicode"
+
+#~ msgid "Western"
+#~ msgstr "Occidental"
+
+#~ msgid "Central European"
+#~ msgstr "Européen central"
+
+#~ msgid "South European"
+#~ msgstr "Européen du Sud"
+
+#~ msgid "Baltic"
+#~ msgstr "Baltique"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Cyrillique"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabe"
+
+#~ msgid "Greek"
+#~ msgstr "Grec"
+
+#~ msgid "Hebrew Visual"
+#~ msgstr "Hébreu visuel"
+
+#~ msgid "Hebrew"
+#~ msgstr "Hébreu"
+
+#~ msgid "Turkish"
+#~ msgstr "Turc"
+
+#~ msgid "Nordic"
+#~ msgstr "Nordique"
+
+#~ msgid "Celtic"
+#~ msgstr "Celtique"
+
+#~ msgid "Romanian"
+#~ msgstr "Roumain"
+
+#~ msgid "Armenian"
+#~ msgstr "Arménien"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Chinois traditionnel"
+
+#~ msgid "Cyrillic/Russian"
+#~ msgstr "Cyrillique/Russe"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonais"
+
+#~ msgid "Korean"
+#~ msgstr "Coréen"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Chinois simplifié"
+
+#~ msgid "Georgian"
+#~ msgstr "Géorgien"
+
+#~ msgid "Cyrillic/Ukrainian"
+#~ msgstr "Cyrillique/Ukrainien"
+
+#~ msgid "Croatian"
+#~ msgstr "Croate"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindî"
+
+#~ msgid "Farsi"
+#~ msgstr "Persan"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarâtî"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmukhī"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandais"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamien"
+
+#~ msgid "Thai"
+#~ msgstr "Thaï"
 
 #~ msgid "_Quit"
 #~ msgstr "_Quitter"

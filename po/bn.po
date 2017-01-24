@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
+"POT-Creation-Date: 2017-01-24 12:14+0800\n"
 "PO-Revision-Date: 2014-07-08 19:15+0000\n"
 "Last-Translator: system user <>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
@@ -20,321 +20,179 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1404846911.000000\n"
 
-#: ../src/encoding.c:124
-msgid "West European"
-msgstr "পশ্চিম ইউরোপীয়"
-
-#: ../src/encoding.c:125
-msgid "East European"
-msgstr "পূর্ব ইউরোপীয়"
-
-#: ../src/encoding.c:126
-msgid "East Asian"
-msgstr "পূর্ব এশীয়"
-
-#: ../src/encoding.c:127
-msgid "SE & SW Asian"
-msgstr "SE & SW এশীয়"
-
-#: ../src/encoding.c:128
-msgid "Middle Eastern"
-msgstr "মধ্যপ্রাচ্য"
-
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
-msgid "Unicode"
-msgstr "ইউনিকোড"
-
-#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
-msgid "Western"
-msgstr "পশ্চিমা"
-
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
-#: ../src/encoding.c:208
-msgid "Central European"
-msgstr "মধ্য ইউরোপীয়"
-
-#: ../src/encoding.c:137
-msgid "South European"
-msgstr "দক্ষিণ ইউরোপীয়"
-
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
-msgid "Baltic"
-msgstr "বাল্টিক"
-
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
-msgid "Cyrillic"
-msgstr "সিরিলিক"
-
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
-#: ../src/encoding.c:214
-msgid "Arabic"
-msgstr "আরবী"
-
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Greek"
-msgstr "গ্রিক"
-
-#: ../src/encoding.c:142
-msgid "Hebrew Visual"
-msgstr "হিব্রু ভিজ্যুয়াল"
-
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
-#: ../src/encoding.c:213
-msgid "Hebrew"
-msgstr "হিব্রু"
-
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
-#: ../src/encoding.c:212
-msgid "Turkish"
-msgstr "তুর্কি"
-
-#: ../src/encoding.c:145
-msgid "Nordic"
-msgstr "নর্ডিক"
-
-#: ../src/encoding.c:147
-msgid "Celtic"
-msgstr "সেলটিক"
-
-#: ../src/encoding.c:149 ../src/encoding.c:198
-msgid "Romanian"
-msgstr "রোমানীয়"
-
-#: ../src/encoding.c:157
-msgid "Armenian"
-msgstr "আর্মেনিয়"
-
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
-msgid "Chinese Traditional"
-msgstr "চাইনিজ সনাতন"
-
-#: ../src/encoding.c:160
-msgid "Cyrillic/Russian"
-msgstr "সিরিলিক/রুশ"
-
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
-msgid "Japanese"
-msgstr "জাপানী"
-
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
-#: ../src/encoding.c:205
-msgid "Korean"
-msgstr "কোরিয়ান"
-
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
-#: ../src/encoding.c:170
-msgid "Chinese Simplified"
-msgstr "চাইনিজ সরলীকৃত"
-
-#: ../src/encoding.c:169
-msgid "Georgian"
-msgstr "জর্জীয়"
-
-#: ../src/encoding.c:184 ../src/encoding.c:200
-msgid "Cyrillic/Ukrainian"
-msgstr "সিরিলিক/ইউক্রেইনিয়ান"
-
-#: ../src/encoding.c:188
-msgid "Croatian"
-msgstr "ক্রোয়েশিয়ান"
-
-#: ../src/encoding.c:190
-msgid "Hindi"
-msgstr "হিন্দি"
-
-#: ../src/encoding.c:191
-msgid "Farsi"
-msgstr "ফারসী"
-
-#: ../src/encoding.c:193
-msgid "Gujarati"
-msgstr "গুজরাটি"
-
-#: ../src/encoding.c:194
-msgid "Gurmukhi"
-msgstr "গুরুমুখী"
-
-#: ../src/encoding.c:196
-msgid "Icelandic"
-msgstr "আইসল্যান্ডিক"
-
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
-msgid "Vietnamese"
-msgstr "ভিয়েতনামী"
-
-#: ../src/encoding.c:204
-msgid "Thai"
-msgstr "থাই"
-
 #. 0
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "ফাইল (_F)"
 
 #. 1
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
 
 #. 2
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "ট্যাব (_T)"
 
 #. 3
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "সহায়িকা (_H)"
 
 #. 4
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:125
 #, fuzzy
 msgid "_New Window"
 msgstr "নতুন উইন্ডো (_W)"
 
 #. 5
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:126
 #, fuzzy
 msgid "New T_ab"
 msgstr "নতুন ট্যাব (_T)"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "ট্যাব বন্ধ করুন (_C)"
 
 #. 8
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:129
 #, fuzzy
 msgid "Close _Window"
 msgstr "নতুন উইন্ডো (_W)"
 
 #. 9
-#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 msgid "Cop_y"
 msgstr "অনুলিপি (_y)"
 
 #. 10
-#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "প্রতিস্থাপন (_P)"
 
 # snigdha
 #. 11
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:132
 #, fuzzy
 msgid "Clear scr_ollback"
 msgstr "স্ক্রলবার আড়াল করুন"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:134
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 msgid "Preference_s"
 msgstr "পছন্দসমূহ (_s)"
 
 # snigdha
 #. 18
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 msgid "Na_me Tab"
 msgstr "নাম ট্যাব (_m)"
 
 #. 19
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 msgid "Pre_vious Tab"
 msgstr "পূর্ববর্তী ট্যাব (_v)"
 
 #. 20
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 msgid "Ne_xt Tab"
 msgstr "পরবর্তী ট্যাব (_x)"
 
 #. 21
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr "ট্যাবটি বামদিকে সরিয়ে নিন (_L)"
 
 #. 22
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr "ট্যাবটি ডানদিকে সরিয়ে নিন (_R)"
 
 #. 23
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:152
 msgid "New _Window"
 msgstr "নতুন উইন্ডো (_W)"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:153
 msgid "New _Tab"
 msgstr "নতুন ট্যাব (_T)"
 
-#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr ""
 
 # snigdha
-#: ../src/lxterminal.c:162
+#: ../src/lxterminal.c:158
 #, fuzzy
 msgid "Cl_ear scrollback"
 msgstr "স্ক্রলবার আড়াল করুন"
 
 # snigdha
-#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "নাম ট্যাব"
 
+#: ../src/lxterminal.c:570
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxterminal.c:571
+msgid "_OK"
+msgstr ""
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:742
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
 "সঙ্কর্ষণ মুখোপাধ্যায় (sankarshan@randomink.org) \n"
 "লোবা ইয়াসমীন <loba@ankur.org.bd>"
 
-#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
+#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXটার্মিনাল"
 
 # snigdha
-#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:748
 #, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "স্বত্বাধিকার (C) ২০০৮-২০১০"
 
-#: ../src/lxterminal.c:751
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE প্রকল্পের জন্য টার্মিনাল ইম্যুলেটর"
 
-#: ../src/lxterminal.c:816
+#: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr ""
 
-#: ../src/lxterminal.c:817
+#: ../src/lxterminal.c:815
 msgid "Confirm close"
 msgstr ""
 
@@ -623,6 +481,111 @@ msgstr "কমান্ড লাইন ব্যবহার করা হব�
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr ""
+
+#~ msgid "West European"
+#~ msgstr "পশ্চিম ইউরোপীয়"
+
+#~ msgid "East European"
+#~ msgstr "পূর্ব ইউরোপীয়"
+
+#~ msgid "East Asian"
+#~ msgstr "পূর্ব এশীয়"
+
+#~ msgid "SE & SW Asian"
+#~ msgstr "SE & SW এশীয়"
+
+#~ msgid "Middle Eastern"
+#~ msgstr "মধ্যপ্রাচ্য"
+
+#~ msgid "Unicode"
+#~ msgstr "ইউনিকোড"
+
+#~ msgid "Western"
+#~ msgstr "পশ্চিমা"
+
+#~ msgid "Central European"
+#~ msgstr "মধ্য ইউরোপীয়"
+
+#~ msgid "South European"
+#~ msgstr "দক্ষিণ ইউরোপীয়"
+
+#~ msgid "Baltic"
+#~ msgstr "বাল্টিক"
+
+#~ msgid "Cyrillic"
+#~ msgstr "সিরিলিক"
+
+#~ msgid "Arabic"
+#~ msgstr "আরবী"
+
+#~ msgid "Greek"
+#~ msgstr "গ্রিক"
+
+#~ msgid "Hebrew Visual"
+#~ msgstr "হিব্রু ভিজ্যুয়াল"
+
+#~ msgid "Hebrew"
+#~ msgstr "হিব্রু"
+
+#~ msgid "Turkish"
+#~ msgstr "তুর্কি"
+
+#~ msgid "Nordic"
+#~ msgstr "নর্ডিক"
+
+#~ msgid "Celtic"
+#~ msgstr "সেলটিক"
+
+#~ msgid "Romanian"
+#~ msgstr "রোমানীয়"
+
+#~ msgid "Armenian"
+#~ msgstr "আর্মেনিয়"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "চাইনিজ সনাতন"
+
+#~ msgid "Cyrillic/Russian"
+#~ msgstr "সিরিলিক/রুশ"
+
+#~ msgid "Japanese"
+#~ msgstr "জাপানী"
+
+#~ msgid "Korean"
+#~ msgstr "কোরিয়ান"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "চাইনিজ সরলীকৃত"
+
+#~ msgid "Georgian"
+#~ msgstr "জর্জীয়"
+
+#~ msgid "Cyrillic/Ukrainian"
+#~ msgstr "সিরিলিক/ইউক্রেইনিয়ান"
+
+#~ msgid "Croatian"
+#~ msgstr "ক্রোয়েশিয়ান"
+
+#~ msgid "Hindi"
+#~ msgstr "হিন্দি"
+
+#~ msgid "Farsi"
+#~ msgstr "ফারসী"
+
+#~ msgid "Gujarati"
+#~ msgstr "গুজরাটি"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "গুরুমুখী"
+
+#~ msgid "Icelandic"
+#~ msgstr "আইসল্যান্ডিক"
+
+#~ msgid "Vietnamese"
+#~ msgstr "ভিয়েতনামী"
+
+#~ msgid "Thai"
+#~ msgstr "থাই"
 
 #~ msgid "_Quit"
 #~ msgstr "প্রস্থান (_Q)"

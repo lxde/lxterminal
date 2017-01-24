@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
+"POT-Creation-Date: 2017-01-24 12:14+0800\n"
 "PO-Revision-Date: 2015-07-20 14:03+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
@@ -20,311 +20,169 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1437400999.000000\n"
 
-#: ../src/encoding.c:124
-msgid "West European"
-msgstr "서유럽어"
-
-#: ../src/encoding.c:125
-msgid "East European"
-msgstr "동유럽어"
-
-#: ../src/encoding.c:126
-msgid "East Asian"
-msgstr "동아시아어"
-
-#: ../src/encoding.c:127
-msgid "SE & SW Asian"
-msgstr "남동 남서 아시아어"
-
-#: ../src/encoding.c:128
-msgid "Middle Eastern"
-msgstr "중동"
-
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
-msgid "Unicode"
-msgstr "유니코드"
-
-#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
-msgid "Western"
-msgstr "서유럽어"
-
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
-#: ../src/encoding.c:208
-msgid "Central European"
-msgstr "중앙유럽어"
-
-#: ../src/encoding.c:137
-msgid "South European"
-msgstr "남유럽어"
-
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
-msgid "Baltic"
-msgstr "발트어"
-
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
-msgid "Cyrillic"
-msgstr "키릴어"
-
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
-#: ../src/encoding.c:214
-msgid "Arabic"
-msgstr "아라비아어"
-
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Greek"
-msgstr "그리스어"
-
-#: ../src/encoding.c:142
-msgid "Hebrew Visual"
-msgstr "히브리 상형문자"
-
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
-#: ../src/encoding.c:213
-msgid "Hebrew"
-msgstr "히브리어"
-
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
-#: ../src/encoding.c:212
-msgid "Turkish"
-msgstr "터키어"
-
-#: ../src/encoding.c:145
-msgid "Nordic"
-msgstr "노르웨이어"
-
-#: ../src/encoding.c:147
-msgid "Celtic"
-msgstr "켈트어"
-
-#: ../src/encoding.c:149 ../src/encoding.c:198
-msgid "Romanian"
-msgstr "루마니아어"
-
-#: ../src/encoding.c:157
-msgid "Armenian"
-msgstr "아르메니아어"
-
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
-msgid "Chinese Traditional"
-msgstr "중국어 번체"
-
-#: ../src/encoding.c:160
-msgid "Cyrillic/Russian"
-msgstr "키릴/러시아어"
-
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
-msgid "Japanese"
-msgstr "일본어"
-
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
-#: ../src/encoding.c:205
-msgid "Korean"
-msgstr "한국어"
-
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
-#: ../src/encoding.c:170
-msgid "Chinese Simplified"
-msgstr "중국어 간체"
-
-#: ../src/encoding.c:169
-msgid "Georgian"
-msgstr "조지아어"
-
-#: ../src/encoding.c:184 ../src/encoding.c:200
-msgid "Cyrillic/Ukrainian"
-msgstr "키릴/우크라이나어"
-
-#: ../src/encoding.c:188
-msgid "Croatian"
-msgstr "크로아티아어"
-
-#: ../src/encoding.c:190
-msgid "Hindi"
-msgstr "힌투어"
-
-#: ../src/encoding.c:191
-msgid "Farsi"
-msgstr "페르시아어"
-
-#: ../src/encoding.c:193
-msgid "Gujarati"
-msgstr "구지라티어"
-
-#: ../src/encoding.c:194
-msgid "Gurmukhi"
-msgstr "구르무키어"
-
-#: ../src/encoding.c:196
-msgid "Icelandic"
-msgstr "아이슬란드어"
-
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
-msgid "Vietnamese"
-msgstr "베트남어"
-
-#: ../src/encoding.c:204
-msgid "Thai"
-msgstr "타이어"
-
 #. 0
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "파일(_F)"
 
 #. 1
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "편집(_E)"
 
 #. 2
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "탭(_T)"
 
 #. 3
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "도움말(_H)"
 
 #. 4
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:125
 msgid "_New Window"
 msgstr "새 창(_N)"
 
 #. 5
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:126
 msgid "New T_ab"
 msgstr "새 탭(_A)"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "탭 닫기(_C)"
 
 #. 8
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:129
 msgid "Close _Window"
 msgstr "창 닫기(_W)"
 
 #. 9
-#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 msgid "Cop_y"
 msgstr "복사(_Y)"
 
 #. 10
-#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "붙여넣기(_P)"
 
 #. 11
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
 msgstr "이전 스크롤 지우기(_O)"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:134
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 msgid "Preference_s"
 msgstr "기본 설정(_S)"
 
 #. 18
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 msgid "Na_me Tab"
 msgstr "탭 이름(_M)"
 
 #. 19
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 msgid "Pre_vious Tab"
 msgstr "이전 탭(_V)"
 
 #. 20
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 msgid "Ne_xt Tab"
 msgstr "다음 탭(_X)"
 
 #. 21
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr "탭 왼쪽으로 옮기기(_L)"
 
 #. 22
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr "탭 오른쪽으로 옮기기(_R)"
 
 #. 23
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:152
 msgid "New _Window"
 msgstr "새 창(_W)"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:153
 msgid "New _Tab"
 msgstr "새 탭(_T)"
 
-#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr "URL 복사(_U)"
 
-#: ../src/lxterminal.c:162
+#: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
 msgstr "이전 스크롤 지우기(_E)"
 
-#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "제목 설정"
 
+#: ../src/lxterminal.c:570
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxterminal.c:571
+msgid "_OK"
+msgstr ""
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:742
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
 "Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Seong-ho Cho <shcho@gnome.org>"
 
-#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
+#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:748
 #, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Copyright (C) 2008-2017"
 
-#: ../src/lxterminal.c:751
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE 프로젝트의 터미널 에뮬레이터"
 
-#: ../src/lxterminal.c:816
+#: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr ""
 
-#: ../src/lxterminal.c:817
+#: ../src/lxterminal.c:815
 msgid "Confirm close"
 msgstr ""
 
@@ -584,6 +442,111 @@ msgstr "명령 행을 사용합니다"
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr "console;콘솔;command line;명령줄;execute;실행;"
+
+#~ msgid "West European"
+#~ msgstr "서유럽어"
+
+#~ msgid "East European"
+#~ msgstr "동유럽어"
+
+#~ msgid "East Asian"
+#~ msgstr "동아시아어"
+
+#~ msgid "SE & SW Asian"
+#~ msgstr "남동 남서 아시아어"
+
+#~ msgid "Middle Eastern"
+#~ msgstr "중동"
+
+#~ msgid "Unicode"
+#~ msgstr "유니코드"
+
+#~ msgid "Western"
+#~ msgstr "서유럽어"
+
+#~ msgid "Central European"
+#~ msgstr "중앙유럽어"
+
+#~ msgid "South European"
+#~ msgstr "남유럽어"
+
+#~ msgid "Baltic"
+#~ msgstr "발트어"
+
+#~ msgid "Cyrillic"
+#~ msgstr "키릴어"
+
+#~ msgid "Arabic"
+#~ msgstr "아라비아어"
+
+#~ msgid "Greek"
+#~ msgstr "그리스어"
+
+#~ msgid "Hebrew Visual"
+#~ msgstr "히브리 상형문자"
+
+#~ msgid "Hebrew"
+#~ msgstr "히브리어"
+
+#~ msgid "Turkish"
+#~ msgstr "터키어"
+
+#~ msgid "Nordic"
+#~ msgstr "노르웨이어"
+
+#~ msgid "Celtic"
+#~ msgstr "켈트어"
+
+#~ msgid "Romanian"
+#~ msgstr "루마니아어"
+
+#~ msgid "Armenian"
+#~ msgstr "아르메니아어"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "중국어 번체"
+
+#~ msgid "Cyrillic/Russian"
+#~ msgstr "키릴/러시아어"
+
+#~ msgid "Japanese"
+#~ msgstr "일본어"
+
+#~ msgid "Korean"
+#~ msgstr "한국어"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "중국어 간체"
+
+#~ msgid "Georgian"
+#~ msgstr "조지아어"
+
+#~ msgid "Cyrillic/Ukrainian"
+#~ msgstr "키릴/우크라이나어"
+
+#~ msgid "Croatian"
+#~ msgstr "크로아티아어"
+
+#~ msgid "Hindi"
+#~ msgstr "힌투어"
+
+#~ msgid "Farsi"
+#~ msgstr "페르시아어"
+
+#~ msgid "Gujarati"
+#~ msgstr "구지라티어"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "구르무키어"
+
+#~ msgid "Icelandic"
+#~ msgstr "아이슬란드어"
+
+#~ msgid "Vietnamese"
+#~ msgstr "베트남어"
+
+#~ msgid "Thai"
+#~ msgstr "타이어"
 
 #~ msgid "_Quit"
 #~ msgstr "끝내기(_Q)"

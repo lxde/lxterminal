@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
+"POT-Creation-Date: 2017-01-24 12:14+0800\n"
 "PO-Revision-Date: 2014-07-08 19:15+0000\n"
 "Last-Translator: system user <>\n"
 "Language-Team: \n"
@@ -21,312 +21,170 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1404846950.000000\n"
 
-#: ../src/encoding.c:124
-msgid "West European"
-msgstr "Zapadnoevropski"
-
-#: ../src/encoding.c:125
-msgid "East European"
-msgstr "Istočnoevropski"
-
-#: ../src/encoding.c:126
-msgid "East Asian"
-msgstr "Istočnoazijski"
-
-#: ../src/encoding.c:127
-msgid "SE & SW Asian"
-msgstr "Jugoistočno/jugozapadno azijski"
-
-#: ../src/encoding.c:128
-msgid "Middle Eastern"
-msgstr "Bliskoistočni"
-
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
-msgid "Unicode"
-msgstr "Unikod"
-
-#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
-msgid "Western"
-msgstr "Zapadni"
-
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
-#: ../src/encoding.c:208
-msgid "Central European"
-msgstr "Centralnoevropski"
-
-#: ../src/encoding.c:137
-msgid "South European"
-msgstr "Južnoevropski"
-
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
-msgid "Baltic"
-msgstr "Baltički"
-
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
-msgid "Cyrillic"
-msgstr "Ćirilični"
-
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
-#: ../src/encoding.c:214
-msgid "Arabic"
-msgstr "Arapski"
-
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Greek"
-msgstr "Grčki"
-
-#: ../src/encoding.c:142
-msgid "Hebrew Visual"
-msgstr "Hebrejski vizuelni"
-
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
-#: ../src/encoding.c:213
-msgid "Hebrew"
-msgstr "Hebrejski"
-
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
-#: ../src/encoding.c:212
-msgid "Turkish"
-msgstr "Turski"
-
-#: ../src/encoding.c:145
-msgid "Nordic"
-msgstr "Norveški"
-
-#: ../src/encoding.c:147
-msgid "Celtic"
-msgstr "Keltski"
-
-#: ../src/encoding.c:149 ../src/encoding.c:198
-msgid "Romanian"
-msgstr "Rumunski"
-
-#: ../src/encoding.c:157
-msgid "Armenian"
-msgstr "Armenski"
-
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
-msgid "Chinese Traditional"
-msgstr "Tradicionalni Kineski"
-
-#: ../src/encoding.c:160
-msgid "Cyrillic/Russian"
-msgstr "Ćirilični/ruski"
-
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
-msgid "Japanese"
-msgstr "Japanski"
-
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
-#: ../src/encoding.c:205
-msgid "Korean"
-msgstr "Korejski"
-
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
-#: ../src/encoding.c:170
-msgid "Chinese Simplified"
-msgstr "Kineski pojednostavljeni"
-
-#: ../src/encoding.c:169
-msgid "Georgian"
-msgstr "Gruzijski"
-
-#: ../src/encoding.c:184 ../src/encoding.c:200
-msgid "Cyrillic/Ukrainian"
-msgstr "Ćirilični/ukrajinski"
-
-#: ../src/encoding.c:188
-msgid "Croatian"
-msgstr "Hrvatski"
-
-#: ../src/encoding.c:190
-msgid "Hindi"
-msgstr "Hindu"
-
-#: ../src/encoding.c:191
-msgid "Farsi"
-msgstr "Farski"
-
-#: ../src/encoding.c:193
-msgid "Gujarati"
-msgstr "Gujarati"
-
-#: ../src/encoding.c:194
-msgid "Gurmukhi"
-msgstr "Gurmuki "
-
-#: ../src/encoding.c:196
-msgid "Icelandic"
-msgstr "Islandski"
-
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
-msgid "Vietnamese"
-msgstr "Vijetnamski"
-
-#: ../src/encoding.c:204
-msgid "Thai"
-msgstr "Tajlandski"
-
 #. 0
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "_Datoteka"
 
 #. 1
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "_Uredi"
 
 #. 2
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "_Listovi"
 
 #. 3
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "_Pomoć"
 
 #. 4
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:125
 #, fuzzy
 msgid "_New Window"
 msgstr "Novi _prozor"
 
 #. 5
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:126
 #, fuzzy
 msgid "New T_ab"
 msgstr "Novi _list"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "Za_tvori list"
 
 #. 8
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:129
 #, fuzzy
 msgid "Close _Window"
 msgstr "Novi _prozor"
 
 #. 9
-#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 msgid "Cop_y"
 msgstr "_Umnoži"
 
 #. 10
-#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "U_baci"
 
 #. 11
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
 msgstr "Obriši „scr_ollback“ ostavu"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:134
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 msgid "Preference_s"
 msgstr "Po_stavke"
 
 #. 18
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 msgid "Na_me Tab"
 msgstr "_Ime lista"
 
 #. 19
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 msgid "Pre_vious Tab"
 msgstr "_Prethodni list"
 
 #. 20
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 msgid "Ne_xt Tab"
 msgstr "_Sledeći list"
 
 #. 21
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr "Premesti list _levo"
 
 #. 22
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr "Premesti list _desno"
 
 #. 23
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "_O programu"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:152
 msgid "New _Window"
 msgstr "Novi _prozor"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:153
 msgid "New _Tab"
 msgstr "Novi _list"
 
-#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr "Umnoži _URL"
 
-#: ../src/lxterminal.c:162
+#: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
 msgstr "O_briši „scrollback“ ostavu"
 
-#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "Dajte ime listu"
 
+#: ../src/lxterminal.c:570
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxterminal.c:571
+msgid "_OK"
+msgstr ""
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:742
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr "Serbian (sr) — Jay A. Fleming <tito.nehru.naser@gmail.com>"
 
-#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
+#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LIks-Terminal"
 
-#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:748
 #, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "2008-2017. Neka su prava zadržana."
 
-#: ../src/lxterminal.c:751
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "Emulator terminala za LIks-DE"
 
-#: ../src/lxterminal.c:816
+#: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr ""
 
-#: ../src/lxterminal.c:817
+#: ../src/lxterminal.c:815
 msgid "Confirm close"
 msgstr ""
 
@@ -597,6 +455,111 @@ msgstr "Koristite liniju naredbi"
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr ""
+
+#~ msgid "West European"
+#~ msgstr "Zapadnoevropski"
+
+#~ msgid "East European"
+#~ msgstr "Istočnoevropski"
+
+#~ msgid "East Asian"
+#~ msgstr "Istočnoazijski"
+
+#~ msgid "SE & SW Asian"
+#~ msgstr "Jugoistočno/jugozapadno azijski"
+
+#~ msgid "Middle Eastern"
+#~ msgstr "Bliskoistočni"
+
+#~ msgid "Unicode"
+#~ msgstr "Unikod"
+
+#~ msgid "Western"
+#~ msgstr "Zapadni"
+
+#~ msgid "Central European"
+#~ msgstr "Centralnoevropski"
+
+#~ msgid "South European"
+#~ msgstr "Južnoevropski"
+
+#~ msgid "Baltic"
+#~ msgstr "Baltički"
+
+#~ msgid "Cyrillic"
+#~ msgstr "Ćirilični"
+
+#~ msgid "Arabic"
+#~ msgstr "Arapski"
+
+#~ msgid "Greek"
+#~ msgstr "Grčki"
+
+#~ msgid "Hebrew Visual"
+#~ msgstr "Hebrejski vizuelni"
+
+#~ msgid "Hebrew"
+#~ msgstr "Hebrejski"
+
+#~ msgid "Turkish"
+#~ msgstr "Turski"
+
+#~ msgid "Nordic"
+#~ msgstr "Norveški"
+
+#~ msgid "Celtic"
+#~ msgstr "Keltski"
+
+#~ msgid "Romanian"
+#~ msgstr "Rumunski"
+
+#~ msgid "Armenian"
+#~ msgstr "Armenski"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "Tradicionalni Kineski"
+
+#~ msgid "Cyrillic/Russian"
+#~ msgstr "Ćirilični/ruski"
+
+#~ msgid "Japanese"
+#~ msgstr "Japanski"
+
+#~ msgid "Korean"
+#~ msgstr "Korejski"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "Kineski pojednostavljeni"
+
+#~ msgid "Georgian"
+#~ msgstr "Gruzijski"
+
+#~ msgid "Cyrillic/Ukrainian"
+#~ msgstr "Ćirilični/ukrajinski"
+
+#~ msgid "Croatian"
+#~ msgstr "Hrvatski"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindu"
+
+#~ msgid "Farsi"
+#~ msgstr "Farski"
+
+#~ msgid "Gujarati"
+#~ msgstr "Gujarati"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "Gurmuki "
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandski"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vijetnamski"
+
+#~ msgid "Thai"
+#~ msgstr "Tajlandski"
 
 #~ msgid "_Quit"
 #~ msgstr "_Zatvori prozor"

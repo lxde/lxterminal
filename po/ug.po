@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
+"POT-Creation-Date: 2017-01-24 12:14+0800\n"
 "PO-Revision-Date: 2014-07-08 19:15+0000\n"
 "Last-Translator: system user <>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -19,312 +19,170 @@ msgstr ""
 "X-Generator: Pootle 2.7\n"
 "X-POOTLE-MTIME: 1404846956.000000\n"
 
-#: ../src/encoding.c:124
-msgid "West European"
-msgstr "غەربىي ياۋروپا"
-
-#: ../src/encoding.c:125
-msgid "East European"
-msgstr "شەرقىي ياۋروپا"
-
-#: ../src/encoding.c:126
-msgid "East Asian"
-msgstr "شەرقىي ئاسىيا"
-
-#: ../src/encoding.c:127
-msgid "SE & SW Asian"
-msgstr "شەرقىي جەنۇبى ئاسىيا & غەربى جەنۇبى ئاسىيا"
-
-#: ../src/encoding.c:128
-msgid "Middle Eastern"
-msgstr "ئوتتۇرا شەرق"
-
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
-msgid "Unicode"
-msgstr "يۇنىكود"
-
-#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
-msgid "Western"
-msgstr "غەربچە"
-
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
-#: ../src/encoding.c:208
-msgid "Central European"
-msgstr "ئوتتۇرا ياۋروپا"
-
-#: ../src/encoding.c:137
-msgid "South European"
-msgstr "جەنۇبى ياۋروپا"
-
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
-msgid "Baltic"
-msgstr "بالتىق"
-
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
-msgid "Cyrillic"
-msgstr "سلاۋيانچە"
-
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
-#: ../src/encoding.c:214
-msgid "Arabic"
-msgstr "ئەرەبچە"
-
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Greek"
-msgstr "گىرېكچە"
-
-#: ../src/encoding.c:142
-msgid "Hebrew Visual"
-msgstr "ئىبرانىچە كۆرۈنۈشچان"
-
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
-#: ../src/encoding.c:213
-msgid "Hebrew"
-msgstr "ئىبرانىچە"
-
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
-#: ../src/encoding.c:212
-msgid "Turkish"
-msgstr "تۈركچە"
-
-#: ../src/encoding.c:145
-msgid "Nordic"
-msgstr "شىمالىي ياۋروپا"
-
-#: ../src/encoding.c:147
-msgid "Celtic"
-msgstr "كېلتىك"
-
-#: ../src/encoding.c:149 ../src/encoding.c:198
-msgid "Romanian"
-msgstr "رۇمىنىيەچە"
-
-#: ../src/encoding.c:157
-msgid "Armenian"
-msgstr "ئەرمەنچە"
-
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
-msgid "Chinese Traditional"
-msgstr "مۇرەككەپ خەنزۇچە"
-
-#: ../src/encoding.c:160
-msgid "Cyrillic/Russian"
-msgstr "رۇسچە/سلاۋيان"
-
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
-msgid "Japanese"
-msgstr "ياپونچە"
-
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
-#: ../src/encoding.c:205
-msgid "Korean"
-msgstr "كورېيەچە"
-
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
-#: ../src/encoding.c:170
-msgid "Chinese Simplified"
-msgstr "ئاددىي خەنزۇچە"
-
-#: ../src/encoding.c:169
-msgid "Georgian"
-msgstr "گىرۇزىنچە"
-
-#: ../src/encoding.c:184 ../src/encoding.c:200
-msgid "Cyrillic/Ukrainian"
-msgstr "سلاۋيانچە/ئۇكرائىنچە"
-
-#: ../src/encoding.c:188
-msgid "Croatian"
-msgstr "خورۋاتچە"
-
-#: ../src/encoding.c:190
-msgid "Hindi"
-msgstr "ھىندىچە"
-
-#: ../src/encoding.c:191
-msgid "Farsi"
-msgstr "پارىسچە"
-
-#: ../src/encoding.c:193
-msgid "Gujarati"
-msgstr "گۇجاراتچە"
-
-#: ../src/encoding.c:194
-msgid "Gurmukhi"
-msgstr "گۇرمۇكىچە"
-
-#: ../src/encoding.c:196
-msgid "Icelandic"
-msgstr "ئىسلاندچە"
-
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
-msgid "Vietnamese"
-msgstr "ۋىيېتنامچە"
-
-#: ../src/encoding.c:204
-msgid "Thai"
-msgstr "تايلاندچە"
-
 #. 0
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "ھۆججەت(_F)"
 
 #. 1
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "تەھرىر(_E)"
 
 #. 2
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "بەتكۈچلەر(_T)"
 
 #. 3
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "ياردەم(_H)"
 
 #. 4
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:125
 #, fuzzy
 msgid "_New Window"
 msgstr "يېڭى كۆزنەك(_W)"
 
 #. 5
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:126
 #, fuzzy
 msgid "New T_ab"
 msgstr "يېڭى بەتكۈچ(_T)"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "بەتكۈچ ياپ(_C)"
 
 #. 8
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:129
 #, fuzzy
 msgid "Close _Window"
 msgstr "يېڭى كۆزنەك(_W)"
 
 #. 9
-#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 msgid "Cop_y"
 msgstr "كۆچۈر(_Y)"
 
 #. 10
-#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "چاپلا(_P)"
 
 #. 11
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
 msgstr "سىيرىغۇچ بالداقنى تازىلا(_O)"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:134
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 msgid "Preference_s"
 msgstr "مايىللىقلار(_S)"
 
 #. 18
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 msgid "Na_me Tab"
 msgstr "ئات بەتكۈچى(_M)"
 
 #. 19
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 msgid "Pre_vious Tab"
 msgstr "ئالدىنقى بەتكۈچ(_V)"
 
 #. 20
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 msgid "Ne_xt Tab"
 msgstr "كېيىنكى بەتكۈچ(_X)"
 
 #. 21
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr "بەتكۈچنى سولغا يۆتكە(_L)"
 
 #. 22
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr "بەتكۈچنى ئوڭغا يۆتكە(_R)"
 
 #. 23
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "ھەققىدە(_A)"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:152
 msgid "New _Window"
 msgstr "يېڭى كۆزنەك(_W)"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:153
 msgid "New _Tab"
 msgstr "يېڭى بەتكۈچ(_T)"
 
-#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr "تور ئادرېسى(_URL) نى كۆچۈر"
 
-#: ../src/lxterminal.c:162
+#: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
 msgstr "سىيرىلىشنى تازىلا(_E)"
 
-#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "ئات بەتكۈچى"
 
+#: ../src/lxterminal.c:570
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxterminal.c:571
+msgid "_OK"
+msgstr ""
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:742
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr "Gheyret Kenji <gheyret@gmail.com>"
 
-#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
+#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:748
 #, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "نەشر ھوقۇقى (C) 2008-2017"
 
-#: ../src/lxterminal.c:751
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDE قۇرۇلۇشىدىكى تېرمىنال تەقلىدلىگۈچى"
 
-#: ../src/lxterminal.c:816
+#: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr ""
 
-#: ../src/lxterminal.c:817
+#: ../src/lxterminal.c:815
 msgid "Confirm close"
 msgstr ""
 
@@ -595,6 +453,111 @@ msgstr "بۇيرۇق قۇرىنى ئىشلەت"
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr ""
+
+#~ msgid "West European"
+#~ msgstr "غەربىي ياۋروپا"
+
+#~ msgid "East European"
+#~ msgstr "شەرقىي ياۋروپا"
+
+#~ msgid "East Asian"
+#~ msgstr "شەرقىي ئاسىيا"
+
+#~ msgid "SE & SW Asian"
+#~ msgstr "شەرقىي جەنۇبى ئاسىيا & غەربى جەنۇبى ئاسىيا"
+
+#~ msgid "Middle Eastern"
+#~ msgstr "ئوتتۇرا شەرق"
+
+#~ msgid "Unicode"
+#~ msgstr "يۇنىكود"
+
+#~ msgid "Western"
+#~ msgstr "غەربچە"
+
+#~ msgid "Central European"
+#~ msgstr "ئوتتۇرا ياۋروپا"
+
+#~ msgid "South European"
+#~ msgstr "جەنۇبى ياۋروپا"
+
+#~ msgid "Baltic"
+#~ msgstr "بالتىق"
+
+#~ msgid "Cyrillic"
+#~ msgstr "سلاۋيانچە"
+
+#~ msgid "Arabic"
+#~ msgstr "ئەرەبچە"
+
+#~ msgid "Greek"
+#~ msgstr "گىرېكچە"
+
+#~ msgid "Hebrew Visual"
+#~ msgstr "ئىبرانىچە كۆرۈنۈشچان"
+
+#~ msgid "Hebrew"
+#~ msgstr "ئىبرانىچە"
+
+#~ msgid "Turkish"
+#~ msgstr "تۈركچە"
+
+#~ msgid "Nordic"
+#~ msgstr "شىمالىي ياۋروپا"
+
+#~ msgid "Celtic"
+#~ msgstr "كېلتىك"
+
+#~ msgid "Romanian"
+#~ msgstr "رۇمىنىيەچە"
+
+#~ msgid "Armenian"
+#~ msgstr "ئەرمەنچە"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "مۇرەككەپ خەنزۇچە"
+
+#~ msgid "Cyrillic/Russian"
+#~ msgstr "رۇسچە/سلاۋيان"
+
+#~ msgid "Japanese"
+#~ msgstr "ياپونچە"
+
+#~ msgid "Korean"
+#~ msgstr "كورېيەچە"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "ئاددىي خەنزۇچە"
+
+#~ msgid "Georgian"
+#~ msgstr "گىرۇزىنچە"
+
+#~ msgid "Cyrillic/Ukrainian"
+#~ msgstr "سلاۋيانچە/ئۇكرائىنچە"
+
+#~ msgid "Croatian"
+#~ msgstr "خورۋاتچە"
+
+#~ msgid "Hindi"
+#~ msgstr "ھىندىچە"
+
+#~ msgid "Farsi"
+#~ msgstr "پارىسچە"
+
+#~ msgid "Gujarati"
+#~ msgstr "گۇجاراتچە"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "گۇرمۇكىچە"
+
+#~ msgid "Icelandic"
+#~ msgstr "ئىسلاندچە"
+
+#~ msgid "Vietnamese"
+#~ msgstr "ۋىيېتنامچە"
+
+#~ msgid "Thai"
+#~ msgstr "تايلاندچە"
 
 #~ msgid "_Quit"
 #~ msgstr "چېكىن(_Q)"

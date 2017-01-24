@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 15:56-0500\n"
+"POT-Creation-Date: 2017-01-24 12:14+0800\n"
 "PO-Revision-Date: 2014-07-08 19:15+0000\n"
 "Last-Translator: system user <>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -20,297 +20,155 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-POOTLE-MTIME: 1404846958.000000\n"
 
-#: ../src/encoding.c:124
-msgid "West European"
-msgstr "مغربی یورپ"
-
-#: ../src/encoding.c:125
-msgid "East European"
-msgstr "مشرقی یورپ"
-
-#: ../src/encoding.c:126
-msgid "East Asian"
-msgstr "مشرقی ایشیا"
-
-#: ../src/encoding.c:127
-msgid "SE & SW Asian"
-msgstr "SE اور SW ایشین"
-
-#: ../src/encoding.c:128
-msgid "Middle Eastern"
-msgstr "مشرقِ وسطی"
-
-#: ../src/encoding.c:129 ../src/encoding.c:151 ../src/encoding.c:152
-#: ../src/encoding.c:153 ../src/encoding.c:154 ../src/encoding.c:155
-msgid "Unicode"
-msgstr "یونیکوڈ"
-
-#. { NULL, TERMINAL_ENCODING_CURRENT_LOCALE, NULL, N_("Current Locale") },
-#: ../src/encoding.c:135 ../src/encoding.c:148 ../src/encoding.c:172
-#: ../src/encoding.c:197 ../src/encoding.c:210
-msgid "Western"
-msgstr "مغربی"
-
-#: ../src/encoding.c:136 ../src/encoding.c:173 ../src/encoding.c:187
-#: ../src/encoding.c:208
-msgid "Central European"
-msgstr "وسطی یورپ"
-
-#: ../src/encoding.c:137
-msgid "South European"
-msgstr "جنوبی یورپ"
-
-#: ../src/encoding.c:138 ../src/encoding.c:146 ../src/encoding.c:215
-msgid "Baltic"
-msgstr "بیلٹک"
-
-#: ../src/encoding.c:139 ../src/encoding.c:174 ../src/encoding.c:181
-#: ../src/encoding.c:183 ../src/encoding.c:189 ../src/encoding.c:209
-msgid "Cyrillic"
-msgstr "سیریلک"
-
-#: ../src/encoding.c:140 ../src/encoding.c:177 ../src/encoding.c:186
-#: ../src/encoding.c:214
-msgid "Arabic"
-msgstr "عربی"
-
-#: ../src/encoding.c:141 ../src/encoding.c:192 ../src/encoding.c:211
-msgid "Greek"
-msgstr "گریک"
-
-#: ../src/encoding.c:142
-msgid "Hebrew Visual"
-msgstr "ہبرو وژول"
-
-#: ../src/encoding.c:143 ../src/encoding.c:176 ../src/encoding.c:195
-#: ../src/encoding.c:213
-msgid "Hebrew"
-msgstr "ہبرو"
-
-#: ../src/encoding.c:144 ../src/encoding.c:175 ../src/encoding.c:199
-#: ../src/encoding.c:212
-msgid "Turkish"
-msgstr "ترکی"
-
-#: ../src/encoding.c:145
-msgid "Nordic"
-msgstr "نورڈک"
-
-#: ../src/encoding.c:147
-msgid "Celtic"
-msgstr "سیلٹک"
-
-#: ../src/encoding.c:149 ../src/encoding.c:198
-msgid "Romanian"
-msgstr "رومانوی"
-
-#: ../src/encoding.c:157
-msgid "Armenian"
-msgstr "ارمینیا"
-
-#: ../src/encoding.c:158 ../src/encoding.c:159 ../src/encoding.c:164
-msgid "Chinese Traditional"
-msgstr "چینی روایتی"
-
-#: ../src/encoding.c:160
-msgid "Cyrillic/Russian"
-msgstr "سیرلیک/رشیا"
-
-#: ../src/encoding.c:162 ../src/encoding.c:179 ../src/encoding.c:202
-msgid "Japanese"
-msgstr "جاپانی"
-
-#: ../src/encoding.c:163 ../src/encoding.c:180 ../src/encoding.c:182
-#: ../src/encoding.c:205
-msgid "Korean"
-msgstr "کوریا"
-
-#: ../src/encoding.c:166 ../src/encoding.c:167 ../src/encoding.c:168
-#: ../src/encoding.c:170
-msgid "Chinese Simplified"
-msgstr "چینی سادہ"
-
-#: ../src/encoding.c:169
-msgid "Georgian"
-msgstr "گرگورین"
-
-#: ../src/encoding.c:184 ../src/encoding.c:200
-msgid "Cyrillic/Ukrainian"
-msgstr "سیرلیک/اوکرینیا"
-
-#: ../src/encoding.c:188
-msgid "Croatian"
-msgstr "کرواتیا"
-
-#: ../src/encoding.c:190
-msgid "Hindi"
-msgstr "ہندی"
-
-#: ../src/encoding.c:191
-msgid "Farsi"
-msgstr "فارسی"
-
-#: ../src/encoding.c:193
-msgid "Gujarati"
-msgstr "گجراتی"
-
-#: ../src/encoding.c:194
-msgid "Gurmukhi"
-msgstr "گرمکھی"
-
-#: ../src/encoding.c:196
-msgid "Icelandic"
-msgstr "آئیس لینڈ"
-
-#: ../src/encoding.c:203 ../src/encoding.c:206 ../src/encoding.c:216
-msgid "Vietnamese"
-msgstr "ویتنام"
-
-#: ../src/encoding.c:204
-msgid "Thai"
-msgstr "تھائی"
-
 #. 0
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:121
 msgid "_File"
 msgstr "_فائل"
 
 #. 1
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:122
 msgid "_Edit"
 msgstr "_تدوین"
 
 #. 2
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:123
 msgid "_Tabs"
 msgstr "_ٹیب"
 
 #. 3
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:124
 msgid "_Help"
 msgstr "_ہدایات"
 
 #. 4
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:125
 #, fuzzy
 msgid "_New Window"
 msgstr "_نئی ونڈو"
 
 #. 5
-#: ../src/lxterminal.c:130
+#: ../src/lxterminal.c:126
 #, fuzzy
 msgid "New T_ab"
 msgstr "نیا _ٹیب"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:171
+#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
 msgid "_Close Tab"
 msgstr "ٹیب _بند کریں"
 
 #. 8
-#: ../src/lxterminal.c:133
+#: ../src/lxterminal.c:129
 #, fuzzy
 msgid "Close _Window"
 msgstr "_نئی ونڈو"
 
 #. 9
-#: ../src/lxterminal.c:134 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 #, fuzzy
 msgid "Cop_y"
 msgstr "_کاپی"
 
 #. 10
-#: ../src/lxterminal.c:135 ../src/lxterminal.c:161
+#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
 msgid "_Paste"
 msgstr "_پیسٹ"
 
 #. 11
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
 msgstr ""
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:134
 msgid "Zoom _In"
 msgstr ""
 
 #. 14
-#: ../src/lxterminal.c:139
+#: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
 msgstr ""
 
 #. 15
-#: ../src/lxterminal.c:140
+#: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
 msgstr ""
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
 #, fuzzy
 msgid "Preference_s"
 msgstr "ترجیحات"
 
 #. 18
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
 #, fuzzy
 msgid "Na_me Tab"
 msgstr "نیا _ٹیب"
 
 #. 19
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 #, fuzzy
 msgid "Pre_vious Tab"
 msgstr "_سابقہ ٹیب"
 
 #. 20
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
 #, fuzzy
 msgid "Ne_xt Tab"
 msgstr "_اگلا ٹیب"
 
 #. 21
-#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
 msgstr ""
 
 #. 22
-#: ../src/lxterminal.c:147 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
 msgstr ""
 
 #. 23
-#: ../src/lxterminal.c:148
+#: ../src/lxterminal.c:144
 msgid "_About"
 msgstr "_بابت"
 
-#: ../src/lxterminal.c:156
+#: ../src/lxterminal.c:152
 #, fuzzy
 msgid "New _Window"
 msgstr "_نئی ونڈو"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:153
 #, fuzzy
 msgid "New _Tab"
 msgstr "نیا _ٹیب"
 
-#: ../src/lxterminal.c:159
+#: ../src/lxterminal.c:155
 msgid "Copy _URL"
 msgstr ""
 
-#: ../src/lxterminal.c:162
+#: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
 msgstr ""
 
-#: ../src/lxterminal.c:573 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 #, fuzzy
 msgid "Name Tab"
 msgstr "نیا _ٹیب"
 
+#: ../src/lxterminal.c:570
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/lxterminal.c:571
+msgid "_OK"
+msgstr ""
+
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:742
+#: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
 "محمد علی مکی\n"
@@ -320,26 +178,26 @@ msgstr ""
 "مکی کا بلاگ\n"
 "http://makki.urducoder.com"
 
-#: ../src/lxterminal.c:748 ../src/lxterminal.c:782 ../src/preferences.c:274
+#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "ایل ایکس ٹرمنل"
 
-#: ../src/lxterminal.c:750
+#: ../src/lxterminal.c:748
 #, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "کاپی رائٹ (C) 2008-2017"
 
-#: ../src/lxterminal.c:751
+#: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
 msgstr "ٹرمنل ایمولیٹر برائے ایل ایکس ڈی ای پراجیکٹ"
 
-#: ../src/lxterminal.c:816
+#: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr ""
 
-#: ../src/lxterminal.c:817
+#: ../src/lxterminal.c:815
 msgid "Confirm close"
 msgstr ""
 
@@ -614,6 +472,111 @@ msgstr ""
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
 msgstr ""
+
+#~ msgid "West European"
+#~ msgstr "مغربی یورپ"
+
+#~ msgid "East European"
+#~ msgstr "مشرقی یورپ"
+
+#~ msgid "East Asian"
+#~ msgstr "مشرقی ایشیا"
+
+#~ msgid "SE & SW Asian"
+#~ msgstr "SE اور SW ایشین"
+
+#~ msgid "Middle Eastern"
+#~ msgstr "مشرقِ وسطی"
+
+#~ msgid "Unicode"
+#~ msgstr "یونیکوڈ"
+
+#~ msgid "Western"
+#~ msgstr "مغربی"
+
+#~ msgid "Central European"
+#~ msgstr "وسطی یورپ"
+
+#~ msgid "South European"
+#~ msgstr "جنوبی یورپ"
+
+#~ msgid "Baltic"
+#~ msgstr "بیلٹک"
+
+#~ msgid "Cyrillic"
+#~ msgstr "سیریلک"
+
+#~ msgid "Arabic"
+#~ msgstr "عربی"
+
+#~ msgid "Greek"
+#~ msgstr "گریک"
+
+#~ msgid "Hebrew Visual"
+#~ msgstr "ہبرو وژول"
+
+#~ msgid "Hebrew"
+#~ msgstr "ہبرو"
+
+#~ msgid "Turkish"
+#~ msgstr "ترکی"
+
+#~ msgid "Nordic"
+#~ msgstr "نورڈک"
+
+#~ msgid "Celtic"
+#~ msgstr "سیلٹک"
+
+#~ msgid "Romanian"
+#~ msgstr "رومانوی"
+
+#~ msgid "Armenian"
+#~ msgstr "ارمینیا"
+
+#~ msgid "Chinese Traditional"
+#~ msgstr "چینی روایتی"
+
+#~ msgid "Cyrillic/Russian"
+#~ msgstr "سیرلیک/رشیا"
+
+#~ msgid "Japanese"
+#~ msgstr "جاپانی"
+
+#~ msgid "Korean"
+#~ msgstr "کوریا"
+
+#~ msgid "Chinese Simplified"
+#~ msgstr "چینی سادہ"
+
+#~ msgid "Georgian"
+#~ msgstr "گرگورین"
+
+#~ msgid "Cyrillic/Ukrainian"
+#~ msgstr "سیرلیک/اوکرینیا"
+
+#~ msgid "Croatian"
+#~ msgstr "کرواتیا"
+
+#~ msgid "Hindi"
+#~ msgstr "ہندی"
+
+#~ msgid "Farsi"
+#~ msgstr "فارسی"
+
+#~ msgid "Gujarati"
+#~ msgstr "گجراتی"
+
+#~ msgid "Gurmukhi"
+#~ msgstr "گرمکھی"
+
+#~ msgid "Icelandic"
+#~ msgstr "آئیس لینڈ"
+
+#~ msgid "Vietnamese"
+#~ msgstr "ویتنام"
+
+#~ msgid "Thai"
+#~ msgstr "تھائی"
 
 #~ msgid "_Quit"
 #~ msgstr "_برخاست"
