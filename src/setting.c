@@ -70,9 +70,20 @@ ColorPreset color_presets[] = {
         }
     },
     {
-        .name = "Solarized",
-        .background_color = "#073642",
-        .foreground_color = "#eee8d5",
+        .name = "Solarized Dark",
+        .background_color = "#002b36",
+        .foreground_color = "#839496",
+        .palette = {
+            "#073642", "#dc322f", "#859900", "#b58900",
+            "#268bd2", "#d33682", "#2aa198", "#eee8d5",
+            "#002b36", "#cb4b16", "#586e75", "#657b83",
+            "#839496", "#6c71c4", "#93a1a1", "#fdf6e3"
+        }
+    },
+    {
+        .name = "Solarized Light",
+        .background_color = "#fdf6e3",
+        .foreground_color = "#657b83",
         .palette = {
             "#073642", "#dc322f", "#859900", "#b58900",
             "#268bd2", "#d33682", "#2aa198", "#eee8d5",
