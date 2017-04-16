@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2014-07-08 19:15+0000\n"
+"PO-Revision-Date: 2017-04-06 17:00+0600\n"
 "Last-Translator: system user <>\n"
 "Language-Team: MIME-Version: 1.0\n"
 "Language: bg\n"
@@ -82,17 +82,17 @@ msgstr "Върни п_ревъртяното"
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "Увеличаване"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "Отдалечаване"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "Нулиране на увелеличение"
 
 #. 16
 #. 17
@@ -152,16 +152,16 @@ msgstr "Име на раздела"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "_Откажи"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "_Приеми"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
-msgstr "Радослав Иванов"
+msgstr "Радослав Иванов\nПавел Христов"
 
 #: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
@@ -180,11 +180,11 @@ msgstr "Терминален емулатор за LXDE"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Вие ще затворите %d раздели. Наистина ли искате да продължите?"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "Потвърди затваряне"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -244,76 +244,76 @@ msgstr "Звуков сигнал"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Черен"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Червен"
 
 #: ../data/lxterminal-preferences.glade.h:17
 #, fuzzy
 msgid "Green"
-msgstr "Гръцки"
+msgstr "Зелен"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Кафяв"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Син"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Лилав"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Морско син"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
-
+msgstr "Сив"
+    
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Тъмно сив"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Светло червен"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Светло зелен"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Жълт"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Светло син"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Светло лилав"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Светло морско син"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Бял"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Цветова палитра"
 
 #: ../data/lxterminal-preferences.glade.h:32
-msgid "Palette Preset"
-msgstr ""
+msgid "Palette Preset"  
+msgstr "Предварително зададена цветова палитра"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -346,11 +346,11 @@ msgstr "Скрий бутоните за затваряне"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Размера на прозореца по подразбиране"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -370,7 +370,7 @@ msgstr "Деактивирай Alt-а за бързите клавиши в ме
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Деактивирай потвърждение, преди затваряне на прозорец с няколко раздела"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -379,68 +379,68 @@ msgstr "Допълнителни"
 #: ../data/lxterminal-preferences.glade.h:48
 #, fuzzy
 msgid "New Window"
-msgstr "_Нов прозорец"
+msgstr "Нов прозорец"
 
 #: ../data/lxterminal-preferences.glade.h:49
 #, fuzzy
 msgid "New Tab"
-msgstr "Н_ов раздел"
+msgstr "Нов раздел"
 
 #: ../data/lxterminal-preferences.glade.h:50
 #, fuzzy
 msgid "Close Tab"
-msgstr "_Затваряне на раздела"
+msgstr "Затваряне на раздела"
 
 #: ../data/lxterminal-preferences.glade.h:51
 #, fuzzy
 msgid "Close Window"
-msgstr "_Нов прозорец"
+msgstr "Нов прозорец"
 
 #: ../data/lxterminal-preferences.glade.h:52
 #, fuzzy
 msgid "Copy"
-msgstr "Копирай _адреса"
+msgstr "Копирай aдреса"
 
 #: ../data/lxterminal-preferences.glade.h:53
 #, fuzzy
 msgid "Paste"
-msgstr "_Поставяне"
+msgstr "Поставяне"
 
 #: ../data/lxterminal-preferences.glade.h:55
 #, fuzzy
 msgid "Previous Tab"
-msgstr "Пре_дишен раздел"
+msgstr "Предишен раздел"
 
 #: ../data/lxterminal-preferences.glade.h:56
 #, fuzzy
 msgid "Next Tab"
-msgstr "_Следващ раздел"
+msgstr "Следващ раздел"
 
 #: ../data/lxterminal-preferences.glade.h:57
 #, fuzzy
 msgid "Move Tab Left"
-msgstr "Премести раздела от_ляво"
+msgstr "Премести раздела отляво"
 
 #: ../data/lxterminal-preferences.glade.h:58
 #, fuzzy
 msgid "Move Tab Right"
-msgstr "Премести раздела от_дясно"
+msgstr "Премести раздела отдясно"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Увеличаване"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Отдалечаване"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Нулиране на увелеличение"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "Клавиши за бърз достъп"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
