@@ -22,7 +22,6 @@
 #include <config.h>
 #endif
 
-#include <X11/Xutil.h>
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
