@@ -56,37 +56,37 @@ static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition co
     /* Process message. */
     if (len > 0)
     {
-	/* Skip the the first (cur_dir) and last '\0' for argument count */
+    /* Skip the the first (cur_dir) and last '\0' for argument count */
         gint argc = -1;
-	gsize i;
-	for (i = 0; i < len; i ++)
-	{
-	    if (msg[i] == '\0')
-	    {
-	    	argc ++;
-	    }
-	}
-	gchar * cur_dir = msg;
-	gchar * * argv = g_malloc(argc * sizeof(char *));
-	gint nul_count = 0;
-	for (i = 0; i < len; i ++)
-	{
-	    if (msg[i] == '\0' && nul_count < argc)
-	    {
-		argv[nul_count] = &msg[i + 1];
-	    	nul_count ++;
-	    }
-	}
-        /* Parse arguments.
-         * Initialize a new LXTerminal and create a new window. */
-        CommandArguments arguments;
-        lxterminal_process_arguments(argc, argv, &arguments);
-        g_free(argv);
-	/* Make sure working directory matches that of the client process */
-	if (arguments.working_directory == NULL)
-	{
-	    arguments.working_directory = g_strdup(cur_dir);
-	}
+    gsize i;
+    for (i = 0; i < len; i ++)
+    {
+        if (msg[i] == '\0')
+        {
+            argc ++;
+        }
+    }
+    gchar * cur_dir = msg;
+    gchar * * argv = g_malloc(argc * sizeof(char *));
+    gint nul_count = 0;
+    for (i = 0; i < len; i ++)
+    {
+        if (msg[i] == '\0' && nul_count < argc)
+        {
+        argv[nul_count] = &msg[i + 1];
+            nul_count ++;
+        }
+    }
+    /* Parse arguments.
+     * Initialize a new LXTerminal and create a new window. */
+    CommandArguments arguments;
+    lxterminal_process_arguments(argc, argv, &arguments);
+    g_free(argv);
+    /* Make sure working directory matches that of the client process */
+    if (arguments.working_directory == NULL)
+    {
+        arguments.working_directory = g_strdup(cur_dir);
+    }
         lxterminal_initialize(lxtermwin, &arguments);
     }
     g_free(msg);
@@ -230,22 +230,24 @@ gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, gint argc, gchar
         g_io_channel_set_encoding(gio, NULL, NULL);
 
         /* Push current dir in case it is needed later */
-	gchar * cur_dir = g_get_current_dir();
+        gchar * cur_dir = g_get_current_dir();
         g_io_channel_write_chars(gio, cur_dir, -1, NULL, NULL);
-	/* Use "" as a pointer to '\0' since g_io_channel_write_chars() won't accept NULL */
-	g_io_channel_write_chars(gio, "", 1, NULL, NULL);
-	g_free(cur_dir);
+    /* Use "" as a pointer to '\0' since g_io_channel_write_chars() won't accept NULL */
+    g_io_channel_write_chars(gio, "", 1, NULL, NULL);
+    g_free(cur_dir);
 
         /* push all of argv. */
-	gint i;
-	for (i = 0; i < argc; i ++)
-	{
+    gint i;
+    for (i = 0; i < argc; i ++)
+    {
             g_io_channel_write_chars(gio, argv[i], -1, NULL, NULL);
-	    g_io_channel_write_chars(gio, "", 1, NULL, NULL);
-	}
+        g_io_channel_write_chars(gio, "", 1, NULL, NULL);
+    }
 
         g_io_channel_flush(gio, NULL);
         g_io_channel_unref(gio);
+
+    close(fd);
         return FALSE;
     }
 }

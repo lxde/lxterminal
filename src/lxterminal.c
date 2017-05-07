@@ -824,18 +824,21 @@ static gboolean terminal_close_window_confirmation_dialog(LXTerminal * terminal)
 /* Weak-notify callback for LXTerminal object. */
 static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_object_was)
 {
+    LXTermWindow * lxtermwin = terminal->parent;
+
     /* If last window, exit main loop. */
-    if (terminal->parent->windows->len == 1)
+    if (lxtermwin->windows->len == 1) {
         gtk_main_quit();
+    }
 
     else
     {
         /* Remove the element and decrease the index number of each succeeding element. */
-        g_ptr_array_remove_index(terminal->parent->windows, terminal->index);
+        g_ptr_array_remove_index(lxtermwin->windows, terminal->index);
         guint i;
-        for (i = terminal->index; i < terminal->parent->windows->len; i++)
+        for (i = terminal->index; i < lxtermwin->windows->len; i++)
         {
-            LXTerminal * t = g_ptr_array_index(terminal->parent->windows, i);
+            LXTerminal * t = g_ptr_array_index(lxtermwin->windows, i);
             t->index --;
         }
 
