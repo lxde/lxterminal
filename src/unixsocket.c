@@ -141,7 +141,6 @@ gboolean lxterminal_socket_initialize(LXTermWindow * lxtermwin, gint argc, gchar
 
     /* Formulate the path for the Unix domain socket. */
     gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket-%s", g_get_user_runtime_dir(), gdk_display_get_name(gdk_display_get_default()));
-    printf("%s\n", socket_path);
 
     /* Create socket. */
     int fd = socket(PF_UNIX, SOCK_STREAM, 0);
