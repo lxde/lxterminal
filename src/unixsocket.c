@@ -30,12 +30,19 @@
 #include "lxterminal.h"
 #include "unixsocket.h"
 
-static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition condition, LXTermWindow * lxtermwin);
+typedef struct _lxterminal_socket_client_info {
+    LXTermWindow * lxtermwin;
+    int fd;
+} LXTermSocketClientInfo;
+
+static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition condition, LXTermSocketClientInfo * info);
 static gboolean lxterminal_socket_accept_client(GIOChannel * source, GIOCondition condition, LXTermWindow * lxtermwin);
 
 /* Handler for successful read on communication socket. */
-static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition condition, LXTermWindow * lxtermwin)
+static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition condition, LXTermSocketClientInfo * info)
 {
+    LXTermWindow * lxtermwin = info->lxtermwin;
+    int fd = info->fd;
     /* Read message. */
     gchar * msg = NULL;
     gsize len = 0;
@@ -87,6 +94,8 @@ static gboolean lxterminal_socket_read_channel(GIOChannel * gio, GIOCondition co
     /* If there was a disconnect, discontinue read.  Otherwise, continue. */
     if (condition & G_IO_HUP)
     {
+        close(fd);
+        g_free(info);
         return FALSE;
     }
     return TRUE;
@@ -111,9 +120,13 @@ static gboolean lxterminal_socket_accept_client(GIOChannel * source, GIOConditio
             g_warning("Cannot create new GIOChannel\n");
         else
         {
+            LXTermSocketClientInfo * info = g_malloc(sizeof(LXTermSocketClientInfo));
+            info->lxtermwin = lxtermwin;
+            info->fd = fd;
+
             /* Set up the glib I/O channel and add it to the event loop. */
             g_io_channel_set_encoding(gio, NULL, NULL);
-            g_io_add_watch(gio, G_IO_IN | G_IO_HUP, (GIOFunc) lxterminal_socket_read_channel, lxtermwin);
+            g_io_add_watch(gio, G_IO_IN | G_IO_HUP, (GIOFunc) lxterminal_socket_read_channel, info);
             g_io_channel_unref(gio);
         }
     }
