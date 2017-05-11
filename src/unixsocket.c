@@ -157,8 +157,7 @@ static void send_msg_to_controller(int fd, gint argc, gchar** argv) {
 
     /* push all of argv. */
     gint i;
-    for (i = 0; i < argc; i ++)
-    {
+    for (i = 0; i < argc; i ++) {
         g_io_channel_write_chars(gio, argv[i], -1, NULL, NULL);
         g_io_channel_write_chars(gio, "", 1, NULL, NULL);
     }
