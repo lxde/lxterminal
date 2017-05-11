@@ -253,10 +253,14 @@ static gboolean handle_request(GIOChannel* gio, GIOCondition condition, ClientIn
         lxterminal_initialize(lxtermwin, &arguments);
     }
 
-    g_free(msg);
-    g_free(info);
-    close(fd);
-    return FALSE;
+    if (condition & G_IO_HUP) {
+        g_free(msg);
+        g_free(info);
+        close(fd);
+        return FALSE;
+    }
+
+    return TRUE;
 }
 
 gboolean lxterminal_socket_initialize(LXTermWindow* lxtermwin, gint argc, gchar** argv) {
