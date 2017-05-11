@@ -1075,6 +1075,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     {
         vte_terminal_set_background_transparent(VTE_TERMINAL(term->vte), setting->background_alpha == 65535 ? FALSE : TRUE);
         vte_terminal_set_background_saturation(VTE_TERMINAL(term->vte), 1 - ((double) setting->background_alpha / 65535));
+        vte_terminal_set_background_tint_color(VTE_TERMINAL(term->vte), &setting->background_color);
     }
 #endif
 
