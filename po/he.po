@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2014-07-08 19:15+0000\n"
-"Last-Translator: system user <>\n"
+"PO-Revision-Date: 2017-05-22 21:39+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1404846925.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1495489169.107157\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -41,13 +41,11 @@ msgstr "ע_זרה"
 
 #. 4
 #: ../src/lxterminal.c:125
-#, fuzzy
 msgid "_New Window"
 msgstr "חלון _חדש"
 
 #. 5
 #: ../src/lxterminal.c:126
-#, fuzzy
 msgid "New T_ab"
 msgstr "ל_שונית חדשה"
 
@@ -59,9 +57,8 @@ msgstr "_סגירת הלשונית"
 
 #. 8
 #: ../src/lxterminal.c:129
-#, fuzzy
 msgid "Close _Window"
-msgstr "חלון _חדש"
+msgstr "_סגירת חלון"
 
 #. 9
 #: ../src/lxterminal.c:130 ../src/lxterminal.c:156
@@ -82,17 +79,17 @@ msgstr "מחיקת ה_גלילה לאחור"
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "הת_קרבות"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "הת_רחקות"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_איפוס תקריב"
 
 #. 16
 #. 17
@@ -152,11 +149,11 @@ msgstr "לשונית שם"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "_ביטול"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "_אישור"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
@@ -171,9 +168,8 @@ msgid "LXTerminal"
 msgstr "תכנית המסוף LXTerminal"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
-msgstr "כל הזכויות שמורות (C)‏ 2014-2008"
+msgstr "כל הזכויות שמורות (C)‏ 2017-2008"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -186,7 +182,7 @@ msgstr ""
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "אישור סגירה"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -250,24 +246,23 @@ msgstr "פעמון צליל"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "שחור"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "אדום"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "יווני"
+msgstr "ירוק"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "חום"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "כחול"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
@@ -279,7 +274,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "אפור"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
@@ -287,15 +282,15 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "אדום בוהק"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "ירוק בוהק"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "צהוב"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
@@ -383,14 +378,12 @@ msgid "Advanced"
 msgstr "מתקדם"
 
 #: ../data/lxterminal-preferences.glade.h:48
-#, fuzzy
 msgid "New Window"
-msgstr "חלון _חדש"
+msgstr "חלון חדש"
 
 #: ../data/lxterminal-preferences.glade.h:49
-#, fuzzy
 msgid "New Tab"
-msgstr "ל_שונית חדשה"
+msgstr "לשונית חדשה"
 
 #: ../data/lxterminal-preferences.glade.h:50
 #, fuzzy
@@ -446,7 +439,7 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "מקשי קיצור"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -458,7 +451,7 @@ msgstr "שימוש בשורת הפקודה"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "מסוף;קונסול;קונסולה;שורת פקודה;הפעלה;הרצה;חלון שחור;טרמינל;"
 
 #~ msgid "West European"
 #~ msgstr "מערב־אירופאי"

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2014-10-31 17:49+0000\n"
-"Last-Translator: system user <>\n"
+"PO-Revision-Date: 2017-05-22 22:58+0000\n"
+"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1414777775.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1495493935.545526\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -41,9 +41,8 @@ msgstr "_Hjælp"
 
 #. 4
 #: ../src/lxterminal.c:125
-#, fuzzy
 msgid "_New Window"
-msgstr "Nyt _vindue"
+msgstr "_Nyt vindue"
 
 #. 5
 #: ../src/lxterminal.c:126
@@ -59,9 +58,8 @@ msgstr "_Luk faneblad"
 
 #. 8
 #: ../src/lxterminal.c:129
-#, fuzzy
 msgid "Close _Window"
-msgstr "Nyt _vindue"
+msgstr "Luk _vindue"
 
 #. 9
 #: ../src/lxterminal.c:130 ../src/lxterminal.c:156
@@ -81,18 +79,19 @@ msgstr "Skjul r_ullebjælken"
 #. 12
 #. 13
 #: ../src/lxterminal.c:134
+#, fuzzy
 msgid "Zoom _In"
-msgstr ""
+msgstr "Zoom _ind"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "Zoom _ud"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "Zoom _nulstil"
 
 #. 16
 #. 17
@@ -151,18 +150,19 @@ msgid "Name Tab"
 msgstr "Navngiv faneblad"
 
 #: ../src/lxterminal.c:570
+#, fuzzy
 msgid "_Cancel"
-msgstr ""
+msgstr "_Annullér"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
-"Dansk-gruppen <dansk@dansk-gruppen.dk\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Joe Hansen, 2010\n"
 "Vidar Jon Bauge\n"
 "Charlie Tyrrestrup\n"
@@ -174,9 +174,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
-msgstr "Ophavsret 2008-2017"
+msgstr "Ophavsret (C) 2008-2017"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -188,8 +187,9 @@ msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr ""
 
 #: ../src/lxterminal.c:815
+#, fuzzy
 msgid "Confirm close"
-msgstr ""
+msgstr "Bekræft lukning"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -248,41 +248,46 @@ msgid "Audible bell"
 msgstr "Hørbar klokke"
 
 #: ../data/lxterminal-preferences.glade.h:15
+#, fuzzy
 msgid "Black"
-msgstr ""
+msgstr "Sort"
 
 #: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
 msgid "Red"
-msgstr ""
+msgstr "Rød"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Græsk"
+msgstr "Grøn"
 
 #: ../data/lxterminal-preferences.glade.h:18
+#, fuzzy
 msgid "Brown"
-msgstr ""
+msgstr "Brun"
 
 #: ../data/lxterminal-preferences.glade.h:19
+#, fuzzy
 msgid "Blue"
-msgstr ""
+msgstr "Blå"
 
 #: ../data/lxterminal-preferences.glade.h:20
+#, fuzzy
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:21
+#, fuzzy
 msgid "Cyan"
-msgstr ""
+msgstr "Cyan"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Grå"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Mørkegrå"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
@@ -293,28 +298,32 @@ msgid "Bright Green"
 msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:26
+#, fuzzy
 msgid "Yellow"
-msgstr ""
+msgstr "Gul"
 
 #: ../data/lxterminal-preferences.glade.h:27
+#, fuzzy
 msgid "Bright Blue"
-msgstr ""
+msgstr "Klar blå"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Klar magenta"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Klar cyan"
 
 #: ../data/lxterminal-preferences.glade.h:30
+#, fuzzy
 msgid "White"
-msgstr ""
+msgstr "Hvid"
 
 #: ../data/lxterminal-preferences.glade.h:31
+#, fuzzy
 msgid "Palette"
-msgstr ""
+msgstr "Palet"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
@@ -345,13 +354,12 @@ msgid "Hide Close buttons"
 msgstr "Skjul lukknapper"
 
 #: ../data/lxterminal-preferences.glade.h:39
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Skjul lukknapper"
+msgstr "Skjul musemarkør"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Standardvinduesstørrelse"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
@@ -367,11 +375,11 @@ msgstr "Vælg efter ord-tegn"
 
 #: ../data/lxterminal-preferences.glade.h:44
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Deaktiver menugenvejstast (F10 som standard)"
+msgstr "Deaktivér menugenvejstast (F10 som standard)"
 
 #: ../data/lxterminal-preferences.glade.h:45
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Deaktiver brug af Alt-n til faneblade og menu"
+msgstr "Deaktivér brug af Alt-n til faneblade og menu"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
@@ -382,70 +390,60 @@ msgid "Advanced"
 msgstr "Avanceret"
 
 #: ../data/lxterminal-preferences.glade.h:48
-#, fuzzy
 msgid "New Window"
-msgstr "Nyt _vindue"
+msgstr "Nyt vindue"
 
 #: ../data/lxterminal-preferences.glade.h:49
-#, fuzzy
 msgid "New Tab"
-msgstr "Nyt _faneblad"
+msgstr "Nyt faneblad"
 
 #: ../data/lxterminal-preferences.glade.h:50
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Luk faneblad"
+msgstr "Luk faneblad"
 
 #: ../data/lxterminal-preferences.glade.h:51
-#, fuzzy
 msgid "Close Window"
-msgstr "Nyt _vindue"
+msgstr "Nyt vindue"
 
 #: ../data/lxterminal-preferences.glade.h:52
-#, fuzzy
 msgid "Copy"
-msgstr "Kopier _URL"
+msgstr "Kopiér"
 
 #: ../data/lxterminal-preferences.glade.h:53
-#, fuzzy
 msgid "Paste"
-msgstr "_Indsæt"
+msgstr "Indsæt"
 
 #: ../data/lxterminal-preferences.glade.h:55
-#, fuzzy
 msgid "Previous Tab"
-msgstr "F_orrige faneblad"
+msgstr "Forrige faneblad"
 
 #: ../data/lxterminal-preferences.glade.h:56
-#, fuzzy
 msgid "Next Tab"
-msgstr "N_æste faneblad"
+msgstr "Næste faneblad"
 
 #: ../data/lxterminal-preferences.glade.h:57
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Flyt faneblad til _venstre"
+msgstr "Flyt faneblad til venstre"
 
 #: ../data/lxterminal-preferences.glade.h:58
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Flyt faneblad til _højre"
+msgstr "Flyt faneblad til højre"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Zoom ind"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Zoom ud"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Zoom nulstil"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "Genveje"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
