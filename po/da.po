@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-22 22:58+0000\n"
+"PO-Revision-Date: 2017-05-22 23:05+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1495493935.545526\n"
+"X-POOTLE-MTIME: 1495494355.982034\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -150,9 +150,8 @@ msgid "Name Tab"
 msgstr "Navngiv faneblad"
 
 #: ../src/lxterminal.c:570
-#, fuzzy
 msgid "_Cancel"
-msgstr "_Annullér"
+msgstr "_Annuller"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
@@ -184,7 +183,7 @@ msgstr "Terminalemulator for LXDE-projektet"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Du er ved at lukke %d faneblade. Er du sikker på, at du vil fortsætte?"
 
 #: ../src/lxterminal.c:815
 #, fuzzy
@@ -291,11 +290,11 @@ msgstr "Mørkegrå"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Klar rød"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Klar grøn"
 
 #: ../data/lxterminal-preferences.glade.h:26
 #, fuzzy
@@ -303,7 +302,6 @@ msgid "Yellow"
 msgstr "Gul"
 
 #: ../data/lxterminal-preferences.glade.h:27
-#, fuzzy
 msgid "Bright Blue"
 msgstr "Klar blå"
 
@@ -455,7 +453,7 @@ msgstr "Brug kommandolinjen"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "console;command line;execute;konsol;kommandolinje;eksekver;"
 
 #~ msgid "West European"
 #~ msgstr "Vesteuropæisk"
