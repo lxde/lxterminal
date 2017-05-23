@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2016-12-04 19:22+0000\n"
+"PO-Revision-Date: 2017-05-23 12:48+0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
-"X-POOTLE-MTIME: 1436648037.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1495543695.828547\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -149,11 +149,11 @@ msgstr "Dar nome ao separador"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740

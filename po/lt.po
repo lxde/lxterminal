@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-23 08:14+0000\n"
+"PO-Revision-Date: 2017-05-23 09:27+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lietuvių <>\n"
 "Language: lt\n"
@@ -21,7 +21,7 @@ msgstr ""
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.8\n"
 "X-Language: lt_LT\n"
-"X-POOTLE-MTIME: 1495527247.309349\n"
+"X-POOTLE-MTIME: 1495531634.233375\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -332,7 +332,7 @@ msgstr "Slinkti eilutes"
 
 #: ../data/lxterminal-preferences.glade.h:36
 msgid "Hide scroll bar"
-msgstr "Slėpti slinkimo juostą"
+msgstr "Slėpti slankjuostę"
 
 #: ../data/lxterminal-preferences.glade.h:37
 msgid "Hide menu bar"
@@ -356,7 +356,7 @@ msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
-msgstr "Ekranas"
+msgstr "Rodymas"
 
 #: ../data/lxterminal-preferences.glade.h:43
 msgid "Select-by-word characters"
@@ -364,85 +364,75 @@ msgstr "„Pasirinkti po žodį“ simboliai"
 
 #: ../data/lxterminal-preferences.glade.h:44
 msgid "Disable menu shortcut key (F10 by default)"
-msgstr "Išjungti spartųjį meniu klavišą (F10)"
+msgstr "Išjungti spartųjį meniu klavišą (pagal numatymą F10)"
 
 #: ../data/lxterminal-preferences.glade.h:45
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Neleisti naudoti Alt-n kortelėms ir meniu"
+msgstr "Išjungti Alt-n naudojimą kortelėms ir meniu"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Išjungti patvirtinimą, užveriant langą su keliomis kortelėmis"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
-msgstr "Sudėtingesni"
+msgstr "Išplėstiniai"
 
 #: ../data/lxterminal-preferences.glade.h:48
-#, fuzzy
 msgid "New Window"
-msgstr "Naujas _langas"
+msgstr "Naujas langas"
 
 #: ../data/lxterminal-preferences.glade.h:49
-#, fuzzy
 msgid "New Tab"
-msgstr "_Nauja kortelė"
+msgstr "Nauja kortelė"
 
 #: ../data/lxterminal-preferences.glade.h:50
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Uždaryti kortelę"
+msgstr "Užverti kortelę"
 
 #: ../data/lxterminal-preferences.glade.h:51
-#, fuzzy
 msgid "Close Window"
-msgstr "Naujas _langas"
+msgstr "Užverti langą"
 
 #: ../data/lxterminal-preferences.glade.h:52
-#, fuzzy
 msgid "Copy"
-msgstr "_Kopijuoti URL"
+msgstr "Kopijuoti"
 
 #: ../data/lxterminal-preferences.glade.h:53
-#, fuzzy
 msgid "Paste"
-msgstr "_Įdėti"
+msgstr "Įdėti"
 
 #: ../data/lxterminal-preferences.glade.h:55
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Ankstesnė kortelė"
+msgstr "Ankstesnė kortelė"
 
 #: ../data/lxterminal-preferences.glade.h:56
-#, fuzzy
 msgid "Next Tab"
-msgstr "_Kita kortelė"
+msgstr "Kita kortelė"
 
 #: ../data/lxterminal-preferences.glade.h:57
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Perkelti kortelę _kairėn"
+msgstr "Perkelti kortelę kairėn"
 
 #: ../data/lxterminal-preferences.glade.h:58
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Perkelti kortelę _dešinėn"
+msgstr "Perkelti kortelę dešinėn"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Didinti"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Mažinti"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Atstatyti mastelį"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "Spartieji klavišai"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -454,7 +444,7 @@ msgstr "Naudoti komandų eilutę"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "pultas;komandų eilutė;vykdyti;"
 
 #~ msgid "West European"
 #~ msgstr "Vakarų Europos"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-22 23:05+0000\n"
+"PO-Revision-Date: 2017-05-23 17:28+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1495494355.982034\n"
+"X-POOTLE-MTIME: 1495560500.880685\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -46,7 +46,6 @@ msgstr "_Nyt vindue"
 
 #. 5
 #: ../src/lxterminal.c:126
-#, fuzzy
 msgid "New T_ab"
 msgstr "Nyt _faneblad"
 
@@ -79,7 +78,6 @@ msgstr "Skjul r_ullebjælken"
 #. 12
 #. 13
 #: ../src/lxterminal.c:134
-#, fuzzy
 msgid "Zoom _In"
 msgstr "Zoom _ind"
 
@@ -186,7 +184,6 @@ msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr "Du er ved at lukke %d faneblade. Er du sikker på, at du vil fortsætte?"
 
 #: ../src/lxterminal.c:815
-#, fuzzy
 msgid "Confirm close"
 msgstr "Bekræft lukning"
 
@@ -247,12 +244,10 @@ msgid "Audible bell"
 msgstr "Hørbar klokke"
 
 #: ../data/lxterminal-preferences.glade.h:15
-#, fuzzy
 msgid "Black"
 msgstr "Sort"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
 msgid "Red"
 msgstr "Rød"
 
@@ -261,22 +256,18 @@ msgid "Green"
 msgstr "Grøn"
 
 #: ../data/lxterminal-preferences.glade.h:18
-#, fuzzy
 msgid "Brown"
 msgstr "Brun"
 
 #: ../data/lxterminal-preferences.glade.h:19
-#, fuzzy
 msgid "Blue"
 msgstr "Blå"
 
 #: ../data/lxterminal-preferences.glade.h:20
-#, fuzzy
 msgid "Magenta"
 msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:21
-#, fuzzy
 msgid "Cyan"
 msgstr "Cyan"
 
@@ -297,7 +288,6 @@ msgid "Bright Green"
 msgstr "Klar grøn"
 
 #: ../data/lxterminal-preferences.glade.h:26
-#, fuzzy
 msgid "Yellow"
 msgstr "Gul"
 
@@ -314,18 +304,16 @@ msgid "Bright Cyan"
 msgstr "Klar cyan"
 
 #: ../data/lxterminal-preferences.glade.h:30
-#, fuzzy
 msgid "White"
 msgstr "Hvid"
 
 #: ../data/lxterminal-preferences.glade.h:31
-#, fuzzy
 msgid "Palette"
 msgstr "Palet"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Palet forudindstilling"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -361,7 +349,7 @@ msgstr "Standardvinduesstørrelse"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -381,7 +369,7 @@ msgstr "Deaktivér brug af Alt-n til faneblade og menu"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Deaktivér bekræftelse inden lukning af et vindue med flere faneblade"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
