@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-22 21:39+0000\n"
+"PO-Revision-Date: 2017-05-23 06:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: he\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1495489169.107157\n"
+"X-POOTLE-MTIME: 1495522671.796582\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -278,7 +278,7 @@ msgstr "אפור"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "אפור כהה"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
@@ -306,15 +306,15 @@ msgstr ""
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "לבן"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "לוח צבעים"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "ערכת לוח צבעים"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -341,13 +341,12 @@ msgid "Hide Close buttons"
 msgstr "הסתרת לחצני הסגירה"
 
 #: ../data/lxterminal-preferences.glade.h:39
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "הסתרת לחצני הסגירה"
+msgstr "הסתרת סמן העכבר"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "גודל החלון כבררת מחדל"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
@@ -386,56 +385,48 @@ msgid "New Tab"
 msgstr "לשונית חדשה"
 
 #: ../data/lxterminal-preferences.glade.h:50
-#, fuzzy
 msgid "Close Tab"
-msgstr "_סגירת הלשונית"
+msgstr "סגירת לשונית"
 
 #: ../data/lxterminal-preferences.glade.h:51
-#, fuzzy
 msgid "Close Window"
-msgstr "חלון _חדש"
+msgstr "סגירת החלון"
 
 #: ../data/lxterminal-preferences.glade.h:52
-#, fuzzy
 msgid "Copy"
-msgstr "העתקת ה_כתובת"
+msgstr "העתקה"
 
 #: ../data/lxterminal-preferences.glade.h:53
-#, fuzzy
 msgid "Paste"
-msgstr "ה_דבק"
+msgstr "הדבקה"
 
 #: ../data/lxterminal-preferences.glade.h:55
-#, fuzzy
 msgid "Previous Tab"
-msgstr "הלשונית ה_קודמת"
+msgstr "הלשונית הקודמת"
 
 #: ../data/lxterminal-preferences.glade.h:56
-#, fuzzy
 msgid "Next Tab"
-msgstr "הלשונית ה_באה"
+msgstr "הלשונית הבאה"
 
 #: ../data/lxterminal-preferences.glade.h:57
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "העברת הלשונית _שמאלה"
+msgstr "העברת הלשונית שמאלה"
 
 #: ../data/lxterminal-preferences.glade.h:58
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "העברת הלשונית _ימינה"
+msgstr "העברת הלשונית ימינה"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "התקרבות"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "התרחקות"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "איפוס התקריב"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
