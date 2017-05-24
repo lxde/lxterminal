@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-23 17:28+0000\n"
+"PO-Revision-Date: 2017-05-23 17:49+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1495560500.880685\n"
+"X-POOTLE-MTIME: 1495561763.532638\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -63,7 +63,7 @@ msgstr "Luk _vindue"
 #. 9
 #: ../src/lxterminal.c:130 ../src/lxterminal.c:156
 msgid "Cop_y"
-msgstr "_Kopier"
+msgstr "_Kopiér"
 
 #. 10
 #: ../src/lxterminal.c:131 ../src/lxterminal.c:157
@@ -137,7 +137,7 @@ msgstr "Nyt _faneblad"
 
 #: ../src/lxterminal.c:155
 msgid "Copy _URL"
-msgstr "Kopier _URL"
+msgstr "Kopiér _URL"
 
 #: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
