@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2015-08-16 11:08+0000\n"
+"PO-Revision-Date: 2017-05-30 16:23+0000\n"
 "Last-Translator: Davidmp <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <josep.sanchez@ubuntu.cat>\n"
 "Language: ca\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1439723309.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1496161418.573755\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -149,11 +149,11 @@ msgstr "Anomena la pestanya"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancel·la"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "_D'acord"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
@@ -166,7 +166,6 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Copyright (C) 2008-2017"
 
@@ -248,7 +247,6 @@ msgid "Red"
 msgstr "Vermell"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
 msgstr "Verd"
 
@@ -361,9 +359,8 @@ msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Inhabilita les dreceres de teclat del menú (F10 per defecte)"
 
 #: ../data/lxterminal-preferences.glade.h:45
-#, fuzzy
 msgid "Disable using Alt-n for tabs and menu"
-msgstr "Inhabilita el canvi de pestanyes amb Alt-n"
+msgstr "Inhabilita l'ús d'Alt-n per a les pestanyes i el menú"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
@@ -411,9 +408,8 @@ msgid "Move Tab Left"
 msgstr "Vés a la pestanya esquerra"
 
 #: ../data/lxterminal-preferences.glade.h:58
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Vés a la pestanya dreta"
+msgstr "Ves a la pestanya de la dreta"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
