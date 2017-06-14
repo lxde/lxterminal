@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-30 16:23+0000\n"
+"PO-Revision-Date: 2017-06-09 15:03+0000\n"
 "Last-Translator: Davidmp <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <josep.sanchez@ubuntu.cat>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1496161418.573755\n"
+"X-POOTLE-MTIME: 1497020592.401421\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -115,12 +115,12 @@ msgstr "Pestaya següe_nt"
 #. 21
 #: ../src/lxterminal.c:142 ../src/lxterminal.c:165
 msgid "Move Tab _Left"
-msgstr "Vés a _la pestanya esquerra"
+msgstr "Mou la pestanya a _l'esquerra"
 
 #. 22
 #: ../src/lxterminal.c:143 ../src/lxterminal.c:166
 msgid "Move Tab _Right"
-msgstr "Vés a la pestanya de la _dreta"
+msgstr "Mou la pestanya a la d_reta"
 
 #. 23
 #: ../src/lxterminal.c:144
@@ -405,11 +405,11 @@ msgstr "Pestanya següent"
 
 #: ../data/lxterminal-preferences.glade.h:57
 msgid "Move Tab Left"
-msgstr "Vés a la pestanya esquerra"
+msgstr "Mou la pestanya a l'esquerra"
 
 #: ../data/lxterminal-preferences.glade.h:58
 msgid "Move Tab Right"
-msgstr "Ves a la pestanya de la dreta"
+msgstr "Mou la pestanya a la dreta"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2014-07-08 19:15+0000\n"
-"Last-Translator: system user <>\n"
+"PO-Revision-Date: 2017-06-04 10:05+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1404846928.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1496570745.361208\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -41,15 +41,13 @@ msgstr "Ba_ntuan"
 
 #. 4
 #: ../src/lxterminal.c:125
-#, fuzzy
 msgid "_New Window"
-msgstr "_Jendela Baru"
+msgstr "Je_ndela Baru"
 
 #. 5
 #: ../src/lxterminal.c:126
-#, fuzzy
 msgid "New T_ab"
-msgstr "_Tab Baru"
+msgstr "T_ab Baru"
 
 #. 6
 #. 7
@@ -59,9 +57,8 @@ msgstr "_Tutup Tab"
 
 #. 8
 #: ../src/lxterminal.c:129
-#, fuzzy
 msgid "Close _Window"
-msgstr "_Jendela Baru"
+msgstr "Tutup _Jendela"
 
 #. 9
 #: ../src/lxterminal.c:130 ../src/lxterminal.c:156
@@ -82,17 +79,17 @@ msgstr "_Bersihkan gulung balik"
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "Per_besar"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "Per_kecil"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_Reset Zum"
 
 #. 16
 #. 17
@@ -152,11 +149,11 @@ msgstr "Tab Nama"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "_Batal"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
@@ -171,7 +168,6 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
 msgstr "Hak Cipta (C) 2008-2017"
 
@@ -182,11 +178,11 @@ msgstr "Emulator terminal untuk proyek LXDE"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Anda akan menutup %d tab. Yakin ingin melanjutkan?"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "Konfirmasi penutupan"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -246,76 +242,75 @@ msgstr "Bel bersuara"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Hitam"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Merah"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Yunani"
+msgstr "Hijau"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Coklat"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Biru"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Cyan"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Kelabu"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Kelabu gelap"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Merah Cerah"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Hijau Cerah"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Kuning"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Biru Cerah"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Magenta Cerah"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Cyan Cerah"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Putih"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Palet"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Pratata Palet"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -342,17 +337,16 @@ msgid "Hide Close buttons"
 msgstr "Sembunyikan tombol Tutup"
 
 #: ../data/lxterminal-preferences.glade.h:39
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Sembunyikan tombol Tutup"
+msgstr "Sembunyikan penunjuk tetikus"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Ukuran jendela baku"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -373,76 +367,67 @@ msgstr "Nonaktifkan penggunaan Alt-n untuk tab dan menu"
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
 msgstr ""
+"Nonaktifkan konfirmasi sebelum menutup sebuah jendela dengan beberapa tab"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
 msgstr "Tingkat lanjut"
 
 #: ../data/lxterminal-preferences.glade.h:48
-#, fuzzy
 msgid "New Window"
-msgstr "_Jendela Baru"
+msgstr "Jendela Baru"
 
 #: ../data/lxterminal-preferences.glade.h:49
-#, fuzzy
 msgid "New Tab"
-msgstr "_Tab Baru"
+msgstr "Tab Baru"
 
 #: ../data/lxterminal-preferences.glade.h:50
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Tutup Tab"
+msgstr "Tutup Tab"
 
 #: ../data/lxterminal-preferences.glade.h:51
-#, fuzzy
 msgid "Close Window"
-msgstr "_Jendela Baru"
+msgstr "Tutup Jendela"
 
 #: ../data/lxterminal-preferences.glade.h:52
-#, fuzzy
 msgid "Copy"
-msgstr "Salin _URL"
+msgstr "Salin"
 
 #: ../data/lxterminal-preferences.glade.h:53
-#, fuzzy
 msgid "Paste"
-msgstr "_Tempel"
+msgstr "Tempel"
 
 #: ../data/lxterminal-preferences.glade.h:55
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Tab Sebelumnya"
+msgstr "Tab Sebelumnya"
 
 #: ../data/lxterminal-preferences.glade.h:56
-#, fuzzy
 msgid "Next Tab"
-msgstr "Ta_b Setelahnya"
+msgstr "Tab Selanjutnya"
 
 #: ../data/lxterminal-preferences.glade.h:57
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Pindahkan Tab ke Ki_ri"
+msgstr "Pindahkan Tab ke Kiri"
 
 #: ../data/lxterminal-preferences.glade.h:58
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Pindahkan Tab ke Ka_nan"
+msgstr "Pindahkan Tab ke Kanan"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Perbesar"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Perkecil"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Reset Zum"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "Pintasan"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -454,7 +439,7 @@ msgstr "Gunakan perintah baris"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "konsol;baris perintah;eksekusi;"
 
 #~ msgid "West European"
 #~ msgstr "Eropa Barat"
