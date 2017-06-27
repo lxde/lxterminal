@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: LXTerminal 0.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2015-06-04 08:55+0000\n"
-"Last-Translator: markos <jezzivi@yahoo.com>\n"
+"PO-Revision-Date: 2017-06-27 10:36+0000\n"
+"Last-Translator: Jay A. Fleming <tito.nehru.naser@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1433408150.000000\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1498559760.339644\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -75,23 +75,23 @@ msgstr "У_баци"
 #. 11
 #: ../src/lxterminal.c:132
 msgid "Clear scr_ollback"
-msgstr "Обриши „scr_ollback“ оставу"
+msgstr "_Обриши „scrollback“ оставу"
 
 #. 12
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "У_већај"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "У_мањи"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_Поништи увећање"
 
 #. 16
 #. 17
@@ -143,7 +143,7 @@ msgstr "Умножи _УРЛ"
 
 #: ../src/lxterminal.c:158
 msgid "Cl_ear scrollback"
-msgstr "О_бриши „scrollback“ оставу"
+msgstr "Обриши „scroll_back“ оставу"
 
 #: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
@@ -151,11 +151,11 @@ msgstr "Дајте назив листу"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "О_дустани"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "У _реду"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
@@ -168,9 +168,8 @@ msgid "LXTerminal"
 msgstr "ЛИкс-Терминал"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
-msgstr "Ауторска права — 2008-2017."
+msgstr "Права творца — 2008-2017."
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -179,11 +178,11 @@ msgstr "Емулатор терминала за ЛИкс-ДЕ"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Желите ли да извршим Ваш захтев за затварањем %d листова?"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "Потврда за затварање листова"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -243,76 +242,75 @@ msgstr "Звук звона"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Црна"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Тамноцрвена"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Грчки"
+msgstr "Зелена"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Тамнонаранџаста"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Плава"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Светлољубичаста"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Тиркизна"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Сива"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Тамносива"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Смеђекестењаста"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Светлозелена"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Жута"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Љубичаста"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Сјајнорућичаста"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Свеетлотиркизна"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Бела"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Опсег боја"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Поставка опсега боја"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -340,15 +338,15 @@ msgstr "Сакриј  дугмад за затварање"
 
 #: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide mouse pointer"
-msgstr "Сакриј курсор"
+msgstr "Сакриј показивач миша"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Уобичајене димензије прозора"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "×"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -368,7 +366,7 @@ msgstr "Искључи употребу „Alt-n“ тастера у листо
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Ако је покренуто више листова, онемогући потврду затварања програма"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -416,15 +414,15 @@ msgstr "Премести лист удесно"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Приближи"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Удаљи"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Поништи увећање"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
