@@ -52,6 +52,7 @@ static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * 
 static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal);
+static void terminal_open_url_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal);
@@ -151,6 +152,7 @@ static GtkActionEntry vte_menu_items[] =
     { "NewWindow", "list-add", N_("New _Window"), NULL, "New Window", G_CALLBACK(terminal_new_window_activate_event) },
     { "NewTab", "list-add", N_("New _Tab"), NULL, "New Tab", G_CALLBACK(terminal_new_tab_activate_event) },
     { "Sep1", NULL, "Sep" },
+    { "OpenURL", NULL, N_("Open _URL"), NULL, "Open URL", G_CALLBACK(terminal_open_url_activate_event) },
     { "CopyURL", NULL, N_("Copy _URL"), NULL, "Copy URL", G_CALLBACK(terminal_copy_url_activate_event) },
     { "Copy", "edit-copy", N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
     { "Paste", "edit-paste", N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
@@ -471,6 +473,35 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
     while(terminal->terms->len > 0) {
         terminal_close_button_event(NULL, g_ptr_array_index(terminal->terms, 0));
     }
+}
+
+/* Handler for the "Open URL" right-click menu item.
+ * Fork+exec xdg-open the url. */
+static void terminal_open_url_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+        Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
+        if (term->matched_url)
+        {
+                pid_t pid = fork();
+                if ( pid < 0 )
+                        return; /* Not much that could be done here really */
+                else if ( pid > 0 )
+                        /* Parent */
+                        /*wait(NULL);*/
+                        return;
+                
+                /* We're in a child process now; let's fork again */
+                pid = fork();
+                if ( pid < 0 )
+                        _exit(1); /* Not much that could be done here really */
+                else if ( pid > 0 )
+                        /* Child */
+                        _exit(0);
+
+                /* Grandchild */
+                execlp("xdg-open", "xdg-open", term->matched_url, NULL);
+                _exit(128);
+        }
 }
 
 /* Handler for the "Copy URL" right-click menu item.
@@ -959,8 +990,11 @@ static void terminal_show_popup_menu(VteTerminal * vte, GdkEventButton * event, 
     term->matched_url = terminal_get_match_at(vte, term, event);
 
     GtkAction * action_copy_url = gtk_ui_manager_get_action(manager, "/VTEMenu/CopyURL");
-    if (action_copy_url)
+    GtkAction * action_open_url = gtk_ui_manager_get_action(manager, "/VTEMenu/OpenURL");
+    if (action_copy_url) {
         gtk_action_set_visible(action_copy_url, term->matched_url != NULL);
+        gtk_action_set_visible(action_open_url, term->matched_url != NULL);
+    }
 
     gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")),
         NULL, NULL, NULL, NULL, event->button, event->time);
