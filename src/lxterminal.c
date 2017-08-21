@@ -482,25 +482,10 @@ static void terminal_open_url_activate_event(GtkAction * action, LXTerminal * te
         Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
         if (term->matched_url)
         {
-                pid_t pid = fork();
-                if ( pid < 0 )
-                        return; /* Not much that could be done here really */
-                else if ( pid > 0 )
-                        /* Parent */
-                        /*wait(NULL);*/
-                        return;
-                
-                /* We're in a child process now; let's fork again */
-                pid = fork();
-                if ( pid < 0 )
-                        _exit(1); /* Not much that could be done here really */
-                else if ( pid > 0 )
-                        /* Child */
-                        _exit(0);
-
-                /* Grandchild */
-                execlp("xdg-open", "xdg-open", term->matched_url, NULL);
-                _exit(128);
+                gchar * cmd = g_strdup_printf("xdg-open %s", term->matched_url);
+                if ( ! g_spawn_command_line_async(cmd, NULL))
+                        g_warning("Failed to launch xdg-open. The command was `%s'\n", cmd);
+                g_free(cmd);
         }
 }
 
