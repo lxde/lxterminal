@@ -85,17 +85,17 @@ msgstr "اخفِ شريط التمرير"
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "تكبير"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "تصغير"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "إعادة تعيين الحجم"
 
 #. 16
 #. 17
@@ -143,7 +143,7 @@ msgstr "_لسان جديد"
 
 #: ../src/lxterminal.c:155
 msgid "Copy _URL"
-msgstr ""
+msgstr "تسخ الرابط"
 
 #: ../src/lxterminal.c:158
 #, fuzzy
@@ -156,16 +156,19 @@ msgstr "لسان الاسم"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "خروج"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "موافق"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
-msgstr "أحمد فرغل <ahmad.farghal@gmail.com>"
+msgstr ""
+"أحمد فرغل <ahmad.farghal@gmail.com>"
+"أحمد نوراللّه <ahmadnurallah@gmail.com>"
+""
 
 #: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
@@ -184,11 +187,11 @@ msgstr "محاكي طرفية لمشروع LXDE"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "أنت على وشك إغلاق النافذة %d. هل أنتَ متاكد من أنك تريد المتابعة ؟"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "تأكيد الخروج"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -244,84 +247,84 @@ msgstr "تسطير"
 
 #: ../data/lxterminal-preferences.glade.h:14
 msgid "Audible bell"
-msgstr ""
+msgstr "جرس مسموع"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "أسود"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "أحمر"
 
 #: ../data/lxterminal-preferences.glade.h:17
 #, fuzzy
 msgid "Green"
-msgstr "يوناني"
+msgstr "أخضر"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "بني"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "أزرق"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "أرجواني"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "ازرق سماوي"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "رمادي"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "الرمادي الداكن"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "أحمر فاتح"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "اخضر فاتح"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "أصفر"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "أزرق فاتح"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "أرجواني فاتح"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "السماوي الساطع"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "أبيض"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "لوحة"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "لوحة مسبقا"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
-msgstr "الشكل"
+msgstr "المظهر"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Tab panel position"
@@ -341,19 +344,19 @@ msgstr "اخفِ شريط القوائم"
 
 #: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide Close buttons"
-msgstr ""
+msgstr "إخفاء زر الإغلاق"
 
 #: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide mouse pointer"
-msgstr ""
+msgstr "إخفاء مؤشر الفأرة"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "حجم النافذة الإفتراضي"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -374,7 +377,7 @@ msgstr "تعطيل إستعمال Alt-n للألسنة و القائمة"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "تعطيل التأكيد قبل إغلاق النافذة مع نوافذ متعددة"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -431,19 +434,19 @@ msgstr "انقل اللسان إلى اليمي_ن"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "تكبير"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "تصغير"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "إعادة تعيين الحجم"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "الإختصارات"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -455,7 +458,7 @@ msgstr "استخدِم سطر الأوامر"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "console;command line;execute;"
 
 #~ msgid "West European"
 #~ msgstr "غرب أوروبي"
