@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2014-07-08 19:15+0000\n"
-"Last-Translator: system user <>\n"
+"PO-Revision-Date: 2017-10-01 12:10+0000\n"
+"Last-Translator: Anari Jalakas <anari.jalakas@gmail.com>\n"
 "Language-Team: Gnome Estonian Translation Team <gnome-et linux ee>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1404846919.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1506859809.967837\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -41,13 +41,11 @@ msgstr "A_bi"
 
 #. 4
 #: ../src/lxterminal.c:125
-#, fuzzy
 msgid "_New Window"
 msgstr "Uus _aken"
 
 #. 5
 #: ../src/lxterminal.c:126
-#, fuzzy
 msgid "New T_ab"
 msgstr "Uus _kaart"
 
@@ -59,9 +57,8 @@ msgstr "_Sulge kaart"
 
 #. 8
 #: ../src/lxterminal.c:129
-#, fuzzy
 msgid "Close _Window"
-msgstr "Uus _aken"
+msgstr "Sulge _aken"
 
 #. 9
 #: ../src/lxterminal.c:130 ../src/lxterminal.c:156
@@ -82,17 +79,17 @@ msgstr "_Peida kerimisriba"
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "_Suurenda"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "_Vähenda"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "Suurenduse _lähtestamine"
 
 #. 16
 #. 17
@@ -152,11 +149,11 @@ msgstr "Kaardi nimi"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "_Tühista"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "_Olgu"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
@@ -171,9 +168,8 @@ msgid "LXTerminal"
 msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
-msgstr "Copyright (C) 2008-2017"
+msgstr "Autoriõigus (C) 2008-2017"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -182,11 +178,11 @@ msgstr "LXDE projekti terminaliemulaator"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Sa kavatsed sulgeda %d kaarti. Kas soovid kindlasti jätkata?"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "Sulgemiskinnitus"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -246,76 +242,75 @@ msgstr "Helisignaal"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "Must"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "Punane"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "Kreeka"
+msgstr "Roheline"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "Pruun"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "Sinine"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "Sinakasroheline"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "Hall"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "Tumehall"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "Helepunane"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "Heleroheline"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "Kollane"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "Erksinine"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Helemagenta"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Heletsüaan"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "Valge"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "Värvipalett"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "Paleti eelseade"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -342,17 +337,16 @@ msgid "Hide Close buttons"
 msgstr "Sulgemise nuppude peitmine"
 
 #: ../data/lxterminal-preferences.glade.h:39
-#, fuzzy
 msgid "Hide mouse pointer"
-msgstr "Sulgemise nuppude peitmine"
+msgstr "Hiirekursori peitmine"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "Akna vaikimisi suurus"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -372,77 +366,67 @@ msgstr "Alt-n on keelatud kaartide ja menüü jaoks"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Keela mitme akna sulgemise kinnituse küsimine"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
 msgstr "Laiendatud"
 
 #: ../data/lxterminal-preferences.glade.h:48
-#, fuzzy
 msgid "New Window"
-msgstr "Uus _aken"
+msgstr "Uus aken"
 
 #: ../data/lxterminal-preferences.glade.h:49
-#, fuzzy
 msgid "New Tab"
-msgstr "Uus _kaart"
+msgstr "Uus kaart"
 
 #: ../data/lxterminal-preferences.glade.h:50
-#, fuzzy
 msgid "Close Tab"
-msgstr "_Sulge kaart"
+msgstr "Sulge kaart"
 
 #: ../data/lxterminal-preferences.glade.h:51
-#, fuzzy
 msgid "Close Window"
-msgstr "Uus _aken"
+msgstr "Sulge aken"
 
 #: ../data/lxterminal-preferences.glade.h:52
-#, fuzzy
 msgid "Copy"
-msgstr "Kopeeri _URL"
+msgstr "Kopeeri"
 
 #: ../data/lxterminal-preferences.glade.h:53
-#, fuzzy
 msgid "Paste"
-msgstr "_Aseta"
+msgstr "Aseta"
 
 #: ../data/lxterminal-preferences.glade.h:55
-#, fuzzy
 msgid "Previous Tab"
-msgstr "_Eelmine kaart"
+msgstr "Eelmine kaart"
 
 #: ../data/lxterminal-preferences.glade.h:56
-#, fuzzy
 msgid "Next Tab"
-msgstr "_Järgmine kaart"
+msgstr "Järgmine kaart"
 
 #: ../data/lxterminal-preferences.glade.h:57
-#, fuzzy
 msgid "Move Tab Left"
-msgstr "Tõsta kaart _vasakule"
+msgstr "Liiguta kaart vasakule"
 
 #: ../data/lxterminal-preferences.glade.h:58
-#, fuzzy
 msgid "Move Tab Right"
-msgstr "Tõsta kaart _paremale"
+msgstr "Liiguta kaart paremale"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "Suurendamine"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "Vähendamine"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Suurenduse lähtestamine"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
-msgstr ""
+msgstr "Kiirklahvid"
 
 #: ../data/lxterminal.desktop.in.h:2
 msgid "Terminal"
@@ -454,7 +438,7 @@ msgstr "Käsurea kasutamine"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr ""
+msgstr "konsool;käsurida;käivita;"
 
 #~ msgid "West European"
 #~ msgstr "Lääne-Euroopa"

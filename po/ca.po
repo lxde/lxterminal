@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-06-09 15:03+0000\n"
+"PO-Revision-Date: 2017-09-14 14:45+0000\n"
 "Last-Translator: Davidmp <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <josep.sanchez@ubuntu.cat>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1497020592.401421\n"
+"X-POOTLE-MTIME: 1505400312.088160\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -433,7 +433,7 @@ msgstr "Terminal"
 
 #: ../data/lxterminal.desktop.in.h:3
 msgid "Use the command line"
-msgstr "Utilitza la línia d'ordres"
+msgstr "Utilitzeu la línia d'ordres"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
