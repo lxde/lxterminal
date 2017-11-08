@@ -263,5 +263,5 @@ static gboolean handle_request(GIOChannel* gio, GIOCondition condition, ClientIn
 }
 
 gboolean lxterminal_socket_initialize(LXTermWindow* lxtermwin, gint argc, gchar** argv) {
-    init(lxtermwin, argc, argv);
+    return init(lxtermwin, argc, argv);
 }
