@@ -1438,6 +1438,15 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
     }
     }
     /* Handle --loginshell. */
+    if (arguments->command != NULL && cmd_len <= 2) {
+	/* Force using login shell if it has only 1 command, and command is not
+	 * in PATH. */
+        gchar * program_path = g_find_program_in_path(arguments->command[0]);
+        if (program_path == NULL) {
+            arguments->login_shell = TRUE;
+        }
+        g_free(program_path);
+    }
     if (arguments->login_shell == TRUE)
     {
         const gchar * shell = terminal_get_preferred_shell();
