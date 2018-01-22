@@ -1531,7 +1531,11 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     g_object_weak_ref(G_OBJECT(terminal->window), (GWeakNotify) terminal_window_exit, terminal);
 
     /* Create a vertical box as the child of the toplevel window. */
+#if GTK_CHECK_VERSION(3, 0, 0)
+    terminal->box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 1);
+#else
     terminal->box = gtk_vbox_new(FALSE, 1);
+#endif
     gtk_container_add(GTK_CONTAINER(terminal->window), terminal->box);
 
     /* Create the menu bar as the child of the vertical box. */
