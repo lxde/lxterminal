@@ -792,7 +792,7 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
 
         /* Propagate the title to the toplevel window. */
         const gchar * title = gtk_label_get_text(GTK_LABEL(term->label));
-        gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal Emulator")));
+        gtk_window_set_title(GTK_WINDOW(terminal->window), ((title != NULL) ? title : _("LXTerminal Terminal Emulator")));
 
         /* Wait for its size to be allocated, then set its geometry */
         g_signal_connect(notebook, "size-allocate", G_CALLBACK(terminal_vte_size_allocate_event), term);
