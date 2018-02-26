@@ -1580,6 +1580,9 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     /* Set window title. */
     gtk_window_set_title(GTK_WINDOW(terminal->window), gtk_label_get_text(GTK_LABEL(term->label)));
 
+    /* Set window width and height. */
+    gtk_window_set_default_size(GTK_WINDOW(terminal->window), &setting->width, &setting->height);
+
     /* Set the terminal geometry. */
     if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0)) {
         vte_terminal_set_size(VTE_TERMINAL(term->vte), arguments->geometry_columns, arguments->geometry_rows);
