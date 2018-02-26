@@ -1135,8 +1135,13 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 
     /* Create a VTE and a vertical scrollbar, and place them inside a horizontal box. */
     term->vte = vte_terminal_new();
+#if GTK_CHECK_VERSION(3, 0, 0)
+    term->box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    term->scrollbar = gtk_scrollbar_new(GTK_ORIENTATION_VERTICAL, NULL);
+#else
     term->box = gtk_hbox_new(FALSE, 0);
     term->scrollbar = gtk_vscrollbar_new(NULL);
+#endif
     gtk_box_pack_start(GTK_BOX(term->box), term->vte, TRUE, TRUE, 0);
     gtk_box_pack_start(GTK_BOX(term->box), term->scrollbar, FALSE, TRUE, 0);
     gtk_widget_set_no_show_all(GTK_WIDGET(term->scrollbar), TRUE);
@@ -1166,20 +1171,31 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     /* Create a horizontal box inside an event box as the toplevel for the tab label. */
     term->tab = gtk_event_box_new();
     gtk_widget_set_events(term->tab, GDK_BUTTON_PRESS_MASK);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GtkWidget * hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 4);
+#else
     GtkWidget * hbox = gtk_hbox_new(FALSE, 4);
+#endif
     gtk_container_add(GTK_CONTAINER(term->tab), hbox);
 
     /* Create the Close button. */
     term->close_button = gtk_button_new();
     gtk_button_set_relief(GTK_BUTTON(term->close_button), GTK_RELIEF_NONE);
     gtk_button_set_focus_on_click(GTK_BUTTON(term->close_button), FALSE);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gtk_container_add(GTK_CONTAINER(term->close_button), gtk_image_new_from_icon_name("window-close", GTK_ICON_SIZE_MENU));
+#else
     gtk_container_add(GTK_CONTAINER(term->close_button), gtk_image_new_from_stock(GTK_STOCK_CLOSE, GTK_ICON_SIZE_MENU));
+#endif
 
     /* Make the button as small as possible. */
+#if GTK_CHECK_VERSION(3, 0, 0)
+#else
     GtkRcStyle * rcstyle = gtk_rc_style_new();
     rcstyle->xthickness = rcstyle->ythickness = 0;
     gtk_widget_modify_style(term->close_button, rcstyle);
     g_object_ref(rcstyle);
+#endif
 
     /* Come up with default label and window title */
     if (exec == NULL)
@@ -1211,8 +1227,12 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     term->label = gtk_label_new((label != NULL) ? label : vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
     gtk_widget_set_size_request(GTK_WIDGET(term->label), 100, -1);
     gtk_label_set_ellipsize(GTK_LABEL(term->label), PANGO_ELLIPSIZE_END);
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gtk_widget_set_valign(term->label, GTK_ALIGN_CENTER);
+#else
     gtk_misc_set_alignment(GTK_MISC(term->label), 0.0, 0.5);
     gtk_misc_set_padding(GTK_MISC(term->label), 0, 0);
+#endif
 
     /* Pack everything and show the widget. */
     gtk_box_pack_start(GTK_BOX(hbox), term->label, TRUE, TRUE, 0);
@@ -1326,11 +1346,19 @@ static void terminal_menu_accelerator_update(LXTerminal * terminal)
     }
 
     /* If F10 is disabled, set the accelerator to a key combination that is not F10 and unguessable. */
+#if GTK_CHECK_VERSION(3, 0, 0)
+    g_object_set(
+        gtk_settings_get_default(),
+        "gtk-menu-bar-accel",
+        ((get_setting()->disable_f10) ? "<Shift><Control><Mod1><Mod2><Mod3><Mod4><Mod5>F10" : saved_menu_accelerator),
+        NULL);
+#else
     gtk_settings_set_string_property(
         gtk_settings_get_default(),
         "gtk-menu-bar-accel",
         ((get_setting()->disable_f10) ? "<Shift><Control><Mod1><Mod2><Mod3><Mod4><Mod5>F10" : saved_menu_accelerator),
         "lxterminal");
+#endif
 }
 
 /* Process the argument vector into the CommandArguments structure.
@@ -1763,4 +1791,3 @@ int main(gint argc, gchar * * argv)
 
     return 0;
 }
-
