@@ -430,6 +430,7 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
 
     /* Add a tab to the notebook and the "terms" array. */
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->tab);
+    gtk_notebook_set_tab_reorderable(GTK_NOTEBOOK(terminal->notebook), term->box, TRUE);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
 
@@ -1589,6 +1590,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 
     /* Add the first terminal to the notebook and the data structures. */
     gtk_notebook_append_page(GTK_NOTEBOOK(terminal->notebook), term->box, term->tab);
+    gtk_notebook_set_tab_reorderable(GTK_NOTEBOOK(terminal->notebook), term->box, TRUE);
     term->index = gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) - 1;
     g_ptr_array_add(terminal->terms, term);
 
