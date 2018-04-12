@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-23 06:57+0000\n"
+"PO-Revision-Date: 2017-11-14 12:03+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: he\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1495522671.796582\n"
+"X-POOTLE-MTIME: 1510661022.718900\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -178,7 +178,7 @@ msgstr "תכנית להדמיית מסוף עבור מיזם LXDE"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "%d לשוניות מועמדות לסגירה. להמשיך?"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
@@ -266,11 +266,11 @@ msgstr "כחול"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "ארגמן"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "ציאן"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
@@ -294,15 +294,15 @@ msgstr "צהוב"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "כחול בהיר"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "ארגמן בהיר"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "ציאן בהיר"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
@@ -370,7 +370,7 @@ msgstr "ביטול השימוש ב־Alt-מספר עבור הלשוניות וה�
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "ביטול האישור בטרם סגירת חלון עם מגוון לשוניות"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
