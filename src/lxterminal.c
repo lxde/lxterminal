@@ -57,6 +57,7 @@ static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * te
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_paste_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_clear_activate_event(GtkAction * action, LXTerminal * terminal);
+static void terminal_reset_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_name_tab_response_event(GtkWidget * dialog, gint response, Term * term);
 static void terminal_name_tab_activate_event(GtkAction * action, LXTerminal * terminal);
 static void terminal_previous_tab_activate_event(GtkAction * action, LXTerminal * terminal);
@@ -130,18 +131,19 @@ static GtkActionEntry menu_items[] =
 /* 9 */    { "Edit_Copy", "edit-copy", N_("Cop_y"), COPY_ACCEL_DEF, "Copy", G_CALLBACK(terminal_copy_activate_event) },
 /* 10 */    { "Edit_Paste", "edit-paste", N_("_Paste"), PASTE_ACCEL_DEF, "Paste", G_CALLBACK(terminal_paste_activate_event) },
 /* 11 */    { "Edit_Clear", NULL, N_("Clear scr_ollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
-/* 12 */    { "Edit_Sep1", NULL, "Sep" },
-/* 13 */    { "Edit_ZoomIn", "zoom-in", N_("Zoom _In"), ZOOM_IN_ACCEL_DEF, "Zoom In", G_CALLBACK(terminal_zoom_in_activate_event) },
-/* 14 */    { "Edit_ZoomOut", "zoom-out", N_("Zoom O_ut"), ZOOM_OUT_ACCEL_DEF, "Zoom Out", G_CALLBACK(terminal_zoom_out_activate_event) },
-/* 15 */    { "Edit_ZoomReset", "zoom-fit-best", N_("Zoom _Reset"), ZOOM_RESET_ACCEL_DEF, "Zoom Reset", G_CALLBACK(terminal_zoom_reset_activate_event) },
-/* 16 */    { "Edit_Sep2", NULL, "Sep" },
-/* 17 */    { "Edit_Preferences", "system-run", N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
-/* 18 */    { "Tabs_NameTab", "dialog-information", N_("Na_me Tab"), NAME_TAB_ACCEL_DEF, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
-/* 19 */    { "Tabs_PreviousTab", "go-previous", N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL_DEF, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
-/* 20 */    { "Tabs_NextTab", "go-next", N_("Ne_xt Tab"), NEXT_TAB_ACCEL_DEF, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
-/* 21 */    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL_DEF, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
-/* 22 */    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL_DEF, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
-/* 23 */    { "Help_About", "help-about", N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) },
+/* 12 */    { "Edit_Reset", NULL, N_("Reset _terminal"), NULL, "Reset terminal", G_CALLBACK(terminal_reset_activate_event) },
+/* 13 */    { "Edit_Sep1", NULL, "Sep" },
+/* 14 */    { "Edit_ZoomIn", "zoom-in", N_("Zoom _In"), ZOOM_IN_ACCEL_DEF, "Zoom In", G_CALLBACK(terminal_zoom_in_activate_event) },
+/* 15 */    { "Edit_ZoomOut", "zoom-out", N_("Zoom O_ut"), ZOOM_OUT_ACCEL_DEF, "Zoom Out", G_CALLBACK(terminal_zoom_out_activate_event) },
+/* 16 */    { "Edit_ZoomReset", "zoom-fit-best", N_("Zoom _Reset"), ZOOM_RESET_ACCEL_DEF, "Zoom Reset", G_CALLBACK(terminal_zoom_reset_activate_event) },
+/* 17 */    { "Edit_Sep2", NULL, "Sep" },
+/* 18 */    { "Edit_Preferences", "system-run", N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
+/* 19 */    { "Tabs_NameTab", "dialog-information", N_("Na_me Tab"), NAME_TAB_ACCEL_DEF, "Name Tab", G_CALLBACK(terminal_name_tab_activate_event) },
+/* 20 */    { "Tabs_PreviousTab", "go-previous", N_("Pre_vious Tab"), PREVIOUS_TAB_ACCEL_DEF, "Previous Tab", G_CALLBACK(terminal_previous_tab_activate_event) },
+/* 21 */    { "Tabs_NextTab", "go-next", N_("Ne_xt Tab"), NEXT_TAB_ACCEL_DEF, "Next Tab", G_CALLBACK(terminal_next_tab_activate_event) },
+/* 22 */    { "Tabs_MoveTabLeft", NULL, N_("Move Tab _Left"), MOVE_TAB_LEFT_ACCEL_DEF, "Move Tab Left", G_CALLBACK(terminal_move_tab_left_activate_event) },
+/* 23 */    { "Tabs_MoveTabRight", NULL, N_("Move Tab _Right"), MOVE_TAB_RIGHT_ACCEL_DEF, "Move Tab Right", G_CALLBACK(terminal_move_tab_right_activate_event) },
+/* 24 */    { "Help_About", "help-about", N_("_About"), NULL, "About", G_CALLBACK(terminal_about_activate_event) },
 };
 #define MENUBAR_MENUITEM_COUNT G_N_ELEMENTS(menu_items)
 
@@ -157,6 +159,7 @@ static GtkActionEntry vte_menu_items[] =
     { "Copy", "edit-copy", N_("Cop_y"), NULL, "Copy", G_CALLBACK(terminal_copy_activate_event) },
     { "Paste", "edit-paste", N_("_Paste"), NULL, "Paste", G_CALLBACK(terminal_paste_activate_event) },
     { "Clear", NULL, N_("Cl_ear scrollback"), NULL, "Clear scrollback", G_CALLBACK(terminal_clear_activate_event) },
+    { "Reset", NULL, N_("Reset _terminal"), NULL, "Reset terminal", G_CALLBACK(terminal_reset_activate_event) },
     { "Sep2", NULL, "Sep" },
     { "Preferences", "system-run", N_("Preference_s"), NULL, "Preferences", G_CALLBACK(terminal_preferences_dialog) },
     { "Sep3", NULL, "Sep" },
@@ -524,6 +527,14 @@ static void terminal_clear_activate_event(GtkAction * action, LXTerminal * termi
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), 0);
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), get_setting()->scrollback);
+}
+
+/* Handler for "reset terminal" signal on Edit/Paste menu item.
+ * Reset terminal state. */
+static void terminal_reset_activate_event(GtkAction * action, LXTerminal * terminal)
+{
+    Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
+    vte_terminal_reset(VTE_TERMINAL(term->vte), TRUE, TRUE);
 }
 
 /* Handler for "response" signal on Name Tab dialog. */
@@ -1716,14 +1727,14 @@ void terminal_initialize_menu_shortcuts(Setting * setting)
     menu_items[8].accelerator = setting->close_window_accel;
     menu_items[9].accelerator = setting->copy_accel;
     menu_items[10].accelerator = setting->paste_accel;
-    menu_items[13].accelerator = setting->zoom_in_accel;
-    menu_items[14].accelerator = setting->zoom_out_accel;
-    menu_items[15].accelerator = setting->zoom_reset_accel;
-    menu_items[18].accelerator = setting->name_tab_accel;
-    menu_items[19].accelerator = setting->previous_tab_accel;
-    menu_items[20].accelerator = setting->next_tab_accel;
-    menu_items[21].accelerator = setting->move_tab_left_accel;
-    menu_items[22].accelerator = setting->move_tab_right_accel;
+    menu_items[14].accelerator = setting->zoom_in_accel;
+    menu_items[15].accelerator = setting->zoom_out_accel;
+    menu_items[16].accelerator = setting->zoom_reset_accel;
+    menu_items[19].accelerator = setting->name_tab_accel;
+    menu_items[20].accelerator = setting->previous_tab_accel;
+    menu_items[21].accelerator = setting->next_tab_accel;
+    menu_items[22].accelerator = setting->move_tab_left_accel;
+    menu_items[23].accelerator = setting->move_tab_right_accel;
 }
 
 /* Main entry point. */
