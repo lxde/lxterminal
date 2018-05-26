@@ -207,6 +207,7 @@ void save_setting()
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, setting->cursor_blink);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, setting->cursor_underline);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, setting->audible_bell);
+    g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, VISUAL_BELL, setting->visual_bell);
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, TAB_POS, setting->tab_position);
     g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, SCROLLBACK, setting->scrollback);
     g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_COLUMNS, setting->geometry_columns);
@@ -412,6 +413,7 @@ color_preset_does_not_exist:
         setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, NULL);
         setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, NULL);
         setting->audible_bell = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, NULL);
+        setting->visual_bell = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, VISUAL_BELL, NULL);
         setting->tab_position = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, TAB_POS, NULL);
         setting->scrollback = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, SCROLLBACK, &error);
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND))
