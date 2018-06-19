@@ -22,7 +22,7 @@ Basic requirements for building:
 
 For generating man pages (`./configure --enable-man`):
 * xsltproc
-* docbool-xml
+* docbook-xml
 * docbook-xsl
 
 ### Building on Debian, Ubuntu or their derivatives from git
