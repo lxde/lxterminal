@@ -45,6 +45,7 @@
 #define DISABLE_F10 "disablef10"
 #define DISABLE_ALT "disablealt"
 #define DISABLE_CONFIRM "disableconfirm"
+#define TAB_WIDTH "tabwidth"
 #define PALETTE_COLOR_PREFIX "palette_color_"
 #define COLOR_PRESET "color_preset"
 
@@ -111,6 +112,7 @@ typedef struct _setting {
     gboolean disable_f10;       /* True if F10 will be passed to program; false if it brings up File menu */
     gboolean disable_alt;       /* True if Alt-n is passed to shell; false if it is used to switch between tabs */
     gboolean disable_confirm;   /* True if confirmation exit dialog shows before terminal window close*/
+    gint tab_width;             /* Tab width */
 
     gboolean geometry_change;       /* True if there is a geometry change, until it has been acted on */
     

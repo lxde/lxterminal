@@ -1129,6 +1129,8 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
 /* Create a new terminal. */
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env,  gchar * * exec)
 {
+    Setting * setting = get_setting();
+
     /* Create and initialize Term structure for new terminal. */
     Term * term = g_slice_new0(Term);
     term->parent = terminal;
@@ -1209,7 +1211,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
         term->user_specified_label = FALSE;
     }
     term->label = gtk_label_new((label != NULL) ? label : vte_terminal_get_window_title(VTE_TERMINAL(term->vte)));
-    gtk_widget_set_size_request(GTK_WIDGET(term->label), 100, -1);
+    gtk_widget_set_size_request(GTK_WIDGET(term->label), setting->tab_width, -1);
     gtk_label_set_ellipsize(GTK_LABEL(term->label), PANGO_ELLIPSIZE_END);
     gtk_misc_set_alignment(GTK_MISC(term->label), 0.0, 0.5);
     gtk_misc_set_padding(GTK_MISC(term->label), 0, 0);
