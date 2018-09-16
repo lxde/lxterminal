@@ -881,6 +881,8 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
 {
     LXTerminal * terminal = term->parent;
 
+    g_signal_handler_disconnect(G_OBJECT(term->vte), term->exit_handler_id);
+
     /* Last tab being deleted.  Deallocate memory and close the window. */
     if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
     {
@@ -1278,7 +1280,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     g_signal_connect(G_OBJECT(term->vte), "button-press-event", G_CALLBACK(terminal_vte_button_press_event), term);
     g_signal_connect(G_OBJECT(term->vte), "button-release-event", G_CALLBACK(terminal_vte_button_release_event), term);
     g_signal_connect(G_OBJECT(term->vte), "commit", G_CALLBACK(terminal_vte_commit), term);
-    g_signal_connect(G_OBJECT(term->vte), "child-exited", G_CALLBACK(terminal_child_exited_event), term);
+    term->exit_handler_id = g_signal_connect(G_OBJECT(term->vte), "child-exited", G_CALLBACK(terminal_child_exited_event), term);
     g_signal_connect(G_OBJECT(term->vte), "cursor-moved", G_CALLBACK(terminal_vte_cursor_moved_event), term);
     g_signal_connect(G_OBJECT(term->vte), "window-title-changed", G_CALLBACK(terminal_window_title_changed_event), term);
 

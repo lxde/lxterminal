@@ -72,6 +72,7 @@ typedef struct _term {
     GClosure * closure;             /* Accelerator structure */
     gchar * matched_url;
     gboolean open_menu_on_button_release;
+    gulong exit_handler_id;
 } Term;
 
 /* Output of lxterminal_process_arguments. */
