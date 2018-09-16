@@ -82,7 +82,7 @@ static void terminal_child_exited_event(VteTerminal * vte, gint status, Term * t
 #else
 static void terminal_child_exited_event(VteTerminal * vte, Term * term);
 #endif
-static void terminal_close_button_event(VteTerminal * vte, Term * term);
+static void terminal_close_button_event(GtkButton * button, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
 static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
@@ -458,7 +458,11 @@ static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *a
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
-    terminal_close_button_event(VTE_TERMINAL(term->vte), term);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
+#else
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
+#endif
 }
 
 /* Handler for "activate" signal on File/Close Window menu item.
@@ -471,7 +475,12 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
 
     /* Play it safe and delete tabs one by one. */
     while(terminal->terms->len > 0) {
-        terminal_close_button_event(NULL, g_ptr_array_index(terminal->terms, 0));
+        Term *term = g_ptr_array_index(terminal->terms, 0);
+#if VTE_CHECK_VERSION (0, 38, 0)
+        terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
+#else
+        terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
+#endif
     }
 }
 
@@ -905,12 +914,12 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
 }
 
 /* Adapter for "activate" signal on Close button of tab and File/Close Tab menu item and accelerator. */
-static void terminal_close_button_event(VteTerminal * vte, Term * term)
+static void terminal_close_button_event(GtkButton * button, Term * term)
 {
 #if VTE_CHECK_VERSION (0, 38, 0)
-    terminal_child_exited_event(vte, 0, term);
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
 #else
-    terminal_child_exited_event(vte, term);
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
 #endif
 }
 
