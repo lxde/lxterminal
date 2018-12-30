@@ -1402,6 +1402,15 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
 
             if (bitmask & HeightValue)
                 arguments->geometry_rows = height;
+
+            arguments->geometry_x_negative = bitmask & XNegative;
+            arguments->geometry_y_negative = bitmask & YNegative;
+
+            if (bitmask & XValue)
+                arguments->geometry_x = x;
+
+            if (bitmask & YValue)
+                arguments->geometry_y = y;
         }
 
         /* -l, --loginshell */
