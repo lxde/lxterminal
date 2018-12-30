@@ -41,6 +41,8 @@ AC_HELP_STRING([--enable-gtk3],[enable to use gtk-3.0 instead of gtk-2.0]),
 esac],[])
 
 # Checks for libraries.
+PKG_CHECK_MODULES([x11], [x11])
+
 if test "x$enable_gtk3" = "xyes" ; then
   CFLAGS="$CFLAGS -DENABLE_GTK3"
   gtk_modules="gtk+-3.0 >= 3.0.0"

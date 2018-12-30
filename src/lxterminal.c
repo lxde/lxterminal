@@ -22,6 +22,8 @@
 #include <config.h>
 #endif
 
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
@@ -1390,11 +1392,16 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         /* --geometry=<columns>x<rows> */
         else if (strncmp(argument, "--geometry=", 11) == 0)
         {
-            int result = sscanf(&argument[11], "%dx%d", &arguments->geometry_columns, &arguments->geometry_rows);
-            if (result != 2)
-            {
-                return FALSE;
-            }
+            int x, y;
+            unsigned int width, height;
+            const int bitmask =
+                XParseGeometry(&argument[11], &x, &y, &width, &height);
+
+            if (bitmask & WidthValue)
+                arguments->geometry_columns = width;
+
+            if (bitmask & HeightValue)
+                arguments->geometry_rows = height;
         }
 
         /* -l, --loginshell */
