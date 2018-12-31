@@ -22,6 +22,8 @@
 #include <config.h>
 #endif
 
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
@@ -1390,11 +1392,23 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         /* --geometry=<columns>x<rows> */
         else if (strncmp(argument, "--geometry=", 11) == 0)
         {
-            int result = sscanf(&argument[11], "%dx%d", &arguments->geometry_columns, &arguments->geometry_rows);
-            if (result != 2)
-            {
-                return FALSE;
-            }
+            int xoff, yoff;
+            unsigned int width, height;
+            const int bitmask =
+                XParseGeometry(&argument[11], &xoff, &yoff, &width, &height);
+            arguments->geometry_bitmask = bitmask;
+
+            if (bitmask & WidthValue)
+                arguments->geometry_columns = width;
+
+            if (bitmask & HeightValue)
+                arguments->geometry_rows = height;
+
+            if (bitmask & XValue)
+                arguments->geometry_xoff = xoff;
+
+            if (bitmask & YValue)
+                arguments->geometry_yoff = yoff;
         }
 
         /* -l, --loginshell */
@@ -1592,10 +1606,16 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     gtk_window_set_title(GTK_WINDOW(terminal->window), gtk_label_get_text(GTK_LABEL(term->label)));
 
     /* Set the terminal geometry. */
-    if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0)) {
-        vte_terminal_set_size(VTE_TERMINAL(term->vte), arguments->geometry_columns, arguments->geometry_rows);
+    const int geometry_bitmask = arguments->geometry_bitmask;
+
+    if ((geometry_bitmask & WidthValue) && (geometry_bitmask & HeightValue)) {
+        vte_terminal_set_size(VTE_TERMINAL(term->vte),
+                              arguments->geometry_columns,
+                              arguments->geometry_rows);
     } else {
-        vte_terminal_set_size(VTE_TERMINAL(term->vte), setting->geometry_columns, setting->geometry_rows);
+        vte_terminal_set_size(VTE_TERMINAL(term->vte),
+                              setting->geometry_columns,
+                              setting->geometry_rows);
     }
 
     /* Add the first terminal to the notebook and the data structures. */
@@ -1605,6 +1625,62 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 
     /* Show the widget, so it is realized and has a window. */
     gtk_widget_show_all(terminal->window);
+
+    /* If the X-offset is negative, then the window's X-position is
+     *
+     *     screen_width - window_width + geometry_xoff .
+     *
+     * Similarly, if the Y-offset is negative, then the window's Y-position is
+     *
+     *     screen_height - window_height + geometry_yoff .
+     *
+     * Thus, if the X-offset is negative, then the window's width must be
+     * obtained, and, if the Y-offset is negative, then the window's height
+     * must be obtained.  A window's width and height can be obtained by
+     * calling `gtk_window_get_size()`.  However, if `gtk_window_get_size()` is
+     * called before the window is shown, by calling `gtk_widget_show_all()`,
+     * then `gtk_window_get_size()` will return the window's default width and
+     * height, which will likely differ from the window's actual width and
+     * height.  Therefore, the window must be positioned after it is shown.
+     */
+
+    /* Position the terminal according to `XOFF` and `YOFF`, if they were
+     * specified.
+     */
+    if ((geometry_bitmask & XValue) && (geometry_bitmask & YValue)) {
+        GtkWindow *const window = GTK_WINDOW(terminal->window);
+        gint x, y;
+
+        if (geometry_bitmask & XNegative) {
+            GdkScreen *const screen = gtk_window_get_screen(window);
+            gint window_width, window_height;
+            gtk_window_get_size(window, &window_width, &window_height);
+            x = gdk_screen_get_width(screen) - window_width +
+                arguments->geometry_xoff;
+
+            if (geometry_bitmask & YNegative) {
+                y = gdk_screen_get_height(screen) - window_height +
+                    arguments->geometry_yoff;
+                gtk_window_set_gravity(window, GDK_GRAVITY_SOUTH_EAST);
+            } else {
+                y = arguments->geometry_yoff;
+                gtk_window_set_gravity(window, GDK_GRAVITY_NORTH_EAST);
+            }
+        } else {
+            x = arguments->geometry_xoff;
+
+            if (geometry_bitmask & YNegative) {
+                gint window_width, window_height;
+                gtk_window_get_size(window, &window_width, &window_height);
+                y = gdk_screen_get_height(gtk_window_get_screen(window)) -
+                    window_height + arguments->geometry_yoff;
+                gtk_window_set_gravity(window, GDK_GRAVITY_SOUTH_WEST);
+            } else
+                y = arguments->geometry_yoff;
+        }
+
+        gtk_window_move(window, x, y);
+    }
 
     /* Update terminal settings. */
     terminal_settings_apply(terminal);
