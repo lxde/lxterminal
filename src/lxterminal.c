@@ -1099,6 +1099,9 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     vte_terminal_set_font_scale(VTE_TERMINAL(term->vte), terminal->scale);
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term->vte), setting->scrollback);
     vte_terminal_set_allow_bold(VTE_TERMINAL(term->vte), ! setting->disallow_bold);
+#if VTE_CHECK_VERSION (0, 52, 0)
+    vte_terminal_set_bold_is_bright(VTE_TERMINAL(term->vte), setting->bold_bright);
+#endif
     vte_terminal_set_cursor_blink_mode(VTE_TERMINAL(term->vte), ((setting->cursor_blink) ? VTE_CURSOR_BLINK_ON : VTE_CURSOR_BLINK_OFF));
     vte_terminal_set_cursor_shape(VTE_TERMINAL(term->vte), ((setting->cursor_underline) ? VTE_CURSOR_SHAPE_UNDERLINE : VTE_CURSOR_SHAPE_BLOCK));
     vte_terminal_set_audible_bell(VTE_TERMINAL(term->vte), setting->audible_bell);

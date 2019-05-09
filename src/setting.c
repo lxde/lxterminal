@@ -119,6 +119,9 @@ void print_setting()
     printf("Foreground color: %s\n", p);
     g_free(p);
     printf("Disallow bolding by VTE: %i\n", setting->disallow_bold);
+#if VTE_CHECK_VERSION (0, 52, 0)
+    printf("Bold is bright: %i\n", setting->bold_bright);
+#endif
     printf("Cursor blinks: %i\n", setting->cursor_blink);
     printf("Underline blinks: %i\n", setting->cursor_underline);
     printf("Audible bell: %i\n", setting->audible_bell);
@@ -204,6 +207,9 @@ void save_setting()
 
     g_free(p);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, DISALLOW_BOLD, setting->disallow_bold);
+#if VTE_CHECK_VERSION (0, 52, 0)
+    g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, BOLD_BRIGHT, setting->bold_bright);
+#endif
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, setting->cursor_blink);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, setting->cursor_underline);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, setting->audible_bell);
@@ -409,6 +415,9 @@ color_preset_does_not_exist:
         }
 
         setting->disallow_bold = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, DISALLOW_BOLD, NULL);
+#if VTE_CHECK_VERSION (0, 52, 0)
+        setting->bold_bright = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, BOLD_BRIGHT, NULL);
+#endif
         setting->cursor_blink = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_BLINKS, NULL);
         setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, NULL);
         setting->audible_bell = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, NULL);
