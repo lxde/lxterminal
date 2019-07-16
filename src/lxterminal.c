@@ -1082,6 +1082,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     font_desc = pango_font_description_from_string(setting->font_name);
     vte_terminal_set_font(VTE_TERMINAL(term->vte), font_desc);
     pango_font_description_free(font_desc);
+    vte_terminal_set_word_char_exceptions(VTE_TERMINAL(term->vte), setting->word_selection_characters);
 #else
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
     vte_terminal_set_word_chars(VTE_TERMINAL(term->vte), setting->word_selection_characters);
