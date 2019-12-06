@@ -1,5 +1,5 @@
 AC_PREREQ(2.57)
-AC_INIT(lxterminal, 0.3.1, http://lxde.org/)
+AC_INIT(lxterminal, 0.3.2, http://lxde.org/)
 AM_CONFIG_HEADER(config.h)
 # Support silent build rules. Disable by either passing --disable-silent-rules
 # to configure or passing V=1 to make
@@ -41,6 +41,8 @@ AC_HELP_STRING([--enable-gtk3],[enable to use gtk-3.0 instead of gtk-2.0]),
 esac],[])
 
 # Checks for libraries.
+PKG_CHECK_MODULES([x11], [x11])
+
 if test "x$enable_gtk3" = "xyes" ; then
   CFLAGS="$CFLAGS -DENABLE_GTK3"
   gtk_modules="gtk+-3.0 >= 3.0.0"

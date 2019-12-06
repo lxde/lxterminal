@@ -22,6 +22,7 @@ Basic requirements for building:
 
 For generating man pages (`./configure --enable-man`):
 * xsltproc
+* libxml2-utils
 * docbool-xml
 * docbook-xsl
 
@@ -31,7 +32,7 @@ You may try:
 
 ```
 # Install tools and build dependencies
-sudo apt install git xsltproc docbook-xml docbook-xsl
+sudo apt install git xsltproc libxml2-utils docbook-xml docbook-xsl
 sudo apt build-dep lxterminal
 
 # Get the source code from git
