@@ -34,6 +34,11 @@
 #include <sys/stat.h>
 #include <pwd.h>
 
+#if VTE_CHECK_VERSION (0, 46, 0)
+#define PCRE2_CODE_UNIT_WIDTH 0
+#include <pcre2.h>
+#endif
+
 #include "lxterminal.h"
 #include "setting.h"
 #include "preferences.h"
@@ -1168,12 +1173,21 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 
     /* steal from tilda-0.09.6/src/tilda_terminal.c:145 */
     /* Match URL's, etc. */
+#if VTE_CHECK_VERSION (0, 46, 0)
+    VteRegex * dingus1 = vte_regex_new_for_match(DINGUS1, -1, PCRE2_UTF | PCRE2_NO_UTF_CHECK | PCRE2_UCP | PCRE2_MULTILINE, NULL);
+    VteRegex * dingus2 = vte_regex_new_for_match(DINGUS2, -1, PCRE2_UTF | PCRE2_NO_UTF_CHECK | PCRE2_UCP | PCRE2_MULTILINE, NULL);
+    gint ret = vte_terminal_match_add_regex(VTE_TERMINAL(term->vte), dingus1, 0);
+    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+    ret = vte_terminal_match_add_regex(VTE_TERMINAL(term->vte), dingus2, 0);
+    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+#else
     GRegex * dingus1 = g_regex_new(DINGUS1, G_REGEX_OPTIMIZE, 0, NULL);
     GRegex * dingus2 = g_regex_new(DINGUS2, G_REGEX_OPTIMIZE, 0, NULL);
     gint ret = vte_terminal_match_add_gregex(VTE_TERMINAL(term->vte), dingus1, 0);
     vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
     ret = vte_terminal_match_add_gregex(VTE_TERMINAL(term->vte), dingus2, 0);
     vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+#endif
     g_regex_unref(dingus1);
     g_regex_unref(dingus2);
 
