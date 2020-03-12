@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-22 17:25+0000\n"
+"PO-Revision-Date: 2018-05-25 11:04+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1495473929.000386\n"
+"X-POOTLE-MTIME: 1527246268.730670\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -160,7 +160,7 @@ msgstr "_OK"
 msgid "translator-credits"
 msgstr ""
 "Sander De Voogdt\n"
-"Pjotr <pjotrvertaalt@gmail.com>"
+"Pjotr (pjotrvertaalt@gmail.com)"
 
 #: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1

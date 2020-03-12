@@ -22,6 +22,8 @@
 #include <config.h>
 #endif
 
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
 #include <glib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
@@ -31,6 +33,11 @@
 #include <locale.h>
 #include <sys/stat.h>
 #include <pwd.h>
+
+#if VTE_CHECK_VERSION (0, 46, 0)
+#define PCRE2_CODE_UNIT_WIDTH 0
+#include <pcre2.h>
+#endif
 
 #include "lxterminal.h"
 #include "setting.h"
@@ -82,7 +89,7 @@ static void terminal_child_exited_event(VteTerminal * vte, gint status, Term * t
 #else
 static void terminal_child_exited_event(VteTerminal * vte, Term * term);
 #endif
-static void terminal_close_button_event(VteTerminal * vte, Term * term);
+static void terminal_close_button_event(GtkButton * button, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
 static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
@@ -458,7 +465,11 @@ static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *a
 static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
-    terminal_close_button_event(VTE_TERMINAL(term->vte), term);
+#if VTE_CHECK_VERSION (0, 38, 0)
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
+#else
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
+#endif
 }
 
 /* Handler for "activate" signal on File/Close Window menu item.
@@ -471,7 +482,12 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
 
     /* Play it safe and delete tabs one by one. */
     while(terminal->terms->len > 0) {
-        terminal_close_button_event(NULL, g_ptr_array_index(terminal->terms, 0));
+        Term *term = g_ptr_array_index(terminal->terms, 0);
+#if VTE_CHECK_VERSION (0, 38, 0)
+        terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
+#else
+        terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
+#endif
     }
 }
 
@@ -872,6 +888,8 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
 {
     LXTerminal * terminal = term->parent;
 
+    g_signal_handler_disconnect(G_OBJECT(term->vte), term->exit_handler_id);
+
     /* Last tab being deleted.  Deallocate memory and close the window. */
     if (gtk_notebook_get_n_pages(GTK_NOTEBOOK(terminal->notebook)) == 1)
     {
@@ -905,12 +923,12 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term)
 }
 
 /* Adapter for "activate" signal on Close button of tab and File/Close Tab menu item and accelerator. */
-static void terminal_close_button_event(VteTerminal * vte, Term * term)
+static void terminal_close_button_event(GtkButton * button, Term * term)
 {
 #if VTE_CHECK_VERSION (0, 38, 0)
-    terminal_child_exited_event(vte, 0, term);
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
 #else
-    terminal_child_exited_event(vte, term);
+    terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
 #endif
 }
 
@@ -1069,6 +1087,7 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     font_desc = pango_font_description_from_string(setting->font_name);
     vte_terminal_set_font(VTE_TERMINAL(term->vte), font_desc);
     pango_font_description_free(font_desc);
+    vte_terminal_set_word_char_exceptions(VTE_TERMINAL(term->vte), setting->word_selection_characters);
 #else
     vte_terminal_set_font_from_string(VTE_TERMINAL(term->vte), setting->font_name);
     vte_terminal_set_word_chars(VTE_TERMINAL(term->vte), setting->word_selection_characters);
@@ -1154,12 +1173,21 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 
     /* steal from tilda-0.09.6/src/tilda_terminal.c:145 */
     /* Match URL's, etc. */
+#if VTE_CHECK_VERSION (0, 46, 0)
+    VteRegex * dingus1 = vte_regex_new_for_match(DINGUS1, -1, PCRE2_UTF | PCRE2_NO_UTF_CHECK | PCRE2_UCP | PCRE2_MULTILINE, NULL);
+    VteRegex * dingus2 = vte_regex_new_for_match(DINGUS2, -1, PCRE2_UTF | PCRE2_NO_UTF_CHECK | PCRE2_UCP | PCRE2_MULTILINE, NULL);
+    gint ret = vte_terminal_match_add_regex(VTE_TERMINAL(term->vte), dingus1, 0);
+    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+    ret = vte_terminal_match_add_regex(VTE_TERMINAL(term->vte), dingus2, 0);
+    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+#else
     GRegex * dingus1 = g_regex_new(DINGUS1, G_REGEX_OPTIMIZE, 0, NULL);
     GRegex * dingus2 = g_regex_new(DINGUS2, G_REGEX_OPTIMIZE, 0, NULL);
     gint ret = vte_terminal_match_add_gregex(VTE_TERMINAL(term->vte), dingus1, 0);
     vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
     ret = vte_terminal_match_add_gregex(VTE_TERMINAL(term->vte), dingus2, 0);
     vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+#endif
     g_regex_unref(dingus1);
     g_regex_unref(dingus2);
 
@@ -1269,7 +1297,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     g_signal_connect(G_OBJECT(term->vte), "button-press-event", G_CALLBACK(terminal_vte_button_press_event), term);
     g_signal_connect(G_OBJECT(term->vte), "button-release-event", G_CALLBACK(terminal_vte_button_release_event), term);
     g_signal_connect(G_OBJECT(term->vte), "commit", G_CALLBACK(terminal_vte_commit), term);
-    g_signal_connect(G_OBJECT(term->vte), "child-exited", G_CALLBACK(terminal_child_exited_event), term);
+    term->exit_handler_id = g_signal_connect(G_OBJECT(term->vte), "child-exited", G_CALLBACK(terminal_child_exited_event), term);
     g_signal_connect(G_OBJECT(term->vte), "cursor-moved", G_CALLBACK(terminal_vte_cursor_moved_event), term);
     g_signal_connect(G_OBJECT(term->vte), "window-title-changed", G_CALLBACK(terminal_window_title_changed_event), term);
 
@@ -1379,11 +1407,23 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         /* --geometry=<columns>x<rows> */
         else if (strncmp(argument, "--geometry=", 11) == 0)
         {
-            int result = sscanf(&argument[11], "%dx%d", &arguments->geometry_columns, &arguments->geometry_rows);
-            if (result != 2)
-            {
-                return FALSE;
-            }
+            int xoff, yoff;
+            unsigned int width, height;
+            const int bitmask =
+                XParseGeometry(&argument[11], &xoff, &yoff, &width, &height);
+            arguments->geometry_bitmask = bitmask;
+
+            if (bitmask & WidthValue)
+                arguments->geometry_columns = width;
+
+            if (bitmask & HeightValue)
+                arguments->geometry_rows = height;
+
+            if (bitmask & XValue)
+                arguments->geometry_xoff = xoff;
+
+            if (bitmask & YValue)
+                arguments->geometry_yoff = yoff;
         }
 
         /* -l, --loginshell */
@@ -1581,10 +1621,16 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     gtk_window_set_title(GTK_WINDOW(terminal->window), gtk_label_get_text(GTK_LABEL(term->label)));
 
     /* Set the terminal geometry. */
-    if ((arguments->geometry_columns != 0) && (arguments->geometry_rows != 0)) {
-        vte_terminal_set_size(VTE_TERMINAL(term->vte), arguments->geometry_columns, arguments->geometry_rows);
+    const int geometry_bitmask = arguments->geometry_bitmask;
+
+    if ((geometry_bitmask & WidthValue) && (geometry_bitmask & HeightValue)) {
+        vte_terminal_set_size(VTE_TERMINAL(term->vte),
+                              arguments->geometry_columns,
+                              arguments->geometry_rows);
     } else {
-        vte_terminal_set_size(VTE_TERMINAL(term->vte), setting->geometry_columns, setting->geometry_rows);
+        vte_terminal_set_size(VTE_TERMINAL(term->vte),
+                              setting->geometry_columns,
+                              setting->geometry_rows);
     }
 
     /* Add the first terminal to the notebook and the data structures. */
@@ -1594,6 +1640,62 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 
     /* Show the widget, so it is realized and has a window. */
     gtk_widget_show_all(terminal->window);
+
+    /* If the X-offset is negative, then the window's X-position is
+     *
+     *     screen_width - window_width + geometry_xoff .
+     *
+     * Similarly, if the Y-offset is negative, then the window's Y-position is
+     *
+     *     screen_height - window_height + geometry_yoff .
+     *
+     * Thus, if the X-offset is negative, then the window's width must be
+     * obtained, and, if the Y-offset is negative, then the window's height
+     * must be obtained.  A window's width and height can be obtained by
+     * calling `gtk_window_get_size()`.  However, if `gtk_window_get_size()` is
+     * called before the window is shown, by calling `gtk_widget_show_all()`,
+     * then `gtk_window_get_size()` will return the window's default width and
+     * height, which will likely differ from the window's actual width and
+     * height.  Therefore, the window must be positioned after it is shown.
+     */
+
+    /* Position the terminal according to `XOFF` and `YOFF`, if they were
+     * specified.
+     */
+    if ((geometry_bitmask & XValue) && (geometry_bitmask & YValue)) {
+        GtkWindow *const window = GTK_WINDOW(terminal->window);
+        gint x, y;
+
+        if (geometry_bitmask & XNegative) {
+            GdkScreen *const screen = gtk_window_get_screen(window);
+            gint window_width, window_height;
+            gtk_window_get_size(window, &window_width, &window_height);
+            x = gdk_screen_get_width(screen) - window_width +
+                arguments->geometry_xoff;
+
+            if (geometry_bitmask & YNegative) {
+                y = gdk_screen_get_height(screen) - window_height +
+                    arguments->geometry_yoff;
+                gtk_window_set_gravity(window, GDK_GRAVITY_SOUTH_EAST);
+            } else {
+                y = arguments->geometry_yoff;
+                gtk_window_set_gravity(window, GDK_GRAVITY_NORTH_EAST);
+            }
+        } else {
+            x = arguments->geometry_xoff;
+
+            if (geometry_bitmask & YNegative) {
+                gint window_width, window_height;
+                gtk_window_get_size(window, &window_width, &window_height);
+                y = gdk_screen_get_height(gtk_window_get_screen(window)) -
+                    window_height + arguments->geometry_yoff;
+                gtk_window_set_gravity(window, GDK_GRAVITY_SOUTH_WEST);
+            } else
+                y = arguments->geometry_yoff;
+        }
+
+        gtk_window_move(window, x, y);
+    }
 
     /* Update terminal settings. */
     terminal_settings_apply(terminal);

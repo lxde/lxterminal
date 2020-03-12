@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-24 06:08+0000\n"
+"PO-Revision-Date: 2019-02-22 09:51+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Proxecto Trasno <proxecto@trasno.net>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1495606099.867634\n"
+"X-POOTLE-MTIME: 1550829085.150597\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -159,8 +159,8 @@ msgstr "_Aceptar"
 msgid "translator-credits"
 msgstr ""
 "Miguel Anxo Bouzada <mbouzada@gmail.com>, 2009, 2010, 2011,2012,2013,2014, "
-"2015, 2016, 2017.\n"
-"Indalecio Freiría <ifreiria@gmail.com>, 2009 \n"
+"2015, 2016, 2017,2018,2019.\n"
+"Indalecio Freiría <ifreiria@gmail.com>, 2009.\n"
 "Proxecto Trasno <proxecto@trasno.net>"
 
 #: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
@@ -327,19 +327,19 @@ msgstr "Liñas de desprazamento"
 
 #: ../data/lxterminal-preferences.glade.h:36
 msgid "Hide scroll bar"
-msgstr "Agochar a barra de desprazamento:"
+msgstr "Agachar a barra de desprazamento:"
 
 #: ../data/lxterminal-preferences.glade.h:37
 msgid "Hide menu bar"
-msgstr "Agochar a barra de menú"
+msgstr "Agachar a barra de menú"
 
 #: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide Close buttons"
-msgstr "Agochar o botón de peche"
+msgstr "Agachar o botón de peche"
 
 #: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide mouse pointer"
-msgstr "Agochar o punteiro do rato"
+msgstr "Agachar o punteiro do rato"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"

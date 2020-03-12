@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2015-06-19 14:36+0000\n"
+"PO-Revision-Date: 2018-06-10 12:16+0000\n"
 "Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: te\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1434724615.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1528632992.341081\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -79,17 +79,17 @@ msgstr "స్క్రోల్ బ్యాక్ తుడిచివేయ�
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "దగ్గరగా (_I)"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "దూరంగా (_u)"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "మునుపటిలా (_R)"
 
 #. 16
 #. 17
@@ -149,16 +149,16 @@ msgstr "ట్యాబ్ పేరుపెట్టు"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "రద్దుచేయి (_C)"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "సరే (_O)"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
-msgstr "Praveen Illa <mail2ipn@gmail.com>, 2011-2015."
+msgstr "Praveen Illa <mail2ipn@gmail.com>, 2011-201 8."
 
 #: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
@@ -166,9 +166,8 @@ msgid "LXTerminal"
 msgstr "LXటెర్మినల్"
 
 #: ../src/lxterminal.c:748
-#, fuzzy
 msgid "Copyright (C) 2008-2017"
-msgstr "నకలుహక్కు (C) 2008-2017"
+msgstr "నకలుహక్కులు (C) 2008-2017"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
@@ -177,11 +176,11 @@ msgstr "LXDE ప్రోజెక్టు కొరకు టెర్మి�
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "%d ట్యాబులను మూసివేయబోతున్నారు. మీరు కొనసాగాలనుకుంటున్నారా?"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "మూసేయడాన్ని నిర్ధారించండి"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -241,76 +240,75 @@ msgstr "వినిపించే బెల్"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "నలుపు"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "ఎరుపు"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "గ్రీకు"
+msgstr "పచ్చరంగు"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "గోధుమరంగు"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "నీలం"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "మెజెంటా"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "ఆకుపచ్చ నీలం"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "బూడిదరంగు"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "ముదురుబూడిదరంగు"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "ప్రకాశ ఎరుపు"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "ప్రకాశించు పచ్చ"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "పసుపు"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "ప్రకాశ నీలం"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "ప్రకాశ మెజెంటా"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "ప్రకాశ ఆకుపచ్చ నీలం"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "తెలుపు"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "వర్ణఫలకం"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "వర్ణఫలకపు ముందమర్పు"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -342,11 +340,11 @@ msgstr "మౌసు పాయింటరును దాయి"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "అప్రమేయ కిటికీ పరిమాణం"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -366,7 +364,7 @@ msgstr "Alt-nను వాడి ట్యాబ్‌లను మరియు 
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "బహుళ ట్యాబులతో ఉన్న కిటికీని మూసివేసేటప్పుడు నిర్ధారణ కోసం అడగవద్దు"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -414,15 +412,15 @@ msgstr "ట్యాబును కుడివైపుకు తరలిం�
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "దగ్గరగా"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "దూరంగా"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "మునుపటివలె"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"

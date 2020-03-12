@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2015-05-04 04:34+0000\n"
-"Last-Translator: rago1975 <take1975@kumamoto.email.ne.jp>\n"
+"PO-Revision-Date: 2018-05-14 07:48+0000\n"
+"Last-Translator: Mamoru TASAKA <mtasaka@fedoraproject.org>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.7\n"
-"X-POOTLE-MTIME: 1430714060.000000\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1526284106.550116\n"
 
 #. 0
 #: ../src/lxterminal.c:121
@@ -82,17 +82,17 @@ msgstr "バックログの消去(_O)"
 #. 13
 #: ../src/lxterminal.c:134
 msgid "Zoom _In"
-msgstr ""
+msgstr "拡大(_I)"
 
 #. 14
 #: ../src/lxterminal.c:135
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "縮小(_u)"
 
 #. 15
 #: ../src/lxterminal.c:136
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "ズームのリセット(_R)"
 
 #. 16
 #. 17
@@ -152,18 +152,19 @@ msgstr "タブの名前変更"
 
 #: ../src/lxterminal.c:570
 msgid "_Cancel"
-msgstr ""
+msgstr "キャンセル(_C)"
 
 #: ../src/lxterminal.c:571
 msgid "_OK"
-msgstr ""
+msgstr "OK(_O)"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:740
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
-"IWAI, Masaharu <iwai@alib.jp>"
+"IWAI, Masaharu <iwai@alib.jp>\n"
+"Mamoru TASAKA <mtasaka@fedoraproject.org>"
 
 #: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
@@ -182,11 +183,11 @@ msgstr "LXDEプロジェクトのための端末エミュレータ"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "%d個のタブを閉じようとしています。続行しますか？"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
-msgstr ""
+msgstr "クローズの確認"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -347,11 +348,11 @@ msgstr "マウスポインタを隠す"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Default window size"
-msgstr ""
+msgstr "デフォルトのウィンドウのサイズ"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Display"
@@ -371,7 +372,7 @@ msgstr "Alt-n によるタブやメニューの操作を無効にする"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "複数のタブを含むウィンドウを閉じるときに確認しない"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -419,15 +420,15 @@ msgstr "タブを右に移動"
 
 #: ../data/lxterminal-preferences.glade.h:59
 msgid "Zoom In"
-msgstr ""
+msgstr "拡大"
 
 #: ../data/lxterminal-preferences.glade.h:60
 msgid "Zoom Out"
-msgstr ""
+msgstr "縮小"
 
 #: ../data/lxterminal-preferences.glade.h:61
 msgid "Zoom Reset"
-msgstr ""
+msgstr "ズームのリセット"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Shortcuts"
