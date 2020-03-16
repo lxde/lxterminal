@@ -999,8 +999,12 @@ static void terminal_show_popup_menu(VteTerminal * vte, GdkEventButton * event, 
         gtk_action_set_visible(action_open_url, term->matched_url != NULL);
     }
 
+#if GTK_CHECK_VERSION(3, 22, 0)
+    gtk_menu_popup_at_pointer(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")), (GdkEvent *) event);
+#else
     gtk_menu_popup(GTK_MENU(gtk_ui_manager_get_widget(manager, "/VTEMenu")),
         NULL, NULL, NULL, NULL, event->button, event->time);
+#endif
 }
 
 /* Handler for "cursor-moved" signal on VTE */
