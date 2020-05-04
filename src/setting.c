@@ -123,6 +123,7 @@ void print_setting()
     printf("Underline blinks: %i\n", setting->cursor_underline);
     printf("Audible bell: %i\n", setting->audible_bell);
     printf("Tab position: %s\n", setting->tab_position);
+    printf("Condensed tabs: %i\n", setting->condensed_tabs);
     printf("Scrollback buffer size in lines: %i\n", setting->scrollback);
     printf("Hide scrollbar: %i\n", setting->hide_scroll_bar);
     printf("Hide menubar: %i\n", setting->hide_menu_bar);
@@ -208,6 +209,7 @@ void save_setting()
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, setting->cursor_underline);
     g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, setting->audible_bell);
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, TAB_POS, setting->tab_position);
+    g_key_file_set_boolean(setting->keyfile, GENERAL_GROUP, CONDENSED_TABS, setting->condensed_tabs);
     g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, SCROLLBACK, setting->scrollback);
     g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_COLUMNS, setting->geometry_columns);
     g_key_file_set_integer(setting->keyfile, GENERAL_GROUP, GEOMETRY_ROWS, setting->geometry_rows);
@@ -413,6 +415,7 @@ color_preset_does_not_exist:
         setting->cursor_underline = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CURSOR_UNDERLINE, NULL);
         setting->audible_bell = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, AUDIBLE_BELL, NULL);
         setting->tab_position = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, TAB_POS, NULL);
+        setting->condensed_tabs = g_key_file_get_boolean(setting->keyfile, GENERAL_GROUP, CONDENSED_TABS, NULL);
         setting->scrollback = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, SCROLLBACK, &error);
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND))
         {   

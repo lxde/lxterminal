@@ -376,6 +376,11 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "changed", 
         G_CALLBACK(preferences_dialog_tab_position_changed_event), setting);
 
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "condensed_tabs"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->condensed_tabs);
+    g_signal_connect(G_OBJECT(w), "toggled",
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->condensed_tabs);
+
     w = GTK_WIDGET(gtk_builder_get_object(builder, "scrollback_lines"));
     gtk_spin_button_set_value(GTK_SPIN_BUTTON(w), setting->scrollback);
     g_signal_connect(G_OBJECT(w), "value-changed", 

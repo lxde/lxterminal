@@ -1023,7 +1023,7 @@ static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term)
             gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>",currentcustomtitle,"</b>",NULL));
         } else {
             gtk_label_set_markup(GTK_LABEL(term->label),g_strconcat("<b>* ",vte_terminal_get_window_title(VTE_TERMINAL(vte)),"</b>",NULL));
-	}
+        }
     }
 }
 
@@ -1146,6 +1146,21 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     else
     {
         gtk_widget_show(term->close_button);
+    }
+
+    /* Setup size of tab titles (either normal or condensed) */
+    if (setting->condensed_tabs)
+    {
+      PangoFontDescription *pfdesc = pango_font_description_new();
+
+      gtk_widget_set_size_request(GTK_WIDGET(term->close_button), 10, 10);
+      pango_font_description_set_size(pfdesc, PANGO_SCALE * 6);
+      gtk_widget_modify_font(GTK_WIDGET(term->label), pfdesc);
+    }
+    else
+    {
+      gtk_widget_set_size_request(GTK_WIDGET(term->close_button), -1, -1);
+      gtk_widget_modify_font(GTK_WIDGET(term->label), NULL);
     }
 }
 

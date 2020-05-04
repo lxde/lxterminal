@@ -34,6 +34,7 @@
 #define CURSOR_UNDERLINE "cursorunderline"
 #define AUDIBLE_BELL "audiblebell"
 #define TAB_POS "tabpos"
+#define CONDENSED_TABS "condensedtabs"
 #define SCROLLBACK "scrollback"
 #define GEOMETRY_COLUMNS "geometry_columns"
 #define GEOMETRY_ROWS "geometry_rows"
@@ -100,6 +101,7 @@ typedef struct _setting {
     gboolean cursor_underline;      /* True if underline cursor; false if block cursor */
     gboolean audible_bell;      /* True if audible bell */
     char * tab_position;        /* Position of tabs on main window (top, bottom, left, right) */
+    gboolean condensed_tabs;            /* Whether tab labels are small or normal */
     gint scrollback;            /* Scrollback buffer size in lines */
     gint geometry_columns;
     gint geometry_rows;
