@@ -30,6 +30,7 @@
 #define BG_COLOR "bgcolor"
 #define BG_ALPHA "bgalpha"
 #define DISALLOW_BOLD "disallowbold"
+#define BOLD_BRIGHT "boldbright"
 #define CURSOR_BLINKS "cursorblinks"
 #define CURSOR_UNDERLINE "cursorunderline"
 #define AUDIBLE_BELL "audiblebell"
@@ -96,6 +97,9 @@ typedef struct _setting {
 #endif
     const char * color_preset;        /* Color preset name */
     gboolean disallow_bold;     /* Disallow bolding by VTE */
+#if VTE_CHECK_VERSION (0, 52, 0)
+    gboolean bold_bright;       /* True if bold is bright */
+#endif
     gboolean cursor_blink;      /* True if cursor blinks */
     gboolean cursor_underline;      /* True if underline cursor; false if block cursor */
     gboolean audible_bell;      /* True if audible bell */
