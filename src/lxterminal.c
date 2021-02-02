@@ -92,6 +92,7 @@ static void terminal_child_exited_event(VteTerminal * vte, Term * term);
 static void terminal_close_button_event(GtkButton * button, Term * term);
 static gboolean terminal_tab_button_press_event(GtkWidget * widget, GdkEventButton * event, Term * term);
 static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term);
+static void terminal_vte_visual_bell(VteTerminal * vte, Term * term);
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term);
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
@@ -1027,6 +1028,14 @@ static void terminal_vte_cursor_moved_event(VteTerminal * vte, Term * term)
     }
 }
 
+/* Handler for "bell" signal on VTE. Only connected when visual_bell is enabled. */
+static void terminal_vte_visual_bell(VteTerminal * vte, Term * term)
+{
+    // Toggle urgency hint, issue a new one even if already set.
+    gtk_window_set_urgency_hint(GTK_WINDOW(term->parent->window), FALSE);
+    gtk_window_set_urgency_hint(GTK_WINDOW(term->parent->window), TRUE);
+}
+
 /* Handler for "button-press-event" signal on VTE. */
 static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButton * event, Term * term)
 {
@@ -1149,6 +1158,15 @@ static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term)
     else
     {
         gtk_widget_show(term->close_button);
+    }
+
+    if (setting->visual_bell)
+    {
+        g_signal_connect(G_OBJECT(term->vte), "bell", G_CALLBACK(terminal_vte_visual_bell), term);
+    }
+    else
+    {
+        g_signal_handlers_disconnect_by_func(G_OBJECT(term->vte), terminal_vte_visual_bell, term);
     }
 }
 

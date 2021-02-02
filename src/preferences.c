@@ -382,6 +382,11 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "toggled", 
         G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->audible_bell);
 
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "visual_bell"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->visual_bell);
+    g_signal_connect(G_OBJECT(w), "toggled", 
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->visual_bell);
+
     w = GTK_WIDGET(gtk_builder_get_object(builder, "tab_position"));
     gtk_combo_box_set_active(GTK_COMBO_BOX(w), terminal_tab_get_position_id(setting->tab_position));
     g_signal_connect(G_OBJECT(w), "changed", 

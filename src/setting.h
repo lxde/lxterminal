@@ -34,6 +34,7 @@
 #define CURSOR_BLINKS "cursorblinks"
 #define CURSOR_UNDERLINE "cursorunderline"
 #define AUDIBLE_BELL "audiblebell"
+#define VISUAL_BELL "visualbell"
 #define TAB_POS "tabpos"
 #define SCROLLBACK "scrollback"
 #define GEOMETRY_COLUMNS "geometry_columns"
@@ -103,6 +104,7 @@ typedef struct _setting {
     gboolean cursor_blink;      /* True if cursor blinks */
     gboolean cursor_underline;      /* True if underline cursor; false if block cursor */
     gboolean audible_bell;      /* True if audible bell */
+    gboolean visual_bell;       /* True if visual bell */
     char * tab_position;        /* Position of tabs on main window (top, bottom, left, right) */
     gint scrollback;            /* Scrollback buffer size in lines */
     gint geometry_columns;
