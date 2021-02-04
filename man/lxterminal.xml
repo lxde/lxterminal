@@ -88,4 +88,10 @@ Except in the <option>--command=</option> form, this must be the last option on 
 	  License can be found in /usr/share/common-licenses/GPL.
     </para>
 
+  </refsect1>
+
+  <refsect1>    <title>FILES</title>
+
+    <para>The configuration file can be found in ~/.config/lxterminal/lxterminal.conf.</para>
+
   </refsect1></refentry>

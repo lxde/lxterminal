@@ -30,9 +30,11 @@
 #define BG_COLOR "bgcolor"
 #define BG_ALPHA "bgalpha"
 #define DISALLOW_BOLD "disallowbold"
+#define BOLD_BRIGHT "boldbright"
 #define CURSOR_BLINKS "cursorblinks"
 #define CURSOR_UNDERLINE "cursorunderline"
 #define AUDIBLE_BELL "audiblebell"
+#define VISUAL_BELL "visualbell"
 #define TAB_POS "tabpos"
 #define SCROLLBACK "scrollback"
 #define GEOMETRY_COLUMNS "geometry_columns"
@@ -97,9 +99,13 @@ typedef struct _setting {
 #endif
     const char * color_preset;        /* Color preset name */
     gboolean disallow_bold;     /* Disallow bolding by VTE */
+#if VTE_CHECK_VERSION (0, 52, 0)
+    gboolean bold_bright;       /* True if bold is bright */
+#endif
     gboolean cursor_blink;      /* True if cursor blinks */
     gboolean cursor_underline;      /* True if underline cursor; false if block cursor */
     gboolean audible_bell;      /* True if audible bell */
+    gboolean visual_bell;       /* True if visual bell */
     char * tab_position;        /* Position of tabs on main window (top, bottom, left, right) */
     gint scrollback;            /* Scrollback buffer size in lines */
     gint geometry_columns;

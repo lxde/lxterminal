@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-24 12:14+0800\n"
+"POT-Creation-Date: 2019-09-01 05:21+0900\n"
 "PO-Revision-Date: 2018-05-14 07:48+0000\n"
 "Last-Translator: Mamoru TASAKA <mtasaka@fedoraproject.org>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -23,169 +23,176 @@ msgstr ""
 "X-POOTLE-MTIME: 1526284106.550116\n"
 
 #. 0
-#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:123
 msgid "_File"
 msgstr "ファイル(_F)"
 
 #. 1
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:124
 msgid "_Edit"
 msgstr "編集(_E)"
 
 #. 2
-#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:125
 msgid "_Tabs"
 msgstr "タブ(_T)"
 
 #. 3
-#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:126
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
 #. 4
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:127
 msgid "_New Window"
 msgstr "新規ウィンドウ(_W)"
 
 #. 5
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:128
 msgid "New T_ab"
 msgstr "新規タブ(_T)"
 
 #. 6
 #. 7
-#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:130 ../src/lxterminal.c:170
 msgid "_Close Tab"
 msgstr "タブを閉じる(_C)"
 
 #. 8
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:131
 msgid "Close _Window"
 msgstr "ウィンドウを閉じる(_W)"
 
 #. 9
-#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
+#: ../src/lxterminal.c:132 ../src/lxterminal.c:159
 msgid "Cop_y"
 msgstr "コピー(_Y)"
 
 #. 10
-#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
+#: ../src/lxterminal.c:133 ../src/lxterminal.c:160
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
 #. 11
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:134
 msgid "Clear scr_ollback"
 msgstr "バックログの消去(_O)"
 
 #. 12
 #. 13
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:136
 msgid "Zoom _In"
 msgstr "拡大(_I)"
 
 #. 14
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:137
 msgid "Zoom O_ut"
 msgstr "縮小(_u)"
 
 #. 15
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:138
 msgid "Zoom _Reset"
 msgstr "ズームのリセット(_R)"
 
 #. 16
 #. 17
-#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
 msgid "Preference_s"
 msgstr "設定(_S)"
 
 #. 18
-#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
+#: ../src/lxterminal.c:141 ../src/lxterminal.c:165
 msgid "Na_me Tab"
 msgstr "タブの名前変更(_M)"
 
 #. 19
-#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:142 ../src/lxterminal.c:166
 msgid "Pre_vious Tab"
 msgstr "前のタブ(_V)"
 
 #. 20
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:143 ../src/lxterminal.c:167
 msgid "Ne_xt Tab"
 msgstr "次のタブ(_X)"
 
 #. 21
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:144 ../src/lxterminal.c:168
 msgid "Move Tab _Left"
 msgstr "タブを左へ移動(_L)"
 
 #. 22
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:145 ../src/lxterminal.c:169
 msgid "Move Tab _Right"
 msgstr "タブを右へ移動(_R)"
 
 #. 23
-#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:146
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:154
 msgid "New _Window"
 msgstr "新規ウィンドウ(_W)"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:155
 msgid "New _Tab"
 msgstr "新規タブ(_T)"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:157
+msgid "Open _URL"
+msgstr "URLを開く(_U)"
+
+#: ../src/lxterminal.c:158
 msgid "Copy _URL"
 msgstr "URLをコピー(_U)"
 
-#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:161
 msgid "Cl_ear scrollback"
 msgstr "バックログを消去(_E)"
 
-#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:593 ../data/lxterminal-preferences.glade.h:54
 msgid "Name Tab"
 msgstr "タブの名前変更"
 
-#: ../src/lxterminal.c:570
+#: ../src/lxterminal.c:596
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: ../src/lxterminal.c:571
+#: ../src/lxterminal.c:597
 msgid "_OK"
 msgstr "OK(_O)"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:740
+#: ../src/lxterminal.c:766
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>\n"
 "Mamoru TASAKA <mtasaka@fedoraproject.org>"
 
-#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
+#: ../src/lxterminal.c:772 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:748
-#, fuzzy
-msgid "Copyright (C) 2008-2017"
-msgstr "Copyright (C) 2008-2017"
+#: ../src/lxterminal.c:774
+msgid "Copyright (C) 2008-2018"
+msgstr ""
 
-#: ../src/lxterminal.c:749
+#: ../src/lxterminal.c:775
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDEプロジェクトのための端末エミュレータ"
 
-#: ../src/lxterminal.c:814
+#: ../src/lxterminal.c:806
+msgid "LXTerminal Terminal Emulator"
+msgstr "LXTerminal端末エミュレータ"
+
+#: ../src/lxterminal.c:840
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr "%d個のタブを閉じようとしています。続行しますか？"
 
-#: ../src/lxterminal.c:815
+#: ../src/lxterminal.c:841
 msgid "Confirm close"
 msgstr "クローズの確認"
 
@@ -247,76 +254,75 @@ msgstr "音声のベル"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Black"
-msgstr ""
+msgstr "黒"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Red"
-msgstr ""
+msgstr "赤"
 
 #: ../data/lxterminal-preferences.glade.h:17
-#, fuzzy
 msgid "Green"
-msgstr "ギリシャ語"
+msgstr "緑"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Brown"
-msgstr ""
+msgstr "茶色"
 
 #: ../data/lxterminal-preferences.glade.h:19
 msgid "Blue"
-msgstr ""
+msgstr "青"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Magenta"
-msgstr ""
+msgstr "マゼンタ"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Cyan"
-msgstr ""
+msgstr "シアン"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Gray"
-msgstr ""
+msgstr "灰色"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Darkgray"
-msgstr ""
+msgstr "暗い灰色"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Bright Red"
-msgstr ""
+msgstr "明るい赤"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Bright Green"
-msgstr ""
+msgstr "明るい緑"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Yellow"
-msgstr ""
+msgstr "黄色"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Blue"
-msgstr ""
+msgstr "明るい青"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Bright Magenta"
-msgstr ""
+msgstr "明るいマゼンタ"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Cyan"
-msgstr ""
+msgstr "明るいシアン"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "White"
-msgstr ""
+msgstr "白"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Palette"
-msgstr ""
+msgstr "パレット"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr ""
+msgstr "パレット・プリセット"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"

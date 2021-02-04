@@ -353,6 +353,17 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "toggled", 
         G_CALLBACK(preferences_dialog_allow_bold_toggled_event), setting);
 
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "bold_bright"));
+#if VTE_CHECK_VERSION (0, 52, 0)
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->bold_bright);
+    g_signal_connect(G_OBJECT(w), "toggled", 
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->bold_bright);
+#else
+    gtk_widget_hide(w);
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "label_bold_bright"));
+    gtk_widget_hide(w);
+#endif
+
     w = GTK_WIDGET(gtk_builder_get_object(builder, "cursor_blink"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->cursor_blink);
     g_signal_connect(G_OBJECT(w), "toggled", 
@@ -370,6 +381,11 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->audible_bell);
     g_signal_connect(G_OBJECT(w), "toggled", 
         G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->audible_bell);
+
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "visual_bell"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(w), setting->visual_bell);
+    g_signal_connect(G_OBJECT(w), "toggled", 
+        G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->visual_bell);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "tab_position"));
     gtk_combo_box_set_active(GTK_COMBO_BOX(w), terminal_tab_get_position_id(setting->tab_position));
