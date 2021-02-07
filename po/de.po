@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-02 03:38+0200\n"
-"PO-Revision-Date: 2021-02-07 10:33+0100\n"
+"PO-Revision-Date: 2021-02-07 10:49+0100\n"
 "Last-Translator: Ingo Brückl <ib@wupperonline.de>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "Language: de\n"
@@ -253,7 +253,7 @@ msgstr "Unterstrich"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Audible bell"
-msgstr "Akutisches Signal"
+msgstr "Akustisches Signal"
 
 #: ../data/lxterminal-preferences.glade.h:16
 msgid "Visual bell"
