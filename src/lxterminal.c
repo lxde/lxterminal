@@ -523,7 +523,11 @@ static void terminal_copy_url_activate_event(GtkAction * action, LXTerminal * te
 static void terminal_copy_activate_event(GtkAction * action, LXTerminal * terminal)
 {
     Term * term = g_ptr_array_index(terminal->terms, gtk_notebook_get_current_page(GTK_NOTEBOOK(terminal->notebook)));
+#if VTE_CHECK_VERSION (0, 50, 0)
+    vte_terminal_copy_clipboard_format(VTE_TERMINAL(term->vte), VTE_FORMAT_TEXT);
+#else
     vte_terminal_copy_clipboard(VTE_TERMINAL(term->vte));
+#endif
 }
 
 /* Handler for "activate" signal on Edit/Paste menu item.
@@ -1207,16 +1211,16 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     VteRegex * dingus1 = vte_regex_new_for_match(DINGUS1, -1, PCRE2_UTF | PCRE2_NO_UTF_CHECK | PCRE2_UCP | PCRE2_MULTILINE, NULL);
     VteRegex * dingus2 = vte_regex_new_for_match(DINGUS2, -1, PCRE2_UTF | PCRE2_NO_UTF_CHECK | PCRE2_UCP | PCRE2_MULTILINE, NULL);
     gint ret = vte_terminal_match_add_regex(VTE_TERMINAL(term->vte), dingus1, 0);
-    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+    vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
     ret = vte_terminal_match_add_regex(VTE_TERMINAL(term->vte), dingus2, 0);
-    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+    vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
 #else
     GRegex * dingus1 = g_regex_new(DINGUS1, G_REGEX_OPTIMIZE, 0, NULL);
     GRegex * dingus2 = g_regex_new(DINGUS2, G_REGEX_OPTIMIZE, 0, NULL);
     gint ret = vte_terminal_match_add_gregex(VTE_TERMINAL(term->vte), dingus1, 0);
-    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+    vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
     ret = vte_terminal_match_add_gregex(VTE_TERMINAL(term->vte), dingus2, 0);
-    vte_terminal_match_set_cursor_type(VTE_TERMINAL(term->vte), ret, GDK_HAND2);
+    vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
 #endif
     g_regex_unref(dingus1);
     g_regex_unref(dingus2);
@@ -1234,7 +1238,11 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     /* Create the Close button. */
     term->close_button = gtk_button_new();
     gtk_button_set_relief(GTK_BUTTON(term->close_button), GTK_RELIEF_NONE);
+#if GTK_CHECK_VERSION (3, 20, 0)
+    gtk_widget_set_focus_on_click(term->close_button, FALSE);
+#else
     gtk_button_set_focus_on_click(GTK_BUTTON(term->close_button), FALSE);
+#endif
 #if GTK_CHECK_VERSION(3, 0, 0)
     gtk_container_add(GTK_CONTAINER(term->close_button), gtk_image_new_from_icon_name("window-close", GTK_ICON_SIZE_MENU));
 #else
@@ -1775,7 +1783,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 static void terminal_settings_apply(LXTerminal * terminal)
 {
     /* Reinitialize "composited". */
-    terminal->rgba = gtk_widget_is_composited(terminal->window);
+    terminal->rgba = gdk_screen_is_composited(gtk_widget_get_screen(terminal->window));
 
     /* Update tab position. */
     terminal->tab_position = terminal_tab_get_position_id(get_setting()->tab_position);
