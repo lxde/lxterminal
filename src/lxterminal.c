@@ -97,13 +97,14 @@ static gboolean terminal_vte_button_press_event(VteTerminal * vte, GdkEventButto
 static void terminal_settings_apply_to_term(LXTerminal * terminal, Term * term);
 static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gchar * pwd, gchar * * env, gchar * * exec);
 static void terminal_set_geometry_hints(Term * term, GdkGeometry * geometry);
-static void terminal_new_tab(LXTerminal * terminal, const gchar * label);
+static void terminal_new_tab(LXTerminal * terminal, const gchar * label, const gchar * cmd);
 static void terminal_free(Term * term);
 static void terminal_menubar_initialize(LXTerminal * terminal);
 static void terminal_menu_accelerator_update(LXTerminal * terminal);
 static void terminal_settings_apply(LXTerminal * terminal);
 static void terminal_update_menu_shortcuts(Setting * setting);
 static void terminal_initialize_menu_shortcuts(Setting * setting);
+static void terminal_process_requested_command(gchar * * * const command, const gint cmd_len, const gboolean login_shell);
 
 /* Menu accelerator saved when the user disables it. */
 static char * saved_menu_accelerator = NULL;
@@ -113,8 +114,10 @@ static gchar usage_display[] = {
     "Usage:\n"
     "  lxterminal [Options...] - LXTerminal is a terminal emulator\n\n"
     "Options:\n"
-    "  -e, --command=STRING             Execute the argument to this option inside the terminal\n"
+    "  --command=STRING [--command=STRING [...]],\n"
+    "    -e STRING, --command STRING    Execute the argument to this option inside the terminal\n"
     "  --geometry=COLUMNSxROWS          Set the terminal's size\n"
+    "  -h, --help                       This help text\n"
     "  -l, --loginshell                 Execute login shell\n"
     "  -t, -T, --title=,\n"
     "    --tabs=NAME[,NAME[,NAME[...]]] Set the terminal's title\n"
@@ -293,7 +296,8 @@ static void terminal_initialize_switch_tab_accelerator(Term * term)
     {
         /* Formulate the accelerator name. */
         char switch_tab_accel[1 + 3 + 1 + 1 + 1]; /* "<ALT>n" */
-        sprintf(switch_tab_accel, "<ALT>%d", term->index + 1);
+	/* Casting to unsigned, and %10, to shut off a compilation warning. */
+        sprintf(switch_tab_accel, "<ALT>%d", (guint)(term->index + 1)%10);
 
         /* Parse the accelerator name. */
         guint key;
@@ -373,7 +377,7 @@ static void terminal_new_window_activate_event(GtkAction * action, LXTerminal * 
  * Open a new tab. */
 static void terminal_new_tab_activate_event(GtkAction * action, LXTerminal * terminal)
 {
-    terminal_new_tab(terminal, NULL);
+    terminal_new_tab(terminal, NULL, NULL);
 }
 
 static void terminal_set_geometry_hints(Term *term, GdkGeometry *geometry)
@@ -410,7 +414,7 @@ static void terminal_save_size(LXTerminal * terminal)
     terminal->row = vte_terminal_get_row_count(VTE_TERMINAL(term->vte));
 }
 
-static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
+static void terminal_new_tab(LXTerminal * terminal, const gchar * label, const gchar * cmd)
 {
     Term * term;
     gchar * proc_cwd = terminal_get_current_dir(terminal);
@@ -419,21 +423,14 @@ static void terminal_new_tab(LXTerminal * terminal, const gchar * label)
      * If the working directory was determined above, use it; otherwise default to the working directory of the process.
      * Create the new terminal. */
 
-    if (terminal->login_shell)
+    gint cmd_len = 0;
+    gchar * * exec = NULL;
+    if (cmd != NULL)
     {
-        /* Create a login shell, this should be cleaner. */
-        gchar * * exec = g_malloc(3 * sizeof(gchar *));
-        exec[0] = g_strdup(terminal_get_preferred_shell());
-        char * shellname = g_path_get_basename(exec[0]);
-        exec[1] = g_strdup_printf("-%s", shellname);
-        g_free(shellname);
-        exec[2] = NULL;
-        term = terminal_new(terminal, label, proc_cwd, NULL, exec);
+        g_shell_parse_argv(cmd, &cmd_len, &exec, NULL);
     }
-    else
-    {
-        term = terminal_new(terminal, label, proc_cwd, NULL, NULL);
-    }
+    terminal_process_requested_command(&exec, cmd_len, terminal->login_shell);
+    term = terminal_new(terminal, label, proc_cwd, NULL, exec);
     g_free(proc_cwd);
 
     /* Add a tab to the notebook and the "terms" array. */
@@ -1315,6 +1312,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
         exec[1] = g_path_get_basename(exec[0]);
         exec[2] = NULL;
     }
+    term->command = exec;
 
 #if VTE_CHECK_VERSION (0, 38, 0)
     vte_terminal_spawn_sync(
@@ -1342,7 +1340,6 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
                     &term->pid,
                     NULL);
 #endif
-    g_strfreev(exec);
 
     /* Connect signals. */
     g_signal_connect(G_OBJECT(term->tab), "button-press-event", G_CALLBACK(terminal_tab_button_press_event), term);
@@ -1365,6 +1362,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
 /* Deallocate a Term structure. */
 static void terminal_free(Term * term)
 {
+    g_strfreev(term->command);
     g_free(term->matched_url);
     if ((GTK_IS_ACCEL_GROUP(term->parent->accel_group)) && (term->closure != NULL))
     {
@@ -1431,7 +1429,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
     arguments->executable = argv[0];
 
     char * * argv_cursor = argv;
-    gint cmd_len;
+    gint num___commandEqual = 0; /* ___commandEqual for _--command= */
 
     while (argc > 1)
     {
@@ -1439,19 +1437,23 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         argv_cursor ++;
         char * argument = *argv_cursor;
 
-        /* --command=<command> */
+        /* --command= */
         if (strncmp(argument, "--command=", 10) == 0)
         {
-            g_strfreev(arguments->command);
-            g_shell_parse_argv(&argument[10], &cmd_len, &arguments->command, NULL);
+            arguments->commands = 
+                g_realloc(arguments->commands,
+                          (num___commandEqual + 2) * sizeof(gchar *));
+            arguments->commands[num___commandEqual] = &argument[10];
+            num___commandEqual ++;
+            arguments->commands[num___commandEqual] = NULL;
         }
 
         /* -e <rest of arguments>, --command <rest of arguments>
          * The <rest of arguments> behavior is demanded by distros who insist on this xterm feature. */
         else if ((strcmp(argument, "--command") == 0) || (strcmp(argument, "-e") == 0))
         {
-            if(arguments->command != NULL) g_strfreev(arguments->command);
-            cmd_len = 0;
+            g_strfreev(arguments->command);
+            gint cmd_len = 0;
             arguments->command = g_malloc(argc * sizeof(gchar *));
 
             while (argc > 1)
@@ -1521,7 +1523,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             arguments->working_directory = &argument[20];
         }
 
-    /* --no-remote: Do not accept or send remote commands */
+        /* --no-remote: Do not accept or send remote commands */
         else if (strcmp(argument, "--no-remote") == 0) {
             arguments->no_remote = TRUE;
         }
@@ -1536,28 +1538,35 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         else {
             printf("%s\n", usage_display);
             return FALSE;
+        }
     }
-    }
+    return TRUE;
+}
+
+/* Furthere process a command before executing it. Handle out of path, and login shell.*/
+static void terminal_process_requested_command(gchar * * * const command, const gint cmd_len, const gboolean login_shell)
+{
+    gboolean force_login_shell = FALSE;
     /* Handle --loginshell. */
-    if (arguments->command != NULL && cmd_len <= 2) {
+    if (*command != NULL && cmd_len <= 2) {
 	/* Force using login shell if it has only 1 command, and command is not
 	 * in PATH. */
-        gchar * program_path = g_find_program_in_path(arguments->command[0]);
+        gchar * program_path = g_find_program_in_path((*command)[0]);
         if (program_path == NULL) {
-            arguments->login_shell = TRUE;
+            force_login_shell = TRUE;
         }
         g_free(program_path);
     }
-    if (arguments->login_shell == TRUE)
+    if (login_shell == TRUE || force_login_shell == TRUE)
     {
         const gchar * shell = terminal_get_preferred_shell();
         gchar * shellname = g_path_get_basename(shell);
-        if (arguments->command == NULL)
+        if (*command == NULL)
         {
-            arguments->command = g_malloc(3 * sizeof(gchar *));
-            arguments->command[0] = g_strdup(shell);
-            arguments->command[1] = g_strdup_printf("-%s", shellname);
-            arguments->command[2] = NULL;
+            *command = g_malloc(3 * sizeof(gchar *));
+            (*command)[0] = g_strdup(shell);
+            (*command)[1] = g_strdup_printf("-%s", shellname);
+            (*command)[2] = NULL;
         }
         else
         {
@@ -1565,26 +1574,25 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             tmp[0] = g_strdup(shell);
             tmp[1] = g_strdup_printf("-%s", shellname);
             tmp[2] = g_strdup("-c");
-            memcpy((tmp + 3), arguments->command, cmd_len * sizeof(gchar *));
+            memcpy((tmp + 3), *command, cmd_len * sizeof(gchar *));
             tmp[cmd_len + 3] = NULL;
-            g_free(arguments->command);
-            arguments->command = tmp;
+            g_free(*command);
+            *command = tmp;
         }
         g_free(shellname);
     }
     else
     {
-        if(arguments->command != NULL)
+        if (*command != NULL)
         {
             gchar * * tmp = g_malloc((cmd_len + 2) * sizeof(gchar *));
-            tmp[0] = g_strdup(arguments->command[0]);
-            memcpy((tmp + 1), arguments->command, cmd_len * sizeof(gchar *));
+            tmp[0] = g_strdup((*command)[0]);
+            memcpy((tmp + 1), *command, cmd_len * sizeof(gchar *));
             tmp[cmd_len + 1] = NULL;
-            g_free(arguments->command);
-            arguments->command = tmp;
+            g_free(*command);
+            *command = tmp;
         }
     }
-    return TRUE;
 }
 
 /* Initialize a new LXTerminal.
@@ -1670,12 +1678,27 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     {
         local_working_directory = g_get_current_dir();
     }
+    gchar * * command = NULL;
+    gint cmd_len = 0;
+    if (arguments->command != NULL)
+    {
+        command = g_strdupv(arguments->command);
+        /* This duplication is meant to help unify the rest of the code. 
+         * In particular, when freeing the memory of the --commands= options,
+         * there will be no need to differentiate the --command case. */
+        cmd_len = (gint)g_strv_length(arguments->command);
+    }
+    else if (arguments->commands != NULL)
+    {
+        g_shell_parse_argv(arguments->commands[0], &cmd_len, &command, NULL);
+    }
+    terminal_process_requested_command(&command, cmd_len, arguments->login_shell);
     Term * term = terminal_new(
         terminal,
         ((arguments->title != NULL) ? arguments->title : NULL),
         ((arguments->working_directory != NULL) ? arguments->working_directory : local_working_directory),
         NULL,
-        arguments->command);
+        command);
     g_free(local_working_directory);
 
     /* Set window title. */
@@ -1761,18 +1784,37 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     /* Update terminal settings. */
     terminal_settings_apply(terminal);
 
-    if (arguments->tabs != NULL && arguments->tabs[0] != '\0')
+    if (arguments->tabs != NULL && arguments->tabs[0] != '\0'
+                || arguments->commands != NULL)
     {
-        /* use token to destructively slice tabs to different tab names */
-        char * token = strtok(arguments->tabs, ",");
-        term->user_specified_label = TRUE;
-        gtk_label_set_text(GTK_LABEL(term->label), token);
-        token = strtok(NULL, ",");
-
-        while (token != NULL && token[0] != '\0')
+        gchar * tab = NULL;
+        if (arguments->tabs != NULL && arguments->tabs[0] != '\0')
         {
-            terminal_new_tab(terminal, token);
-            token = strtok(NULL, ",");
+            /* Use tab to destructively slice tabs to different tab names */
+            tab = strtok(arguments->tabs, ",");
+            term->user_specified_label = TRUE;
+            gtk_label_set_text(GTK_LABEL(term->label), tab);
+	    /* Initially, the 1st tab is hidden */ 
+            tab = strtok(NULL, ",");
+        }
+        gchar * * cmd = arguments->commands;
+        if (cmd != NULL)
+        {
+            if (arguments->command == NULL)
+            {
+                cmd ++;  /* Initialy, hidden tab runs 1st command from --command=. */
+            }
+        }
+
+        while (tab != NULL && tab[0] != '\0' || cmd != NULL && *cmd != NULL)
+        {
+            terminal_new_tab(terminal, tab, cmd != NULL ? *cmd : NULL);
+            if (tab != NULL && tab[0] != '\0')
+                tab = strtok(NULL, ",");
+            if (cmd != NULL && *cmd != NULL)
+            {
+                cmd ++;
+            }
         }
     }
 
