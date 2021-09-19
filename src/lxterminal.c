@@ -1782,21 +1782,23 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 /* Apply new settings to a terminal. */
 static void terminal_settings_apply(LXTerminal * terminal)
 {
+    Setting * setting = get_setting();
+
     /* Reinitialize "composited". */
     terminal->rgba = gdk_screen_is_composited(gtk_widget_get_screen(terminal->window));
 
     /* Update tab position. */
-    terminal->tab_position = terminal_tab_get_position_id(get_setting()->tab_position);
+    terminal->tab_position = terminal_tab_get_position_id(setting->tab_position);
     terminal_tab_set_position(terminal->notebook, terminal->tab_position);
 
     /* Update menu accelerators. */
     terminal_menu_accelerator_update(terminal);
 
     /* disable mnemonics if <ALT>n is diabled */
-    g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !get_setting()->disable_alt, NULL);
+    g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !setting->disable_alt, NULL);
 
     /* Hide or show menubar. */
-    if (get_setting()->hide_menu_bar)
+    if (setting->hide_menu_bar)
     {
         gtk_widget_hide(terminal->menu);
     }
