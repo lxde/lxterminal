@@ -40,10 +40,9 @@
       options is included below.  
     </para>
 
-    <variablelist>      <varlistentry>        <term>	  <option>-e <replaceable>STRING</replaceable></option>
+    <variablelist>      <varlistentry>        <term>	  <option>--command=<replaceable>[[STRING] [--command=[STRING] [...]]]</replaceable></option>
+          <option>-e <replaceable>STRING</replaceable></option>
           <option>--command <replaceable>STRING</replaceable></option>
-          <option>--command=<replaceable>STRING</replaceable></option>
-
         </term>
 	<listitem>          <para>These options specifies the program (and its command line arguments) to be run in the terminal. Except in the <option>--command=</option> form, this must be the last option on the command line, since the following arguments, if there are any, will be considered related to the program to be run. Multiple <option>command=</option> options, each specify a single program (and its command line arguments), create multiple tabs, each running the respective program. New tabs will be created as necessary, after all the explictly requested <option>tabs=</option> will be exhausted.</para>
         </listitem>
@@ -63,6 +62,13 @@
 	  <option>--loginshell</option>
 	</term>
 	<listitem>	  <para>Executes login shell.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-n</option>
+	  <option>--no-remote</option>
+	</term>
+	<listitem>	  <para>Normally, LXTerminal uses a single controller for all of the LXTerminal windows of a user and host pair. The first LXTerminal to start, without this option stated on its command line, will act as the controller. Any subsequent LXTerminals, of that user on that host, will be a client of that controller. They will do no work of their own. If, for any reason, any LXTerminal, of the same user and host pair, will fail using that controller, it will fall back to running standalone; it will not be either the controller, or a client, of another LXTerminal. With this option stated in the command line, the created LXTerminal will act the same. It will run standalone; it will not be either the controller, or a client, of another LXTerminal.
+			</para>
 	</listitem>
       </varlistentry>
       <varlistentry>	<term>	  <option>-T <replaceable>NAME</replaceable></option>
