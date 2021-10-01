@@ -114,15 +114,15 @@ static gchar usage_display[] = {
     "Usage:\n"
     "  lxterminal [Options...] - LXTerminal is a terminal emulator\n\n"
     "Options:\n"
-    "  --command=STRING [--command=STRING [...]],\n"
+    "  --command=[[STRING] [--command=[STRING] [...]]],\n"
     "    -e STRING, --command STRING    Execute the argument to this option inside the terminal\n"
     "  --geometry=COLUMNSxROWS          Set the terminal's size\n"
     "  -h, --help                       This help text\n"
     "  -l, --loginshell                 Execute login shell\n"
     "  -t, -T, --title=,\n"
-    "    --tabs=NAME[,NAME[,NAME[...]]] Set the terminal's title\n"
+    "    --tabs=[NAME[,NAME[...]]]      Set the terminal's title\n"
     "  --working-directory=DIRECTORY    Set the terminal's working directory\n"
-    "  --no-remote                      Do not accept or send remote commands\n"
+    "  -n, --no-remote                  Do not accept or send remote commands\n"
     "  -v, --version                    Version information\n"
 };
 
@@ -1540,7 +1540,7 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         }
 
         /* --no-remote: Do not accept or send remote commands */
-        else if (strcmp(argument, "--no-remote") == 0) {
+        else if ((strcmp(argument, "--no-remote") == 0) || (strcmp(argument, "-n") == 0)) {
             arguments->no_remote = TRUE;
         }
 
