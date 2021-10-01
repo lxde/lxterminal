@@ -1191,6 +1191,22 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     gtk_box_pack_start(GTK_BOX(term->box), term->scrollbar, FALSE, TRUE, 0);
     gtk_widget_set_no_show_all(GTK_WIDGET(term->scrollbar), TRUE);
 
+    #if GTK_CHECK_VERSION (2, 90, 8)
+    /* De-transarent box after setting gtk_widget_set_app_paintable to the
+     * GtkWindow */
+    GtkCssProvider* box_css_provider = gtk_css_provider_new();
+    gtk_css_provider_load_from_data(box_css_provider,
+        "box{background-color:@theme_bg_color;}",
+        -1, NULL
+    );
+
+    GtkStyleContext* box_style_ctx =
+        gtk_widget_get_style_context(GTK_WIDGET(terminal->box));
+    gtk_style_context_add_provider(
+        box_style_ctx, box_css_provider,
+        GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+    #endif
+
     /* Set up the VTE. */
     setlocale(LC_ALL, "");
 #if VTE_CHECK_VERSION (0, 38, 0)
@@ -1824,21 +1840,31 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
 /* Apply new settings to a terminal. */
 static void terminal_settings_apply(LXTerminal * terminal)
 {
+    Setting * setting = get_setting();
+
     /* Reinitialize "composited". */
     terminal->rgba = gdk_screen_is_composited(gtk_widget_get_screen(terminal->window));
 
+    #if GTK_CHECK_VERSION (2, 90, 8)
+    /* Found in vteapp as a workaround.  Related bug:
+     * https://bugzilla.gnome.org/show_bug.cgi?format=multiple&id=729884 */
+    gboolean has_transparency = setting->background_color.alpha < 1.0;
+    gtk_widget_set_app_paintable(
+        GTK_WIDGET(terminal->window), has_transparency);
+    #endif
+
     /* Update tab position. */
-    terminal->tab_position = terminal_tab_get_position_id(get_setting()->tab_position);
+    terminal->tab_position = terminal_tab_get_position_id(setting->tab_position);
     terminal_tab_set_position(terminal->notebook, terminal->tab_position);
 
     /* Update menu accelerators. */
     terminal_menu_accelerator_update(terminal);
 
     /* disable mnemonics if <ALT>n is diabled */
-    g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !get_setting()->disable_alt, NULL);
+    g_object_set(gtk_settings_get_default(), "gtk-enable-mnemonics", !setting->disable_alt, NULL);
 
     /* Hide or show menubar. */
-    if (get_setting()->hide_menu_bar)
+    if (setting->hide_menu_bar)
     {
         gtk_widget_hide(terminal->menu);
     }
