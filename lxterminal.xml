@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<refentry>  <refentryinfo>    <address>      <email>grandpaul@gmail.com</email>
+    </address>
+    <author>      <firstname>Ying-Chun</firstname>
+      <surname>Liu</surname>
+    </author>
+    <copyright>      <year>2008</year>
+      <holder>paulliu</holder>
+    </copyright>
+    <date>Jun  28, 2008</date>
+  </refentryinfo>
+  <refmeta>    <refentrytitle>LXTERMINAL</refentrytitle>
+<refmiscinfo class="source">http://LXDE.org</refmiscinfo>
+
+    <manvolnum>1</manvolnum>
+  </refmeta>
+  <refnamediv>    <refname>lxterminal</refname>
+
+    <refpurpose>a lightweight terminal emulator based on GTK+ for the LXDE desktop.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>    <cmdsynopsis>      <command>lxterminal</command>
+      <arg rep="repeat"><option>options</option></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  <refsect1>    <title>DESCRIPTION</title>
+
+    <para>This manual page documents the <command>lxterminal</command> command.</para>
+
+    <para><command>lxterminal</command> is a program that provides a terminal
+    emulator
+    for the desktop, usually for LXDE.
+    </para>
+   
+  </refsect1>
+
+  <refsect1>    <title>OPTIONS</title>
+
+    <para>This program follows the usual <acronym>GNU</acronym> command line syntax,
+      with long options starting with two dashes (`-').  A summary of
+      options is included below.  
+    </para>
+
+    <variablelist>      <varlistentry>        <term>	  <option>--command=<replaceable>[[STRING] [--command=[STRING] [...]]]</replaceable></option>
+          <option>-e <replaceable>STRING</replaceable></option>
+          <option>--command <replaceable>STRING</replaceable></option>
+        </term>
+	<listitem>          <para>These options specifies the program (and its command line arguments) to be run in the terminal. Except in the <option>--command=</option> form, this must be the last option on the command line, since the following arguments, if there are any, will be considered related to the program to be run. Multiple <option>command=</option> options, each specify a single program (and its command line arguments), create multiple tabs, each running the respective program. New tabs will be created as necessary, after all the explictly requested <option>tabs=</option> will be exhausted.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>--geometry=<replaceable>CHARACTERS</replaceable>x<replaceable>LINES</replaceable></option>
+	</term>
+	<listitem>	  <para>Set the terminal's size in characters and lines.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-h</option>
+	  <option>--help</option>
+	</term>
+	<listitem>	  <para>Prints a short help message, and exit.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-l</option>
+	  <option>--loginshell</option>
+	</term>
+	<listitem>	  <para>Executes login shell.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-n</option>
+	  <option>--no-remote</option>
+	</term>
+	<listitem>	  <para>Normally, LXTerminal uses a single controller for all of the LXTerminal windows of a user and host pair. The first LXTerminal to start, without this option stated on its command line, will act as the controller. Any subsequent LXTerminals, of that user on that host, will be a client of that controller. They will do no work of their own. If, for any reason, any LXTerminal, of the same user and host pair, will fail using that controller, it will fall back to running standalone; it will not be either the controller, or a client, of another LXTerminal. With this option stated in the command line, the created LXTerminal will act the same. It will run standalone; it will not be either the controller, or a client, of another LXTerminal.
+			</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-T <replaceable>NAME</replaceable></option>
+	  <option>-t <replaceable>NAME</replaceable></option>
+	  <option>--title=<replaceable>NAME</replaceable></option>
+	  <option>--tabs=<replaceable>[NAME[,NAME[...]]]</replaceable></option>
+	</term>
+	<listitem>	  <para>Set the terminal's title. Comma separated multiple titles create multiple tabs only with the <option>--tabs=</option> form.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>        <term>          <option>--working-directory=<replaceable>DIRECTORY</replaceable></option>
+        </term>
+        <listitem>          <para>Set the terminal's working directory.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-v</option>
+	  <option>--version</option>
+	</term>
+	<listitem>	  <para>Prints the program version, and exit.</para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+
+  <refsect1>    <title>EXAMPLES, AND MORE DETAILS</title>
+
+    <variablelist>       <varlistentry>	<term>	  <option>The hidden tab</option>
+        </term>
+	<listitem>	  <para>A hidden tab is created when <option>--tabs</option>, or any <option>--command</option> variant, is requested, with no more than one command, or no more than one tab, is specified. For example,</para>
+		<para><command>lxterminal</command> --tabs= --no-remote</para>
+		<para>This hidden tab can be revealed when the <command>lxterminal</command> is running. For example, when requesting a new tab with the Shift+Ctrl+T combination keys.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>The command examples</option> 	</term><listitem>
+<para>For display puposes, the command examples might be broken into more than one line. When actually using the examples, commands should be entered in a single line. Or have line breaks according to the usual shell conventions.</para>
+		    <para>All command examples here use <option>--no-remote</option> to avoid interaction with possibly running <command>lxterminal</command>s.</para>
+	</listitem>
+      </varlistentry>
+	    <varlistentry>	<term>	  <option>A short lived process is requested in the command line</option> 	</term>
+		    <listitem>      <para>Consider</para>
+			    <para><command>lxterminal</command> --no-remote --command=&apos;/bin/bash -c &quot;echo This window will be closed after you will press enter. ; read -p \&quot;Do press the &lt;enter&gt; key.\&quot; &quot; &apos;</para>
+			    <para>This example emphasizes a limitaion of running commands from the <command>lxterminal</command> command line. As a result, the feature to run a command from the <command>lxterminal</command> command line is much more useful for processes that exit by the user explicit request. Such as an interactive shell. A short lived process does work. Only that it is fast enough to make the window, or the tab, closed before the user can pay attention. For a short lived process, such as</para>
+			    <para><command>lxterminal</command> --no-remote --tabs=ls,"Midnight Commander" --command=ls --command=mc</para><para>
+					    , the user must have indirect means to inspect the outcome of the <option>ls</option> command, if he wishes to. Such as redirecting the output to a file.</para>
+	</listitem>
+      </varlistentry>
+	    <varlistentry>	<term>	  <option>Multiple occurences of the same option</option> 	</term>
+		    <listitem>  
+			    <para><command>lxterminal</command> --no-remote --tabs=&apos;1st tab&apos;,&quot;2nd tab&quot; --tabs= --no-remote</para>
+			    <para>In contrast to many other applications, repeating a command line <option>option</option> is not an error. With some <option>option</option>s, the right most occurence overrides previous ocuurences. But there are exceptions. The left most <option>--command=</option> will always be executed in the 1st tab. Unless <option>-e</option>, or <option>command</option>, was specified. As stated earlier, multiple <option>command=</option> are commulative in the sense that each will be executed. Just try out if it is a concern for you. The behaviour is deterministic.</para> 
+	</listitem>
+      </varlistentry>
+	    <varlistentry>	<term>	  <option>Comma is a separator for --tabs=</option> 	</term>
+		    <listitem>  
+			    <para>The comma character, &apos;,&apos;, is used as the separator for the titles to the <option>--tabs=</option> option.</para>
+			    <para><command>lxterminal</command> --tabs=&quot;midnight commander,2nd tab&quot; --command=mc --no-remote</para>
+			    <para>There is no way to insert a comma character in the titles to be displayed by <option>--tabs=</option>. The comma character can be used for the similar options for giving a title, such as <option>-T</option>. But these other options do not offer mutltiple tabs.</para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+
+  <refsect1>    <title>AUTHOR</title>
+
+    <para>This manual page was written by paulliu <email>grandpaul@gmail.com</email> for
+      the <productname>Debian</productname> system (but may be used by others).  Permission is
+      granted to copy, distribute and/or modify this document under
+      the terms of the <acronym>GNU</acronym> General Public License, Version 2 any 
+      later version published by the Free Software Foundation.
+    </para>
+    <para>	  On Debian systems, the complete text of the GNU General Public
+	  License can be found in /usr/share/common-licenses/GPL.
+    </para>
+
+  </refsect1>
+
+  <refsect1>    <title>FILES</title>
+
+    <para>The configuration file can be found in ~/.config/lxterminal/lxterminal.conf.</para>
+
+  </refsect1></refentry>
