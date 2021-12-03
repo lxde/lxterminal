@@ -455,6 +455,11 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     g_signal_connect(G_OBJECT(w), "toggled", 
         G_CALLBACK(preferences_dialog_generic_toggled_event), &setting->disable_confirm);
 
+    w = GTK_WIDGET(gtk_builder_get_object(builder, "tab_width"));
+    gtk_spin_button_set_value(GTK_SPIN_BUTTON(w), setting->tab_width);
+    g_signal_connect(G_OBJECT(w), "value-changed", 
+        G_CALLBACK(preferences_dialog_int_value_changed_event), &setting->tab_width);
+
     /* Shortcuts */
 #define PREF_SETUP_SHORTCUT(OBJ, VAR) \
     w = GTK_WIDGET(gtk_builder_get_object(builder, OBJ)); \
