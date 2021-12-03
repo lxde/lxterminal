@@ -36,7 +36,11 @@ gint preset_custom_id;
 static void preferences_dialog_font_set_event(GtkFontButton * widget, Setting * setting)
 {
     g_free(setting->font_name);
+#if GTK_CHECK_VERSION (3, 2, 0)
+    setting->font_name = gtk_font_chooser_get_font(GTK_FONT_CHOOSER(widget));
+#else
     setting->font_name = g_strdup(gtk_font_button_get_font_name(widget));
+#endif
     setting->geometry_change = TRUE;        /* Force the terminals to resize */
 }
 
@@ -290,7 +294,11 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     gtk_window_set_icon_from_file(GTK_WINDOW(dialog), PACKAGE_DATA_DIR "/icons/hicolor/128x128/apps/lxterminal.png", NULL);
 
     GtkWidget * w = GTK_WIDGET(gtk_builder_get_object(builder, "terminal_font"));
+#if GTK_CHECK_VERSION (3, 2, 0)
+    gtk_font_chooser_set_font(GTK_FONT_CHOOSER(w), setting->font_name);
+#else
     gtk_font_button_set_font_name(GTK_FONT_BUTTON(w), setting->font_name);
+#endif
     g_signal_connect(G_OBJECT(w), "font-set", G_CALLBACK(preferences_dialog_font_set_event), setting);
 
     w = GTK_WIDGET(gtk_builder_get_object(builder, "background_color"));
