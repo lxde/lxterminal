@@ -72,6 +72,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
 
 /* Window creation, destruction, and control. */
 static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal);
+static void terminal_page_reordered_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal);
 static void terminal_vte_size_allocate_event(GtkWidget *widget, GtkAllocation *allocation, Term *term);
 static void terminal_window_title_changed_event(GtkWidget * vte, Term * term);
 static gboolean terminal_close_window_confirmation_event(GtkWidget * widget, GdkEventButton * event, LXTerminal * terminal);
@@ -798,6 +799,28 @@ static void terminal_switch_page_event(GtkNotebook * notebook, GtkWidget * page,
         /* Wait for its size to be allocated, then set its geometry */
         g_signal_connect(notebook, "size-allocate", G_CALLBACK(terminal_vte_size_allocate_event), term);
     }
+}
+
+/* Handler for "page-reordered" event on the tab notebook. */
+static void terminal_page_reordered_event(GtkNotebook * notebook, GtkWidget * page, guint num, LXTerminal * terminal)
+{
+    guint i;
+    Term * term;
+    gint term_page_number;
+    GPtrArray * new_terms = g_ptr_array_new();
+    
+    for (i = 0; i < terminal->terms->len; i++)
+    {
+        term = g_ptr_array_index(terminal->terms, i);
+        term_page_number = gtk_notebook_page_num(notebook, GTK_WIDGET(term->box));
+        term->index = term_page_number;
+        g_ptr_array_add(new_terms, term);
+    }
+
+    g_ptr_array_free(terminal->terms, TRUE);
+    terminal->terms = new_terms;
+
+    terminal_update_alt(terminal);
 }
 
 /* Handler for "window-title-changed" signal on a Term. */
@@ -1561,6 +1584,8 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
         G_CALLBACK(terminal_settings_apply), terminal);
     g_signal_connect(G_OBJECT(terminal->notebook), "switch-page", 
         G_CALLBACK(terminal_switch_page_event), terminal);
+    g_signal_connect(G_OBJECT(terminal->notebook), "page-reordered",
+        G_CALLBACK(terminal_page_reordered_event), terminal);
     g_signal_connect(G_OBJECT(terminal->window), "delete-event",
         G_CALLBACK(terminal_close_window_confirmation_event), terminal);
 
