@@ -1,0 +1,454 @@
+# Georgian translation for lxterminal.
+# Copyright (C) 2023 lxterminal' authors
+# This file is distributed under the same license as the lxterminal package.
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lxterminal\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-02 03:38+0200\n"
+"PO-Revision-Date: 2023-07-30 12:53+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <(nothing)>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. 0
+#: ../src/lxterminal.c:129
+msgid "_File"
+msgstr "_ფაილი"
+
+#. 1
+#: ../src/lxterminal.c:130
+msgid "_Edit"
+msgstr "_ჩასწორება"
+
+#. 2
+#: ../src/lxterminal.c:131
+msgid "_Tabs"
+msgstr "_ჩანართები"
+
+#. 3
+#: ../src/lxterminal.c:132
+msgid "_Help"
+msgstr "_დახმარება"
+
+#. 4
+#: ../src/lxterminal.c:133
+msgid "_New Window"
+msgstr "_ახალი ფანჯარა"
+
+#. 5
+#: ../src/lxterminal.c:134
+msgid "New T_ab"
+msgstr "ახალი ჩ_ანართი"
+
+#. 6
+#. 7
+#: ../src/lxterminal.c:136 ../src/lxterminal.c:176
+msgid "_Close Tab"
+msgstr "ჩანარ_თის დახურვა"
+
+#. 8
+#: ../src/lxterminal.c:137
+msgid "Close _Window"
+msgstr "ფანჯრის დახურვა"
+
+#. 9
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:165
+msgid "Cop_y"
+msgstr "_კოპირება"
+
+#. 10
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:166
+msgid "_Paste"
+msgstr "_ჩასმა"
+
+#. 11
+#: ../src/lxterminal.c:140
+msgid "Clear scr_ollback"
+msgstr "_აჩოჩების გასუფთავება"
+
+#. 12
+#. 13
+#: ../src/lxterminal.c:142
+msgid "Zoom _In"
+msgstr "_გადიდება"
+
+#. 14
+#: ../src/lxterminal.c:143
+msgid "Zoom O_ut"
+msgstr "_დაპატარავება"
+
+#. 15
+#: ../src/lxterminal.c:144
+msgid "Zoom _Reset"
+msgstr "გადიდების _გაუქმება"
+
+#. 16
+#. 17
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
+msgid "Preference_s"
+msgstr "_მორგება"
+
+#. 18
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:171
+msgid "Na_me Tab"
+msgstr "_ჩანართის სახელი"
+
+#. 19
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:172
+msgid "Pre_vious Tab"
+msgstr "_წინა ჩანართი"
+
+#. 20
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:173
+msgid "Ne_xt Tab"
+msgstr "_შემდეგი ჩანართი"
+
+#. 21
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:174
+msgid "Move Tab _Left"
+msgstr "ჩანართის _მარცხნივ გადატანა"
+
+#. 22
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:175
+msgid "Move Tab _Right"
+msgstr "ჩანართის მა_რჯვნივ გადატანა"
+
+#. 23
+#: ../src/lxterminal.c:152
+msgid "_About"
+msgstr "_შესახებ"
+
+#: ../src/lxterminal.c:160
+msgid "New _Window"
+msgstr "ახალი _ფანჯარა"
+
+#: ../src/lxterminal.c:161
+msgid "New _Tab"
+msgstr "ახალი _ჩანართი"
+
+#: ../src/lxterminal.c:163
+msgid "Open _URL"
+msgstr "_ბმულის გახსნა"
+
+#: ../src/lxterminal.c:164
+msgid "Copy _URL"
+msgstr "URL-ის _კოპირება"
+
+#: ../src/lxterminal.c:167
+msgid "Cl_ear scrollback"
+msgstr "აჩოჩების _გასუფთავება"
+
+#: ../src/lxterminal.c:599 ../data/lxterminal-preferences.glade.h:56
+msgid "Name Tab"
+msgstr "ჩანართი სახელი"
+
+#: ../src/lxterminal.c:602
+msgid "_Cancel"
+msgstr "_გაუქმება"
+
+#: ../src/lxterminal.c:603
+msgid "_OK"
+msgstr "_დიახ"
+
+#. TRANSLATORS: Replace this string with your names, one name per line.
+#: ../src/lxterminal.c:772
+msgid "translator-credits"
+msgstr "თემური დოღონაძე"
+
+#: ../src/lxterminal.c:778 ../src/preferences.c:289
+#: ../data/lxterminal.desktop.in.h:1
+msgid "LXTerminal"
+msgstr "LXTerminal"
+
+#: ../src/lxterminal.c:780
+msgid "Copyright (C) 2008-2018"
+msgstr "(C) 2008-2018, ყველა უფლება დაცულია"
+
+#: ../src/lxterminal.c:781
+msgid "Terminal emulator for LXDE project"
+msgstr "ტერმინალის ემულატორი პროექტისთვის LXDE"
+
+#: ../src/lxterminal.c:812
+msgid "LXTerminal Terminal Emulator"
+msgstr "ტერმინალის ემულატორი LXTerminal"
+
+#: ../src/lxterminal.c:846
+#, c-format
+msgid "You are about to close %d tabs. Are you sure you want to continue?"
+msgstr "აპირებთ, დახუროთ %d ჩანართი. დარწმუნებული ბრძანდებით?"
+
+#: ../src/lxterminal.c:847
+msgid "Confirm close"
+msgstr "დახურვის დადასტურება"
+
+#: ../data/lxterminal-preferences.glade.h:1
+msgid "Top"
+msgstr "თავში"
+
+#: ../data/lxterminal-preferences.glade.h:2
+msgid "Bottom"
+msgstr "ბოლოში"
+
+#: ../data/lxterminal-preferences.glade.h:3
+msgid "Left"
+msgstr "მარცხენა"
+
+#: ../data/lxterminal-preferences.glade.h:4
+msgid "Right"
+msgstr "მარჯვენა"
+
+#: ../data/lxterminal-preferences.glade.h:5
+msgid "LXTerminal Preferences"
+msgstr "LXTerminal-ის მორგება"
+
+#: ../data/lxterminal-preferences.glade.h:6
+msgid "Terminal font"
+msgstr "ტერმინალის ფონტი"
+
+#: ../data/lxterminal-preferences.glade.h:7
+msgid "Background"
+msgstr "ფონი"
+
+#: ../data/lxterminal-preferences.glade.h:8
+msgid "Foreground"
+msgstr "წინა პლანი"
+
+#: ../data/lxterminal-preferences.glade.h:9
+msgid "Allow bold font"
+msgstr "სქელი ფონტის დაშვება"
+
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Bold is bright"
+msgstr "სქელი ნათელია"
+
+#: ../data/lxterminal-preferences.glade.h:11
+msgid "Cursor blink"
+msgstr "კურსორის ციმციმი"
+
+#: ../data/lxterminal-preferences.glade.h:12
+msgid "Cursor style"
+msgstr "კურსორის სტილი"
+
+#: ../data/lxterminal-preferences.glade.h:13
+msgid "Block"
+msgstr "დაბლოკვა"
+
+#: ../data/lxterminal-preferences.glade.h:14
+msgid "Underline"
+msgstr "ხაზგასმული"
+
+#: ../data/lxterminal-preferences.glade.h:15
+msgid "Audible bell"
+msgstr "გასაგონი ზარი"
+
+#: ../data/lxterminal-preferences.glade.h:16
+msgid "Visual bell"
+msgstr "ვიზუალური ზარი"
+
+#: ../data/lxterminal-preferences.glade.h:17
+msgid "Black"
+msgstr "შავი"
+
+#: ../data/lxterminal-preferences.glade.h:18
+msgid "Red"
+msgstr "წითელი"
+
+#: ../data/lxterminal-preferences.glade.h:19
+msgid "Green"
+msgstr "მწვანე"
+
+#: ../data/lxterminal-preferences.glade.h:20
+msgid "Brown"
+msgstr "ყავისფერი"
+
+#: ../data/lxterminal-preferences.glade.h:21
+msgid "Blue"
+msgstr "ლურჯი"
+
+#: ../data/lxterminal-preferences.glade.h:22
+msgid "Magenta"
+msgstr "ალისფერი"
+
+#: ../data/lxterminal-preferences.glade.h:23
+msgid "Cyan"
+msgstr "ცისფერი"
+
+#: ../data/lxterminal-preferences.glade.h:24
+msgid "Gray"
+msgstr "ნაცრისფერი"
+
+#: ../data/lxterminal-preferences.glade.h:25
+msgid "Darkgray"
+msgstr "მუქი ნაცრისფერი"
+
+#: ../data/lxterminal-preferences.glade.h:26
+msgid "Bright Red"
+msgstr "კაშკაშა წითელი"
+
+#: ../data/lxterminal-preferences.glade.h:27
+msgid "Bright Green"
+msgstr "კაშკაშა მწვანე"
+
+#: ../data/lxterminal-preferences.glade.h:28
+msgid "Yellow"
+msgstr "ყვითელი"
+
+#: ../data/lxterminal-preferences.glade.h:29
+msgid "Bright Blue"
+msgstr "კაშკაშკა ლურჯი"
+
+#: ../data/lxterminal-preferences.glade.h:30
+msgid "Bright Magenta"
+msgstr "კაშკაშა ალისფერი"
+
+#: ../data/lxterminal-preferences.glade.h:31
+msgid "Bright Cyan"
+msgstr "კაშკაშა ცისფერი"
+
+#: ../data/lxterminal-preferences.glade.h:32
+msgid "White"
+msgstr "თეთრი"
+
+#: ../data/lxterminal-preferences.glade.h:33
+msgid "Palette"
+msgstr "პალიტრა"
+
+#: ../data/lxterminal-preferences.glade.h:34
+msgid "Palette Preset"
+msgstr "პალიტრის განულება"
+
+#: ../data/lxterminal-preferences.glade.h:35
+msgid "Style"
+msgstr "სტილი"
+
+#: ../data/lxterminal-preferences.glade.h:36
+msgid "Tab panel position"
+msgstr "ჩანართების პანელის მდებარეობა"
+
+#: ../data/lxterminal-preferences.glade.h:37
+msgid "Scrollback lines"
+msgstr "ჩოჩიის ხაზები"
+
+#: ../data/lxterminal-preferences.glade.h:38
+msgid "Hide scroll bar"
+msgstr "ჩოჩიას ზოლის დამალვა"
+
+#: ../data/lxterminal-preferences.glade.h:39
+msgid "Hide menu bar"
+msgstr "მენიუს ზოლის დამალვა"
+
+#: ../data/lxterminal-preferences.glade.h:40
+msgid "Hide Close buttons"
+msgstr "დახურვის ღილაკის დამალვა"
+
+#: ../data/lxterminal-preferences.glade.h:41
+msgid "Hide mouse pointer"
+msgstr "თაგუნას კურსორის დამალვა"
+
+#: ../data/lxterminal-preferences.glade.h:42
+msgid "Default window size"
+msgstr "ნაგულისხმები ფანჯრის ზომა"
+
+#: ../data/lxterminal-preferences.glade.h:43
+msgid "x"
+msgstr "x"
+
+#: ../data/lxterminal-preferences.glade.h:44
+msgid "Display"
+msgstr "ჩვენება"
+
+#: ../data/lxterminal-preferences.glade.h:45
+msgid "Select-by-word characters"
+msgstr "სიტყვის სიმბოლოებით ამორჩევა"
+
+#: ../data/lxterminal-preferences.glade.h:46
+msgid "Disable menu shortcut key (F10 by default)"
+msgstr "მენიუს მალსახმობი ღილაკის გამორთვა (F10)"
+
+#: ../data/lxterminal-preferences.glade.h:47
+msgid "Disable using Alt-n for tabs and menu"
+msgstr "ჩანართებისა და მენიუსთვის Alt-n-ის გამოყენების გამორთვა"
+
+#: ../data/lxterminal-preferences.glade.h:48
+msgid "Disable confirmation before closing a window with multiple tabs"
+msgstr "ერთზე მეტი ჩანართის დახურვისას კითხვის გამორთვა"
+
+#: ../data/lxterminal-preferences.glade.h:49
+msgid "Advanced"
+msgstr "დამატებითი"
+
+#: ../data/lxterminal-preferences.glade.h:50
+msgid "New Window"
+msgstr "ახალი ფანჯარა"
+
+#: ../data/lxterminal-preferences.glade.h:51
+msgid "New Tab"
+msgstr "ახალი ჩანართი"
+
+#: ../data/lxterminal-preferences.glade.h:52
+msgid "Close Tab"
+msgstr "ჩანართის დახურვა"
+
+#: ../data/lxterminal-preferences.glade.h:53
+msgid "Close Window"
+msgstr "ფანჯრის დახურვა"
+
+#: ../data/lxterminal-preferences.glade.h:54
+msgid "Copy"
+msgstr "კოპირება"
+
+#: ../data/lxterminal-preferences.glade.h:55
+msgid "Paste"
+msgstr "ჩასმა"
+
+#: ../data/lxterminal-preferences.glade.h:57
+msgid "Previous Tab"
+msgstr "წინა ჩანართი"
+
+#: ../data/lxterminal-preferences.glade.h:58
+msgid "Next Tab"
+msgstr "შემდეგი ჩანართი"
+
+#: ../data/lxterminal-preferences.glade.h:59
+msgid "Move Tab Left"
+msgstr "ჩანართის მარცხნივ გადატანა"
+
+#: ../data/lxterminal-preferences.glade.h:60
+msgid "Move Tab Right"
+msgstr "ჩანართის მარჯვნივ გადატანა"
+
+#: ../data/lxterminal-preferences.glade.h:61
+msgid "Zoom In"
+msgstr "გადიდება"
+
+#: ../data/lxterminal-preferences.glade.h:62
+msgid "Zoom Out"
+msgstr "დაპატარავება"
+
+#: ../data/lxterminal-preferences.glade.h:63
+msgid "Zoom Reset"
+msgstr "გადიდების გაუქმება"
+
+#: ../data/lxterminal-preferences.glade.h:64
+msgid "Shortcuts"
+msgstr "მალსახმობები"
+
+#: ../data/lxterminal.desktop.in.h:2
+msgid "Terminal"
+msgstr "ტერმინალი"
+
+#: ../data/lxterminal.desktop.in.h:3
+msgid "Use the command line"
+msgstr "ბრძანების სტრიქონის გამოყენება"
+
+#: ../data/lxterminal.desktop.in.h:4
+msgid "console;command line;execute;"
+msgstr "კონსოლი;ბრძანებებს სტრიქონი;გაშვება;"
