@@ -1,22 +1,23 @@
 # Portuguese translations for lxterminal package.
 # Copyright (C) 2009 THE lxterminal'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the lxterminal package.
-# <alvarommorais@gmail.com>, 2009.
-# Sérgio Marques <smarquespt@gmail.com> 2010-2016
+# Álvaro Morais <alvarommorais@gmail.com>, 2009.
+# Sérgio Marques <smarquespt@gmail.com>, 2010-2016.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-24 12:14+0800\n"
-"PO-Revision-Date: 2017-05-23 12:48+0000\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"PO-Revision-Date: 2023-08-01 15:13+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.8\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-POOTLE-MTIME: 1495543695.828547\n"
 
 #. 0
@@ -160,7 +161,8 @@ msgstr "_OK"
 msgid "translator-credits"
 msgstr ""
 "Álvaro Morais <alvarommorais@gmail.com>\n"
-"Sérgio Marques <smarquespt@gmail.com>"
+"Sérgio Marques <smarquespt@gmail.com>\n"
+"Hugo Carvalho <hugokarvalho@hotmail.com>"
 
 #: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
 #: ../data/lxterminal.desktop.in.h:1
@@ -178,8 +180,7 @@ msgstr "Emulador de terminal para o LXDE"
 #: ../src/lxterminal.c:814
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
-"Está prestes a fechar %d separadores. Tem certeza de que deseja continuar?"
+msgstr "Está prestes a fechar %d separadores. Tem certeza de que deseja continuar?"
 
 #: ../src/lxterminal.c:815
 msgid "Confirm close"
@@ -311,7 +312,7 @@ msgstr "Paleta"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "Palette Preset"
-msgstr "Pré-ajuste da paleta"
+msgstr "Predefinição da paleta"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Style"
@@ -367,8 +368,7 @@ msgstr "Desativar a utilização de Alt-n para separadores e menus"
 
 #: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
-"Desativar confirmação antes de fechar uma janela com vários separadores"
+msgstr "Desativar confirmação antes de fechar uma janela com vários separadores"
 
 #: ../data/lxterminal-preferences.glade.h:47
 msgid "Advanced"
@@ -440,7 +440,7 @@ msgstr "Utilizar a linha de comandos"
 
 #: ../data/lxterminal.desktop.in.h:4
 msgid "console;command line;execute;"
-msgstr "consola;linha de comandos;executar"
+msgstr "consola;linha de comandos;executar;"
 
 #~ msgid "West European"
 #~ msgstr "Europa Ocidental"
