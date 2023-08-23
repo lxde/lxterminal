@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-01 05:21+0900\n"
+"POT-Creation-Date: 2023-08-23 21:42+0200\n"
 "PO-Revision-Date: 2018-05-14 07:48+0000\n"
 "Last-Translator: Mamoru TASAKA <mtasaka@fedoraproject.org>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -22,177 +22,153 @@ msgstr ""
 "X-Generator: Pootle 2.8\n"
 "X-POOTLE-MTIME: 1526284106.550116\n"
 
-#. 0
-#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:129
 msgid "_File"
 msgstr "ファイル(_F)"
 
-#. 1
-#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:130
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#. 2
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:131
 msgid "_Tabs"
 msgstr "タブ(_T)"
 
-#. 3
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:132
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#. 4
-#: ../src/lxterminal.c:127
+#: ../src/lxterminal.c:133
 msgid "_New Window"
 msgstr "新規ウィンドウ(_W)"
 
-#. 5
-#: ../src/lxterminal.c:128
+#: ../src/lxterminal.c:134
 msgid "New T_ab"
 msgstr "新規タブ(_T)"
 
-#. 6
-#. 7
-#: ../src/lxterminal.c:130 ../src/lxterminal.c:170
+#: ../src/lxterminal.c:136 ../src/lxterminal.c:176
 msgid "_Close Tab"
 msgstr "タブを閉じる(_C)"
 
-#. 8
-#: ../src/lxterminal.c:131
+#: ../src/lxterminal.c:137
 msgid "Close _Window"
 msgstr "ウィンドウを閉じる(_W)"
 
-#. 9
-#: ../src/lxterminal.c:132 ../src/lxterminal.c:159
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:165
 msgid "Cop_y"
 msgstr "コピー(_Y)"
 
-#. 10
-#: ../src/lxterminal.c:133 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:166
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
-#. 11
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:140
 msgid "Clear scr_ollback"
 msgstr "バックログの消去(_O)"
 
-#. 12
-#. 13
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:142
 msgid "Zoom _In"
 msgstr "拡大(_I)"
 
-#. 14
-#: ../src/lxterminal.c:137
+#: ../src/lxterminal.c:143
 msgid "Zoom O_ut"
 msgstr "縮小(_u)"
 
-#. 15
-#: ../src/lxterminal.c:138
+#: ../src/lxterminal.c:144
 msgid "Zoom _Reset"
 msgstr "ズームのリセット(_R)"
 
-#. 16
-#. 17
-#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Preference_s"
 msgstr "設定(_S)"
 
-#. 18
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:171
 msgid "Na_me Tab"
 msgstr "タブの名前変更(_M)"
 
-#. 19
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
 msgstr "前のタブ(_V)"
 
-#. 20
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:173
 msgid "Ne_xt Tab"
 msgstr "次のタブ(_X)"
 
-#. 21
-#: ../src/lxterminal.c:144 ../src/lxterminal.c:168
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
 msgstr "タブを左へ移動(_L)"
 
-#. 22
-#: ../src/lxterminal.c:145 ../src/lxterminal.c:169
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
 msgstr "タブを右へ移動(_R)"
 
-#. 23
-#: ../src/lxterminal.c:146
+#: ../src/lxterminal.c:152
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../src/lxterminal.c:154
+#: ../src/lxterminal.c:160
 msgid "New _Window"
 msgstr "新規ウィンドウ(_W)"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:161
 msgid "New _Tab"
 msgstr "新規タブ(_T)"
 
-#: ../src/lxterminal.c:157
+#: ../src/lxterminal.c:163
 msgid "Open _URL"
 msgstr "URLを開く(_U)"
 
-#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:164
 msgid "Copy _URL"
 msgstr "URLをコピー(_U)"
 
-#: ../src/lxterminal.c:161
+#: ../src/lxterminal.c:167
 msgid "Cl_ear scrollback"
 msgstr "バックログを消去(_E)"
 
-#: ../src/lxterminal.c:593 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:603 ../data/lxterminal-preferences.glade.h:57
 msgid "Name Tab"
 msgstr "タブの名前変更"
 
-#: ../src/lxterminal.c:596
+#: ../src/lxterminal.c:606
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: ../src/lxterminal.c:597
+#: ../src/lxterminal.c:607
 msgid "_OK"
 msgstr "OK(_O)"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:766
+#: ../src/lxterminal.c:776
 msgid "translator-credits"
 msgstr ""
 "Hironao Komatsu <hironao@users.sourceforge.net>\n"
 "IWAI, Masaharu <iwai@alib.jp>\n"
 "Mamoru TASAKA <mtasaka@fedoraproject.org>"
 
-#: ../src/lxterminal.c:772 ../src/preferences.c:289
+#: ../src/lxterminal.c:782 ../src/preferences.c:293
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:774
-msgid "Copyright (C) 2008-2018"
+#: ../src/lxterminal.c:784
+msgid "Copyright (C) 2008-2023"
 msgstr ""
 
-#: ../src/lxterminal.c:775
+#: ../src/lxterminal.c:785
 msgid "Terminal emulator for LXDE project"
 msgstr "LXDEプロジェクトのための端末エミュレータ"
 
-#: ../src/lxterminal.c:806
+#: ../src/lxterminal.c:816
 msgid "LXTerminal Terminal Emulator"
 msgstr "LXTerminal端末エミュレータ"
 
-#: ../src/lxterminal.c:840
+#: ../src/lxterminal.c:850
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr "%d個のタブを閉じようとしています。続行しますか？"
 
-#: ../src/lxterminal.c:841
+#: ../src/lxterminal.c:851
 msgid "Confirm close"
 msgstr "クローズの確認"
 
@@ -233,210 +209,224 @@ msgid "Allow bold font"
 msgstr "太字フォントを許可する"
 
 #: ../data/lxterminal-preferences.glade.h:10
+msgid "Bold is bright"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor blink"
 msgstr "カーソルの点滅"
 
-#: ../data/lxterminal-preferences.glade.h:11
+#: ../data/lxterminal-preferences.glade.h:12
 msgid "Cursor style"
 msgstr "カーソルのスタイル"
 
-#: ../data/lxterminal-preferences.glade.h:12
+#: ../data/lxterminal-preferences.glade.h:13
 msgid "Block"
 msgstr "四角"
 
-#: ../data/lxterminal-preferences.glade.h:13
+#: ../data/lxterminal-preferences.glade.h:14
 msgid "Underline"
 msgstr "下線"
 
-#: ../data/lxterminal-preferences.glade.h:14
+#: ../data/lxterminal-preferences.glade.h:15
 msgid "Audible bell"
 msgstr "音声のベル"
 
-#: ../data/lxterminal-preferences.glade.h:15
+#: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+#| msgid "Audible bell"
+msgid "Visual bell"
+msgstr "音声のベル"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Black"
 msgstr "黒"
 
-#: ../data/lxterminal-preferences.glade.h:16
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Red"
 msgstr "赤"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Green"
 msgstr "緑"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Brown"
 msgstr "茶色"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Blue"
 msgstr "青"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Magenta"
 msgstr "マゼンタ"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Cyan"
 msgstr "シアン"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Gray"
 msgstr "灰色"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Darkgray"
 msgstr "暗い灰色"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:26
 msgid "Bright Red"
 msgstr "明るい赤"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Green"
 msgstr "明るい緑"
 
-#: ../data/lxterminal-preferences.glade.h:26
+#: ../data/lxterminal-preferences.glade.h:28
 msgid "Yellow"
 msgstr "黄色"
 
-#: ../data/lxterminal-preferences.glade.h:27
+#: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Blue"
 msgstr "明るい青"
 
-#: ../data/lxterminal-preferences.glade.h:28
+#: ../data/lxterminal-preferences.glade.h:30
 msgid "Bright Magenta"
 msgstr "明るいマゼンタ"
 
-#: ../data/lxterminal-preferences.glade.h:29
+#: ../data/lxterminal-preferences.glade.h:31
 msgid "Bright Cyan"
 msgstr "明るいシアン"
 
-#: ../data/lxterminal-preferences.glade.h:30
+#: ../data/lxterminal-preferences.glade.h:32
 msgid "White"
 msgstr "白"
 
-#: ../data/lxterminal-preferences.glade.h:31
+#: ../data/lxterminal-preferences.glade.h:33
 msgid "Palette"
 msgstr "パレット"
 
-#: ../data/lxterminal-preferences.glade.h:32
+#: ../data/lxterminal-preferences.glade.h:34
 msgid "Palette Preset"
 msgstr "パレット・プリセット"
 
-#: ../data/lxterminal-preferences.glade.h:33
+#: ../data/lxterminal-preferences.glade.h:35
 msgid "Style"
 msgstr "スタイル"
 
-#: ../data/lxterminal-preferences.glade.h:34
+#: ../data/lxterminal-preferences.glade.h:36
 msgid "Tab panel position"
 msgstr "タブの位置"
 
-#: ../data/lxterminal-preferences.glade.h:35
+#: ../data/lxterminal-preferences.glade.h:37
 msgid "Scrollback lines"
 msgstr "履歴の行数"
 
-#: ../data/lxterminal-preferences.glade.h:36
+#: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide scroll bar"
 msgstr "スクロールバーを隠す"
 
-#: ../data/lxterminal-preferences.glade.h:37
+#: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide menu bar"
 msgstr "メニューバーを隠す"
 
-#: ../data/lxterminal-preferences.glade.h:38
+#: ../data/lxterminal-preferences.glade.h:40
 msgid "Hide Close buttons"
 msgstr "閉じるボタンを隠す"
 
-#: ../data/lxterminal-preferences.glade.h:39
+#: ../data/lxterminal-preferences.glade.h:41
 msgid "Hide mouse pointer"
 msgstr "マウスポインタを隠す"
 
-#: ../data/lxterminal-preferences.glade.h:40
+#: ../data/lxterminal-preferences.glade.h:42
 msgid "Default window size"
 msgstr "デフォルトのウィンドウのサイズ"
 
-#: ../data/lxterminal-preferences.glade.h:41
+#: ../data/lxterminal-preferences.glade.h:43
 msgid "x"
 msgstr "x"
 
-#: ../data/lxterminal-preferences.glade.h:42
+#: ../data/lxterminal-preferences.glade.h:44
 msgid "Display"
 msgstr "ディスプレイ"
 
-#: ../data/lxterminal-preferences.glade.h:43
+#: ../data/lxterminal-preferences.glade.h:45
 msgid "Select-by-word characters"
 msgstr "選択時に語に含まれる文字"
 
-#: ../data/lxterminal-preferences.glade.h:44
+#: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "メニューを開くショートカットを無効にする (標準で F10)"
 
-#: ../data/lxterminal-preferences.glade.h:45
+#: ../data/lxterminal-preferences.glade.h:47
 msgid "Disable using Alt-n for tabs and menu"
 msgstr "Alt-n によるタブやメニューの操作を無効にする"
 
-#: ../data/lxterminal-preferences.glade.h:46
+#: ../data/lxterminal-preferences.glade.h:48
 msgid "Disable confirmation before closing a window with multiple tabs"
 msgstr "複数のタブを含むウィンドウを閉じるときに確認しない"
 
-#: ../data/lxterminal-preferences.glade.h:47
+#: ../data/lxterminal-preferences.glade.h:49
+msgid "Tab width"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:50
 msgid "Advanced"
 msgstr "高度な設定"
 
-#: ../data/lxterminal-preferences.glade.h:48
+#: ../data/lxterminal-preferences.glade.h:51
 msgid "New Window"
 msgstr "新規ウィンドウ"
 
-#: ../data/lxterminal-preferences.glade.h:49
+#: ../data/lxterminal-preferences.glade.h:52
 msgid "New Tab"
 msgstr "新規タブ"
 
-#: ../data/lxterminal-preferences.glade.h:50
+#: ../data/lxterminal-preferences.glade.h:53
 msgid "Close Tab"
 msgstr "タブを閉じる"
 
-#: ../data/lxterminal-preferences.glade.h:51
+#: ../data/lxterminal-preferences.glade.h:54
 msgid "Close Window"
 msgstr "ウィンドウを閉じる"
 
-#: ../data/lxterminal-preferences.glade.h:52
+#: ../data/lxterminal-preferences.glade.h:55
 msgid "Copy"
 msgstr "コピー"
 
-#: ../data/lxterminal-preferences.glade.h:53
+#: ../data/lxterminal-preferences.glade.h:56
 msgid "Paste"
 msgstr "貼り付け"
 
-#: ../data/lxterminal-preferences.glade.h:55
+#: ../data/lxterminal-preferences.glade.h:58
 msgid "Previous Tab"
 msgstr "前のタブ"
 
-#: ../data/lxterminal-preferences.glade.h:56
+#: ../data/lxterminal-preferences.glade.h:59
 msgid "Next Tab"
 msgstr "次のタブ"
 
-#: ../data/lxterminal-preferences.glade.h:57
+#: ../data/lxterminal-preferences.glade.h:60
 msgid "Move Tab Left"
 msgstr "タブを左に移動"
 
-#: ../data/lxterminal-preferences.glade.h:58
+#: ../data/lxterminal-preferences.glade.h:61
 msgid "Move Tab Right"
 msgstr "タブを右に移動"
 
-#: ../data/lxterminal-preferences.glade.h:59
+#: ../data/lxterminal-preferences.glade.h:62
 msgid "Zoom In"
 msgstr "拡大"
 
-#: ../data/lxterminal-preferences.glade.h:60
+#: ../data/lxterminal-preferences.glade.h:63
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: ../data/lxterminal-preferences.glade.h:61
+#: ../data/lxterminal-preferences.glade.h:64
 msgid "Zoom Reset"
 msgstr "ズームのリセット"
 
-#: ../data/lxterminal-preferences.glade.h:62
+#: ../data/lxterminal-preferences.glade.h:65
 msgid "Shortcuts"
 msgstr "ショートカット"
 

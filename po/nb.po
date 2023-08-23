@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-24 12:14+0800\n"
+"POT-Creation-Date: 2023-08-23 21:42+0200\n"
 "PO-Revision-Date: 2019-08-22 16:05+0200\n"
 "Last-Translator: Imre Kristoffer Eilertsen <imreeil42@gmail.com>\n"
+"Language-Team: \n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -17,171 +18,156 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.3\n"
 "X-POOTLE-MTIME: 1404846938.000000\n"
-"Language-Team: \n"
 
-#. 0
-#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:129
 msgid "_File"
 msgstr "_Fil"
 
-#. 1
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:130
 msgid "_Edit"
 msgstr "R_ediger"
 
-#. 2
-#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:131
 msgid "_Tabs"
 msgstr "_Faner"
 
-#. 3
-#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:132
 msgid "_Help"
 msgstr "_Hjelp"
 
-#. 4
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:133
 msgid "_New Window"
 msgstr "Nytt _vindu"
 
-#. 5
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:134
 msgid "New T_ab"
 msgstr "Ny _fane"
 
-#. 6
-#. 7
-#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:136 ../src/lxterminal.c:176
 msgid "_Close Tab"
 msgstr "_Lukk fane"
 
-#. 8
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:137
 msgid "Close _Window"
 msgstr "Lukk _vinduet"
 
-#. 9
-#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:165
 msgid "Cop_y"
 msgstr "Kop_ier"
 
-#. 10
-#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:166
 msgid "_Paste"
 msgstr "_Lim inn"
 
-#. 11
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:140
 msgid "Clear scr_ollback"
 msgstr "Skjul _rullefelt"
 
-#. 12
-#. 13
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:142
 msgid "Zoom _In"
 msgstr "For_størr"
 
-#. 14
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:143
 msgid "Zoom O_ut"
 msgstr "F_orminsk"
 
-#. 15
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:144
 msgid "Zoom _Reset"
 msgstr "Tilbakestill forstørring"
 
-#. 16
-#. 17
-#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Preference_s"
 msgstr "Brukerval_g"
 
-#. 18
-#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:171
 msgid "Na_me Tab"
 msgstr "Navngi _fane"
 
-#. 19
-#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
 msgstr "Forrig_e fane"
 
-#. 20
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:173
 msgid "Ne_xt Tab"
 msgstr "Ne_ste fane"
 
-#. 21
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
 msgstr "F_lytt fane til venstre"
 
-#. 22
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
 msgstr "F_lytt fane til høyre"
 
-#. 23
-#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:152
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:160
 msgid "New _Window"
 msgstr "Nytt _Vindu"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:161
 msgid "New _Tab"
 msgstr "Ny _Fane"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:163
+#, fuzzy
+#| msgid "Copy _URL"
+msgid "Open _URL"
+msgstr "Kopier _URL"
+
+#: ../src/lxterminal.c:164
 msgid "Copy _URL"
 msgstr "Kopier _URL"
 
-#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:167
 msgid "Cl_ear scrollback"
 msgstr "Sk_jul rullefelt"
 
-#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:603 ../data/lxterminal-preferences.glade.h:57
 msgid "Name Tab"
 msgstr "Navngi _fane"
 
-#: ../src/lxterminal.c:570
+#: ../src/lxterminal.c:606
 msgid "_Cancel"
 msgstr "_Avbryt"
 
-#: ../src/lxterminal.c:571
+#: ../src/lxterminal.c:607
 msgid "_OK"
 msgstr "_OK"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:740
+#: ../src/lxterminal.c:776
 msgid "translator-credits"
 msgstr ""
 "Olav Andreas Lindekleiv <olalinde@gmail.com>\n"
 "Sam Magnus Wilson <wilsonsamm@hotmail.com>\n"
 "Imre Kristoffer Eilertsen <imreeil42@gmail.com>"
 
-#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
+#: ../src/lxterminal.c:782 ../src/preferences.c:293
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:748
+#: ../src/lxterminal.c:784
 msgid "Copyright (C) 2008-2023"
 msgstr "Opphavsrett © 2008-2023"
 
-#: ../src/lxterminal.c:749
+#: ../src/lxterminal.c:785
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminalemulator for LXDE-prosjektet"
 
-#: ../src/lxterminal.c:814
+#: ../src/lxterminal.c:816
+msgid "LXTerminal Terminal Emulator"
+msgstr ""
+
+#: ../src/lxterminal.c:850
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr "Du er i ferd med å lukke %d? Vil du fortsette?"
 
-#: ../src/lxterminal.c:815
+#: ../src/lxterminal.c:851
 msgid "Confirm close"
 msgstr "Bekreft lukking"
 
@@ -223,211 +209,225 @@ msgid "Allow bold font"
 msgstr "Tillat fet skrift"
 
 #: ../data/lxterminal-preferences.glade.h:10
+msgid "Bold is bright"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor blink"
 msgstr "Markørblink"
 
-#: ../data/lxterminal-preferences.glade.h:11
+#: ../data/lxterminal-preferences.glade.h:12
 msgid "Cursor style"
 msgstr "Markørstil"
 
-#: ../data/lxterminal-preferences.glade.h:12
+#: ../data/lxterminal-preferences.glade.h:13
 msgid "Block"
 msgstr "Firkant"
 
-#: ../data/lxterminal-preferences.glade.h:13
+#: ../data/lxterminal-preferences.glade.h:14
 msgid "Underline"
 msgstr "Understrek"
 
-#: ../data/lxterminal-preferences.glade.h:14
+#: ../data/lxterminal-preferences.glade.h:15
 msgid "Audible bell"
 msgstr "Lydsignal"
 
-#: ../data/lxterminal-preferences.glade.h:15
+#: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+#| msgid "Audible bell"
+msgid "Visual bell"
+msgstr "Lydsignal"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Black"
 msgstr "Svart"
 
-#: ../data/lxterminal-preferences.glade.h:16
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Red"
 msgstr "Rød"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Green"
 msgstr "Grønn"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Brown"
 msgstr "Brun"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Blue"
 msgstr "Blå"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Magenta"
 msgstr "Magenta"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Cyan"
 msgstr "Cyan"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Gray"
 msgstr "Grå"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Darkgray"
 msgstr "Mørkegrå"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:26
 msgid "Bright Red"
 msgstr "Skinnende rød"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Green"
 msgstr "Skinnende grønn"
 
-#: ../data/lxterminal-preferences.glade.h:26
+#: ../data/lxterminal-preferences.glade.h:28
 msgid "Yellow"
 msgstr "Gul"
 
-#: ../data/lxterminal-preferences.glade.h:27
+#: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Blue"
 msgstr "Skinnende blå"
 
-#: ../data/lxterminal-preferences.glade.h:28
+#: ../data/lxterminal-preferences.glade.h:30
 msgid "Bright Magenta"
 msgstr "Skinnende magenta"
 
-#: ../data/lxterminal-preferences.glade.h:29
+#: ../data/lxterminal-preferences.glade.h:31
 msgid "Bright Cyan"
 msgstr "Skinnende cyan"
 
-#: ../data/lxterminal-preferences.glade.h:30
+#: ../data/lxterminal-preferences.glade.h:32
 msgid "White"
 msgstr "Hvit"
 
-#: ../data/lxterminal-preferences.glade.h:31
+#: ../data/lxterminal-preferences.glade.h:33
 msgid "Palette"
 msgstr "Palett"
 
-#: ../data/lxterminal-preferences.glade.h:32
+#: ../data/lxterminal-preferences.glade.h:34
 msgid "Palette Preset"
 msgstr "Forhåndsvalgt palett"
 
-#: ../data/lxterminal-preferences.glade.h:33
+#: ../data/lxterminal-preferences.glade.h:35
 msgid "Style"
 msgstr "Stil"
 
-#: ../data/lxterminal-preferences.glade.h:34
+#: ../data/lxterminal-preferences.glade.h:36
 msgid "Tab panel position"
 msgstr "Plassering av fanepanelet"
 
 # før stod det "rulleminne" som passer litt bedre synes jeg, men ifølge fellesordlista heter det ikke det...
-#: ../data/lxterminal-preferences.glade.h:35
+#: ../data/lxterminal-preferences.glade.h:37
 msgid "Scrollback lines"
 msgstr "Rulleminne"
 
-#: ../data/lxterminal-preferences.glade.h:36
+#: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide scroll bar"
 msgstr "Skjul rullefelt"
 
-#: ../data/lxterminal-preferences.glade.h:37
+#: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide menu bar"
 msgstr "Skjul menylinje"
 
-#: ../data/lxterminal-preferences.glade.h:38
+#: ../data/lxterminal-preferences.glade.h:40
 msgid "Hide Close buttons"
 msgstr "Skjul lukkeknapp"
 
-#: ../data/lxterminal-preferences.glade.h:39
+#: ../data/lxterminal-preferences.glade.h:41
 msgid "Hide mouse pointer"
 msgstr "Skjul musepekeren"
 
-#: ../data/lxterminal-preferences.glade.h:40
+#: ../data/lxterminal-preferences.glade.h:42
 msgid "Default window size"
 msgstr "Standard vindusstørrelse"
 
-#: ../data/lxterminal-preferences.glade.h:41
+#: ../data/lxterminal-preferences.glade.h:43
 msgid "x"
 msgstr "x"
 
-#: ../data/lxterminal-preferences.glade.h:42
+#: ../data/lxterminal-preferences.glade.h:44
 msgid "Display"
 msgstr "Visning"
 
-#: ../data/lxterminal-preferences.glade.h:43
+#: ../data/lxterminal-preferences.glade.h:45
 msgid "Select-by-word characters"
 msgstr "Tegn for velging etter ord"
 
-#: ../data/lxterminal-preferences.glade.h:44
+#: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "Deaktiver menysnarvei (F10 som standard)"
 
-#: ../data/lxterminal-preferences.glade.h:45
+#: ../data/lxterminal-preferences.glade.h:47
 msgid "Disable using Alt-n for tabs and menu"
 msgstr "Deaktiver bruk av Alt-n for faner og meny"
 
-#: ../data/lxterminal-preferences.glade.h:46
+#: ../data/lxterminal-preferences.glade.h:48
 msgid "Disable confirmation before closing a window with multiple tabs"
 msgstr "Deaktiver bekreftelse før lukking av et vindu med flere faner"
 
-#: ../data/lxterminal-preferences.glade.h:47
+#: ../data/lxterminal-preferences.glade.h:49
+msgid "Tab width"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:50
 msgid "Advanced"
 msgstr "Avansert"
 
-#: ../data/lxterminal-preferences.glade.h:48
+#: ../data/lxterminal-preferences.glade.h:51
 msgid "New Window"
 msgstr "Nytt vindu"
 
-#: ../data/lxterminal-preferences.glade.h:49
+#: ../data/lxterminal-preferences.glade.h:52
 msgid "New Tab"
 msgstr "Ny fane"
 
-#: ../data/lxterminal-preferences.glade.h:50
+#: ../data/lxterminal-preferences.glade.h:53
 msgid "Close Tab"
 msgstr "Lukk fanen"
 
-#: ../data/lxterminal-preferences.glade.h:51
+#: ../data/lxterminal-preferences.glade.h:54
 msgid "Close Window"
 msgstr "Lukk vindu"
 
-#: ../data/lxterminal-preferences.glade.h:52
+#: ../data/lxterminal-preferences.glade.h:55
 msgid "Copy"
 msgstr "Kopier"
 
-#: ../data/lxterminal-preferences.glade.h:53
+#: ../data/lxterminal-preferences.glade.h:56
 msgid "Paste"
 msgstr "Lim inn"
 
-#: ../data/lxterminal-preferences.glade.h:55
+#: ../data/lxterminal-preferences.glade.h:58
 msgid "Previous Tab"
 msgstr "Forrige fane"
 
-#: ../data/lxterminal-preferences.glade.h:56
+#: ../data/lxterminal-preferences.glade.h:59
 msgid "Next Tab"
 msgstr "Neste fane"
 
-#: ../data/lxterminal-preferences.glade.h:57
+#: ../data/lxterminal-preferences.glade.h:60
 msgid "Move Tab Left"
 msgstr "Flytt fane til venstre"
 
-#: ../data/lxterminal-preferences.glade.h:58
+#: ../data/lxterminal-preferences.glade.h:61
 msgid "Move Tab Right"
 msgstr "Flytt fane til høyre"
 
-#: ../data/lxterminal-preferences.glade.h:59
+#: ../data/lxterminal-preferences.glade.h:62
 msgid "Zoom In"
 msgstr "Forstørr"
 
-#: ../data/lxterminal-preferences.glade.h:60
+#: ../data/lxterminal-preferences.glade.h:63
 msgid "Zoom Out"
 msgstr "Forminsk"
 
-#: ../data/lxterminal-preferences.glade.h:61
+#: ../data/lxterminal-preferences.glade.h:64
 msgid "Zoom Reset"
 msgstr "Tilbakestill forstørring"
 
-#: ../data/lxterminal-preferences.glade.h:62
+#: ../data/lxterminal-preferences.glade.h:65
 msgid "Shortcuts"
 msgstr "Snarveier"
 

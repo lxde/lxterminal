@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-24 12:14+0800\n"
+"POT-Creation-Date: 2023-08-23 21:42+0200\n"
 "PO-Revision-Date: 2018-06-15 06:46+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,168 +19,154 @@ msgstr ""
 "X-Generator: Pootle 2.8\n"
 "X-POOTLE-MTIME: 1529045164.462768\n"
 
-#. 0
-#: ../src/lxterminal.c:121
+#: ../src/lxterminal.c:129
 msgid "_File"
 msgstr "_קובץ"
 
-#. 1
-#: ../src/lxterminal.c:122
+#: ../src/lxterminal.c:130
 msgid "_Edit"
 msgstr "ע_ריכה"
 
-#. 2
-#: ../src/lxterminal.c:123
+#: ../src/lxterminal.c:131
 msgid "_Tabs"
 msgstr "_לשוניות"
 
-#. 3
-#: ../src/lxterminal.c:124
+#: ../src/lxterminal.c:132
 msgid "_Help"
 msgstr "ע_זרה"
 
-#. 4
-#: ../src/lxterminal.c:125
+#: ../src/lxterminal.c:133
 msgid "_New Window"
 msgstr "חלון _חדש"
 
-#. 5
-#: ../src/lxterminal.c:126
+#: ../src/lxterminal.c:134
 msgid "New T_ab"
 msgstr "ל_שונית חדשה"
 
-#. 6
-#. 7
-#: ../src/lxterminal.c:128 ../src/lxterminal.c:167
+#: ../src/lxterminal.c:136 ../src/lxterminal.c:176
 msgid "_Close Tab"
 msgstr "_סגירת הלשונית"
 
-#. 8
-#: ../src/lxterminal.c:129
+#: ../src/lxterminal.c:137
 msgid "Close _Window"
 msgstr "_סגירת חלון"
 
-#. 9
-#: ../src/lxterminal.c:130 ../src/lxterminal.c:156
+#: ../src/lxterminal.c:138 ../src/lxterminal.c:165
 msgid "Cop_y"
 msgstr "ה_עתק"
 
-#. 10
-#: ../src/lxterminal.c:131 ../src/lxterminal.c:157
+#: ../src/lxterminal.c:139 ../src/lxterminal.c:166
 msgid "_Paste"
 msgstr "ה_דבק"
 
-#. 11
-#: ../src/lxterminal.c:132
+#: ../src/lxterminal.c:140
 msgid "Clear scr_ollback"
 msgstr "מחיקת ה_גלילה לאחור"
 
-#. 12
-#. 13
-#: ../src/lxterminal.c:134
+#: ../src/lxterminal.c:142
 msgid "Zoom _In"
 msgstr "הת_קרבות"
 
-#. 14
-#: ../src/lxterminal.c:135
+#: ../src/lxterminal.c:143
 msgid "Zoom O_ut"
 msgstr "הת_רחקות"
 
-#. 15
-#: ../src/lxterminal.c:136
+#: ../src/lxterminal.c:144
 msgid "Zoom _Reset"
 msgstr "_איפוס תקריב"
 
-#. 16
-#. 17
-#: ../src/lxterminal.c:138 ../src/lxterminal.c:160
+#: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Preference_s"
 msgstr "ה_עדפות"
 
-#. 18
-#: ../src/lxterminal.c:139 ../src/lxterminal.c:162
+#: ../src/lxterminal.c:147 ../src/lxterminal.c:171
 msgid "Na_me Tab"
 msgstr "ל_שונית שם"
 
-#. 19
-#: ../src/lxterminal.c:140 ../src/lxterminal.c:163
+#: ../src/lxterminal.c:148 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
 msgstr "הלשונית ה_קודמת"
 
-#. 20
-#: ../src/lxterminal.c:141 ../src/lxterminal.c:164
+#: ../src/lxterminal.c:149 ../src/lxterminal.c:173
 msgid "Ne_xt Tab"
 msgstr "הלשונית ה_באה"
 
-#. 21
-#: ../src/lxterminal.c:142 ../src/lxterminal.c:165
+#: ../src/lxterminal.c:150 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
 msgstr "העברת הלשונית _שמאלה"
 
-#. 22
-#: ../src/lxterminal.c:143 ../src/lxterminal.c:166
+#: ../src/lxterminal.c:151 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
 msgstr "העברת הלשונית _ימינה"
 
-#. 23
-#: ../src/lxterminal.c:144
+#: ../src/lxterminal.c:152
 msgid "_About"
 msgstr "על _אודות"
 
-#: ../src/lxterminal.c:152
+#: ../src/lxterminal.c:160
 msgid "New _Window"
 msgstr "חלון _חדש"
 
-#: ../src/lxterminal.c:153
+#: ../src/lxterminal.c:161
 msgid "New _Tab"
 msgstr "ל_שונית חדשה"
 
-#: ../src/lxterminal.c:155
+#: ../src/lxterminal.c:163
+#, fuzzy
+#| msgid "Copy _URL"
+msgid "Open _URL"
+msgstr "העתקת ה_כתובת"
+
+#: ../src/lxterminal.c:164
 msgid "Copy _URL"
 msgstr "העתקת ה_כתובת"
 
-#: ../src/lxterminal.c:158
+#: ../src/lxterminal.c:167
 msgid "Cl_ear scrollback"
 msgstr "מחיקת ה_גלילה לאחור"
 
-#: ../src/lxterminal.c:567 ../data/lxterminal-preferences.glade.h:54
+#: ../src/lxterminal.c:603 ../data/lxterminal-preferences.glade.h:57
 msgid "Name Tab"
 msgstr "לשונית שם"
 
-#: ../src/lxterminal.c:570
+#: ../src/lxterminal.c:606
 msgid "_Cancel"
 msgstr "_ביטול"
 
-#: ../src/lxterminal.c:571
+#: ../src/lxterminal.c:607
 msgid "_OK"
 msgstr "_אישור"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:740
+#: ../src/lxterminal.c:776
 msgid "translator-credits"
 msgstr ""
 "ירון שהרבני <sh.yaron@gmail.com>\n"
 "ליאל פרידמן <lielft@gmail.com>"
 
-#: ../src/lxterminal.c:746 ../src/lxterminal.c:780 ../src/preferences.c:289
+#: ../src/lxterminal.c:782 ../src/preferences.c:293
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "תכנית המסוף LXTerminal"
 
-#: ../src/lxterminal.c:748
+#: ../src/lxterminal.c:784
 msgid "Copyright (C) 2008-2023"
 msgstr "כל הזכויות שמורות (C)‏ 2023-2008"
 
-#: ../src/lxterminal.c:749
+#: ../src/lxterminal.c:785
 msgid "Terminal emulator for LXDE project"
 msgstr "תכנית להדמיית מסוף עבור מיזם LXDE"
 
-#: ../src/lxterminal.c:814
+#: ../src/lxterminal.c:816
+msgid "LXTerminal Terminal Emulator"
+msgstr ""
+
+#: ../src/lxterminal.c:850
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
 msgstr "%d לשוניות מועמדות לסגירה. להמשיך?"
 
-#: ../src/lxterminal.c:815
+#: ../src/lxterminal.c:851
 msgid "Confirm close"
 msgstr "אישור סגירה"
 
@@ -220,215 +206,229 @@ msgstr "קידמה"
 msgid "Allow bold font"
 msgstr "התרת גופן מודגש"
 
+#: ../data/lxterminal-preferences.glade.h:10
+msgid "Bold is bright"
+msgstr ""
+
 # Does this indicate whether the cursor blinks or not or how many times will
 # it blink? Please comment
-#: ../data/lxterminal-preferences.glade.h:10
+#: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor blink"
 msgstr "הבהוב הסמן"
 
 # Does this indicate whether the cursor blinks or not or how many times will
 # it blink? Please comment
-#: ../data/lxterminal-preferences.glade.h:11
+#: ../data/lxterminal-preferences.glade.h:12
 msgid "Cursor style"
 msgstr "סגנון הסמן"
 
-#: ../data/lxterminal-preferences.glade.h:12
+#: ../data/lxterminal-preferences.glade.h:13
 msgid "Block"
 msgstr "מקטע"
 
-#: ../data/lxterminal-preferences.glade.h:13
+#: ../data/lxterminal-preferences.glade.h:14
 msgid "Underline"
 msgstr "קו תחתי"
 
-#: ../data/lxterminal-preferences.glade.h:14
+#: ../data/lxterminal-preferences.glade.h:15
 msgid "Audible bell"
 msgstr "פעמון צליל"
 
-#: ../data/lxterminal-preferences.glade.h:15
+#: ../data/lxterminal-preferences.glade.h:16
+#, fuzzy
+#| msgid "Audible bell"
+msgid "Visual bell"
+msgstr "פעמון צליל"
+
+#: ../data/lxterminal-preferences.glade.h:17
 msgid "Black"
 msgstr "שחור"
 
-#: ../data/lxterminal-preferences.glade.h:16
+#: ../data/lxterminal-preferences.glade.h:18
 msgid "Red"
 msgstr "אדום"
 
-#: ../data/lxterminal-preferences.glade.h:17
+#: ../data/lxterminal-preferences.glade.h:19
 msgid "Green"
 msgstr "ירוק"
 
-#: ../data/lxterminal-preferences.glade.h:18
+#: ../data/lxterminal-preferences.glade.h:20
 msgid "Brown"
 msgstr "חום"
 
-#: ../data/lxterminal-preferences.glade.h:19
+#: ../data/lxterminal-preferences.glade.h:21
 msgid "Blue"
 msgstr "כחול"
 
-#: ../data/lxterminal-preferences.glade.h:20
+#: ../data/lxterminal-preferences.glade.h:22
 msgid "Magenta"
 msgstr "ארגמן"
 
-#: ../data/lxterminal-preferences.glade.h:21
+#: ../data/lxterminal-preferences.glade.h:23
 msgid "Cyan"
 msgstr "ציאן"
 
-#: ../data/lxterminal-preferences.glade.h:22
+#: ../data/lxterminal-preferences.glade.h:24
 msgid "Gray"
 msgstr "אפור"
 
-#: ../data/lxterminal-preferences.glade.h:23
+#: ../data/lxterminal-preferences.glade.h:25
 msgid "Darkgray"
 msgstr "אפור כהה"
 
-#: ../data/lxterminal-preferences.glade.h:24
+#: ../data/lxterminal-preferences.glade.h:26
 msgid "Bright Red"
 msgstr "אדום בוהק"
 
-#: ../data/lxterminal-preferences.glade.h:25
+#: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Green"
 msgstr "ירוק בוהק"
 
-#: ../data/lxterminal-preferences.glade.h:26
+#: ../data/lxterminal-preferences.glade.h:28
 msgid "Yellow"
 msgstr "צהוב"
 
-#: ../data/lxterminal-preferences.glade.h:27
+#: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Blue"
 msgstr "כחול בהיר"
 
-#: ../data/lxterminal-preferences.glade.h:28
+#: ../data/lxterminal-preferences.glade.h:30
 msgid "Bright Magenta"
 msgstr "ארגמן בהיר"
 
-#: ../data/lxterminal-preferences.glade.h:29
+#: ../data/lxterminal-preferences.glade.h:31
 msgid "Bright Cyan"
 msgstr "ציאן בהיר"
 
-#: ../data/lxterminal-preferences.glade.h:30
+#: ../data/lxterminal-preferences.glade.h:32
 msgid "White"
 msgstr "לבן"
 
-#: ../data/lxterminal-preferences.glade.h:31
+#: ../data/lxterminal-preferences.glade.h:33
 msgid "Palette"
 msgstr "לוח צבעים"
 
-#: ../data/lxterminal-preferences.glade.h:32
+#: ../data/lxterminal-preferences.glade.h:34
 msgid "Palette Preset"
 msgstr "ערכת לוח צבעים"
 
-#: ../data/lxterminal-preferences.glade.h:33
+#: ../data/lxterminal-preferences.glade.h:35
 msgid "Style"
 msgstr "סגנון"
 
-#: ../data/lxterminal-preferences.glade.h:34
+#: ../data/lxterminal-preferences.glade.h:36
 msgid "Tab panel position"
 msgstr "מיקום לוח הלשוניות"
 
-#: ../data/lxterminal-preferences.glade.h:35
+#: ../data/lxterminal-preferences.glade.h:37
 msgid "Scrollback lines"
 msgstr "שורות לגלילה אחורנית"
 
-#: ../data/lxterminal-preferences.glade.h:36
+#: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide scroll bar"
 msgstr "הסתרת סרגל הגלילה"
 
-#: ../data/lxterminal-preferences.glade.h:37
+#: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide menu bar"
 msgstr "הסתרת סרגל התפריטים"
 
-#: ../data/lxterminal-preferences.glade.h:38
+#: ../data/lxterminal-preferences.glade.h:40
 msgid "Hide Close buttons"
 msgstr "הסתרת לחצני הסגירה"
 
-#: ../data/lxterminal-preferences.glade.h:39
+#: ../data/lxterminal-preferences.glade.h:41
 msgid "Hide mouse pointer"
 msgstr "הסתרת סמן העכבר"
 
-#: ../data/lxterminal-preferences.glade.h:40
+#: ../data/lxterminal-preferences.glade.h:42
 msgid "Default window size"
 msgstr "גודל החלון כבררת מחדל"
 
-#: ../data/lxterminal-preferences.glade.h:41
+#: ../data/lxterminal-preferences.glade.h:43
 msgid "x"
 msgstr "x"
 
-#: ../data/lxterminal-preferences.glade.h:42
+#: ../data/lxterminal-preferences.glade.h:44
 msgid "Display"
 msgstr "תצוגה"
 
-#: ../data/lxterminal-preferences.glade.h:43
+#: ../data/lxterminal-preferences.glade.h:45
 msgid "Select-by-word characters"
 msgstr "תווים לבחירה לפי מילה"
 
-#: ../data/lxterminal-preferences.glade.h:44
+#: ../data/lxterminal-preferences.glade.h:46
 msgid "Disable menu shortcut key (F10 by default)"
 msgstr "ביטול מקש הקיצור לתפריט (F10 כברירת מחדל)"
 
-#: ../data/lxterminal-preferences.glade.h:45
+#: ../data/lxterminal-preferences.glade.h:47
 msgid "Disable using Alt-n for tabs and menu"
 msgstr "ביטול השימוש ב־Alt-מספר עבור הלשוניות והתפריט"
 
-#: ../data/lxterminal-preferences.glade.h:46
+#: ../data/lxterminal-preferences.glade.h:48
 msgid "Disable confirmation before closing a window with multiple tabs"
 msgstr "ביטול האישור בטרם סגירת חלון עם מגוון לשוניות"
 
-#: ../data/lxterminal-preferences.glade.h:47
+#: ../data/lxterminal-preferences.glade.h:49
+msgid "Tab width"
+msgstr ""
+
+#: ../data/lxterminal-preferences.glade.h:50
 msgid "Advanced"
 msgstr "מתקדם"
 
-#: ../data/lxterminal-preferences.glade.h:48
+#: ../data/lxterminal-preferences.glade.h:51
 msgid "New Window"
 msgstr "חלון חדש"
 
-#: ../data/lxterminal-preferences.glade.h:49
+#: ../data/lxterminal-preferences.glade.h:52
 msgid "New Tab"
 msgstr "לשונית חדשה"
 
-#: ../data/lxterminal-preferences.glade.h:50
+#: ../data/lxterminal-preferences.glade.h:53
 msgid "Close Tab"
 msgstr "סגירת לשונית"
 
-#: ../data/lxterminal-preferences.glade.h:51
+#: ../data/lxterminal-preferences.glade.h:54
 msgid "Close Window"
 msgstr "סגירת החלון"
 
-#: ../data/lxterminal-preferences.glade.h:52
+#: ../data/lxterminal-preferences.glade.h:55
 msgid "Copy"
 msgstr "העתקה"
 
-#: ../data/lxterminal-preferences.glade.h:53
+#: ../data/lxterminal-preferences.glade.h:56
 msgid "Paste"
 msgstr "הדבקה"
 
-#: ../data/lxterminal-preferences.glade.h:55
+#: ../data/lxterminal-preferences.glade.h:58
 msgid "Previous Tab"
 msgstr "הלשונית הקודמת"
 
-#: ../data/lxterminal-preferences.glade.h:56
+#: ../data/lxterminal-preferences.glade.h:59
 msgid "Next Tab"
 msgstr "הלשונית הבאה"
 
-#: ../data/lxterminal-preferences.glade.h:57
+#: ../data/lxterminal-preferences.glade.h:60
 msgid "Move Tab Left"
 msgstr "העברת הלשונית שמאלה"
 
-#: ../data/lxterminal-preferences.glade.h:58
+#: ../data/lxterminal-preferences.glade.h:61
 msgid "Move Tab Right"
 msgstr "העברת הלשונית ימינה"
 
-#: ../data/lxterminal-preferences.glade.h:59
+#: ../data/lxterminal-preferences.glade.h:62
 msgid "Zoom In"
 msgstr "התקרבות"
 
-#: ../data/lxterminal-preferences.glade.h:60
+#: ../data/lxterminal-preferences.glade.h:63
 msgid "Zoom Out"
 msgstr "התרחקות"
 
-#: ../data/lxterminal-preferences.glade.h:61
+#: ../data/lxterminal-preferences.glade.h:64
 msgid "Zoom Reset"
 msgstr "איפוס התקריב"
 
-#: ../data/lxterminal-preferences.glade.h:62
+#: ../data/lxterminal-preferences.glade.h:65
 msgid "Shortcuts"
 msgstr "מקשי קיצור"
 
