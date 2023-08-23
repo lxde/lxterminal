@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxterminal 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-02 03:38+0200\n"
-"PO-Revision-Date: 2023-05-18 13:15+0200\n"
-"Last-Translator: Ingo Brückl <ib@wupperonline.de>\n"
+"POT-Creation-Date: 2023-08-23 21:42+0200\n"
+"PO-Revision-Date: 2023-08-23 21:46+0200\n"
+"Last-Translator: Ingo Brückl <ib@oddnet.de>\n"
 "Language-Team: de <christoph.wickert@googlemail.de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -20,110 +20,86 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-POOTLE-MTIME: 1494837197.820816\n"
 
-#. 0
 #: ../src/lxterminal.c:129
 msgid "_File"
 msgstr "_Datei"
 
-#. 1
 #: ../src/lxterminal.c:130
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#. 2
 #: ../src/lxterminal.c:131
 msgid "_Tabs"
 msgstr "_Reiter"
 
-#. 3
 #: ../src/lxterminal.c:132
 msgid "_Help"
 msgstr "_Hilfe"
 
-#. 4
 #: ../src/lxterminal.c:133
 msgid "_New Window"
 msgstr "_Neues Fenster"
 
-#. 5
 #: ../src/lxterminal.c:134
 msgid "New T_ab"
 msgstr "Neuer _Reiter"
 
-#. 6
-#. 7
 #: ../src/lxterminal.c:136 ../src/lxterminal.c:176
 msgid "_Close Tab"
 msgstr "Reiter s_chließen"
 
-#. 8
 #: ../src/lxterminal.c:137
 msgid "Close _Window"
 msgstr "_Fenster schließen"
 
-#. 9
 #: ../src/lxterminal.c:138 ../src/lxterminal.c:165
 msgid "Cop_y"
 msgstr "_Kopieren"
 
-#. 10
 #: ../src/lxterminal.c:139 ../src/lxterminal.c:166
 msgid "_Paste"
 msgstr "E_infügen"
 
-#. 11
 #: ../src/lxterminal.c:140
 msgid "Clear scr_ollback"
 msgstr "Zurückr_ollpuffer löschen"
 
-#. 12
-#. 13
 #: ../src/lxterminal.c:142
 msgid "Zoom _In"
 msgstr "Ver_größern"
 
-#. 14
 #: ../src/lxterminal.c:143
 msgid "Zoom O_ut"
 msgstr "Ver_kleinern"
 
-#. 15
 #: ../src/lxterminal.c:144
 msgid "Zoom _Reset"
 msgstr "_Normale Größe"
 
-#. 16
-#. 17
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Preference_s"
 msgstr "_Einstellungen"
 
-#. 18
 #: ../src/lxterminal.c:147 ../src/lxterminal.c:171
 msgid "Na_me Tab"
 msgstr "_Titel ändern …"
 
-#. 19
 #: ../src/lxterminal.c:148 ../src/lxterminal.c:172
 msgid "Pre_vious Tab"
 msgstr "_Vorheriger Reiter"
 
-#. 20
 #: ../src/lxterminal.c:149 ../src/lxterminal.c:173
 msgid "Ne_xt Tab"
 msgstr "_Nächster Reiter"
 
-#. 21
 #: ../src/lxterminal.c:150 ../src/lxterminal.c:174
 msgid "Move Tab _Left"
 msgstr "Reiter nach _links verschieben"
 
-#. 22
 #: ../src/lxterminal.c:151 ../src/lxterminal.c:175
 msgid "Move Tab _Right"
 msgstr "Reiter nach _rechts verschieben"
 
-#. 23
 #: ../src/lxterminal.c:152
 msgid "_About"
 msgstr "_Info"
@@ -148,20 +124,20 @@ msgstr "_Adresse kopieren"
 msgid "Cl_ear scrollback"
 msgstr "Zurückrollpuffer löschen"
 
-#: ../src/lxterminal.c:599 ../data/lxterminal-preferences.glade.h:56
+#: ../src/lxterminal.c:603 ../data/lxterminal-preferences.glade.h:57
 msgid "Name Tab"
 msgstr "Titel festlegen"
 
-#: ../src/lxterminal.c:602
+#: ../src/lxterminal.c:606
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: ../src/lxterminal.c:603
+#: ../src/lxterminal.c:607
 msgid "_OK"
 msgstr "_OK"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/lxterminal.c:772
+#: ../src/lxterminal.c:776
 msgid "translator-credits"
 msgstr ""
 "Christoph Wickert <cwickert@fedoraproject.org>\n"
@@ -170,31 +146,31 @@ msgstr ""
 "Daniel Winzen <d@winzen4.de>\n"
 "Ingo Brückl <>"
 
-#: ../src/lxterminal.c:778 ../src/preferences.c:289
+#: ../src/lxterminal.c:782 ../src/preferences.c:293
 #: ../data/lxterminal.desktop.in.h:1
 msgid "LXTerminal"
 msgstr "LXTerminal"
 
-#: ../src/lxterminal.c:780
+#: ../src/lxterminal.c:784
 msgid "Copyright (C) 2008-2023"
 msgstr "Copyright (C) 2008-2023"
 
-#: ../src/lxterminal.c:781
+#: ../src/lxterminal.c:785
 msgid "Terminal emulator for LXDE project"
 msgstr "Terminal-Emulator für das LXDE-Projekt"
 
-#: ../src/lxterminal.c:812
+#: ../src/lxterminal.c:816
 msgid "LXTerminal Terminal Emulator"
 msgstr "LXTerminal Terminal-Emulator"
 
-#: ../src/lxterminal.c:846
+#: ../src/lxterminal.c:850
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr
+msgstr ""
 "Sie sind dabei, %d Reiter zu schließen.\n"
 "Sind Sie sicher, dass Sie fortfahren möchten?"
 
-#: ../src/lxterminal.c:847
+#: ../src/lxterminal.c:851
 msgid "Confirm close"
 msgstr "Schließen bestätigen"
 
@@ -388,69 +364,70 @@ msgstr "Tastenkombination Alt+N für Reiter und Menü deaktivieren"
 
 #: ../data/lxterminal-preferences.glade.h:48
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr " Bestätigung beim Schließen eines Fensters mit mehreren Reitern deaktivieren"
+msgstr ""
+" Bestätigung beim Schließen eines Fensters mit mehreren Reitern deaktivieren"
 
-#: ../data/lxterminal-preferences.glade.h
+#: ../data/lxterminal-preferences.glade.h:49
 msgid "Tab width"
 msgstr "Tabulatorweite:"
 
-#: ../data/lxterminal-preferences.glade.h:49
+#: ../data/lxterminal-preferences.glade.h:50
 msgid "Advanced"
 msgstr "Verschiedenes"
 
-#: ../data/lxterminal-preferences.glade.h:50
+#: ../data/lxterminal-preferences.glade.h:51
 msgid "New Window"
 msgstr "Neues Fenster"
 
-#: ../data/lxterminal-preferences.glade.h:51
+#: ../data/lxterminal-preferences.glade.h:52
 msgid "New Tab"
 msgstr "Neuer Reiter"
 
-#: ../data/lxterminal-preferences.glade.h:52
+#: ../data/lxterminal-preferences.glade.h:53
 msgid "Close Tab"
 msgstr "Reiter schließen"
 
-#: ../data/lxterminal-preferences.glade.h:53
+#: ../data/lxterminal-preferences.glade.h:54
 msgid "Close Window"
 msgstr "Fenster schließen"
 
-#: ../data/lxterminal-preferences.glade.h:54
+#: ../data/lxterminal-preferences.glade.h:55
 msgid "Copy"
 msgstr "Kopieren"
 
-#: ../data/lxterminal-preferences.glade.h:55
+#: ../data/lxterminal-preferences.glade.h:56
 msgid "Paste"
 msgstr "Einfügen"
 
-#: ../data/lxterminal-preferences.glade.h:57
+#: ../data/lxterminal-preferences.glade.h:58
 msgid "Previous Tab"
 msgstr "Vorheriger Reiter"
 
-#: ../data/lxterminal-preferences.glade.h:58
+#: ../data/lxterminal-preferences.glade.h:59
 msgid "Next Tab"
 msgstr "Nächster Reiter"
 
-#: ../data/lxterminal-preferences.glade.h:59
+#: ../data/lxterminal-preferences.glade.h:60
 msgid "Move Tab Left"
 msgstr "Reiter nach links verschieben"
 
-#: ../data/lxterminal-preferences.glade.h:60
+#: ../data/lxterminal-preferences.glade.h:61
 msgid "Move Tab Right"
 msgstr "Reiter nach rechts verschieben"
 
-#: ../data/lxterminal-preferences.glade.h:61
+#: ../data/lxterminal-preferences.glade.h:62
 msgid "Zoom In"
 msgstr "Vergrößern"
 
-#: ../data/lxterminal-preferences.glade.h:62
+#: ../data/lxterminal-preferences.glade.h:63
 msgid "Zoom Out"
 msgstr "Verkleinern"
 
-#: ../data/lxterminal-preferences.glade.h:63
+#: ../data/lxterminal-preferences.glade.h:64
 msgid "Zoom Reset"
 msgstr "Normale Größe"
 
-#: ../data/lxterminal-preferences.glade.h:64
+#: ../data/lxterminal-preferences.glade.h:65
 msgid "Shortcuts"
 msgstr "Tastenkombinationen"
 
