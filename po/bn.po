@@ -180,7 +180,7 @@ msgstr "LXটার্মিনাল"
 # snigdha
 #: ../src/lxterminal.c:748
 #, fuzzy
-msgid "Copyright (C) 2008-2017"
+msgid "Copyright (C) 2008-2023"
 msgstr "স্বত্বাধিকার (C) ২০০৮-২০১০"
 
 #: ../src/lxterminal.c:749

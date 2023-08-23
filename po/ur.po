@@ -185,8 +185,8 @@ msgstr "ایل ایکس ٹرمنل"
 
 #: ../src/lxterminal.c:748
 #, fuzzy
-msgid "Copyright (C) 2008-2017"
-msgstr "کاپی رائٹ (C) 2008-2017"
+msgid "Copyright (C) 2008-2023"
+msgstr "کاپی رائٹ (C) 2008-2023"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"

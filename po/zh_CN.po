@@ -162,8 +162,8 @@ msgstr "LX 终端"
 
 #: ../src/lxterminal.c:748
 #, fuzzy
-msgid "Copyright (C) 2008-2017"
-msgstr "版权所有 (C) 2008-2017"
+msgid "Copyright (C) 2008-2023"
+msgstr "版权所有 (C) 2008-2023"
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"

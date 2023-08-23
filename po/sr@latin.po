@@ -172,8 +172,8 @@ msgstr "LIks-Terminal"
 
 #: ../src/lxterminal.c:748
 #, fuzzy
-msgid "Copyright (C) 2008-2017"
-msgstr "2008-2017. Neka su prava zadržana."
+msgid "Copyright (C) 2008-2023"
+msgstr "2008-2023. Neka su prava zadržana."
 
 #: ../src/lxterminal.c:749
 msgid "Terminal emulator for LXDE project"
