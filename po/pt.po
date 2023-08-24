@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: lxterminal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-23 21:42+0200\n"
-"PO-Revision-Date: 2023-08-01 15:13+0100\n"
+"PO-Revision-Date: 2023-08-24 17:16+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -113,10 +113,8 @@ msgid "New _Tab"
 msgstr "Novo _separador"
 
 #: ../src/lxterminal.c:163
-#, fuzzy
-#| msgid "Copy _URL"
 msgid "Open _URL"
-msgstr "Copiar _URL"
+msgstr "Abrir _URL"
 
 #: ../src/lxterminal.c:164
 msgid "Copy _URL"
@@ -161,13 +159,12 @@ msgstr "Emulador de terminal para o LXDE"
 
 #: ../src/lxterminal.c:816
 msgid "LXTerminal Terminal Emulator"
-msgstr ""
+msgstr "Emulador de Terminal LXTerminal"
 
 #: ../src/lxterminal.c:850
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
-"Está prestes a fechar %d separadores. Tem certeza de que deseja continuar?"
+msgstr "Está prestes a fechar %d separadores. Tem certeza de que deseja continuar?"
 
 #: ../src/lxterminal.c:851
 msgid "Confirm close"
@@ -195,7 +192,7 @@ msgstr "Preferências do LxTerminal"
 
 #: ../data/lxterminal-preferences.glade.h:6
 msgid "Terminal font"
-msgstr "Letra do terminal"
+msgstr "Tipo de letra do terminal"
 
 #: ../data/lxterminal-preferences.glade.h:7
 msgid "Background"
@@ -207,11 +204,11 @@ msgstr "Principal"
 
 #: ../data/lxterminal-preferences.glade.h:9
 msgid "Allow bold font"
-msgstr "Permitir letra a negrito"
+msgstr "Permitir tipo de letra a negrito"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Bold is bright"
-msgstr ""
+msgstr "Negrito é brilhante"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor blink"
@@ -234,10 +231,8 @@ msgid "Audible bell"
 msgstr "Campainha audível"
 
 #: ../data/lxterminal-preferences.glade.h:16
-#, fuzzy
-#| msgid "Audible bell"
 msgid "Visual bell"
-msgstr "Campainha audível"
+msgstr "Campainha visual"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Black"
@@ -325,19 +320,19 @@ msgstr "Linhas de deslocação"
 
 #: ../data/lxterminal-preferences.glade.h:38
 msgid "Hide scroll bar"
-msgstr "Ocultar barra de deslocação"
+msgstr "Ocultar a barra de deslocação"
 
 #: ../data/lxterminal-preferences.glade.h:39
 msgid "Hide menu bar"
-msgstr "Ocultar barra de menu"
+msgstr "Ocultar a barra de menu"
 
 #: ../data/lxterminal-preferences.glade.h:40
 msgid "Hide Close buttons"
-msgstr "Ocultar botão Fechar"
+msgstr "Ocultar os botões Fechar"
 
 #: ../data/lxterminal-preferences.glade.h:41
 msgid "Hide mouse pointer"
-msgstr "Ocultar ponteiro do rato"
+msgstr "Ocultar o ponteiro do rato"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Default window size"
@@ -365,12 +360,11 @@ msgstr "Desativar a utilização de Alt-n para separadores e menus"
 
 #: ../data/lxterminal-preferences.glade.h:48
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
-"Desativar confirmação antes de fechar uma janela com vários separadores"
+msgstr "Desativar confirmação antes de fechar uma janela com vários separadores"
 
 #: ../data/lxterminal-preferences.glade.h:49
 msgid "Tab width"
-msgstr ""
+msgstr "Largura do separador"
 
 #: ../data/lxterminal-preferences.glade.h:50
 msgid "Advanced"
