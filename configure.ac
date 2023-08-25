@@ -97,6 +97,9 @@ if test x"$enable_man" = x"yes"; then
 		[DocBook XML DTD V4.1.2], [], enable_man=no)
 	JH_CHECK_XML_CATALOG([http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl],
 		[DocBook XSL Stylesheets >= 1.70.1], [], enable_man=no)
+else
+	XSLTPROC=true
+	enable_man=yes
 fi
 
 AM_CONDITIONAL(ENABLE_REGENERATE_MAN, test "x$enable_man" != "xno")

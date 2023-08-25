@@ -37,7 +37,6 @@ config.log
 config.status
 config.sub
 libtool
-man/*.1
 po/LINGUAS
 po/Makefile
 po/POTFILES

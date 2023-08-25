@@ -1,0 +1,98 @@
+'\" t
+.\"     Title: LXTERMINAL
+.\"    Author: Ying-Chun Liu
+.\" Generator: DocBook XSL Stylesheets v1.79.1 <http://docbook.sf.net/>
+.\"      Date: Jun  28, 2008
+.\"    Manual: http://LXDE.org
+.\"    Source: http://LXDE.org
+.\"  Language: English
+.\"
+.TH "LXTERMINAL" "1" "Jun 28, 2008" "http://LXDE\&.org" "http://LXDE.org"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+lxterminal \- a lightweight terminal emulator based on GTK+ for the LXDE desktop\&.
+.SH "SYNOPSIS"
+.HP \w'\fBlxterminal\fR\ 'u
+\fBlxterminal\fR [\fBoptions\fR...]
+.SH "DESCRIPTION"
+.PP
+This manual page documents briefly the
+\fBlxterminal\fR
+command\&.
+.PP
+\fBlxterminal\fR
+is a program that provides a terminal emulator for the desktop, usually for LXDE\&.
+.SH "OPTIONS"
+.PP
+This program follows the usual
+GNU
+command line syntax, with long options starting with two dashes (`\-\*(Aq)\&. A summary of options is included below\&.
+.PP
+\fB\-e \fR\fB\fISTRING\fR\fR \fB\-\-command=\fR\fB\fISTRING\fR\fR \fB\-\-command \fR\fB\fISTRING\fR\fR
+.RS 4
+This option specifies the program (and its command line arguments) to be run in the terminal\&. Except in the
+\fB\-\-command=\fR
+form, this must be the last option on the command line\&.
+.RE
+.PP
+\fB\-\-geometry=\fR\fB\fICHARACTERS\fR\fR\fBx\fR\fB\fILINES\fR\fR
+.RS 4
+Set the terminal\*(Aqs size in characters and lines\&.
+.RE
+.PP
+\fB\-l\fR \fB\-\-loginshell\fR
+.RS 4
+Executes login shell\&.
+.RE
+.PP
+\fB\-t \fR\fB\fINAME[,NAME[,NAME[\&.\&.\&.]]]\fR\fR \fB\-\-title=\fR\fB\fINAME[,NAME[,NAME[\&.\&.\&.]]]\fR\fR \fB\-\-tabs=\fR\fB\fINAME[,NAME[,NAME[\&.\&.\&.]]]\fR\fR
+.RS 4
+Set the terminal\*(Aqs title\&. Use comma for multiple tabs\&.
+.RE
+.PP
+\fB\-\-working\-directory=\fR\fB\fIDIRECTORY\fR\fR
+.RS 4
+Set the terminal\*(Aqs working directory\&.
+.RE
+.SH "AUTHOR"
+.PP
+This manual page was written by paulliu
+<grandpaul@gmail\&.com>
+for the
+Debian
+system (but may be used by others)\&. Permission is granted to copy, distribute and/or modify this document under the terms of the
+GNU
+General Public License, Version 2 any later version published by the Free Software Foundation\&.
+.PP
+On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common\-licenses/GPL\&.
+.SH "FILES"
+.PP
+The configuration file can be found in ~/\&.config/lxterminal/lxterminal\&.conf\&.
+.SH "AUTHOR"
+.PP
+\fBYing\-Chun Liu\fR
+.RS 4
+Author.
+.RE
+.SH "COPYRIGHT"
+.br
+Copyright \(co 2008 paulliu
+.br
