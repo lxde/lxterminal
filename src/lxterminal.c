@@ -1805,7 +1805,7 @@ static void terminal_settings_apply(LXTerminal * terminal)
     /* Reinitialize "composited". */
     terminal->rgba = gdk_screen_is_composited(gtk_widget_get_screen(terminal->window));
 
-    #if GTK_CHECK_VERSION (2, 90, 8)
+    #if GTK_CHECK_VERSION (2, 90, 8) && VTE_CHECK_VERSION (0, 38, 0)
     /* Found in vteapp as a workaround.  Related bug:
      * https://bugzilla.gnome.org/show_bug.cgi?format=multiple&id=729884 */
     gboolean has_transparency = setting->background_color.alpha < 1.0;
