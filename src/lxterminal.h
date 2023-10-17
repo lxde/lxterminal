@@ -70,6 +70,7 @@ typedef struct _term {
     GtkWidget * scrollbar;          /* Scroll bar, child of horizontal box */
     GPid pid;                                   /* Process ID of the process that has this as its terminal */
     GClosure * closure;             /* Accelerator structure */
+    gchar * * command;              /* Memory allocated by glib */
     gchar * matched_url;
     gboolean open_menu_on_button_release;
     gulong exit_handler_id;
@@ -79,6 +80,7 @@ typedef struct _term {
 typedef struct _command_arguments {
     char * executable;              /* Value of argv[0]; points into argument vector */
     gchar * * command;              /* Value of -e, --command; memory allocated by glib */
+    gchar * * commands;             /* Accumulated values of --command=; pointers into argument vector */
     int geometry_bitmask;
     unsigned int geometry_columns;           /* Value of --geometry */
     unsigned int geometry_rows;
