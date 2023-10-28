@@ -61,6 +61,18 @@ Except in the <option>--command=</option> form, this must be the last option on 
 	<listitem>	  <para>Executes login shell.</para>
 	</listitem>
       </varlistentry>
+      <varlistentry>
+        <term>
+          <option>--no-remote</option>
+        </term>
+        <listitem>
+          <para>Spawns an lxterminal window in a process that is separate from
+            all other lxterminal windows. It ensures that environment variables
+            are inherited from the launching process (such as the user's shell
+            process).
+          </para>
+        </listitem>
+      </varlistentry>
       <varlistentry>	<term>	  <option>-t <replaceable>NAME[,NAME[,NAME[...]]]</replaceable></option>
 	  <option>--title=<replaceable>NAME[,NAME[,NAME[...]]]</replaceable></option>
 	  <option>--tabs=<replaceable>NAME[,NAME[,NAME[...]]]</replaceable></option>
