@@ -1208,7 +1208,7 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     GtkStyleContext* box_style_ctx =
         gtk_widget_get_style_context(GTK_WIDGET(terminal->box));
     gtk_style_context_add_provider(
-        box_style_ctx, box_css_provider,
+        box_style_ctx, GTK_STYLE_PROVIDER(box_css_provider),
         GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
     #endif
 
@@ -1232,6 +1232,8 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
     ret = vte_terminal_match_add_regex(VTE_TERMINAL(term->vte), dingus2, 0);
     vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
+    vte_regex_unref(dingus1);
+    vte_regex_unref(dingus2);
 #else
     GRegex * dingus1 = g_regex_new(DINGUS1, G_REGEX_OPTIMIZE, 0, NULL);
     GRegex * dingus2 = g_regex_new(DINGUS2, G_REGEX_OPTIMIZE, 0, NULL);
@@ -1239,9 +1241,9 @@ static Term * terminal_new(LXTerminal * terminal, const gchar * label, const gch
     vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
     ret = vte_terminal_match_add_gregex(VTE_TERMINAL(term->vte), dingus2, 0);
     vte_terminal_match_set_cursor_name(VTE_TERMINAL(term->vte), ret, "pointer");
-#endif
     g_regex_unref(dingus1);
     g_regex_unref(dingus2);
+#endif
 
     /* Create a horizontal box inside an event box as the toplevel for the tab label. */
     term->tab = gtk_event_box_new();
