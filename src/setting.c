@@ -37,6 +37,17 @@ Setting * setting;
 
 ColorPreset color_presets[] = {
     {
+        .name = "LXTerminal Default",
+        .background_color = "#000000",
+        .foreground_color = "#ffffff",
+        .palette = {
+            "#000000", "#ff6866", "#46bf00", "#aba700",
+            "#709dff", "#d969f5", "#00b7be", "#bcbcbc",
+            "#777777", "#ffb18f", "#00ed7b", "#b5d900",
+            "#bbc0ff", "#ffa5df", "#3cdbff", "#ffffff"
+        }
+    },
+    {
         .name = "VGA",
         .background_color = "#000000",
         .foreground_color = "#aaaaaa",
@@ -137,7 +148,7 @@ void print_setting()
     printf("Disable Confirm: %i\n", setting->disable_confirm);
     printf("Tab width: %i\n", setting->tab_width);
     printf("Geometry change: %i\n", setting->geometry_change);
-    
+
     /* Shortcut group settings. */
     printf("NEW_WINDOW_ACCEL: %s\n", setting->new_window_accel);
     printf("NEW_TAB_ACCEL: %s\n", setting->new_tab_accel);
@@ -173,7 +184,7 @@ void save_setting()
     int i;
     g_return_if_fail (setting != NULL);
     //print_setting();
-    
+
     /* Push settings to GKeyFile. */
     g_key_file_set_string(setting->keyfile, GENERAL_GROUP, FONT_NAME, setting->font_name);
 #if VTE_CHECK_VERSION (0, 38, 0)
@@ -282,7 +293,7 @@ Setting * copy_setting(Setting * setting)
     new_setting->font_name = g_strdup(setting->font_name);
     new_setting->tab_position = g_strdup(setting->tab_position);
     new_setting->word_selection_characters = g_strdup(setting->word_selection_characters);
-    
+
     /* Shortcut group settings. */
     new_setting->new_window_accel = g_strdup(setting->new_window_accel);
     new_setting->new_tab_accel = g_strdup(setting->new_tab_accel);
@@ -295,7 +306,7 @@ Setting * copy_setting(Setting * setting)
     new_setting->next_tab_accel = g_strdup(setting->next_tab_accel);
     new_setting->move_tab_left_accel = g_strdup(setting->move_tab_left_accel);
     new_setting->move_tab_right_accel = g_strdup(setting->move_tab_right_accel);
-    
+
     return new_setting;
 }
 
@@ -336,7 +347,7 @@ Setting * load_setting()
     g_free(dir);
     gchar * system_config_path = g_strdup(PACKAGE_DATA_DIR "/lxterminal/lxterminal.conf");
     gchar * config_path = user_config_path;
-    
+
     gboolean need_save = FALSE;
 
     if ( ! g_file_test(user_config_path, G_FILE_TEST_EXISTS))
@@ -375,7 +386,7 @@ Setting * load_setting()
         }
         setting->background_alpha = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, BG_ALPHA, &error);
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND))
-        {   
+        {
             /* Set default value if key not found! */
             setting->background_alpha = 65535;
 #endif
@@ -428,7 +439,7 @@ color_preset_does_not_exist:
         setting->tab_position = g_key_file_get_string(setting->keyfile, GENERAL_GROUP, TAB_POS, NULL);
         setting->scrollback = g_key_file_get_integer(setting->keyfile, GENERAL_GROUP, SCROLLBACK, &error);
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND))
-        {   
+        {
             /* Set default value if key not found! */
             setting->scrollback = 1000;
         }
@@ -456,7 +467,7 @@ color_preset_does_not_exist:
         if (error && (error->code == G_KEY_FILE_ERROR_KEY_NOT_FOUND)) {
             setting->tab_width = 100;
         }
-        
+
         /* Shortcut group settings. */
         setting->new_window_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_WINDOW_ACCEL, NULL);
         setting->new_tab_accel = g_key_file_get_string(setting->keyfile, SHORTCUT_GROUP, NEW_TAB_ACCEL, NULL);
@@ -489,7 +500,7 @@ color_preset_does_not_exist:
     {
         setting->word_selection_characters = g_strdup("-A-Za-z0-9,./?%&#:_~");
     }
-    
+
     /* Default configuration for shortcut group settings. */
     if (setting->new_window_accel == NULL)
     {
