@@ -70,6 +70,17 @@ ColorPreset color_presets[] = {
         }
     },
     {
+        .name = "Uniform Lightness",
+        .background_color = "#000000",
+        .foreground_color = "#ffffff",
+        .palette = {
+            "#000000", "#ff6866", "#46bf00", "#aba700",
+            "#709dff", "#d969f5", "#00b7be", "#bcbcbc",
+            "#777777", "#ffb18f", "#00ed7b", "#b5d900",
+            "#bbc0ff", "#ffa5df", "#3cdbff", "#ffffff"
+        }
+    },
+    {
         .name = "Solarized Dark",
         .background_color = "#002b36",
         .foreground_color = "#839496",
