@@ -55,6 +55,9 @@ AC_SUBST(GTK_LIBS)
 
 PKG_CHECK_MODULES(glib, [glib-2.0 >= 2.6.0])
 
+PKG_CHECK_EXISTS([vte-2.91 >= 0.46.0], AC_CHECK_HEADER(pcre2.h,,
+  AC_MSG_ERROR([required libpcre2 header file pcre2.h not found]), [#define PCRE2_CODE_UNIT_WIDTH 0]))
+
 if test "x$enable_gtk3" = "xyes" ; then
 PKG_CHECK_MODULES(vte, [vte-2.91 >= 0.38.0],, [
   PKG_CHECK_MODULES(vte, [vte-2.90 >= 0.28.0])
