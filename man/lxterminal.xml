@@ -24,8 +24,7 @@
   </refsynopsisdiv>
   <refsect1>    <title>DESCRIPTION</title>
 
-    <para>This manual page documents briefly the
-      <command>lxterminal</command> command.</para>
+    <para>This manual page documents the <command>lxterminal</command> command.</para>
 
     <para><command>lxterminal</command> is a program that provides a terminal
     emulator
@@ -45,14 +44,20 @@
           <option>--command=<replaceable>STRING</replaceable></option>
           <option>--command <replaceable>STRING</replaceable></option>
 
+	  <option>--commands=<replaceable>[STRING[,STRING[...]]]</replaceable></option>
         </term>
-        <listitem>          <para>This option specifies the program (and its command line arguments) to be run in the terminal.
-Except in the <option>--command=</option> form, this must be the last option on the command line.</para>
+        <listitem>          <para>This option specifies the program (and its command line arguments) to be run in the terminal. Except in the <option>--command=</option>, or the <option>commands=</option>, forms, this must be the last option on the command line. Comma separated multiple commands create multiple tabs, each running a different comand, only with the <option>--commands=</option> form. New tabs will be created as necessary after all the explictly requested tabs will be exhausted.</para>
         </listitem>
       </varlistentry>
       <varlistentry>	<term>	  <option>--geometry=<replaceable>CHARACTERS</replaceable>x<replaceable>LINES</replaceable></option>
 	</term>
 	<listitem>	  <para>Set the terminal's size in characters and lines.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-h</option>
+	  <option>--help</option>
+	</term>
+	<listitem>	  <para>Prints a short help message, and exit.</para>
 	</listitem>
       </varlistentry>
       <varlistentry>	<term>	  <option>-l</option>
@@ -61,17 +66,62 @@ Except in the <option>--command=</option> form, this must be the last option on 
 	<listitem>	  <para>Executes login shell.</para>
 	</listitem>
       </varlistentry>
-      <varlistentry>	<term>	  <option>-t <replaceable>NAME[,NAME[,NAME[...]]]</replaceable></option>
-	  <option>--title=<replaceable>NAME[,NAME[,NAME[...]]]</replaceable></option>
-	  <option>--tabs=<replaceable>NAME[,NAME[,NAME[...]]]</replaceable></option>
+      <varlistentry>	<term>	  <option>-T <replaceable>NAME</replaceable></option>
+	  <option>-t <replaceable>NAME</replaceable></option>
+	  <option>--title=<replaceable>NAME</replaceable></option>
+	  <option>--tabs=<replaceable>[NAME[,NAME[...]]]</replaceable></option>
 	</term>
-	<listitem>	  <para>Set the terminal's title. Use comma for multiple tabs.</para>
+	<listitem>	  <para>Set the terminal's title. Comma separated multiple titles create multiple tabs only with the <option>--tabs=</option> form.</para>
 	</listitem>
       </varlistentry>
       <varlistentry>        <term>          <option>--working-directory=<replaceable>DIRECTORY</replaceable></option>
         </term>
         <listitem>          <para>Set the terminal's working directory.</para>
         </listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>-v</option>
+	  <option>--version</option>
+	</term>
+	<listitem>	  <para>Prints the program version, and exit.</para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+
+  <refsect1>    <title>EXAMPLES, AND MORE DETAILS</title>
+
+    <variablelist>       <varlistentry>	<term>	  <option>The hidden tab</option>
+        </term>
+	<listitem>	  <para>A hidden tab is created when <option>--tabs</option>, or any <option>--command</option> variant, is requested, with no more than one command, or no more than one tab, is specified. For example,</para>
+		<para><command>lxterminal</command> --tabs= --no-remote</para>
+		<para>This hidden tab can be revealed when the <command>lxterminal</command> is running. For example, when requesting a new tab with the Shift+Ctrl+T combination keys.</para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>	<term>	  <option>The command examples</option> 	</term><listitem>
+<para>For display puposes, the command examples might be broken into more than one line. When actually using the examples, commands should be entered in a single line. Or have line breaks according to the usual shell conventions.</para>
+		    <para>All command examples here use <option>--no-remote</option> to avoid interaction with possibly running <command>lxterminal</command>s.</para>
+	</listitem>
+      </varlistentry>
+	    <varlistentry>	<term>	  <option>A short lived process is requested in the command line</option> 	</term>
+		    <listitem>      <para>Consider</para>
+			    <para><command>lxterminal</command> --no-remote --command=&apos;/bin/bash -c &quot;echo This window will be closed after you will press enter. ; read -p \&quot;Do press the &lt;enter&gt; key.\&quot; &quot; &apos;</para>
+			    <para>This example emphasizes a limitaion of running commands from the <command>lxterminal</command> command line. As a result, the feature to run a command from the <command>lxterminal</command> command line is much more useful for processes that exit by the user explicit request. Such as an interactive shell. A short lived process does work. Only that it is fast enough to make the window, or the tab, closed before the user can pay attention. For a short lived process, such as</para>
+			    <para><command>lxterminal</command> --no-remote --command=ls</para><para>
+		    , the user must have indirect means to inspect the outcome. Such as redirecting the output to a file.</para>
+	</listitem>
+      </varlistentry>
+	    <varlistentry>	<term>	  <option>Multiple occurences of the same option</option> 	</term>
+		    <listitem>  
+			    <para><command>lxterminal</command> --no-remote --tabs=&apos;1st tab&apos;,&quot;2nd tab&quot; --tabs= --no-remote</para>
+			    <para>In contrast to many other applications, repeating a command line <option>option</option> is not an error. With some <option>option</option>s, the last repetition override previous ocuurences. But there are exceptions. A <option>--command=</option> will always be executed in the 1st tab. Before, and in addition to, any <option>--commands=</option>. Just try out if it is a concern for you. The behaviour is deterministic.</para> 
+	</listitem>
+      </varlistentry>
+	    <varlistentry>	<term>	  <option>Comma is a separator for --tabs= and --commands=</option> 	</term>
+		    <listitem>  
+			    <para>Comma characters, &apos;,&apos;, are used as separators for the <option>--commands=</option>, and <option>--tabs=</option> options.</para>
+			    <para><command>lxterminal</command> --tabs=&quot;midnight commander,2nd tab&quot; --commands=&apos;mc, &apos; --no-remote</para>
+			    <para>There is no way to insert a comma character in the titles to be displayed by <option>--tabs=</option>. Or in the programs, and their arguments, to be run by <option>--commands=</option>. However, the single <option>--command=</option>, and its other variants, can accept a comma character as part of the program, and its arguments, to be executed.</para>
+	</listitem>
       </varlistentry>
     </variablelist>
   </refsect1>
