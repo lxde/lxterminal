@@ -120,6 +120,7 @@ static gchar usage_display[] = {
     "    --tabs=NAME[,NAME[,NAME[...]]] Set the terminal's title\n"
     "  --working-directory=DIRECTORY    Set the terminal's working directory\n"
     "  --no-remote                      Do not accept or send remote commands\n"
+    "  --profile=NAME                   Use a separate configuration profile\n"
     "  -v, --version                    Version information\n"
 };
 
@@ -1539,6 +1540,13 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         else if (strncmp(argument, "--working-directory=", 20) == 0)
         {
             arguments->working_directory = &argument[20];
+        }
+
+        /* --profile=<config-identifier> */
+        else if (strncmp(argument, "--profile=", 10) == 0)
+        {
+            arguments->profile = &argument[10];
+            profile = g_strdup_printf("-%s", arguments->profile);  /* include a leading hyphen */
         }
 
     /* --no-remote: Do not accept or send remote commands */

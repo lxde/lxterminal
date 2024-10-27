@@ -59,12 +59,14 @@ static gboolean init(LXTermWindow* lxtermwin, gint argc, gchar** argv) {
 
     /* Formulate the path for the Unix domain socket. */
 #if GLIB_CHECK_VERSION (2, 28, 0)
-    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket-%s",
+    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket%s-%s",
             g_get_user_runtime_dir(),
+            profile,
             gdk_display_get_name(gdk_display_get_default()));
 #else
-    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket-%s",
+    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket%s-%s",
             g_get_user_cache_dir(),
+            profile,
             gdk_display_get_name(gdk_display_get_default()));
 #endif
 

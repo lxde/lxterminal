@@ -87,6 +87,7 @@ typedef struct _command_arguments {
     char * title;               /* Value of -t, -T, --title; points into argument vector */
     char * tabs;                /* Value of --tab; points into argument vector */
     char * working_directory;           /* Value of --working-directory; points into argument vector */
+    char * profile;             /* Value of --profile; points into argument vector */
     gboolean login_shell;           /* Terminal will spawn login shells */
     gboolean no_remote;
 } CommandArguments;

@@ -161,4 +161,5 @@ extern void print_setting();
 
 extern ColorPreset color_presets[];
 
+extern gchar * profile;
 #endif
