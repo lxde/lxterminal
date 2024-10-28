@@ -35,8 +35,10 @@
 /* Single copy setting*/
 Setting * setting;
 
-/* Config group identifier, empty by default */
-gchar * profile = "";
+/* Config group identifier.  Empty string by default.  If
+ * --profile=NAME is specified, will become "-NAME", for easy
+ * insertion into file and socket pathnames.  */
+gchar * profile_string = "";
 
 ColorPreset color_presets[] = {
     {
@@ -261,7 +263,7 @@ void save_setting()
 
     /* Convert GKeyFile to text and build path to configuration file. */
     gchar * file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
-    gchar * config_filename = g_strdup_printf("lxterminal%s.conf", profile);
+    gchar * config_filename = g_strdup_printf("lxterminal%s.conf", profile_string);
     gchar * config_path = g_build_filename(g_get_user_config_dir(), "lxterminal", config_filename, NULL);
 
     if ((file_data != NULL) && (config_path != NULL) && config_filename != NULL)
@@ -348,7 +350,7 @@ Setting * load_setting()
     int i;
     gchar * dir = g_build_filename(g_get_user_config_dir(), "lxterminal" , NULL);
     g_mkdir_with_parents(dir, S_IRUSR | S_IWUSR | S_IXUSR);
-    gchar * config_filename = g_strdup_printf("lxterminal%s.conf", profile);
+    gchar * config_filename = g_strdup_printf("lxterminal%s.conf", profile_string);
     gchar * user_config_path = g_build_filename(dir, config_filename, NULL);
     g_free(dir);
     g_free(config_filename);

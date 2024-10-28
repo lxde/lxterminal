@@ -1546,7 +1546,8 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
         else if (strncmp(argument, "--profile=", 10) == 0)
         {
             arguments->profile = &argument[10];
-            profile = g_strdup_printf("-%s", arguments->profile);  /* include a leading hyphen */
+	    /* include a leading hyphen in a copy of the profile name */
+            profile_string = g_strdup_printf("-%s", arguments->profile);
         }
 
     /* --no-remote: Do not accept or send remote commands */
