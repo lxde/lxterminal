@@ -35,6 +35,10 @@
 /* Single copy setting*/
 Setting * setting;
 
+/* Config group identifier.  If --profile=NAME is specified, will
+ * become "-NAME", for easy insertion into file and socket pathnames. */
+gchar * profile_string;
+
 ColorPreset color_presets[] = {
     {
         .name = "VGA",
@@ -258,9 +262,10 @@ void save_setting()
 
     /* Convert GKeyFile to text and build path to configuration file. */
     gchar * file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
-    gchar * config_path = g_build_filename(g_get_user_config_dir(), "lxterminal/lxterminal.conf", NULL);
+    gchar * config_filename = g_strdup_printf("lxterminal%s.conf", profile_string ? profile_string : "");
+    gchar * config_path = g_build_filename(g_get_user_config_dir(), "lxterminal", config_filename, NULL);
 
-    if ((file_data != NULL) && (config_path != NULL))
+    if ((file_data != NULL) && (config_path != NULL) && config_filename != NULL)
     {
         /* Create the file if necessary. */
         int fd = open(config_path, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
@@ -279,6 +284,7 @@ void save_setting()
     /* Deallocate memory. */
     g_free(file_data);
     g_free(config_path);
+    g_free(config_filename);
 }
 
 /* Deep copy settings. */
@@ -343,8 +349,10 @@ Setting * load_setting()
     int i;
     gchar * dir = g_build_filename(g_get_user_config_dir(), "lxterminal" , NULL);
     g_mkdir_with_parents(dir, S_IRUSR | S_IWUSR | S_IXUSR);
-    gchar * user_config_path = g_build_filename(dir, "lxterminal.conf", NULL);
+    gchar * config_filename = g_strdup_printf("lxterminal%s.conf", profile_string ? profile_string : "");
+    gchar * user_config_path = g_build_filename(dir, config_filename, NULL);
     g_free(dir);
+    g_free(config_filename);
     gchar * system_config_path = g_strdup(PACKAGE_DATA_DIR "/lxterminal/lxterminal.conf");
     gchar * config_path = user_config_path;
     
