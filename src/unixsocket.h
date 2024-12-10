@@ -21,7 +21,7 @@
 #ifndef LXTERMINAL_UNIXSOCKET_H
 #define LXTERMINAL_UNIXSOCKET_H
 
-extern gboolean lxterminal_socket_initialize(LXTermWindow* lxtermwin, gint argc, gchar** argv);
+extern gboolean lxterminal_socket_initialize(LXTermWindow* lxtermwin, const char *profile, gint argc, gchar** argv);
 
 #endif
 

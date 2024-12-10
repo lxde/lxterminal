@@ -85,6 +85,16 @@ Except in the <option>--command=</option> form, this must be the last option on 
         <listitem>          <para>Set the terminal's working directory.</para>
         </listitem>
       </varlistentry>
+      <varlistentry>
+        <term>
+          <option>--profile=<replaceable>NAME</replaceable></option>
+        </term>
+        <listitem>
+          <para>If set, then all instances of lxterminal invoked in the same way will
+            share a config file named lxterminal-NAME.conf.
+          </para>
+        </listitem>
+      </varlistentry>
     </variablelist>
   </refsect1>
 
@@ -104,6 +114,6 @@ Except in the <option>--command=</option> form, this must be the last option on 
 
   <refsect1>    <title>FILES</title>
 
-    <para>The configuration file can be found in ~/.config/lxterminal/lxterminal.conf.</para>
+    <para>The configuration file lxterminal.conf (or lxterminal-NAME.conf) can be found in ~/.config/lxterminal/.</para>
 
   </refsect1></refentry>

@@ -120,6 +120,7 @@ static gchar usage_display[] = {
     "    --tabs=NAME[,NAME[,NAME[...]]] Set the terminal's title\n"
     "  --working-directory=DIRECTORY    Set the terminal's working directory\n"
     "  --no-remote                      Do not accept or send remote commands\n"
+    "  --profile=NAME                   Use a separate configuration profile\n"
     "  -v, --version                    Version information\n"
 };
 
@@ -863,6 +864,8 @@ static void terminal_window_exit(LXTerminal * terminal, GObject * where_the_obje
 {
     LXTermWindow * lxtermwin = terminal->parent;
 
+    g_free(terminal->profile);
+
     /* If last window, exit main loop. */
     if (lxtermwin->windows->len == 1) {
         gtk_main_quit();
@@ -1541,6 +1544,12 @@ gboolean lxterminal_process_arguments(gint argc, gchar * * argv, CommandArgument
             arguments->working_directory = &argument[20];
         }
 
+        /* --profile=<config-identifier> */
+        else if (strncmp(argument, "--profile=", 10) == 0)
+        {
+            arguments->profile = &argument[10];
+        }
+
     /* --no-remote: Do not accept or send remote commands */
         else if (strcmp(argument, "--no-remote") == 0) {
             arguments->no_remote = TRUE;
@@ -1619,6 +1628,7 @@ LXTerminal * lxterminal_initialize(LXTermWindow * lxtermwin, CommandArguments * 
     g_ptr_array_add(lxtermwin->windows, terminal);
     terminal->index = terminal->parent->windows->len - 1;
     terminal->scale = 1.0;
+    terminal->profile = g_strdup(arguments->profile);
     Setting * setting = get_setting();
 
     /* Create toplevel window. */
@@ -1941,11 +1951,11 @@ int main(gint argc, gchar * * argv)
     LXTermWindow * lxtermwin = g_slice_new0(LXTermWindow);
 
     /* Initialize socket.  If we were able to get another LXTerminal to manage the window, exit. */
-    if (!arguments.no_remote && !lxterminal_socket_initialize(lxtermwin, argc, argv))
+    if (!arguments.no_remote && !lxterminal_socket_initialize(lxtermwin, arguments.profile, argc, argv))
         return 0;
 
     /* Load user preferences. */
-    load_setting();
+    load_setting(arguments.profile);
     
     /* Finish initializing the impure area and start the first LXTerminal. */
     lxtermwin->windows = g_ptr_array_new();

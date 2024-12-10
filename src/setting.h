@@ -149,8 +149,8 @@ typedef struct _colorpreset {
 } ColorPreset;
 
 extern Setting * get_setting();
-extern void save_setting();
-extern Setting * load_setting();
+extern void save_setting(const char *);
+extern Setting * load_setting(const char *);
 
 /* Utils for chsnge setting through preference */
 extern void set_setting(Setting * setting);

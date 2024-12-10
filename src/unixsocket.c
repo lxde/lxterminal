@@ -35,14 +35,14 @@ typedef struct _client_info {
     int fd;
 } ClientInfo;
 
-static gboolean init(LXTermWindow* lxtermwin, gint argc, gchar** argv);
+static gboolean init(LXTermWindow* lxtermwin, const char *profile, gint argc, gchar** argv);
 static void start_controller(struct sockaddr_un* sock_addr, LXTermWindow* lxtermwin, int fd);
 static void send_msg_to_controller(int fd, gint argc, gchar** argv);
 static gboolean handle_client(GIOChannel* source, GIOCondition condition, LXTermWindow* lxtermwin);
 static void accept_client(GIOChannel* source, LXTermWindow* lxtermwin);
 static gboolean handle_request(GIOChannel* gio, GIOCondition condition, ClientInfo* info);
 
-static gboolean init(LXTermWindow* lxtermwin, gint argc, gchar** argv) {
+static gboolean init(LXTermWindow* lxtermwin, const char *profile, gint argc, gchar** argv) {
     /* Normally, LXTerminal uses one process to control all of its windows.
      * The first process to start will create a Unix domain socket in
      * g_get_user_runtime_dir().  It will then bind and listen on this socket.
@@ -59,12 +59,14 @@ static gboolean init(LXTermWindow* lxtermwin, gint argc, gchar** argv) {
 
     /* Formulate the path for the Unix domain socket. */
 #if GLIB_CHECK_VERSION (2, 28, 0)
-    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket-%s",
+    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket%s%s-%s",
             g_get_user_runtime_dir(),
+            profile ? "-" : "", profile ? profile : "",
             gdk_display_get_name(gdk_display_get_default()));
 #else
-    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket-%s",
+    gchar * socket_path = g_strdup_printf("%s/.lxterminal-socket%s%s-%s",
             g_get_user_cache_dir(),
+            profile ? "-" : "", profile ? profile : "",
             gdk_display_get_name(gdk_display_get_default()));
 #endif
 
@@ -262,6 +264,6 @@ static gboolean handle_request(GIOChannel* gio, GIOCondition condition, ClientIn
     return TRUE;
 }
 
-gboolean lxterminal_socket_initialize(LXTermWindow* lxtermwin, gint argc, gchar** argv) {
-    return init(lxtermwin, argc, argv);
+gboolean lxterminal_socket_initialize(LXTermWindow* lxtermwin, const char *profile, gint argc, gchar** argv) {
+    return init(lxtermwin, profile, argc, argv);
 }

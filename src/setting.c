@@ -179,7 +179,7 @@ void set_setting(Setting * new_setting)
 }
 
 /* Save settings to configuration file. */
-void save_setting()
+void save_setting(const char *profile)
 {
     int i;
     g_return_if_fail (setting != NULL);
@@ -258,7 +258,8 @@ void save_setting()
 
     /* Convert GKeyFile to text and build path to configuration file. */
     gchar * file_data = g_key_file_to_data(setting->keyfile, NULL, NULL);
-    gchar * config_path = g_build_filename(g_get_user_config_dir(), "lxterminal/lxterminal.conf", NULL);
+    gchar * config_filename = g_strdup_printf("lxterminal%s%s.conf", profile ? "-" : "", profile ? profile : "");
+    gchar * config_path = g_build_filename(g_get_user_config_dir(), "lxterminal", config_filename, NULL);
 
     if ((file_data != NULL) && (config_path != NULL))
     {
@@ -279,6 +280,7 @@ void save_setting()
     /* Deallocate memory. */
     g_free(file_data);
     g_free(config_path);
+    g_free(config_filename);
 }
 
 /* Deep copy settings. */
@@ -338,13 +340,15 @@ void free_setting(Setting ** setting)
 }
 
 /* Load settings from configuration file. */
-Setting * load_setting()
+Setting * load_setting(const char * profile)
 {
     int i;
     gchar * dir = g_build_filename(g_get_user_config_dir(), "lxterminal" , NULL);
     g_mkdir_with_parents(dir, S_IRUSR | S_IWUSR | S_IXUSR);
-    gchar * user_config_path = g_build_filename(dir, "lxterminal.conf", NULL);
+    gchar * config_filename = g_strdup_printf("lxterminal%s%s.conf", profile ? "-" : "", profile ? profile : "");
+    gchar * user_config_path = g_build_filename(dir, config_filename, NULL);
     g_free(dir);
+    g_free(config_filename);
     gchar * system_config_path = g_strdup(PACKAGE_DATA_DIR "/lxterminal/lxterminal.conf");
     gchar * config_path = user_config_path;
     
@@ -564,7 +568,7 @@ color_preset_does_not_exist:
 
     if (need_save)
     {
-        save_setting();
+        save_setting(profile);
     }
     //print_setting();
     return setting;

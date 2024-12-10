@@ -492,7 +492,7 @@ void terminal_preferences_dialog(GtkAction * action, LXTerminal * terminal)
     if (result == GTK_RESPONSE_OK)
     {
         set_setting(setting);
-        save_setting();
+        save_setting(terminal->profile);
         terminal_settings_apply_to_all(terminal);
     }
     else
