@@ -5,6 +5,7 @@
 # Og Maciel <ogmaciel@gnome.org>, 2009.
 # Henrique P. Machado <zehrique@gmail.com>, 2009.
 # Sérgio B. Cipolla <secipolla@gmail.com>, 2010.
+# Thiago Dalsoto <thiagodalsoto@msn.com>, 2025.
 #
 msgid ""
 msgstr ""
@@ -12,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-23 21:42+0200\n"
 "PO-Revision-Date: 2015-05-19 22:12+0000\n"
-"Last-Translator: Felipe Braga <fbobraga@gmail.com>\n"
+"Last-Translator: Thiago Dalsoto <thiagodalsoto@msn.com>\n"
 "Language-Team: Portuguese (Brazilian) <translation@mailinglist.lxde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -68,15 +69,15 @@ msgstr "_Limpar rolagem para trás"
 
 #: ../src/lxterminal.c:142
 msgid "Zoom _In"
-msgstr ""
+msgstr "_Aumentar zoom"
 
 #: ../src/lxterminal.c:143
 msgid "Zoom O_ut"
-msgstr ""
+msgstr "_Diminuir zoom"
 
 #: ../src/lxterminal.c:144
 msgid "Zoom _Reset"
-msgstr ""
+msgstr "_Restaurar zoom"
 
 #: ../src/lxterminal.c:146 ../src/lxterminal.c:169
 msgid "Preference_s"
@@ -138,7 +139,7 @@ msgstr ""
 
 #: ../src/lxterminal.c:607
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
 #: ../src/lxterminal.c:776
@@ -165,16 +166,16 @@ msgstr "Emulador de terminal do projeto LXDE"
 
 #: ../src/lxterminal.c:816
 msgid "LXTerminal Terminal Emulator"
-msgstr ""
+msgstr "LXTerminal Emulador de Terminal"
 
 #: ../src/lxterminal.c:850
 #, c-format
 msgid "You are about to close %d tabs. Are you sure you want to continue?"
-msgstr ""
+msgstr "Você está prestes a fechar %d abas. Tem certeza de que deseja continuar?"
 
 #: ../src/lxterminal.c:851
 msgid "Confirm close"
-msgstr ""
+msgstr "Confirmar fechar"
 
 #: ../data/lxterminal-preferences.glade.h:1
 msgid "Top"
@@ -214,7 +215,7 @@ msgstr "Permitir fonte em negrito"
 
 #: ../data/lxterminal-preferences.glade.h:10
 msgid "Bold is bright"
-msgstr ""
+msgstr "Negrito é brilhante"
 
 #: ../data/lxterminal-preferences.glade.h:11
 msgid "Cursor blink"
@@ -234,86 +235,86 @@ msgstr "Sublinhado"
 
 #: ../data/lxterminal-preferences.glade.h:15
 msgid "Audible bell"
-msgstr "Campainha"
+msgstr "Alerta sonoro"
 
 #: ../data/lxterminal-preferences.glade.h:16
 #, fuzzy
 #| msgid "Audible bell"
 msgid "Visual bell"
-msgstr "Campainha"
+msgstr "Alerta visual"
 
 #: ../data/lxterminal-preferences.glade.h:17
 msgid "Black"
-msgstr ""
+msgstr "Preto"
 
 #: ../data/lxterminal-preferences.glade.h:18
 msgid "Red"
-msgstr ""
+msgstr "Vermelho"
 
 #: ../data/lxterminal-preferences.glade.h:19
 #, fuzzy
 msgid "Green"
-msgstr "Grego"
+msgstr "Verde"
 
 #: ../data/lxterminal-preferences.glade.h:20
 msgid "Brown"
-msgstr ""
+msgstr "Marrom"
 
 #: ../data/lxterminal-preferences.glade.h:21
 msgid "Blue"
-msgstr ""
+msgstr "Azul"
 
 #: ../data/lxterminal-preferences.glade.h:22
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 #: ../data/lxterminal-preferences.glade.h:23
 msgid "Cyan"
-msgstr ""
+msgstr "Ciano"
 
 #: ../data/lxterminal-preferences.glade.h:24
 msgid "Gray"
-msgstr ""
+msgstr "Cinza"
 
 #: ../data/lxterminal-preferences.glade.h:25
 msgid "Darkgray"
-msgstr ""
+msgstr "Cinza escuro"
 
 #: ../data/lxterminal-preferences.glade.h:26
 msgid "Bright Red"
-msgstr ""
+msgstr "Vermelho brilhante"
 
 #: ../data/lxterminal-preferences.glade.h:27
 msgid "Bright Green"
-msgstr ""
+msgstr "Verde brilhante"
 
 #: ../data/lxterminal-preferences.glade.h:28
 msgid "Yellow"
-msgstr ""
+msgstr "Amarelo"
 
 #: ../data/lxterminal-preferences.glade.h:29
 msgid "Bright Blue"
-msgstr ""
+msgstr "Azul brilhante"
 
 #: ../data/lxterminal-preferences.glade.h:30
 msgid "Bright Magenta"
-msgstr ""
+msgstr "Magenta brilhante"
 
 #: ../data/lxterminal-preferences.glade.h:31
 msgid "Bright Cyan"
-msgstr ""
+msgstr "Ciano brilhante"
 
 #: ../data/lxterminal-preferences.glade.h:32
 msgid "White"
-msgstr ""
+msgstr "Branco"
 
 #: ../data/lxterminal-preferences.glade.h:33
 msgid "Palette"
-msgstr ""
+msgstr "Paleta"
 
 #: ../data/lxterminal-preferences.glade.h:34
 msgid "Palette Preset"
-msgstr ""
+msgstr "Predefinição de paleta"
 
 #: ../data/lxterminal-preferences.glade.h:35
 msgid "Style"
@@ -345,11 +346,11 @@ msgstr "Ocultar ponteiro do mouse"
 
 #: ../data/lxterminal-preferences.glade.h:42
 msgid "Default window size"
-msgstr ""
+msgstr "Tamanho padrão da janela"
 
 #: ../data/lxterminal-preferences.glade.h:43
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../data/lxterminal-preferences.glade.h:44
 msgid "Display"
@@ -369,11 +370,11 @@ msgstr "Desabilitar o uso de Alt-n para mudança entre abas e menu"
 
 #: ../data/lxterminal-preferences.glade.h:48
 msgid "Disable confirmation before closing a window with multiple tabs"
-msgstr ""
+msgstr "Desabilitar confirmação antes de fechar uma janela com várias abas"
 
 #: ../data/lxterminal-preferences.glade.h:49
 msgid "Tab width"
-msgstr ""
+msgstr "Largura da aba"
 
 #: ../data/lxterminal-preferences.glade.h:50
 msgid "Advanced"
@@ -421,15 +422,15 @@ msgstr "Mover aba para a direita"
 
 #: ../data/lxterminal-preferences.glade.h:62
 msgid "Zoom In"
-msgstr ""
+msgstr "Ampliar Zoom"
 
 #: ../data/lxterminal-preferences.glade.h:63
 msgid "Zoom Out"
-msgstr ""
+msgstr "Diminuir Zoom"
 
 #: ../data/lxterminal-preferences.glade.h:64
 msgid "Zoom Reset"
-msgstr ""
+msgstr "Redefinir Zoom"
 
 #: ../data/lxterminal-preferences.glade.h:65
 msgid "Shortcuts"
