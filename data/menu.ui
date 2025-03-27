@@ -11,6 +11,7 @@
       <menuitem name="Edit_Copy" action="Edit_Copy"/>
       <menuitem name="Edit_Paste" action="Edit_Paste"/>
       <menuitem name="Edit_Clear" action="Edit_Clear"/>
+      <menuitem name="Edit_Reset" action="Edit_Reset"/>
       <separator/>
       <menuitem name="Edit_ZoomIn" action="Edit_ZoomIn"/>
       <menuitem name="Edit_ZoomOut" action="Edit_ZoomOut"/>
