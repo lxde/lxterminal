@@ -154,8 +154,8 @@ msgstr "پایانه ی LX"
 
 #: ../src/lxterminal.c:784
 #, fuzzy
-msgid "Copyright (C) 2008-2023"
-msgstr "حق نشر(-2010c) 2008-2023"
+msgid "Copyright (C) 2008-2025"
+msgstr "حق نشر(-2010c) 2008-2025"
 
 #: ../src/lxterminal.c:785
 msgid "Terminal emulator for LXDE project"

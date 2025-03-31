@@ -158,7 +158,7 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:784
 #, fuzzy
-msgid "Copyright (C) 2008-2023"
+msgid "Copyright (C) 2008-2025"
 msgstr "স্বত্বাধিকার (C) ২০০৮"
 
 #: ../src/lxterminal.c:785

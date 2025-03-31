@@ -151,8 +151,8 @@ msgid "LXTerminal"
 msgstr "LXTerminala"
 
 #: ../src/lxterminal.c:784
-msgid "Copyright (C) 2008-2023"
-msgstr "Copyright-a (C) 2008-2023"
+msgid "Copyright (C) 2008-2025"
+msgstr "Copyright-a (C) 2008-2025"
 
 #: ../src/lxterminal.c:785
 msgid "Terminal emulator for LXDE project"

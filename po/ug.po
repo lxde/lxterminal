@@ -152,8 +152,8 @@ msgstr "LXTerminal"
 
 #: ../src/lxterminal.c:784
 #, fuzzy
-msgid "Copyright (C) 2008-2023"
-msgstr "نەشر ھوقۇقى (C) 2008-2023"
+msgid "Copyright (C) 2008-2025"
+msgstr "نەشر ھوقۇقى (C) 2008-2025"
 
 #: ../src/lxterminal.c:785
 msgid "Terminal emulator for LXDE project"
