@@ -478,12 +478,14 @@ static void terminal_close_tab_activate_event(GtkAction * action, LXTerminal * t
  * Close the current window. */
 static void terminal_close_window_activate_event(GtkAction * action, LXTerminal * terminal)
 {
+    guint len;
+
     if (!terminal_close_window_confirmation_dialog(terminal)) {
         return;
     }
 
     /* Play it safe and delete tabs one by one. */
-    while(terminal->terms->len > 0) {
+    for (len = terminal->terms->len; len; len--) {
         Term *term = g_ptr_array_index(terminal->terms, 0);
 #if VTE_CHECK_VERSION (0, 38, 0)
         terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
