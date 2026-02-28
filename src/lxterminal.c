@@ -790,6 +790,7 @@ static void terminal_about_activate_event(GtkAction * action, LXTerminal * termi
     gtk_about_dialog_set_website(GTK_ABOUT_DIALOG(about_dlg), "http://lxde.org/");
     gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(about_dlg), authors);
     gtk_about_dialog_set_translator_credits(GTK_ABOUT_DIALOG(about_dlg), translators);
+    gtk_window_set_transient_for(GTK_WINDOW(about_dlg), GTK_WINDOW(terminal->window));
 
     /* Display the dialog, wait for the user to click OK, and dismiss the dialog. */
     gtk_dialog_run(GTK_DIALOG(about_dlg));
