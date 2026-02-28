@@ -486,7 +486,7 @@ static void terminal_close_window_activate_event(GtkAction * action, LXTerminal 
 
     /* Play it safe and delete tabs one by one. */
     for (len = terminal->terms->len; len; len--) {
-        Term *term = g_ptr_array_index(terminal->terms, 0);
+        Term *term = g_ptr_array_index(terminal->terms, len - 1);
 #if VTE_CHECK_VERSION (0, 38, 0)
         terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
 #else
@@ -841,7 +841,23 @@ static void terminal_window_title_changed_event(GtkWidget * vte, Term * term)
 /* Handler for "delete-event" signal on a LXTerminal. */
 static gboolean terminal_close_window_confirmation_event(GtkWidget * widget, GdkEventButton * event, LXTerminal * terminal)
 {
-    return !terminal_close_window_confirmation_dialog(terminal);
+    guint len;
+
+    if (!terminal_close_window_confirmation_dialog(terminal)) {
+        return TRUE;
+    }
+
+    /* Play it safe and delete tabs one by one. */
+    for (len = terminal->terms->len; len; len--) {
+        Term *term = g_ptr_array_index(terminal->terms, len - 1);
+#if VTE_CHECK_VERSION (0, 38, 0)
+        terminal_child_exited_event(VTE_TERMINAL(term->vte), 0, term);
+#else
+        terminal_child_exited_event(VTE_TERMINAL(term->vte), term);
+#endif
+    }
+
+    return FALSE;
 }
 
 /* Display closing tabs warning */
